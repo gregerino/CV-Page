@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .kontakt-layout { display: grid; grid-template-columns: 1fr 360px; gap: 4rem; align-items: start; }
+    .kontakt-intro { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 1.05rem; color: var(--ink-light); line-height: 1.85; margin-bottom: 2.5rem; }
+    .kontakt-cards { display: flex; flex-direction: column; gap: 0.75rem; }
+    .kontakt-card { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem 1.6rem; display: flex; align-items: center; gap: 1.2rem; text-decoration: none; transition: border-color 0.15s; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
+    .kontakt-card:hover { border-color: var(--amber); }
+    .kontakt-card-icon { width: 38px; height: 38px; min-width: 38px; border-radius: var(--radius); background: var(--amber-pale); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+    .kontakt-card-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 0.2rem; }
+    .kontakt-card-value { font-size: 0.92rem; font-weight: 500; color: var(--ink); }
+    .kontakt-card-arrow { margin-left: auto; font-size: 0.9rem; color: var(--ink-dim); transition: transform 0.15s; }
+    .kontakt-card:hover .kontakt-card-arrow { transform: translateX(3px); color: var(--amber); }
+    .availability-box { background: rgba(28,23,16,0.75); backdrop-filter: blur(12px); border-radius: var(--radius); padding: 2rem; margin-bottom: 1rem; position: relative; overflow: hidden; box-shadow: 0 4px 24px rgba(28,23,16,0.15); }
+    .availability-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), transparent); }
+    .availability-dot { display: inline-block; width: 7px; height: 7px; background: #6dbe8d; border-radius: 50%; margin-right: 0.45rem; }
+    .availability-status { font-size: 0.72rem; color: rgba(242,237,228,0.45); margin-bottom: 0.7rem; letter-spacing: 0.06em; }
+    .availability-title { font-family: 'Lora', Georgia, serif; font-size: 1.15rem; font-weight: 500; color: var(--white); margin-bottom: 0.7rem; }
+    .availability-text { font-size: 0.83rem; color: rgba(242,237,228,0.6); line-height: 1.75; }
+    .info-box { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
+    .info-box-title { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 1rem; padding-bottom: 0.65rem; border-bottom: 1px solid var(--border-light); }
+    .info-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.5rem 0; border-bottom: 1px solid var(--border-light); }
+    .info-row:last-child { border-bottom: none; }
+    .info-row-label { font-size: 0.78rem; color: var(--ink-dim); }
+    .info-row-value { font-size: 0.82rem; color: var(--ink-light); text-align: right; }
+    @media (max-width: 720px) { .kontakt-layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Reach me</p>
+    <h1 class="section-title">Contact</h1>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kontakt-layout">
+    <div>
+      <p class="kontakt-intro">Want to learn more about my background, discuss an opportunity or just have a conversation? Feel free to reach out — I respond quickly and look forward to hearing from you.</p>
+      <div class="kontakt-cards">
+        <a href="mailto:marcus.hultberg@live.se" class="kontakt-card">
+          <div class="kontakt-card-icon">✉️</div>
+          <div><p class="kontakt-card-label">Email</p><p class="kontakt-card-value">marcus.hultberg@live.se</p></div>
+          <span class="kontakt-card-arrow">→</span>
+        </a>
+        <a href="tel:+46703445947" class="kontakt-card">
+          <div class="kontakt-card-icon">📞</div>
+          <div><p class="kontakt-card-label">Phone</p><p class="kontakt-card-value">0703 44 59 47</p></div>
+          <span class="kontakt-card-arrow">→</span>
+        </a>
+        <div class="kontakt-card" style="cursor:default;">
+          <div class="kontakt-card-icon">📍</div>
+          <div><p class="kontakt-card-label">Address</p><p class="kontakt-card-value">Hedåsgatan 10, 412 53 Gothenburg</p></div>
+        </div>
+        <a href="https://www.linkedin.com/in/marcus-hultberg-505b386a/" target="_blank" rel="noopener" class="kontakt-card">
+          <div class="kontakt-card-icon">💼</div>
+          <div><p class="kontakt-card-label">LinkedIn</p><p class="kontakt-card-value">Marcus Hultberg</p></div>
+          <span class="kontakt-card-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="availability-box">
+        <p class="availability-status"><span class="availability-dot"></span>Available for conversations</p>
+        <h2 class="availability-title">Open to new opportunities</h2>
+        <p class="availability-text">I'm always interested in hearing about exciting roles within People &amp; Culture, Talent Acquisition and Learning &amp; Development, especially in technical environments.</p>
+      </div>
+      <div class="info-box">
+        <p class="info-box-title">Quick facts</p>
+        <div class="info-row"><span class="info-row-label">Location</span><span class="info-row-value">Gothenburg</span></div>
+        <div class="info-row"><span class="info-row-label">Experience</span><span class="info-row-value">7+ years</span></div>
+        <div class="info-row"><span class="info-row-label">Focus</span><span class="info-row-value">People &amp; Culture · HR</span></div>
+        <div class="info-row"><span class="info-row-label">Industry</span><span class="info-row-value">Tech &amp; IT</span></div>
+        <div class="info-row"><span class="info-row-label">Education</span><span class="info-row-value">BSc. Behavioural Science</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 Marcus Hultberg</p><a href="mailto:marcus.hultberg@live.se">marcus.hultberg@live.se</a></footer>
+</body>
+</html>

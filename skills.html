@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .skills-section { margin-bottom: 3.5rem; }
+    .skills-section-title { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 1.25rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); }
+    .core-skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+    .core-skill-card { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: border-color 0.15s; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
+    .core-skill-card:hover { border-color: var(--amber); }
+    .core-skill-icon { width: 32px; height: 32px; min-width: 32px; background: var(--amber-pale); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+    .core-skill-name { font-size: 0.88rem; font-weight: 600; color: var(--ink); margin-bottom: 0.2rem; }
+    .core-skill-desc { font-size: 0.77rem; color: var(--ink-dim); line-height: 1.5; }
+    .tools-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tool-chip { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.4rem 1rem; font-size: 0.8rem; color: var(--ink-light); transition: all 0.15s; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
+    .tool-chip:hover { border-color: var(--amber); color: var(--amber); }
+    .highlight-box { background: rgba(28,23,16,0.75); backdrop-filter: blur(12px); border-radius: var(--radius); padding: 2.5rem; margin-top: 3rem; position: relative; overflow: hidden; box-shadow: 0 4px 24px rgba(28,23,16,0.15); }
+    .highlight-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), transparent); }
+    .highlight-box-title { font-family: 'Lora', Georgia, serif; font-size: 1.25rem; font-weight: 500; color: var(--white); margin-bottom: 0.75rem; }
+    .highlight-box-text { font-size: 0.88rem; color: rgba(242,237,228,0.65); line-height: 1.8; }
+    @media (max-width: 600px) { .core-skills { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">CV</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">What I bring</p>
+    <h1 class="section-title">Skills</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="skills-section">
+    <p class="skills-section-title">Core competencies</p>
+    <div class="core-skills">
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🎯</div>
+        <div><p class="core-skill-name">Talent Acquisition</p><p class="core-skill-desc">Full recruitment process: from needs analysis and sourcing to offer and onboarding</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🤝</div>
+        <div><p class="core-skill-name">People &amp; Culture</p><p class="core-skill-desc">Employee experience, engagement, culture and HR processes in technical environments</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">📚</div>
+        <div><p class="core-skill-name">Learning &amp; Development</p><p class="core-skill-desc">Course development, education management, LMS and competence development programmes</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">💼</div>
+        <div><p class="core-skill-name">HR</p><p class="core-skill-desc">Personnel matters, onboarding, retention and support to managers and employees</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">✨</div>
+        <div><p class="core-skill-name">Employer Branding</p><p class="core-skill-desc">Building and communicating employer brand to attract the right talent</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">📋</div>
+        <div><p class="core-skill-name">Project Management</p><p class="core-skill-desc">Driving parallel processes, structuring work and delivering in fast-changing environments</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🏗️</div>
+        <div><p class="core-skill-name">Organisational Development</p><p class="core-skill-desc">Building structures, processes and programmes that create long-term sustainability</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🌐</div>
+        <div><p class="core-skill-name">Stakeholder Management</p><p class="core-skill-desc">Advisory collaboration with managers, leadership and external stakeholders</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">💬</div>
+        <div><p class="core-skill-name">Communication</p><p class="core-skill-desc">Clear and adapted communication in candidate meetings, workshops and conferences</p></div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🤖</div>
+        <div><p class="core-skill-name">AI Tools</p><p class="core-skill-desc">Practical experience using ChatGPT and Claude to enhance productivity and work quality</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-section">
+    <p class="skills-section-title">Systems &amp; tools</p>
+    <div class="tools-grid">
+      <span class="tool-chip">Teamtailor</span>
+      <span class="tool-chip">Workbuster</span>
+      <span class="tool-chip">Slack</span>
+      <span class="tool-chip">Notion</span>
+      <span class="tool-chip">Google Workspace</span>
+      <span class="tool-chip">LinkedIn Recruiter</span>
+      <span class="tool-chip">ChatGPT</span>
+      <span class="tool-chip">Claude</span>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <h2 class="highlight-box-title">Technical environments as home turf</h2>
+    <p class="highlight-box-text">
+      The majority of my career has been spent in IT and tech companies, which means I understand
+      the language, needs and challenges of the business. This creates better recruitment processes,
+      more accurate competence profiles and stronger trust from both candidates and hiring managers.
+    </p>
+  </div>
+</div>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+</body>
+</html>

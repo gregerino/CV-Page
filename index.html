@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcus Hultberg – People & Culture</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── AI SEARCH BAR ── */
+    .ai-bar {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 2.5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ai-bar-wrap {
+      position: relative;
+      max-width: 620px;
+      width: 100%;
+    }
+    .ai-bar-input {
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      background: rgba(250,248,244,0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-strong);
+      border-radius: 100px;
+      padding: 0.95rem 3.5rem 0.95rem 1.5rem;
+      outline: none;
+      box-shadow: 0 2px 12px rgba(28,23,16,0.06), inset 0 1px 0 rgba(255,255,255,0.4);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .ai-bar-input:focus {
+      border-color: var(--amber);
+      box-shadow: 0 2px 20px rgba(158,106,26,0.12);
+    }
+    .ai-bar-input::placeholder {
+      color: var(--ink-dim);
+    }
+    .ai-bar-btn {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      background: var(--ink);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .ai-bar-btn:hover { background: var(--ink-mid); }
+    .ai-bar-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .ai-bar-btn svg { width: 16px; height: 16px; }
+
+    .ai-bar-response {
+      display: none;
+      margin-top: 0.75rem;
+      background: rgba(250,248,244,0.55);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(28,23,16,0.08);
+      max-width: 620px;
+    }
+    .ai-bar-response.visible { display: block; }
+    .ai-bar-response-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.5rem;
+    }
+    .ai-bar-response-text {
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      line-height: 1.75;
+    }
+    .ai-bar-loading {
+      display: none;
+      margin-top: 0.75rem;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--ink-dim);
+      font-size: 0.82rem;
+      max-width: 620px;
+      background: rgba(250,248,244,0.55);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .ai-bar-loading.visible { display: flex; }
+    .ai-dot {
+      width: 5px; height: 5px;
+      background: var(--amber);
+      border-radius: 50%;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+    .ai-dot:nth-child(2) { animation-delay: 0.2s; }
+    .ai-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 370px;
+      gap: 5rem;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1rem;
+    }
+    .hero-name {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+    }
+    .hero-rule {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.4rem;
+    }
+    .hero-rule::before { content: ''; width: 24px; height: 1px; background: var(--amber); }
+    .hero-rule span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .hero-subtitle {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink-light);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      max-width: 400px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 2.4rem;
+    }
+    .hero-tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      background: rgba(250,248,244,0.5);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.28rem 0.8rem;
+      backdrop-filter: blur(4px);
+    }
+    .hero-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: flex;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .hero-stat { flex: 1; padding-right: 2rem; border-right: 1px solid var(--border); margin-right: 2rem; }
+    .hero-stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+    .hero-stat-num {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .hero-stat-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+    }
+
+    /* Photo */
+    .hero-photo-wrap { position: relative; }
+    .hero-photo-frame { position: relative; }
+    .hero-photo-frame::before {
+      display: none;
+    }
+    .hero-photo-card {
+      position: relative; z-index: 1;
+      background: transparent;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      box-shadow: 0 8px 40px rgba(28,23,16,0.12);
+    }
+    .hero-photo-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 10px;
+      box-shadow: inset 0 0 30px 10px rgba(242,237,228,0.5);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-photo-card img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center; display: block;
+    }
+    .hero-name-badge {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(28,23,16,0.75); backdrop-filter: blur(12px); padding: 1.1rem 1.4rem; z-index: 2;
+    }
+    .hero-name-badge-name {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.95rem; font-weight: 600; color: var(--white);
+    }
+    .hero-name-badge-title {
+      font-size: 0.7rem; color: rgba(242,237,228,0.5); margin-top: 0.15rem;
+    }
+    .hero-badge-dot {
+      display: inline-block; width: 6px; height: 6px;
+      background: #6dbe8d; border-radius: 50%; margin-right: 0.4rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-photo-wrap { max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-bg"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <!-- AI SEARCH BAR -->
+  <div class="ai-bar">
+    <div class="ai-bar-wrap">
+      <input class="ai-bar-input" id="ai-input" type="text"
+             placeholder="Ask anything about Marcus" />
+      <button class="ai-bar-btn" id="ai-btn" onclick="ask()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#faf8f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+    </div>
+    <div class="ai-bar-loading" id="ai-loading">
+      <div class="ai-dot"></div>
+      <div class="ai-dot"></div>
+      <div class="ai-dot"></div>
+      <span>Thinking…</span>
+    </div>
+    <div class="ai-bar-response" id="ai-response">
+      <p class="ai-bar-response-label">Answer</p>
+      <p class="ai-bar-response-text" id="ai-response-text"></p>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">People &amp; Culture · HR · Recruitment</p>
+        <h1 class="hero-name">Marcus<br>Hultberg</h1>
+        <div class="hero-rule"><span>Gothenburg, Sweden</span></div>
+        <p class="hero-subtitle">
+          Specialist in Talent Acquisition, Learning &amp; Development
+          and organisational development, with 7+ years of experience
+          in technical environments.
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Talent Acquisition</span>
+          <span class="hero-tag">People &amp; Culture</span>
+          <span class="hero-tag">L&amp;D</span>
+          <span class="hero-tag">Employer Branding</span>
+        </div>
+        <div class="hero-cta">
+          <a href="experience.html" class="btn btn-primary">View CV</a>
+          <a href="contact.html" class="btn btn-outline">Get in touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">7+</div>
+            <div class="hero-stat-label">Years experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">Tech</div>
+            <div class="hero-stat-label">Industry focus</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-card">
+            <img src="marcus.jpg" alt="Marcus Hultberg" />
+          </div>
+          <div class="hero-name-badge">
+            <div class="hero-name-badge-name">Marcus Hultberg</div>
+            <div class="hero-name-badge-title">
+              <span class="hero-badge-dot"></span>People &amp; Culture · Recruitment
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Marcus Hultberg</p>
+  <a href="contact.html">Get in touch →</a>
+</footer>
+
+<script>
+  const input = document.getElementById('ai-input');
+  const btn   = document.getElementById('ai-btn');
+  const loading = document.getElementById('ai-loading');
+  const response = document.getElementById('ai-response');
+  const responseText = document.getElementById('ai-response-text');
+
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') ask(); });
+
+  async function ask(question) {
+    const q = question || input.value.trim();
+    if (!q) return;
+    input.value = q;
+
+    btn.disabled = true;
+    loading.classList.add('visible');
+    response.classList.remove('visible');
+
+    try {
+      const res = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q })
+      });
+      const data = await res.json();
+      if (data.answer) {
+        responseText.textContent = data.answer;
+        response.classList.add('visible');
+      } else {
+        responseText.textContent = data.error || 'Something went wrong. Please try again.';
+        response.classList.add('visible');
+      }
+    } catch (e) {
+      responseText.textContent = 'Could not reach the server. Please try again later.';
+      response.classList.add('visible');
+    } finally {
+      btn.disabled = false;
+      loading.classList.remove('visible');
+    }
+  }
+</script>
+
+</body>
+</html>

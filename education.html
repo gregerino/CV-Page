@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 4rem; }
+    .edu-card { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.25rem; position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
+    .edu-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), transparent); }
+    .edu-card-year { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.9rem; }
+    .edu-card-degree { font-family: 'Lora', Georgia, serif; font-size: 1.15rem; font-weight: 500; color: var(--ink); line-height: 1.35; margin-bottom: 0.5rem; }
+    .edu-card-school { font-size: 0.83rem; color: var(--ink-light); margin-bottom: 1.5rem; }
+    .edu-card-desc { font-size: 0.84rem; color: var(--ink-dim); line-height: 1.7; }
+    .edu-focus { background: rgba(28,23,16,0.75); backdrop-filter: blur(12px); border-radius: var(--radius); padding: 2.5rem; margin-bottom: 3rem; position: relative; overflow: hidden; box-shadow: 0 4px 24px rgba(28,23,16,0.15); }
+    .edu-focus::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--amber), transparent); }
+    .edu-focus-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,237,228,0.4); margin-bottom: 0.6rem; }
+    .edu-focus-title { font-family: 'Lora', Georgia, serif; font-size: 1.4rem; font-weight: 500; color: var(--white); margin-bottom: 0.75rem; }
+    .edu-focus-text { font-size: 0.88rem; color: rgba(242,237,228,0.65); line-height: 1.8; }
+    .edu-areas-title { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 1.1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); }
+    .edu-areas { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.6rem; }
+    .edu-area { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.85rem 1.1rem; font-size: 0.83rem; color: var(--ink-light); display: flex; align-items: center; gap: 0.6rem; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
+    .edu-area::before { content: '◆'; color: var(--amber); font-size: 0.4rem; flex-shrink: 0; }
+    @media (max-width: 600px) { .edu-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Academic background</p>
+    <h1 class="section-title">Education</h1>
+    <div class="section-divider"></div>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <p class="edu-card-year">2016 – 2019</p>
+      <h2 class="edu-card-degree">BSc. Behavioural Science with focus on IT environments</h2>
+      <p class="edu-card-school">Umeå University</p>
+      <p class="edu-card-desc">Bachelor's degree focused on human behaviour in digital and technical organisations: a solid foundation for People &amp; Culture work in the tech industry.</p>
+    </div>
+    <div class="edu-card">
+      <p class="edu-card-year">2020</p>
+      <h2 class="edu-card-degree">Certified Education Manager</h2>
+      <p class="edu-card-school">Myndigheten för Yrkeshögskolan</p>
+      <p class="edu-card-desc">Certification in education management focused on vocational higher education, directly applicable in L&amp;D roles with emphasis on pedagogical planning and course design.</p>
+    </div>
+  </div>
+  <div class="edu-focus">
+    <p class="edu-focus-label">The core of the education</p>
+    <h2 class="edu-focus-title">Behavioural science meets technical environments</h2>
+    <p class="edu-focus-text">The combination of behavioural science and an IT perspective provides a unique understanding of how people function in modern, fast-changing organisations, and the ability to bridge the gap between HR and the business.</p>
+  </div>
+  <div>
+    <p class="edu-areas-title">Relevant knowledge areas</p>
+    <div class="edu-areas">
+      <div class="edu-area">Organisational psychology</div>
+      <div class="edu-area">Pedagogy &amp; didactics</div>
+      <div class="edu-area">Recruitment &amp; selection</div>
+      <div class="edu-area">Group dynamics</div>
+      <div class="edu-area">Employment law basics</div>
+      <div class="edu-area">Leadership &amp; coaching</div>
+      <div class="edu-area">Quality assurance</div>
+      <div class="edu-area">Competence supply</div>
+    </div>
+  </div>
+</div>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+</body>
+</html>

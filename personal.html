@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .personal-intro {
+      font-family: 'Lora', Georgia, serif; font-size: 1.1rem; font-style: italic;
+      line-height: 1.85; color: var(--ink-mid); margin-bottom: 3rem;
+      max-width: 640px;
+    }
+    .personal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; }
+    .personal-card {
+      background: rgba(250,248,244,0.55); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem 2.25rem; position: relative; overflow: hidden;
+      box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .personal-card-icon { font-size: 1.5rem; margin-bottom: 0.8rem; }
+    .personal-card-title {
+      font-family: 'Lora', Georgia, serif; font-size: 1.1rem; font-weight: 500;
+      color: var(--ink); margin-bottom: 0.5rem;
+    }
+    .personal-card-text { font-size: 0.86rem; color: var(--ink-light); line-height: 1.75; }
+    .personal-highlight {
+      background: rgba(28,23,16,0.75); backdrop-filter: blur(12px);
+      border-radius: var(--radius); padding: 2.5rem; margin-top: 1.25rem;
+      position: relative; overflow: hidden;
+      box-shadow: 0 4px 24px rgba(28,23,16,0.15);
+    }
+    .personal-highlight::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--amber), transparent);
+    }
+    .personal-highlight-title {
+      font-family: 'Lora', Georgia, serif; font-size: 1.25rem; font-weight: 500;
+      color: var(--white); margin-bottom: 0.75rem;
+    }
+    .personal-highlight-text { font-size: 0.88rem; color: rgba(242,237,228,0.65); line-height: 1.8; }
+    .quick-picks {
+      background: rgba(250,248,244,0.55); backdrop-filter: blur(8px);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem 2.25rem; margin-top: 1.25rem; margin-bottom: 1.25rem;
+      box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+    .quick-picks-title {
+      font-family: 'Lora', Georgia, serif; font-size: 1.15rem; font-weight: 500;
+      color: var(--ink); margin-bottom: 1.25rem;
+    }
+    .quick-picks-list { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .quick-pick {
+      display: flex; align-items: center; gap: 0.6rem;
+      background: rgba(250,248,244,0.6); border: 1px solid var(--border);
+      border-radius: 100px; padding: 0.5rem 1.2rem;
+      font-size: 0.82rem; color: var(--ink-light);
+    }
+    .quick-pick-or {
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-dim);
+    }
+    .quick-pick-chosen { font-weight: 600; color: var(--amber); }
+    @media (max-width: 600px) { .personal-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="personal.html" class="active">Personal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Beyond work</p>
+    <h1 class="section-title">Personal</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <p class="personal-intro">
+    There's more to life than work. Here's a glimpse of who I am outside the office:
+    the things that keep me curious, grounded and energised.
+  </p>
+
+  <div class="personal-grid">
+    <div class="personal-card">
+      <div class="personal-card-icon">🎲</div>
+      <h2 class="personal-card-title">Hobbies</h2>
+      <p class="personal-card-text">I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&amp;D adventures as a Game Master. I have a huge passion for food and cooking, and love all food, from street food joints to Michelin restaurants. I also really enjoy getting together over board games, and love watching Critical Role, a live-action D&amp;D series that fuels my creativity as a Game Master.</p>
+    </div>
+    <div class="personal-card">
+      <div class="personal-card-icon">✈️</div>
+      <h2 class="personal-card-title">Travel</h2>
+      <p class="personal-card-text">I love to travel, especially to Spain and Costa del Sol. I also grew up half and half in Thailand, and I've even been stuck on the African savannah. Ask me about it!</p>
+    </div>
+    <div class="personal-card">
+      <div class="personal-card-icon">👨‍👩‍👧‍👦</div>
+      <h2 class="personal-card-title">Friends &amp; family</h2>
+      <p class="personal-card-text">I live in Gothenburg with my fiancée and our 2.5-year-old son. Time with the people I care about is what matters most: good conversations, dinners and shared experiences.</p>
+    </div>
+    <div class="personal-card">
+      <div class="personal-card-icon">🎧</div>
+      <h2 class="personal-card-title">Music &amp; podcasts</h2>
+      <p class="personal-card-text">I'm a music omnivore, always listening to something. Right now I'm stuck on funk soul. Check out <a href="https://open.spotify.com/track/2XW7ow6JU8wPGWwKBw5a5a?si=f484c2111e4a4f32" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:underline;">Beirut by Wanda Wonderful</a>. I definitely prefer music over podcasts.</p>
+    </div>
+    <div class="personal-card">
+      <div class="personal-card-icon">📖</div>
+      <h2 class="personal-card-title">Curiosity &amp; learning</h2>
+      <p class="personal-card-text">I love reading and watching videos to learn new things, especially about AI and how to streamline and optimise the way we work. Being creative in my work is something that genuinely makes me feel good.</p>
+    </div>
+  </div>
+
+  <div class="quick-picks">
+    <h2 class="quick-picks-title">My quick picks</h2>
+    <div class="quick-picks-list">
+      <div class="quick-pick">🍔 <span class="quick-pick-chosen">Burger</span> <span class="quick-pick-or">or</span> Pizza</div>
+      <div class="quick-pick">🍷 <span class="quick-pick-chosen">Wine</span> <span class="quick-pick-or">or</span> Beer</div>
+      <div class="quick-pick">🏔️ Mountains <span class="quick-pick-or">or</span> <span class="quick-pick-chosen">Beach</span></div>
+      <div class="quick-pick">🌅 Morning <span class="quick-pick-or">or</span> <span class="quick-pick-chosen">Night</span></div>
+      <div class="quick-pick">🎬 <span class="quick-pick-chosen">Series</span> <span class="quick-pick-or">or</span> Movie</div>
+      <div class="quick-pick">💬 <span class="quick-pick-chosen">Slack</span> <span class="quick-pick-or">or</span> Teams</div>
+      <div class="quick-pick">📱 <span class="quick-pick-chosen">iPhone</span> <span class="quick-pick-or">or</span> Android</div>
+      <div class="quick-pick">🌶️ <span class="quick-pick-chosen">Spicy</span> <span class="quick-pick-or">or</span> Mild</div>
+      <div class="quick-pick">🦸 <span class="quick-pick-chosen">Marvel</span> <span class="quick-pick-or">or</span> Star Wars</div>
+      <div class="quick-pick">🤖 ChatGPT <span class="quick-pick-or">or</span> <span class="quick-pick-chosen">Claude</span></div>
+    </div>
+  </div>
+
+  <div class="personal-highlight">
+    <h2 class="personal-highlight-title">What drives me</h2>
+    <p class="personal-highlight-text">
+      At the core, I'm someone who genuinely cares about people. Whether it's at work or in my personal life,
+      I believe in building real connections, staying curious and always trying to grow. The best version of me
+      shows up when I balance meaningful work with the things and people that inspire me outside of it.
+    </p>
+  </div>
+</div>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+</body>
+</html>

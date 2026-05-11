@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .role-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+    .role-card {
+      background: rgba(250,248,244,0.65);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem 2.5rem;
+      box-shadow: 0 2px 16px rgba(28,23,16,0.05), inset 0 1px 0 rgba(255,255,255,0.5);
+      transition: box-shadow 0.2s;
+    }
+    .role-card:hover { box-shadow: 0 4px 24px rgba(28,23,16,0.09), inset 0 1px 0 rgba(255,255,255,0.5); }
+    .role-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+    .role-card-title { font-family: 'Lora', Georgia, serif; font-size: 1.25rem; font-weight: 500; color: var(--ink); }
+    .role-card-period { font-size: 0.7rem; font-weight: 600; color: var(--amber); letter-spacing: 0.05em; white-space: nowrap; margin-top: 0.25rem; }
+    .role-card-company { font-size: 0.82rem; color: var(--ink-light); margin-bottom: 0.2rem; }
+    .role-card-location { font-size: 0.7rem; color: var(--ink-dim); margin-bottom: 0.6rem; }
+    .role-card-about { font-size: 0.78rem; color: var(--ink-dim); font-style: italic; margin-bottom: 1rem; }
+    .role-card-desc { font-family: 'Lora', Georgia, serif; font-style: italic; font-size: 0.88rem; color: var(--ink-light); line-height: 1.75; margin-bottom: 1.2rem; }
+    .role-card-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+    .role-card-bullets li { font-size: 0.84rem; color: var(--ink-light); padding-left: 1.2rem; position: relative; line-height: 1.55; }
+    .role-card-bullets li::before { content: '◆'; position: absolute; left: 0; color: var(--amber); font-size: 0.4rem; top: 0.5em; }
+    @media (max-width: 680px) { .role-card { padding: 1.5rem; } }
+  </style>
+</head>
+<body>
+<div class="hero-bg"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html" class="active">CV</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="personal.html">Personal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Career</p>
+    <h1 class="section-title">Work experience</h1>
+    <div class="section-divider"></div>
+  </div>
+  <div class="role-cards">
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <h2 class="role-card-title">Recruitment Consultant</h2>
+        <span class="role-card-period">June 2024 – June 2026</span>
+      </div>
+      <p class="role-card-company">Mpya Sci &amp; Tech</p>
+      <p class="role-card-location">Gothenburg</p>
+      <p class="role-card-about">Recruitment and consulting firm specialising in science, technology and engineering.</p>
+      <p class="role-card-desc">Matching the right person with the right workplace while acting as an advisor to hiring managers on competence and cultural fit.</p>
+      <ul class="role-card-bullets">
+        <li>Drove and managed full recruitment processes from needs analysis to final placement, within technical roles</li>
+        <li>Advised managers on competence profiles, selection, process and candidate evaluation</li>
+        <li>Ensured a structured and high-quality candidate experience throughout the process</li>
+        <li>Developed and improved recruitment processes and ways of working</li>
+        <li>Worked in ATS systems to ensure quality and structure in candidate data</li>
+        <li>Wrote and published job ads based on business needs</li>
+        <li>Proactively sourced and built candidate pipelines</li>
+      </ul>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <h2 class="role-card-title">Course Developer</h2>
+        <span class="role-card-period">Sep 2023 – June 2024</span>
+      </div>
+      <p class="role-card-company">Simployer</p>
+      <p class="role-card-location">Gothenburg</p>
+      <p class="role-card-about">Leading Nordic HR tech company providing HR systems, payroll solutions and training.</p>
+      <p class="role-card-desc">Developed and improved training content in HR, payroll, tax and VAT for a leading HR system with a strong focus on the employee experience.</p>
+      <ul class="role-card-bullets">
+        <li>Developed and improved courses within HR and Learning &amp; Development</li>
+        <li>Ensured content was up to date and aligned with current HR trends and needs</li>
+        <li>Collaborated with subject matter experts to create relevant and high-quality training</li>
+        <li>Planned and executed conferences and training sessions focused on participant value</li>
+        <li>Improved course materials and pedagogical structures</li>
+        <li>Integrated market insights and research into training content</li>
+      </ul>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <h2 class="role-card-title">Business Manager</h2>
+        <span class="role-card-period">April 2022 – Sep 2023</span>
+      </div>
+      <p class="role-card-company">A Society</p>
+      <p class="role-card-location">Gothenburg</p>
+      <p class="role-card-about">IT consulting firm connecting tech talent with companies across Sweden.</p>
+      <p class="role-card-desc">Responsible for recruitment and matching of IT consultants alongside ongoing HR support in a fast-moving consulting environment.</p>
+      <ul class="role-card-bullets">
+        <li>Responsible for recruitment and matching of IT consultants</li>
+        <li>Coordinated dialogue between clients and candidates throughout the process</li>
+        <li>Worked with onboarding and ongoing HR support to consultants, including invoicing and follow-up</li>
+        <li>Developed internal onboarding structures to increase engagement and retention</li>
+        <li>Managed multiple parallel processes in a fast-changing environment</li>
+      </ul>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <h2 class="role-card-title">Talent Acquisition Lead / Consultant Manager</h2>
+        <span class="role-card-period">Nov 2020 – April 2022</span>
+      </div>
+      <p class="role-card-company">ZoCom</p>
+      <p class="role-card-location">Gothenburg</p>
+      <p class="role-card-about">Fast-growing IT consulting company focused on web development and digital solutions.</p>
+      <p class="role-card-desc">Part of the management team with full responsibility for talent acquisition and a consultant group of 15+ people in a high-growth IT company.</p>
+      <ul class="role-card-bullets">
+        <li>Led and developed the company's talent acquisition work</li>
+        <li>Worked with employer branding and improvement of internal processes</li>
+        <li>Implemented and developed ATS workflows</li>
+        <li>Managed full recruitment processes from start to onboarding</li>
+        <li>HR support and development for a consultant group of 15+ people</li>
+        <li>Developed and implemented onboarding structure for new employees</li>
+        <li>Created and ran internal workshops and training initiatives</li>
+        <li>Initiated and built a career programme for junior talent</li>
+        <li>Contributed to organisational development by establishing an internal LMS that was later sold B2B</li>
+      </ul>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <h2 class="role-card-title">Education Manager / ICT Manager</h2>
+        <span class="role-card-period">June 2019 – Oct 2020</span>
+      </div>
+      <p class="role-card-company">IT-Högskolan</p>
+      <p class="role-card-location">Gothenburg</p>
+      <p class="role-card-about">One of Sweden's largest providers of vocational higher education within IT and tech.</p>
+      <p class="role-card-desc">Led education programmes at one of Sweden's largest vocational IT schools and supported students in their transition into the tech industry.</p>
+      <ul class="role-card-bullets">
+        <li>Led and developed education programmes in close collaboration with the labour market</li>
+        <li>Coached and guided students in their career journey into the IT industry</li>
+        <li>Worked with competence supply by matching education to market needs</li>
+        <li>Participated in recruiting teachers and ensured relevant competence</li>
+        <li>Built and maintained partnerships with companies and external stakeholders</li>
+        <li>Secured internship placements and supported students in transitioning to working life</li>
+        <li>Improved internal communication flows and developed LMS structure</li>
+      </ul>
+    </div>
+
+    <div class="role-card">
+      <div class="role-card-header">
+        <h2 class="role-card-title">First Line Support / Store Sales</h2>
+        <span class="role-card-period">May 2013 – Aug 2018</span>
+      </div>
+      <p class="role-card-company">Telia Company</p>
+      <p class="role-card-location">Gothenburg / Umeå</p>
+      <p class="role-card-about">Sweden's largest telecom operator, providing mobile, broadband and TV services.</p>
+      <p class="role-card-desc">Full-time for three years and part-time for two years at Sweden's largest telecom provider, with a focus on customer service and internal employee support.</p>
+      <ul class="role-card-bullets">
+        <li>Supported onboarding of new employees through coaching and participating in recruitment</li>
+        <li>Contributed to improved knowledge sharing and working methods in support</li>
+        <li>Worked with customer service via phone, chat and email</li>
+        <li>Developed strong communication and problem-solving skills</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+</body>
+</html>
