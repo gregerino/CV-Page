@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erfarenhet – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .timeline { display: flex; flex-direction: column; }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 3rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .timeline-item:first-child { padding-top: 0; }
+    .timeline-item:last-child { border-bottom: none; }
+
+    .timeline-left { padding-top: 0.15rem; }
+    .timeline-period {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--amber);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+    .timeline-company {
+      font-size: 0.82rem;
+      color: var(--ink-light);
+      margin-bottom: 0.3rem;
+    }
+    .timeline-location {
+      font-size: 0.7rem;
+      color: var(--ink-dim);
+    }
+
+    .timeline-role {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .timeline-desc {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+    }
+    .timeline-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+    }
+    .timeline-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .timeline-bullets li {
+      font-size: 0.84rem;
+      color: var(--ink-light);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.55;
+    }
+    .timeline-bullets li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+      font-size: 0.4rem;
+      top: 0.5em;
+    }
+
+    @media (max-width: 680px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><em>Marcus</em> <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="om-mig.html">Om mig</a></li>
+      <li><a href="erfarenhet.html" class="active">Erfarenhet</a></li>
+      <li><a href="kompetenser.html">Kompetenser</a></li>
+      <li><a href="utbildning.html">Utbildning</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Karriär</p>
+    <h1 class="section-title">Arbetslivserfarenhet</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-left">
+        <p class="timeline-period">Juni 2024 – Maj 2026</p>
+        <p class="timeline-company">Mpya Sci &amp; Tech</p>
+        <p class="timeline-location">Göteborg</p>
+      </div>
+      <div>
+        <h2 class="timeline-role">Rekryteringskonsult</h2>
+        <p class="timeline-desc">Matchade rätt person med rätt arbetsplats och agerade rådgivande till rekryterande chefer för bästa möjliga kompetens- och kulturmatchning.</p>
+        <div class="timeline-card">
+          <ul class="timeline-bullets">
+            <li>Drev och ansvarade för hela rekryteringsprocesser, från behovsanalys till slutlig tillsättning, inom tekniska roller</li>
+            <li>Rådgav chefer i kravprofil, urval, process och kandidatutvärdering</li>
+            <li>Säkerställde en strukturerad och kvalitativ kandidatupplevelse genom hela processen</li>
+            <li>Utvecklade och förbättrade rekryteringsprocesser och arbetssätt</li>
+            <li>Arbetade löpande i ATS-system för att säkerställa kvalitet och struktur i kandidatdata</li>
+            <li>Skrev och publicerade annonser utifrån verksamhetens behov</li>
+            <li>Sourcade och byggde kandidatpipeline proaktivt</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-left">
+        <p class="timeline-period">Sep 2023 – Juni 2024</p>
+        <p class="timeline-company">Simployer</p>
+        <p class="timeline-location">Göteborg</p>
+      </div>
+      <div>
+        <h2 class="timeline-role">Kursutvecklare</h2>
+        <p class="timeline-desc">Utvecklade och förbättrade utbildningsinnehåll inom HR, lön, skatt och moms för ett ledande HR-system med starkt fokus på medarbetarupplevelsen.</p>
+        <div class="timeline-card">
+          <ul class="timeline-bullets">
+            <li>Utvecklade och förbättrade utbildningar inom HR och Learning &amp; Development</li>
+            <li>Säkerställde att innehåll var uppdaterat och i linje med aktuella trender och behov inom HR</li>
+            <li>Samarbetade med ämnesexperter för att skapa relevanta och kvalitativa utbildningsinsatser</li>
+            <li>Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde</li>
+            <li>Förbättrade kursmaterial och pedagogiska upplägg</li>
+            <li>Integrerade omvärldsinsikter och research i utbildningsinnehåll</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-left">
+        <p class="timeline-period">April 2022 – Sep 2023</p>
+        <p class="timeline-company">A Society</p>
+        <p class="timeline-location">Göteborg</p>
+      </div>
+      <div>
+        <h2 class="timeline-role">Business Manager</h2>
+        <p class="timeline-desc">Ansvarade för rekrytering och matchning av IT-konsulter samt löpande HR-stöd i en snabbföränderlig konsultmiljö.</p>
+        <div class="timeline-card">
+          <ul class="timeline-bullets">
+            <li>Ansvarade för rekrytering och matchning av IT-konsulter</li>
+            <li>Koordinerade dialog mellan kunder och kandidater genom hela processen</li>
+            <li>Arbetade med onboarding och löpande HR-stöd till konsulter – fakturering och uppföljning</li>
+            <li>Utvecklade strukturer för intern onboarding i syfte att öka engagemang och retention</li>
+            <li>Hanterade flera parallella processer i en snabbföränderlig miljö</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-left">
+        <p class="timeline-period">Nov 2020 – April 2022</p>
+        <p class="timeline-company">ZoCom</p>
+        <p class="timeline-location">Göteborg</p>
+      </div>
+      <div>
+        <h2 class="timeline-role">Talent Acquisition Lead / Consultant Manager</h2>
+        <p class="timeline-desc">Ingick i ledningsgruppen med fullt ansvar för talent acquisition och en konsultgrupp på 15+ personer i ett IT-bolag i stark tillväxt.</p>
+        <div class="timeline-card">
+          <ul class="timeline-bullets">
+            <li>Ledde och utvecklade bolagets arbete inom talent acquisition</li>
+            <li>Arbetade med employer branding och förbättring av interna processer</li>
+            <li>Implementerade och utvecklade arbetssätt i ATS-system</li>
+            <li>Ansvarade för rekryteringsprocesser från start till onboarding</li>
+            <li>Personalrelaterade frågor och kompetensutveckling för konsultgrupp på 15+ personer</li>
+            <li>Utvecklade och implementerade onboardingstruktur för nya medarbetare</li>
+            <li>Initierade och byggde ett karriärprogram för junior talang</li>
+            <li>Bidrog till organisationsutveckling genom att etablera ett internt LMS som sedan såldes B2B</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-left">
+        <p class="timeline-period">Juni 2019 – Okt 2020</p>
+        <p class="timeline-company">IT-Högskolan</p>
+        <p class="timeline-location">Göteborg</p>
+      </div>
+      <div>
+        <h2 class="timeline-role">Utbildningsledare / ICT-ansvarig</h2>
+        <p class="timeline-desc">Ledde utbildningsprogram vid en av Sveriges största YH-utbildare inom IT och stöttade studenter in i tech-branschen.</p>
+        <div class="timeline-card">
+          <ul class="timeline-bullets">
+            <li>Ledde och utvecklade utbildningsprogram i nära samarbete med arbetsmarknaden</li>
+            <li>Coachade och vägledde studenter i deras karriärresa mot IT-branschen</li>
+            <li>Arbetade med kompetensförsörjning genom att matcha utbildning mot marknadsbehov</li>
+            <li>Deltog i rekrytering av lärare och säkerställde relevant kompetens</li>
+            <li>Byggde och underhöll samarbeten med företag och externa intressenter</li>
+            <li>Säkerställde praktikplatser och stödde studenter i övergången till arbetslivet</li>
+            <li>Förbättrade interna kommunikationsflöden och utvecklade LMS-struktur</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-left">
+        <p class="timeline-period">Maj 2013 – Aug 2018</p>
+        <p class="timeline-company">Telia Company</p>
+        <p class="timeline-location">Göteborg / Umeå</p>
+      </div>
+      <div>
+        <h2 class="timeline-role">First Line Support / Store Sales</h2>
+        <p class="timeline-desc">Heltid i tre år och deltid i två år hos Sveriges största telekomleverantör, med fokus på kundservice och internt medarbetarstöd.</p>
+        <div class="timeline-card">
+          <ul class="timeline-bullets">
+            <li>Stöttade onboarding av nya medarbetare genom coachning och deltagande i rekrytering</li>
+            <li>Bidrog till förbättrad kunskapsdelning och arbetssätt inom support</li>
+            <li>Arbetade med kundservice via telefon, chatt och mejl</li>
+            <li>Utvecklade stark kommunikativ förmåga och problemlösningsförmåga</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Marcus Hultberg</p>
+  <a href="kontakt.html">Ta kontakt →</a>
+</footer>
+
+</body>
+</html>

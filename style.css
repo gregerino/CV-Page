@@ -84,6 +84,24 @@ nav {
   letter-spacing: 0.01em;
 }
 .nav-logo span { color: var(--amber); }
+.nav-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(250,248,244,0.5);
+  color: var(--ink-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+.nav-back:hover { border-color: var(--amber); color: var(--amber); }
 .nav-links {
   display: flex;
   gap: 0;

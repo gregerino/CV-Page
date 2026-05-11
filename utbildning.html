@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utbildning – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 4rem;
+    }
+    .edu-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--amber), transparent);
+    }
+    .edu-card-year {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.9rem;
+    }
+    .edu-card-degree {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+    }
+    .edu-card-school {
+      font-size: 0.83rem;
+      color: var(--ink-light);
+      margin-bottom: 1.5rem;
+    }
+    .edu-card-desc {
+      font-size: 0.84rem;
+      color: var(--ink-dim);
+      line-height: 1.7;
+    }
+
+    .edu-focus {
+      background: var(--ink);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .edu-focus::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--amber), transparent);
+    }
+    .edu-focus-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(242,237,228,0.4);
+      margin-bottom: 0.6rem;
+    }
+    .edu-focus-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .edu-focus-text {
+      font-size: 0.88rem;
+      color: rgba(242,237,228,0.65);
+      line-height: 1.8;
+    }
+
+    .edu-areas-title {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .edu-areas {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 0.6rem;
+    }
+    .edu-area {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.1rem;
+      font-size: 0.83rem;
+      color: var(--ink-light);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .edu-area::before {
+      content: '◆';
+      color: var(--amber);
+      font-size: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) { .edu-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><em>Marcus</em> <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="om-mig.html">Om mig</a></li>
+      <li><a href="erfarenhet.html">Erfarenhet</a></li>
+      <li><a href="kompetenser.html">Kompetenser</a></li>
+      <li><a href="utbildning.html" class="active">Utbildning</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Akademisk bakgrund</p>
+    <h1 class="section-title">Utbildning</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="edu-grid">
+    <div class="edu-card">
+      <p class="edu-card-year">2016 – 2019</p>
+      <h2 class="edu-card-degree">BSc. Beteendevetenskap med inriktning IT-miljöer</h2>
+      <p class="edu-card-school">Umeå Universitet</p>
+      <p class="edu-card-desc">Kandidatexamen med fokus på mänskligt beteende i digitala och tekniska organisationer — en stabil grund för arbete med People &amp; Culture i techbranschen.</p>
+    </div>
+    <div class="edu-card">
+      <p class="edu-card-year">2020</p>
+      <h2 class="edu-card-degree">Certifierad Utbildningsledare</h2>
+      <p class="edu-card-school">Myndigheten för Yrkeshögskolan</p>
+      <p class="edu-card-desc">Certifiering inom utbildningsledarskap med inriktning mot yrkeshögskolan — direkt tillämpbart i L&amp;D-rollen med fokus på pedagogisk planering och kursdesign.</p>
+    </div>
+  </div>
+
+  <div class="edu-focus">
+    <p class="edu-focus-label">Utbildningens kärna</p>
+    <h2 class="edu-focus-title">Beteendevetenskap möter tekniska miljöer</h2>
+    <p class="edu-focus-text">Kombinationen av beteendevetenskap och IT-perspektiv ger en unik förståelse för hur människor fungerar i moderna, snabbföränderliga organisationer — och förmågan att överbrygga gapet mellan HR och verksamhet.</p>
+  </div>
+
+  <div>
+    <p class="edu-areas-title">Relevanta kunskapsområden</p>
+    <div class="edu-areas">
+      <div class="edu-area">Organisationspsykologi</div>
+      <div class="edu-area">Pedagogik &amp; didaktik</div>
+      <div class="edu-area">Rekrytering &amp; urval</div>
+      <div class="edu-area">Gruppdynamik</div>
+      <div class="edu-area">Arbetsrättsliga grunder</div>
+      <div class="edu-area">Ledarskap &amp; coaching</div>
+      <div class="edu-area">Kvalitetssäkring</div>
+      <div class="edu-area">Kompetensförsörjning</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Marcus Hultberg</p>
+  <a href="kontakt.html">Ta kontakt →</a>
+</footer>
+
+</body>
+</html>

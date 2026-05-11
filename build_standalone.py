@@ -67,6 +67,27 @@ footer p {{ font-size: 0.72rem; color: var(--ink-dim); }}
 footer a {{ font-size: 0.72rem; font-weight: 500; color: var(--ink-mid); text-decoration: none; cursor: pointer; }}
 footer a:hover {{ color: var(--amber); }}
 
+/* AI SEARCH */
+.ai-bar {{ max-width: var(--max); margin: 0 auto; padding: 80px 2.5rem 0; display: flex; flex-direction: column; align-items: center; }}
+.ai-bar-wrap {{ position: relative; max-width: 620px; width: 100%; }}
+.ai-bar-input {{ width: 100%; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--ink); background: rgba(250,248,244,0.6); backdrop-filter: blur(8px); border: 1px solid var(--border-strong); border-radius: 100px; padding: 0.95rem 3.5rem 0.95rem 1.5rem; outline: none; box-shadow: 0 2px 12px rgba(28,23,16,0.06), inset 0 1px 0 rgba(255,255,255,0.4); transition: border-color 0.15s, box-shadow 0.15s; }}
+.ai-bar-input:focus {{ border-color: var(--amber); box-shadow: 0 2px 20px rgba(158,106,26,0.12); }}
+.ai-bar-input::placeholder {{ color: var(--ink-dim); }}
+.ai-bar-btn {{ position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 38px; height: 38px; background: var(--ink); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s; }}
+.ai-bar-btn:hover {{ background: var(--ink-mid); }}
+.ai-bar-btn:disabled {{ opacity: 0.4; cursor: not-allowed; }}
+.ai-bar-btn svg {{ width: 16px; height: 16px; }}
+.ai-bar-response {{ display: none; margin-top: 0.75rem; background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: 16px; padding: 1.2rem 1.5rem; box-shadow: 0 2px 12px rgba(28,23,16,0.08); max-width: 620px; }}
+.ai-bar-response.visible {{ display: block; }}
+.ai-bar-response-label {{ font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem; }}
+.ai-bar-response-text {{ font-size: 0.9rem; color: var(--ink-mid); line-height: 1.75; }}
+.ai-bar-loading {{ display: none; margin-top: 0.75rem; align-items: center; gap: 0.5rem; color: var(--ink-dim); font-size: 0.82rem; max-width: 620px; background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: 16px; padding: 1rem 1.5rem; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }}
+.ai-bar-loading.visible {{ display: flex; }}
+.ai-dot {{ width: 5px; height: 5px; background: var(--amber); border-radius: 50%; animation: pulse 1.2s ease-in-out infinite; }}
+.ai-dot:nth-child(2) {{ animation-delay: 0.2s; }}
+.ai-dot:nth-child(3) {{ animation-delay: 0.4s; }}
+@keyframes pulse {{ 0%, 100% {{ opacity: 0.2; transform: scale(0.8); }} 50% {{ opacity: 1; transform: scale(1); }} }}
+
 /* HERO */
 .hero {{ min-height: calc(100vh - 200px); display: flex; align-items: center; }}
 .hero-grid {{ display: grid; grid-template-columns: 1fr 370px; gap: 5rem; align-items: center; width: 100%; }}
@@ -231,6 +252,16 @@ footer a:hover {{ color: var(--amber); }}
 
 <!-- HOME -->
 <div class="section active" id="sec-home">
+  <div class="ai-bar">
+    <div class="ai-bar-wrap">
+      <input class="ai-bar-input" id="ai-input" type="text" placeholder="Ask anything about Marcus" />
+      <button class="ai-bar-btn" id="ai-btn" onclick="askAI()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#faf8f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+    <div class="ai-bar-loading" id="ai-loading"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div><span>Thinking&hellip;</span></div>
+    <div class="ai-bar-response" id="ai-response"><p class="ai-bar-response-label">Answer</p><p class="ai-bar-response-text" id="ai-response-text"></p></div>
+  </div>
   <div class="hero">
     <div class="hero-grid">
       <div>
@@ -415,6 +446,43 @@ function show(id) {{
     a.classList.toggle('active', a.textContent.trim().toLowerCase() === id || (id === 'cv' && a.textContent.trim() === 'CV'));
   }});
   window.scrollTo(0, 0);
+}}
+
+const aiInput = document.getElementById('ai-input');
+const aiBtn = document.getElementById('ai-btn');
+const aiLoading = document.getElementById('ai-loading');
+const aiResponse = document.getElementById('ai-response');
+const aiResponseText = document.getElementById('ai-response-text');
+aiInput.addEventListener('keydown', e => {{ if (e.key === 'Enter') askAI(); }});
+
+async function askAI(question) {{
+  const q = question || aiInput.value.trim();
+  if (!q) return;
+  aiInput.value = q;
+  aiBtn.disabled = true;
+  aiLoading.classList.add('visible');
+  aiResponse.classList.remove('visible');
+  try {{
+    const res = await fetch('https://cv-page-mocha.vercel.app/api/ask', {{
+      method: 'POST',
+      headers: {{ 'Content-Type': 'application/json' }},
+      body: JSON.stringify({{ question: q }})
+    }});
+    const data = await res.json();
+    if (data.answer) {{
+      aiResponseText.textContent = data.answer;
+      aiResponse.classList.add('visible');
+    }} else {{
+      aiResponseText.textContent = data.error || 'Something went wrong. Please try again.';
+      aiResponse.classList.add('visible');
+    }}
+  }} catch (e) {{
+    aiResponseText.textContent = 'Could not reach the server. Please try again later.';
+    aiResponse.classList.add('visible');
+  }} finally {{
+    aiBtn.disabled = false;
+    aiLoading.classList.remove('visible');
+  }}
 }}
 </script>
 </body>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kompetenser – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .skills-section { margin-bottom: 3.5rem; }
+    .skills-section-title {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .core-skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 0.75rem;
+    }
+    .core-skill-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.15s;
+    }
+    .core-skill-card:hover { border-color: var(--amber); }
+    .core-skill-icon {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--amber-pale);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .core-skill-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .core-skill-desc {
+      font-size: 0.77rem;
+      color: var(--ink-dim);
+      line-height: 1.5;
+    }
+
+    .tools-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tool-chip {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      transition: all 0.15s;
+    }
+    .tool-chip:hover { border-color: var(--amber); color: var(--amber); }
+
+    .highlight-box {
+      background: var(--ink);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-top: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .highlight-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--amber), transparent);
+    }
+    .highlight-box-title {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .highlight-box-text {
+      font-size: 0.88rem;
+      color: rgba(242,237,228,0.65);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) { .core-skills { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><em>Marcus</em> <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="om-mig.html">Om mig</a></li>
+      <li><a href="erfarenhet.html">Erfarenhet</a></li>
+      <li><a href="kompetenser.html" class="active">Kompetenser</a></li>
+      <li><a href="utbildning.html">Utbildning</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Vad jag kan</p>
+    <h1 class="section-title">Kompetenser</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="skills-section">
+    <p class="skills-section-title">Kärnkompetenser</p>
+    <div class="core-skills">
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🎯</div>
+        <div>
+          <p class="core-skill-name">Talent Acquisition</p>
+          <p class="core-skill-desc">Hela rekryteringsprocessen – från behovsanalys och sourcing till erbjudande och onboarding</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🤝</div>
+        <div>
+          <p class="core-skill-name">People &amp; Culture</p>
+          <p class="core-skill-desc">Medarbetarupplevelse, engagemang, kultur och HR-processer i tekniska miljöer</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">📚</div>
+        <div>
+          <p class="core-skill-name">Learning &amp; Development</p>
+          <p class="core-skill-desc">Kursutveckling, utbildningsledning, LMS och kompetensutvecklingsprogram</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">💼</div>
+        <div>
+          <p class="core-skill-name">HR</p>
+          <p class="core-skill-desc">Personalfrågor, onboarding, retention och stöd till chefer och medarbetare</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">✨</div>
+        <div>
+          <p class="core-skill-name">Employer Branding</p>
+          <p class="core-skill-desc">Bygga och kommunicera arbetsgivarvarumärke för att attrahera rätt talang</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">📋</div>
+        <div>
+          <p class="core-skill-name">Projektledning</p>
+          <p class="core-skill-desc">Driva parallella processer, strukturera arbete och leverera i snabbföränderliga miljöer</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🏗️</div>
+        <div>
+          <p class="core-skill-name">Organisationsutveckling</p>
+          <p class="core-skill-desc">Bygga strukturer, processer och program som skapar långsiktig hållbarhet</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">🌐</div>
+        <div>
+          <p class="core-skill-name">Stakeholder Management</p>
+          <p class="core-skill-desc">Rådgivning och samarbete med chefer, ledning och externa intressenter</p>
+        </div>
+      </div>
+      <div class="core-skill-card">
+        <div class="core-skill-icon">💬</div>
+        <div>
+          <p class="core-skill-name">Kommunikation</p>
+          <p class="core-skill-desc">Tydlig och anpassad kommunikation i kandidatmöten, workshops och konferenser</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-section">
+    <p class="skills-section-title">System &amp; verktyg</p>
+    <div class="tools-grid">
+      <span class="tool-chip">Teamtailor</span>
+      <span class="tool-chip">Workbuster</span>
+      <span class="tool-chip">Slack</span>
+      <span class="tool-chip">Notion</span>
+      <span class="tool-chip">Google Workspace</span>
+      <span class="tool-chip">LinkedIn Recruiter</span>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <h2 class="highlight-box-title">Tekniska miljöer som hemmaplan</h2>
+    <p class="highlight-box-text">
+      Merparten av min karriär har tillbringats i IT- och techbolag — vilket gör att jag förstår
+      verksamhetens språk, behov och utmaningar. Det skapar bättre rekryteringsprocesser,
+      mer träffsäkra kravprofiler och starkare förtroende hos både kandidater och chefer.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Marcus Hultberg</p>
+  <a href="kontakt.html">Ta kontakt →</a>
+</footer>
+
+</body>
+</html>

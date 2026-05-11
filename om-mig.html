@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om mig – Marcus Hultberg</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .om-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4.5rem;
+      align-items: start;
+    }
+    .om-photo-wrap {
+      position: sticky;
+      top: 84px;
+    }
+    .om-photo-frame {
+      position: relative;
+    }
+    .om-photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -7px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      pointer-events: none;
+    }
+    .om-photo {
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      position: relative;
+    }
+    .om-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .om-content {}
+    .profil-ingress {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      line-height: 1.85;
+      color: var(--ink-mid);
+      margin-bottom: 2rem;
+      padding-left: 1.4rem;
+      border-left: 2px solid var(--amber);
+    }
+    .profil-body {
+      font-size: 0.93rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .om-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+    .om-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.4rem;
+    }
+    .om-card-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.35rem;
+    }
+    .om-card-value {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.5;
+    }
+    .om-card-value a { color: var(--ink-mid); text-decoration: none; }
+    .om-card-value a:hover { color: var(--amber); }
+
+    .drives-section { margin-top: 2.5rem; }
+    .drives-title {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 1rem;
+    }
+    .drives-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .drives-list li {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      line-height: 1.55;
+    }
+    .drives-list li::before {
+      content: '◆';
+      color: var(--amber);
+      font-size: 0.45rem;
+      margin-top: 0.5em;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 700px) {
+      .om-grid { grid-template-columns: 1fr; }
+      .om-photo-wrap { position: static; max-width: 220px; }
+      .om-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><em>Marcus</em> <span>Hultberg</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Hem</a></li>
+      <li><a href="om-mig.html" class="active">Om mig</a></li>
+      <li><a href="erfarenhet.html">Erfarenhet</a></li>
+      <li><a href="kompetenser.html">Kompetenser</a></li>
+      <li><a href="utbildning.html">Utbildning</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="section-header">
+    <p class="section-eyebrow">Bakgrund &amp; drivkrafter</p>
+    <h1 class="section-title">Om mig</h1>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="om-grid">
+    <div class="om-photo-wrap">
+      <div class="om-photo-frame">
+        <div class="om-photo">
+          <img src="marcus.jpg" alt="Marcus Hultberg" />
+        </div>
+      </div>
+    </div>
+
+    <div class="om-content">
+      <p class="profil-ingress">
+        Erfarenhet av att jobba brett inom rekrytering, HR, Learning &amp; Development
+        och organisationsutveckling, främst i tekniska miljöer.
+      </p>
+      <p class="profil-body">
+        Det som driver mig är att få arbeta nära människor och verksamhet, och att skapa
+        förutsättningar för både individer och organisationer att utvecklas. Genom mina roller
+        har jag fått möjlighet att bygga och förbättra processer inom rekrytering, onboarding
+        och kompetensutveckling, alltid med fokus på att skapa en bra och engagerande
+        medarbetarupplevelse.
+      </p>
+      <p class="profil-body">
+        Jag trivs i samarbetet med chefer och team, där jag får bidra med struktur,
+        perspektiv och stöd i hur vi kan arbeta smartare och mer hållbart över tid.
+      </p>
+
+      <div class="drives-section">
+        <p class="drives-title">Det jag brinner för</p>
+        <ul class="drives-list">
+          <li>Att matcha rätt person med rätt roll — och skapa förutsättningar för att de ska lyckas</li>
+          <li>Att bygga strukturer och processer som skapar långsiktig hållbarhet</li>
+          <li>Att arbeta nära verksamheten och förstå affärens behov</li>
+          <li>Att skapa engagerande medarbetarupplevelser från dag ett</li>
+          <li>Att kombinera datadrivet tänkande med ett genuint människofokus</li>
+        </ul>
+      </div>
+
+      <div class="om-cards">
+        <div class="om-card">
+          <p class="om-card-label">Plats</p>
+          <p class="om-card-value">Göteborg, Sverige</p>
+        </div>
+        <div class="om-card">
+          <p class="om-card-label">Fokusområde</p>
+          <p class="om-card-value">People &amp; Culture · Rekrytering · L&amp;D</p>
+        </div>
+        <div class="om-card">
+          <p class="om-card-label">E-post</p>
+          <p class="om-card-value"><a href="mailto:marcus.hultberg@live.se">marcus.hultberg@live.se</a></p>
+        </div>
+        <div class="om-card">
+          <p class="om-card-label">Telefon</p>
+          <p class="om-card-value"><a href="tel:+46703445947">0703 44 59 47</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Marcus Hultberg</p>
+  <a href="kontakt.html">Ta kontakt →</a>
+</footer>
+
+</body>
+</html>
