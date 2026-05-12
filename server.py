@@ -21,7 +21,7 @@ Thrives collaborating with managers and teams, contributing with structure, pers
 CONTACT:
 Email: marcus.hultberg@live.se
 Phone: 0703445947
-Location: Hedåsgatan 10, 412 53 Gothenburg, Sweden
+Location: Gothenburg, Sweden
 LinkedIn: https://www.linkedin.com/in/marcus-hultberg-505b386a/
 
 WORK EXPERIENCE:
