@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal – Marcus Hultberg</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <style>
     .personal-intro {
       font-family: 'Lora', Georgia, serif; font-size: 1.1rem; font-style: italic;
@@ -78,8 +78,20 @@
       <li><a href="personal.html" class="active">Personal</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-overlay" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="experience.html">CV</a>
+  <a href="skills.html">Skills</a>
+  <a href="education.html">Education</a>
+  <a href="personal.html" class="active">Personal</a>
+  <a href="contact.html">Contact</a>
+</div>
 <div class="page">
   <div class="section-header">
     <p class="section-eyebrow">Beyond work</p>

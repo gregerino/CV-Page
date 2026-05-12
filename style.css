@@ -237,9 +237,65 @@ footer a {
 }
 footer a:hover { color: var(--amber); }
 
+/* ── HAMBURGER MENU ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--ink-light);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.nav-mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 60px;
+  z-index: 99;
+  background: rgba(242,237,228,0.97);
+  backdrop-filter: blur(16px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.nav-mobile-overlay.open { display: flex; }
+.nav-mobile-overlay a {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  transition: color 0.15s;
+}
+.nav-mobile-overlay a:hover,
+.nav-mobile-overlay a.active { color: var(--amber); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 680px) {
-  .page { padding: 84px 1.5rem 60px; }
+  .page { padding: 76px 1.25rem 50px; }
   .nav-links { display: none; }
-  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .nav-hamburger { display: flex; }
+  .nav-inner { padding: 0 1.25rem; height: 54px; }
+  .nav-logo { font-size: 1rem; }
+  .nav-back { width: 28px; height: 28px; font-size: 0.75rem; margin-right: 0.5rem; }
+  .section-title { font-size: 1.8rem; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 1.25rem; }
 }

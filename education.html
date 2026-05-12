@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Education – Marcus Hultberg</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <style>
     .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 4rem; }
     .edu-card { background: rgba(250,248,244,0.55); backdrop-filter: blur(8px); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.25rem; position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(28,23,16,0.04), inset 0 1px 0 rgba(255,255,255,0.4); }
@@ -39,8 +39,20 @@
       <li><a href="personal.html">Personal</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-overlay" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="experience.html">CV</a>
+  <a href="skills.html">Skills</a>
+  <a href="education.html" class="active">Education</a>
+  <a href="personal.html">Personal</a>
+  <a href="contact.html">Contact</a>
+</div>
 <div class="page">
   <div class="section-header">
     <p class="section-eyebrow">Academic background</p>

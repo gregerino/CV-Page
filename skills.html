@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills – Marcus Hultberg</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <style>
     .skills-section { margin-bottom: 3.5rem; }
     .skills-section-title { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 1.25rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-light); }
@@ -38,8 +38,20 @@
       <li><a href="personal.html">Personal</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-overlay" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="experience.html">CV</a>
+  <a href="skills.html" class="active">Skills</a>
+  <a href="education.html">Education</a>
+  <a href="personal.html">Personal</a>
+  <a href="contact.html">Contact</a>
+</div>
 <div class="page">
   <div class="section-header">
     <p class="section-eyebrow">What I bring</p>

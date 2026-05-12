@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About – Marcus Hultberg</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
   <style>
     .om-grid { display: grid; grid-template-columns: 280px 1fr; gap: 4.5rem; align-items: start; }
     .om-photo-wrap { position: sticky; top: 84px; }
@@ -49,8 +49,20 @@
       <li><a href="personal.html">Personal</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-overlay" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="experience.html">CV</a>
+  <a href="skills.html">Skills</a>
+  <a href="education.html">Education</a>
+  <a href="personal.html">Personal</a>
+  <a href="contact.html">Contact</a>
+</div>
 <div class="page">
   <div class="section-header">
     <p class="section-eyebrow">Background &amp; motivations</p>
@@ -87,6 +99,9 @@
           <li>Creating engaging employee experiences from day one</li>
           <li>Combining data-driven thinking with a genuine focus on people</li>
         </ul>
+    <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
       </div>
       <div class="om-cards">
         <div class="om-card"><p class="om-card-label">Location</p><p class="om-card-value">Gothenburg, Sweden</p></div>
