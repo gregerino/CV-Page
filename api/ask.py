@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
-import json, os, urllib.request, urllib.error
+import json, os, urllib.request, urllib.error, urllib.parse
+from datetime import datetime, timezone
 
 MARCUS_CONTEXT = """
 Marcus Hultberg — People & Culture, Recruitment & Learning and Development
@@ -113,6 +114,39 @@ AVAILABILITY:
 Open to new opportunities within People & Culture, Talent Acquisition and Learning & Development, especially in technical environments.
 """
 
+UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
+UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
+
+
+def redis_cmd(*args):
+    if not UPSTASH_URL or not UPSTASH_TOKEN:
+        return None
+    url = UPSTASH_URL
+    for arg in args:
+        url += "/" + urllib.parse.quote(str(arg), safe="")
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {UPSTASH_TOKEN}"})
+    try:
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            data = json.loads(resp.read())
+            return data.get("result")
+    except Exception:
+        return None
+
+
+def track_ai_question(question):
+    """Track AI question in Redis - total count, daily count, and recent questions."""
+    try:
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        redis_cmd("INCR", "stats:ai:total")
+        redis_cmd("INCR", f"stats:ai:daily:{today}")
+        # Store last 50 questions with timestamp
+        entry = json.dumps({"q": question[:200], "t": datetime.now(timezone.utc).isoformat()})
+        redis_cmd("LPUSH", "stats:ai:questions", entry)
+        redis_cmd("LTRIM", "stats:ai:questions", "0", "49")
+    except Exception:
+        pass
+
+
 SYSTEM_PROMPT = (
     "You are a helpful assistant on Marcus Hultberg's personal CV website. "
     "Answer questions about Marcus professionally and concisely, based strictly on the information provided. "
@@ -162,6 +196,7 @@ class handler(BaseHTTPRequestHandler):
             with urllib.request.urlopen(req, timeout=20) as resp:
                 result = json.loads(resp.read())
                 answer = result["content"][0]["text"]
+            track_ai_question(question)
             self._json(200, {"answer": answer})
         except urllib.error.HTTPError as e:
             err = e.read().decode()

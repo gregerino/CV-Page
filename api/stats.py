@@ -72,6 +72,21 @@ class handler(BaseHTTPRequestHandler):
             if v or i < 7:
                 daily.append({"date": d, "views": v, "visitors": visitors})
 
+        # AI search stats
+        ai_total = get_val("stats:ai:total")
+        ai_today = get_val(f"stats:ai:daily:{today.strftime('%Y-%m-%d')}")
+
+        # Recent AI questions (last 20)
+        raw_questions = redis_cmd("LRANGE", "stats:ai:questions", "0", "19")
+        ai_questions = []
+        if raw_questions:
+            for item in raw_questions:
+                try:
+                    q = json.loads(item)
+                    ai_questions.append(q)
+                except Exception:
+                    pass
+
         # Build HTML dashboard
         html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -107,6 +122,8 @@ tr:last-child td{{border-bottom:none}}
 <div class="grid">
 <div class="card"><p class="card-label">Total page views</p><p class="card-value">{total}</p></div>
 <div class="card"><p class="card-label">Today</p><p class="card-value">{get_val(f"stats:daily:{today.strftime('%Y-%m-%d')}")}</p></div>
+<div class="card"><p class="card-label">AI questions total</p><p class="card-value">{ai_total}</p></div>
+<div class="card"><p class="card-label">AI questions today</p><p class="card-value">{ai_today}</p></div>
 </div>
 
 <h2>Page views by page</h2>
@@ -132,6 +149,28 @@ tr:last-child td{{border-bottom:none}}
             html += f'<tr><td>{name}</td><td>{count}</td><td><div class="bar-wrap"><div class="bar" style="width:{pct}%"></div></div></td></tr>\n'
         if not clicks:
             html += '<tr><td colspan="3" style="color:#9e9282">No data yet</td></tr>\n'
+
+        html += """</table>
+
+<h2>AI search questions</h2>
+<table>
+<tr><th>Question</th><th>Time</th></tr>
+"""
+        if ai_questions:
+            for q in ai_questions:
+                question_text = q.get("q", "")
+                # Escape HTML
+                question_text = question_text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                ts = q.get("t", "")
+                # Format timestamp nicely
+                try:
+                    dt = datetime.fromisoformat(ts)
+                    time_str = dt.strftime("%Y-%m-%d %H:%M")
+                except Exception:
+                    time_str = ts[:16] if ts else ""
+                html += f'<tr><td>{question_text}</td><td style="white-space:nowrap;color:#9e9282">{time_str}</td></tr>\n'
+        else:
+            html += '<tr><td colspan="2" style="color:#9e9282">No questions yet</td></tr>\n'
 
         html += """</table>
 
