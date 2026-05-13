@@ -36,13 +36,13 @@
   <div class="nav-inner">
     <div style="display:flex;align-items:center;"><a onclick="history.back()" class="nav-back">←</a><a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html" class="active">CV</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="personal.html">Personal</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="experience.html" class="active" data-i18n="nav.cv">CV</a></li>
+      <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="education.html" data-i18n="nav.education">Education</a></li>
+      <li><a href="personal.html" data-i18n="nav.personal">Personal</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -50,147 +50,148 @@
   </div>
 </nav>
 <div class="nav-mobile-overlay" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="experience.html" class="active">CV</a>
-  <a href="skills.html">Skills</a>
-  <a href="education.html">Education</a>
-  <a href="personal.html">Personal</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="experience.html" class="active" data-i18n="nav.cv">CV</a>
+  <a href="skills.html" data-i18n="nav.skills">Skills</a>
+  <a href="education.html" data-i18n="nav.education">Education</a>
+  <a href="personal.html" data-i18n="nav.personal">Personal</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
 </div>
 <div class="page">
   <div class="section-header">
-    <p class="section-eyebrow">Career</p>
-    <h1 class="section-title">Work experience</h1>
+    <p class="section-eyebrow" data-i18n="exp.eyebrow">Career</p>
+    <h1 class="section-title" data-i18n="exp.title">Work experience</h1>
     <div class="section-divider"></div>
   </div>
   <div class="role-cards">
 
     <div class="role-card">
       <div class="role-card-header">
-        <h2 class="role-card-title">Recruitment Consultant</h2>
+        <h2 class="role-card-title" data-i18n="exp.r1.title">Recruitment Consultant</h2>
         <span class="role-card-period">June 2024 – June 2026</span>
       </div>
       <p class="role-card-company">Mpya Sci &amp; Tech</p>
       <p class="role-card-location">Gothenburg</p>
-      <p class="role-card-about">Recruitment and consulting firm specialising in science, technology and engineering.</p>
-      <p class="role-card-desc">Matching the right person with the right workplace while acting as an advisor to hiring managers on competence and cultural fit.</p>
+      <p class="role-card-about" data-i18n="exp.r1.about">Recruitment and consulting firm specialising in science, technology and engineering.</p>
+      <p class="role-card-desc" data-i18n="exp.r1.desc">Matching the right person with the right workplace while acting as an advisor to hiring managers on competence and cultural fit.</p>
       <ul class="role-card-bullets">
-        <li>Drove and managed full recruitment processes from needs analysis to final placement, within technical roles</li>
-        <li>Advised managers on competence profiles, selection, process and candidate evaluation</li>
-        <li>Ensured a structured and high-quality candidate experience throughout the process</li>
-        <li>Developed and improved recruitment processes and ways of working</li>
-        <li>Worked in ATS systems to ensure quality and structure in candidate data</li>
-        <li>Wrote and published job ads based on business needs</li>
-        <li>Proactively sourced and built candidate pipelines</li>
+        <li data-i18n="exp.r1.b1">Drove and managed full recruitment processes from needs analysis to final placement, within technical roles</li>
+        <li data-i18n="exp.r1.b2">Advised managers on competence profiles, selection, process and candidate evaluation</li>
+        <li data-i18n="exp.r1.b3">Ensured a structured and high-quality candidate experience throughout the process</li>
+        <li data-i18n="exp.r1.b4">Developed and improved recruitment processes and ways of working</li>
+        <li data-i18n="exp.r1.b5">Worked in ATS systems to ensure quality and structure in candidate data</li>
+        <li data-i18n="exp.r1.b6">Wrote and published job ads based on business needs</li>
+        <li data-i18n="exp.r1.b7">Proactively sourced and built candidate pipelines</li>
       </ul>
 
     </div>
 
     <div class="role-card">
       <div class="role-card-header">
-        <h2 class="role-card-title">Course Developer</h2>
+        <h2 class="role-card-title" data-i18n="exp.r2.title">Course Developer</h2>
         <span class="role-card-period">Sep 2023 – June 2024</span>
       </div>
       <p class="role-card-company">Simployer</p>
       <p class="role-card-location">Gothenburg</p>
-      <p class="role-card-about">Leading Nordic HR tech company providing HR systems, payroll solutions and training.</p>
-      <p class="role-card-desc">Developed and improved training content in HR, payroll, tax and VAT for a leading HR system with a strong focus on the employee experience.</p>
+      <p class="role-card-about" data-i18n="exp.r2.about">Leading Nordic HR tech company providing HR systems, payroll solutions and training.</p>
+      <p class="role-card-desc" data-i18n="exp.r2.desc">Developed and improved training content in HR, payroll, tax and VAT for a leading HR system with a strong focus on the employee experience.</p>
       <ul class="role-card-bullets">
-        <li>Developed and improved courses within HR and Learning &amp; Development</li>
-        <li>Ensured content was up to date and aligned with current HR trends and needs</li>
-        <li>Collaborated with subject matter experts to create relevant and high-quality training</li>
-        <li>Planned and executed conferences and training sessions focused on participant value</li>
-        <li>Improved course materials and pedagogical structures</li>
-        <li>Integrated market insights and research into training content</li>
+        <li data-i18n="exp.r2.b1">Developed and improved courses within HR and Learning &amp; Development</li>
+        <li data-i18n="exp.r2.b2">Ensured content was up to date and aligned with current HR trends and needs</li>
+        <li data-i18n="exp.r2.b3">Collaborated with subject matter experts to create relevant and high-quality training</li>
+        <li data-i18n="exp.r2.b4">Planned and executed conferences and training sessions focused on participant value</li>
+        <li data-i18n="exp.r2.b5">Improved course materials and pedagogical structures</li>
+        <li data-i18n="exp.r2.b6">Integrated market insights and research into training content</li>
       </ul>
 
     </div>
 
     <div class="role-card">
       <div class="role-card-header">
-        <h2 class="role-card-title">Business Manager</h2>
+        <h2 class="role-card-title" data-i18n="exp.r3.title">Business Manager</h2>
         <span class="role-card-period">April 2022 – Sep 2023</span>
       </div>
       <p class="role-card-company">A Society</p>
       <p class="role-card-location">Gothenburg</p>
-      <p class="role-card-about">IT consulting firm connecting tech talent with companies across Sweden.</p>
-      <p class="role-card-desc">Responsible for recruitment and matching of IT consultants alongside ongoing HR support in a fast-moving consulting environment.</p>
+      <p class="role-card-about" data-i18n="exp.r3.about">IT consulting firm connecting tech talent with companies across Sweden.</p>
+      <p class="role-card-desc" data-i18n="exp.r3.desc">Responsible for recruitment and matching of IT consultants alongside ongoing HR support in a fast-moving consulting environment.</p>
       <ul class="role-card-bullets">
-        <li>Responsible for recruitment and matching of IT consultants</li>
-        <li>Coordinated dialogue between clients and candidates throughout the process</li>
-        <li>Worked with onboarding and ongoing HR support to consultants, including invoicing and follow-up</li>
-        <li>Developed internal onboarding structures to increase engagement and retention</li>
-        <li>Managed multiple parallel processes in a fast-changing environment</li>
+        <li data-i18n="exp.r3.b1">Responsible for recruitment and matching of IT consultants</li>
+        <li data-i18n="exp.r3.b2">Coordinated dialogue between clients and candidates throughout the process</li>
+        <li data-i18n="exp.r3.b3">Worked with onboarding and ongoing HR support to consultants, including invoicing and follow-up</li>
+        <li data-i18n="exp.r3.b4">Developed internal onboarding structures to increase engagement and retention</li>
+        <li data-i18n="exp.r3.b5">Managed multiple parallel processes in a fast-changing environment</li>
       </ul>
 
     </div>
 
     <div class="role-card">
       <div class="role-card-header">
-        <h2 class="role-card-title">Talent Acquisition Lead / Consultant Manager</h2>
+        <h2 class="role-card-title" data-i18n="exp.r4.title">Talent Acquisition Lead / Consultant Manager</h2>
         <span class="role-card-period">Nov 2020 – April 2022</span>
       </div>
       <p class="role-card-company">ZoCom</p>
       <p class="role-card-location">Gothenburg</p>
-      <p class="role-card-about">Fast-growing IT consulting company focused on web development and digital solutions.</p>
-      <p class="role-card-desc">Part of the management team with full responsibility for talent acquisition and a consultant group of 15+ people in a high-growth IT company.</p>
+      <p class="role-card-about" data-i18n="exp.r4.about">Fast-growing IT consulting company focused on web development and digital solutions.</p>
+      <p class="role-card-desc" data-i18n="exp.r4.desc">Part of the management team with full responsibility for talent acquisition and a consultant group of 15+ people in a high-growth IT company.</p>
       <ul class="role-card-bullets">
-        <li>Led and developed the company's talent acquisition work</li>
-        <li>Worked with employer branding and improvement of internal processes</li>
-        <li>Implemented and developed ATS workflows</li>
-        <li>Managed full recruitment processes from start to onboarding</li>
-        <li>HR support and development for a consultant group of 15+ people</li>
-        <li>Developed and implemented onboarding structure for new employees</li>
-        <li>Created and ran internal workshops and training initiatives</li>
-        <li>Initiated and built a career programme for junior talent</li>
-        <li>Contributed to organisational development by establishing an internal LMS that was later sold B2B</li>
+        <li data-i18n="exp.r4.b1">Led and developed the company's talent acquisition work</li>
+        <li data-i18n="exp.r4.b2">Worked with employer branding and improvement of internal processes</li>
+        <li data-i18n="exp.r4.b3">Implemented and developed ATS workflows</li>
+        <li data-i18n="exp.r4.b4">Managed full recruitment processes from start to onboarding</li>
+        <li data-i18n="exp.r4.b5">HR support and development for a consultant group of 15+ people</li>
+        <li data-i18n="exp.r4.b6">Developed and implemented onboarding structure for new employees</li>
+        <li data-i18n="exp.r4.b7">Created and ran internal workshops and training initiatives</li>
+        <li data-i18n="exp.r4.b8">Initiated and built a career programme for junior talent</li>
+        <li data-i18n="exp.r4.b9">Contributed to organisational development by establishing an internal LMS that was later sold B2B</li>
       </ul>
 
     </div>
 
     <div class="role-card">
       <div class="role-card-header">
-        <h2 class="role-card-title">Education Manager / ICT Manager</h2>
+        <h2 class="role-card-title" data-i18n="exp.r5.title">Education Manager / ICT Manager</h2>
         <span class="role-card-period">June 2019 – Oct 2020</span>
       </div>
       <p class="role-card-company">IT-Högskolan</p>
       <p class="role-card-location">Gothenburg</p>
-      <p class="role-card-about">One of Sweden's largest providers of vocational higher education within IT and tech.</p>
-      <p class="role-card-desc">Led education programmes at one of Sweden's largest vocational IT schools and supported students in their transition into the tech industry.</p>
+      <p class="role-card-about" data-i18n="exp.r5.about">One of Sweden's largest providers of vocational higher education within IT and tech.</p>
+      <p class="role-card-desc" data-i18n="exp.r5.desc">Led education programmes at one of Sweden's largest vocational IT schools and supported students in their transition into the tech industry.</p>
       <ul class="role-card-bullets">
-        <li>Led and developed education programmes in close collaboration with the labour market</li>
-        <li>Coached and guided students in their career journey into the IT industry</li>
-        <li>Worked with competence supply by matching education to market needs</li>
-        <li>Participated in recruiting teachers and ensured relevant competence</li>
-        <li>Built and maintained partnerships with companies and external stakeholders</li>
-        <li>Secured internship placements and supported students in transitioning to working life</li>
-        <li>Improved internal communication flows and developed LMS structure</li>
+        <li data-i18n="exp.r5.b1">Led and developed education programmes in close collaboration with the labour market</li>
+        <li data-i18n="exp.r5.b2">Coached and guided students in their career journey into the IT industry</li>
+        <li data-i18n="exp.r5.b3">Worked with competence supply by matching education to market needs</li>
+        <li data-i18n="exp.r5.b4">Participated in recruiting teachers and ensured relevant competence</li>
+        <li data-i18n="exp.r5.b5">Built and maintained partnerships with companies and external stakeholders</li>
+        <li data-i18n="exp.r5.b6">Secured internship placements and supported students in transitioning to working life</li>
+        <li data-i18n="exp.r5.b7">Improved internal communication flows and developed LMS structure</li>
       </ul>
 
     </div>
 
     <div class="role-card">
       <div class="role-card-header">
-        <h2 class="role-card-title">First Line Support / Store Sales</h2>
+        <h2 class="role-card-title" data-i18n="exp.r6.title">First Line Support / Store Sales</h2>
         <span class="role-card-period">May 2013 – Aug 2018</span>
       </div>
       <p class="role-card-company">Telia Company</p>
       <p class="role-card-location">Gothenburg / Umeå</p>
-      <p class="role-card-about">Sweden's largest telecom operator, providing mobile, broadband and TV services.</p>
-      <p class="role-card-desc">Full-time for three years and part-time for two years at Sweden's largest telecom provider, with a focus on customer service and internal employee support.</p>
+      <p class="role-card-about" data-i18n="exp.r6.about">Sweden's largest telecom operator, providing mobile, broadband and TV services.</p>
+      <p class="role-card-desc" data-i18n="exp.r6.desc">Full-time for three years and part-time for two years at Sweden's largest telecom provider, with a focus on customer service and internal employee support.</p>
       <ul class="role-card-bullets">
-        <li>Supported onboarding of new employees through coaching and participating in recruitment</li>
-        <li>Contributed to improved knowledge sharing and working methods in support</li>
-        <li>Worked with customer service via phone, chat and email</li>
-        <li>Developed strong communication and problem-solving skills</li>
+        <li data-i18n="exp.r6.b1">Supported onboarding of new employees through coaching and participating in recruitment</li>
+        <li data-i18n="exp.r6.b2">Contributed to improved knowledge sharing and working methods in support</li>
+        <li data-i18n="exp.r6.b3">Worked with customer service via phone, chat and email</li>
+        <li data-i18n="exp.r6.b4">Developed strong communication and problem-solving skills</li>
       </ul>
 
     </div>
 
   </div>
 </div>
-<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html" data-i18n="footer.cta">Get in touch →</a></footer>
+<script src="lang.js"></script>
 <script src="tracking.js"></script>
 </body>
 </html>

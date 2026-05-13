@@ -30,13 +30,13 @@
   <div class="nav-inner">
     <div style="display:flex;align-items:center;"><a onclick="history.back()" class="nav-back">←</a><a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html">CV</a></li>
-      <li><a href="skills.html" class="active">Skills</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="personal.html">Personal</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="experience.html" data-i18n="nav.cv">CV</a></li>
+      <li><a href="skills.html" class="active" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="education.html" data-i18n="nav.education">Education</a></li>
+      <li><a href="personal.html" data-i18n="nav.personal">Personal</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -44,69 +44,69 @@
   </div>
 </nav>
 <div class="nav-mobile-overlay" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="experience.html">CV</a>
-  <a href="skills.html" class="active">Skills</a>
-  <a href="education.html">Education</a>
-  <a href="personal.html">Personal</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="experience.html" data-i18n="nav.cv">CV</a>
+  <a href="skills.html" class="active" data-i18n="nav.skills">Skills</a>
+  <a href="education.html" data-i18n="nav.education">Education</a>
+  <a href="personal.html" data-i18n="nav.personal">Personal</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
 </div>
 <div class="page">
   <div class="section-header">
-    <p class="section-eyebrow">What I bring</p>
-    <h1 class="section-title">Skills</h1>
+    <p class="section-eyebrow" data-i18n="skills.eyebrow">What I bring</p>
+    <h1 class="section-title" data-i18n="skills.title">Skills</h1>
     <div class="section-divider"></div>
   </div>
 
   <div class="skills-section">
-    <p class="skills-section-title">Core competencies</p>
+    <p class="skills-section-title" data-i18n="skills.core">Core competencies</p>
     <div class="core-skills">
       <div class="core-skill-card">
         <div class="core-skill-icon">🎯</div>
-        <div><p class="core-skill-name">Talent Acquisition</p><p class="core-skill-desc">Full recruitment process: from needs analysis and sourcing to offer and onboarding</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s1">Talent Acquisition</p><p class="core-skill-desc" data-i18n="skills.s1.d">Full recruitment process: from needs analysis and sourcing to offer and onboarding</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">🤝</div>
-        <div><p class="core-skill-name">People &amp; Culture</p><p class="core-skill-desc">Employee experience, engagement, culture and HR processes in technical environments</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s2">People &amp; Culture</p><p class="core-skill-desc" data-i18n="skills.s2.d">Employee experience, engagement, culture and HR processes in technical environments</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">📚</div>
-        <div><p class="core-skill-name">Learning &amp; Development</p><p class="core-skill-desc">Course development, education management, LMS and competence development programmes</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s3">Learning &amp; Development</p><p class="core-skill-desc" data-i18n="skills.s3.d">Course development, education management, LMS and competence development programmes</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">💼</div>
-        <div><p class="core-skill-name">HR</p><p class="core-skill-desc">Personnel matters, onboarding, retention and support to managers and employees</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s4">HR</p><p class="core-skill-desc" data-i18n="skills.s4.d">Personnel matters, onboarding, retention and support to managers and employees</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">✨</div>
-        <div><p class="core-skill-name">Employer Branding</p><p class="core-skill-desc">Building and communicating employer brand to attract the right talent</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s5">Employer Branding</p><p class="core-skill-desc" data-i18n="skills.s5.d">Building and communicating employer brand to attract the right talent</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">📋</div>
-        <div><p class="core-skill-name">Project Management</p><p class="core-skill-desc">Driving parallel processes, structuring work and delivering in fast-changing environments</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s6">Project Management</p><p class="core-skill-desc" data-i18n="skills.s6.d">Driving parallel processes, structuring work and delivering in fast-changing environments</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">🏗️</div>
-        <div><p class="core-skill-name">Organisational Development</p><p class="core-skill-desc">Building structures, processes and programmes that create long-term sustainability</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s7">Organisational Development</p><p class="core-skill-desc" data-i18n="skills.s7.d">Building structures, processes and programmes that create long-term sustainability</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">🌐</div>
-        <div><p class="core-skill-name">Stakeholder Management</p><p class="core-skill-desc">Advisory collaboration with managers, leadership and external stakeholders</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s8">Stakeholder Management</p><p class="core-skill-desc" data-i18n="skills.s8.d">Advisory collaboration with managers, leadership and external stakeholders</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">💬</div>
-        <div><p class="core-skill-name">Communication</p><p class="core-skill-desc">Clear and adapted communication in candidate meetings, workshops and conferences</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s9">Communication</p><p class="core-skill-desc" data-i18n="skills.s9.d">Clear and adapted communication in candidate meetings, workshops and conferences</p></div>
       </div>
       <div class="core-skill-card">
         <div class="core-skill-icon">🤖</div>
-        <div><p class="core-skill-name">AI Tools</p><p class="core-skill-desc">Practical experience using ChatGPT and Claude to enhance productivity and work quality</p></div>
+        <div><p class="core-skill-name" data-i18n="skills.s10">AI Tools</p><p class="core-skill-desc" data-i18n="skills.s10.d">Practical experience using ChatGPT and Claude to enhance productivity and work quality</p></div>
       </div>
     </div>
   </div>
 
   <div class="skills-section">
-    <p class="skills-section-title">Systems &amp; tools</p>
+    <p class="skills-section-title" data-i18n="skills.tools">Systems &amp; tools</p>
     <div class="tools-grid">
       <span class="tool-chip">Teamtailor</span>
       <span class="tool-chip">Workbuster</span>
@@ -120,15 +120,16 @@
   </div>
 
   <div class="highlight-box">
-    <h2 class="highlight-box-title">Technical environments as home turf</h2>
-    <p class="highlight-box-text">
+    <h2 class="highlight-box-title" data-i18n="skills.highlight.title">Technical environments as home turf</h2>
+    <p class="highlight-box-text" data-i18n="skills.highlight.text">
       The majority of my career has been spent in IT and tech companies, which means I understand
       the language, needs and challenges of the business. This creates better recruitment processes,
       more accurate competence profiles and stronger trust from both candidates and hiring managers.
     </p>
   </div>
 </div>
-<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html" data-i18n="footer.cta">Get in touch →</a></footer>
+<script src="lang.js"></script>
 <script src="tracking.js"></script>
 </body>
 </html>

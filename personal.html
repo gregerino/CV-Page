@@ -70,13 +70,13 @@
   <div class="nav-inner">
     <div style="display:flex;align-items:center;"><a onclick="history.back()" class="nav-back">←</a><a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html">CV</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="personal.html" class="active">Personal</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="experience.html" data-i18n="nav.cv">CV</a></li>
+      <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="education.html" data-i18n="nav.education">Education</a></li>
+      <li><a href="personal.html" class="active" data-i18n="nav.personal">Personal</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -84,22 +84,22 @@
   </div>
 </nav>
 <div class="nav-mobile-overlay" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="experience.html">CV</a>
-  <a href="skills.html">Skills</a>
-  <a href="education.html">Education</a>
-  <a href="personal.html" class="active">Personal</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="experience.html" data-i18n="nav.cv">CV</a>
+  <a href="skills.html" data-i18n="nav.skills">Skills</a>
+  <a href="education.html" data-i18n="nav.education">Education</a>
+  <a href="personal.html" class="active" data-i18n="nav.personal">Personal</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
 </div>
 <div class="page">
   <div class="section-header">
-    <p class="section-eyebrow">Beyond work</p>
-    <h1 class="section-title">Personal</h1>
+    <p class="section-eyebrow" data-i18n="personal.eyebrow">Beyond work</p>
+    <h1 class="section-title" data-i18n="personal.title">Personal</h1>
     <div class="section-divider"></div>
   </div>
 
-  <p class="personal-intro">
+  <p class="personal-intro" data-i18n="personal.intro">
     There's more to life than work. Here's a glimpse of who I am outside the office:
     the things that keep me curious, grounded and energised.
   </p>
@@ -107,33 +107,33 @@
   <div class="personal-grid">
     <div class="personal-card">
       <div class="personal-card-icon">🎲</div>
-      <h2 class="personal-card-title">Hobbies</h2>
-      <p class="personal-card-text">I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&amp;D adventures as a Game Master. I have a huge passion for food and cooking, and love all food, from street food joints to Michelin restaurants. I also really enjoy getting together over board games, and love watching Critical Role, a live-action D&amp;D series that fuels my creativity as a Game Master.</p>
+      <h2 class="personal-card-title" data-i18n="personal.hobbies">Hobbies</h2>
+      <p class="personal-card-text" data-i18n="personal.hobbies.text">I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&amp;D adventures as a Game Master. I have a huge passion for food and cooking, and love all food, from street food joints to Michelin restaurants. I also really enjoy getting together over board games, and love watching Critical Role, a live-action D&amp;D series that fuels my creativity as a Game Master.</p>
     </div>
     <div class="personal-card">
       <div class="personal-card-icon">✈️</div>
-      <h2 class="personal-card-title">Travel</h2>
-      <p class="personal-card-text">I love to travel, especially to Spain and Costa del Sol. I also grew up half and half in Thailand, and I've even been stuck on the African savannah. Ask me about it!</p>
+      <h2 class="personal-card-title" data-i18n="personal.travel">Travel</h2>
+      <p class="personal-card-text" data-i18n="personal.travel.text">I love to travel, especially to Spain and Costa del Sol. I also grew up half and half in Thailand, and I've even been stuck on the African savannah. Ask me about it!</p>
     </div>
     <div class="personal-card">
       <div class="personal-card-icon">👨‍👩‍👧‍👦</div>
-      <h2 class="personal-card-title">Friends &amp; family</h2>
-      <p class="personal-card-text">I live in Gothenburg with my fiancée and our 2.5-year-old son. Time with the people I care about is what matters most: good conversations, dinners and shared experiences.</p>
+      <h2 class="personal-card-title" data-i18n="personal.family">Friends &amp; family</h2>
+      <p class="personal-card-text" data-i18n="personal.family.text">I live in Gothenburg with my fiancée and our 2.5-year-old son. Time with the people I care about is what matters most: good conversations, dinners and shared experiences.</p>
     </div>
     <div class="personal-card">
       <div class="personal-card-icon">🎧</div>
-      <h2 class="personal-card-title">Music &amp; podcasts</h2>
-      <p class="personal-card-text">I'm a music omnivore, always listening to something. Right now I'm stuck on funk soul. Check out <a href="https://open.spotify.com/track/2XW7ow6JU8wPGWwKBw5a5a?si=f484c2111e4a4f32" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:underline;">Beirut by Wanda Wonderful</a>. I definitely prefer music over podcasts.</p>
+      <h2 class="personal-card-title" data-i18n="personal.music">Music &amp; podcasts</h2>
+      <p class="personal-card-text" data-i18n="personal.music.text">I'm a music omnivore, always listening to something. Right now I'm stuck on funk soul. Check out <a href="https://open.spotify.com/track/2XW7ow6JU8wPGWwKBw5a5a?si=f484c2111e4a4f32" target="_blank" rel="noopener" style="color:var(--amber);text-decoration:underline;">Beirut by Wanda Wonderful</a>. I definitely prefer music over podcasts.</p>
     </div>
     <div class="personal-card">
       <div class="personal-card-icon">📖</div>
-      <h2 class="personal-card-title">Curiosity &amp; learning</h2>
-      <p class="personal-card-text">I love reading and watching videos to learn new things, especially about AI and how to streamline and optimise the way we work. Being creative in my work is something that genuinely makes me feel good.</p>
+      <h2 class="personal-card-title" data-i18n="personal.curiosity">Curiosity &amp; learning</h2>
+      <p class="personal-card-text" data-i18n="personal.curiosity.text">I love reading and watching videos to learn new things, especially about AI and how to streamline and optimise the way we work. Being creative in my work is something that genuinely makes me feel good.</p>
     </div>
   </div>
 
   <div class="quick-picks">
-    <h2 class="quick-picks-title">My quick picks</h2>
+    <h2 class="quick-picks-title" data-i18n="personal.picks">My quick picks</h2>
     <div class="quick-picks-list">
       <div class="quick-pick">🍔 <span class="quick-pick-chosen">Burger</span> <span class="quick-pick-or">or</span> Pizza</div>
       <div class="quick-pick">🍷 <span class="quick-pick-chosen">Wine</span> <span class="quick-pick-or">or</span> Beer</div>
@@ -149,8 +149,8 @@
   </div>
 
   <div class="personal-highlight">
-    <h2 class="personal-highlight-title">What drives me</h2>
-    <p class="personal-highlight-text">
+    <h2 class="personal-highlight-title" data-i18n="personal.drives.title">What drives me</h2>
+    <p class="personal-highlight-text" data-i18n="personal.drives.text">
       At the core, I'm someone who genuinely cares about people. Whether it's at work or in my personal life,
       I believe in building real connections, staying curious and always trying to grow. The best version of me
       shows up when I balance meaningful work with the things and people that inspire me outside of it.
@@ -158,6 +158,7 @@
   </div>
 </div>
 <footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+<script src="lang.js"></script>
 <script src="tracking.js"></script>
 </body>
 </html>

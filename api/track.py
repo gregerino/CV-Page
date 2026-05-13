@@ -37,6 +37,7 @@ class handler(BaseHTTPRequestHandler):
         event = body.get("event", "pageview")  # pageview or click
         target = body.get("target", "")  # nav link clicked
         device = body.get("device", "unknown")  # mobile or desktop
+        referrer = body.get("referrer", "").strip()
 
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -60,6 +61,35 @@ class handler(BaseHTTPRequestHandler):
         if device in ("mobile", "desktop"):
             redis_cmd("INCR", f"stats:device:{device}")
             redis_cmd("INCR", f"stats:device:{device}:{today}")
+
+        # Referrer tracking
+        if referrer:
+            try:
+                from urllib.parse import urlparse
+                host = urlparse(referrer).hostname or ""
+                host = host.lower().replace("www.", "")
+                if "linkedin" in host:
+                    source = "LinkedIn"
+                elif "google" in host:
+                    source = "Google"
+                elif "facebook" in host or "fb.com" in host:
+                    source = "Facebook"
+                elif "instagram" in host:
+                    source = "Instagram"
+                elif "twitter" in host or "x.com" in host or "t.co" in host:
+                    source = "X / Twitter"
+                elif "github" in host:
+                    source = "GitHub"
+                elif host and host not in ("cv-page-mocha.vercel.app", "localhost"):
+                    source = host
+                else:
+                    source = ""
+                if source:
+                    redis_cmd("INCR", f"stats:ref:{source}")
+            except Exception:
+                pass
+        else:
+            redis_cmd("INCR", "stats:ref:Direct")
 
         # Unique visitors (approximate, by day)
         redis_cmd("INCR", f"stats:visitors:{today}")

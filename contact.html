@@ -37,13 +37,13 @@
   <div class="nav-inner">
     <div style="display:flex;align-items:center;"><a onclick="history.back()" class="nav-back">←</a><a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html">CV</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="personal.html">Personal</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="experience.html" data-i18n="nav.cv">CV</a></li>
+      <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="education.html" data-i18n="nav.education">Education</a></li>
+      <li><a href="personal.html" data-i18n="nav.personal">Personal</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -51,32 +51,32 @@
   </div>
 </nav>
 <div class="nav-mobile-overlay" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="experience.html">CV</a>
-  <a href="skills.html">Skills</a>
-  <a href="education.html">Education</a>
-  <a href="personal.html">Personal</a>
-  <a href="contact.html" class="active">Contact</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="about.html" data-i18n="nav.about">About</a>
+  <a href="experience.html" data-i18n="nav.cv">CV</a>
+  <a href="skills.html" data-i18n="nav.skills">Skills</a>
+  <a href="education.html" data-i18n="nav.education">Education</a>
+  <a href="personal.html" data-i18n="nav.personal">Personal</a>
+  <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
 </div>
 <div class="page">
   <div class="section-header">
-    <p class="section-eyebrow">Reach me</p>
-    <h1 class="section-title">Contact</h1>
+    <p class="section-eyebrow" data-i18n="contact.eyebrow">Reach me</p>
+    <h1 class="section-title" data-i18n="contact.title">Contact</h1>
     <div class="section-divider"></div>
   </div>
   <div class="kontakt-layout">
     <div>
-      <p class="kontakt-intro">Want to learn more about my background, discuss an opportunity or just have a conversation? Feel free to reach out — I respond quickly and look forward to hearing from you.</p>
+      <p class="kontakt-intro" data-i18n="contact.intro">Want to learn more about my background, discuss an opportunity or just have a conversation? Feel free to reach out — I respond quickly and look forward to hearing from you.</p>
       <div class="kontakt-cards">
         <a href="mailto:marcus.hultberg@live.se" class="kontakt-card">
           <div class="kontakt-card-icon">✉️</div>
-          <div><p class="kontakt-card-label">Email</p><p class="kontakt-card-value">marcus.hultberg@live.se</p></div>
+          <div><p class="kontakt-card-label" data-i18n="contact.email">Email</p><p class="kontakt-card-value">marcus.hultberg@live.se</p></div>
           <span class="kontakt-card-arrow">→</span>
         </a>
         <a href="tel:+46703445947" class="kontakt-card">
           <div class="kontakt-card-icon">📞</div>
-          <div><p class="kontakt-card-label">Phone</p><p class="kontakt-card-value">0703 44 59 47</p></div>
+          <div><p class="kontakt-card-label" data-i18n="contact.phone">Phone</p><p class="kontakt-card-value">0703 44 59 47</p></div>
           <span class="kontakt-card-arrow">→</span>
         </a>
         <a href="https://www.linkedin.com/in/marcus-hultberg-505b386a/" target="_blank" rel="noopener" class="kontakt-card">
@@ -88,22 +88,23 @@
     </div>
     <div>
       <div class="availability-box">
-        <p class="availability-status"><span class="availability-dot"></span>Available for conversations</p>
-        <h2 class="availability-title">Open to new opportunities</h2>
-        <p class="availability-text">I'm always interested in hearing about exciting roles within People &amp; Culture, Talent Acquisition and Learning &amp; Development, especially in technical environments.</p>
+        <p class="availability-status"><span class="availability-dot"></span data-i18n="contact.status">Available for conversations</p>
+        <h2 class="availability-title" data-i18n="contact.avail.title">Open to new opportunities</h2>
+        <p class="availability-text" data-i18n="contact.avail.text">I'm always interested in hearing about exciting roles within People &amp; Culture, Talent Acquisition and Learning &amp; Development, especially in technical environments.</p>
       </div>
       <div class="info-box">
-        <p class="info-box-title">Quick facts</p>
-        <div class="info-row"><span class="info-row-label">Location</span><span class="info-row-value">Gothenburg</span></div>
-        <div class="info-row"><span class="info-row-label">Experience</span><span class="info-row-value">7+ years</span></div>
-        <div class="info-row"><span class="info-row-label">Focus</span><span class="info-row-value">People &amp; Culture · HR</span></div>
-        <div class="info-row"><span class="info-row-label">Industry</span><span class="info-row-value">Tech &amp; IT</span></div>
-        <div class="info-row"><span class="info-row-label">Education</span><span class="info-row-value">BSc. Behavioural Science</span></div>
+        <p class="info-box-title" data-i18n="contact.facts">Quick facts</p>
+        <div class="info-row"><span class="info-row-label" data-i18n="contact.location">Location</span><span class="info-row-value" data-i18n="contact.location.val">Gothenburg</span></div>
+        <div class="info-row"><span class="info-row-label" data-i18n="contact.experience">Experience</span><span class="info-row-value">7+ years</span></div>
+        <div class="info-row"><span class="info-row-label" data-i18n="contact.focus">Focus</span><span class="info-row-value">People &amp; Culture · HR</span></div>
+        <div class="info-row"><span class="info-row-label" data-i18n="contact.industry">Industry</span><span class="info-row-value">Tech &amp; IT</span></div>
+        <div class="info-row"><span class="info-row-label" data-i18n="contact.education">Education</span><span class="info-row-value" data-i18n="contact.education.val">BSc. Behavioural Science</span></div>
       </div>
     </div>
   </div>
 </div>
 <footer><p>© 2026 Marcus Hultberg</p><a href="mailto:marcus.hultberg@live.se">marcus.hultberg@live.se</a></footer>
+<script src="lang.js"></script>
 <script src="tracking.js"></script>
 </body>
 </html>

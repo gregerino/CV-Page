@@ -288,6 +288,24 @@ footer a:hover { color: var(--amber); }
 .nav-mobile-overlay a:hover,
 .nav-mobile-overlay a.active { color: var(--amber); }
 
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--ink-light);
+  background: rgba(250,248,244,0.5);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+.lang-toggle:hover { border-color: var(--amber); color: var(--amber); }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 680px) {
   .page { padding: 76px 1.25rem 50px; }

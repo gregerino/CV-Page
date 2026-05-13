@@ -74,6 +74,25 @@ class handler(BaseHTTPRequestHandler):
             if v or i < 7:
                 daily.append({"date": d, "views": v, "visitors": visitors})
 
+        # Referrer stats
+        ref_sources = ["Direct", "LinkedIn", "Google", "Facebook", "Instagram",
+                        "X / Twitter", "GitHub"]
+        referrers = {}
+        # Check known sources
+        for src in ref_sources:
+            v = get_val(f"stats:ref:{src}")
+            if v:
+                referrers[src] = v
+        # Also scan for unknown referrer keys
+        all_keys = redis_cmd("KEYS", "stats:ref:*")
+        if all_keys:
+            for key in all_keys:
+                src_name = key.replace("stats:ref:", "")
+                if src_name not in referrers:
+                    v = get_val(f"stats:ref:{src_name}")
+                    if v:
+                        referrers[src_name] = v
+
         # Device stats
         device_mobile = get_val("stats:device:mobile")
         device_desktop = get_val("stats:device:desktop")
@@ -141,6 +160,19 @@ tr:last-child td{{border-bottom:none}}
 <div class="card"><p class="card-label">📱 Mobile — today</p><p class="card-value">{device_mobile_today}</p></div>
 <div class="card"><p class="card-label">🖥️ Desktop — today</p><p class="card-value">{device_desktop_today}</p></div>
 </div>
+
+<h2>Traffic sources</h2>
+<table>
+<tr><th>Source</th><th>Visits</th><th></th></tr>
+"""
+        max_ref = max(referrers.values()) if referrers else 1
+        for name, count in sorted(referrers.items(), key=lambda x: -x[1]):
+            pct = int(count / max_ref * 100)
+            html += f'<tr><td>{name}</td><td>{count}</td><td><div class="bar-wrap"><div class="bar" style="width:{pct}%"></div></div></td></tr>\n'
+        if not referrers:
+            html += '<tr><td colspan="3" style="color:#9e9282">No data yet</td></tr>\n'
+
+        html += """</table>
 
 <h2>Page views by page</h2>
 <table>

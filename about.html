@@ -41,13 +41,13 @@
   <div class="nav-inner">
     <div style="display:flex;align-items:center;"><a onclick="history.back()" class="nav-back">←</a><a href="index.html" class="nav-logo">Marcus <span>Hultberg</span></a></div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="experience.html">CV</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="personal.html">Personal</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="about.html" class="active" data-i18n="nav.about">About</a></li>
+      <li><a href="experience.html" data-i18n="nav.cv">CV</a></li>
+      <li><a href="skills.html" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="education.html" data-i18n="nav.education">Education</a></li>
+      <li><a href="personal.html" data-i18n="nav.personal">Personal</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="this.classList.toggle('open');document.getElementById('mobile-nav').classList.toggle('open');" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -55,18 +55,18 @@
   </div>
 </nav>
 <div class="nav-mobile-overlay" id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html" class="active">About</a>
-  <a href="experience.html">CV</a>
-  <a href="skills.html">Skills</a>
-  <a href="education.html">Education</a>
-  <a href="personal.html">Personal</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.html" data-i18n="nav.home">Home</a>
+  <a href="about.html" class="active" data-i18n="nav.about">About</a>
+  <a href="experience.html" data-i18n="nav.cv">CV</a>
+  <a href="skills.html" data-i18n="nav.skills">Skills</a>
+  <a href="education.html" data-i18n="nav.education">Education</a>
+  <a href="personal.html" data-i18n="nav.personal">Personal</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
 </div>
 <div class="page">
   <div class="section-header">
-    <p class="section-eyebrow">Background &amp; motivations</p>
-    <h1 class="section-title">About me</h1>
+    <p class="section-eyebrow" data-i18n="about.eyebrow">Background &amp; motivations</p>
+    <h1 class="section-title" data-i18n="about.title">About me</h1>
     <div class="section-divider"></div>
   </div>
   <div class="om-grid">
@@ -76,7 +76,7 @@
       </div>
     </div>
     <div>
-      <p class="profil-ingress">
+      <p class="profil-ingress" data-i18n="about.ingress">
         Experienced in working broadly within recruitment, HR, Learning &amp; Development
         and organisational development, primarily in technical environments.
       </p>
@@ -91,26 +91,27 @@
         perspective and support in how we can work smarter and more sustainably over time.
       </p>
       <div class="drives-section">
-        <p class="drives-title">What I'm passionate about</p>
+        <p class="drives-title" data-i18n="about.drives.title">What I'm passionate about</p>
         <ul class="drives-list">
-          <li>Matching the right person with the right role, and creating conditions for them to succeed</li>
-          <li>Building structures and processes that create long-term sustainability</li>
-          <li>Working closely with the business to understand its needs</li>
-          <li>Creating engaging employee experiences from day one</li>
-          <li>Combining data-driven thinking with a genuine focus on people</li>
+          <li data-i18n="about.drive1">Matching the right person with the right role, and creating conditions for them to succeed</li>
+          <li data-i18n="about.drive2">Building structures and processes that create long-term sustainability</li>
+          <li data-i18n="about.drive3">Working closely with the business to understand its needs</li>
+          <li data-i18n="about.drive4">Creating engaging employee experiences from day one</li>
+          <li data-i18n="about.drive5">Combining data-driven thinking with a genuine focus on people</li>
         </ul>
 
       </div>
       <div class="om-cards">
-        <div class="om-card"><p class="om-card-label">Location</p><p class="om-card-value">Gothenburg, Sweden</p></div>
-        <div class="om-card"><p class="om-card-label">Focus</p><p class="om-card-value">People &amp; Culture · Recruitment · L&amp;D</p></div>
+        <div class="om-card"><p class="om-card-label" data-i18n="about.card.location">Location</p><p class="om-card-value" data-i18n="about.card.location.val">Gothenburg, Sweden</p></div>
+        <div class="om-card"><p class="om-card-label" data-i18n="about.card.focus">Focus</p><p class="om-card-value" data-i18n="about.card.focus.val">People &amp; Culture · Recruitment · L&amp;D</p></div>
         <div class="om-card"><p class="om-card-label">Email</p><p class="om-card-value"><a href="mailto:marcus.hultberg@live.se">marcus.hultberg@live.se</a></p></div>
         <div class="om-card"><p class="om-card-label">Phone</p><p class="om-card-value"><a href="tel:+46703445947">0703 44 59 47</a></p></div>
       </div>
     </div>
   </div>
 </div>
-<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html">Get in touch →</a></footer>
+<footer><p>© 2026 Marcus Hultberg</p><a href="contact.html" data-i18n="footer.cta">Get in touch →</a></footer>
+<script src="lang.js"></script>
 <script src="tracking.js"></script>
 </body>
 </html>
