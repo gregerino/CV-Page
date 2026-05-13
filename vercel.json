@@ -2,7 +2,9 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/api/ask", "destination": "/api/ask" }
+    { "source": "/api/ask", "destination": "/api/ask" },
+    { "source": "/api/track", "destination": "/api/track" },
+    { "source": "/api/stats", "destination": "/api/stats" }
   ],
   "headers": [
     {
