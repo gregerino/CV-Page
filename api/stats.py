@@ -2,6 +2,8 @@ from http.server import BaseHTTPRequestHandler
 import json, os, urllib.request, urllib.parse
 from datetime import datetime, timedelta, timezone
 
+STOCKHOLM = timezone(timedelta(hours=2))
+
 UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
 UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
 STATS_SECRET = os.environ.get("STATS_SECRET", "")
@@ -178,7 +180,7 @@ tr:last-child td{{border-bottom:none}}
                 ts = q.get("t", "")
                 # Format timestamp nicely
                 try:
-                    dt = datetime.fromisoformat(ts)
+                    dt = datetime.fromisoformat(ts).astimezone(STOCKHOLM)
                     time_str = dt.strftime("%Y-%m-%d %H:%M")
                 except Exception:
                     time_str = ts[:16] if ts else ""
