@@ -36,6 +36,7 @@ class handler(BaseHTTPRequestHandler):
         page = body.get("page", "unknown").strip("/") or "home"
         event = body.get("event", "pageview")  # pageview or click
         target = body.get("target", "")  # nav link clicked
+        device = body.get("device", "unknown")  # mobile or desktop
 
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -54,6 +55,11 @@ class handler(BaseHTTPRequestHandler):
         # Nav click tracking
         if event == "click" and target:
             redis_cmd("INCR", f"stats:click:{target}")
+
+        # Device tracking
+        if device in ("mobile", "desktop"):
+            redis_cmd("INCR", f"stats:device:{device}")
+            redis_cmd("INCR", f"stats:device:{device}:{today}")
 
         # Unique visitors (approximate, by day)
         redis_cmd("INCR", f"stats:visitors:{today}")

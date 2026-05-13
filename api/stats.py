@@ -72,6 +72,12 @@ class handler(BaseHTTPRequestHandler):
             if v or i < 7:
                 daily.append({"date": d, "views": v, "visitors": visitors})
 
+        # Device stats
+        device_mobile = get_val("stats:device:mobile")
+        device_desktop = get_val("stats:device:desktop")
+        device_mobile_today = get_val(f"stats:device:mobile:{today.strftime('%Y-%m-%d')}")
+        device_desktop_today = get_val(f"stats:device:desktop:{today.strftime('%Y-%m-%d')}")
+
         # AI search stats
         ai_total = get_val("stats:ai:total")
         ai_today = get_val(f"stats:ai:daily:{today.strftime('%Y-%m-%d')}")
@@ -124,6 +130,14 @@ tr:last-child td{{border-bottom:none}}
 <div class="card"><p class="card-label">Today</p><p class="card-value">{get_val(f"stats:daily:{today.strftime('%Y-%m-%d')}")}</p></div>
 <div class="card"><p class="card-label">AI questions total</p><p class="card-value">{ai_total}</p></div>
 <div class="card"><p class="card-label">AI questions today</p><p class="card-value">{ai_today}</p></div>
+</div>
+
+<h2>Devices</h2>
+<div class="grid">
+<div class="card"><p class="card-label">📱 Mobile — total</p><p class="card-value">{device_mobile}</p></div>
+<div class="card"><p class="card-label">🖥️ Desktop — total</p><p class="card-value">{device_desktop}</p></div>
+<div class="card"><p class="card-label">📱 Mobile — today</p><p class="card-value">{device_mobile_today}</p></div>
+<div class="card"><p class="card-label">🖥️ Desktop — today</p><p class="card-value">{device_desktop_today}</p></div>
 </div>
 
 <h2>Page views by page</h2>

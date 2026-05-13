@@ -3,11 +3,14 @@
   var endpoint = 'https://cv-page-mocha.vercel.app/api/track';
   var page = location.pathname.replace(/^\//, '') || 'home';
 
+  // Detect device type
+  var device = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
+
   // Track page view
   fetch(endpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ page: page, event: 'pageview' })
+    body: JSON.stringify({ page: page, event: 'pageview', device: device })
   }).catch(function(){});
 
   // Track nav clicks
