@@ -1,0 +1,70 @@
+from http.server import BaseHTTPRequestHandler
+import json, os, urllib.request, urllib.parse
+from datetime import datetime, timezone
+
+UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
+UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
+
+
+def redis_cmd(*args):
+    """Execute a Redis command via Upstash REST API."""
+    if not UPSTASH_URL or not UPSTASH_TOKEN:
+        return None
+    url = UPSTASH_URL
+    for arg in args:
+        url += "/" + urllib.parse.quote(str(arg), safe="")
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {UPSTASH_TOKEN}"})
+    try:
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            return json.loads(resp.read())
+    except Exception:
+        return None
+
+
+class handler(BaseHTTPRequestHandler):
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.end_headers()
+
+    def do_POST(self):
+        length = int(self.headers.get("Content-Length", 0))
+        body = json.loads(self.rfile.read(length))
+
+        page = body.get("page", "unknown").strip("/") or "home"
+        event = body.get("event", "pageview")  # pageview or click
+        target = body.get("target", "")  # nav link clicked
+
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+        # Total page views
+        redis_cmd("INCR", "stats:total")
+
+        # Page views per page
+        redis_cmd("INCR", f"stats:page:{page}")
+
+        # Daily page views
+        redis_cmd("INCR", f"stats:daily:{today}")
+
+        # Daily per page
+        redis_cmd("INCR", f"stats:daily:{today}:{page}")
+
+        # Nav click tracking
+        if event == "click" and target:
+            redis_cmd("INCR", f"stats:click:{target}")
+
+        # Unique visitors (approximate, by day)
+        redis_cmd("INCR", f"stats:visitors:{today}")
+
+        self._json(200, {"ok": True})
+
+    def _json(self, code, data):
+        body = json.dumps(data).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
