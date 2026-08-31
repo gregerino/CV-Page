@@ -144,7 +144,7 @@ tr:last-child td{{border-bottom:none}}
 <body>
 <div class="container">
 <h1>CV Stats Dashboard</h1>
-<p class="subtitle">Private analytics for cv-page-mocha.vercel.app</p>
+<p class="subtitle">Private analytics for marcushultberg.dev</p>
 
 <div class="grid">
 <div class="card"><p class="card-label">Total page views</p><p class="card-value">{total}</p></div>

@@ -1,6 +1,7 @@
 // CV Page Analytics - lightweight tracking
 (function() {
-  var endpoint = 'https://cv-page-mocha.vercel.app/api/track';
+  // Relative on purpose: the site answers on more than one domain.
+  var endpoint = '/api/track';
   var page = location.pathname.replace(/^\//, '') || 'home';
 
   // Detect device type

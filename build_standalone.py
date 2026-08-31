@@ -463,7 +463,7 @@ async function askAI(question) {{
   aiLoading.classList.add('visible');
   aiResponse.classList.remove('visible');
   try {{
-    const res = await fetch('https://cv-page-mocha.vercel.app/api/ask', {{
+    const res = await fetch('https://marcushultberg.dev/api/ask', {{
       method: 'POST',
       headers: {{ 'Content-Type': 'application/json' }},
       body: JSON.stringify({{ question: q }})

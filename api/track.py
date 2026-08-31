@@ -2,6 +2,9 @@ from http.server import BaseHTTPRequestHandler
 import json, os, urllib.request, urllib.parse
 from datetime import datetime, timezone
 
+# Traffic from these is our own, not a referral. "www." is stripped before the check.
+OWN_HOSTS = ("cv-page-mocha.vercel.app", "marcushultberg.dev", "localhost")
+
 UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
 UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
 
@@ -80,7 +83,7 @@ class handler(BaseHTTPRequestHandler):
                     source = "X / Twitter"
                 elif "github" in host:
                     source = "GitHub"
-                elif host and host not in ("cv-page-mocha.vercel.app", "localhost"):
+                elif host and host not in OWN_HOSTS:
                     source = host
                 else:
                     source = ""

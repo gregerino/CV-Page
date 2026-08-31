@@ -3,7 +3,7 @@
 The base CV at `/` is never edited for an application. To tailor the page for
 a specific job, add one JSON file here and share its slug:
 
-    jobs/picadeli.json   ->   https://cv-page-mocha.vercel.app/picadeli
+    jobs/picadeli.json   ->   https://marcushultberg.dev/picadeli
 
 The slug is the filename: lowercase letters, digits and hyphens only.
 
