@@ -2,30 +2,85 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/api/ask", "destination": "/api/ask" },
-    { "source": "/api/track", "destination": "/api/track" },
-    { "source": "/api/stats", "destination": "/api/stats" }
+    {
+      "source": "/api/ask",
+      "destination": "/api/ask"
+    },
+    {
+      "source": "/api/track",
+      "destination": "/api/track"
+    },
+    {
+      "source": "/api/stats",
+      "destination": "/api/stats"
+    },
+    {
+      "source": "/((?!api/|jobs/)[a-zA-Z0-9-]+)",
+      "destination": "/index.html"
+    }
   ],
   "redirects": [
-    { "source": "/about.html",       "destination": "/#about" },
-    { "source": "/om-mig.html",      "destination": "/#about" },
-    { "source": "/experience.html",  "destination": "/cv.html" },
-    { "source": "/erfarenhet.html",  "destination": "/cv.html" },
-    { "source": "/skills.html",      "destination": "/#education" },
-    { "source": "/kompetenser.html", "destination": "/#education" },
-    { "source": "/education.html",   "destination": "/#education" },
-    { "source": "/utbildning.html",  "destination": "/#education" },
-    { "source": "/personal.html",    "destination": "/#personal" },
-    { "source": "/contact.html",     "destination": "/#contact" },
-    { "source": "/kontakt.html",     "destination": "/#contact" }
+    {
+      "source": "/about.html",
+      "destination": "/#about"
+    },
+    {
+      "source": "/om-mig.html",
+      "destination": "/#about"
+    },
+    {
+      "source": "/experience.html",
+      "destination": "/cv.html"
+    },
+    {
+      "source": "/erfarenhet.html",
+      "destination": "/cv.html"
+    },
+    {
+      "source": "/skills.html",
+      "destination": "/#education"
+    },
+    {
+      "source": "/kompetenser.html",
+      "destination": "/#education"
+    },
+    {
+      "source": "/education.html",
+      "destination": "/#education"
+    },
+    {
+      "source": "/utbildning.html",
+      "destination": "/#education"
+    },
+    {
+      "source": "/personal.html",
+      "destination": "/#personal"
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/#contact"
+    },
+    {
+      "source": "/kontakt.html",
+      "destination": "/#contact"
+    }
   ],
   "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" },
-        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "POST, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type"
+        }
       ]
     }
   ]

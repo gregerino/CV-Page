@@ -1,0 +1,56 @@
+{
+  "company": "Exempelbolaget",
+  "roleName": "Talent Acquisition Partner",
+
+  "eyebrow": {
+    "en": "Application · Talent Acquisition Partner · Exempelbolaget",
+    "sv": "Ansökan · Talent Acquisition Partner · Exempelbolaget"
+  },
+  "role": {
+    "en": "Talent Acquisition in technical environments",
+    "sv": "Talent Acquisition i tekniska miljöer"
+  },
+  "lead": {
+    "en": "I have spent seven years recruiting into technical roles and building the structures around them. That is the job you are describing, and it is the job I already do.",
+    "sv": "Jag har ägnat sju år åt att rekrytera till tekniska roller och bygga strukturerna runt dem. Det är arbetet ni beskriver, och det är arbetet jag redan gör."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Hur jag matchar" },
+  "matchTitle": {
+    "en": "The role, point by point",
+    "sv": "Rollen, punkt för punkt"
+  },
+  "matchLead": {
+    "en": "Every requirement from your ad, with what I have actually done under each one. Nothing inflated.",
+    "sv": "Varje krav ur er annons, med vad jag faktiskt har gjort under varje. Inget uppblåst."
+  },
+
+  "points": [
+    {
+      "title": { "en": "Full-cycle recruitment", "sv": "Rekrytering hela vägen" },
+      "quote": {
+        "en": "Own recruitment processes end to end, from needs analysis to signed offer.",
+        "sv": "Äga rekryteringsprocesser hela vägen, från behovsanalys till påskrivet avtal."
+      },
+      "body": {
+        "en": "This has been the core of my work for over seven years, most recently across technical roles from developers to engineers, where I also advised hiring managers on competence profiles, selection and candidate evaluation.",
+        "sv": "Det här har varit kärnan i mitt arbete i över sju år, senast inom tekniska roller från utvecklare till ingenjörer, där jag också rådgav rekryterande chefer kring kompetenskrav, urval och kandidatutvärdering."
+      }
+    },
+    {
+      "title": { "en": "Onboarding that sticks", "sv": "Onboarding som håller" },
+      "quote": {
+        "en": "Build an onboarding programme new hires actually get value from.",
+        "sv": "Bygga ett onboardingprogram som nyanställda faktiskt har nytta av."
+      },
+      "body": {
+        "en": "I have built onboarding structures that did not exist before, twice over, with an explicit purpose: to increase engagement and retention, not to tick a checklist.",
+        "sv": "Jag har byggt onboardingstrukturer som inte fanns tidigare, två gånger om, med ett uttalat syfte: att öka engagemang och retention, inte att kryssa i en checklista."
+      }
+    }
+  ]
+}

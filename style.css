@@ -894,3 +894,17 @@ img { max-width: 100%; display: block; }
   .nav-bar { display: none; }
   .nav-hamburger { display: flex; }
 }
+
+/* ══════════════════════════════════════════
+   JOB PAGES
+   Regions a /jobs/<slug>.json pack rewrites. Hidden — but still occupying
+   their space — until job.js has resolved, so the base wording never flashes
+   past on an application page. The class is only ever set by script, so a
+   visitor without JavaScript sees the base page as normal.
+   ══════════════════════════════════════════ */
+.job-pending .hero .eyebrow,
+.job-pending .hero-role,
+.job-pending .hero-lead,
+.job-pending .hero-cta .btn-label,
+.job-pending #match .sec-head,
+.job-pending #match .points { visibility: hidden; }

@@ -65,4 +65,11 @@
 
   createToggle();
   applyLang(getLang());
+
+  // job.js rewrites text for a job-specific page and needs the language
+  // re-applied afterwards.
+  window.CVLang = {
+    current: getLang,
+    refresh: function () { applyLang(getLang()); }
+  };
 })();

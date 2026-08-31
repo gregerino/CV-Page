@@ -31,12 +31,10 @@
 
   /* ── Reveal on scroll ── */
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealables = document.querySelectorAll('.reveal');
+  var revealer = null;
 
-  if (reduced || !('IntersectionObserver' in window)) {
-    revealables.forEach(function (el) { el.classList.add('in'); });
-  } else {
-    var revealer = new IntersectionObserver(function (entries) {
+  if (!reduced && 'IntersectionObserver' in window) {
+    revealer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('in');
@@ -44,8 +42,18 @@
         }
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-    revealables.forEach(function (el) { revealer.observe(el); });
   }
+
+  function watchReveals(root) {
+    var els = (root || document).querySelectorAll('.reveal');
+    els.forEach(function (el) {
+      if (revealer) revealer.observe(el); else el.classList.add('in');
+    });
+  }
+  watchReveals();
+
+  // job.js builds cards after load and needs them picked up too.
+  window.CVSite = { watchReveals: watchReveals };
 
   /* ── Active section in the nav ── */
   var navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');

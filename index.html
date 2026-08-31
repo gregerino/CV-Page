@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcus Hultberg — People &amp; Culture, Talent Acquisition &amp; L&amp;D</title>
   <meta name="description" content="Marcus Hultberg — People &amp; Culture, Talent Acquisition and Learning &amp; Development in technical environments. Gothenburg, Sweden." />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <script>
+    // A job slug in the URL means the hero and "What I do" are about to be
+    // rewritten by job.js. Hide just those two regions so the base wording
+    // never flashes past the reader first.
+    (function () {
+      var p = location.pathname.replace(/^\/+|\/+$/g, '');
+      if ((p !== '' && p !== 'index.html') || location.search.indexOf('job=') > -1) {
+        document.documentElement.className += ' job-pending';
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -53,8 +64,8 @@
       <img src="Marcus.jpg" alt="Marcus Hultberg" />
     </div>
 
-    <!-- CUSTOMISE PER APPLICATION: change this line to e.g.
-         "APPLICATION · TALENT ACQUISITION PARTNER · COMPANY NAME" -->
+    <!-- Per-application wording comes from /jobs/<slug>.json — see jobs/README.md.
+         This is what shows on the base page and whenever a pack leaves it out. -->
     <p class="eyebrow reveal" data-sv="People &amp; Culture · Talent Acquisition · Learning &amp; Development">
       People &amp; Culture · Talent Acquisition · Learning &amp; Development
     </p>
@@ -83,7 +94,7 @@
     </div>
 
     <div class="hero-cta reveal">
-      <a href="#match" class="btn btn-primary" data-sv-html="Se vad jag gör <span class=&quot;arr&quot;>→</span>">See what I do <span class="arr">→</span></a>
+      <a href="#match" class="btn btn-primary"><span class="btn-label" data-sv="Se vad jag gör">See what I do</span> <span class="arr">→</span></a>
       <a href="cv.html" class="btn btn-ghost" data-sv-html="Läs hela CV:t <span class=&quot;arr&quot;>→</span>">Read the full CV <span class="arr">→</span></a>
       <a href="CV Marcus Hultberg.pdf" target="_blank" rel="noopener" class="btn btn-ghost" data-sv-html="PDF <span class=&quot;arr&quot;>↗</span>">PDF <span class="arr">↗</span></a>
     </div>
@@ -184,9 +195,9 @@
 </section>
 
 <!-- ══════════════════════ WHAT I DO / HOW I MATCH ══════════════════════
-     CUSTOMISE PER APPLICATION: this is the section to rewrite for each job.
-     Keep the numbered structure — replace each .point-quote with a line from
-     the job ad, and each .point-body with the evidence that you already do it.
+     A job pack replaces these numbered points wholesale: each .point-quote
+     becomes a line from the job ad and each .point-body the evidence that
+     Marcus already does it. See jobs/README.md.
      ═══════════════════════════════════════════════════════════════════ -->
 <section class="band band--alt" id="match">
   <div class="wrap">
@@ -779,6 +790,7 @@
 
 <script src="lang.js"></script>
 <script src="site.js"></script>
+<script src="job.js"></script>
 <script src="tracking.js"></script>
 </body>
 </html>
