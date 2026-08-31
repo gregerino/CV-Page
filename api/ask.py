@@ -22,13 +22,14 @@ WORK EXPERIENCE:
 
 1. Recruitment Consultant — Mpya Sci & Tech, Gothenburg (June 2024 – June 2026)
    Company: Recruitment and consulting firm specialising in science, technology and engineering.
-   - Drove and managed full recruitment processes (need analysis to final placement) for technical roles
-   - Advised managers on competence profiles, selection, process and candidate evaluation
-   - Ensured a structured and high-quality candidate experience throughout the process
-   - Developed and improved recruitment processes and ways of working
-   - Worked in ATS systems throughout the recruitment process
-   - Wrote and published job ads based on business needs
-   - Proactively sourced and built candidate pipelines
+   - Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, varying from developers to engineers
+   - Coordinated and structured interview processes, including scheduling, preparation, and stakeholder communication
+   - Acted as main point of contact for candidates, ensuring a professional, responsive, and engaging candidate experience
+   - Worked continuously in ATS systems to manage candidate data and ensure accuracy throughout the process
+   - Wrote and published job ads based on client needs, ensuring clarity and relevance
+   - Proactively sourced and engaged candidates, maintaining a strong talent pipeline
+   - Advised hiring managers on recruitment processes, timelines, and candidate evaluation
+   - Contributed to improving recruitment workflows and ensuring structured processes
 
 2. Course Developer — Simployer, Gothenburg (Sep 2023 – June 2024)
    Company: Leading Nordic HR tech company providing HR systems, payroll solutions and training.
@@ -41,23 +42,21 @@ WORK EXPERIENCE:
 
 3. Business Manager — A Society, Gothenburg (April 2022 – Sep 2023)
    Company: IT consulting firm connecting tech talent with companies across Sweden.
-   - Responsible for recruitment and matching of IT consultants
-   - Coordinated dialogue between clients and candidates throughout the process
-   - Worked with onboarding and ongoing HR support to consultants, including invoicing and follow-up
-   - Developed internal onboarding structures to increase engagement and retention
-   - Managed multiple parallel processes in a fast-changing environment
+   - Managed recruitment processes for IT consultants, ensuring accurate competence matching
+   - Coordinated communication between clients and candidates throughout the hiring process
+   - Provided HR-related support and maintained ongoing contact with consultants
+   - Designed structured onboarding processes to improve engagement and retention
+   - Managed multiple parallel processes in a fast-paced environment
 
 4. Talent Acquisition Lead / Consultant Manager — ZoCom, Gothenburg (Nov 2020 – April 2022)
    Company: Fast-growing IT consulting company focused on web development and digital solutions.
-   - Led and developed the company's talent acquisition work (part of management team)
-   - Worked with employer branding and improvement of internal processes
-   - Implemented and developed ATS workflows
-   - Managed full recruitment processes from start to onboarding
-   - HR support and development for a consultant group of 15+ people
-   - Developed and implemented onboarding structure for new employees
-   - Created and ran internal workshops and training initiatives
-   - Helped build a career programme for junior talent (he was part of building it, he did not initiate it)
-   - Contributed to organisational development by helping shape an internal LMS from the start, which the company later sold B2B (he did not build the system himself; he was in from the beginning and designed how it should work)
+   - Led the company's talent acquisition strategy, including employer branding, process optimisation and ATS implementation (part of the management team)
+   - Managed recruitment processes end to end, from screening and interviewing to onboarding of new employees
+   - Conducted personnel development activities and HR-related responsibilities for a consultant group of 15+
+   - Designed and executed a structured onboarding framework for new hires
+   - Created internal workshops and learning sessions, including gamification methodology training
+   - Helped build a career development programme aimed at supporting junior talent in entering the IT industry
+   - Contributed to internal organisational development by helping shape and run an internal Learning Management System (LMS), which the company later sold B2B
 
 5. Education Manager / ICT Manager — IT-Högskolan, Gothenburg (June 2019 – Oct 2020)
    Company: One of Sweden's largest providers of vocational higher education within IT and tech.
@@ -69,12 +68,6 @@ WORK EXPERIENCE:
    - Secured internship placements and supported students in their transition to working life
    - Improved internal communication flows and developed LMS structure
 
-6. First Line Support / Store Sales — Telia Company, Gothenburg/Umeå (May 2013 – Aug 2018)
-   Company: Sweden's largest telecom operator, providing mobile, broadband and TV services.
-   - Supported onboarding of new employees through coaching and participating in recruitment
-   - Contributed to improved knowledge sharing and working methods in support
-   - Worked with customer service via phone, chat and email
-   - Developed strong communication and problem-solving skills
 
 SKILLS:
 - Talent Acquisition: Full recruitment process, from needs analysis and sourcing to offer and onboarding
@@ -104,12 +97,12 @@ TOOLS MARCUS HAS BUILT HIMSELF (with AI, without a coding background):
 - This CV site, including the AI assistant that answers questions about his background.
 
 IMPORTANT ACCURACY NOTES (do not overstate):
-- At ZoCom he was part of a team that built the career programme and shaped the internal LMS. He did
-  not single-handedly initiate or create them.
+- At ZoCom he was part of a team that built the career development programme and shaped the internal
+  LMS. He did not single-handedly initiate or create them.
 - At Simployer he worked on and developed existing course content together with HR experts; he did not
   create the course library from nothing.
-- At Mpya he worked in ATS systems as part of running recruitment processes; he did not work with
-  candidate data quality as a separate assignment.
+- Only describe roles listed above. Marcus's professional career in HR, recruitment and L&D starts in
+  2019 at IT-Högskolan.
 
 EDUCATION:
 - BSc. Behavioural Science with focus on IT environments — Umeå University, 2016–2019
