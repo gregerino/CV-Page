@@ -69,20 +69,24 @@ WORK EXPERIENCE:
    - Improved internal communication flows and developed LMS structure
 
 
-SKILLS:
-- Talent Acquisition: Full recruitment process, from needs analysis and sourcing to offer and onboarding
-- People & Culture: Employee experience, engagement, culture and HR processes in technical environments
-- Learning & Development (L&D): Course development, education management, LMS and competence development programmes
-- HR: Personnel matters, onboarding, retention and support to managers and employees
-- Employer Branding: Building and communicating employer brand to attract the right talent
-- Project Management: Driving parallel processes, structuring work and delivering in fast-changing environments
-- Organisational Development: Building structures, processes and programmes that create long-term sustainability
-- Stakeholder Management: Advisory collaboration with managers, leadership and external stakeholders
-- Communication: Clear and adapted communication in candidate meetings, workshops and conferences
-- AI Tools: Practical experience using ChatGPT and Claude to enhance productivity and work quality
+AREAS OF EXPERTISE:
+Learning & Development, Employer Branding, Instructional design & Course Development, Gamification,
+Learning Management Systems (LMS), People & Culture, Swedish labour law, HR, Communication,
+Project Management, Pedagogy & didactics, Recruitment & selection, Leadership & coaching,
+Competence supply.
+He also works with Talent Acquisition across the full recruitment process, from needs analysis and
+sourcing to offer and onboarding.
 
 SYSTEMS & TOOLS:
-Teamtailor, Workbuster, Slack, Notion, Google Workspace, LinkedIn Recruiter, ChatGPT, Claude
+Winningtemp, Monday.com, Teamtailor, Slack, Office 365, Canva, Workbuster, Claude Code
+
+HOW HE WORKS:
+- Structured and process-driven
+- Advisory to managers and stakeholders
+- Builds from zero
+- Pedagogical, teaches what he builds
+- Comfortable with many parallel processes
+- AI-native day to day
 
 TOOLS MARCUS HAS BUILT HIMSELF (with AI, without a coding background):
 - Recruitment OS — an AI tool that turns a role description or requirements profile into a complete
@@ -107,7 +111,7 @@ IMPORTANT ACCURACY NOTES (do not overstate):
 EDUCATION:
 - BSc. Behavioural Science with focus on IT environments — Umeå University, 2016–2019
   Focused on human behaviour in digital and technical organisations, a solid foundation for People & Culture work in the tech industry.
-  Relevant areas: Organisational psychology, Pedagogy & didactics, Recruitment & selection, Group dynamics, Employment law basics, Leadership & coaching, Quality assurance, Competence supply.
+  Relevant areas: Pedagogy & didactics, Recruitment & selection, Leadership & coaching, Competence supply.
 - Certified Education Manager — Myndigheten för Yrkeshögskolan, 2020
   Certification in education management focused on vocational higher education, directly applicable in L&D roles.
 

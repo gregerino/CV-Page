@@ -70,7 +70,7 @@ img { max-width: 100%; display: block; }
   justify-content: space-between;
 }
 .nav-top { height: 52px; }
-.nav-bar { height: 52px; border-top: 1px solid var(--border-light); }
+.nav-bar { height: 52px; border-top: 1px solid var(--border-light); gap: 1rem; }
 
 .brand {
   display: flex;
@@ -97,16 +97,22 @@ img { max-width: 100%; display: block; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.15rem;
+  gap: 0.1rem;
   list-style: none;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-contact-link { display: none; }
 .nav-links a {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   color: var(--ink-light);
   text-decoration: none;
-  padding: 0.35rem 0.7rem;
+  padding: 0.35rem 0.6rem;
   border-radius: var(--radius-pill);
   transition: color 0.15s, background 0.15s;
   white-space: nowrap;
@@ -754,9 +760,6 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 780px) {
-  :root { --nav-h: 52px; }
-  .nav-bar { display: none; }
-  .nav-hamburger { display: flex; }
   .nav-top, .wrap { padding: 0 1.25rem; }
   .band { padding: 3.5rem 0; }
   .hero { padding: calc(var(--nav-h) + 2.2rem) 0 3rem; }
@@ -871,9 +874,22 @@ img { max-width: 100%; display: block; }
   a { color: #000; text-decoration: none; }
 }
 
-/* The nav bar carries seven links plus a CTA; hand over to the hamburger
-   before they start colliding, not only at the phone breakpoint. */
-@media (max-width: 940px) {
+/* Below this the CTA button costs more room than it earns: drop it and let
+   Contact join the links, so every header stays on screen. */
+@media (max-width: 880px) {
+  .nav-bar > .btn { display: none; }
+  .nav-contact-link { display: block; }
+  /* Only once the links can actually run out of room: fade the right edge so
+     it reads as scrollable rather than cut off. */
+  .nav-links {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+  }
+}
+
+/* The section headers stay visible across desktop and tablet; the nav links
+   scroll sideways rather than collapsing. Only phones get the hamburger. */
+@media (max-width: 620px) {
   :root { --nav-h: 52px; }
   .nav-bar { display: none; }
   .nav-hamburger { display: flex; }
