@@ -18,7 +18,7 @@
 
   // Track nav clicks
   document.addEventListener('click', function(e) {
-    var link = e.target.closest('.nav-links a, .nav-mobile-overlay a');
+    var link = e.target.closest('.nav-links a, .nav-mobile a');
     if (link) {
       fetch(endpoint, {
         method: 'POST',

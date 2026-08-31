@@ -26,13 +26,13 @@ WORK EXPERIENCE:
    - Advised managers on competence profiles, selection, process and candidate evaluation
    - Ensured a structured and high-quality candidate experience throughout the process
    - Developed and improved recruitment processes and ways of working
-   - Worked in ATS systems to ensure quality and structure in candidate data
+   - Worked in ATS systems throughout the recruitment process
    - Wrote and published job ads based on business needs
    - Proactively sourced and built candidate pipelines
 
 2. Course Developer — Simployer, Gothenburg (Sep 2023 – June 2024)
    Company: Leading Nordic HR tech company providing HR systems, payroll solutions and training.
-   - Developed and improved training courses within HR and Learning & Development
+   - Worked on and developed the course content within HR and Learning & Development together with HR experts
    - Ensured content was up to date and aligned with current HR trends and needs
    - Collaborated with subject matter experts to create relevant and high-quality training
    - Planned and executed conferences and training sessions focused on participant value
@@ -56,8 +56,8 @@ WORK EXPERIENCE:
    - HR support and development for a consultant group of 15+ people
    - Developed and implemented onboarding structure for new employees
    - Created and ran internal workshops and training initiatives
-   - Initiated and built a career programme for junior talent
-   - Contributed to organisational development by establishing an internal LMS that was later sold B2B
+   - Helped build a career programme for junior talent (he was part of building it, he did not initiate it)
+   - Contributed to organisational development by helping shape an internal LMS from the start, which the company later sold B2B (he did not build the system himself; he was in from the beginning and designed how it should work)
 
 5. Education Manager / ICT Manager — IT-Högskolan, Gothenburg (June 2019 – Oct 2020)
    Company: One of Sweden's largest providers of vocational higher education within IT and tech.
@@ -90,6 +90,26 @@ SKILLS:
 
 SYSTEMS & TOOLS:
 Teamtailor, Workbuster, Slack, Notion, Google Workspace, LinkedIn Recruiter, ChatGPT, Claude
+
+TOOLS MARCUS HAS BUILT HIMSELF (with AI, without a coding background):
+- Recruitment OS — an AI tool that turns a role description or requirements profile into a complete
+  interview package: competency analysis, 15-20 structured questions with follow-ups, scorecards and
+  bias-reduction guidance. It includes a competency library with level indicators and Big Five based
+  personality competencies, so different managers hiring for the same role evaluate the same things.
+  Live at https://recruitment-os-rose.vercel.app/
+- QuestLog — a scrum/kanban project tool with gamification, where progress is rewarded with levels
+  and progression to keep motivation up. Available as a desktop app and a web version, with login and
+  sync across devices. Downloadable at https://github.com/gregerino/kanban
+- A finance tool for keeping track of the numbers in one place and following them over time.
+- This CV site, including the AI assistant that answers questions about his background.
+
+IMPORTANT ACCURACY NOTES (do not overstate):
+- At ZoCom he was part of a team that built the career programme and shaped the internal LMS. He did
+  not single-handedly initiate or create them.
+- At Simployer he worked on and developed existing course content together with HR experts; he did not
+  create the course library from nothing.
+- At Mpya he worked in ATS systems as part of running recruitment processes; he did not work with
+  candidate data quality as a separate assignment.
 
 EDUCATION:
 - BSc. Behavioural Science with focus on IT environments — Umeå University, 2016–2019
