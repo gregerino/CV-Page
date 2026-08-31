@@ -312,14 +312,23 @@ img { max-width: 100%; display: block; }
    HERO
    ══════════════════════════════════════════ */
 .hero { padding: calc(var(--nav-h) + 3.5rem) 0 4.5rem; }
+
+/* Portrait and header text sit side by side, vertically centred on each
+   other, rather than the photo stacking above the name. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
 .hero-photo {
-  width: 210px;
+  width: 100%;
   aspect-ratio: 1 / 1.06;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid rgba(255,255,255,0.35);
-  margin-bottom: 2.2rem;
 }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 
@@ -361,7 +370,7 @@ img { max-width: 100%; display: block; }
 .meta-row .sep { color: var(--amber); font-size: 0.6rem; }
 .meta-row svg { width: 15px; height: 15px; stroke: var(--amber); vertical-align: -2px; margin-right: 0.35rem; }
 
-.hero-cta { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 3.5rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 0.7rem; }
 
 /* Stat strip */
 .stat-strip {
@@ -764,7 +773,6 @@ img { max-width: 100%; display: block; }
   .band { padding: 3.5rem 0; }
   .hero { padding: calc(var(--nav-h) + 2.2rem) 0 3rem; }
   .band--photo::before { background-attachment: scroll; }
-  .hero-photo { width: 150px; }
   .stat-strip { grid-template-columns: 1fr; }
   .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 1.2rem 1.4rem; }
   .stat:last-child { border-bottom: none; }
@@ -908,3 +916,17 @@ img { max-width: 100%; display: block; }
 .job-pending .hero-cta .btn-label,
 .job-pending #match .sec-head,
 .job-pending #match .points { visibility: hidden; }
+
+/* Hero: keep the portrait beside the text as long as the text still has room
+   to breathe, then let it fall below rather than back on top of the name. */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr) 210px; gap: 2.5rem; }
+}
+@media (max-width: 620px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .hero-photo { order: 2; width: 165px; }
+}

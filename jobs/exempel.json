@@ -11,8 +11,8 @@
     "sv": "Talent Acquisition i tekniska miljöer"
   },
   "lead": {
-    "en": "I have spent seven years recruiting into technical roles and building the structures around them. That is the job you are describing, and it is the job I already do.",
-    "sv": "Jag har ägnat sju år åt att rekrytera till tekniska roller och bygga strukturerna runt dem. Det är arbetet ni beskriver, och det är arbetet jag redan gör."
+    "en": "I have spent seven years recruiting for technical roles and building the structures around the recruitment. That is close to what you describe in the ad.",
+    "sv": "Jag har ägnat sju år åt att rekrytera till tekniska roller och bygga strukturerna runt rekryteringen. Det ligger nära det ni beskriver i annonsen."
   },
   "cta": {
     "en": "See how I match the role",
@@ -25,8 +25,8 @@
     "sv": "Rollen, punkt för punkt"
   },
   "matchLead": {
-    "en": "Every requirement from your ad, with what I have actually done under each one. Nothing inflated.",
-    "sv": "Varje krav ur er annons, med vad jag faktiskt har gjort under varje. Inget uppblåst."
+    "en": "Each requirement from your ad, with what I have done under it.",
+    "sv": "Varje krav ur er annons, med vad jag har gjort under det."
   },
 
   "points": [
@@ -37,19 +37,19 @@
         "sv": "Äga rekryteringsprocesser hela vägen, från behovsanalys till påskrivet avtal."
       },
       "body": {
-        "en": "This has been the core of my work for over seven years, most recently across technical roles from developers to engineers, where I also advised hiring managers on competence profiles, selection and candidate evaluation.",
-        "sv": "Det här har varit kärnan i mitt arbete i över sju år, senast inom tekniska roller från utvecklare till ingenjörer, där jag också rådgav rekryterande chefer kring kompetenskrav, urval och kandidatutvärdering."
+        "en": "This has been the main part of my work for over seven years, most recently across technical roles from developers to engineers, where I also advised hiring managers on competence profiles, selection and candidate evaluation.",
+        "sv": "Det här har varit den största delen av mitt arbete i över sju år, senast inom tekniska roller från utvecklare till ingenjörer, där jag också rådgav rekryterande chefer kring kompetenskrav, urval och kandidatutvärdering."
       }
     },
     {
       "title": { "en": "Onboarding that sticks", "sv": "Onboarding som håller" },
       "quote": {
-        "en": "Build an onboarding programme new hires actually get value from.",
-        "sv": "Bygga ett onboardingprogram som nyanställda faktiskt har nytta av."
+        "en": "Build an onboarding programme that gives new hires a good start.",
+        "sv": "Bygga ett onboardingprogram som ger nyanställda en bra start."
       },
       "body": {
-        "en": "I have built onboarding structures that did not exist before, twice over, with an explicit purpose: to increase engagement and retention, not to tick a checklist.",
-        "sv": "Jag har byggt onboardingstrukturer som inte fanns tidigare, två gånger om, med ett uttalat syfte: att öka engagemang och retention, inte att kryssa i en checklista."
+        "en": "I have built onboarding structures in two companies where none existed before. In both cases the purpose was to increase engagement and retention among new employees.",
+        "sv": "Jag har byggt onboardingstrukturer i två bolag där det inte fanns någon sedan tidigare. I båda fallen var syftet att öka engagemang och retention bland nyanställda."
       }
     }
   ]
