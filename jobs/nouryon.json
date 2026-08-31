@@ -1,0 +1,403 @@
+{
+  "company": "Nouryon",
+  "roleName": "Talent Acquisition Partner",
+
+  "eyebrow": {
+    "en": "Application · Talent Acquisition Partner · Nouryon",
+    "sv": "Ansökan · Talent Acquisition Partner · Nouryon"
+  },
+  "role": {
+    "en": "Talent Acquisition in technical environments",
+    "sv": "Talent Acquisition i tekniska miljöer"
+  },
+  "lead": {
+    "en": "I've got seven years in recruitment, HR and Learning & Development, mostly in IT and tech. Full recruitment processes for technical roles, an ATS I implemented and built the workflows around, employer branding inside a TA strategy I led. The other half of my CV is about teaching. I've built course material professionally and I'm a certified education manager. I have recruited into manufacturing industry, but on the white-collar side only. That one is point seven, at the bottom.",
+    "sv": "Jag har sju år i rekrytering, HR och Learning & Development, mest i IT och tech. Fulla rekryteringsprocesser för tekniska roller, ett ATS som jag implementerade och byggde flödena runt, employer branding inne i en TA-strategi jag ledde. Andra halvan av mitt CV handlar om att utbilda. Jag har byggt kursinnehåll professionellt och är certifierad utbildningsledare. Jag har rekryterat mot tillverkande industri, men bara på tjänstemannasidan. Det är punkt sju, längst ner."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Hur jag matchar" },
+  "matchTitle": {
+    "en": "The role, point by point",
+    "sv": "Rollen, punkt för punkt"
+  },
+  "matchLead": {
+    "en": "Every part of your ad, with what I've done under it. Including the one where I only cover half of what you're asking for.",
+    "sv": "Varje del av er annons, med det jag gjort under den. Även den där jag bara täcker halva kravet."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "Full processes, with the managers in the room",
+        "sv": "Hela processer, med cheferna i rummet"
+      },
+      "quote": {
+        "en": "Drive and ensure a recruitment process of the highest quality, and work with hiring managers across the organisation.",
+        "sv": "Driva och säkerställa en rekryteringsprocess av högsta kvalitet och samarbeta med rekryterande chefer i hela organisationen."
+      },
+      "body": {
+        "en": "This is what I've done most of for the last six years. The last two I spent at a recruitment firm working in science, technology and engineering, running processes from needs analysis to final selection, for everything from developers to engineers. Before that I led talent acquisition at an IT consultancy and ran recruitment and consultant matching at another. The manager side is the part I've leaned on most. I set the requirements profile together with the manager, advise on the timeline and on how candidates get assessed, and say something when a profile describes a person who doesn't exist. You write that the role is operational and strategic at the same time. That's how it has looked for me the whole way. I've never had a role where it was only one of them.",
+        "sv": "Det här är vad jag gjort mest av de senaste sex åren. De två senaste satt jag på ett rekryteringsbolag inom teknik, naturvetenskap och ingenjörskonst och drev processer från behovsanalys till slutligt urval, för allt från utvecklare till ingenjörer. Innan dess ledde jag talent acquisition på ett IT-konsultbolag och drev rekrytering och konsultmatchning på ett annat. Chefsdelen är den jag lutat mig mest mot. Jag sätter kravprofilen tillsammans med chefen, ger råd om tidplan och om hur kandidater bedöms, och säger ifrån när profilen beskriver någon som inte finns. Ni skriver att rollen är operativ och strategisk på samma gång. Så har det sett ut för mig hela vägen. Jag har aldrig haft en roll där det bara var det ena."
+      }
+    },
+    {
+      "title": {
+        "en": "The steps, and the system they live in",
+        "sv": "Stegen, och systemet de lever i"
+      },
+      "quote": {
+        "en": "Optimise and develop the different steps of a recruitment process so they fit the local market.",
+        "sv": "Optimera och utveckla de olika stegen i en rekryteringsprocess för att passa den lokala marknaden."
+      },
+      "body": {
+        "en": "At an IT consultancy I implemented the ATS and built the workflows around it. How a role got opened, how candidates moved between the steps, who did what. Before that the process mostly lived in the heads of the people running it. I've worked in Teamtailor and Workbuster daily, and at the recruitment firm part of my time went into improving the flows instead of only running them. When a step keeps costing more than it should, I'd rather rebuild it. Recruitment OS came out of exactly that. A requirements profile goes in, a finished interview package comes out.",
+        "sv": "På ett IT-konsultbolag implementerade jag ATS:et och byggde arbetsflödena runt det. Hur en roll öppnades, hur kandidater rörde sig mellan stegen, vem som gjorde vad. Innan dess låg processen mest i huvudet på oss som körde den. Jag har jobbat dagligen i Teamtailor och Workbuster, och på rekryteringsbolaget gick en del av tiden till att förbättra flödena i stället för att bara köra dem. När ett steg fortsätter kosta mer än det borde bygger jag hellre om det. Recruitment OS kom ur precis det. En kravprofil in, ett färdigt intervjupaket ut."
+      }
+    },
+    {
+      "title": {
+        "en": "The network, before there is a need",
+        "sv": "Nätverket, innan behovet finns"
+      },
+      "quote": {
+        "en": "Build a network of qualified candidates by proactively attracting the right people through different channels, including social media and industry networks.",
+        "sv": "Bygga nätverk av kvalificerade kandidater genom att proaktivt arbeta för att attrahera rätt genom att använda olika rekryteringskanaler, inklusive sociala medier och branschnätverk."
+      },
+      "body": {
+        "en": "Proactive sourcing and a pipeline kept warm has been part of every recruitment role I've had. I've written and published the ads that go with it, aiming to be clear about the role instead of loud about the company. The network part goes back further than that. At one of Sweden's largest vocational IT schools I built partnerships with companies and secured internship placements for the students. Same work, seen from the other side. I've been in Gothenburg the whole time and the technical labour market here is the one I know.",
+        "sv": "Proaktiv sourcing och en pipeline som hålls varm har funnits i varje rekryteringsroll jag haft. Jag har skrivit och publicerat annonserna som hör till, med målet att vara tydlig om rollen i stället för högljudd om bolaget. Nätverksbiten går längre tillbaka än så. På en av Sveriges största yrkeshögskolor inom IT byggde jag partnerskap med företag och säkrade praktikplatser åt studenterna. Samma arbete, sett från andra hållet. Jag har varit i Göteborg hela tiden och den tekniska arbetsmarknaden här är den jag känner."
+      }
+    },
+    {
+      "title": {
+        "en": "Training managers is my other half",
+        "sv": "Att utbilda chefer är min andra halva"
+      },
+      "quote": {
+        "en": "Develop and run training and workshops for hiring managers, to strengthen their recruitment skills and contribute to more accurate hires.",
+        "sv": "Utveckla och genomföra utbildningar och workshops för rekryterande chefer för att stärka deras rekryteringskompetens och bidra till träffsäkra rekryteringar."
+      },
+      "body": {
+        "en": "This is the line in your ad I applied for. I spent a year as a course developer at a Nordic HR tech company, building training in HR, payroll, tax and VAT together with subject-matter experts, and running the conferences and sessions where it was delivered. I'm a certified education manager and I've led education programmes at a vocational IT school. At an IT consultancy I ran internal workshops. So a training programme for hiring managers isn't something I'd start from zero on. I know how to build something that changes how people actually work, and I know how little it helps to send out a document and hope. Recruitment OS is the same thing in tool form: competency analysis, structured questions with follow-ups, scorecards and support for reducing bias, so two managers hiring for the same role assess the same things.",
+        "sv": "Det här är raden i er annons jag sökte på. Jag var kursutvecklare i ett år på ett nordiskt HR-techbolag, byggde utbildningar inom HR, lön, skatt och moms tillsammans med ämnesexperter och höll i konferenserna och tillfällena där de levererades. Jag är certifierad utbildningsledare och har lett utbildningsprogram på en yrkeshögskola inom IT. På ett IT-konsultbolag höll jag interna workshops. Så en utbildning för rekryterande chefer är inget jag skulle börja från noll med. Jag vet hur man bygger något som ändrar hur folk faktiskt arbetar, och hur lite det hjälper att skicka ut ett dokument och hoppas. Recruitment OS är samma sak i verktygsform: kompetensanalys, strukturerade frågor med följdfrågor, scorecards och stöd för att minska bias, så att två chefer som rekryterar till samma roll bedömer samma saker."
+      }
+    },
+    {
+      "title": {
+        "en": "Candidate experience, and what happens after it",
+        "sv": "Kandidatupplevelsen, och det som händer sen"
+      },
+      "quote": {
+        "en": "Contribute to optimising and improving the candidate experience.",
+        "sv": "Bidra till att optimera och förbättra kandidatupplevelsen."
+      },
+      "body": {
+        "en": "In my most recent role I was the candidates' point of contact and answered for the experience being professional and for people getting a reply. Including the ones who didn't get the job. That half decides whether they apply again. I've also built onboarding from scratch in two companies that had none, both times to raise engagement and retention. So I count the candidate experience from the first message to the first months on the job, and not up to the signature.",
+        "sv": "I min senaste roll var jag kandidaternas kontaktperson och ansvarade för att det höll professionellt och att folk fick svar. Även de som inte fick jobbet. Den halvan avgör om de söker igen. Jag har också byggt onboarding från grunden i två bolag som saknade den, båda gångerna för att öka engagemang och retention. Så jag räknar kandidatupplevelsen från första meddelandet till de första månaderna på jobbet, inte fram till signaturen."
+      }
+    },
+    {
+      "title": {
+        "en": "Employer branding, and the English",
+        "sv": "Employer branding, och engelskan"
+      },
+      "quote": {
+        "en": "Take part in employer branding activities in the region, and contribute to global Talent Acquisition projects.",
+        "sv": "Delta i arbetet kring att genomföra employer branding-aktiviteter i regionen. Bidra till globala projekt inom Talent Acquisition."
+      },
+      "body": {
+        "en": "At an IT consultancy I led the talent acquisition strategy and employer branding sat inside it. What we said about ourselves had to match what a new hire met in their first week. That's also why I ended up building the onboarding. On the global part I'll be straight with you: my international work has been Nordic. I use English every day, written and spoken, and I've worked in English-speaking tech environments the whole way. But I haven't been part of a global TA project.",
+        "sv": "På ett IT-konsultbolag ledde jag talent acquisition-strategin och employer branding låg inne i den. Det vi sa om oss själva behövde stämma med vad en nyanställd mötte första veckan. Det var också därför jag till slut byggde onboardingen. Om den globala delen säger jag som det är: mitt internationella arbete har varit nordiskt. Engelska använder jag varje dag, i skrift och tal, och jag har jobbat i engelskspråkiga techmiljöer hela vägen. Men jag har inte varit med i ett globalt TA-projekt."
+      }
+    },
+    {
+      "title": {
+        "en": "White-collar yes, blue-collar no",
+        "sv": "Tjänstemän ja, kollektivanställda nej"
+      },
+      "quote": {
+        "en": "At least a couple of years of recruitment experience within manufacturing industry, successfully attracting and hiring both white-collar and blue-collar employees.",
+        "sv": "Minst ett par års erfarenhet inom rekrytering inom tillverkande industri och att framgångsrikt ha arbetat med att attrahera och rekrytera både tjänstemän och kollektivanställda medarbetare."
+      },
+      "body": {
+        "en": "Half of this one I have. The last two years, at a recruitment firm working in science, technology and engineering, I recruited into manufacturing industry on the white-collar side. Technical requirements profiles, engineering managers and a candidate market where the good people already have a job are familiar ground, and so is the industry itself. The other half I don't have. I haven't recruited blue-collar employees and I haven't worked under IKEM or any other collective agreement on that side. I know Swedish labour law and worked with it daily in HR tech, so the ground under it is there, but the rest I'd be learning with you. The academic background you ask for I do have: a BSc in behavioural science with a focus on IT environments. I'd rather write this out than let you read more into my CV than what's in it.",
+        "sv": "Halva det här kravet har jag. De två senaste åren, på ett rekryteringsbolag inom teknik, naturvetenskap och ingenjörskonst, rekryterade jag mot tillverkande industri på tjänstemannasidan. Tekniska kravprofiler, ingenjörschefer och en kandidatmarknad där de bra redan har jobb är bekant mark, och det är branschen också. Andra halvan har jag inte. Jag har inte rekryterat kollektivanställda och jag har inte jobbat under IKEM eller något annat kollektivavtal på den sidan. Svensk arbetsrätt kan jag och jobbade med dagligen inom HR-tech, så grunden finns, men resten skulle jag lära mig hos er. Den akademiska bakgrunden ni efterfrågar har jag: kandidat i beteendevetenskap med inriktning mot IT-miljöer. Jag skriver hellre ut det här än låter er läsa in mer i mitt CV än vad som står i det."
+      }
+    }
+  ],
+
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "7+ years in recruitment, HR and L&D",
+      "sv": "7+ år inom rekrytering, HR och L&D"
+    },
+    "#top .stat-num": [
+      "7+",
+      "15+",
+      "ATS"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years across recruitment, HR and Learning & Development in technical environments",
+        "sv": "År inom rekrytering, HR och Learning & Development i tekniska miljöer"
+      },
+      {
+        "en": "Consultants under my people responsibility, on the management team",
+        "sv": "Konsulter med personalansvar, som del av ledningsgruppen"
+      },
+      {
+        "en": "Implemented, with the recruitment workflows around it built from scratch",
+        "sv": "Implementerat, med rekryteringsflödena runt det byggda från grunden"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What is his recruitment experience?",
+        "sv": "Vilken rekryteringserfarenhet har han?"
+      },
+      {
+        "en": "Has he trained hiring managers?",
+        "sv": "Har han utbildat rekryterande chefer?"
+      },
+      {
+        "en": "What has he done in employer branding?",
+        "sv": "Vad har han gjort inom employer branding?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my recruitment experience",
+      "sv": "Fråga om min rekryteringserfarenhet"
+    },
+    ".ask-sub": {
+      "en": "The assistant has my full CV. Ask it about the things I haven't done too.",
+      "sv": "Assistenten har hela mitt CV. Fråga den om det jag inte gjort också."
+    },
+    "#about .sec-title": {
+      "en": "Talent Acquisition, HR and learning in technical environments",
+      "sv": "Talent Acquisition, HR och lärande i tekniska miljöer"
+    },
+    "#about .about-quote": {
+      "en": "Recruitment from requirements profile to hire, in technical environments, plus the habit of building the training that makes managers better at their half of it.",
+      "sv": "Rekrytering från kravprofil till anställning i tekniska miljöer, plus vanan att bygga utbildningen som gör cheferna bättre på sin del av den."
+    },
+    "#about .about-body": [
+      {
+        "en": "What drives me is working close to the people and to the business at the same time. Through my roles I've built and rebuilt processes for recruitment, onboarding and competence development, and the employee experience has been the point of it every time.",
+        "sv": "Det som driver mig är att jobba nära människorna och verksamheten samtidigt. Genom mina roller har jag byggt och byggt om processer för rekrytering, onboarding och kompetensutveckling, och medarbetarupplevelsen har varit poängen med det varje gång."
+      },
+      {
+        "en": "I'm at my best in the work with hiring managers. That's where I bring structure, requirements profiles that hold up, and support in the assessment. Teaching sits close to it. I've worked professionally with building learning and I'm a certified education manager, so I can put a workshop for managers together myself.",
+        "sv": "Jag är som bäst i arbetet med rekryterande chefer. Där bidrar jag med struktur, kravprofiler som håller och stöd i bedömningen. Att utbilda ligger nära. Jag har jobbat professionellt med att bygga lärande och är certifierad utbildningsledare, så en workshop för chefer kan jag sätta ihop själv."
+      },
+      {
+        "en": "Most of my career sits in IT and tech companies. I understand the language and the needs of the business, and it shows in the requirements profiles, in the processes, and in how quickly both candidates and managers start trusting me.",
+        "sv": "Största delen av min karriär ligger i IT- och techbolag. Jag förstår språket och behoven i verksamheten, och det syns i kravprofilerna, i processerna och i hur snabbt både kandidater och chefer börjar lita på mig."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Matching the right person with the right role, and giving them what they need to succeed",
+        "sv": "Att matcha rätt person med rätt roll, och ge dem det de behöver för att lyckas"
+      },
+      {
+        "en": "Making the process structured enough that two managers assess the same things",
+        "sv": "Att göra processen strukturerad nog att två chefer bedömer samma saker"
+      },
+      {
+        "en": "Making hiring managers better at it, with training and with tools",
+        "sv": "Att göra rekryterande chefer bättre på det, med utbildning och med verktyg"
+      },
+      {
+        "en": "Keeping the experience good from the first message to the first months on the job",
+        "sv": "Att hålla upplevelsen bra från första meddelandet till de första månaderna på jobbet"
+      },
+      {
+        "en": "Combining the numbers with a real interest in people",
+        "sv": "Att kombinera siffrorna med ett genuint intresse för människor"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Processes, programmes and tools",
+      "sv": "Processer, program och verktyg"
+    },
+    "#built .built-sub": [
+      {
+        "en": "Built at work, with colleagues",
+        "sv": "Byggt på jobbet, med kollegor"
+      },
+      {
+        "en": "Built myself, with AI",
+        "sv": "Byggt själv, med AI"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of it I built with colleagues at work: the ATS workflows, onboarding, a career programme. Some I built on my own with AI, including a tool that turns a requirements profile into a structured interview package.",
+      "sv": "En del byggde jag med kollegor på jobbet: ATS-flödena, onboarding, ett karriärprogram. En del har jag byggt själv med AI, bland annat ett verktyg som gör en kravprofil till ett strukturerat intervjupaket."
+    },
+    "#experience .sec-title": {
+      "en": "Where I have recruited",
+      "sv": "Var jag har rekryterat"
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and around the tech industry. Recruitment is in four of them and training in three.",
+      "sv": "Fem roller i och nära techbranschen. Rekrytering finns i fyra av dem och utbildning i tre."
+    },
+    "#education .sec-title": {
+      "en": "The academic background you ask for",
+      "sv": "Den akademiska bakgrunden ni efterfrågar"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in how people behave in digital and technical organisations. It's the equivalent background your ad asks for, and the reason I read a candidate and a competence profile the way I do.",
+        "sv": "En kandidatexamen i hur människor fungerar i digitala och tekniska organisationer. Det är den likvärdiga bakgrund er annons efterfrågar, och skälet till att jag läser en kandidat och en kravprofil som jag gör."
+      },
+      {
+        "en": "Certification in education management. It's what sits behind being able to design a workshop for hiring managers and not only stand up and hold one.",
+        "sv": "Certifiering inom utbildningsledning. Det är den som ligger bakom att jag kan designa en workshop för rekryterande chefer och inte bara hålla i den."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "HR, business admin or equivalent",
+      "sv": "HR, business admin eller likvärdig"
+    },
+    "#education .callout-title": {
+      "en": "Behavioural science, and a licence to teach",
+      "sv": "Beteendevetenskap, och rätten att utbilda"
+    },
+    "#education .callout-text": {
+      "en": "You ask for an academic background in HR, business administration or the equivalent. Mine is behavioural science with a focus on IT environments: how people work in organisations, how you assess that, and how you get HR and the business to pull together. The education management certification on top is why I can build the training for hiring managers myself instead of buying it in.",
+      "sv": "Ni efterfrågar en akademisk bakgrund inom HR, business administration eller likvärdig. Min är beteendevetenskap med inriktning mot IT-miljöer: hur människor fungerar i organisationer, hur man bedömer det och hur man får HR och verksamheten att dra åt samma håll. Certifieringen som utbildningsledare ovanpå är skälet till att jag kan bygga chefsutbildningen själv i stället för att köpa in den."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      "Employer Branding",
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "People & Culture",
+        "sv": "People & Culture"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Learning & Development",
+        "sv": "Learning & Development"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "HR",
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Learning Management Systems (LMS)",
+        "sv": "Learning Management Systems (LMS)"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Teamtailor",
+      "Workbuster",
+      "Winningtemp",
+      "Monday.com",
+      "Office 365",
+      "Slack",
+      "Canva",
+      "Claude Code"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to hiring managers",
+        "sv": "Rådgivande mot rekryterande chefer"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "You're looking for someone curious about change, a doer, and unpretentious about working with other people. None of that can be proven in a CV. So here's the rest of me instead.",
+      "sv": "Ni söker någon som är nyfiken på förändring, en doer och prestigelös i samarbetet. Inget av det går att bevisa i ett CV. Så här är resten av mig i stället."
+    },
+    "#contact .sec-title": {
+      "en": "About the Talent Acquisition Partner role",
+      "sv": "Om rollen som Talent Acquisition Partner"
+    },
+    "#contact .sec-lead": {
+      "en": "The formal application goes through your recruitment tool, exactly as the ad says. If you want to ask about the roles I've recruited into industry, about the blue-collar half I haven't done, or about anything else on this page, reach out here. I answer quickly.",
+      "sv": "Den formella ansökan går via ert rekryteringsverktyg, precis som annonsen säger. Vill ni fråga om rollerna jag rekryterat mot industrin, om kollektivsidan jag inte gjort, eller om något annat på sidan, hör av er här. Jag svarar snabbt."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Gothenburg, Sweden",
+        "sv": "Göteborg, Sverige"
+      },
+      {
+        "en": "Swedish & English",
+        "sv": "Svenska & engelska"
+      },
+      {
+        "en": "BSc. Behavioural Science",
+        "sv": "Kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: Talent Acquisition Partner, N0014658",
+        "sv": "Söker: Talent Acquisition Partner, N0014658"
+      }
+    ]
+  }
+}

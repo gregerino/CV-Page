@@ -1,0 +1,107 @@
+/* Nouryon — Talent Acquisition Partner, Göteborg (N0014658)
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /nouryon and by cv.html?job=nouryon, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is Nouryon's own, read off their site:
+     #215FAB  signal blue       #1A4780  deep blue      #12151A  near black
+     #575756  warm grey ink     #9C9FA5  light grey     #F4F5F7  pale grey
+
+   Their identity is a cool one — near-white paper, black headings, and the
+   blue reserved for the logo tile, the buttons and the rules. Only tokens are
+   set here, plus a handful of rules at the bottom. The layout, typography and
+   structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: Nouryon's greys, cooled a step away from the base beige. */
+  --bg:            #f4f5f7;
+  --bg2:           #ecedf1;
+  --bg3:           #e2e5ec;
+  --white:         #ffffff;
+
+  --border:        rgba(33,95,171,0.20);
+  --border-light:  rgba(33,95,171,0.12);
+  --border-strong: rgba(26,71,128,0.28);
+
+  /* Headings in their near black, body in the warm grey they set text in. */
+  --ink:           #12151a;
+  --ink-mid:       #575756;
+  --ink-light:     #74787e;
+  --ink-dim:       #9c9fa5;
+
+  /* The signal blue is dark enough to sit behind body text and on filled
+     buttons, so unlike a louder brand colour it can carry the accent itself.
+     --amber-light is the hover state, so it goes deeper, not lighter. */
+  --amber:         #215fab;
+  --amber-light:   #1a4780;
+
+  /* Every wash, tint and glow on the page is mixed from these. */
+  --accent-rgb:    33,95,171;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        244,245,247;
+
+  /* The base shadows are warm. Cool them to match the paper. */
+  --shadow:        0 2px 12px rgba(18,21,26,0.09), 0 1px 3px rgba(18,21,26,0.05);
+  --shadow-sm:     0 1px 4px rgba(18,21,26,0.06);
+  --shadow-lg:     0 10px 40px rgba(18,21,26,0.12);
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(244,245,247,0.96) 0%,
+    rgba(233,238,246,0.93) 40%,
+    rgba(214,225,241,0.88) 70%,
+    rgba(191,209,235,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23215fab' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Nouryon draws in rectangles — square buttons, square tiles, square cards.
+     The base page is rounded throughout, so the geometry is squared off here
+     as well as recoloured. */
+  --radius:      3px;
+  --radius-lg:   4px;
+  --radius-pill: 3px;
+}
+
+/* Nouryon's blue rule under the fixed header, the way it runs under their own. */
+.nav { box-shadow: inset 0 -2px 0 #215fab; }
+
+/* Their wordmark sits in a solid blue tile, not a circle. The brand mark here
+   squares off to echo it. */
+.brand-dot { border-radius: 2px; }
+
+/* The timeline runs from the signal blue down into the near black, which is
+   the pairing their pages are built on. */
+.timeline::before {
+  background: linear-gradient(to bottom, #215fab, rgba(18,21,26,0.35) 65%, transparent);
+}
+
+.job::before { border-color: #215fab; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The match section, in their black
+   ─────────────────────────────────────────────────────────────────────────
+   Nouryon's own pages open on a black band with the blue mark on it, and
+   "How I match" is the section this whole page exists for — so that is the
+   one that gets it. The point cards go opaque white on top, which is the
+   pairing their site uses for content on black.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #12151a;
+  border-top: 1px solid #12151a;
+}
+#match + .band { border-top: 1px solid #12151a; }
+
+#match .eyebrow  { color: #79aae6; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.70); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* A blue edge down the left of every point, the way their content blocks
+   carry one. */
+#match .point { border-left: 3px solid #215fab; }
+
