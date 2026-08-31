@@ -5,7 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV — Marcus Hultberg</title>
   <meta name="description" content="Full CV for Marcus Hultberg: roles, responsibilities and what I did in each one." />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
+  <script>
+    // Reached from an application page as cv.html?job=<slug>. The colour theme
+    // that page uses is linked here too, so the CV keeps the company's colours
+    // instead of dropping back to the base palette mid-visit. See job.js.
+    (function () {
+      var slug = (new URLSearchParams(location.search).get('job') || '').toLowerCase().trim();
+      if (!/^[a-z0-9-]+$/.test(slug)) return;
+      var theme = document.createElement('link');
+      theme.rel = 'stylesheet';
+      theme.href = '/jobs/' + encodeURIComponent(slug) + '.css';
+      document.head.appendChild(theme);
+    })();
+  </script>
 </head>
 <body class="cv-page">
 

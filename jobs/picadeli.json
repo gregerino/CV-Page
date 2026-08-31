@@ -1,0 +1,247 @@
+{
+  "company": "Picadeli",
+  "roleName": "People Operations Manager",
+
+  "eyebrow": {
+    "en": "Application · People Operations Manager · Picadeli",
+    "sv": "Ansökan · People Operations Manager · Picadeli"
+  },
+  "role": {
+    "en": "HR × AI × Business",
+    "sv": "HR × AI × Business"
+  },
+  "lead": {
+    "en": "Seven years of People work in tech companies: HR support to managers and employees, people responsibility for a consultant group, onboarding built from scratch and competence development — with recruitment as one part of it. On top of that I work AI-natively and build my own tools with it, so AI in HR is not something I would need to be talked into. It is already how I work.",
+    "sv": "Sju år av People-arbete i techbolag: HR-stöd till chefer och medarbetare, personalansvar för en konsultgrupp, onboarding byggd från grunden och kompetensutveckling — med rekrytering som en del av det. Utöver det arbetar jag AI-nativt och bygger egna verktyg med det, så AI i HR är inget jag behöver övertalas till. Det är redan så jag arbetar."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Hur jag matchar" },
+  "matchTitle": {
+    "en": "Your mission, point by point",
+    "sv": "Uppdraget, punkt för punkt"
+  },
+  "matchLead": {
+    "en": "Each part of the role, with what I have actually done under it — including the one where I have the least behind me.",
+    "sv": "Varje del av rollen, med det jag faktiskt gjort under den — inklusive den där jag har minst bakom mig."
+  },
+
+  "points": [
+    {
+      "title": { "en": "HR × AI, in practice", "sv": "HR × AI, i praktiken" },
+      "quote": {
+        "en": "Digitalize and AI-enable manual HR processes across our markets, always challenging what can be streamlined.",
+        "sv": "Digitalisera och AI-möjliggöra manuella HR-processer över våra marknader och hela tiden utmana vad som kan effektiviseras."
+      },
+      "body": {
+        "en": "This is the part I would start on first. I use AI daily and I build with it: Recruitment OS turns a requirements profile into a full interview package — competency analysis, structured questions with follow-ups, scorecards and support for reducing bias — so that two managers hiring for the same role assess the same things. This site runs an assistant that answers questions from my CV instead of making the reader search. I have also built a project tool and a finance tool the same way. None of it is a demo; they are things I use. That is the difference I would bring to onboarding, contracts, approvals and reporting: not a plan for AI, but processes that are running.",
+        "sv": "Det här är den del jag skulle börja med. Jag använder AI dagligen och jag bygger med det: Recruitment OS gör en kravprofil till ett komplett intervjupaket — kompetensanalys, strukturerade frågor med följdfrågor, scorecards och stöd för att minska bias — så att två chefer som rekryterar till samma roll bedömer samma saker. Den här sidan har en assistent som svarar på frågor utifrån mitt CV i stället för att läsaren ska leta. Jag har byggt ett projektverktyg och ett ekonomiverktyg på samma sätt. Inget av det är demos, det är saker jag använder. Det är skillnaden jag tar med mig till onboarding, avtal, attester och rapportering: inte en plan för AI, utan processer som är igång."
+      }
+    },
+    {
+      "title": { "en": "Systems that actually get used", "sv": "System som faktiskt används" },
+      "quote": {
+        "en": "Demonstrated ownership of an HRIS platform, continuously developing it to keep pace with the business.",
+        "sv": "Visat ägarskap för en HRIS-plattform och att löpande utveckla den i takt med verksamheten."
+      },
+      "body": {
+        "en": "I have not run HiBob. What I have done is take systems from installed to used. In an IT consultancy I implemented the ATS and built the workflows around it, from how a role was opened to how candidates moved and who did what. I was involved from the start in shaping an internal LMS — what it should solve and how the content should be structured — and it worked well enough that it was later sold as a product. In a Nordic HR tech company I developed the training content for an HR and payroll system, which meant working with how people are supposed to use a system, not only what it can do. Learning a new platform is the quick part; adoption and data quality are the part I know how to drive.",
+        "sv": "Jag har inte drivit HiBob. Det jag har gjort är att ta system från installerade till använda. På ett IT-konsultbolag implementerade jag ATS:et och byggde arbetsflödena runt det, från hur en roll öppnades till hur kandidater rörde sig och vem som gjorde vad. Jag var med från start och formade ett internt LMS — vad det skulle lösa och hur innehållet skulle struktureras — och det fungerade så pass bra att det senare såldes som produkt. På ett nordiskt HR-techbolag utvecklade jag utbildningsinnehållet för ett HR- och lönesystem, vilket innebar att arbeta med hur människor ska använda ett system, inte bara vad det kan. Att lära sig en ny plattform är den snabba delen; adoption och datakvalitet är den del jag vet hur man driver."
+      }
+    },
+    {
+      "title": { "en": "The go-to person, and onboarding end to end", "sv": "Den man vänder sig till, och onboarding hela vägen" },
+      "quote": {
+        "en": "Be the go-to person on HR processes, policies and labour law, and own the group's onboarding programme end to end.",
+        "sv": "Vara den man vänder sig till kring HR-processer, policyer och arbetsrätt, och äga koncernens onboardingprogram hela vägen."
+      },
+      "body": {
+        "en": "In one IT consultancy I sat on the management team with HR and development responsibility for a consultant group of 15+, and in another I gave ongoing HR support to consultants in a fast-moving environment. I have built onboarding from scratch in two companies where none existed before, both times to raise engagement and retention. Swedish labour law is part of my toolkit and was the subject matter I worked with daily in HR tech, where I developed course content on HR, payroll, tax and VAT together with subject-matter experts — which is also where I learned to explain a rule so that a manager can act on it.",
+        "sv": "På ett IT-konsultbolag satt jag i ledningsgruppen med HR- och utvecklingsansvar för en konsultgrupp på 15+, och på ett annat gav jag löpande HR-stöd till konsulter i en snabbrörlig miljö. Jag har byggt onboarding från grunden i två bolag där det inte fanns någon sedan tidigare, båda gångerna för att öka engagemang och retention. Svensk arbetsrätt är en del av min verktygslåda och var det ämne jag arbetade med dagligen inom HR-tech, där jag utvecklade kursinnehåll inom HR, lön, skatt och moms tillsammans med ämnesexperter — vilket också är där jag lärde mig att förklara en regel så att en chef kan agera på den."
+      }
+    },
+    {
+      "title": { "en": "Skills that turn into performance", "sv": "Kompetens som blir prestation" },
+      "quote": {
+        "en": "Map future skills needs, spot talent early, and initiate programmes that turn potential into performance.",
+        "sv": "Kartlägga framtida kompetensbehov, se talang tidigt och starta program som gör potential till prestation."
+      },
+      "body": {
+        "en": "This is the thread through my whole career. At one of Sweden's largest vocational IT schools I led education programmes and worked with competence supply — matching what was taught to what the labour market actually needed — and I am a certified education manager. In a consultancy I helped build a career programme for junior developers, with a structure for what they should learn, who supported them and how they moved on, and I ran internal workshops and learning sessions. I have also built training content professionally, so I know the difference between material that is produced and material that changes how someone works.",
+        "sv": "Det här är den röda tråden genom hela min karriär. På en av Sveriges största yrkeshögskolor inom IT ledde jag utbildningsprogram och arbetade med kompetensförsörjning — att matcha det som lärdes ut mot vad arbetsmarknaden faktiskt behövde — och jag är certifierad utbildningsledare. På ett konsultbolag var jag med och byggde ett karriärprogram för juniora utvecklare, med en struktur för vad de skulle lära sig, vem som stöttade dem och hur de gick vidare, och jag höll interna workshops och lärtillfällen. Jag har också byggt utbildningsinnehåll professionellt, så jag vet skillnaden mellan material som produceras och material som förändrar hur någon arbetar."
+      }
+    },
+    {
+      "title": { "en": "Engagement, from survey to action plan", "sv": "Engagemang, från mätning till handlingsplan" },
+      "quote": {
+        "en": "Drive the employee engagement surveys end to end and support managers to turn feedback into action plans that make sense.",
+        "sv": "Driva medarbetarundersökningarna hela vägen och stötta chefer i att göra feedback till handlingsplaner som håller."
+      },
+      "body": {
+        "en": "Winningtemp is one of the tools I have worked in, and the harder half of that work has never been the survey — it is sitting down with a manager afterwards and turning a dip in a graph into two things they will actually do. That is the advisory role I have had toward managers throughout, and my degree in behavioural science with a focus on IT environments is the reason I read the numbers and the people at the same time.",
+        "sv": "Winningtemp är ett av de verktyg jag arbetat i, och den svårare halvan av det arbetet har aldrig varit själva mätningen — det är att sätta sig med en chef efteråt och göra en nedgång i en graf till två saker de faktiskt kommer att göra. Det är den rådgivande rollen jag haft mot chefer hela vägen, och min kandidat i beteendevetenskap med inriktning mot IT-miljöer är skälet till att jag läser siffrorna och människorna samtidigt."
+      }
+    },
+    {
+      "title": { "en": "Compensation, compliance and the yearly wheel", "sv": "Lön, compliance och årshjulet" },
+      "quote": {
+        "en": "Own the annual pay equity analysis and salary review, and ensure compliance with the EU Pay Transparency Directive.",
+        "sv": "Äga den årliga lönekartläggningen och lönerevisionen, och säkerställa efterlevnad av EU:s lönetransparensdirektiv."
+      },
+      "body": {
+        "en": "Here I am honest: I have not owned a pay equity analysis or a salary review. What I bring to it is the ground it stands on — Swedish labour law, and a year spent building course material on HR, payroll, tax and VAT with the experts who own those questions — plus a way of working that suits a yearly wheel: structured, process-driven, and used to running many parallel processes without dropping any of them. It is the part of the role I would need to learn, and the part I would document properly on the way in, so it is not carried in one person's head.",
+        "sv": "Här är jag ärlig: jag har inte ägt en lönekartläggning eller en lönerevision. Det jag tar med mig till den är marken den står på — svensk arbetsrätt, och ett år med att bygga kursmaterial inom HR, lön, skatt och moms tillsammans med experterna som äger de frågorna — plus ett arbetssätt som passar ett årshjul: strukturerat, processdrivet och vant vid många parallella processer utan att tappa någon. Det är den del av rollen jag skulle behöva lära mig, och den del jag skulle dokumentera ordentligt på vägen in, så att den inte bärs i ett enda huvud."
+      }
+    }
+  ],
+
+  "text": {
+    "#top .meta-row > span:last-child": {
+      "en": "7+ years in HR, L&D and recruitment",
+      "sv": "7+ år inom HR, L&D och rekrytering"
+    },
+    "#top .stat-num": [
+      "7+",
+      "15+",
+      {
+        "en": "AI",
+        "sv": "AI"
+      }
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years of People work across HR, Learning & Development and recruitment",
+        "sv": "År av People-arbete inom HR, Learning & Development och rekrytering"
+      },
+      {
+        "en": "Consultants under my people responsibility, on the management team",
+        "sv": "Konsulter med personalansvar, som del av ledningsgruppen"
+      },
+      {
+        "en": "In my daily work, and in the tools I have built with it myself",
+        "sv": "I mitt dagliga arbete, och i verktygen jag byggt med det själv"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What has he done in People & Culture?",
+        "sv": "Vad har han gjort inom People & Culture?"
+      },
+      {
+        "en": "How does he use AI in HR work?",
+        "sv": "Hur använder han AI i HR-arbetet?"
+      },
+      {
+        "en": "Has he built onboarding?",
+        "sv": "Har han byggt onboarding?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "People work, learning and AI in tech",
+      "sv": "People-arbete, lärande och AI i tech"
+    },
+    "#about .about-quote": {
+      "en": "Broad experience across HR, Learning & Development, organisational development and recruitment, primarily in technical environments.",
+      "sv": "Bred erfarenhet inom HR, Learning & Development, organisationsutveckling och rekrytering, främst i tekniska miljöer."
+    },
+    "#about .about-body": [
+      {
+        "en": "What drives me is the chance to work close to people and to the business, and to create the conditions for both individuals and organisations to grow. Through my roles I have built and improved processes for onboarding, competence development and recruitment, always with the employee experience as the point of it.",
+        "sv": "Det som driver mig är möjligheten att arbeta nära människor och verksamhet, och att skapa förutsättningar för både individer och organisationer att växa. Genom mina roller har jag byggt och förbättrat processer inom onboarding, kompetensutveckling och rekrytering, alltid med medarbetarupplevelsen som poängen med det."
+      },
+      {
+        "en": "I thrive in collaboration with managers and teams, where I contribute structure, perspective and support in how we can work smarter and more sustainably over time. More and more that means AI: I use it daily, and I would rather show a manager a process that has been automated than describe one that could be.",
+        "sv": "Jag trivs i samarbete med chefer och team, där jag bidrar med struktur, perspektiv och stöd i hur vi kan arbeta smartare och mer hållbart över tid. Allt oftare betyder det AI: jag använder det dagligen, och jag visar hellre en chef en process som redan är automatiserad än beskriver en som skulle kunna bli det."
+      },
+      {
+        "en": "The majority of my career has been spent in IT and tech companies, which means I understand the language, needs and challenges of the business. In practice it means managers get a People partner who can sit with a tech team without a translator, and who is not afraid of the systems the work runs in.",
+        "sv": "Största delen av min karriär har tillbringats i IT- och techbolag, vilket innebär att jag förstår språket, behoven och utmaningarna i verksamheten. I praktiken betyder det att chefer får en People-partner som kan sitta med ett techteam utan tolk, och som inte är rädd för systemen arbetet lever i."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Being the person managers and employees turn to, and making HR easy to use",
+        "sv": "Att vara den chefer och medarbetare vänder sig till, och göra HR enkelt att använda"
+      },
+      {
+        "en": "Building structures and processes that hold up over time",
+        "sv": "Att bygga strukturer och processer som håller över tid"
+      },
+      {
+        "en": "Using AI to take the manual work out of HR",
+        "sv": "Att använda AI för att ta bort det manuella i HR-arbetet"
+      },
+      {
+        "en": "Creating engaging employee experiences from day one",
+        "sv": "Att skapa engagerande medarbetarupplevelser från dag ett"
+      },
+      {
+        "en": "Combining data-driven thinking with a genuine focus on people",
+        "sv": "Att kombinera datadrivet tänkande med ett genuint fokus på människor"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of it I built on my own, with AI, when I ran into a problem I wanted solved. Some of it I built together with colleagues at work.",
+      "sv": "En del har jag byggt på egen hand, med AI, när jag stött på ett problem jag ville lösa. En del har jag byggt tillsammans med kollegor på jobbet."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and around the tech industry, with HR, competence development and recruitment as the common thread.",
+      "sv": "Fem roller i och nära techbranschen, med HR, kompetensutveckling och rekrytering som röd tråd."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "People & Culture",
+        "sv": "People & Culture"
+      },
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Learning & Development",
+        "sv": "Learning & Development"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Learning Management Systems (LMS)",
+        "sv": "Learning Management Systems (LMS)"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Employer Branding",
+        "sv": "Employer Branding"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Gamification"
+    ]
+  }
+}

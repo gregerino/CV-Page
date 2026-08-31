@@ -5,16 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcus Hultberg — People &amp; Culture, Talent Acquisition &amp; L&amp;D</title>
   <meta name="description" content="Marcus Hultberg — People &amp; Culture, Talent Acquisition and Learning &amp; Development in technical environments. Gothenburg, Sweden." />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
   <script>
-    // A job slug in the URL means the hero and "What I do" are about to be
-    // rewritten by job.js. Hide just those two regions so the base wording
-    // never flashes past the reader first.
+    // A job slug in the URL means two things.
+    //
+    // job.js is about to rewrite the hero and "What I do", so those two
+    // regions are hidden here and shown again once the pack has been applied,
+    // and the base wording never flashes past the reader first.
+    //
+    // The application may also bring a colour theme in jobs/<slug>.css. It is
+    // linked from here, while the page is still parsing, so the page is drawn
+    // in the company's colours from the first frame. A pack without a theme
+    // file simply has no stylesheet to load and keeps the base colours.
     (function () {
-      var p = location.pathname.replace(/^\/+|\/+$/g, '');
-      if ((p !== '' && p !== 'index.html') || location.search.indexOf('job=') > -1) {
-        document.documentElement.className += ' job-pending';
-      }
+      var params = new URLSearchParams(location.search);
+      var slug = (params.get('job') ||
+                  location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '')
+                 ).toLowerCase().trim();
+      if (['', 'index', 'cv'].indexOf(slug) !== -1 || !/^[a-z0-9-]+$/.test(slug)) return;
+
+      document.documentElement.className += ' job-pending';
+
+      var theme = document.createElement('link');
+      theme.rel = 'stylesheet';
+      theme.href = '/jobs/' + encodeURIComponent(slug) + '.css';
+      document.head.appendChild(theme);
     })();
   </script>
 </head>

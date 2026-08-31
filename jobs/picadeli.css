@@ -1,0 +1,79 @@
+/* Picadeli — People Operations Manager (HR × AI × Business)
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /picadeli and by cv.html?job=picadeli, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is Picadeli's own, read from their site:
+     #00A75D  signal green      #225040  deep green      #0C320E  darkest green
+     #8DC9A0  mid green         #D7EAD9  pale green      #433F38  warm ink
+
+   Only tokens are set here. The layout, typography and structure are the base
+   page's, unchanged — this file just moves it from beige and amber to the
+   colours the reader recognises.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: the pale end of Picadeli's greens, kept light enough to read on. */
+  --bg:            #f3f8f3;
+  --bg2:           #e9f3ea;
+  --bg3:           #dceee0;
+  --white:         #ffffff;
+
+  --border:        rgba(141,201,160,0.55);
+  --border-light:  rgba(141,201,160,0.38);
+  --border-strong: rgba(34,80,64,0.30);
+
+  --ink:           #0c320e;
+  --ink-mid:       #3d453b;
+  --ink-light:     #5e6b5f;
+  --ink-dim:       #93a494;
+
+  /* Deep green carries text and filled buttons, where contrast has to hold;
+     the signal green is loud and belongs on the small marks further down.
+     --amber-light is the hover state, so here it goes darker, not lighter. */
+  --amber:         #225040;
+  --amber-light:   #0c320e;
+
+  /* Every wash, tint and glow on the page is mixed from these. */
+  --accent-rgb:    0,167,93;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        243,248,243;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(243,248,243,0.96) 0%,
+    rgba(226,241,229,0.93) 40%,
+    rgba(205,231,211,0.89) 70%,
+    rgba(176,214,187,0.85) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23225040' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+}
+
+/* The signal green: a thin line under the fixed header, and the small marks
+   that punctuate the page. Never behind text — it is too bright to read on. */
+.nav { box-shadow: inset 0 -2px 0 #00a75d; }
+
+.brand-dot,
+.point-rule,
+.ask-dot,
+.job-bullets li::before { background: #00a75d; }
+
+.meta-row .sep { color: #00a75d; }
+
+.job::before { border-color: #00a75d; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #00a75d, var(--border-strong) 70%, transparent);
+}
+
+/* "What I've built" leads with the tools built with AI, since that is the part
+   of it this role is about. The section lead in the pack is worded to match.
+   The two groups are a <p> label and a <div> grid each, so the last of each is
+   the AI pair. */
+#built .wrap { display: flex; flex-direction: column; }
+#built .sec-head { order: -2; }
+#built .wrap > p:last-of-type,
+#built .wrap > div:last-of-type { order: -1; }
+
+/* The gap between the two groups belongs to whichever label now comes second. */
+#built .wrap > p:last-of-type { margin-top: 0; }
+#built .wrap > p:first-of-type { margin-top: 2.8rem; }
