@@ -1,0 +1,167 @@
+/* Elektron — HR Generalist, Göteborg (via PS Partner)
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /elektron and by cv.html?job=elektron, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is Elektron's own, read off the CSS on elektron.se:
+     #151515  near black        #0c0c0c  darkest        #383838  soft black
+     #eeeef2  off white         #e2e2e6 / #d6d6da  greys
+     #6a6a6e  grey ink          #a7a7a9  faint grey
+
+   The notable thing about their identity is what is missing from it: there is
+   no brand hue at all. Their stylesheet sets `color: inherit` on links, and
+   the only colours in it besides black, white and grey are a form success
+   green and an error red. Hierarchy is made with black, off white, 2px rules,
+   square corners and inversion — a black block that turns white on hover.
+
+   So this theme does not swap one accent for another. It takes the accent
+   away, and gives the page Elektron's contrast instead: off-white paper, near
+   black type, square everything, a solid black "How I match", and things that
+   invert when you touch them.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: their off white, and the two greys they band it with. */
+  --bg:            #eeeef2;
+  --bg2:           #e6e6ea;
+  --bg3:           #dcdce1;
+  --white:         #ffffff;
+
+  --border:        rgba(21,21,21,0.16);
+  --border-light:  rgba(21,21,21,0.09);
+  --border-strong: rgba(21,21,21,0.32);
+
+  --ink:           #0c0c0c;
+  --ink-mid:       #383838;
+  --ink-light:     #6a6a6e;
+  --ink-dim:       #a7a7a9;
+
+  /* The accent is the near black itself. It carries body-sized text and
+     filled buttons without a second thought, and --amber-light, the hover
+     state, lifts a step towards their soft black rather than going lighter
+     in hue — there is no hue to go lighter in. */
+  --amber:         #151515;
+  --amber-light:   #383838;
+
+  /* Every wash, tint and glow on the page is mixed from these. Mixed from
+     black they come out as grey, which is the point. */
+  --accent-rgb:    21,21,21;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        238,238,242;
+
+  /* The base shadows are warm brown. Neutralise them. */
+  --shadow:        0 2px 12px rgba(12,12,12,0.10), 0 1px 3px rgba(12,12,12,0.06);
+  --shadow-sm:     0 1px 4px rgba(12,12,12,0.07);
+  --shadow-lg:     0 10px 40px rgba(12,12,12,0.14);
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(238,238,242,0.96) 0%,
+    rgba(230,230,234,0.93) 40%,
+    rgba(214,214,218,0.89) 70%,
+    rgba(192,192,198,0.85) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23151515' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Elektron draws in rectangles and 2px rules — square buttons, square
+     tiles, square cards, square instruments. The base page is rounded
+     throughout, so the geometry goes with the colour. */
+  --radius:      0px;
+  --radius-lg:   0px;
+  --radius-pill: 0px;
+
+  /* Their type is Neue Haas Grotesk Display and Text throughout, with no
+     serif anywhere on the site. Neue Haas Grotesk is Helvetica's original
+     drawing, so the closest faithful stack is also the one that needs no
+     webfont. Inter stays in as the fallback, since it is already loaded. */
+  --serif: 'Helvetica Neue', Helvetica, 'Inter', Arial, sans-serif;
+  --sans:  'Helvetica Neue', Helvetica, 'Inter', Arial, sans-serif;
+}
+
+/* Helvetica at display sizes wants tighter tracking than the base serif did,
+   which is also how Elektron sets their own headlines. */
+.hero-name  { letter-spacing: -0.035em; }
+.sec-title,
+.point-title,
+.ask-title  { letter-spacing: -0.018em; }
+
+/* The 2px black rule under the fixed header, the weight they draw borders at. */
+.nav { box-shadow: inset 0 -2px 0 #151515; }
+
+/* Their wordmark sits in a square. The brand mark squares off with it, and
+   loses the soft halo, which needs a hue to work. */
+.brand-dot { border-radius: 0; box-shadow: none; }
+
+/* Square everything that was a circle. */
+.ask-btn    { border-radius: 0; }
+.job::before { border-radius: 0; }
+
+/* The timeline runs from the near black down through their greys. */
+.timeline::before {
+  background: linear-gradient(to bottom, #151515, rgba(21,21,21,0.30) 70%, transparent);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Inversion
+   ─────────────────────────────────────────────────────────────────────────
+   The one interactive move on Elektron's site: a black element goes white
+   and a white element goes black. Their carousel arrows do it literally
+   (black fill, white on hover, and back). Everything here that used to hover
+   towards an accent colour now inverts instead.
+   ───────────────────────────────────────────────────────────────────────── */
+.pill {
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.pill:hover {
+  background: #151515;
+  border-color: #151515;
+  color: #eeeef2;
+}
+.pill--accent {
+  background: #151515;
+  border-color: #151515;
+  color: #eeeef2;
+}
+.pill--accent:hover {
+  background: transparent;
+  color: #151515;
+}
+
+.btn-ghost:hover {
+  background: #151515;
+  border-color: #151515;
+  color: #eeeef2;
+}
+.btn-primary:hover {
+  background: transparent;
+  border-color: #151515;
+  color: #151515;
+  box-shadow: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", in their black
+   ─────────────────────────────────────────────────────────────────────────
+   Elektron's pages are built out of solid black blocks with off-white type
+   on them, and this is the section the whole page exists for — so this is
+   the one that gets inverted. The point cards go opaque white on top, which
+   is the pairing their own content blocks use.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #151515;
+  border-top: 1px solid #151515;
+}
+#match + .band { border-top: 1px solid #151515; }
+
+#match .eyebrow   { color: #a7a7a9; }
+#match .sec-title { color: #eeeef2; }
+#match .sec-lead  { color: rgba(238,238,242,0.68); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(238,238,242,0.14);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.40);
+}
+
+/* A 2px black edge down the left of every point, at the weight they rule
+   their own blocks at. */
+#match .point { border-left: 2px solid #151515; }

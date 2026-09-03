@@ -1,0 +1,403 @@
+{
+  "company": "Elektron",
+  "roleName": "HR Generalist",
+
+  "eyebrow": {
+    "en": "Application · HR Generalist · Elektron",
+    "sv": "Ansökan · HR Generalist · Elektron"
+  },
+  "role": {
+    "en": "Talent Acquisition and operational HR",
+    "sv": "Talent Acquisition och operativ HR"
+  },
+  "lead": {
+    "en": "Seven years in recruitment, HR and Learning & Development, almost all of it in IT, tech and consulting. End-to-end recruitment for technical and specialist roles, with active search as the standard rather than the exception. An ATS I implemented and built the workflows around. Onboarding built from scratch in two companies that had none, and people responsibility for a consultant group of 15+ from the management team. I work AI-natively and build my own tools with it, so the line in your ad about using systems, data and AI to improve HR is already how I work. What I have not done is represent an employer in a union negotiation. That is the last point, at the bottom.",
+    "sv": "Sju år inom rekrytering, HR och Learning & Development, nästan allt i IT, tech och konsult. Fulla rekryteringsprocesser för tekniska roller och specialister, med active search som normalläge snarare än undantag. Ett ATS som jag implementerade och byggde flödena runt. Onboarding byggd från grunden i två bolag som saknade den, och personalansvar för en konsultgrupp på 15+ från ledningsgruppen. Jag arbetar AI-nativt och bygger egna verktyg med det, så raden i er annons om att använda system, data och AI för att förbättra HR är redan så jag jobbar. Vad jag inte har gjort är att företräda en arbetsgivare i en fackförhandling. Det är sista punkten, längst ner."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Hur jag matchar" },
+  "matchTitle": {
+    "en": "Your ad, point by point",
+    "sv": "Er annons, punkt för punkt"
+  },
+  "matchLead": {
+    "en": "Each part of the role, with what I have actually done under it. The last point is the one where the answer is mostly no.",
+    "sv": "Varje del av rollen, med det jag faktiskt gjort under den. Sista punkten är den där svaret mest är nej."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "Recruitment end to end, active search included",
+        "sv": "Rekrytering från början till slut, active search inkluderat"
+      },
+      "quote": {
+        "en": "Managing end-to-end recruitment, including active search and selection. Hands-on experience of Talent Acquisition is a requirement.",
+        "sv": "Att driva rekrytering från början till slut, inklusive active search och urval. Praktisk erfarenhet av Talent Acquisition är ett krav."
+      },
+      "body": {
+        "en": "This is the requirement you underline, and it is what I have done most of for the last six years. The two most recent I spent at a recruitment firm working in science, technology and engineering, running processes from needs analysis to final selection for everything from developers to engineers. Before that I led talent acquisition at an IT consultancy as part of the management team, and ran recruitment and consultant matching at another. Active search has been the standard the whole way, because the specialists I recruit already have a job. I have written and published the ads, sourced, screened, interviewed, run the assessment and the selection, and been the person the candidate hears from at every step. Hard-to-find technical competence in Gothenburg is the exact market I have worked in.",
+        "sv": "Det här är kravet ni stryker under, och det är vad jag gjort mest av de senaste sex åren. De två senaste satt jag på ett rekryteringsbolag inom teknik, naturvetenskap och ingenjörskonst och drev processer från behovsanalys till slutligt urval, för allt från utvecklare till ingenjörer. Innan dess ledde jag talent acquisition på ett IT-konsultbolag som del av ledningsgruppen, och drev rekrytering och konsultmatchning på ett annat. Active search har varit normalläget hela vägen, eftersom specialisterna jag rekryterar redan har jobb. Jag har skrivit och publicerat annonserna, sourcat, screenat, intervjuat, hållit i bedömning och urval, och varit den kandidaten hör från i varje steg. Svårfunnen teknisk kompetens i Göteborg är precis den marknad jag arbetat på."
+      }
+    },
+    {
+      "title": {
+        "en": "The managers, in hiring and in everything after it",
+        "sv": "Cheferna, i rekryteringen och i allt efter den"
+      },
+      "quote": {
+        "en": "Supporting managers in recruitment and employee-related matters. You have experience of advising managers in both recruitment and employee-related matters.",
+        "sv": "Att stötta chefer i rekrytering och medarbetarrelaterade frågor. Du har erfarenhet av att rådge chefer i både rekrytering och medarbetarfrågor."
+      },
+      "body": {
+        "en": "The manager side is the part of the job I lean on most. I set the requirements profile together with the manager, advise on the timeline and on how candidates get assessed, and say something when a profile describes a person who does not exist. On the employee side: at an IT consultancy I sat on the management team with people responsibility for a consultant group of 15+, which meant development conversations, the everyday questions and the harder conversations too. At a second consulting firm I gave HR support and kept ongoing contact with the consultants. That is where I learned that most of the trust is built by being reachable and by answering the same question a third time without making it a problem. You write that the role reports to the CFO and works close to leaders across R&D, Product, Operations, Support, Sales and Marketing. Sitting between the business and the people work, with no HR department behind me, is the position I have worked from before.",
+        "sv": "Chefsdelen är den jag lutar mig mest mot. Jag sätter kravprofilen tillsammans med chefen, ger råd om tidplan och om hur kandidater bedöms, och säger ifrån när profilen beskriver någon som inte finns. På medarbetarsidan: på ett IT-konsultbolag satt jag i ledningsgruppen med personalansvar för en konsultgrupp på 15+, vilket innebar utvecklingssamtal, vardagsfrågorna och de svårare samtalen också. På ett annat konsultbolag gav jag HR-stöd och hade löpande kontakt med konsulterna. Där lärde jag mig att större delen av förtroendet byggs av att vara nåbar och av att svara på samma fråga en tredje gång utan att göra det till ett problem. Ni skriver att rollen rapporterar till CFO och arbetar nära ledare inom R&D, Produkt, Operations, Support, Sälj och Marknad. Att sitta mellan verksamheten och personalarbetet, utan en HR-avdelning bakom mig, är den position jag arbetat från förut."
+      }
+    },
+    {
+      "title": {
+        "en": "Pipelines, and the experience the candidate remembers",
+        "sv": "Pipelines, och upplevelsen kandidaten minns"
+      },
+      "quote": {
+        "en": "Building talent pipelines and strengthening the candidate experience.",
+        "sv": "Att bygga talangpipelines och stärka kandidatupplevelsen."
+      },
+      "body": {
+        "en": "Proactive sourcing and a pipeline kept warm has been part of every recruitment role I have had. The pipeline work goes back further than that: at one of Sweden's largest vocational IT schools I built partnerships with companies and secured internship placements for the students, which is the same work seen from the other side. On candidate experience, I was the candidates' point of contact in my most recent role and answered for people getting a reply, including the ones who did not get the job. That half decides whether they apply again, and for a company hiring specialists in a city this size it decides more than that, because the candidate you turned down badly talks to the next one you want. I have been in Gothenburg the whole time and this is the technical labour market I know.",
+        "sv": "Proaktiv sourcing och en pipeline som hålls varm har funnits i varje rekryteringsroll jag haft. Pipelinearbetet går längre tillbaka än så: på en av Sveriges största yrkeshögskolor inom IT byggde jag partnerskap med företag och säkrade praktikplatser åt studenterna, vilket är samma arbete sett från andra hållet. Om kandidatupplevelsen: i min senaste roll var jag kandidaternas kontaktperson och ansvarade för att folk fick svar. Även de som inte fick jobbet. Den halvan avgör om de söker igen, och för ett bolag som rekryterar specialister i en stad av den här storleken avgör den mer än så, för kandidaten man tackade nej till illa pratar med nästa man vill ha. Jag har varit i Göteborg hela tiden och den tekniska arbetsmarknaden här är den jag känner."
+      }
+    },
+    {
+      "title": {
+        "en": "Operational HR, and how much of it I have",
+        "sv": "Operativ HR, och hur mycket av den jag har"
+      },
+      "quote": {
+        "en": "Providing daily HR support to managers and employees. Managing onboarding, offboarding, HR administration and documentation. At least three years of experience from a broad operational HR role.",
+        "sv": "Att ge dagligt HR-stöd till chefer och medarbetare. Att hantera onboarding, offboarding, HR-administration och dokumentation. Minst tre års erfarenhet från en bred operativ HR-roll."
+      },
+      "body": {
+        "en": "Three of my seven years have had operational HR inside the role rather than beside it. At an IT consultancy I had HR responsibility for a consultant group of 15+ and built a structured onboarding framework from nothing. At a second consulting firm I gave HR support, kept ongoing contact with the consultants and designed the onboarding there too, both times because engagement and retention were the actual problem. Administration and documentation have come with that: employment paperwork, ATS records kept correct through the whole process, the documents an onboarding needs to exist as more than an intention. I will be straight about the shape of it. My seven years are weighted towards recruitment, and I have not been the only HR person for a whole company. A newly established role reporting to the CFO, with senior HR mentorship in the introduction, is a setup I would take seriously rather than one I would claim I have already done.",
+        "sv": "Tre av mina sju år har haft operativ HR inne i rollen snarare än vid sidan av den. På ett IT-konsultbolag hade jag personalansvar för en konsultgrupp på 15+ och byggde ett strukturerat onboardingramverk från noll. På ett annat konsultbolag gav jag HR-stöd, hade löpande kontakt med konsulterna och utformade onboardingen där också, båda gångerna för att engagemang och retention var det faktiska problemet. Administration och dokumentation har följt med: anställningshandlingar, ATS-underlag som hålls korrekta genom hela processen, dokumenten en onboarding behöver för att finnas som mer än en ambition. Jag säger som det är om formen på det. Mina sju år väger mot rekrytering, och jag har inte varit enda HR-personen för ett helt bolag. En nyinrättad roll som rapporterar till CFO, med senior HR-mentorskap i introduktionen, är ett upplägg jag skulle ta på allvar snarare än ett jag påstår att jag redan gjort."
+      }
+    },
+    {
+      "title": {
+        "en": "Processes that get used, and the systems they live in",
+        "sv": "Processer som används, och systemen de lever i"
+      },
+      "quote": {
+        "en": "Developing practical HR processes and digital ways of working.",
+        "sv": "Att utveckla praktiska HR-processer och digitala arbetssätt."
+      },
+      "body": {
+        "en": "At an IT consultancy I implemented the ATS and built the workflows around it: how a role got opened, how candidates moved between the steps, who did what. Before that the process lived in the heads of the people running it. I have worked daily in Teamtailor and Workbuster, used Winningtemp for engagement, and helped shape and run an internal LMS at both a vocational IT school and an IT consultancy. At the recruitment firm part of my time went into improving the flows instead of only running them. The word I would hold on to in your ad is practical. A process nobody uses is worse than no process, because it also spends the trust you needed to introduce the next one, so I would rather ship a thin version that survives contact with a busy manager than a complete one that does not.",
+        "sv": "På ett IT-konsultbolag implementerade jag ATS:et och byggde arbetsflödena runt det: hur en roll öppnades, hur kandidater rörde sig mellan stegen, vem som gjorde vad. Innan dess låg processen i huvudet på oss som körde den. Jag har jobbat dagligen i Teamtailor och Workbuster, använt Winningtemp för engagemang, och varit med och format och förvaltat ett internt LMS på både en yrkeshögskola inom IT och ett IT-konsultbolag. På rekryteringsbolaget gick en del av tiden till att förbättra flödena i stället för att bara köra dem. Ordet jag skulle hålla fast i er annons är praktiska. En process som ingen använder är sämre än ingen process, för den gör också av med förtroendet man behövde för att införa nästa. Så jag levererar hellre en tunn version som klarar kontakt med en upptagen chef än en komplett som inte gör det."
+      }
+    },
+    {
+      "title": {
+        "en": "Systems, data and AI is already how I work",
+        "sv": "System, data och AI är redan så jag arbetar"
+      },
+      "quote": {
+        "en": "Using systems, data and AI to improve HR efficiency and quality. You have strong digital skills and are interested in how systems, data and AI can improve HR.",
+        "sv": "Att använda system, data och AI för att förbättra HR:s effektivitet och kvalitet. Du har stark digital kompetens och är intresserad av hur system, data och AI kan förbättra HR."
+      },
+      "body": {
+        "en": "This is not something I would have to be talked into. I work AI-natively every day and build my own tools with it. Recruitment OS is one of them: a requirements profile goes in and a structured interview package comes out, with competency analysis, questions and follow-ups, scorecards and support for reducing bias, so two managers hiring for the same role assess the same things. I have also built a project tool with gamification, a finance tool, and this page, including the assistant further up that answers questions about my CV. Each of them exists because I hit a problem I wanted solved, not because I wanted to have built something. On the systems side, a year as a course developer at a Nordic HR tech company taught me how an HR system is put together from the inside, and how much of its value sits in whether anyone was ever taught to use it.",
+        "sv": "Det här är inget jag skulle behöva övertalas till. Jag arbetar AI-nativt varje dag och bygger egna verktyg med det. Recruitment OS är ett av dem: en kravprofil in, ett strukturerat intervjupaket ut, med kompetensanalys, frågor och följdfrågor, scorecards och stöd för att minska bias, så att två chefer som rekryterar till samma roll bedömer samma saker. Jag har också byggt ett projektverktyg med gamification, ett ekonomiverktyg, och den här sidan, inklusive assistenten längre upp som svarar på frågor om mitt CV. Var och en finns för att jag stötte på ett problem jag ville lösa, inte för att jag ville ha byggt något. Om systemsidan: ett år som kursutvecklare på ett nordiskt HR-techbolag lärde mig hur ett HR-system är byggt inifrån, och hur stor del av dess värde som ligger i om någon någonsin fick lära sig använda det."
+      }
+    },
+    {
+      "title": {
+        "en": "A role that does not exist yet, built without breaking things",
+        "sv": "En roll som inte finns än, byggd utan att gå sönder"
+      },
+      "quote": {
+        "en": "You will have the opportunity to shape a newly established HR role and influence how the function develops. You listen, learn and build trust before introducing new processes.",
+        "sv": "Du får möjlighet att forma en nyinrättad HR-roll och påverka hur funktionen utvecklas. Du lyssnar, lär och bygger förtroende innan du inför nya processer."
+      },
+      "body": {
+        "en": "Building from zero is the pattern in my CV: the ATS workflows, onboarding in two companies that had none, a career development programme aimed at getting junior talent into the IT industry, an internal LMS. What doing it repeatedly taught me is that the building is the easy half. A specialist-driven environment with strong opinions and close attention to detail does not need a new process introduced to it. It needs to be asked what is actually in the way, and then to see that the answer changed something. I am also a certified education manager and spent a year building training professionally, so when a new way of working has to be taught rather than announced, that part I can do myself instead of sending out a document and hoping.",
+        "sv": "Att bygga från noll är mönstret i mitt CV: ATS-flödena, onboarding i två bolag som saknade den, ett karriärutvecklingsprogram för att få in juniora talanger i IT-branschen, ett internt LMS. Vad det lärde mig att göra om och om igen är att byggandet är den lätta halvan. En specialistdriven miljö med starka åsikter och noggrant öga för detaljer behöver inte en ny process införd på sig. Den behöver få frågan om vad som faktiskt står i vägen, och sedan se att svaret ändrade något. Jag är också certifierad utbildningsledare och byggde utbildning professionellt i ett år, så när ett nytt arbetssätt behöver läras ut i stället för att annonseras kan jag den delen själv, i stället för att skicka ut ett dokument och hoppas."
+      }
+    },
+    {
+      "title": {
+        "en": "Unions, collective agreements and EoR: where the answer is no",
+        "sv": "Fack, kollektivavtal och EoR: där svaret är nej"
+      },
+      "quote": {
+        "en": "Representing the employer in dialogue and negotiations with trade unions. Knowledge of collective agreements within Teknikföretagen, including Unionen and/or IF Metall, as well as experience of work environment management, international HR or Employer of Record arrangements, is considered an advantage.",
+        "sv": "Att företräda arbetsgivaren i dialog och förhandling med fackliga organisationer. Kunskap om kollektivavtal inom Teknikföretagen, inklusive Unionen och/eller IF Metall, samt erfarenhet av arbetsmiljöarbete, internationell HR eller Employer of Record, är meriterande."
+      },
+      "body": {
+        "en": "Here is where I do not match. I have not represented an employer in a negotiation with a trade union, and I have not worked under Teknikföretagen's agreements or with Unionen or IF Metall. Swedish labour law I do know. It sits in my degree and I worked with it daily at a Nordic HR tech company, where I built training within HR, payroll, tax and VAT together with subject-matter experts, so the ground under it is there and the formal reading does not frighten me. But a first negotiation would be a first, and I would rather you know that before an interview than during one. The same goes for international HR and Employer of Record: my international work has been Nordic, I use English every day and have worked in English-speaking tech environments the whole way, but I have not set up or run an EoR arrangement. Work environment I have supported through employee development and engagement work, not owned as systematic arbetsmiljöarbete. You list these as advantages rather than requirements, which is why I am applying at all, and the senior HR mentorship you describe in the introduction is exactly where I would spend it.",
+        "sv": "Här matchar jag inte. Jag har inte företrätt en arbetsgivare i förhandling med en facklig organisation, och jag har inte arbetat under Teknikföretagens avtal eller med Unionen eller IF Metall. Svensk arbetsrätt kan jag. Den ligger i min examen och jag arbetade med den dagligen på ett nordiskt HR-techbolag, där jag byggde utbildningar inom HR, lön, skatt och moms tillsammans med ämnesexperter, så grunden finns och det formella läsandet skräms jag inte av. Men en första förhandling skulle vara en första, och det vill jag att ni vet före en intervju snarare än under en. Samma gäller internationell HR och Employer of Record: mitt internationella arbete har varit nordiskt, jag använder engelska varje dag och har arbetat i engelskspråkiga techmiljöer hela vägen, men jag har inte satt upp eller drivit ett EoR-upplägg. Arbetsmiljö har jag stöttat genom medarbetarutveckling och engagemangsarbete, inte ägt som systematiskt arbetsmiljöarbete. Ni listar det här som meriterande snarare än krav, vilket är skälet till att jag söker alls, och det seniora HR-mentorskapet ni beskriver i introduktionen är precis där jag skulle använda det."
+      }
+    }
+  ],
+
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "7+ years in recruitment, HR and L&D",
+      "sv": "7+ år inom rekrytering, HR och L&D"
+    },
+    "#top .stat-num": [
+      "7+",
+      "15+",
+      "0→1"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years across recruitment, HR and Learning & Development, in IT, tech and consulting",
+        "sv": "År inom rekrytering, HR och Learning & Development, i IT, tech och konsult"
+      },
+      {
+        "en": "Consultants under my people responsibility, on the management team",
+        "sv": "Konsulter med personalansvar, som del av ledningsgruppen"
+      },
+      {
+        "en": "Built from nothing: ATS workflows, onboarding in two companies, an internal LMS, a career programme",
+        "sv": "Byggt från noll: ATS-flöden, onboarding i två bolag, ett internt LMS, ett karriärprogram"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What is his recruitment experience?",
+        "sv": "Vilken rekryteringserfarenhet har han?"
+      },
+      {
+        "en": "What has he built from scratch?",
+        "sv": "Vad har han byggt från grunden?"
+      },
+      {
+        "en": "How does he use AI in HR?",
+        "sv": "Hur använder han AI i HR?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my HR and recruitment background",
+      "sv": "Fråga om min HR- och rekryteringsbakgrund"
+    },
+    ".ask-sub": {
+      "en": "The assistant has my full CV. Ask it about the things I haven't done too.",
+      "sv": "Assistenten har hela mitt CV. Fråga den om det jag inte gjort också."
+    },
+    "#about .sec-title": {
+      "en": "Recruitment, operational HR and learning in tech companies",
+      "sv": "Rekrytering, operativ HR och lärande i techbolag"
+    },
+    "#about .about-quote": {
+      "en": "A broad background from technical environments: recruitment from requirements profile to hire, operational HR support to managers and employees, and the habit of building the process instead of waiting for one.",
+      "sv": "En bred bakgrund från tekniska miljöer: rekrytering från kravprofil till anställning, operativt HR-stöd till chefer och medarbetare, och vanan att bygga processen i stället för att vänta på en."
+    },
+    "#about .about-body": [
+      {
+        "en": "What drives me is working close to the people and to the business at the same time. Through my roles I have built and rebuilt processes for recruitment, onboarding and competence development, and the employee experience has been the point of it every time.",
+        "sv": "Det som driver mig är att jobba nära människorna och verksamheten samtidigt. Genom mina roller har jag byggt och byggt om processer för rekrytering, onboarding och kompetensutveckling, och medarbetarupplevelsen har varit poängen med det varje gång."
+      },
+      {
+        "en": "I am at my best in the work with managers. That is where I bring structure, requirements profiles that hold up, and support both in the assessment and in the employee questions that come after it. Teaching sits close to it. I have worked professionally with building learning and I am a certified education manager, so a new way of working is something I can teach and not only announce.",
+        "sv": "Jag är som bäst i arbetet med chefer. Där bidrar jag med struktur, kravprofiler som håller och stöd både i bedömningen och i medarbetarfrågorna som kommer efter den. Att utbilda ligger nära. Jag har jobbat professionellt med att bygga lärande och är certifierad utbildningsledare, så ett nytt arbetssätt är något jag kan lära ut och inte bara annonsera."
+      },
+      {
+        "en": "Most of my career sits in IT, tech and consulting companies: specialist-driven environments where the people you need already have a job. I understand the language and the needs of the business, and it shows in the requirements profiles, in the processes, and in how quickly both candidates and managers start trusting me.",
+        "sv": "Största delen av min karriär ligger i IT-, tech- och konsultbolag: specialistdrivna miljöer där de människor man behöver redan har jobb. Jag förstår språket och behoven i verksamheten, och det syns i kravprofilerna, i processerna och i hur snabbt både kandidater och chefer börjar lita på mig."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Matching the right person with the right role, and giving them what they need to succeed",
+        "sv": "Att matcha rätt person med rätt roll, och ge dem det de behöver för att lyckas"
+      },
+      {
+        "en": "Being the person managers and employees actually come to, and answering quickly",
+        "sv": "Att vara den chefer och medarbetare faktiskt går till, och att svara snabbt"
+      },
+      {
+        "en": "Building practical processes that get used, and rebuilding the ones that don't",
+        "sv": "Att bygga praktiska processer som används, och bygga om dem som inte gör det"
+      },
+      {
+        "en": "Using systems, data and AI so the work takes less time and holds better",
+        "sv": "Att använda system, data och AI så att arbetet tar mindre tid och håller bättre"
+      },
+      {
+        "en": "Keeping the experience good from the first message to the first months on the job",
+        "sv": "Att hålla upplevelsen bra från första meddelandet till de första månaderna på jobbet"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Processes, programmes and tools",
+      "sv": "Processer, program och verktyg"
+    },
+    "#built .built-sub": [
+      {
+        "en": "Built at work, with colleagues",
+        "sv": "Byggt på jobbet, med kollegor"
+      },
+      {
+        "en": "Built myself, with AI",
+        "sv": "Byggt själv, med AI"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of it I built with colleagues at work: the ATS workflows, onboarding in two companies that had none, an internal LMS, a career programme for junior talent. Some I built on my own with AI, including a tool that turns a requirements profile into a structured interview package.",
+      "sv": "En del byggde jag med kollegor på jobbet: ATS-flödena, onboarding i två bolag som saknade den, ett internt LMS, ett karriärprogram för juniora talanger. En del har jag byggt själv med AI, bland annat ett verktyg som gör en kravprofil till ett strukturerat intervjupaket."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and around the tech industry. Recruitment is in four of them, HR responsibility in two, and training in three.",
+      "sv": "Fem roller i och nära techbranschen. Rekrytering finns i fyra av dem, personalansvar i två och utbildning i tre."
+    },
+    "#education .sec-title": {
+      "en": "The academic background you ask for",
+      "sv": "Den akademiska bakgrunden ni efterfrågar"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in how people behave in digital and technical organisations. It is the related field your ad asks for, and the reason I read a candidate, a requirements profile and a team the way I do.",
+        "sv": "En kandidatexamen i hur människor fungerar i digitala och tekniska organisationer. Det är det närliggande området er annons efterfrågar, och skälet till att jag läser en kandidat, en kravprofil och ett team som jag gör."
+      },
+      {
+        "en": "Certification in education management. It is what sits behind being able to design the training for a new way of working, and not only stand up and deliver it.",
+        "sv": "Certifiering inom utbildningsledning. Det är den som ligger bakom att jag kan designa utbildningen för ett nytt arbetssätt och inte bara hålla i den."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "HR, People Management or a related field",
+      "sv": "HR, People Management eller närliggande område"
+    },
+    "#education .callout-title": {
+      "en": "Behavioural science, and a licence to teach",
+      "sv": "Beteendevetenskap, och rätten att utbilda"
+    },
+    "#education .callout-text": {
+      "en": "You ask for a relevant academic education within HR, People Management, Business Administration or a related field. Mine is behavioural science with a focus on IT environments: how people work in organisations, how you assess that, and how you get HR and the business to pull in the same direction. Swedish labour law is part of it. The education management certification on top is why I can build the training for a new process myself instead of buying it in.",
+      "sv": "Ni efterfrågar en relevant akademisk utbildning inom HR, People Management, företagsekonomi eller närliggande område. Min är beteendevetenskap med inriktning mot IT-miljöer: hur människor fungerar i organisationer, hur man bedömer det och hur man får HR och verksamheten att dra åt samma håll. Svensk arbetsrätt ligger i den. Certifieringen som utbildningsledare ovanpå är skälet till att jag kan bygga utbildningen för en ny process själv i stället för att köpa in den."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "HR",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "People & Culture",
+        "sv": "People & Culture"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Employer Branding",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Learning & Development",
+        "sv": "Learning & Development"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Learning Management Systems (LMS)",
+        "sv": "Learning Management Systems (LMS)"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "You are looking for someone curious, structured and thorough, but pragmatic enough to move things forward, and someone who listens before introducing new processes. None of that can be proven in a CV. So here is the rest of me instead, including the fact that there is always something playing.",
+      "sv": "Ni söker någon som är nyfiken, strukturerad och noggrann, men pragmatisk nog att få saker att röra sig, och som lyssnar innan nya processer införs. Inget av det går att bevisa i ett CV. Så här är resten av mig i stället, inklusive det att det alltid är något som spelar."
+    },
+    "#contact .sec-title": {
+      "en": "About the HR Generalist role",
+      "sv": "Om rollen som HR Generalist"
+    },
+    "#contact .sec-lead": {
+      "en": "The formal application goes through PS Partner before the 15th of September, exactly as the ad says. If you want to ask about the recruitment I have run, about the union and EoR side I have not done, or about anything else on this page, reach out here. I answer quickly.",
+      "sv": "Den formella ansökan går via PS Partner före den 15 september, precis som annonsen säger. Vill ni fråga om rekryteringen jag drivit, om fack- och EoR-sidan jag inte gjort, eller om något annat på sidan, hör av er här. Jag svarar snabbt."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Gothenburg, Sweden",
+        "sv": "Göteborg, Sverige"
+      },
+      {
+        "en": "Swedish & English",
+        "sv": "Svenska & engelska"
+      },
+      {
+        "en": "BSc. Behavioural Science",
+        "sv": "Kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: HR Generalist, Elektron",
+        "sv": "Söker: HR Generalist, Elektron"
+      }
+    ]
+  }
+}
