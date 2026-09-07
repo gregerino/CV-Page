@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+/* Göteborgs Stad — Verksamhetsutvecklare, Arbetsmarknadsavdelningen
+   Förvaltningen för arbetsmarknad och vuxenutbildning (ref. 2026/3688)
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /gbgstad and by cv.html?job=gbgstad, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is Göteborgs Stad's own design system, read off goteborg.se:
+     #005799  action blue        #004172  action blue, pressed
+     #0077bc  brand blue         #006092  brand blue, dark
+     #303f4a  dark slate         #3f5564  slate ink
+     #ffcd37  coat-of-arms gold  #dbeff8  blue light   #f5f7f8  slate lightest
+     #262626  near black         #595959 / #959595  greys
+
+   Their identity is a calm one: near-white paper, near-black text set in
+   Open Sans, one working blue that carries every link and every filled
+   button, and headings in the heavy 800 weight they set their own in. The
+   gold — the lion on the city arms — is the single grace note, kept off
+   body text where it cannot hold contrast. Corners are all but square.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: the slate-tinted near-whites their surfaces are banded with. */
+  --bg:            #f5f7f8;
+  --bg2:           #eef2f4;
+  --bg3:           #e3e8e9;
+  --white:         #ffffff;
+
+  --border:        rgba(0,87,153,0.18);
+  --border-light:  rgba(0,87,153,0.10);
+  --border-strong: rgba(63,85,100,0.30);
+
+  /* Headings in their near black, body in the slate ink they set text in. */
+  --ink:           #262626;
+  --ink-mid:       #3f5564;
+  --ink-light:     #595959;
+  --ink-dim:       #959595;
+
+  /* One blue does all the work. #005799 is dark enough to sit behind
+     body-sized text and on filled buttons, so it carries the accent by
+     itself. --amber-light is the hover state, and like their own buttons it
+     goes deeper, not lighter. */
+  --amber:         #005799;
+  --amber-light:   #004172;
+
+  /* Every wash, tint and glow on the page is mixed from these. */
+  --accent-rgb:    0,87,153;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        245,247,248;
+
+  /* The base shadows are warm brown. Neutralise them to their flat black. */
+  --shadow:        0 2px 6px rgba(38,38,38,0.10), 0 1px 3px rgba(38,38,38,0.06);
+  --shadow-sm:     0 1px 3px rgba(38,38,38,0.08);
+  --shadow-lg:     0 8px 34px rgba(38,38,38,0.12);
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(245,247,248,0.96) 0%,
+    rgba(230,239,245,0.93) 40%,
+    rgba(206,226,240,0.88) 70%,
+    rgba(180,208,232,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23005799' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Göteborgs Stad draws almost everything with a 3px radius or none at all.
+     The base page is rounded throughout, so the geometry is tightened here
+     as well as recoloured. */
+  --radius:      2px;
+  --radius-lg:   2px;
+  --radius-pill: 3px;
+
+  /* Open Sans, 400–800, is the whole of their type. It replaces both the
+     base serif and the base sans so nothing on the page falls back to Lora. */
+  --serif: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Open Sans', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Their headings are set in the heavy 800 weight; Open Sans at display sizes
+   then wants a touch of negative tracking, the way goteborg.se sets its own. */
+.hero-name,
+.cv-name    { font-weight: 800; letter-spacing: -0.02em; }
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title { font-weight: 800; letter-spacing: -0.01em; }
+
+/* Their blue rule under the fixed header, the weight they draw it at. */
+.nav { box-shadow: inset 0 -2px 0 #005799; }
+
+/* The one place the gold belongs: the brand mark, echoing the lion on the
+   city arms. It loses the amber halo, which needs a warmer ground to read. */
+.brand-dot {
+  background: #ffcd37;
+  box-shadow: 0 0 0 1px rgba(0,87,153,0.35);
+}
+
+/* The timeline runs from the working blue down into the slate their pages
+   are built on. */
+.timeline::before {
+  background: linear-gradient(to bottom, #005799, rgba(63,85,100,0.30) 65%, transparent);
+}
+
+.job::before { border-color: #005799; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their slate
+   ─────────────────────────────────────────────────────────────────────────
+   goteborg.se breaks its long pages with a dark slate band, gold sitting on
+   it where a label needs to carry. This is the section the whole page exists
+   for, so it is the one that gets the treatment. The point cards go opaque
+   white on top, the pairing their own content blocks use on the slate.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #303f4a;
+  border-top: 1px solid #303f4a;
+}
+#match + .band { border-top: 1px solid #303f4a; }
+
+#match .eyebrow   { color: #ffcd37; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.72); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.32);
+}
+
+/* A blue edge down the left of every point, the way their content blocks
+   carry one. */
+#match .point { border-left: 3px solid #005799; }
+#match .point-num { color: #005799; }
