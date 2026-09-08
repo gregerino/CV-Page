@@ -1,0 +1,375 @@
+{
+  "company": "Get Skills",
+  "roleName": "HR-konsult med fokus på utbildning",
+
+  "eyebrow": {
+    "en": "Application · HR consultant with a focus on training · Get Skills",
+    "sv": "Ansökan · HR-konsult med fokus på utbildning · Get Skills"
+  },
+  "role": {
+    "en": "Recruitment, training delivery and vocational-school partnerships",
+    "sv": "Rekrytering, utbildningsleverans och YH-samarbeten"
+  },
+  "lead": {
+    "en": "Seven years in recruitment, HR and Learning & Development, mostly in IT, tech and consulting. One of those roles was at one of Sweden's largest vocational IT schools, where I ran the education programmes, recruited teachers and built the structure around them. I'm a certified education manager (utbildningsledare) from the Swedish Agency for Higher Vocational Education, and I've developed HR-subject courses for working professionals at an HR tech company. For the last two years I've worked as a recruitment consultant, advising managers and running full recruitment processes.",
+    "sv": "Sju år inom rekrytering, HR och Learning & Development, mest i IT, tech och konsult. En av rollerna var på en av Sveriges största yrkeshögskolor inom IT, där jag drev utbildningsprogrammen, rekryterade lärare och byggde strukturen runt dem. Jag är certifierad utbildningsledare från Myndigheten för yrkeshögskolan, och jag har utvecklat kurser inom HR-området för yrkesverksamma på ett HR-techbolag. De senaste två åren har jag arbetat som rekryteringskonsult, gett råd till chefer och drivit hela rekryteringsprocesser."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Så matchar jag" },
+  "matchTitle": {
+    "en": "The ad, point by point",
+    "sv": "Annonsen, punkt för punkt"
+  },
+  "matchLead": {
+    "en": "Every part of it, with what I've actually done underneath.",
+    "sv": "Varje del av den, med det jag faktiskt gjort under."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "The vocational-school work, from course content to delivery",
+        "sv": "YH-arbetet, från kursinnehåll till genomförande"
+      },
+      "quote": {
+        "en": "Plan, develop and deliver training, with particular focus on our vocational-school partnerships. Having previously worked within higher vocational education or other adult education is a plus.",
+        "sv": "Planera, utveckla och genomföra utbildningar, med särskilt fokus på våra YH-samarbeten. Har du tidigare arbetat inom yrkeshögskola eller annan vuxenutbildning ser vi det som ett plus."
+      },
+      "body": {
+        "en": "At one of Sweden's largest vocational IT schools I led and developed education programmes in close collaboration with the labour market. I helped recruit teachers, made sure the competence was in place, and developed the LMS structure the programmes ran on. I'm also a certified education manager (utbildningsledare) from the Swedish Agency for Higher Vocational Education, a qualification about vocational higher education, pedagogical planning and course design. At an HR tech company I later developed courses in HR, payroll and adjacent areas for working professionals, together with subject experts, and kept the content current. So I've done both sides of this, running vocational education and building HR-subject courses, if not yet in the same role.",
+        "sv": "På en av Sveriges största yrkeshögskolor inom IT ledde och utvecklade jag utbildningsprogram i nära samarbete med arbetsmarknaden. Jag var med och rekryterade lärare, säkrade att kompetensen fanns på plats och utvecklade LMS-strukturen som programmen kördes i. Jag är också certifierad utbildningsledare från Myndigheten för yrkeshögskolan, en utbildning som handlar om just yrkeshögskola, pedagogisk planering och kursdesign. På ett HR-techbolag utvecklade jag senare kurser inom HR, lön och angränsande områden för yrkesverksamma, tillsammans med ämnesexperter, och höll innehållet aktuellt. Att driva YH-verksamhet och att bygga kurser inom HR-området har jag alltså gjort var för sig, om än inte i samma roll än."
+      }
+    },
+    {
+      "title": {
+        "en": "Workshops, tutoring and learning activities",
+        "sv": "Workshops, handledning och lärandeaktiviteter"
+      },
+      "quote": {
+        "en": "Lead workshops, tutoring and other learning activities. A strong ability to communicate, present and create engagement across different audiences.",
+        "sv": "Leda workshops, handledning och andra lärandeaktiviteter. God förmåga att kommunicera, presentera och skapa engagemang hos olika målgrupper."
+      },
+      "body": {
+        "en": "At the HR tech company I planned and ran conferences and training sessions. At an IT consultancy I held internal workshops and learning sessions, including on gamification method. At the vocational school I coached and guided students into the industry. Presenting to different groups and getting the content to land, whether the room is students, working professionals, managers or candidates, has been part of every role I've had.",
+        "sv": "På HR-techbolaget planerade och genomförde jag konferenser och utbildningstillfällen. På ett IT-konsultbolag höll jag interna workshops och lärandetillfällen, bland annat i gamification-metodik. På yrkeshögskolan coachade och vägledde jag studenter in i branschen. Att presentera för olika grupper och få innehållet att landa, oavsett om rummet är fyllt av studenter, yrkesverksamma, chefer eller kandidater, har funnits med i alla mina roller."
+      }
+    },
+    {
+      "title": {
+        "en": "Consulting assignments in HR and recruitment",
+        "sv": "Konsultuppdrag inom HR och rekrytering"
+      },
+      "quote": {
+        "en": "Work in consulting assignments within HR, recruitment or business development. Experience of qualified HR work. We also value experience from consultative, client-facing roles.",
+        "sv": "Arbeta i konsultuppdrag inom HR, rekrytering eller verksamhetsutveckling. Erfarenhet av kvalificerat HR-arbete. Vi värdesätter även erfarenhet från konsultativa och kundnära roller."
+      },
+      "body": {
+        "en": "For the last two years I've worked as a recruitment consultant at a firm in science, technology and engineering. I ran full processes from needs analysis to final selection, advised hiring managers on competence and fit, and was the candidates' point of contact throughout. Before that I ran recruitment and consultant matching alongside ongoing HR support at an IT consultancy, and led talent acquisition on the management team at another, with people responsibility for a consultant group of 15 or more. Seven years in total, most of it consultative and client-facing.",
+        "sv": "De senaste två åren har jag arbetat som rekryteringskonsult på ett bolag inom teknik, naturvetenskap och ingenjörskonst. Jag drev fulla processer från behovsanalys till slutligt urval, var rådgivare till rekryterande chefer om kompetens och matchning, och kandidaternas kontaktperson genom hela processen. Dessförinnan drev jag rekrytering och konsultmatchning tillsammans med löpande HR-stöd på ett IT-konsultbolag, och ledde talent acquisition i ledningsgruppen på ett annat, med personalansvar för en konsultgrupp på 15 personer och uppåt. Sammanlagt sju år, till största delen konsultativt och kundnära."
+      }
+    },
+    {
+      "title": {
+        "en": "Change work, and developing ways of working and processes",
+        "sv": "Förändringsarbete, och att utveckla arbetssätt och processer"
+      },
+      "quote": {
+        "en": "Contribute to change work and support clients in developing their organisation, ways of working and processes.",
+        "sv": "Bidra i förändringsarbete och stötta kunder i att utveckla organisation, arbetssätt och processer."
+      },
+      "body": {
+        "en": "I've built and rebuilt processes several times. I built structured onboarding from scratch in two companies that had none, implemented and developed ATS workflows, improved recruitment flows and helped shape an internal LMS. What I've learned is that a process is only worth something if it gets used day to day, and that anchoring it takes more time than drawing it. When a new way of working is introduced, that is the part I put the weight on.",
+        "sv": "Jag har byggt och gjort om processer flera gånger. Jag byggde strukturerad onboarding från grunden i två bolag som inte hade någon, implementerade och utvecklade ATS-flöden, förbättrade rekryteringsflöden och var med och formade ett internt LMS. Det jag lärt mig är att en process bara är värd något om den används i vardagen, och att det tar mer tid att förankra den än att rita den. När ett nytt arbetssätt ska införas är det den delen jag lägger tyngdpunkten på."
+      }
+    },
+    {
+      "title": {
+        "en": "Relationships with clients, education providers and partners",
+        "sv": "Relationer med kunder, utbildningsanordnare och samarbetspartners"
+      },
+      "quote": {
+        "en": "Build and develop relationships with clients, education providers and other partners. You are used to building relationships and enjoy commercial contexts.",
+        "sv": "Bygga och utveckla relationer med kunder, utbildningsanordnare och andra samarbetspartners. Du är van att bygga relationer och trivs i kommersiella sammanhang."
+      },
+      "body": {
+        "en": "At the vocational school I built and maintained partnerships with companies and other external parties, and secured internship placements for students. That is the education-provider side of exactly this kind of relationship. As a recruitment consultant I've held client relationships and been the person hiring managers and candidates come back to. Gothenburg is a small market, and most of the trust is built by being reachable and doing what you said you would do.",
+        "sv": "På yrkeshögskolan byggde och underhöll jag partnerskap med företag och andra externa parter, och säkrade praktikplatser åt studenterna. Det är utbildningsanordnarens sida av precis den här typen av relation. Som rekryteringskonsult har jag hållit i kundrelationer och varit den som rekryterande chefer och kandidater återkommer till. Göteborg är en liten marknad, och det mesta av förtroendet byggs av att vara nåbar och att göra det man sagt att man ska göra."
+      }
+    },
+    {
+      "title": {
+        "en": "Networks, new opportunities and long-term client relationships",
+        "sv": "Nätverk, nya möjligheter och långsiktiga kundrelationer"
+      },
+      "quote": {
+        "en": "Take part in networks, events and other activities where you represent Get Skills. Contribute to identifying new opportunities, developing offerings and creating long-term client relationships.",
+        "sv": "Delta i nätverk, event och andra aktiviteter där du representerar Get Skills. Bidra till att identifiera nya möjligheter, utveckla erbjudanden och skapa långsiktiga kundrelationer."
+      },
+      "body": {
+        "en": "I've worked with employer branding and talent-acquisition strategy at an IT consultancy, with client-facing delivery in recruitment, and with partnerships at the vocational school. Representing an organisation and keeping relationships alive over time is something I've done in all of those roles. What I bring is delivery that makes clients want to come back, and course and recruitment work that tends to bring the next assignment with it.",
+        "sv": "Jag har arbetat med employer branding och talent acquisition-strategi på ett IT-konsultbolag, med kundnära leverans i rekrytering, och med partnerskap på yrkeshögskolan. Att representera en verksamhet utåt och hålla relationer levande över tid är något jag gjort i alla de rollerna. Det jag tar med mig är en leverans som gör att kunder vill komma tillbaka, och ett kurs- och rekryteringsarbete som brukar dra nästa uppdrag med sig."
+      }
+    }
+  ],
+
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Så matchar jag"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Så matchar jag"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "7+ years across recruitment, HR, L&D and vocational education",
+      "sv": "7+ år inom rekrytering, HR, L&D och yrkeshögskola"
+    },
+    "#top .stat-num": [
+      "7+",
+      "YH",
+      "0→1"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years across recruitment, HR and Learning & Development, in IT, tech and consulting",
+        "sv": "År inom rekrytering, HR och Learning & Development, i IT, tech och konsult"
+      },
+      {
+        "en": "Led education programmes at one of Sweden's largest vocational IT schools; certified education manager (utbildningsledare)",
+        "sv": "Drev utbildningsprogram på en av Sveriges största yrkeshögskolor inom IT; certifierad utbildningsledare"
+      },
+      {
+        "en": "Built from nothing: onboarding in two companies, ATS workflows, an internal LMS, a career programme into the IT industry",
+        "sv": "Byggt från noll: onboarding i två bolag, ATS-flöden, ett internt LMS, ett karriärprogram in i IT-branschen"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What's his experience of yrkeshögskola?",
+        "sv": "Vad har han för erfarenhet av yrkeshögskola?"
+      },
+      {
+        "en": "Has he developed and delivered training?",
+        "sv": "Har han utvecklat och hållit utbildning?"
+      },
+      {
+        "en": "What has he built himself?",
+        "sv": "Vad har han byggt själv?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my HR and training background",
+      "sv": "Fråga om min bakgrund inom HR och utbildning"
+    },
+    ".ask-sub": {
+      "en": "It has my full CV and answers questions directly.",
+      "sv": "Den har hela mitt CV och svarar på frågor direkt."
+    },
+    "#about .sec-title": {
+      "en": "Recruitment, HR and learning in technical environments and vocational education",
+      "sv": "Rekrytering, HR och lärande i tekniska miljöer och på yrkeshögskola"
+    },
+    "#about .about-quote": {
+      "en": "A background where recruitment and HR have gone hand in hand with training: consulting assignments and recruitment on one side, course development and vocational-school programmes on the other.",
+      "sv": "En bakgrund där rekrytering och HR gått hand i hand med utbildning: konsultuppdrag och rekrytering i den ena delen, kursutveckling och YH-program i den andra."
+    },
+    "#about .about-body": [
+      {
+        "en": "What drives me is working close to both the people and the business at the same time. Through my roles I've built and rebuilt processes for recruitment, onboarding and competence development, and a thread of training and learning has followed the whole way.",
+        "sv": "Det som driver mig är att arbeta nära både människorna och verksamheten samtidigt. Genom mina roller har jag byggt och gjort om processer för rekrytering, onboarding och kompetensutveckling, och en tråd av utbildning och lärande har följt med hela vägen."
+      },
+      {
+        "en": "I'm at my best where structure meets a group of people: requirements profiles and processes that hold up on one side, workshops, coaching and course material that land with their audience on the other. As a certified education manager I can build the training for a new way of working myself, not just deliver it.",
+        "sv": "Jag är som bäst där struktur möter en grupp människor: kravprofiler och processer som håller på ena sidan, workshops, coachning och kursmaterial som landar hos sin målgrupp på den andra. Som certifierad utbildningsledare kan jag bygga utbildningen för ett nytt arbetssätt själv, inte bara hålla i den."
+      },
+      {
+        "en": "Most of my career has been in IT, tech and consulting, and at a vocational IT school. This role sits close to what I've already done, with the weight on recruitment and training delivery.",
+        "sv": "Största delen av min karriär ligger i IT, tech och konsult, och på en yrkeshögskola inom IT. Rollen ligger nära det jag redan gjort, med tyngdpunkt på rekrytering och utbildningsleverans."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Building training where people use what they learned",
+        "sv": "Att bygga utbildning där folk använder det de lärt sig"
+      },
+      {
+        "en": "Being the person managers, students and candidates turn to",
+        "sv": "Att vara den chefer, studenter och kandidater vänder sig till"
+      },
+      {
+        "en": "Moving between a client assignment and a classroom in the same week",
+        "sv": "Att röra mig mellan ett kunduppdrag och en lärosal samma vecka"
+      },
+      {
+        "en": "Turning knowledge into something that works in practice",
+        "sv": "Att omsätta kunskap till något som fungerar i praktiken"
+      },
+      {
+        "en": "Building processes that actually get used",
+        "sv": "Att bygga processer som faktiskt används"
+      }
+    ],
+    "#built .built-sub": [
+      {
+        "en": "Built at work, with colleagues",
+        "sv": "Byggt på jobbet, med kollegor"
+      },
+      {
+        "en": "Built myself",
+        "sv": "Byggt själv"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of it I built with colleagues at work: onboarding in two companies that had none, ATS workflows, an internal LMS and a career programme for junior talent into the IT industry. Some I built myself, including this page and a couple of tools for recruitment.",
+      "sv": "En del byggde jag med kollegor på jobbet: onboarding i två bolag som saknade den, ATS-flöden, ett internt LMS och ett karriärprogram för juniora talanger in i IT-branschen. En del har jag byggt själv, bland annat den här sidan och ett par verktyg för rekrytering."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
+      "en": "You type what you're looking for, in free text or with filters, and the tool searches through GitHub, portfolios and technical blogs to find and rank candidates that match, even when they've described themselves in different words than you used. The search runs in the background, and you can save candidates, write notes, track where they are in the process and export the results.",
+      "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Sökningen körs i bakgrunden, och du kan spara kandidater, skriva anteckningar, följa var de är i processen och exportera resultatet."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and around the tech industry and at a vocational IT school. Recruitment is in four of them, people responsibility in two, and education or course development in three.",
+      "sv": "Fem roller i och nära techbranschen och på en yrkeshögskola inom IT. Rekrytering finns i fyra av dem, personalansvar i två och utbildning eller kursutveckling i tre."
+    },
+    "#education .sec-title": {
+      "en": "The academic background for this role",
+      "sv": "Den akademiska bakgrunden för rollen"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science with a focus on IT environments. It's the personalvetenskap-adjacent background this role asks for, and the basis for how I read people, groups and material. Swedish labour law is part of it.",
+        "sv": "Kandidatexamen i beteendevetenskap med inriktning mot IT-miljöer. Det är den personalvetenskapsnära bakgrund rollen efterfrågar, och grunden för hur jag läser människor, grupper och underlag. Svensk arbetsrätt ingår."
+      },
+      {
+        "en": "Certified education manager, the Swedish Agency for Higher Vocational Education. A qualification about vocational higher education, pedagogical planning and course design.",
+        "sv": "Certifierad utbildningsledare, Myndigheten för yrkeshögskolan. En utbildning som handlar om yrkeshögskola, pedagogisk planering och kursdesign."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "HR, personalvetenskap or an equivalent field",
+      "sv": "HR, personalvetenskap eller motsvarande"
+    },
+    "#education .callout-title": {
+      "en": "Behavioural science, and an education-manager qualification for YH",
+      "sv": "Beteendevetenskap, och en utbildningsledarexamen för YH"
+    },
+    "#education .callout-text": {
+      "en": "My degree is behavioural science with a focus on IT environments: how people and groups work in organisations and how you assess that. It's an equivalent to HR or personalvetenskap. On top of it sits the certified education manager qualification from the Swedish Agency for Higher Vocational Education, built around vocational higher education and course design. So both the HR side and the YH side of this role have an academic footing. Swedish labour law is part of the degree.",
+      "sv": "Min examen är beteendevetenskap med inriktning mot IT-miljöer: hur människor och grupper fungerar i organisationer och hur man bedömer det. Det motsvarar HR eller personalvetenskap. Ovanpå den ligger certifieringen som utbildningsledare från Myndigheten för yrkeshögskolan, byggd kring yrkeshögskola och kursdesign. Både HR-delen och YH-delen av rollen har alltså en akademisk grund. Svensk arbetsrätt ingår i examen."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Learning & Development",
+        "sv": "Learning & Development"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Pedagogy",
+        "sv": "Pedagogik"
+      },
+      {
+        "en": "Learning Management Systems (LMS)",
+        "sv": "Learning Management Systems (LMS)"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "HR",
+      {
+        "en": "People & Culture",
+        "sv": "People & Culture"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "Employer Branding",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Curiosity and structure don't show up in a CV. Here's the rest of me instead.",
+      "sv": "Nyfikenhet och struktur syns inte i ett CV. Här är resten av mig i stället."
+    },
+    "#contact .sec-title": {
+      "en": "About the HR consultant role with a focus on training",
+      "sv": "Om rollen som HR-konsult med fokus på utbildning"
+    },
+    "#contact .sec-lead": {
+      "en": "The application goes straight to Get Skills, with a CV and a few lines on why the role interests you, to Mimmi Nyman. If you want to ask about the vocational-school work, the course development or anything else on this page first, get in touch here. I answer quickly.",
+      "sv": "Ansökan går direkt till Get Skills, med CV och några rader om varför rollen känns intressant, till Mimmi Nyman. Vill du fråga om YH-arbetet, kursutvecklingen eller något annat på sidan innan dess, hör av dig här. Jag svarar snabbt."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Gothenburg, Sweden",
+        "sv": "Göteborg, Sverige"
+      },
+      {
+        "en": "Swedish & English",
+        "sv": "Svenska & engelska"
+      },
+      {
+        "en": "BSc Behavioural Science · utbildningsledare",
+        "sv": "Kand. beteendevetenskap · utbildningsledare"
+      },
+      {
+        "en": "Applying for: HR consultant with a focus on training, Get Skills",
+        "sv": "Söker: HR-konsult med fokus på utbildning, Get Skills"
+      }
+    ]
+  }
+}
