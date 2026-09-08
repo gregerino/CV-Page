@@ -1,0 +1,347 @@
+{
+  "company": "Göteborgs Stad",
+  "roleName": "HR-specialist",
+
+  "eyebrow": {
+    "en": "Application · HR-specialist · Göteborgs Stad",
+    "sv": "Ansökan · HR-specialist · Göteborgs Stad"
+  },
+  "role": {
+    "en": "Business-near HR support to managers and a management team",
+    "sv": "Verksamhetsnära HR-stöd till chefer och en ledningsgrupp"
+  },
+  "lead": {
+    "en": "Seven years in and around HR, mostly in IT and tech. Recruitment, onboarding, competence supply and support to managers is where I have spent my time. In an IT consultancy I was on the management team with people responsibility for a group of 15+ consultants, and I built the onboarding and the recruitment workflows there myself. I have also worked as a course developer, and I am a certified education manager. I use AI in my work every day.",
+    "sv": "Sju år i och nära HR, mest i IT och tech. Rekrytering, onboarding, kompetensförsörjning och stöd till chefer är där jag har lagt tiden. På ett IT-konsultbolag satt jag i ledningsgruppen med personalansvar för en grupp på 15+ konsulter, och jag byggde onboardingen och rekryteringsflödena där själv. Jag har också jobbat som kursutvecklare, och jag är certifierad utbildningsledare. Jag använder AI i arbetet varje dag."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Så matchar jag" },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen frågar efter"
+  },
+  "matchLead": {
+    "en": "Each requirement from the ad, with what I have done underneath.",
+    "sv": "Varje krav från annonsen, med det jag har gjort under."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "A degree from the HR programme, or equivalent",
+        "sv": "Examen från personalvetarprogrammet, eller motsvarande"
+      },
+      "quote": {
+        "en": "A higher-education degree from the HR/personnel programme (personalvetarprogrammet) or equivalent.",
+        "sv": "Högskoleexamen från personalvetarprogrammet eller motsvarande."
+      },
+      "body": {
+        "en": "I have a bachelor's degree in behavioural science with a focus on IT environments, 180 credits. It covers how people and groups work inside organisations, how you assess that, and Swedish labour law. On top of it I am a certified education manager. It is the foundation I lean on when I set a requirement profile or work out why something in a team is not landing.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap med inriktning mot IT-miljöer, 180 hp. Den handlar om hur människor och grupper fungerar i organisationer, hur man bedömer det, och svensk arbetsrätt. Ovanpå den är jag certifierad utbildningsledare. Det är grunden jag lutar mig mot när jag sätter en kravprofil eller ska förstå varför något i ett team inte landar."
+      }
+    },
+    {
+      "title": {
+        "en": "Broad, qualified HR work",
+        "sv": "Brett och kvalificerat HR-arbete"
+      },
+      "quote": {
+        "en": "At least three years of broad, qualified HR work covering several HR processes such as work environment, pay formation, rehabilitation, recruitment and union collaboration.",
+        "sv": "Minst tre års erfarenhet av brett och kvalificerat HR-arbete vilket inkluderar flertalet HR-processer så som arbetsmiljö, lönebildning, rehabilitering, rekrytering och samverkan."
+      },
+      "body": {
+        "en": "Seven years across recruitment, HR and Learning & Development. Recruitment is in four of my roles: full processes for technical roles, and advising hiring managers on requirement profiles, selection and assessment. In an IT consultancy I held the HR responsibility and competence development for a consultant group of 15+, ran the development conversations, and built the onboarding from the ground up. In another I gave ongoing HR support to consultants and set up structured onboarding there too. Alongside that I have worked with employer branding, a career programme for junior talent, and an internal LMS.",
+        "sv": "Sju år inom rekrytering, HR och Learning & Development. Rekrytering finns i fyra av mina roller: fullständiga processer för tekniska roller, och rådgivning till rekryterande chefer kring kravprofil, urval och bedömning. På ett IT-konsultbolag hade jag HR-ansvaret och kompetensutvecklingen för en konsultgrupp på 15+, höll utvecklingssamtalen, och byggde onboardingen från grunden. På ett annat gav jag löpande HR-stöd till konsulter och satte strukturerad onboarding även där. Vid sidan av det har jag jobbat med employer branding, ett karriärprogram för juniora talanger, och ett internt LMS."
+      }
+    },
+    {
+      "title": {
+        "en": "Business-near HR support to a management team",
+        "sv": "Verksamhetsnära HR-stöd till en ledningsgrupp"
+      },
+      "quote": {
+        "en": "A merit: experience of being a close, business-near HR support to a management team.",
+        "sv": "Meriterande: erfarenhet av att vara ett verksamhetsnära HR-stöd till en ledningsgrupp."
+      },
+      "body": {
+        "en": "This is close to what I did in the IT consultancy. I was on the management team with responsibility for talent acquisition and people responsibility for a consultant group of 15+. Managers came to me with hiring, and with the employee questions that followed: requirement profiles, selection, development conversations. I worked proactively and consultatively, moving between operational and strategic questions through the same week. It is the way of working I know best.",
+        "sv": "Det här ligger nära det jag gjorde på IT-konsultbolaget. Jag satt i ledningsgruppen med ansvar för talent acquisition och personalansvar för en konsultgrupp på 15+. Cheferna kom till mig med rekrytering, och med medarbetarfrågorna som följde: kravprofiler, urval, utvecklingssamtal. Jag jobbade proaktivt och konsultativt och rörde mig mellan operativa och strategiska frågor under samma vecka. Det är arbetssättet jag kan bäst."
+      }
+    },
+    {
+      "title": {
+        "en": "A consultative way of working, and process development",
+        "sv": "Ett konsultativt arbetssätt, och processutveckling"
+      },
+      "quote": {
+        "en": "Work proactively and consultatively; act as process leader in some of the city's shared process networks and help develop common ways of working; support in business systems, and quality-assure and follow up processes and routines.",
+        "sv": "Arbeta proaktivt och konsultativt; agera processledare i några av stadens gemensamma processnätverk och bidra till att utveckla gemensamma arbetssätt; stöd i verksamhetssystem samt kvalitetssäkring och uppföljning av processer och rutiner."
+      },
+      "body": {
+        "en": "Building and improving processes is a large part of what I have done. I implemented an ATS and the workflow around it: how a role opens, how candidates move through the steps, who does what, and the follow-up that it happened. I built onboarding in two companies and helped shape an internal LMS. As a course developer I planned and followed up training against goals and current needs. I am used to working in the systems and keeping the routines documented and current.",
+        "sv": "Att bygga och förbättra processer är en stor del av det jag har gjort. Jag implementerade ett ATS och flödet runt det: hur en roll öppnas, hur kandidater rör sig genom stegen, vem gör vad, och uppföljningen av att det blev gjort. Jag byggde onboarding i två bolag och var med och formade ett internt LMS. Som kursutvecklare planerade och följde jag upp utbildning mot mål och aktuella behov. Jag är van att jobba i systemen och hålla rutinerna dokumenterade och aktuella."
+      }
+    },
+    {
+      "title": {
+        "en": "A coaching approach, and clear communication",
+        "sv": "Ett coachande förhållningssätt, och tydlig kommunikation"
+      },
+      "quote": {
+        "en": "A professional and coaching approach; conveying information and ideas clearly, both orally and in writing; adapting communication to recipient, audience and situation.",
+        "sv": "Ett professionellt och coachande förhållningssätt; förmedla information och idéer på ett tydligt sätt såväl muntligt som skriftligt; anpassa kommunikationen efter mottagare, målgrupp och situation."
+      },
+      "body": {
+        "en": "Advisory work with managers and stakeholders is how I work, structured and calm. Adapting the message to the person in front of me is the core of building training, which I did for a year, and of coaching students into the tech industry before that. I write clearly so a decision holds up afterwards. When something in my own work takes longer than it should, I build a small tool for it: one turns a requirement profile into a structured interview package, and this page has an assistant that answers questions about my CV.",
+        "sv": "Rådgivande arbete med chefer och intressenter är så jag jobbar, strukturerat och lugnt. Att anpassa budskapet efter personen framför mig är kärnan i att bygga utbildning, vilket jag gjorde i ett år, och i att coacha studenter in i techbranschen dessförinnan. Jag skriver tydligt så att ett beslut håller efteråt. När något i mitt eget arbete tar längre tid än det borde bygger jag ett litet verktyg för det: ett gör om en kravprofil till ett strukturerat intervjupaket, och den här sidan har en assistent som svarar på frågor om mitt CV."
+      }
+    }
+  ],
+
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Så matchar jag"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Så matchar jag"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "7+ years across recruitment, HR and L&D",
+      "sv": "7+ år inom rekrytering, HR och L&D"
+    },
+    "#top .stat-num": [
+      "7+",
+      "15+",
+      "0→1"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years across recruitment, HR and Learning & Development",
+        "sv": "År inom rekrytering, HR och Learning & Development"
+      },
+      {
+        "en": "Consultants under my people responsibility, on the management team",
+        "sv": "Konsulter med personalansvar, som del av ledningsgruppen"
+      },
+      {
+        "en": "Built from the ground up: onboarding in two companies, recruitment workflows, an internal LMS, a career programme into the IT industry",
+        "sv": "Byggt från grunden: onboarding i två bolag, rekryteringsflöden, ett internt LMS, ett karriärprogram in i IT-branschen"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What is his recruitment experience?",
+        "sv": "Vad har han för rekryteringserfarenhet?"
+      },
+      {
+        "en": "Has he supported a management team?",
+        "sv": "Har han stöttat en ledningsgrupp?"
+      },
+      {
+        "en": "What has he built himself?",
+        "sv": "Vad har han byggt själv?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my HR and recruitment background",
+      "sv": "Fråga om min bakgrund inom HR och rekrytering"
+    },
+    ".ask-sub": {
+      "en": "The assistant has my full CV and answers directly.",
+      "sv": "Assistenten har hela mitt CV och svarar direkt."
+    },
+    "#about .sec-title": {
+      "en": "Recruitment, manager support and learning in technical environments",
+      "sv": "Rekrytering, chefsstöd och lärande i tekniska miljöer"
+    },
+    "#about .about-quote": {
+      "en": "A background built close to the managers and the business: recruitment, onboarding and competence development, and the structure around them.",
+      "sv": "En bakgrund byggd nära cheferna och verksamheten: rekrytering, onboarding och kompetensutveckling, och strukturen runt dem."
+    },
+    "#about .about-body": [
+      {
+        "en": "What drives me is working close to the people and the business at the same time. Across my roles I have built and rebuilt processes for recruitment, onboarding and competence development, mostly in IT and tech.",
+        "sv": "Det som driver mig är att jobba nära människorna och verksamheten samtidigt. Genom mina roller har jag byggt och byggt om processer för rekrytering, onboarding och kompetensutveckling, mest i IT och tech."
+      },
+      {
+        "en": "I am at my best in the support to managers: structure, requirement profiles that hold, material that is ready to decide on, and follow-up that what was decided got done. I have built training professionally and I am a certified education manager, so when a new way of working needs teaching, I can take that part myself.",
+        "sv": "Jag är som bäst i stödet till chefer: struktur, kravprofiler som håller, underlag som är redo att fatta beslut på, och uppföljning av att det som bestämdes blev av. Jag har byggt utbildning professionellt och är certifierad utbildningsledare, så när ett nytt arbetssätt behöver läras ut kan jag ta den delen själv."
+      },
+      {
+        "en": "Most of my career has been in IT and tech, and at a vocational IT school. It means I know the language of a technical organisation and what its managers need from HR, and I bring that with me into the public sector.",
+        "sv": "Största delen av min karriär ligger i IT och tech, och på en yrkeshögskola inom IT. Det gör att jag kan språket i en teknisk organisation och vet vad dess chefer behöver från HR, och det tar jag med mig in i offentlig sektor."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Working close to managers and being the person they turn to",
+        "sv": "Att jobba nära cheferna och vara den de vänder sig till"
+      },
+      {
+        "en": "Recruitment, from requirement profile to onboarding",
+        "sv": "Rekrytering, från kravprofil till onboarding"
+      },
+      {
+        "en": "Structures and processes that hold as things grow",
+        "sv": "Strukturer och processer som håller när det växer"
+      },
+      {
+        "en": "Writing clearly so a decision holds",
+        "sv": "Att skriva tydligt så att ett beslut håller"
+      },
+      {
+        "en": "Using systems and AI so the work goes faster and holds better",
+        "sv": "Att använda system och AI så att arbetet går snabbare och håller bättre"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of it I built with colleagues at work: onboarding in two companies, the recruitment workflows, an internal LMS, a career programme for junior talent into the IT industry. Some I built on my own with AI, including this page and a tool that turns a requirement profile into a structured interview package.",
+      "sv": "En del byggde jag med kollegor på jobbet: onboarding i två bolag, rekryteringsflödena, ett internt LMS, ett karriärprogram för juniora talanger in i IT-branschen. En del har jag byggt själv med AI, bland annat den här sidan och ett verktyg som gör en kravprofil till ett strukturerat intervjupaket."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and near the tech industry and at a vocational IT school. Recruitment is in four of them, people responsibility and a management-team seat in one, and support to managers in most.",
+      "sv": "Fem roller i och nära techbranschen och på en yrkeshögskola inom IT. Rekrytering finns i fyra av dem, personalansvar och en plats i ledningsgruppen i en, och stöd till chefer i de flesta."
+    },
+    "#education .sec-title": {
+      "en": "The academic background for this role",
+      "sv": "Den akademiska bakgrunden för rollen"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with Swedish labour law included. The basis for how I read people, groups and material.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med svensk arbetsrätt inkluderat. Grunden till hur jag läser människor, grupper och underlag."
+      },
+      {
+        "en": "Certified education manager. The reason I can design training for a new way of working, not only deliver it.",
+        "sv": "Certifierad utbildningsledare. Skälet till att jag kan designa utbildning för ett nytt arbetssätt, inte bara hålla i den."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science, with a focus on IT environments",
+      "sv": "Beteendevetenskap, med inriktning mot IT-miljöer"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science with a focus on IT environments: how people and groups work in organisations, how you assess that, and how you get the business and its people pulling the same way. Swedish labour law is part of it. The education-manager certification on top is why I can build the training for a new process myself.",
+      "sv": "Beteendevetenskap med inriktning mot IT-miljöer: hur människor och grupper fungerar i organisationer, hur man bedömer det, och hur man får verksamhet och medarbetare att dra åt samma håll. Svensk arbetsrätt ingår. Certifieringen som utbildningsledare ovanpå är skälet till att jag kan bygga utbildningen för en ny process själv."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "HR",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "People & Culture",
+        "sv": "People & Culture"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Learning & Development",
+        "sv": "Learning & Development"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Employer Branding",
+      {
+        "en": "Learning Management Systems (LMS)",
+        "sv": "Learning Management Systems (LMS)"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Coaching approach",
+        "sv": "Coachande förhållningssätt"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Curiosity, structure and being someone people can bring things to. That part does not show up in a CV, so here is the rest, including that there is always music on somewhere in the background.",
+      "sv": "Nyfikenhet, struktur och att vara någon folk vågar komma till. Den delen syns inte i ett CV, så här är resten, inklusive att det alltid är musik på någonstans i bakgrunden."
+    },
+    "#contact .sec-title": {
+      "en": "About the HR-specialist role",
+      "sv": "Om rollen som HR-specialist"
+    },
+    "#contact .sec-lead": {
+      "en": "It is an 11-month parental-leave cover at Stadsbyggnadsförvaltningen, with a possible extension. The formal application goes through Göteborgs Stad; this page is the same background, arranged for the role. If you want to talk about the HR and recruitment work I have done, or anything else on the page, get in touch here. I answer quickly.",
+      "sv": "Det är ett vikariat på 11 månader för en föräldraledighet på stadsbyggnadsförvaltningen, med möjlighet till förlängning. Den formella ansökan går via Göteborgs Stad; den här sidan är samma bakgrund, ordnad för rollen. Vill du prata om HR- och rekryteringsarbetet jag har gjort, eller om något annat på sidan, hör av dig här. Jag svarar snabbt."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Gothenburg, Sweden",
+        "sv": "Göteborg, Sverige"
+      },
+      {
+        "en": "Swedish & English",
+        "sv": "Svenska & engelska"
+      },
+      {
+        "en": "BSc. Behavioural Science",
+        "sv": "Kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: HR-specialist, Göteborgs Stad",
+        "sv": "Söker: HR-specialist, Göteborgs Stad"
+      }
+    ]
+  }
+}
