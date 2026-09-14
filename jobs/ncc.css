@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* NCC — HR Generalist, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /ncc and by cv.html?job=ncc, from the head script, so the page is
+   drawn in these colours from the first frame.
+
+   The palette is NCC's own, read off the CSS custom properties on ncc.se:
+     #0063ff  NCC blue (the one on every primary button)
+     #2375bb  logo blue
+     #18173c  dark blue-black, behind the wordmark and its links
+     #efe2ab  warm sand ("wood"), NCC's own name for the token
+     #e4eef7 / #8fcdff  pale and mid blue, the site's own tints
+     #f7f7f7 / #e8e8e8   the two greys the paper is banded with
+
+   Their identity is a clean, confident construction-industry corporate look:
+   white paper, near-black text, one saturated blue that carries every button
+   and link, and set in Roboto throughout — no serif anywhere on ncc.se. The
+   sand tone is their one warm note against all that blue, used sparingly.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: white, banded with the two greys ncc.se itself uses. */
+  --bg:            #ffffff;
+  --bg2:           #f7f7f7;
+  --bg3:           #e8e8e8;
+  --white:         #ffffff;
+
+  --border:        rgba(24,23,60,0.14);
+  --border-light:  rgba(24,23,60,0.08);
+  --border-strong: rgba(24,23,60,0.30);
+
+  /* Headings in their dark blue-black, body in a near-black that matches
+     the site's own text colour more than pure black does. */
+  --ink:           #18173c;
+  --ink-mid:       #232323;
+  --ink-light:     #595959;
+  --ink-dim:       #8b8b8b;
+
+  /* Their blue does all the work, on buttons and on links alike. It is
+     already close to fully saturated, so the hover state goes a shade
+     deeper rather than lighter, to avoid washing it out to a pastel. */
+  --amber:         #0063ff;
+  --amber-light:   #0050d1;
+
+  /* Every wash, tint and glow on the page is mixed from these. */
+  --accent-rgb:    0,99,255;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 6px rgba(24,23,60,0.10), 0 1px 3px rgba(24,23,60,0.06);
+  --shadow-sm:     0 1px 3px rgba(24,23,60,0.08);
+  --shadow-lg:     0 8px 34px rgba(24,23,60,0.14);
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(228,238,247,0.92) 40%,
+    rgba(190,220,247,0.87) 70%,
+    rgba(143,205,255,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230063ff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Roboto is the whole of their type, at every weight. It replaces both
+     the base serif and the base sans so nothing on the page falls back
+     to Lora. */
+  --serif: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* ncc.se sets its own headings in a medium 500, lighter than the base
+   page's 600 — Roboto at that weight still reads confidently at display
+   sizes, so no extra tracking is needed the way a heavier face would want. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 500; }
+
+/* Their blue rule under the fixed header. */
+.nav { box-shadow: inset 0 -2px 0 #0063ff; }
+
+/* The one warm note: their own sand token, used the way ncc.se keeps it —
+   sparingly, against all the blue and near-black. */
+.brand-dot {
+  background: #efe2ab;
+  box-shadow: 0 0 0 1px rgba(24,23,60,0.35);
+}
+
+/* The timeline runs down in their blue. */
+.timeline::before {
+  background: linear-gradient(to bottom, #0063ff, rgba(0,99,255,0.30) 60%, transparent);
+}
+
+.job::before { border-color: #0063ff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their dark blue-black
+   ─────────────────────────────────────────────────────────────────────────
+   This is the section the whole page exists for, so it gets NCC's darkest
+   tone instead of the base page's alternating band. The point cards sit
+   opaque white on top, each with a blue edge down its left, and the sand
+   token carries the eyebrow so it reads against the dark ground.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #18173c;
+  border-top: 1px solid #18173c;
+}
+#match + .band { border-top: 1px solid #18173c; }
+
+#match .eyebrow   { color: #efe2ab; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.74); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.30);
+}
+
+#match .point { border-left: 3px solid #0063ff; }
+#match .point-num { color: #0063ff; }

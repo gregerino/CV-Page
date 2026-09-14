@@ -1,0 +1,290 @@
+{
+  "company": "NCC",
+  "roleName": "HR Generalist",
+
+  "eyebrow": {
+    "en": "Application · HR Generalist · NCC",
+    "sv": "Ansökan · HR-generalist · NCC"
+  },
+  "role": {
+    "en": "A broad HR role, close to the managers",
+    "sv": "En bred HR-roll, nära cheferna"
+  },
+  "lead": {
+    "en": "Seven years across recruitment, HR and Learning & Development, mostly in IT and tech. The work has moved between operational and strategic the whole time: full recruitment processes, onboarding built from scratch, competence supply matched against a labour market, and employer branding running alongside all of it. In one role I sat on the management team with people responsibility for 15+ consultants. I use AI in my work every day.",
+    "sv": "Sju år i och kring rekrytering, HR och Learning & Development, mest i IT och tech. Arbetet har hela tiden pendlat mellan operativt och strategiskt: fullständiga rekryteringsprocesser, onboarding byggd från grunden, kompetensförsörjning matchad mot en arbetsmarknad, och employer branding som löpt parallellt med allt det. I en av rollerna satt jag i ledningsgruppen med personalansvar för 15+ konsulter. Jag använder AI i arbetet varje dag."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Så matchar jag" },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen frågar efter"
+  },
+  "matchLead": {
+    "en": "Each requirement from the ad, with what I have done under it.",
+    "sv": "Varje krav från annonsen, med det jag har gjort under det."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "A broad HR generalist role, operational and strategic",
+        "sv": "En bred HR-generalistroll, operativ och strategisk"
+      },
+      "quote": {
+        "en": "A driven HR generalist who appreciates a broad role and a varied everyday mix of both operational and strategic HR questions, working close to the business.",
+        "sv": "En driven HR-generalist som uppskattar en bred roll och varierad vardag av både operativa och strategiska HR-frågor, i nära arbete med verksamheten."
+      },
+      "body": {
+        "en": "My last five roles have all been broad. Full recruitment processes and hands-on onboarding sit next to competence supply, employer branding and building an internal LMS, often inside the same role. Most of my HR work has happened in small setups, sometimes as close to the only person holding it, so I am used to being the one a manager turns to, whatever the question.",
+        "sv": "Mina senaste fem roller har alla varit breda. Fullständiga rekryteringsprocesser och praktisk onboarding har legat sida vid sida med kompetensförsörjning, employer branding och att bygga ett internt LMS, ofta inom samma roll. Merparten av mitt HR-arbete har skett i små uppsättningar, ibland som nästan ensam ansvarig, så jag är van vid att vara den en chef vänder sig till, oavsett fråga."
+      }
+    },
+    {
+      "title": {
+        "en": "Advising managers on competence, and knowing the labour law behind it",
+        "sv": "Rådgivning till chefer om kompetens, med arbetsrätten som grund"
+      },
+      "quote": {
+        "en": "Proactively work from guidelines and HR processes to support and coach managers on questions of leadership, labour law, union relations, rehabilitation, competence supply, salary structure and more.",
+        "sv": "Proaktivt arbeta utifrån riktlinjer och HR-processer för att stötta och coacha chefer i frågor som rör ledarskap, arbetsrätt, fackliga frågor, rehabilitering, kompetensförsörjning, lönestruktur med mera."
+      },
+      "body": {
+        "en": "I have advised managers in every role I've had: requirement profiles, selection, and what a hiring decision means for the team around it. Competence supply is the thread underneath it. I've matched training programmes to what a labour market needed, and read what a team is missing internally and built the plan for it. Swedish labour law is one of the areas I list among my skills, and I keep it close whenever a requirement profile or a process needs to hold up in practice.",
+        "sv": "Jag har rådgivit chefer i varje roll jag haft: kravprofiler, urval, och vad ett anställningsbeslut betyder för teamet runt omkring. Kompetensförsörjning är den röda tråden under det. Jag har matchat utbildningsprogram mot vad en arbetsmarknad behövde, och läst av vad ett team saknar internt och byggt planen för det. Svensk arbetsrätt är ett av områdena jag listar bland mina kompetenser, och jag har den nära till hands närhelst en kravprofil eller process ska hålla i praktiken."
+      }
+    },
+    {
+      "title": {
+        "en": "Employer branding, and programmes that bring new people in",
+        "sv": "Employer branding, och program som tar in nya människor"
+      },
+      "quote": {
+        "en": "Take part in region-wide employer branding initiatives and manage the department's various internship and trainee programmes.",
+        "sv": "Delta i regiongemensamma initiativ för employer branding och hantering av avdelningens olika praktikant- och traineeprogram."
+      },
+      "body": {
+        "en": "In an IT consultancy I worked with employer branding alongside the recruitment. That meant being clear about who we were as an employer and how we presented ourselves externally. I also helped build a career programme that brought junior talent into the industry. At a vocational IT school I secured internship placements and supported students through the move into working life. A trainee or internship programme is the same work under a different name.",
+        "sv": "På ett IT-konsultbolag arbetade jag med employer branding parallellt med rekryteringen. Det handlade om att vara tydlig med vilka vi var som arbetsgivare och hur vi visade upp oss utåt. Jag var också med och byggde ett karriärprogram som tog in juniora talanger i branschen. På en yrkeshögskola inom IT säkrade jag praktikplatser och stöttade studenter genom övergången till arbetslivet. Ett trainee- eller praktikantprogram är samma arbete under ett annat namn."
+      }
+    },
+    {
+      "title": {
+        "en": "Ideas for culture and cohesion",
+        "sv": "Idéer för kultur och sammanhållning"
+      },
+      "quote": {
+        "en": "Contribute ideas and solutions that strengthen our culture and sense of togetherness.",
+        "sv": "Bidra med idéer och lösningar som stärker vår kultur och sammanhållning."
+      },
+      "body": {
+        "en": "I have built onboarding from nothing in two companies, both times because a good first stretch changes whether someone stays. I ran internal workshops and training sessions, including one on gamification, and helped shape an internal learning platform from the start. None of it came from a formal mandate. I noticed something missing in the everyday experience and built the fix.",
+        "sv": "Jag har byggt onboarding från noll i två bolag, båda gångerna för att en bra start avgör om någon stannar. Jag höll interna workshops och utbildningar, bland annat en om gamification, och var med och formade en intern lärplattform från start. Inget av det kom från ett formellt uppdrag. Jag såg att något saknades i vardagen och byggde lösningen."
+      }
+    },
+    {
+      "title": {
+        "en": "Independent, and comfortable with many stakeholders",
+        "sv": "Självgående, och trygg med många intressenter"
+      },
+      "quote": {
+        "en": "Used to working independently, with the ability to prioritise, drive and complete assignments. Enjoys building relationships and finds it easy to work with many different stakeholders.",
+        "sv": "Van vid att arbeta självständigt och har förmågan att prioritera, driva och slutföra uppdrag. Uppskattar att bygga relationer och har lätt för att samverka med många olika intressenter."
+      },
+      "body": {
+        "en": "I have worked in a recruitment firm, two IT consultancies and a vocational school: different environments, different stakeholders. In each of them I was the one advising managers, coordinating with candidates or students, and keeping a process moving without someone else driving it for me.",
+        "sv": "Jag har jobbat på ett rekryteringsbolag, två IT-konsultbolag och en yrkeshögskola: olika miljöer, olika intressenter. I var och en av dem var jag den som rådgav chefer, koordinerade med kandidater eller studenter, och höll en process i rörelse utan att någon annan drev den åt mig."
+      }
+    },
+    {
+      "title": {
+        "en": "A behavioural science degree, and two working languages",
+        "sv": "En beteendevetenskaplig examen, och två arbetsspråk"
+      },
+      "quote": {
+        "en": "A degree from the HR programme (personalvetarprogrammet) or another the employer finds equivalent. Able to express yourself well in both Swedish and English, spoken and written.",
+        "sv": "Examen från personalvetarprogrammet eller en annan utbildning som arbetsgivaren bedömer likvärdig. Kunna uttrycka dig väl på både svenska och engelska i tal och skrift."
+      },
+      "body": {
+        "en": "My degree is a bachelor's in behavioural science with a focus on IT environments, 180 credits, from Umeå University. It covers how people and groups work inside organisations, and it's the base I work from in HR regardless of what the programme was called. Swedish is my native language and I work in English daily, which matters in a Nordic group.",
+        "sv": "Min examen är en kandidat i beteendevetenskap med inriktning mot IT-miljöer, 180 hp, från Umeå universitet. Den handlar om hur människor och grupper fungerar i organisationer, och det är grunden jag jobbar från inom HR oavsett vad programmet hette. Svenska är mitt modersmål och jag jobbar på engelska dagligen, vilket spelar roll i en nordisk koncern."
+      }
+    }
+  ],
+
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Så matchar jag"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Så matchar jag"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "7+ years across recruitment, HR and competence work",
+      "sv": "7+ år inom rekrytering, HR och kompetensarbete"
+    },
+    "#top .stat-num": ["7+", "15+", "5"],
+    "#top .stat-label": [
+      {
+        "en": "Years across recruitment, HR and Learning & Development",
+        "sv": "År inom rekrytering, HR och Learning & Development"
+      },
+      {
+        "en": "Consultants under my people responsibility, on the management team",
+        "sv": "Konsulter med personalansvar, som del av ledningsgruppen"
+      },
+      {
+        "en": "Roles across recruitment, HR and education, always close to the business",
+        "sv": "Roller inom rekrytering, HR och utbildning, alltid nära verksamheten"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What is his HR generalist experience?",
+        "sv": "Vad har han för erfarenhet som HR-generalist?"
+      },
+      {
+        "en": "Has he worked with employer branding and trainee programmes?",
+        "sv": "Har han jobbat med employer branding och traineeprogram?"
+      },
+      {
+        "en": "What does he know about competence supply?",
+        "sv": "Vad kan han om kompetensförsörjning?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my HR generalist background",
+      "sv": "Fråga om min bakgrund som HR-generalist"
+    },
+    "#about .sec-title": {
+      "en": "A broad HR role, close to managers and the business",
+      "sv": "En bred HR-roll, nära chefer och verksamhet"
+    },
+    "#about .about-quote": {
+      "en": "A background built for a broad HR role: recruitment, competence supply, employer branding and the everyday advisory work with managers.",
+      "sv": "En bakgrund byggd för en bred HR-roll: rekrytering, kompetensförsörjning, employer branding och den löpande rådgivningen till chefer."
+    },
+    "#about .about-body": [
+      {
+        "en": "What drives me is working close to the people and the business at the same time, without staying on one side of the operational-strategic line. Across my roles I have run full recruitment processes, built onboarding from scratch, and worked on the competence supply and employer branding behind them.",
+        "sv": "Det som driver mig är att jobba nära människorna och verksamheten samtidigt, utan att stanna på ena sidan av gränsen mellan operativt och strategiskt. Genom mina roller har jag drivit fullständiga rekryteringsprocesser, byggt onboarding från grunden, och jobbat med kompetensförsörjningen och employer branding-arbetet bakom dem."
+      },
+      {
+        "en": "I am at my best advising managers: requirement profiles that hold, and a process that moves without someone chasing it. Much of my HR work has happened in small setups, so I am used to holding several parts of the function at once instead of one narrow lane.",
+        "sv": "Jag är som bäst i rådgivningen till chefer: kravprofiler som håller, och en process som rör sig utan att någon behöver jaga den. Mycket av mitt HR-arbete har skett i små uppsättningar, så jag är van vid att hålla flera delar av funktionen samtidigt i stället för ett smalt spår."
+      },
+      {
+        "en": "Most of my career has been in IT, tech, and at a vocational school. The pattern that carries over is simple: read what a team needs and build the structure for it.",
+        "sv": "Största delen av min karriär ligger i IT, tech och på en yrkeshögskola. Mönstret som bär över är enkelt: läsa av vad ett team behöver och bygga strukturen för det."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Being the person managers turn to, across whatever HR question comes up",
+        "sv": "Att vara den chefer vänder sig till, oavsett vilken HR-fråga som dyker upp"
+      },
+      {
+        "en": "Reading a competence need and turning it into a plan",
+        "sv": "Att läsa av ett kompetensbehov och göra det till en plan"
+      },
+      {
+        "en": "Employer branding and building the programmes that bring new people in",
+        "sv": "Employer branding och att bygga programmen som tar in nya människor"
+      },
+      {
+        "en": "Building onboarding and culture work that people actually notice",
+        "sv": "Att bygga onboarding och kulturarbete som folk faktiskt märker av"
+      },
+      {
+        "en": "Writing clearly so a decision holds",
+        "sv": "Att skriva tydligt så att ett beslut håller"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of it I built with colleagues at work: onboarding in two companies, an internal LMS, a career programme that brought junior talent into the industry, and the employer branding running alongside the recruitment. Some I built on my own with AI, including this page.",
+      "sv": "En del byggde jag med kollegor på jobbet: onboarding i två bolag, ett internt LMS, ett karriärprogram som tog in juniora talanger i branschen, och employer branding-arbetet som löpte parallellt med rekryteringen. En del har jag byggt själv med AI, bland annat den här sidan."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and around recruitment, HR and education. Employer branding and a career programme sit in one of them, people responsibility and a management-team seat in another, and I've advised managers in all five.",
+      "sv": "Fem roller i och kring rekrytering, HR och utbildning. Employer branding och ett karriärprogram finns i en av dem, personalansvar och en plats i ledningsgruppen i en annan, och jag har rådgivit chefer i alla fem."
+    },
+    "#education .sec-title": {
+      "en": "The academic base for a broad HR role",
+      "sv": "Den akademiska grunden för en bred HR-roll"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits. The basis for how I read people, groups and a requirement profile.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp. Grunden till hur jag läser människor, grupper och en kravprofil."
+      },
+      {
+        "en": "Certified education manager. The reason I can build and teach a new way of working myself, not only roll it out.",
+        "sv": "Certifierad utbildningsledare. Skälet till att jag kan bygga och lära ut ett nytt arbetssätt själv, inte bara rulla ut det."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science, with a focus on IT environments",
+      "sv": "Beteendevetenskap, med inriktning mot IT-miljöer"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science with a focus on IT environments: how people and groups work inside organisations, and how you turn that into a requirement profile or a plan a manager can act on. It is the base I work from in a broad HR role.",
+      "sv": "Beteendevetenskap med inriktning mot IT-miljöer: hur människor och grupper fungerar i organisationer, och hur man gör det till en kravprofil eller en plan en chef kan agera på. Det är grunden jag jobbar från i en bred HR-roll."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "HR",
+      { "en": "People & Culture", "sv": "People & Culture" },
+      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
+      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
+      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+      "Employer Branding",
+      { "en": "Communication", "sv": "Kommunikation" },
+      { "en": "Project Management", "sv": "Projektledning" },
+      { "en": "Learning & Development", "sv": "Learning & Development" },
+      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      { "en": "Learning Management Systems (LMS)", "sv": "Learning Management Systems (LMS)" },
+      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
+      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
+      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
+      { "en": "Builds from zero", "sv": "Bygger från noll" },
+      { "en": "Pedagogical, teaches what I build", "sv": "Pedagogisk, lär ut det jag bygger" },
+      { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Curiosity, structure and being someone people can bring things to. None of that shows up in a CV, so here is the rest, including that there is always music on somewhere in the background.",
+      "sv": "Nyfikenhet, struktur och att vara någon folk vågar komma till. Inget av det syns i ett CV, så här är resten, inklusive att det alltid är musik på någonstans i bakgrunden."
+    },
+    "#contact .sec-title": {
+      "en": "About the HR Generalist role",
+      "sv": "Om rollen som HR-generalist"
+    },
+    "#contact .sec-lead": {
+      "en": "It's an HR Generalist role at NCC in Gothenburg, a fixed-term cover of about a year with good chances of extension, working alongside another HR colleague close to the business in the West region. The formal application goes through NCC, closing 30 September 2026. This page is the same background, arranged for the role. If you want to talk about the HR generalist work I've done, or anything else on the page, get in touch here. I answer quickly.",
+      "sv": "Det är en roll som HR-generalist på NCC i Göteborg, ett vikariat på ungefär ett år med goda möjligheter till förlängning, tillsammans med ytterligare en HR-kollega nära verksamheten i region Väst. Den formella ansökan går via NCC, sista ansökningsdag 30 september 2026. Den här sidan är samma bakgrund, ordnad för rollen. Vill du prata om HR-generalistarbetet jag gjort, eller om något annat på sidan, hör av dig här. Jag svarar snabbt."
+    },
+    "#contact .contact-facts span": [
+      { "en": "Gothenburg, Sweden", "sv": "Göteborg, Sverige" },
+      { "en": "Swedish & English", "sv": "Svenska & engelska" },
+      { "en": "BSc. Behavioural Science", "sv": "Kand. beteendevetenskap" },
+      { "en": "Applying for: HR Generalist, NCC", "sv": "Söker: HR-generalist, NCC" }
+    ]
+  }
+}
