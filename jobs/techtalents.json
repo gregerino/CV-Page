@@ -1,0 +1,306 @@
+{
+  "company": "Tech Talents",
+  "roleName": "Consultant Manager/Tech Recruiter",
+
+  "eyebrow": {
+    "en": "Application · Consultant Manager/Tech Recruiter · Tech Talents Göteborg",
+    "sv": "Ansökan · Consultant Manager/Tech Recruiter · Tech Talents Göteborg"
+  },
+  "role": {
+    "en": "Recruitment alongside personnel responsibility for a consultant group",
+    "sv": "Rekrytering tillsammans med personalansvar för en konsultgrupp"
+  },
+  "lead": {
+    "en": "I've recruited for consulting and tech companies for several years now, and for a year and a half I combined that with personnel responsibility for a consultant group of 15+ people. I like that mix: running a process on my own from the requirement profile onward, staying close to clients, and also being someone a consultant can turn to.",
+    "sv": "Jag har rekryterat åt konsult- och techbolag i flera år nu, och under ett och ett halvt år kombinerade jag det med personalansvar för en konsultgrupp på 15+ personer. Jag gillar den kombinationen: att driva en process själv från kravprofilen och framåt, hålla nära kontakt med kunder, och samtidigt vara någon en konsult kan vända sig till."
+  },
+  "cta": {
+    "en": "See how my background fits the role",
+    "sv": "Se hur min bakgrund passar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I fit", "sv": "Hur jag passar in" },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen frågar efter"
+  },
+  "matchLead": {
+    "en": "Each requirement from the ad, and where my experience lines up with it.",
+    "sv": "Varje krav från annonsen, och var min erfarenhet stämmer in."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "Driving a process on my own, start to finish",
+        "sv": "Att driva en process själv, från start till mål"
+      },
+      "quote": {
+        "en": "Du driver självständigt hela rekryteringsprocessen, från kravprofilsmöte och search till kandidatdialog, tillsättning och onboarding.",
+        "sv": "Du driver självständigt hela rekryteringsprocessen, från kravprofilsmöte och search till kandidatdialog, tillsättning och onboarding."
+      },
+      "body": {
+        "en": "I've run full recruitment processes on my own, from the requirement profile through search and candidate dialogue to a placed and onboarded hire. I've done this across several roles at once, and I built the onboarding steps myself in more than one of them.",
+        "sv": "Jag har drivit fullständiga rekryteringsprocesser på egen hand, från kravprofil via search och kandidatdialog till en tillsatt och onboardad kandidat. Jag har gjort det parallellt över flera roller, och jag har byggt onboardingstegen själv i mer än en av dem."
+      }
+    },
+    {
+      "title": {
+        "en": "Personnel responsibility for a consultant group",
+        "sv": "Personalansvar för en konsultgrupp"
+      },
+      "quote": {
+        "en": "Som Consultant Manager har du personalansvar för din konsultgrupp och arbetar för att skapa en bra upplevelse under konsulternas tid hos Tech Talents.",
+        "sv": "Som Consultant Manager har du personalansvar för din konsultgrupp och arbetar för att skapa en bra upplevelse under konsulternas tid hos Tech Talents."
+      },
+      "body": {
+        "en": "For a year and a half I was part of a management team with personnel responsibility for a consultant group of 15+ people. I kept regular contact with the consultants themselves, not only the clients they worked for, and built an onboarding framework so their start was a good one.",
+        "sv": "Under ett och ett halvt år var jag del av en ledningsgrupp med personalansvar för en konsultgrupp på 15+ personer. Jag höll löpande kontakt med konsulterna själva, inte bara kunderna de arbetade hos, och byggde ett onboardingramverk så att starten blev bra."
+      }
+    },
+    {
+      "title": {
+        "en": "Reaching out before a candidate is looking",
+        "sv": "Att höra av mig innan en kandidat söker jobb"
+      },
+      "quote": {
+        "en": "Proaktivt identifiera, kontakta och bygga relationer med relevanta kandidater.",
+        "sv": "Proaktivt identifiera, kontakta och bygga relationer med relevanta kandidater."
+      },
+      "body": {
+        "en": "I've sourced and reached out to candidates directly for years, keeping a pipeline going rather than waiting for applications to arrive. I built a tool that searches GitHub, portfolios and technical blogs for candidates and ranks them against what I'm looking for.",
+        "sv": "Jag har sourcat och hört av mig direkt till kandidater i flera år, och hållit en pipeline igång istället för att vänta in ansökningar. Jag har byggt ett verktyg som söker igenom GitHub, portfolios och tekniska bloggar efter kandidater och rankar dem mot det jag letar efter."
+      }
+    },
+    {
+      "title": {
+        "en": "Getting to know a client's team, not just the role",
+        "sv": "Att lära känna kundens team, inte bara rollen"
+      },
+      "quote": {
+        "en": "Bygga nära och långsiktiga relationer med våra kunder. Förstå kundernas verksamhet, teknik och kompetensbehov.",
+        "sv": "Bygga nära och långsiktiga relationer med våra kunder. Förstå kundernas verksamhet, teknik och kompetensbehov."
+      },
+      "body": {
+        "en": "I've coordinated closely with clients throughout a hiring process and acted as an advisor to hiring managers on competence and cultural fit, not just handed over a shortlist. Understanding what a client's team actually works with has mattered as much as understanding the candidate.",
+        "sv": "Jag har samarbetat nära med kunder genom hela rekryteringsprocessen och agerat rådgivare till rekryterande chefer kring kompetens och kulturell passform, inte bara lämnat en kandidatlista. Att förstå vad kundens team faktiskt arbetar med har spelat lika stor roll som att förstå kandidaten."
+      }
+    },
+    {
+      "title": {
+        "en": "A few years in consulting and recruitment",
+        "sv": "Några år inom konsult- och rekryteringsbranschen"
+      },
+      "quote": {
+        "en": "Minst två års erfarenhet av konsult- och rekryteringsbranschen som konsultchef, rekryterare eller kundansvarig.",
+        "sv": "Minst två års erfarenhet av konsult- och rekryteringsbranschen som konsultchef, rekryterare eller kundansvarig."
+      },
+      "body": {
+        "en": "I've spent the last several years in roles at consulting and recruitment companies, including one where the title itself was Consultant Manager and another where I was responsible for client relationships alongside recruitment. Well past the two years the ad asks for.",
+        "sv": "Jag har tillbringat de senaste åren i roller hos konsult- och rekryteringsbolag, bland annat en där titeln var just Konsultansvarig och en till där jag ansvarade för kundrelationer parallellt med rekrytering. Klart mer än de två år annonsen efterfrågar."
+      }
+    },
+    {
+      "title": {
+        "en": "Technical roles, in two languages",
+        "sv": "Tekniska roller, på två språk"
+      },
+      "quote": {
+        "en": "Meriterande om du har arbetat inom IT eller teknik och har erfarenhet av att rekrytera tekniska kompetenser. Mycket goda kunskaper i svenska och engelska, både i tal och skrift.",
+        "sv": "Meriterande om du har arbetat inom IT eller teknik och har erfarenhet av att rekrytera tekniska kompetenser. Mycket goda kunskaper i svenska och engelska, både i tal och skrift."
+      },
+      "body": {
+        "en": "Nearly every role I've filled has been technical, from developers to engineers, at IT and tech consulting companies. Swedish is my first language, and I use English every day at work, so moving between the two isn't something I have to think about.",
+        "sv": "Nästan varje roll jag tillsatt har varit teknisk, från utvecklare till ingenjörer, hos IT- och teknikkonsultbolag. Svenska är mitt modersmål, och jag använder engelska varje dag i jobbet, så att växla mellan de två är inget jag behöver tänka på."
+      }
+    }
+  ],
+
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I fit",
+      "sv": "Hur jag passar in"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I fit",
+      "sv": "Hur jag passar in"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Recruitment experience, including personnel responsibility for a consultant group",
+      "sv": "Erfarenhet av rekrytering, inklusive personalansvar för en konsultgrupp"
+    },
+    "#top .stat-num": ["7+", "15+", "3"],
+    "#top .stat-label": [
+      {
+        "en": "Years working in recruitment, HR and Learning & Development",
+        "sv": "År i rekrytering, HR och Learning & Development"
+      },
+      {
+        "en": "Consultants I supported as part of a management team",
+        "sv": "Konsulter jag stöttade som del av en ledningsgrupp"
+      },
+      {
+        "en": "Roles recruiting for IT and technical consulting companies",
+        "sv": "Roller med rekrytering åt IT- och teknikkonsultbolag"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What is his experience managing a consultant group?",
+        "sv": "Vad har han för erfarenhet av att leda en konsultgrupp?"
+      },
+      {
+        "en": "Has he recruited for consulting and tech companies?",
+        "sv": "Har han rekryterat åt konsult- och techbolag?"
+      },
+      {
+        "en": "What has he done with candidate sourcing?",
+        "sv": "Vad har han gjort inom kandidatsourcing?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my recruitment background",
+      "sv": "Fråga om min bakgrund inom rekrytering"
+    },
+    "#about .sec-title": {
+      "en": "Recruitment, alongside personnel responsibility",
+      "sv": "Rekrytering, tillsammans med personalansvar"
+    },
+    "#about .about-quote": {
+      "en": "I like combining hands-on recruitment with being someone a consultant can turn to.",
+      "sv": "Jag gillar att kombinera rekrytering på golvet med att vara någon en konsult kan vända sig till."
+    },
+    "#about .about-body": [
+      {
+        "en": "I've run full recruitment processes on my own, from the first conversation with a hiring manager to a placed candidate. I like finding someone who isn't looking and matching them to a role that actually fits, more than working through a list of applicants.",
+        "sv": "Jag har drivit fullständiga rekryteringsprocesser på egen hand, från första samtalet med en rekryterande chef till en tillsatt kandidat. Jag gillar att hitta någon som inte söker jobb och matcha personen mot en roll som faktiskt passar, mer än att arbeta mig igenom en lista med sökande."
+      },
+      {
+        "en": "For a year and a half I also had personnel responsibility for a consultant group of 15+ people, as part of a management team. That meant staying in regular contact with the consultants themselves, not just the clients they worked for, and building an onboarding process that gave them a good start.",
+        "sv": "Under ett och ett halvt år hade jag även personalansvar för en konsultgrupp på 15+ personer, som en del av en ledningsgrupp. Det innebar löpande kontakt med konsulterna själva, inte bara kunderna de jobbade hos, och att bygga en onboardingprocess som gav dem en bra start."
+      },
+      {
+        "en": "Most of this has happened at consulting and recruitment companies in IT and tech, matching people against a client's specific needs. Understanding what a client's team actually works with has mattered as much as understanding the candidate.",
+        "sv": "Det mesta av det här har hänt hos konsult- och rekryteringsbolag inom IT och tech, med matchning mot en kunds specifika behov. Att förstå vad kundens team faktiskt arbetar med har spelat lika stor roll som att förstå kandidaten."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Driving a recruitment process on my own, start to finish",
+        "sv": "Att driva en rekryteringsprocess själv, från start till mål"
+      },
+      {
+        "en": "Being someone a consultant can turn to",
+        "sv": "Att vara någon en konsult kan vända sig till"
+      },
+      {
+        "en": "Reaching out to someone who isn't actively looking",
+        "sv": "Att höra av mig till någon som inte aktivt söker jobb"
+      },
+      {
+        "en": "Getting to know a client's team and their needs",
+        "sv": "Att lära känna en kunds team och behov"
+      },
+      {
+        "en": "Keeping a pipeline going for roles that haven't opened yet",
+        "sv": "Att hålla en pipeline igång för roller som inte öppnat än"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "Some of this recruitment work I built together with colleagues along the way. Some I built on my own with AI, including a sourcing tool that looks for candidates across GitHub, portfolios and technical blogs, and Recruitment OS, which turns a requirement profile into an interview package.",
+      "sv": "En del av det här rekryteringsarbetet har jag byggt tillsammans med kollegor på vägen. En del har jag byggt själv med AI, bland annat ett sourcingverktyg som letar efter kandidater på GitHub, portfolios och tekniska bloggar, och Recruitment OS, som gör om en kravprofil till ett intervjupaket."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-text": {
+      "en": "You type what you're looking for, in free text or with filters, and the tool searches through GitHub, portfolios and technical blogs to find and rank candidates that match, even when they've described themselves in different words than you used. The search runs in the background, and you can save candidates, write notes, track where they are in the process and export the results.",
+      "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Sökningen körs i bakgrunden, och du kan spara kandidater, skriva anteckningar, följa var de är i processen och exportera resultatet."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
+      "en": "QuestLog — a project tool with gamification",
+      "sv": "QuestLog — projektverktyg med gamification"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
+      "en": "A scrum and kanban board where progress is rewarded with levels, to keep motivation up over time. It runs as a desktop application and as a web version, with login and sync between devices.",
+      "sv": "En scrum- och kanbantavla där framsteg belönas med nivåer, för att hålla motivationen uppe över tid. Den finns som skrivbordsapp och som webbversion, med inloggning och synk mellan enheter."
+    },
+    "#experience .sec-lead": {
+      "en": "I've recruited in most of the roles below, several of them at consulting companies in IT and tech, and for a year and a half I combined that with personnel responsibility for a consultant group.",
+      "sv": "Jag har rekryterat i de flesta av rollerna nedan, flera av dem hos konsultbolag inom IT och tech, och under ett och ett halvt år kombinerade jag det med personalansvar för en konsultgrupp."
+    },
+    "#education .sec-title": {
+      "en": "A degree that helps me read people",
+      "sv": "En utbildning som hjälper mig läsa människor"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits. It's given me a way to think about how people and requirement profiles fit together.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp. Den har gett mig ett sätt att tänka kring hur människor och kravprofiler passar ihop."
+      },
+      {
+        "en": "Certified education manager. It comes in handy when I need to explain a process to a consultant or a client, step by step.",
+        "sv": "Certifierad utbildningsledare. Den kommer väl till pass när jag behöver förklara en process för en konsult eller kund, steg för steg."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science, in practice",
+      "sv": "Beteendevetenskap, i praktiken"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science gave me a way of thinking about people and groups that I still lean on: how to turn that into a requirement profile or a candidate assessment a hiring manager can actually use.",
+      "sv": "Beteendevetenskapen gav mig ett sätt att tänka kring människor och grupper som jag fortfarande lutar mig mot: hur man gör det till en kravprofil eller kandidatbedömning en rekryterande chef faktiskt kan använda."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
+      "People & Culture",
+      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+      "HR",
+      "Employer Branding",
+      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+      { "en": "Communication", "sv": "Kommunikation" },
+      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
+      { "en": "Project Management", "sv": "Projektledning" },
+      "Learning & Development",
+      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      "Learning Management Systems (LMS)",
+      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
+      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
+      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
+      { "en": "Builds from zero", "sv": "Bygger från noll" },
+      { "en": "AI-native day to day", "sv": "AI-native i vardagen" },
+      { "en": "Pedagogical, teaches what I build", "sv": "Pedagogisk, lär ut det jag bygger" }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Curiosity, and trying to be someone people feel comfortable talking to, whether they're a candidate, a client or a consultant. None of that shows up in a CV, so here's a bit more, including that there's usually music playing somewhere in the background.",
+      "sv": "Nyfikenhet, och att försöka vara någon folk känner sig bekväma att prata med, oavsett om de är kandidat, kund eller konsult. Inget av det syns i ett CV, så här kommer lite mer, inklusive att det oftast är musik på någonstans i bakgrunden."
+    },
+    "#contact .sec-title": {
+      "en": "About the Consultant Manager/Tech Recruiter role",
+      "sv": "Om rollen som Consultant Manager/Tech Recruiter"
+    },
+    "#contact .sec-lead": {
+      "en": "It's a permanent, full-time Consultant Manager/Tech Recruiter role at Tech Talents in Gothenburg, starting autumn 2026. They're recruiting on a rolling basis ahead of the 30 October 2026 deadline, and the formal application goes through Tech Talents. This page is the same background as my CV, just arranged around the role. If you'd like to talk about any of it, feel free to reach out here. I usually answer quickly.",
+      "sv": "Det är en tillsvidareanställning på heltid som Consultant Manager/Tech Recruiter hos Tech Talents i Göteborg, med start hösten 2026. De tillämpar löpande urval inför sista ansökningsdatum 2026-10-30, och den formella ansökan går via Tech Talents. Den här sidan är samma bakgrund som mitt CV, bara ordnad kring rollen. Vill du prata om något av det, hör gärna av dig här. Jag brukar svara snabbt."
+    },
+    "#contact .contact-facts span": [
+      { "en": "Gothenburg, Sweden", "sv": "Göteborg, Sverige" },
+      { "en": "Swedish & English", "sv": "Svenska & engelska" },
+      { "en": "BSc. Behavioural Science", "sv": "Kand. beteendevetenskap" },
+      { "en": "Applying for: Consultant Manager/Tech Recruiter, Tech Talents", "sv": "Söker: Consultant Manager/Tech Recruiter, Tech Talents" }
+    ]
+  }
+}
