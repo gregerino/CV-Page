@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* AQ Engineering — Talent Acquisition Specialist, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /aqengineering and by cv.html?job=aqengineering, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is AQ's own, read off their live careers site
+   (aqengineering.teamtailor.com):
+     #ed2e38  the brand red — the dominant background colour sampled across
+               their logo mark, hero, buttons and category tags
+     #252525  the near-black their own body copy is set in
+     #f4f4f4  a light neutral grey for banding
+     Roboto   the whole of their site's type
+
+   Their identity is a confident, saturated red on white, with a dark warm
+   grey (not blue-black) for weight. Clean and industrial, no serif.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: white, banded with a light neutral grey. */
+  --bg:            #ffffff;
+  --bg2:           #f4f4f4;
+  --bg3:           #e9e9e9;
+  --white:         #ffffff;
+
+  --border:        rgba(37,37,37,0.14);
+  --border-light:  rgba(37,37,37,0.08);
+  --border-strong: rgba(37,37,37,0.30);
+
+  /* Headings and body in their own near-black, not a cold blue-black. */
+  --ink:           #1c1c1c;
+  --ink-mid:       #252525;
+  --ink-light:     #5c5c5c;
+  --ink-dim:       #8f8f8f;
+
+  /* Their one brand red, sampled straight from the logo mark and hero. The
+     hover state goes a shade deeper rather than lighter, so a filled button
+     never washes out to pink. */
+  --amber:         #ed2e38;
+  --amber-light:   #c9232c;
+
+  /* Every wash, tint and glow on the page is mixed from these. */
+  --accent-rgb:    237,46,56;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 6px rgba(28,28,28,0.10), 0 1px 3px rgba(28,28,28,0.06);
+  --shadow-sm:     0 1px 3px rgba(28,28,28,0.08);
+  --shadow-lg:     0 8px 34px rgba(28,28,28,0.14);
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(253,231,231,0.92) 40%,
+    rgba(249,196,199,0.87) 70%,
+    rgba(240,130,136,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ed2e38' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Roboto is the whole of AQ's own type, at every weight. It replaces both
+     the base serif and the base sans so nothing on the page falls back to
+     Lora. */
+  --serif: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* aqengineering.teamtailor.com sets its own headings in a regular weight
+   rather than a heavy display cut — Roboto at 500 still reads confidently
+   at display sizes, so no extra tracking is needed the way a heavier face
+   would want. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 500; }
+
+/* Their red rule under the fixed header. */
+.nav { box-shadow: inset 0 -2px 0 #ed2e38; }
+
+/* The timeline runs down in their red. */
+.timeline::before {
+  background: linear-gradient(to bottom, #ed2e38, rgba(237,46,56,0.30) 60%, transparent);
+}
+
+.job::before { border-color: #ed2e38; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I fit", on AQ's own red
+   ─────────────────────────────────────────────────────────────────────────
+   This is the section the whole page exists for, so it gets AQ's own
+   saturated red instead of the base page's alternating band, echoing the
+   red hero on their careers site. The point cards sit opaque white on top,
+   each with a red edge down its left.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #ed2e38;
+  border-top: 1px solid #ed2e38;
+}
+#match + .band { border-top: 1px solid #ed2e38; }
+
+#match .eyebrow   { color: #ffd9db; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.86); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+#match .point { border-left: 3px solid #ed2e38; }
+#match .point-num { color: #ed2e38; }
+
+/* "What I've built" swaps QuestLog for the sourcing tool (see
+   jobs/aqengineering.json), so the recruiter-relevant one leads. The GitHub
+   link lives in the base HTML on card 2 (QuestLog's slot) and doesn't apply
+   to the sourcing tool that now sits there — card 3 has no link to begin
+   with, so QuestLog simply loses its link on this page. */
+#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-link {
+  display: none;
+}
