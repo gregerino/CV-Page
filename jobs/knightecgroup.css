@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Knightec Group — Talent Acquisition Specialist, Software & Cloud, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /knightecgroup and by cv.html?job=knightecgroup, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is Knightec's own, read off their live sites:
+     #f9f7f3  the warm off-white "paper" both knightecgroup.com and their
+               Teamtailor-hosted career site share as the page background
+     #191919  the near-black their body copy and headings are set in
+     #ffa600  the single accent colour, sampled directly from the dot over
+               the "i" in their wordmark and confirmed as their focus-ring
+               colour on knightecgroup.com
+
+   Their identity is minimal and confident: warm cream paper, near-black
+   type, a geometric sans (Century Gothic in their own CSS, "century-gothic-
+   *"), fully rounded pill buttons, and exactly one accent colour used
+   sparingly. Jost stands in for Century Gothic here, since Century Gothic
+   itself isn't available as a web font — same geometric skeleton, single-
+   storey letterforms, circular O.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: warm cream, banded with slightly deeper warm greys of the same
+     temperature — never cool grey, which would clash with their off-white. */
+  --bg:            #f9f7f3;
+  --bg2:           #f1ece2;
+  --bg3:           #e7dfd0;
+  --white:         #ffffff;
+
+  --border:        rgba(25,25,25,0.14);
+  --border-light:  rgba(25,25,25,0.08);
+  --border-strong: rgba(25,25,25,0.30);
+
+  /* Their own body copy sits in near-black, not pure black. */
+  --ink:           #191919;
+  --ink-mid:       #2e2e2e;
+  --ink-light:     #6b6b6b;
+  --ink-dim:       #9a9a9a;
+
+  /* Their one accent, sampled from the logo dot. Already close to fully
+     saturated, so the hover state goes a shade deeper rather than lighter,
+     to avoid washing it out to a pastel. */
+  --amber:         #ffa600;
+  --amber-light:   #db8e00;
+
+  /* Every wash, tint and glow on the page is mixed from these. */
+  --accent-rgb:    255,166,0;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        249,247,243;
+
+  --shadow:        0 2px 6px rgba(25,25,25,0.08), 0 1px 3px rgba(25,25,25,0.05);
+  --shadow-sm:     0 1px 3px rgba(25,25,25,0.07);
+  --shadow-lg:     0 8px 34px rgba(25,25,25,0.12);
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(249,247,243,0.96) 0%,
+    rgba(252,238,214,0.92) 40%,
+    rgba(250,224,180,0.87) 70%,
+    rgba(247,200,140,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffa600' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Jost, in place of the geometric sans their own site sets everything in.
+     It replaces both the base serif and the base sans so nothing on the
+     page falls back to Lora. */
+  --serif: 'Jost', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Jost', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Their headings sit in a medium weight rather than a heavy display cut —
+   Jost at 500 still reads confidently at display sizes. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 500; }
+
+/* Their orange rule under the fixed header. */
+.nav { box-shadow: inset 0 -2px 0 #ffa600; }
+
+/* The timeline runs down in their accent. */
+.timeline::before {
+  background: linear-gradient(to bottom, #ffa600, rgba(255,166,0,0.30) 60%, transparent);
+}
+
+.job::before { border-color: #ffa600; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I fit", on their near-black
+   ─────────────────────────────────────────────────────────────────────────
+   This is the section the whole page exists for, so it gets Knightec's
+   darkest tone instead of the base page's alternating band. The point
+   cards sit opaque white on top, each with an accent edge down its left —
+   the same cream-paper / near-black / one-accent logic as the rest of
+   their identity, just inverted for contrast.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #191919;
+  border-top: 1px solid #191919;
+}
+#match + .band { border-top: 1px solid #191919; }
+
+#match .eyebrow   { color: #ffc766; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.74); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.30);
+}
+
+#match .point { border-left: 3px solid #ffa600; }
+#match .point-num { color: #ffa600; }
+
+/* jobs/knightecgroup.json drops the "15+ consultants" stat, shrinking
+   #top .stat-num / .stat-label from 3 entries to 2. job.js only empties
+   those two children — it leaves their wrapper .stat in the DOM — so the
+   now-empty third box is hidden here and the strip runs two columns
+   instead of three. */
+.stat-strip { grid-template-columns: repeat(2, 1fr); }
+.stat-strip .stat:nth-child(3) { display: none; }
+.stat-strip .stat:nth-child(2) { border-right: none; border-bottom: none; }
