@@ -161,12 +161,14 @@
     if (window.CVSite) window.CVSite.watchReveals(host);
   }
 
-  // "Roles I've recruited for": a card of grouped pills, placed in Experience
-  // between the section heading and the timeline. The base page has no such
-  // block, so it only exists on packs that bring one.
+  // "Roles I've recruited for": a card of grouped pills in Experience, between
+  // the section heading and the timeline. The base page has its own; a pack
+  // that brings `roles` replaces it.
   function buildRoles(roles) {
     var timeline = document.querySelector('#experience .timeline');
     if (!timeline) return;
+    var base = document.querySelector('#experience .roles-card');
+    if (base) base.parentNode.removeChild(base);
 
     var card = el('div', 'card roles-card reveal');
     if (roles.title) card.appendChild(text('h3', 'roles-title', roles.title));

@@ -36,15 +36,15 @@ keeps working. A plain string is used for both languages.
 | `company`, `roleName` | Used to build the browser tab title |
 | `pageTitle` | Sets the tab title outright, instead of `company` / `roleName` |
 | `text` | Any other text on the page, keyed by CSS selector — see below |
-| `roles` | Optional "Roles I've recruited for" card, built into Experience above the timeline — see below |
+| `roles` | Replaces the "Roles I've recruited for" card in Experience — see below |
 
 Each entry in `points` takes `title`, `quote` and `body`. `quote` is the
 requirement lifted from the ad; `body` is the evidence that you already do it.
 
-`roles` takes an optional `title` and `lead`, and `groups`: each group has a
-`label` and `items`, a list of role names shown as pills. The base page has no
-such card, so it only appears on packs that bring one. `jobbusters.json` is the
-worked example.
+The base page has a "Roles I've recruited for" card in Experience, above the
+timeline, so every pack shows it. A pack that needs a different selection can
+bring `roles`, which replaces the card: an optional `title` and `lead`, and
+`groups`, each with a `label` and `items` (role names, shown as pills).
 
 ## Retuning the rest of the page
 
