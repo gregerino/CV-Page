@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/* Consat — People & Talent Partner, Partille
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /consat and by cv.html?job=consat, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is Consat's own, read off two places:
+     #016984  --company-color on their Teamtailor career site, and the most
+               used brand colour on consat.se: a deep petrol blue on every
+               button, link and heading accent
+     #017d9d  --company-button-bg-light-5-color, the hover state
+     #02a5d0  --company-button-bg-light-15-color, the lightest shade
+     #94fff7  the bright mint consat.se sets against the petrol
+     #292929  the near-black their body copy is set in
+     #efefef  the light grey they band sections with
+
+   Their identity is clean and technical: white pages, dark grey type,
+   petrol doing the work, mint as a small highlight, and square corners
+   (--company-border-radius: 0px). consat.se sets its type in Figtree;
+   the career site uses Inter, which is already the base page's sans.
+   Figtree replaces the serif so the headings read like their site.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: white, banded with their light grey and a faint petrol tint. */
+  --bg:            #ffffff;
+  --bg2:           #f5f7f8;
+  --bg3:           #efefef;
+  --white:         #ffffff;
+
+  --border:        rgba(1,105,132,0.14);
+  --border-light:  rgba(1,105,132,0.08);
+  --border-strong: rgba(1,105,132,0.30);
+
+  --ink:           #1a1a1a;
+  --ink-mid:       #292929;
+  --ink-light:     #575760;
+  --ink-dim:       #93939c;
+
+  /* The petrol. Dark enough for body-sized text and white button labels. */
+  --amber:         #016984;
+  --amber-light:   #017d9d;
+
+  --accent-rgb:    1,105,132;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 10px rgba(0,45,58,0.08), 0 1px 3px rgba(0,45,58,0.05);
+  --shadow-sm:     0 1px 4px rgba(0,45,58,0.07);
+  --shadow-lg:     0 10px 36px rgba(0,45,58,0.14);
+
+  /* Square corners, as on both their sites. */
+  --radius:        0px;
+  --radius-lg:     0px;
+  --radius-pill:   0px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(245,247,248,0.93) 40%,
+    rgba(222,236,240,0.88) 70%,
+    rgba(196,224,231,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23016984' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Figtree headings at 700, a touch tighter at display sizes. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 700; letter-spacing: -0.015em; }
+
+/* Italic Figtree reads as a slant, not a voice — keep these upright. */
+.hero-role,
+.about-quote { font-style: normal; }
+
+.nav { box-shadow: inset 0 -2px 0 #016984; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #016984, rgba(1,105,132,0.25) 60%, transparent);
+}
+.job::before { border-color: #016984; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their petrol
+   ─────────────────────────────────────────────────────────────────────────
+   The section the page exists for gets a solid petrol band, with the mint
+   they pair it with on the small marks, and white square cards on top.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #016984;
+  border-top: 1px solid #016984;
+}
+#match + .band { border-top: 1px solid #016984; }
+
+#match .eyebrow   { color: #94fff7; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.80); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: 0 10px 30px rgba(0,30,40,0.30);
+}
+#match .point { border-left: 3px solid #94fff7; }
+#match .point-num { color: #016984; }
