@@ -104,6 +104,7 @@
     put('#match .sec-lead', job.matchLead);
 
     if (Array.isArray(job.points) && job.points.length) buildPoints(job.points);
+    if (job.roles && Array.isArray(job.roles.groups)) buildRoles(job.roles);
 
     if (job.text) applyText(job.text);
 
@@ -158,6 +159,34 @@
     });
 
     if (window.CVSite) window.CVSite.watchReveals(host);
+  }
+
+  // "Roles I've recruited for": a card of grouped pills, placed in Experience
+  // between the section heading and the timeline. The base page has no such
+  // block, so it only exists on packs that bring one.
+  function buildRoles(roles) {
+    var timeline = document.querySelector('#experience .timeline');
+    if (!timeline) return;
+
+    var card = el('div', 'card roles-card reveal');
+    if (roles.title) card.appendChild(text('h3', 'roles-title', roles.title));
+    if (roles.lead) card.appendChild(text('p', 'roles-lead', roles.lead));
+
+    var grid = el('div', 'roles-grid');
+    roles.groups.forEach(function (g) {
+      var group = el('div', 'roles-group');
+      group.appendChild(text('p', 'tool-label', g.label));
+      var row = el('div', 'pill-row');
+      (g.items || []).forEach(function (item) {
+        row.appendChild(text('span', 'pill', item));
+      });
+      group.appendChild(row);
+      grid.appendChild(group);
+    });
+    card.appendChild(grid);
+
+    timeline.parentNode.insertBefore(card, timeline);
+    if (window.CVSite) window.CVSite.watchReveals(card.parentNode);
   }
 
   function el(tag, className) {

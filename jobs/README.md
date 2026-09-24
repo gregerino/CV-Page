@@ -36,9 +36,15 @@ keeps working. A plain string is used for both languages.
 | `company`, `roleName` | Used to build the browser tab title |
 | `pageTitle` | Sets the tab title outright, instead of `company` / `roleName` |
 | `text` | Any other text on the page, keyed by CSS selector — see below |
+| `roles` | Optional "Roles I've recruited for" card, built into Experience above the timeline — see below |
 
 Each entry in `points` takes `title`, `quote` and `body`. `quote` is the
 requirement lifted from the ad; `body` is the evidence that you already do it.
+
+`roles` takes an optional `title` and `lead`, and `groups`: each group has a
+`label` and `items`, a list of role names shown as pills. The base page has no
+such card, so it only appears on packs that bring one. `jobbusters.json` is the
+worked example.
 
 ## Retuning the rest of the page
 
