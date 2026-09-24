@@ -1,0 +1,116 @@
+/* JobBusters — Senior Talent Acquisition Specialist (konsultuppdrag), Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /jobbusters and by cv.html?job=jobbusters, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is JobBusters' own, read off the CSS variables on their
+   Teamtailor career site (jobbusters.se):
+     #4d2e6e  --company-color / --company-button-bg-color: the deep purple
+               on every button, link and their wordmark
+     #5a3680  --company-button-bg-light-5-color, the hover state
+     #7345a4  --company-button-bg-light-15-color, the lightest shade they use
+     #252525  the near-black most of their body copy is set in
+     #ffffff  the paper, everywhere
+
+   Their identity is plain and friendly: white pages, black type, one purple
+   doing all the work, Inter throughout (header weight 700), and a 15px
+   corner radius on buttons and cards instead of full pills. Inter is
+   already the base page's sans, so it only needs to replace the serif.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Paper: white, banded with faint lavender tints of their purple rather
+     than neutral grey, so the bands belong to the same family. */
+  --bg:            #ffffff;
+  --bg2:           #f7f4fa;
+  --bg3:           #efe9f5;
+  --white:         #ffffff;
+
+  --border:        rgba(77,46,110,0.14);
+  --border-light:  rgba(77,46,110,0.08);
+  --border-strong: rgba(77,46,110,0.30);
+
+  --ink:           #1a1a1a;
+  --ink-mid:       #252525;
+  --ink-light:     #5f5a66;
+  --ink-dim:       #97919f;
+
+  /* Their one accent. Dark enough to carry body-sized text and white
+     button labels, so it can sit everywhere the base accent does. */
+  --amber:         #4d2e6e;
+  --amber-light:   #7345a4;
+
+  --accent-rgb:    77,46,110;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 10px rgba(45,25,70,0.08), 0 1px 3px rgba(45,25,70,0.05);
+  --shadow-sm:     0 1px 4px rgba(45,25,70,0.07);
+  --shadow-lg:     0 10px 36px rgba(45,25,70,0.14);
+
+  /* Their 15px corner, on buttons, cards and pills alike. */
+  --radius:        15px;
+  --radius-lg:     15px;
+  --radius-pill:   15px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(247,244,250,0.93) 40%,
+    rgba(234,225,243,0.88) 70%,
+    rgba(215,200,232,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234d2e6e' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Inter for everything, as on their site. */
+  --serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Their headings are Inter 700, set a touch tighter at display sizes. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 700; letter-spacing: -0.015em; }
+
+/* Italic Inter reads as a slant, not a voice — keep the role line upright. */
+.hero-role,
+.about-quote { font-style: normal; }
+
+.nav { box-shadow: inset 0 -2px 0 #4d2e6e; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #4d2e6e, rgba(77,46,110,0.25) 60%, transparent);
+}
+.job::before { border-color: #4d2e6e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their purple
+   ─────────────────────────────────────────────────────────────────────────
+   The section the page exists for gets the colour their own job ads open
+   with: a solid purple band, white headings, and white cards on top with
+   a purple edge down the left.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #4d2e6e;
+  border-top: 1px solid #4d2e6e;
+}
+#match + .band { border-top: 1px solid #4d2e6e; }
+
+#match .eyebrow   { color: #d9c8ee; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.78); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: 0 10px 30px rgba(20,8,35,0.30);
+}
+#match .point { border-left: 3px solid #7345a4; }
+#match .point-num { color: #4d2e6e; }
