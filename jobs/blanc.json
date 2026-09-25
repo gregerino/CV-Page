@@ -32,12 +32,12 @@
   "points": [
     {
       "title": {
-        "en": "The whole process, from need to hire",
-        "sv": "Hela processen, från behov till tillsättning"
+        "en": "The whole process, run on my own",
+        "sv": "Hela processen, som jag driver själv"
       },
       "quote": {
-        "en": "At least 5 years of relevant experience in Talent Acquisition and/or recruitment, with solid experience of the full recruitment process, including sourcing, selection, interviews and candidate assessment.",
-        "sv": "Minst 5 års relevant erfarenhet inom Talent Acquisition och/eller rekrytering, med gedigen erfarenhet av hela rekryteringsprocessen, inklusive sourcing, urval, intervjuer och kandidatbedömning."
+        "en": "Several years of relevant experience in Talent Acquisition, recruitment or competence supply. Documented experience of running recruitment processes independently.",
+        "sv": "Flera års relevant erfarenhet inom Talent Acquisition, rekrytering eller kompetensförsörjning. Dokumenterad erfarenhet av att självständigt driva rekryteringsprocesser."
       },
       "body": {
         "en": "I've had recruitment as my main job in three roles, and run full processes in all of them. That covers everything from the needs analysis with the manager to interviews and candidate assessment. I've also coordinated the interview steps and been the candidates' main contact through the process.",
@@ -46,58 +46,16 @@
     },
     {
       "title": {
-        "en": "Sourcing, and a pipeline before the need is there",
-        "sv": "Sourcing, och en pipeline innan behovet finns"
+        "en": "Screening and assessing candidates",
+        "sv": "Screening och kandidatbedömning"
       },
       "quote": {
-        "en": "Work with sourcing, selection, CV screening and phone interviews. Build and develop candidate networks and pipelines for future competence needs.",
-        "sv": "Arbeta med sourcing, urval, CV-screening och telefonintervjuer. Bygga och utveckla kandidatnätverk och pipelines för framtida kompetensbehov."
+        "en": "Analyse CVs and assess candidates' competence, experience and qualifications. Carry out phone and competency-based screening interviews.",
+        "sv": "Analysera CV och bedöma kandidaters kompetens, erfarenhet och kvalifikationer. Genomföra telefon- och kompetensbaserade screeningintervjuer."
       },
       "body": {
-        "en": "I've sourced proactively in my recruitment roles, mostly developers and engineers who weren't actively looking. I try to keep a pipeline going so there are people to call when a role opens. I've also built my own AI tool for sourcing, which searches GitHub and technical blogs for candidates who match.",
-        "sv": "Jag har jobbat proaktivt med sourcing i mina rekryteringsroller, mest mot utvecklare och ingenjörer som inte aktivt sökte jobb. Jag försöker hålla en pipeline igång så att det finns folk att ringa när en roll öppnar. Jag har också byggt ett eget AI-verktyg för sourcing, som söker igenom GitHub och tekniska bloggar efter kandidater som matchar."
-      }
-    },
-    {
-      "title": {
-        "en": "Job ads and employer branding",
-        "sv": "Annonser och employer branding"
-      },
-      "quote": {
-        "en": "Experience of candidate attraction and recruitment marketing. Write and publish job ads in relevant internal and external channels.",
-        "sv": "Erfarenhet av kandidatattraktion och rekryteringsmarknadsföring. Utforma och publicera platsannonser i relevanta interna och externa kanaler."
-      },
-      "body": {
-        "en": "I've written and published job ads based on what the business needed, and spent time making them clear and relevant to the person reading. When I led the talent acquisition work in an IT consultancy, I worked with employer branding alongside the recruitment. That meant being clear about who we were as an employer and how we showed it externally.",
-        "sv": "Jag har skrivit och publicerat platsannonser utifrån vad verksamheten behövde, och lagt tid på att göra dem tydliga och relevanta för den som läser. När jag ledde talent acquisition-arbetet i ett IT-konsultbolag jobbade jag med employer branding vid sidan av rekryteringen. Det handlade om att vara tydliga med vilka vi var som arbetsgivare och hur vi visade det utåt."
-      }
-    },
-    {
-      "title": {
-        "en": "Close to students on their way into tech",
-        "sv": "Nära studenter på väg in i techbranschen"
-      },
-      "quote": {
-        "en": "Has worked with employer branding, talent pipelines and university recruitment.",
-        "sv": "Har arbetat med employer branding, talent pipelines och universitetsrekrytering."
-      },
-      "body": {
-        "en": "At one of Sweden's largest vocational IT schools I built partnerships with companies and helped students find internships and their first jobs. Later, in an IT consultancy, I helped build a career programme for junior developers. It made it easier for us to attract people early in their career.",
-        "sv": "På en av Sveriges största yrkeshögskolor inom IT byggde jag partnerskap med företag och hjälpte studenter att hitta praktik och sitt första jobb. Senare, i ett IT-konsultbolag, var jag med och byggde ett karriärprogram för juniora utvecklare. Det gjorde det lättare för oss att locka folk tidigt i karriären."
-      }
-    },
-    {
-      "title": {
-        "en": "Competence supply, with a longer view",
-        "sv": "Kompetensförsörjning, med ett längre perspektiv"
-      },
-      "quote": {
-        "en": "Has experience of strategic competence planning and analysis of future recruitment needs.",
-        "sv": "Har erfarenhet av strategisk kompetensplanering och analys av framtida rekryteringsbehov."
-      },
-      "body": {
-        "en": "In a fast-growing IT consultancy I sat on the management team and was responsible for how we worked with talent acquisition, including the processes and bringing in an ATS. At the vocational school I saw competence supply from the other side. There I matched the programmes to what companies needed.",
-        "sv": "I ett snabbväxande IT-konsultbolag satt jag i ledningsgruppen och ansvarade för hur vi jobbade med talent acquisition, bland annat processerna och införandet av ett ATS. På yrkeshögskolan såg jag kompetensförsörjning från andra sidan. Där matchade jag utbildningarna mot vad företagen behövde."
+        "en": "Screening CVs and interviewing candidates has been part of every recruitment role I've had. To make the interviews more consistent I built Recruitment OS, an AI tool that turns a requirements profile into structured, competency-based interviews with scorecards. My degree in behavioural science also helps when I assess a candidate.",
+        "sv": "CV-screening och intervjuer har ingått i varje rekryteringsroll jag haft. För att göra intervjuerna mer likvärdiga byggde jag Recruitment OS, ett AI-verktyg som gör om en kravprofil till strukturerade, kompetensbaserade intervjuer med scorecards. Min utbildning i beteendevetenskap hjälper också när jag bedömer en kandidat."
       }
     },
     {
@@ -106,40 +64,82 @@
         "sv": "Någon rekryterande chefer kan luta sig mot"
       },
       "quote": {
-        "en": "Support and coach hiring managers through the recruitment process. Very good at collaboration and comfortable in an advisory role towards managers and colleagues.",
-        "sv": "Stötta och coacha rekryterande chefer genom rekryteringsprocessen. Har mycket god samarbetsförmåga och trivs i en rådgivande roll gentemot chefer och kollegor."
+        "en": "Support and coach hiring managers through interviews and selection. Experience of working closely with hiring managers and other senior stakeholders.",
+        "sv": "Stödja och coacha rekryterande chefer genom intervjuer och urvalsprocesser. Erfarenhet av att samarbeta nära rekryterande chefer och andra seniora stakeholders."
       },
       "body": {
-        "en": "I've advised hiring managers in every recruitment role I've had, mostly on the requirement profile and how we assess the candidates. I enjoy that part of the job.",
-        "sv": "Jag har rådgett rekryterande chefer i varje rekryteringsroll jag haft, mest kring kravprofilen och hur vi bedömer kandidaterna. Jag tycker om den delen av jobbet."
+        "en": "I've advised hiring managers in every recruitment role I've had, mostly on the requirement profile and how we assess the candidates. In an IT consultancy I also sat on the management team, so working closely with senior people is familiar to me.",
+        "sv": "Jag har rådgett rekryterande chefer i varje rekryteringsroll jag haft, mest kring kravprofilen och hur vi bedömer kandidaterna. I ett IT-konsultbolag satt jag också i ledningsgruppen, så jag är van att jobba nära seniora personer."
       }
     },
     {
       "title": {
-        "en": "Happy to share what I know",
-        "sv": "Delar gärna med mig"
+        "en": "Sourcing, and a pipeline before the need is there",
+        "sv": "Sourcing, och en pipeline innan behovet finns"
       },
       "quote": {
-        "en": "Be a support and mentor for more junior colleagues in Talent Acquisition. Comfortable sharing your expertise.",
-        "sv": "Vara ett stöd och en mentor för mer juniora kollegor inom Talent Acquisition. Bekväm med att dela med dig av din kompetens."
+        "en": "Identify and attract relevant candidates through proactive search and different sourcing channels. Build and develop long-term candidate networks and pipelines in prioritised competence areas.",
+        "sv": "Identifiera och attrahera relevanta kandidater genom proaktiv search och olika sourcingkanaler. Bygga och utveckla långsiktiga kandidatnätverk och pipelines inom prioriterade kompetensområden."
       },
       "body": {
-        "en": "I like teaching. I'm a certified education manager and I've run internal workshops and training sessions. When I've built something, like an ATS workflow, I've usually been the one showing the others how it works.",
-        "sv": "Jag tycker om att lära ut. Jag är certifierad utbildningsledare och har hållit interna workshops och utbildningar. När jag byggt något, som ett ATS-flöde, har det oftast varit jag som visat de andra hur det fungerar."
+        "en": "I've sourced proactively in my recruitment roles, mostly developers and engineers who weren't actively looking. I try to keep a pipeline going so there are people to call when a role opens. I've also built my own AI tool for sourcing, which searches GitHub and technical blogs for candidates who match.",
+        "sv": "Jag har jobbat proaktivt med sourcing i mina rekryteringsroller, mest mot utvecklare och ingenjörer som inte aktivt sökte jobb. Jag försöker hålla en pipeline igång så att det finns folk att ringa när en roll öppnar. Jag har också byggt ett eget AI-verktyg för sourcing, som söker igenom GitHub och tekniska bloggar efter kandidater som matchar."
       }
     },
     {
       "title": {
-        "en": "I've been the external partner myself",
-        "sv": "Jag har själv varit den externa partnern"
+        "en": "Close to students on their way into tech",
+        "sv": "Nära studenter på väg in i techbranschen"
       },
       "quote": {
-        "en": "Collaborate with external recruitment partners when needed.",
-        "sv": "Samarbeta med externa rekryteringspartners vid behov."
+        "en": "Take part in university partnerships and campus recruitment to build future talent pools.",
+        "sv": "Delta i universitetssamarbeten och campusrekrytering för att bygga framtida talangpooler."
       },
       "body": {
-        "en": "For the last two years I worked as a recruitment consultant for clients in technology and engineering. So I know what an external partner needs from the client to be able to deliver, and I'll bring that with me.",
-        "sv": "De senaste två åren jobbade jag som rekryteringskonsult åt kunder inom teknik och ingenjörskonst. Så jag vet vad en extern partner behöver från kunden för att kunna leverera, och det tar jag med mig."
+        "en": "At one of Sweden's largest vocational IT schools I built partnerships with companies and helped students find internships and their first jobs. Later, in an IT consultancy, I helped build a career programme for junior developers. It made it easier for us to attract people early in their career.",
+        "sv": "På en av Sveriges största yrkeshögskolor inom IT byggde jag partnerskap med företag och hjälpte studenter att hitta praktik och sitt första jobb. Senare, i ett IT-konsultbolag, var jag med och byggde ett karriärprogram för juniora utvecklare. Det gjorde det lättare för oss att locka folk tidigt i karriären."
+      }
+    },
+    {
+      "title": {
+        "en": "Job ads and employer branding",
+        "sv": "Annonser och employer branding"
+      },
+      "quote": {
+        "en": "Contribute to strategies for candidate attraction and recruitment marketing. Experience of recruitment marketing, candidate attraction and employer branding is a merit.",
+        "sv": "Bidra till utveckling av strategier för candidate attraction och recruitment marketing. Erfarenhet av recruitment marketing, candidate attraction och employer branding är meriterande."
+      },
+      "body": {
+        "en": "I've written and published job ads based on what the business needed, and spent time making them clear and relevant to the person reading. When I led the talent acquisition work in an IT consultancy, I worked with employer branding alongside the recruitment. That meant being clear about who we were as an employer and how we showed it externally.",
+        "sv": "Jag har skrivit och publicerat platsannonser utifrån vad verksamheten behövde, och lagt tid på att göra dem tydliga och relevanta för den som läser. När jag ledde talent acquisition-arbetet i ett IT-konsultbolag jobbade jag med employer branding vid sidan av rekryteringen. Det handlade om att vara tydliga med vilka vi var som arbetsgivare och hur vi visade det utåt."
+      }
+    },
+    {
+      "title": {
+        "en": "Competence supply, with a longer view",
+        "sv": "Kompetensförsörjning, med ett längre perspektiv"
+      },
+      "quote": {
+        "en": "Experience of strategic competence and workforce planning.",
+        "sv": "Erfarenhet av strategisk kompetens- och bemanningsplanering."
+      },
+      "body": {
+        "en": "In a fast-growing IT consultancy I sat on the management team and was responsible for how we worked with talent acquisition, including the processes and bringing in an ATS. At the vocational school I saw competence supply from the other side. There I matched the programmes to what companies needed.",
+        "sv": "I ett snabbväxande IT-konsultbolag satt jag i ledningsgruppen och ansvarade för hur vi jobbade med talent acquisition, bland annat processerna och införandet av ett ATS. På yrkeshögskolan såg jag kompetensförsörjning från andra sidan. Där matchade jag utbildningarna mot vad företagen behövde."
+      }
+    },
+    {
+      "title": {
+        "en": "Tech recruitment, in-house and as a consultant",
+        "sv": "Techrekrytering, inhouse och som konsult"
+      },
+      "quote": {
+        "en": "Experience of working in-house at an organisation or company. Experience of tech recruitment and recruiting specialists is a particular merit.",
+        "sv": "Erfarenhet av att arbeta inhouse på en organisation eller ett företag. Erfarenhet av techrekrytering och rekrytering av specialistkompetenser är särskilt meriterande."
+      },
+      "body": {
+        "en": "Most of my recruiting has been in IT, tech and engineering, for roles from developers to engineers. I've done it in-house, when I led talent acquisition in an IT consultancy, and as a recruitment consultant for clients.",
+        "sv": "Det mesta jag rekryterat har varit inom IT, tech och ingenjörskonst, till roller från utvecklare till ingenjörer. Jag har gjort det både inhouse, när jag ledde talent acquisition i ett IT-konsultbolag, och som rekryteringskonsult åt kunder."
       }
     }
   ],
