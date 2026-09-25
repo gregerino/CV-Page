@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400;1,600&display=swap');
+
+/* Perido — Talent Acquisition Specialist (consultant assignment)
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /perido and by cv.html?job=perido, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is Perido's own, read off the theme CSS on perido.se:
+     #057f36  their green: links, the header, primary buttons, rules
+     #1b4d24  the deep forest green on their rounded buttons
+     #049d49  the brighter green of their footer
+     #e9f2ed  the pale mint panel under their hero
+     #3a3939  body copy
+     #3f3f3f  headings
+
+   Their identity is a white page with one green doing all the work, Source
+   Sans Pro throughout with headings in its heaviest cut, and pill-shaped
+   buttons. Source Sans 3 is the current release of the same face.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #e9f2ed;
+  --bg3:           #d6e7dc;
+  --white:         #ffffff;
+
+  --border:        rgba(27,77,36,0.14);
+  --border-light:  rgba(27,77,36,0.08);
+  --border-strong: rgba(27,77,36,0.30);
+
+  --ink:           #2b2a2a;
+  --ink-mid:       #3a3939;
+  --ink-light:     #5f6360;
+  --ink-dim:       #8a918c;
+
+  --amber:         #057f36;
+  --amber-light:   #1b4d24;
+
+  --accent-rgb:    5,127,54;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 12px rgba(27,77,36,0.08), 0 1px 3px rgba(27,77,36,0.05);
+  --shadow-sm:     0 1px 4px rgba(27,77,36,0.06);
+  --shadow-lg:     0 10px 40px rgba(27,77,36,0.14);
+
+  /* Squarer cards than the base page, pill buttons as on their site. */
+  --radius:        4px;
+  --radius-lg:     6px;
+  --radius-pill:   20px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(245,250,247,0.93) 40%,
+    rgba(233,242,237,0.88) 70%,
+    rgba(214,231,220,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23057f36' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Source Sans is the whole of Perido's own type. It replaces both the
+     base serif and the base sans so nothing on the page falls back to Lora. */
+  --serif: 'Source Sans 3', 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Source Sans 3', 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  /* Their site has no monospace anywhere, so the base page's mono labels
+     (eyebrows, dates, facts, footer) are set in Source Sans too. */
+  --mono:  'Source Sans 3', 'Source Sans Pro', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Their headings are Source Sans at 900. That is heavy for the long
+   headings on this page, so the biggest ones get 900 and the rest 700. */
+.hero-name,
+.cv-name,
+.sec-title { font-weight: 900; letter-spacing: -0.01em; color: #3f3f3f; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 700; }
+
+/* Their green rule under the header. */
+.nav { box-shadow: inset 0 -2px 0 #057f36; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #057f36, rgba(5,127,54,0.25) 60%, transparent);
+}
+.job::before { border-color: #057f36; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their green
+   ─────────────────────────────────────────────────────────────────────────
+   The section the page exists for gets the green of their header, with
+   white cards on top, each with a forest-green edge down its left.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #057f36;
+  border-top: 1px solid #057f36;
+}
+#match + .band { border-top: 1px solid #057f36; }
+
+#match .eyebrow   { color: #cfe6d7; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.88); }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.16);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+#match .point { border-left: 3px solid #1b4d24; }
+#match .point-num { color: #057f36; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Their details, across the rest of the page
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Labels in Source Sans, bolder and a little larger than the base mono. */
+.eyebrow {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: #057f36;
+}
+.tool-label,
+.built-sub {
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+}
+
+/* perido.se draws a short green rule under its block titles. */
+.sec-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-top: 0.9rem;
+  background: #057f36;
+  border-radius: 2px;
+}
+#match .sec-title::after { background: #ffffff; }
+
+/* Primary buttons in the forest green of their "Ansök / Apply" button. */
+.btn { font-weight: 700; }
+.btn-primary {
+  background: #1b4d24;
+  border-color: #1b4d24;
+  box-shadow: 0 2px 10px rgba(27,77,36,0.22);
+}
+.btn-primary:hover {
+  background: #057f36;
+  border-color: #057f36;
+  box-shadow: 0 6px 18px rgba(5,127,54,0.28);
+}
+
+/* Their site is flat: white panels, no frosted glass. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  box-shadow: var(--shadow-sm);
+}
+.pill { background: #ffffff; }
+
+/* The requirement quotes read like the italic intro on their job ads. */
+.point-quote { color: #3a3939; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the recruitment work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link. The last card in
+   each grid stays last, since the base page lets an odd last card span
+   the full width.
+     Companies:  ATS workflows, career programme, onboarding, LMS, course content
+     With AI:    Recruitment OS, sourcing tool, this site, QuestLog, more tools
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 5; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Roles: automotive first, in green
+   ───────────────────────────────────────────────────────────────────────── */
+#experience .roles-group:nth-child(2) { order: -1; }
+#experience .roles-group:nth-child(2) .tool-label { color: #057f36; }
+#experience .roles-group:nth-child(2) .pill {
+  background: #e9f2ed;
+  border-color: rgba(5,127,54,0.35);
+  color: #1b4d24;
+  font-weight: 600;
+}
+
+/* ATS tools first in Systems, marked the same way. */
+#education .tool-group:nth-of-type(2) .pill:nth-child(-n+2) {
+  background: #e9f2ed;
+  border-color: rgba(5,127,54,0.35);
+  color: #1b4d24;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact facts as their "Snabbfakta" box
+   ─────────────────────────────────────────────────────────────────────────
+   Every ad on perido.se has a green quick-facts panel beside the text. The
+   same panel here holds the facts about me. It and the footer use their
+   main green rather than the lighter #049d49, so white text on it stays
+   comfortably readable.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .contact-facts {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 420px;
+  padding: 1.4rem 1.6rem 1.5rem;
+  background: #057f36;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  box-shadow: var(--shadow);
+}
+#contact .contact-facts::before {
+  content: 'Quick facts';
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Snabbfakta'; }
+#contact .contact-facts span { font-weight: 600; }
+
+/* Their footer is a solid green band. */
+.site-footer {
+  background: #057f36;
+  border-top: none;
+}
+.site-footer p { color: rgba(255,255,255,0.88); font-size: 0.85rem; letter-spacing: 0.02em; }
+.site-footer a { color: #ffffff; font-weight: 700; }
+.site-footer a:hover { color: #e9f2ed; }

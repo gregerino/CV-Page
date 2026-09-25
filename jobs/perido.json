@@ -1,0 +1,409 @@
+{
+  "company": "Perido",
+  "roleName": "Talent Acquisition Specialist",
+  "eyebrow": {
+    "en": "Application · Talent Acquisition Specialist · Perido",
+    "sv": "Ansökan · Talent Acquisition Specialist · Perido"
+  },
+  "role": {
+    "en": "Talent Acquisition, hands-on and long-term",
+    "sv": "Talent Acquisition, operativt och långsiktigt"
+  },
+  "lead": {
+    "en": "I've worked with recruitment for about five years, mostly in IT and tech companies. I've run processes from needs analysis to hire and worked closely with the hiring managers along the way. I've also worked with employer branding and helped junior talent find a way into the industry. I'd like to keep doing the hands-on recruitment, and also get to think a bit further ahead.",
+    "sv": "Jag har jobbat med rekrytering i ca 5 år, mest i IT- och techbolag. Jag har drivit processer från behovsanalys till tillsättning och jobbat nära de rekryterande cheferna på vägen. Jag har också jobbat med employer branding och hjälpt juniora talanger in i branschen. Jag vill gärna fortsätta med den operativa rekryteringen, och samtidigt få tänka lite längre fram."
+  },
+  "cta": {
+    "en": "See how my background fits the assignment",
+    "sv": "Se hur min bakgrund passar uppdraget"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the assignment asks for",
+    "sv": "Det uppdraget efterfrågar"
+  },
+  "matchLead": {
+    "en": "What the ad asks for, and what I've done in each part.",
+    "sv": "Det annonsen tar upp, och vad jag har gjort inom varje del."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "The whole process, run on my own",
+        "sv": "Hela processen, som jag driver själv"
+      },
+      "quote": {
+        "en": "Several years of relevant experience in Talent Acquisition, recruitment or competence supply. Documented experience of running recruitment processes independently.",
+        "sv": "Flera års relevant erfarenhet inom Talent Acquisition, rekrytering eller kompetensförsörjning. Dokumenterad erfarenhet av att självständigt driva rekryteringsprocesser."
+      },
+      "body": {
+        "en": "I've had recruitment as my main job in three roles, and run full processes in all of them. That covers everything from the needs analysis with the manager to interviews and candidate assessment. I've also coordinated the interview steps and been the candidates' main contact through the process.",
+        "sv": "Jag har haft rekrytering som huvuduppgift i tre roller, och drivit hela processer i alla. Det omfattar allt från behovsanalysen med chefen till intervjuer och kandidatbedömning. Jag har också samordnat intervjustegen och varit kandidaternas huvudkontakt genom processen."
+      }
+    },
+    {
+      "title": {
+        "en": "Screening and assessing candidates",
+        "sv": "Screening och kandidatbedömning"
+      },
+      "quote": {
+        "en": "Analyse CVs and assess candidates' competence, experience and qualifications. Carry out phone and competency-based screening interviews.",
+        "sv": "Analysera CV och bedöma kandidaters kompetens, erfarenhet och kvalifikationer. Genomföra telefon- och kompetensbaserade screeningintervjuer."
+      },
+      "body": {
+        "en": "Screening CVs and interviewing candidates has been part of every recruitment role I've had. To make the interviews more consistent I built Recruitment OS, an AI tool that turns a requirements profile into structured, competency-based interviews with scorecards. My degree in behavioural science also helps when I assess a candidate.",
+        "sv": "CV-screening och intervjuer har ingått i varje rekryteringsroll jag haft. För att göra intervjuerna mer likvärdiga byggde jag Recruitment OS, ett AI-verktyg som gör om en kravprofil till strukturerade, kompetensbaserade intervjuer med scorecards. Min utbildning i beteendevetenskap hjälper också när jag bedömer en kandidat."
+      }
+    },
+    {
+      "title": {
+        "en": "Someone hiring managers can lean on",
+        "sv": "Någon rekryterande chefer kan luta sig mot"
+      },
+      "quote": {
+        "en": "Support and coach hiring managers through interviews and selection. Experience of working closely with hiring managers and other senior stakeholders.",
+        "sv": "Stödja och coacha rekryterande chefer genom intervjuer och urvalsprocesser. Erfarenhet av att samarbeta nära rekryterande chefer och andra seniora stakeholders."
+      },
+      "body": {
+        "en": "I've advised hiring managers in every recruitment role I've had, mostly on the requirement profile and how we assess the candidates. In an IT consultancy I also sat on the management team, so working closely with senior people is familiar to me.",
+        "sv": "Jag har rådgett rekryterande chefer i varje rekryteringsroll jag haft, mest kring kravprofilen och hur vi bedömer kandidaterna. I ett IT-konsultbolag satt jag också i ledningsgruppen, så jag är van att jobba nära seniora personer."
+      }
+    },
+    {
+      "title": {
+        "en": "Sourcing, and a pipeline before the need is there",
+        "sv": "Sourcing, och en pipeline innan behovet finns"
+      },
+      "quote": {
+        "en": "Identify and attract relevant candidates through proactive search and different sourcing channels. Build and develop long-term candidate networks and pipelines in prioritised competence areas.",
+        "sv": "Identifiera och attrahera relevanta kandidater genom proaktiv search och olika sourcingkanaler. Bygga och utveckla långsiktiga kandidatnätverk och pipelines inom prioriterade kompetensområden."
+      },
+      "body": {
+        "en": "I've sourced proactively in my recruitment roles, mostly developers and engineers who weren't actively looking. I try to keep a pipeline going so there are people to call when a role opens. I've also built my own AI tool for sourcing, which searches GitHub and technical blogs for candidates who match.",
+        "sv": "Jag har jobbat proaktivt med sourcing i mina rekryteringsroller, mest mot utvecklare och ingenjörer som inte aktivt sökte jobb. Jag försöker hålla en pipeline igång så att det finns folk att ringa när en roll öppnar. Jag har också byggt ett eget AI-verktyg för sourcing, som söker igenom GitHub och tekniska bloggar efter kandidater som matchar."
+      }
+    },
+    {
+      "title": {
+        "en": "Close to students on their way into tech",
+        "sv": "Nära studenter på väg in i techbranschen"
+      },
+      "quote": {
+        "en": "Take part in university partnerships and campus recruitment to build future talent pools.",
+        "sv": "Delta i universitetssamarbeten och campusrekrytering för att bygga framtida talangpooler."
+      },
+      "body": {
+        "en": "At one of Sweden's largest vocational IT schools I built partnerships with companies and helped students find internships and their first jobs. Later, in an IT consultancy, I helped build a career programme for junior developers. It made it easier for us to attract people early in their career.",
+        "sv": "På en av Sveriges största yrkeshögskolor inom IT byggde jag partnerskap med företag och hjälpte studenter att hitta praktik och sitt första jobb. Senare, i ett IT-konsultbolag, var jag med och byggde ett karriärprogram för juniora utvecklare. Det gjorde det lättare för oss att locka folk tidigt i karriären."
+      }
+    },
+    {
+      "title": {
+        "en": "Job ads and employer branding",
+        "sv": "Annonser och employer branding"
+      },
+      "quote": {
+        "en": "Contribute to strategies for candidate attraction and recruitment marketing. Experience of recruitment marketing, candidate attraction and employer branding is a merit.",
+        "sv": "Bidra till utveckling av strategier för candidate attraction och recruitment marketing. Erfarenhet av recruitment marketing, candidate attraction och employer branding är meriterande."
+      },
+      "body": {
+        "en": "I've written and published job ads based on what the business needed, and spent time making them clear and relevant to the person reading. When I led the talent acquisition work in an IT consultancy, I worked with employer branding alongside the recruitment. That meant being clear about who we were as an employer and how we showed it externally.",
+        "sv": "Jag har skrivit och publicerat platsannonser utifrån vad verksamheten behövde, och lagt tid på att göra dem tydliga och relevanta för den som läser. När jag ledde talent acquisition-arbetet i ett IT-konsultbolag jobbade jag med employer branding vid sidan av rekryteringen. Det handlade om att vara tydliga med vilka vi var som arbetsgivare och hur vi visade det utåt."
+      }
+    },
+    {
+      "title": {
+        "en": "Competence supply, with a longer view",
+        "sv": "Kompetensförsörjning, med ett längre perspektiv"
+      },
+      "quote": {
+        "en": "Experience of strategic competence and workforce planning.",
+        "sv": "Erfarenhet av strategisk kompetens- och bemanningsplanering."
+      },
+      "body": {
+        "en": "In a fast-growing IT consultancy I sat on the management team and was responsible for how we worked with talent acquisition, including the processes and bringing in an ATS. At the vocational school I saw competence supply from the other side. There I matched the programmes to what companies needed.",
+        "sv": "I ett snabbväxande IT-konsultbolag satt jag i ledningsgruppen och ansvarade för hur vi jobbade med talent acquisition, bland annat processerna och införandet av ett ATS. På yrkeshögskolan såg jag kompetensförsörjning från andra sidan. Där matchade jag utbildningarna mot vad företagen behövde."
+      }
+    },
+    {
+      "title": {
+        "en": "Tech recruitment, in-house and as a consultant",
+        "sv": "Techrekrytering, inhouse och som konsult"
+      },
+      "quote": {
+        "en": "Experience of working in-house at an organisation or company. Experience of tech recruitment and recruiting specialists is a particular merit.",
+        "sv": "Erfarenhet av att arbeta inhouse på en organisation eller ett företag. Erfarenhet av techrekrytering och rekrytering av specialistkompetenser är särskilt meriterande."
+      },
+      "body": {
+        "en": "Most of my recruiting has been in IT, tech and engineering, for roles from developers to engineers. I've done it in-house, when I led talent acquisition in an IT consultancy, and as a recruitment consultant for clients.",
+        "sv": "Det mesta jag rekryterat har varit inom IT, tech och ingenjörskonst, till roller från utvecklare till ingenjörer. Jag har gjort det både inhouse, när jag ledde talent acquisition i ett IT-konsultbolag, och som rekryteringskonsult åt kunder."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "About 5 years in recruitment",
+      "sv": "Ca 5 år inom rekrytering"
+    },
+    "#top .stat-num": [
+      "~5",
+      "3",
+      "15+"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years with recruitment as the main part of the job",
+        "sv": "År med rekrytering som huvuduppgift"
+      },
+      {
+        "en": "Roles where recruitment was the main part of the job, in IT, tech and engineering",
+        "sv": "Roller där rekrytering var huvuddelen av jobbet, inom IT, tech och ingenjörskonst"
+      },
+      {
+        "en": "Consultants I supported with HR and development, as part of a management team",
+        "sv": "Konsulter jag stöttade med HR och utveckling, som del av en ledningsgrupp"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "Has he recruited for the automotive industry?",
+        "sv": "Har han rekryterat till fordonsbranschen?"
+      },
+      {
+        "en": "How does he work with hiring managers?",
+        "sv": "Hur jobbar han med rekryterande chefer?"
+      },
+      {
+        "en": "Has he worked with employer branding?",
+        "sv": "Har han jobbat med employer branding?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my recruitment background",
+      "sv": "Fråga om min bakgrund inom rekrytering"
+    },
+    "#about .sec-title": {
+      "en": "Recruitment, day to day and further ahead",
+      "sv": "Rekrytering, i vardagen och på lite längre sikt"
+    },
+    "#about .about-quote": {
+      "en": "I enjoy the day-to-day recruitment, and I also like thinking about what we'll need later on.",
+      "sv": "Jag trivs med den dagliga rekryteringen, och jag gillar också att fundera på vad vi kommer behöva längre fram."
+    },
+    "#about .about-body": [
+      {
+        "en": "I've recruited for most of my working life. What I like most is sitting down with a manager to understand what they need, and then finding someone who fits.",
+        "sv": "Jag har rekryterat under större delen av mitt yrkesliv. Det jag gillar mest är att sätta mig med en chef och förstå vad hen behöver, och sen hitta någon som passar."
+      },
+      {
+        "en": "I've also worked a bit further ahead. I've been responsible for talent acquisition as part of a management team, and at a vocational school I worked with matching the programmes to what companies needed.",
+        "sv": "Jag har också jobbat lite längre fram i tiden. Jag har ansvarat för talent acquisition som del av en ledningsgrupp, och på en yrkeshögskola jobbade jag med att matcha utbildningarna mot vad företagen behövde."
+      },
+      {
+        "en": "I've done most of this in IT and tech companies, recruiting for roles from developers to engineers. My degree is in behavioural science with a focus on IT environments, and I'm a certified education manager.",
+        "sv": "Jag har gjort det mesta av det här i IT- och techbolag, med rekrytering till roller från utvecklare till ingenjörer. Min utbildning är i beteendevetenskap med inriktning mot IT-miljöer, och jag är certifierad utbildningsledare."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Running a recruitment process from needs analysis to hire",
+        "sv": "Att driva en rekrytering från behovsanalys till tillsättning"
+      },
+      {
+        "en": "Keeping a pipeline going before there's an open role",
+        "sv": "Att hålla en pipeline igång innan det finns en öppen roll"
+      },
+      {
+        "en": "Being a sounding board for hiring managers",
+        "sv": "Att vara ett bollplank åt rekryterande chefer"
+      },
+      {
+        "en": "Helping junior talent find a way into the industry",
+        "sv": "Att hjälpa juniora talanger in i branschen"
+      },
+      {
+        "en": "Sharing what I know with the people around me",
+        "sv": "Att dela med mig av det jag kan till folk runt mig"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "I built some of this together with colleagues, like the ATS workflows and a career programme for junior developers. Some I've built on my own with AI, for example Recruitment OS, which turns a requirement profile into an interview package.",
+      "sv": "En del av det här byggde jag tillsammans med kollegor, till exempel ATS-flödena och ett karriärprogram för juniora utvecklare. En del har jag byggt själv med AI, till exempel Recruitment OS, som gör om en kravprofil till ett intervjupaket."
+    },
+    "#built .built-card:nth-of-type(4) .built-text": {
+      "en": "I implemented and developed the ATS workflows in Teamtailor, from how a role was opened to how candidates moved through the process and who did what along the way. It made the recruitment work easier to follow for everyone involved.",
+      "sv": "Jag implementerade och utvecklade ATS-arbetsflödena i Teamtailor, från hur en roll öppnades till hur kandidater rörde sig genom processen och vem som gjorde vad längs vägen. Det gjorde rekryteringsarbetet lättare att följa för alla inblandade."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
+      "en": "You type what you're looking for, in free text or with filters, and the tool searches through GitHub, portfolios and technical blogs to find and rank candidates that match, even when they've described themselves in different words than you used. The search runs in the background, and you can save candidates, write notes, track where they are in the process and export the results.",
+      "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Sökningen körs i bakgrunden, och du kan spara kandidater, skriva anteckningar, följa var de är i processen och exportera resultatet."
+    },
+    "#built .sec-title": {
+      "en": "Tools and processes I've built",
+      "sv": "Verktyg och processer jag byggt"
+    },
+    "#experience .sec-lead": {
+      "en": "I've recruited in most of the roles below, in IT, tech and engineering. In the others I worked close to recruitment, with competence supply and with students on their way into the industry.",
+      "sv": "Jag har rekryterat i de flesta av rollerna nedan, inom IT, tech och ingenjörskonst. I de andra jobbade jag nära rekrytering, med kompetensförsörjning och med studenter på väg in i branschen."
+    },
+    "#experience .sec-title": {
+      "en": "Recruitment, in-house and as a consultant",
+      "sv": "Rekrytering, inhouse och som konsult"
+    },
+    "#experience .roles-lead": {
+      "en": "A selection, mostly in software, embedded and engineering. The automotive roles come first, since that's the industry this assignment is in.",
+      "sv": "Ett axplock, mest inom mjukvara, embedded och ingenjörskonst. Rollerna inom fordon står först, eftersom det är den branschen uppdraget är i."
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science and education management",
+      "sv": "Beteendevetenskap och utbildningsledning"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments: human behaviour in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer: mänskligt beteende i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Certified education manager. I use it when I explain a process to a hiring manager or help someone who is new in the role.",
+        "sv": "Certifierad utbildningsledare. Jag har nytta av den när jag förklarar en process för en rekryterande chef eller hjälper någon som är ny i rollen."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science, in practice",
+      "sv": "Beteendevetenskap, i praktiken"
+    },
+    "#education .callout-title": {
+      "en": "What the education gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science taught me a lot about how people and groups work. I still use it when I assess a candidate or help a manager work out what a role needs.",
+      "sv": "Beteendevetenskapen lärde mig mycket om hur människor och grupper fungerar. Jag använder det fortfarande när jag bedömer en kandidat eller hjälper en chef att reda ut vad en roll behöver."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Employer Branding",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      "HR",
+      "People & Culture",
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      "Learning & Development",
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Teamtailor",
+      "Workbuster",
+      "Claude Code",
+      "Monday.com",
+      "Slack",
+      "Office 365",
+      "Canva",
+      "Winningtemp"
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "In a consultant assignment you meet a lot of new people, and I like that. Here's a bit about me outside work.",
+      "sv": "I ett konsultuppdrag träffar man många nya människor, och det gillar jag. Här är lite om mig utanför jobbet."
+    },
+    "#personal .personal-card:nth-of-type(1) .personal-text": {
+      "en": "I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&D adventures as a Game Master. I enjoy food and cooking, and like trying different kinds of food, from street food to nicer restaurants. I also get together over board games sometimes, and watch Critical Role, a live-action D&D series that feeds my creativity as a Game Master.",
+      "sv": "Jag är en kreativ person i grunden. Jag läser mycket fantasy och kanaliserar det till att skriva D&D-äventyr som Game Master. Jag gillar mat och matlagning, och tycker om att prova olika sorters mat, från streetfood till lite finare restauranger. Jag samlas också ibland över brädspel, och tittar på Critical Role, en live-action D&D-serie som ger bränsle till min kreativitet som Game Master."
+    },
+    "#personal .personal-card:nth-of-type(3) .personal-text": {
+      "en": "I live in Gothenburg with my fiancée and our son, who's almost three. Time with the people I care about is what matters most: good conversations, dinners and shared experiences.",
+      "sv": "Jag bor i Göteborg med min fästmö och vår son, som snart fyller tre. Tid med människorna jag bryr mig om är det som betyder mest: bra samtal, middagar och delade upplevelser."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: Talent Acquisition Specialist, ref. 36016",
+        "sv": "Söker: Talent Acquisition Specialist, ref. 36016"
+      }
+    ]
+  }
+}
