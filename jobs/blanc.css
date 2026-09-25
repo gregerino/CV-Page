@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* Blanc Technology — Senior Talent Acquisition Specialist
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /blanc and by cv.html?job=blanc, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is Blanc's own, read off the Tailwind classes and variables
+   on blanctechnology.se:
+     #fafaf9  stone-50, the paper on most of their bands
+     #f5f5f4  stone-100, the alternate band
+     #e7e5e4  stone-200, their hairlines
+     #a6a09b  stone-400, the faint labels
+     #79716b  stone-500, secondary copy
+     #57534d  stone-600, body copy
+     #0c0a09  stone-950, headings and the dark bands
+
+   Their identity is quiet and editorial: warm off-white paper, near-black
+   type, no brand colour at all, Cormorant Garamond for headings over Inter
+   for body copy, and square corners. The accent here is therefore their
+   near-black, and the one loud section goes dark the way their own does.
+
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #fafaf9;
+  --bg2:           #f5f5f4;
+  --bg3:           #e7e5e4;
+  --white:         #ffffff;
+
+  --border:        rgba(12,10,9,0.12);
+  --border-light:  rgba(12,10,9,0.07);
+  --border-strong: rgba(12,10,9,0.28);
+
+  --ink:           #0c0a09;
+  --ink-mid:       #57534d;
+  --ink-light:     #79716b;
+  --ink-dim:       #a6a09b;
+
+  /* No brand colour: the near-black does the accent's job, with the
+     stone-600 grey as its hover. */
+  --amber:         #1c1917;
+  --amber-light:   #57534d;
+
+  --accent-rgb:    12,10,9;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        250,250,249;
+
+  --shadow:        0 2px 10px rgba(12,10,9,0.06), 0 1px 3px rgba(12,10,9,0.04);
+  --shadow-sm:     0 1px 4px rgba(12,10,9,0.05);
+  --shadow-lg:     0 10px 36px rgba(12,10,9,0.12);
+
+  /* Square corners, as on their site. */
+  --radius:        2px;
+  --radius-lg:     2px;
+  --radius-pill:   2px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(250,250,249,0.96) 0%,
+    rgba(245,245,244,0.93) 40%,
+    rgba(231,229,228,0.88) 70%,
+    rgba(214,211,209,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c0a09' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+}
+
+/* Cormorant runs small and light; give display type a little more weight. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree { font-weight: 500; letter-spacing: -0.01em; }
+
+.nav { box-shadow: inset 0 -1px 0 #e7e5e4; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #0c0a09, rgba(12,10,9,0.2) 60%, transparent);
+}
+.job::before { border-color: #0c0a09; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their dark stone
+   ─────────────────────────────────────────────────────────────────────────
+   Their site breaks the off-white with stone-950 bands; the section the
+   page exists for gets the same treatment, with off-white cards on top.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #0c0a09;
+  border-top: 1px solid #0c0a09;
+}
+#match + .band { border-top: 1px solid #0c0a09; }
+
+#match .eyebrow   { color: #a6a09b; }
+#match .sec-title { color: #fafaf9; }
+#match .sec-lead  { color: rgba(250,250,249,0.72); }
+
+#match .card {
+  background: #fafaf9;
+  border-color: rgba(255,255,255,0.10);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+#match .point { border-left: 3px solid #0c0a09; }
+#match .point-num { color: #79716b; }
