@@ -739,6 +739,12 @@ img { max-width: 100%; display: block; }
 /* ══════════════════════════════════════════
    PERSONAL
    ══════════════════════════════════════════ */
+/* Switched off on every page (base and job packs). Delete this rule to bring
+   the section and its nav links back; the content is untouched in index.html. */
+#personal,
+.nav-links li:has(> a[href="#personal"]),
+.nav-mobile a[href="#personal"] { display: none !important; }
+
 .personal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
 .personal-card { padding: 1.7rem 1.8rem; }
 .personal-emoji { font-size: 1.4rem; line-height: 1; margin-bottom: 0.8rem; display: block; }

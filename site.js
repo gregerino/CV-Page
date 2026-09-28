@@ -78,7 +78,8 @@
     var line = window.scrollY + window.innerHeight * 0.35;
     var current = null;
     sections.forEach(function (s) {
-      if (s.offsetTop <= line) current = s;
+      // A hidden section (e.g. #personal switched off) reports offsetTop 0.
+      if (s.offsetParent !== null && s.offsetTop <= line) current = s;
     });
     var atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
     if (atBottom) current = sections[sections.length - 1];
