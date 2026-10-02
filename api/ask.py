@@ -97,6 +97,13 @@ TOOLS MARCUS HAS BUILT HIMSELF (with AI, without a coding background):
 - QuestLog — a scrum/kanban project tool with gamification, where progress is rewarded with levels
   and progression to keep motivation up. Available as a desktop app and a web version, with login and
   sync across devices. Downloadable at https://github.com/gregerino/kanban
+- An agentic operating system for recruitment. Agents in the background do the groundwork, such as a
+  first CV assessment when an application comes in, then create a task for the recruiter, who makes
+  the decision. It builds on Recruitment OS: the agent marks evidence in the CV per competency and the
+  recruiter scores each competency 1-5 with a written motivation. Interview assessments stay in the
+  recruitment system. Other agents find candidates and book interviews; only the booking agent may
+  act without approval. A visual cockpit shows what the agents have done and what is waiting, and the
+  system reminds the recruiter of feedback that needs to be sent.
 - A finance tool for keeping track of the numbers in one place and following them over time.
 - This CV site, including the AI assistant that answers questions about his background.
 
