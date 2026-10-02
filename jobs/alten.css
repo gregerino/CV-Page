@@ -1,0 +1,287 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5/400.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5/600.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5/700.css');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/metropolis@5/800.css');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+/* ALTEN Sweden — Talent Acquisition Partner, head office Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /alten and by cv.html?job=alten, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is ALTEN's own, read off the theme CSS on alten.se:
+     #043962  their navy: all text, headings, the JOB INFO panel, the footer
+     #0093D6  their blue (--bs-blue): the banner behind every page title
+     #67b7f6  the lighter blue (--bs-blue-medium)
+     #ffba00  the yellow of their "Memorized jobs" button, and of the logo
+     #32373c  the charcoal of their "Apply" button
+     #f8f9fa  the pale grey panels
+
+   Their identity is a white page with navy text, one bright blue banner per
+   page with the title in white capitals, Metropolis for headings and Lato
+   for body copy, and uppercase buttons with 10px corners.
+
+   Tokens first, then a handful of rules at the bottom. The layout and
+   structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f5f8fa;
+  --bg3:           #e7f0f7;
+  --white:         #ffffff;
+
+  --border:        rgba(4,57,98,0.13);
+  --border-light:  rgba(4,57,98,0.07);
+  --border-strong: rgba(4,57,98,0.28);
+
+  --ink:           #043962;
+  --ink-mid:       #2c3e50;
+  --ink-light:     #50657a;
+  --ink-dim:       #82939f;
+
+  /* #0093D6 is too light for body-sized text on white (3.4:1), so the
+     accent is a deeper cut of the same blue, and the brand blue itself
+     goes on the large and decorative marks below. */
+  --amber:         #0074ad;
+  --amber-light:   #0093d6;
+
+  --accent-rgb:    0,147,214;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 12px rgba(4,57,98,0.08), 0 1px 3px rgba(4,57,98,0.05);
+  --shadow-sm:     0 1px 4px rgba(4,57,98,0.06);
+  --shadow-lg:     0 10px 40px rgba(4,57,98,0.14);
+
+  --radius:        4px;
+  --radius-lg:     6px;
+  --radius-pill:   10px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(245,248,250,0.93) 40%,
+    rgba(231,240,247,0.88) 70%,
+    rgba(214,232,245,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230093d6' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Metropolis for headings, Lato for everything read in running text.
+     Their site has no monospace, so the base page's mono labels (eyebrows,
+     dates, facts, footer) are set in Metropolis like their nav. */
+  --serif: 'Metropolis', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Lato', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --mono:  'Metropolis', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Headings in Metropolis bold, in navy. Section titles in capitals, like
+   the titles on their banners. */
+.hero-name,
+.cv-name { font-weight: 800; letter-spacing: -0.02em; }
+
+.sec-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1.18;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title { font-weight: 700; }
+
+/* The base page's italic lines in Lato, since Metropolis has no italic. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-family: var(--sans); }
+
+/* Their header: a white bar with the nav in spaced capitals, and the thin
+   blue strip of "About the group" above it. */
+.nav { border-top: 4px solid #0093d6; }
+.nav-links a {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #043962;
+}
+
+/* Labels in spaced capitals. */
+.eyebrow {
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #0074ad;
+}
+.tool-label,
+.built-sub {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Buttons as on alten.se: capitals, bold, 10px corners. The primary one is
+   navy and turns to their blue on hover. */
+.btn {
+  font-family: var(--mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  border-radius: 10px;
+}
+.btn-primary {
+  background: #043962;
+  border-color: #043962;
+  box-shadow: 0 2px 10px rgba(4,57,98,0.22);
+}
+.btn-primary:hover {
+  background: #0093d6;
+  border-color: #0093d6;
+  box-shadow: 0 6px 18px rgba(0,147,214,0.28);
+}
+
+/* Flat white panels, no frosted glass. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  box-shadow: var(--shadow-sm);
+}
+.pill { background: #ffffff; border-radius: 10px; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #0093d6, rgba(0,147,214,0.25) 60%, transparent);
+}
+.job::before { border-color: #0093d6; }
+
+/* A short yellow mark from their logo above each point number. */
+.point-rule { background: #ffba00; height: 3px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their banner blue
+   ─────────────────────────────────────────────────────────────────────────
+   Every page on alten.se opens with a #0093D6 banner and the title in
+   white capitals. The section the page exists for gets the same banner.
+   White on that blue is 3.4:1, so everything on it is set large and bold,
+   as on their own banners, to stay within the large-text contrast limit.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #0093d6;
+  border-top: 1px solid #0093d6;
+}
+#match + .band { border-top: 1px solid #0093d6; }
+
+#match .eyebrow   { color: #ffffff; font-size: 0.95rem; font-weight: 800; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: #ffffff; font-family: var(--sans); font-weight: 700; font-size: 1.2rem; }
+
+#match .card {
+  background: #ffffff;
+  border-color: rgba(255,255,255,0.2);
+  box-shadow: 0 10px 30px rgba(4,57,98,0.22);
+}
+#match .point { border-left: 4px solid #043962; }
+#match .point-num { color: #043962; font-weight: 700; }
+#match .point-quote { color: #2c3e50; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the recruitment work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link. The last card in
+   each grid stays last, since the base page lets an odd last card span
+   the full width.
+     Companies:  ATS workflows, career programme, onboarding, LMS, course content
+     With AI:    Recruitment OS, sourcing tool, this site, QuestLog, more tools
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 5; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Roles: automotive and engineering first, in their blue
+   ─────────────────────────────────────────────────────────────────────────
+   Fordon and Energi are two of the sectors ALTEN names in the ad.
+   ───────────────────────────────────────────────────────────────────────── */
+#experience .roles-group:nth-child(2) { order: -2; }
+#experience .roles-group:nth-child(4) { order: -1; }
+#experience .roles-group:nth-child(2) .tool-label,
+#experience .roles-group:nth-child(4) .tool-label { color: #0074ad; }
+#experience .roles-group:nth-child(2) .pill,
+#experience .roles-group:nth-child(4) .pill {
+  background: #e7f0f7;
+  border-color: rgba(0,147,214,0.4);
+  color: #043962;
+  font-weight: 700;
+}
+
+/* ATS tools first in Systems, marked the same way. */
+#education .tool-group:nth-of-type(2) .pill:nth-child(-n+2) {
+  background: #e7f0f7;
+  border-color: rgba(0,147,214,0.4);
+  color: #043962;
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact facts as their "Job info" panel
+   ─────────────────────────────────────────────────────────────────────────
+   Every ad on alten.se has a sidebar panel with a navy header in white
+   capitals and the facts listed below it on pale grey. The same panel
+   here holds the facts about me.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .contact-facts {
+  display: grid;
+  gap: 0;
+  max-width: 420px;
+  padding: 0;
+  background: #f8f9fa;
+  border-radius: 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  color: #043962;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#contact .contact-facts::before {
+  content: 'Candidate info';
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background: #043962;
+  color: #ffffff;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Kandidatinfo'; }
+#contact .contact-facts span {
+  padding: 0.7rem 1.25rem;
+  border-bottom: 1px solid rgba(4,57,98,0.08);
+}
+#contact .contact-facts span:last-child { border-bottom: none; font-weight: 700; }
+
+/* Their footer is a solid navy band. */
+.site-footer {
+  background: #043962;
+  border-top: 4px solid #0093d6;
+}
+.site-footer p { color: rgba(255,255,255,0.85); font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0.02em; }
+.site-footer a { color: #ffffff; font-weight: 700; }
+.site-footer a:hover { color: #67b7f6; }
