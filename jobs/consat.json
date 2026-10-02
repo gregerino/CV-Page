@@ -352,11 +352,11 @@
         "sv": "Söker: People & Talent Partner, Consat"
       }
     ],
-    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
       "en": "A sourcing tool for recruiters",
       "sv": "Ett sourcingverktyg för rekryterare"
     },
-    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
       "en": "You type what you're looking for, in free text or with filters, and the tool searches GitHub, portfolios and technical blogs to find and rank candidates who match, even when they've described themselves in other words than you used. You can save candidates, write notes and export the results.",
       "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Du kan spara kandidater, skriva anteckningar och exportera resultatet."
     }

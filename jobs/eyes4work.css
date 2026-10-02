@@ -241,10 +241,10 @@
 /* With AI: the recruitment tools first. Six cards, so none spans.
      Recruitment OS, agentic OS, sourcing tool, this site, QuestLog, more */
 #built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
-#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 2; }
-#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 3; }
-#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 4; }
-#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
 
 #built .built-icon {

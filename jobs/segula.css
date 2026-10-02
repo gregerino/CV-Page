@@ -127,6 +127,6 @@
    lives in the base HTML on card 2 (QuestLog's slot) and doesn't apply to
    the sourcing tool that now sits there — card 3 has no link to begin with,
    so QuestLog simply loses its link on this page. */
-#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-link {
+#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-link {
   display: none;
 }

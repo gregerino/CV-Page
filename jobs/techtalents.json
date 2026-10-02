@@ -210,19 +210,19 @@
       "en": "Some of this recruitment work I built together with colleagues along the way. Some I built on my own with AI, including a sourcing tool that looks for candidates across GitHub, portfolios and technical blogs, and Recruitment OS, which turns a requirement profile into an interview package.",
       "sv": "En del av det här rekryteringsarbetet har jag byggt tillsammans med kollegor på vägen. En del har jag byggt själv med AI, bland annat ett sourcingverktyg som letar efter kandidater på GitHub, portfolios och tekniska bloggar, och Recruitment OS, som gör om en kravprofil till ett intervjupaket."
     },
-    "#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-title": {
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
       "en": "A sourcing tool for recruiters",
       "sv": "Ett sourcingverktyg för rekryterare"
     },
-    "#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-text": {
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
       "en": "You type what you're looking for, in free text or with filters, and the tool searches through GitHub, portfolios and technical blogs to find and rank candidates that match, even when they've described themselves in different words than you used. The search runs in the background, and you can save candidates, write notes, track where they are in the process and export the results.",
       "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Sökningen körs i bakgrunden, och du kan spara kandidater, skriva anteckningar, följa var de är i processen och exportera resultatet."
     },
-    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
       "en": "QuestLog — a project tool with gamification",
       "sv": "QuestLog — projektverktyg med gamification"
     },
-    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
       "en": "A scrum and kanban board where progress is rewarded with levels, to keep motivation up over time. It runs as a desktop application and as a web version, with login and sync between devices.",
       "sv": "En scrum- och kanbantavla där framsteg belönas med nivåer, för att hålla motivationen uppe över tid. Den finns som skrivbordsapp och som webbversion, med inloggning och synk mellan enheter."
     },
