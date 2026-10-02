@@ -285,3 +285,8 @@
 .site-footer p { color: rgba(255,255,255,0.85); font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0.02em; }
 .site-footer a { color: #ffffff; font-weight: 700; }
 .site-footer a:hover { color: #67b7f6; }
+
+/* No heading or lead in Contact: the buttons and the panel follow the
+   eyebrow directly. */
+#contact .sec-title,
+#contact .sec-lead { display: none; }
