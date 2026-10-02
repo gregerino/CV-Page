@@ -68,22 +68,22 @@
         "sv": "Bedöma kandidaters potential utifrån kompetens och affärsbehov."
       },
       "body": {
-        "en": "I've recruited and matched IT consultants, where the candidate has to fit both the role and what the clients ask for. Later I advised hiring managers on competence and cultural fit. I also built Recruitment OS, an AI tool that turns a requirement profile into structured, competency-based interviews with scorecards.",
-        "sv": "Jag har rekryterat och matchat IT-konsulter, där kandidaten ska passa både rollen och det kunderna efterfrågar. Senare rådgav jag rekryterande chefer kring kompetens och kulturell passform. Jag har också byggt Recruitment OS, ett AI-verktyg som gör om en kravprofil till strukturerade, kompetensbaserade intervjuer med scorecards."
+        "en": "I've recruited IT consultants and matched them to what the clients needed. Later I advised hiring managers on competence and cultural fit. I also built Recruitment OS, an AI tool that turns a requirement profile into structured, competency-based interviews with scorecards.",
+        "sv": "Jag har rekryterat IT-konsulter och matchat dem mot vad kunderna behövde. Senare rådgav jag rekryterande chefer kring kompetens och kulturell passform. Jag har också byggt Recruitment OS, ett AI-verktyg som gör om en kravprofil till strukturerade, kompetensbaserade intervjuer med scorecards."
       }
     },
     {
       "title": {
-        "en": "Selection, coordination and the candidate experience",
-        "sv": "Urval, samordning och kandidatupplevelse"
+        "en": "Selection and the candidate experience",
+        "sv": "Urval och kandidatupplevelse"
       },
       "quote": {
         "en": "Ensure quality in selection and the candidate experience. Coordinate interviews and processes.",
         "sv": "Säkerställa kvalitet i urval och kandidatupplevelse. Koordinera intervjuer och processer."
       },
       "body": {
-        "en": "I've coordinated interview processes, with scheduling, preparation and communication with the people involved. As the candidates' main contact I tried to give them quick and clear answers. I've worked in ATS systems every day, and in an IT consultancy I set up the ATS workflows.",
-        "sv": "Jag har samordnat intervjuprocesser, med schemaläggning, förberedelser och kommunikation med de inblandade. Som kandidaternas huvudkontakt försökte jag ge dem snabba och tydliga besked. Jag har jobbat i ATS-system varje dag, och i ett IT-konsultbolag satte jag upp ATS-flödena."
+        "en": "I've coordinated interview processes, from scheduling to preparation. As the candidates' main contact I tried to give them quick and clear answers. I've worked in ATS systems every day, and in an IT consultancy I set up the ATS workflows.",
+        "sv": "Jag har samordnat intervjuprocesser, från schemaläggning till förberedelser. Som kandidaternas huvudkontakt försökte jag ge dem snabba och tydliga besked. Jag har jobbat i ATS-system varje dag, och i ett IT-konsultbolag satte jag upp ATS-flödena."
       }
     },
     {
@@ -96,8 +96,8 @@
         "sv": "Arbeta nära HRBP och chefer i rekryteringsarbetet."
       },
       "body": {
-        "en": "I've advised hiring managers in every recruitment role I've had, mostly on the requirement profile, timelines and how we assess candidates. In an IT consultancy I sat on the management team and supported 15+ consultants with HR and development, alongside the recruitment.",
-        "sv": "Jag har rådgett rekryterande chefer i varje rekryteringsroll jag haft, mest kring kravprofilen, tidplanen och hur vi bedömer kandidaterna. I ett IT-konsultbolag satt jag i ledningsgruppen och stöttade 15+ konsulter med HR och utveckling, vid sidan av rekryteringen."
+        "en": "I've advised hiring managers in every recruitment role I've had, mostly on the requirement profile and how we assess candidates. In an IT consultancy I sat on the management team and supported 15+ consultants with HR and development, alongside the recruitment.",
+        "sv": "Jag har rådgett rekryterande chefer i varje rekryteringsroll jag haft, mest kring kravprofilen och hur vi bedömer kandidaterna. I ett IT-konsultbolag satt jag i ledningsgruppen och stöttade 15+ konsulter med HR och utveckling, vid sidan av rekryteringen."
       }
     },
     {
@@ -110,8 +110,8 @@
         "sv": "Bidra till att stärka ALTENs attraktionskraft på marknaden."
       },
       "body": {
-        "en": "When I led talent acquisition in an IT consultancy, I worked with employer branding alongside the recruitment. I also helped build a career programme for junior developers, which made it easier for us to attract people early in their career. Before that, at a vocational IT school, I built partnerships with companies and helped students into their first jobs.",
-        "sv": "När jag ledde talent acquisition i ett IT-konsultbolag jobbade jag med employer branding vid sidan av rekryteringen. Jag var också med och byggde ett karriärprogram för juniora utvecklare, som gjorde det lättare för oss att locka folk tidigt i karriären. Innan dess, på en yrkeshögskola inom IT, byggde jag partnerskap med företag och hjälpte studenter till sitt första jobb."
+        "en": "When I led talent acquisition in an IT consultancy, I worked with employer branding alongside the recruitment. I also helped build a career programme for junior developers. Before that, at a vocational IT school, I built partnerships with companies and helped students into their first jobs.",
+        "sv": "När jag ledde talent acquisition i ett IT-konsultbolag jobbade jag med employer branding vid sidan av rekryteringen. Jag var också med och byggde ett karriärprogram för juniora utvecklare. Innan dess, på en yrkeshögskola inom IT, byggde jag partnerskap med företag och hjälpte studenter till sitt första jobb."
       }
     },
     {
@@ -124,8 +124,8 @@
         "sv": "Du trivs i en miljö med högt tempo och många kontaktytor."
       },
       "body": {
-        "en": "I've handled many parallel processes in fast-moving consulting environments, in close contact with both candidates and clients. I keep track of it with structure, and I've built ATS workflows and onboarding processes that others could follow.",
-        "sv": "Jag har hanterat många parallella processer i snabbrörliga konsultmiljöer, i nära kontakt med både kandidater och kunder. Jag håller ordning på det med struktur, och jag har byggt ATS-flöden och onboardingprocesser som andra kunde följa."
+        "en": "I've handled many parallel processes in fast-moving consulting environments, in close contact with both candidates and clients. I work in a structured way, and I've built ATS workflows and onboarding processes.",
+        "sv": "Jag har hanterat många parallella processer i snabbrörliga konsultmiljöer, i nära kontakt med både kandidater och kunder. Jag jobbar strukturerat, och jag har byggt ATS-flöden och onboardingprocesser."
       }
     },
     {
@@ -198,8 +198,8 @@
       "sv": "Rekrytering nära affären"
     },
     "#about .about-quote": {
-      "en": "I like understanding what a manager needs, and then finding someone who fits.",
-      "sv": "Jag gillar att förstå vad en chef behöver, och sen hitta någon som passar."
+      "en": "I like finding the right person for a manager's team.",
+      "sv": "Jag gillar att hitta rätt person till en chefs team."
     },
     "#about .about-body": [
       {
@@ -246,8 +246,8 @@
       "sv": "En del av det här byggde jag tillsammans med kollegor, till exempel ATS-flödena och ett karriärprogram för juniora utvecklare. En del har jag byggt själv med AI, till exempel Recruitment OS, som gör om en kravprofil till ett intervjupaket."
     },
     "#built .built-card:nth-of-type(4) .built-text": {
-      "en": "I implemented and developed the ATS workflows in Teamtailor, from how a role was opened to how candidates moved through the process and who did what along the way. It made the recruitment work easier to follow for everyone involved.",
-      "sv": "Jag implementerade och utvecklade ATS-arbetsflödena i Teamtailor, från hur en roll öppnades till hur kandidater rörde sig genom processen och vem som gjorde vad längs vägen. Det gjorde rekryteringsarbetet lättare att följa för alla inblandade."
+      "en": "I implemented and developed the ATS workflows in Teamtailor, from how a role was opened to how candidates moved through the process and who did what along the way. It made the recruitment easier to follow.",
+      "sv": "Jag implementerade och utvecklade ATS-arbetsflödena i Teamtailor, från hur en roll öppnades till hur kandidater rörde sig genom processen och vem som gjorde vad längs vägen. Det gjorde rekryteringen lättare att följa."
     },
     "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
       "en": "A sourcing tool for recruiters",
