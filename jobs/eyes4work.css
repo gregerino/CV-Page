@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Eyes4work (Tranpenad Group) — Utbildningsansvarig Utbildare, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /eyes4work and by cv.html?job=eyes4work, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is Eyes4work's own, read off eyes4work.se:
+     #191414  their near-black: text, outlined buttons, tags, the footer
+     #FA4F42  their coral: the "4" in the logo, the "Rusta & Matcha" button
+     #DC3124  the deeper red of the same family, on their consent buttons
+     #F4F4F4  the pale grey panels
+
+   Their identity is a white page with near-black text, a full-bleed photo
+   hero with white type on a dark veil, Sora in a light weight for headings
+   and Inter for everything else, pill-shaped buttons, outlined tags, and a
+   black footer that the white page rounds off into.
+
+   Tokens first, then a handful of rules at the bottom. The layout and
+   structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f4f4f4;
+  --bg3:           #ebebeb;
+  --white:         #ffffff;
+
+  --border:        rgba(25,20,20,0.12);
+  --border-light:  rgba(25,20,20,0.06);
+  --border-strong: rgba(25,20,20,0.3);
+
+  --ink:           #191414;
+  --ink-mid:       #2e2828;
+  --ink-light:     #5a5252;
+  --ink-dim:       #877f7f;
+
+  /* #FA4F42 is too light for body-sized text on white (3.4:1), so the
+     accent is the deeper red they use on their buttons, and the coral
+     itself goes on dark surfaces and the decorative marks below. */
+  --amber:         #dc3124;
+  --amber-light:   #fa4f42;
+
+  --accent-rgb:    250,79,66;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 12px rgba(25,20,20,0.07), 0 1px 3px rgba(25,20,20,0.05);
+  --shadow-sm:     0 1px 4px rgba(25,20,20,0.05);
+  --shadow-lg:     0 10px 40px rgba(25,20,20,0.16);
+
+  --radius:        12px;
+  --radius-lg:     16px;
+  --radius-pill:   100px;
+
+  /* Light veil for the contact band. The hero gets its own dark one below. */
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(250,250,250,0.94) 50%,
+    rgba(244,244,244,0.9) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc3124' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Sora for headings, Inter for running text. Their site has no
+     monospace, so the base page's mono labels are set in Inter. */
+  --serif: 'Sora', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --sans:  'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --mono:  'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Headings in Sora at a light weight, tracked in slightly, as on their site. */
+.hero-name,
+.cv-name { font-weight: 400; letter-spacing: -0.03em; }
+
+.sec-title { font-weight: 400; letter-spacing: -0.02em; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title,
+.stat-num { font-weight: 500; letter-spacing: -0.01em; }
+
+/* No italics on their site, and Sora has none, so the base page's italic
+   lines are set upright. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote { font-weight: 300; }
+
+/* Labels: plain Inter, no spaced capitals. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.8rem;
+}
+.eyebrow { color: var(--amber); }
+
+/* Nav in plain Inter, like their header links. */
+.nav-links a { font-family: var(--sans); font-weight: 500; }
+
+/* Buttons as on eyes4work.se: pills, coral filled or outlined in black. */
+.btn { font-weight: 500; }
+.btn-primary {
+  background: #dc3124;
+  border-color: #dc3124;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #fa4f42;
+  border-color: #fa4f42;
+  box-shadow: 0 6px 18px rgba(250,79,66,0.28);
+}
+.btn-ghost {
+  background: transparent;
+  border-color: #191414;
+  color: #191414;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #191414; border-color: #191414; color: #ffffff; }
+
+/* Flat panels: pale grey or white, rounded, no frosted glass. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  box-shadow: none;
+  border-color: var(--border);
+}
+.band--alt .card { background: #ffffff; }
+
+/* Tags outlined in near-black, like their "Nyhet" labels. */
+.pill {
+  background: transparent;
+  border: 1px solid rgba(25,20,20,0.55);
+  border-radius: 10px;
+  color: #191414;
+}
+.pill--accent {
+  background: #191414;
+  border-color: #191414;
+  color: #ffffff;
+}
+.ask-chip { background: #ffffff; border-color: rgba(25,20,20,0.55); color: #191414; border-radius: 10px; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #fa4f42, rgba(25,20,20,0.18) 60%, transparent);
+}
+.job::before { border-color: #fa4f42; }
+.job-company { color: #191414; }
+
+.point-rule { background: #fa4f42; height: 3px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: their photo hero
+   ─────────────────────────────────────────────────────────────────────────
+   eyes4work.se opens on a full-bleed photo under a dark veil, with the
+   heading in white Sora. Same here over the Gothenburg photo. The colour
+   tokens are redefined inside #top only, so the rest of the page keeps the
+   white look.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:           #ffffff;
+  --ink-mid:       rgba(255,255,255,0.9);
+  --ink-light:     rgba(255,255,255,0.78);
+  --ink-dim:       rgba(255,255,255,0.62);
+  --border:        rgba(255,255,255,0.2);
+  --border-strong: rgba(255,255,255,0.55);
+  --amber:         #fa4f42;
+  --white-rgb:     25,20,20;
+}
+#top::after {
+  background: linear-gradient(160deg,
+    rgba(25,20,20,0.86) 0%,
+    rgba(25,20,20,0.74) 45%,
+    rgba(25,20,20,0.62) 100%);
+}
+#top .eyebrow { color: #ffffff; opacity: 0.85; }
+#top .hero-role { color: #fa4f42; font-family: var(--serif); font-weight: 400; }
+#top .hero-photo { border-color: rgba(255,255,255,0.15); }
+#top .btn-primary { background: #fa4f42; border-color: #fa4f42; color: #191414; }
+#top .btn-primary:hover { background: #ffffff; border-color: #ffffff; color: #191414; }
+#top .btn-ghost { border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; color: #191414; }
+#top .stat-strip {
+  background: rgba(25,20,20,0.45);
+  box-shadow: none;
+  border-color: rgba(255,255,255,0.18);
+}
+#top .stat-num { color: #fa4f42; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their near-black
+   ─────────────────────────────────────────────────────────────────────────
+   The section the page exists for gets the dark of their footer, with
+   white cards and the coral of the logo on the numbers.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #191414;
+  border-top: none;
+}
+#match + .band { border-top: none; }
+
+#match .eyebrow   { color: #fa4f42; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.78); }
+
+#match .card {
+  background: #ffffff;
+  border-color: transparent;
+  border-radius: 16px;
+}
+#match .point-num { color: #dc3124; font-weight: 600; }
+#match .point-quote { border-left-color: #fa4f42; color: #5a5252; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the learning work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link.
+     Companies:  LMS, course content, career programme, onboarding, ATS
+   The base page lets the odd last card span the full width. Course content
+   is that card in the markup, so the span moves to the ATS card, which now
+   comes last.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 2; grid-column: auto; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 5; grid-column: 1 / -1; }
+
+/* With AI: the recruitment tools first. Six cards, so none spans.
+     Recruitment OS, agentic OS, sourcing tool, this site, QuestLog, more */
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon {
+  background: rgba(250,79,66,0.1);
+  border-color: rgba(250,79,66,0.3);
+  border-radius: 50%;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: the two education roles marked
+   ─────────────────────────────────────────────────────────────────────────
+   The timeline stays chronological. The course developer role (2nd) and
+   the vocational school (5th) get a filled coral dot and a tag.
+   ───────────────────────────────────────────────────────────────────────── */
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(5)::before { background: #fa4f42; }
+
+#experience .job:nth-of-type(2) .job-company::after,
+#experience .job:nth-of-type(5) .job-company::after {
+  content: 'Education';
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid #dc3124;
+  border-radius: 10px;
+  color: #dc3124;
+  font-size: 0.72rem;
+  font-weight: 600;
+  vertical-align: 1px;
+}
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company::after { content: 'Utbildning'; }
+
+/* Education: the YH certification first. */
+#education .edu-card:nth-of-type(2) { order: -1; }
+#education .edu-school { color: #191414; }
+#education .callout {
+  background: #f4f4f4;
+  border-left: none;
+  border-radius: 16px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact and footer
+   ─────────────────────────────────────────────────────────────────────────
+   On eyes4work.se the white page ends in rounded corners over a black
+   footer. The contact band does the same, and the footer runs up under it.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  z-index: 1;
+  border-radius: 0 0 32px 32px;
+  overflow: hidden;
+}
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(25,20,20,0.55);
+  border-radius: 10px;
+  color: #191414;
+}
+#contact .contact-facts span:last-child {
+  background: #fa4f42;
+  border-color: #fa4f42;
+  color: #191414;
+  font-weight: 600;
+}
+
+.site-footer {
+  position: relative;
+  margin-top: -32px;
+  padding: calc(2.6rem + 32px) 0 2.6rem;
+  background: #191414;
+  border-top: none;
+}
+.site-footer p { color: rgba(255,255,255,0.8); font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0; }
+.site-footer a { color: #ffffff; font-weight: 600; }
+.site-footer a:hover { color: #fa4f42; }

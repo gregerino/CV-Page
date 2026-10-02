@@ -1,0 +1,399 @@
+{
+  "company": "Eyes4work",
+  "roleName": "Utbildningsansvarig Utbildare",
+  "eyebrow": {
+    "en": "Application · Utbildningsansvarig Utbildare · Eyes4work",
+    "sv": "Ansökan · Utbildningsansvarig Utbildare · Eyes4work"
+  },
+  "role": {
+    "en": "Education and matching in Gothenburg",
+    "sv": "Utbildning och matchning i Göteborg"
+  },
+  "lead": {
+    "en": "I've worked with education and recruitment for seven years. I started as an education manager at a vocational IT school. There I led programmes and coached students before they went out into working life. Since then I've developed courses in HR and worked with recruitment and matching for about five years. I'm a certified education manager from the Swedish National Agency for Higher Vocational Education. Now I'd like to help build up a new education business in Gothenburg.",
+    "sv": "Jag har jobbat med utbildning och rekrytering i sju år. Jag började som utbildningsledare på en yrkeshögskola inom IT. Där ledde jag utbildningsprogram och coachade studenter inför arbetslivet. Sedan dess har jag utvecklat kurser inom HR och jobbat med rekrytering och matchning i ca 5 år. Jag är certifierad utbildningsledare från Myndigheten för yrkeshögskolan. Nu vill jag gärna vara med och bygga upp en ny utbildningsverksamhet i Göteborg."
+  },
+  "cta": {
+    "en": "See how my background fits the role",
+    "sv": "Se hur min bakgrund passar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "What the ad asks for, and what I've done in each part.",
+    "sv": "Det annonsen tar upp, och vad jag har gjort inom varje del."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Vocational higher education",
+        "sv": "Yrkeshögskola"
+      },
+      "quote": {
+        "en": "Experience from the education sector or the labour market area. Merit: vocational higher education (YH).",
+        "sv": "Erfarenhet från utbildningssektorn eller arbetsmarknadsområdet. Meriterande: Yrkeshögskola."
+      },
+      "body": {
+        "en": "I was an education manager at a vocational IT school. I led and developed the programmes, and kept in close contact with the companies in the industry. After that I developed courses in HR at an HR tech company.",
+        "sv": "Jag var utbildningsledare på en yrkeshögskola inom IT. Jag ledde och utvecklade utbildningsprogrammen och hade nära kontakt med företagen i branschen. Efter det utvecklade jag kurser inom HR på ett HR-techbolag."
+      }
+    },
+    {
+      "title": {
+        "en": "Responsibility for programmes",
+        "sv": "Ansvar för utbildningar"
+      },
+      "quote": {
+        "en": "Experience of having been responsible for education assignments or parts of an education business.",
+        "sv": "Erfarenhet av att ha ansvarat för utbildningsuppdrag eller delar av en utbildningsverksamhet."
+      },
+      "body": {
+        "en": "At the vocational school I was responsible for education programmes. I took part in recruiting teachers. I also worked with companies and found internship placements for the students.",
+        "sv": "På yrkeshögskolan hade jag ansvar för utbildningsprogram. Jag var med och rekryterade lärare. Jag hade också kontakt med företag och tog fram praktikplatser åt studenterna."
+      }
+    },
+    {
+      "title": {
+        "en": "Teaching and coaching",
+        "sv": "Utbildning och coachning"
+      },
+      "quote": {
+        "en": "Experience of delivering training, coaching or supervision.",
+        "sv": "Erfarenhet av att genomföra utbildning, coachning eller handledning."
+      },
+      "body": {
+        "en": "At an HR tech company I planned and ran conferences and training sessions. Before that I held internal workshops in an IT consultancy, among other things on gamification. At the vocational school I coached the students before they went out into working life.",
+        "sv": "På ett HR-techbolag planerade och höll jag konferenser och utbildningstillfällen. Innan dess höll jag interna workshops i ett IT-konsultbolag, bland annat om gamification. På yrkeshögskolan coachade jag studenterna inför arbetslivet."
+      }
+    },
+    {
+      "title": {
+        "en": "Planning education",
+        "sv": "Utbildningsplanering"
+      },
+      "quote": {
+        "en": "A good understanding of participant management, education planning and follow-up.",
+        "sv": "God förståelse för deltagarhantering, utbildningsplanering och uppföljning."
+      },
+      "body": {
+        "en": "I'm a certified education manager from the Swedish National Agency for Higher Vocational Education, with a focus on pedagogical planning and course design. At the vocational school I supported the students when they went out into internships and jobs.",
+        "sv": "Jag är certifierad utbildningsledare från Myndigheten för yrkeshögskolan, med fokus på pedagogisk planering och kursdesign. På yrkeshögskolan stöttade jag studenterna när de gick ut på praktik och till jobb."
+      }
+    },
+    {
+      "title": {
+        "en": "Building from the start",
+        "sv": "Bygga upp från början"
+      },
+      "quote": {
+        "en": "Contribute to the start-up of new education assignments. Develop routines and ways of working for the education business.",
+        "sv": "Bidra till uppstart av nya utbildningsuppdrag. Utveckla rutiner och arbetssätt för utbildningsverksamheten."
+      },
+      "body": {
+        "en": "In an IT consultancy I was there from the start when we developed an internal learning system. I also helped build a career programme for junior developers there. I've built onboarding in two companies that didn't have any, and at the vocational school I developed the LMS structure.",
+        "sv": "I ett IT-konsultbolag var jag med från start när vi tog fram ett internt lärsystem. Där var jag också med och byggde ett karriärprogram för juniora utvecklare. Jag har byggt onboarding i två bolag som saknade det, och på yrkeshögskolan utvecklade jag LMS-strukturen."
+      }
+    },
+    {
+      "title": {
+        "en": "Quality",
+        "sv": "Kvalitet"
+      },
+      "quote": {
+        "en": "Ensure quality, documentation and follow-up. Contribute to the development of the company's education concept.",
+        "sv": "Säkerställa kvalitet, dokumentation och uppföljning. Bidra till utvecklingen av företagets utbildningskoncept."
+      },
+      "body": {
+        "en": "At an HR tech company I developed courses in HR together with subject matter experts. I kept the material up to date and improved the pedagogical structure. I also used market insights and research in the material.",
+        "sv": "På ett HR-techbolag utvecklade jag kurser inom HR tillsammans med ämnesexperter. Jag höll materialet aktuellt och förbättrade den pedagogiska strukturen. Jag använde också omvärldsbevakning och forskning i materialet."
+      }
+    },
+    {
+      "title": {
+        "en": "Matching",
+        "sv": "Matchning"
+      },
+      "quote": {
+        "en": "For example, you may have worked in … coaching and matching, competence development …",
+        "sv": "Exempelvis kan du ha arbetat inom … coachning och matchning, kompetensutveckling …"
+      },
+      "body": {
+        "en": "I've recruited and matched people to jobs for about five years, mostly in consulting companies in tech. At the vocational school I matched the programmes to what the labour market needed, and helped students into their first jobs.",
+        "sv": "Jag har rekryterat och matchat människor mot jobb i ca 5 år, mest i konsultbolag inom tech. På yrkeshögskolan matchade jag utbildningarna mot vad arbetsmarknaden behövde, och hjälpte studenter in i sitt första jobb."
+      }
+    },
+    {
+      "title": {
+        "en": "Swedish and administration",
+        "sv": "Svenska och administration"
+      },
+      "quote": {
+        "en": "Good Swedish, spoken and written. Good administrative and organisational skills.",
+        "sv": "God svenska i tal och skrift. God administrativ och organisatorisk förmåga."
+      },
+      "body": {
+        "en": "Swedish is my native language. As a recruiter I've often had many processes going at once, and I worked in ATS systems every day. In an IT consultancy I set up the ATS workflows.",
+        "sv": "Svenska är mitt modersmål. Som rekryterare har jag ofta haft många processer igång samtidigt, och jag jobbade i ATS-system varje dag. I ett IT-konsultbolag satte jag upp ATS-flödena."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "7 years in education and recruitment",
+      "sv": "7 år inom utbildning och rekrytering"
+    },
+    "#top .stat-num": [
+      "YH",
+      "~5",
+      "2"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Education manager at a vocational IT school",
+        "sv": "Utbildningsledare på en yrkeshögskola inom IT"
+      },
+      {
+        "en": "Years of recruiting and matching people to jobs",
+        "sv": "År av rekrytering och matchning mot jobb"
+      },
+      {
+        "en": "Roles where education was the main part of the job",
+        "sv": "Roller där utbildning var huvuddelen av jobbet"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What did he do at the vocational school?",
+        "sv": "Vad gjorde han på yrkeshögskolan?"
+      },
+      {
+        "en": "Has he run training sessions himself?",
+        "sv": "Har han hållit utbildningar själv?"
+      },
+      {
+        "en": "How has he worked with matching?",
+        "sv": "Hur har han jobbat med matchning?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background in education",
+      "sv": "Fråga om min bakgrund inom utbildning"
+    },
+    "#about .sec-title": {
+      "en": "From vocational school to recruitment",
+      "sv": "Från yrkeshögskola till rekrytering"
+    },
+    "#about .about-quote": {
+      "en": "I like helping people on to a job.",
+      "sv": "Jag gillar att hjälpa folk vidare till ett jobb."
+    },
+    "#about .about-body": [
+      {
+        "en": "At the vocational school I worked close to the students and coached them before internships and jobs.",
+        "sv": "På yrkeshögskolan jobbade jag nära studenterna och coachade dem inför praktik och jobb."
+      },
+      {
+        "en": "Since then I've mostly recruited, in IT consultancies and in a recruitment and consulting firm. For almost a year I developed courses in HR at an HR tech company and ran training sessions.",
+        "sv": "Sedan dess har jag mest rekryterat, i IT-konsultbolag och i ett rekryterings- och konsultföretag. Under knappt ett år utvecklade jag kurser inom HR på ett HR-techbolag och höll utbildningar."
+      },
+      {
+        "en": "I have a bachelor's degree in behavioural science and I'm a certified education manager for vocational education.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap och är certifierad utbildningsledare för yrkeshögskolan."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Running a programme from planning to delivery",
+        "sv": "Att driva en utbildning från planering till genomförande"
+      },
+      {
+        "en": "Coaching someone on their way into work",
+        "sv": "Att coacha någon på väg ut i arbetslivet"
+      },
+      {
+        "en": "Matching the right person with the right job",
+        "sv": "Att matcha rätt person med rätt jobb"
+      },
+      {
+        "en": "Getting routines and ways of working in order",
+        "sv": "Att få ordning på rutiner och arbetssätt"
+      },
+      {
+        "en": "Being part of starting something new",
+        "sv": "Att vara med och starta något nytt"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Learning and structures I've built",
+      "sv": "Lärande och strukturer jag byggt"
+    },
+    "#built .sec-lead": {
+      "en": "I built most of this together with colleagues, for example an internal learning system and a career programme for junior developers. A few tools I've built myself with AI.",
+      "sv": "Det mesta här byggde jag tillsammans med kollegor, till exempel ett internt lärsystem och ett karriärprogram för juniora utvecklare. Några verktyg har jag byggt själv med AI."
+    },
+    "#experience .sec-title": {
+      "en": "Education and recruitment",
+      "sv": "Utbildning och rekrytering"
+    },
+    "#experience .sec-lead": {
+      "en": "I started at a vocational school and have worked in tech since then, mostly with recruitment.",
+      "sv": "Jag började på en yrkeshögskola och har sedan dess jobbat i techbranschen, mest med rekrytering."
+    },
+    "#experience .roles-title": {
+      "en": "Roles I've matched candidates to",
+      "sv": "Roller jag har matchat kandidater mot"
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science and education management",
+      "sv": "Beteendevetenskap och utbildningsledning"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments: how people work in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer: hur människor fungerar i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Certified education manager from the Swedish National Agency for Higher Vocational Education, focused on pedagogical planning and course design.",
+        "sv": "Certifierad utbildningsledare från Myndigheten för yrkeshögskolan, med fokus på pedagogisk planering och kursdesign."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Education",
+      "sv": "Utbildning"
+    },
+    "#education .callout-title": {
+      "en": "What the education gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science gave me a good grounding in how people and groups work. I took the education manager certification in 2020, while I was working at the vocational school.",
+      "sv": "Beteendevetenskapen gav mig en bra grund i hur människor och grupper fungerar. Certifieringen som utbildningsledare tog jag 2020, medan jag jobbade på yrkeshögskolan."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning & Development",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "Learning Management Systems (LMS)",
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      "HR",
+      "People & Culture",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      "Gamification",
+      "Employer Branding"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Here's a bit about me outside work.",
+      "sv": "Här är lite om mig utanför jobbet."
+    },
+    "#personal .personal-card:nth-of-type(1) .personal-text": {
+      "en": "I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&D adventures as a Game Master. I enjoy food and cooking, and like trying different kinds of food, from street food to nicer restaurants. I also get together over board games sometimes, and watch Critical Role, a live-action D&D series that feeds my creativity as a Game Master.",
+      "sv": "Jag är en kreativ person i grunden. Jag läser mycket fantasy och kanaliserar det till att skriva D&D-äventyr som Game Master. Jag gillar mat och matlagning, och tycker om att prova olika sorters mat, från streetfood till lite finare restauranger. Jag samlas också ibland över brädspel, och tittar på Critical Role, en live-action D&D-serie som ger bränsle till min kreativitet som Game Master."
+    },
+    "#personal .personal-card:nth-of-type(3) .personal-text": {
+      "en": "I live in Gothenburg with my fiancée and our son, who's almost three. Time with the people I care about is what matters most: good conversations, dinners and shared experiences.",
+      "sv": "Jag bor i Göteborg med min fästmö och vår son, som snart fyller tre. Tid med människorna jag bryr mig om är det som betyder mest: bra samtal, middagar och delade upplevelser."
+    },
+    "#contact .sec-title": {
+      "en": "Happy to talk about the role",
+      "sv": "Gärna ett samtal om rollen"
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science · Education manager (YH)",
+        "sv": "Utbildning: kand. beteendevetenskap · utbildningsledare (YH)"
+      },
+      {
+        "en": "Applying for: Utbildningsansvarig Utbildare, Eyes4work",
+        "sv": "Söker: Utbildningsansvarig Utbildare, Eyes4work"
+      }
+    ],
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(3) .built-text": {
+      "en": "You type what you're looking for, in free text or with filters, and the tool searches through GitHub, portfolios and technical blogs to find and rank candidates that match, even when they've described themselves in different words than you used. The search runs in the background, and you can save candidates, write notes, track where they are in the process and export the results.",
+      "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Sökningen körs i bakgrunden, och du kan spara kandidater, skriva anteckningar, följa var de är i processen och exportera resultatet."
+    }
+  }
+}
