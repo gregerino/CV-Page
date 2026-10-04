@@ -30,6 +30,7 @@ WORK EXPERIENCE:
    - Proactively sourced and engaged candidates, maintaining a strong talent pipeline
    - Advised hiring managers on recruitment processes, timelines, and candidate evaluation
    - Contributed to improving recruitment workflows and ensuring structured processes
+   - Worked actively with selling the company's services
 
 2. Course Developer — Simployer, Gothenburg (Sep 2023 – June 2024)
    Company: Leading Nordic HR tech company providing HR systems, payroll solutions and training.
@@ -39,6 +40,7 @@ WORK EXPERIENCE:
    - Planned and executed conferences and training sessions focused on participant value
    - Improved course materials and pedagogical structures
    - Integrated market insights and research into training content
+   - Worked actively with selling the company's services
 
 3. Business Manager — A Society, Gothenburg (April 2022 – Sep 2023)
    Company: IT consulting firm connecting tech talent with companies across Sweden.
@@ -47,6 +49,7 @@ WORK EXPERIENCE:
    - Provided HR-related support and maintained ongoing contact with consultants
    - Designed structured onboarding processes to improve engagement and retention
    - Managed multiple parallel processes in a fast-paced environment
+   - Worked actively with selling the company's services
 
 4. Talent Acquisition Lead / Consultant Manager — ZoCom, Gothenburg (Nov 2020 – April 2022)
    Company: Fast-growing IT consulting company focused on web development and digital solutions.
@@ -57,6 +60,7 @@ WORK EXPERIENCE:
    - Created internal workshops and learning sessions, including gamification methodology training
    - Helped build a career development programme aimed at supporting junior talent in entering the IT industry
    - Contributed to internal organisational development by helping shape and run an internal Learning Management System (LMS), which the company later sold B2B
+   - Worked actively with selling the company's services
 
 5. Education Manager / ICT Manager — IT-Högskolan, Gothenburg (June 2019 – Oct 2020)
    Company: One of Sweden's largest providers of vocational higher education within IT and tech.
@@ -121,6 +125,14 @@ EDUCATION:
   Relevant areas: Pedagogy & didactics, Recruitment & selection, Leadership & coaching, Competence supply.
 - Certified Education Manager — Myndigheten för Yrkeshögskolan, 2020
   Certification in education management focused on vocational higher education, directly applicable in L&D roles.
+
+SALES EXPERIENCE:
+About 5 years of selling services (Nov 2020 – June 2026), worked actively with sales in his roles at
+ZoCom, A Society, Simployer and Mpya Sci & Tech. Do not invent what was sold, to whom, deal sizes or figures;
+if asked for specifics, say he is happy to tell more in a conversation.
+
+DRIVING LICENCE:
+Yes, Swedish driving licence, category B.
 
 LANGUAGES:
 Swedish (native), English (professional fluency)
