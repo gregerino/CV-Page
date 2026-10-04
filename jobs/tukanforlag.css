@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+
+/* Tukan förlag / Tukan läromedel — Säljare, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /tukanforlag and by cv.html?job=tukanforlag, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is Tukan förlag's own, read off tukanforlag.se:
+     #FAF9F7  the warm off-white page
+     #EEECE4  the sand of the header, the footer and the round buttons
+     #DDECE2  the pale mint strip under the header ("Fri frakt …")
+     #FCFBFA  the book cards
+     #3C3C3B  the charcoal of all text, and of the outlined buttons
+     #DB2733  the red of the toucan's beak in the logo
+     #54B7BC  the teal of the logo's "t"
+     #F9B865  the orange "Nyhet" tag, with its folded corner
+
+   Their identity is a calm, warm page: sand and off-white, Avenir Next in
+   bold for headings, rounded cards, outlined pill buttons with an arrow,
+   and small orange tags. The logo's red and teal are the only strong
+   colours, and they stay small.
+
+   Avenir Next ships with macOS and iOS. Elsewhere Nunito Sans stands in,
+   as the closest open face.
+
+   Tokens first, then a handful of rules at the bottom. The layout and
+   structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #faf9f7;
+  --bg2:           #eeece4;
+  --bg3:           #e5e2d7;
+  --white:         #fcfbfa;
+
+  --border:        rgba(60,60,59,0.12);
+  --border-light:  rgba(60,60,59,0.07);
+  --border-strong: rgba(60,60,59,0.3);
+
+  --ink:           #2e2e2d;
+  --ink-mid:       #3c3c3b;
+  --ink-light:     #5f5e5b;
+  --ink-dim:       #8c8a85;
+
+  /* The beak red holds 4.6:1 on the off-white, so it can carry small text.
+     A shade deeper keeps links and labels comfortable on the sand too. */
+  --amber:         #c42230;
+  --amber-light:   #db2733;
+
+  --accent-rgb:    219,39,51;
+  --white-rgb:     252,251,250;
+  --bg-rgb:        250,249,247;
+
+  --shadow:        0 2px 12px rgba(60,60,59,0.06), 0 1px 3px rgba(60,60,59,0.04);
+  --shadow-sm:     0 1px 4px rgba(60,60,59,0.04);
+  --shadow-lg:     0 10px 40px rgba(60,60,59,0.12);
+
+  --radius:        15px;
+  --radius-lg:     15px;
+  --radius-pill:   23px;
+
+  /* The mint strip under the nav adds 28px to it. */
+  --nav-h:         132px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(250,249,247,0.95) 0%,
+    rgba(250,249,247,0.92) 45%,
+    rgba(238,236,228,0.86) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2354b7bc' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Avenir Next throughout, as on their site. No serif and no mono. */
+  --serif: 'Avenir Next', 'Avenir', 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  --sans:  'Avenir Next', 'Avenir', 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  --mono:  'Avenir Next', 'Avenir', 'Nunito Sans', system-ui, -apple-system, sans-serif;
+}
+@media (max-width: 620px) {
+  :root { --nav-h: 80px; }
+}
+
+body { font-size: 15.5px; }
+
+/* Headings in bold Avenir, tight, like "Aktuella böcker för vuxna". */
+.hero-name,
+.cv-name { font-weight: 700; letter-spacing: -0.02em; }
+.sec-title { font-weight: 700; letter-spacing: -0.015em; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title,
+.stat-num { font-weight: 600; letter-spacing: -0.005em; }
+
+/* Their site has no italics, so the base page's italic lines stand upright. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+/* Labels: plain Avenir in medium, no spaced capitals. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their sand header with the mint strip under it
+   ─────────────────────────────────────────────────────────────────────────
+   tukanforlag.se has a solid sand header and a thin mint strip below it
+   that says "Fri frakt vid köp över 299 kr". Here the strip says what the
+   page is.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #eeece4;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+}
+.nav-bar { border-top-color: rgba(60,60,59,0.08); }
+.nav::after {
+  content: 'Application · Sales Representative at Tukan läromedel';
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  background: #ddece2;
+  color: #3c3c3b;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 1rem;
+}
+:root:lang(sv) .nav::after { content: 'Ansökan · Säljare till Tukan läromedel'; }
+
+.nav-links a { font-family: var(--sans); font-weight: 500; color: #3c3c3b; font-size: 0.85rem; }
+.nav-links a:hover { background: rgba(60,60,59,0.06); }
+.nav-links a.active { color: #3c3c3b; background: #faf9f7; }
+.brand { font-weight: 700; letter-spacing: -0.01em; }
+.brand-dot { background: #db2733; box-shadow: 0 0 0 3px rgba(84,183,188,0.35); }
+.nav-mobile { background: #eeece4; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their outlined pills with an arrow
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-weight: 500; border-radius: 23px; }
+.btn-primary {
+  background: #3c3c3b;
+  border: 1px solid #3c3c3b;
+  color: #faf9f7;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #2e2e2d;
+  border-color: #2e2e2d;
+  box-shadow: 0 6px 18px rgba(60,60,59,0.18);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #3c3c3b;
+  color: #3c3c3b;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #eeece4; border-color: #3c3c3b; color: #2e2e2d; }
+
+/* Flat, rounded cards, like their book cards. */
+.card {
+  background: #fcfbfa;
+  backdrop-filter: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+.band--alt .card { background: #faf9f7; }
+
+/* Tags: round sand chips, like their price buttons. */
+.pill {
+  background: #eeece4;
+  border: none;
+  border-radius: 23px;
+  color: #3c3c3b;
+}
+.band--alt .pill { background: #faf9f7; }
+.pill--accent { background: #3c3c3b; color: #faf9f7; }
+.ask-chip {
+  background: transparent;
+  border: 1px solid #3c3c3b;
+  border-radius: 23px;
+  color: #3c3c3b;
+}
+.ask-chip:hover { background: #eeece4; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #54b7bc, rgba(60,60,59,0.15) 60%, transparent);
+}
+.job::before { border-color: #54b7bc; }
+.job-company { color: #2e2e2d; }
+
+.point-rule { background: #db2733; height: 3px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero
+   ─────────────────────────────────────────────────────────────────────────
+   Light and warm, as on their start page: the Gothenburg photo under an
+   off-white veil, a bold heading, and the role line in the logo's teal
+   shade, deep enough to read.
+   ───────────────────────────────────────────────────────────────────────── */
+#top .eyebrow { color: #c42230; }
+#top .hero-role { color: #2f8287; font-weight: 500; }
+#top .hero-photo { border-radius: 15px; border-color: transparent; }
+#top .stat-strip {
+  background: #fcfbfa;
+  border-color: transparent;
+  box-shadow: none;
+  border-radius: 15px;
+}
+#top .stat-num { color: #db2733; font-weight: 700; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their mint
+   ─────────────────────────────────────────────────────────────────────────
+   The mint of the strip under their header, as a whole band, with the
+   off-white book cards on it and the beak red on the numbers.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #ddece2; }
+#match .card { background: #fcfbfa; border-radius: 15px; }
+#match .eyebrow { color: #2e2e2d; }
+#match .point-num { color: #c42230; font-weight: 700; }
+#match .point-quote { border-left-color: #54b7bc; color: #5f5e5b; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the course material first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link.
+     Companies:  course content, LMS, career programme, onboarding, ATS
+   The base page lets the odd last card span the full width. Course content
+   is that card in the markup, so the span moves to the ATS card, which now
+   comes last.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 1; grid-column: auto; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 5; grid-column: 1 / -1; }
+
+/* With AI: the recruitment tools first. Six cards, so none spans.
+     Recruitment OS, agentic OS, sourcing tool, this site, QuestLog, more */
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon {
+  background: rgba(84,183,188,0.14);
+  border-color: transparent;
+  border-radius: 50%;
+}
+.built-link { color: #c42230; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: their orange "Nyhet" tag
+   ─────────────────────────────────────────────────────────────────────────
+   On tukanforlag.se new books carry a small orange tag with a folded
+   corner. Here it marks the roles closest to this one: the ones with
+   clients, and the ones in education. The timeline stays chronological.
+     1 Recruitment Consultant   Clients
+     2 Course Developer         Education + Clients
+     3 Business Manager         Clients
+     4 TA Lead                  Education + Clients
+     5 Education Manager        Education
+   A pseudo-element holds one tag, so in the two roles with both, the
+   Education tag hangs off the "· Gothenburg" span inside the company line.
+   ───────────────────────────────────────────────────────────────────────── */
+#experience .job:nth-of-type(-n+5)::before { background: #54b7bc; }
+
+#experience .job:nth-of-type(-n+5) .job-company::after,
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0 0.55rem 0 0.7rem;
+  background: #f9b865;
+  border-radius: 0 5px 5px 5px;
+  color: #3c3c3b;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.6;
+  vertical-align: 1px;
+}
+#experience .job:nth-of-type(1) .job-company::after,
+#experience .job:nth-of-type(2) .job-company::after,
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after { content: 'Clients'; }
+#experience .job:nth-of-type(5) .job-company::after,
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Education'; }
+#experience .job:nth-of-type(2) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after { margin-left: 0.4rem; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company::after { content: 'Kunder'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Utbildning'; }
+
+#experience .roles-card { background: #faf9f7; }
+
+/* Education: the education manager certification first. */
+#education .edu-card:nth-of-type(2) { order: -1; }
+#education .edu-school { color: #2e2e2d; }
+#education .callout {
+  background: #ddece2;
+  border-left: none;
+  border-radius: 15px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact and footer
+   ─────────────────────────────────────────────────────────────────────────
+   The facts as their round sand chips, the role itself in the orange tag.
+   The footer in the sand of theirs.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.3rem 0.9rem;
+  background: #eeece4;
+  border-radius: 23px;
+  color: #3c3c3b;
+}
+#contact .contact-facts span:last-child {
+  background: #f9b865;
+  border-radius: 0 8px 8px 8px;
+  color: #2e2e2d;
+  font-weight: 600;
+}
+
+.site-footer {
+  background: #eeece4;
+  border-top: none;
+  padding: 2.6rem 0;
+}
+.site-footer p { color: #3c3c3b; font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0; }
+.site-footer a { color: #c42230; font-weight: 600; }
+.site-footer a:hover { color: #db2733; }

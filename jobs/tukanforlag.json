@@ -1,0 +1,419 @@
+{
+  "company": "Tukan läromedel",
+  "roleName": "Säljare",
+  "eyebrow": {
+    "en": "Application · Sales Representative · Tukan läromedel",
+    "sv": "Ansökan · Säljare · Tukan läromedel"
+  },
+  "role": {
+    "en": "Sales and education in Gothenburg",
+    "sv": "Försäljning och utbildning i Göteborg"
+  },
+  "lead": {
+    "en": "I started my career as an education manager at a vocational school. There I led programmes and took part in recruiting teachers. Since then I've worked with selling services for about five years, in consulting firms and at an HR tech company. I like meeting people and understanding what they need. Now I'd like to do that with schools and teachers at Tukan.",
+    "sv": "Jag började min karriär som utbildningsledare på en yrkeshögskola. Där ledde jag utbildningsprogram och var med och rekryterade lärare. Sedan dess har jag jobbat med försäljning av tjänster i ca 5 år, i konsultbolag och på ett HR-techbolag. Jag tycker om att träffa människor och förstå vad de behöver. Nu skulle jag gärna göra det med skolor och lärare hos er."
+  },
+  "cta": {
+    "en": "See how my background fits the role",
+    "sv": "Se hur min bakgrund passar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "What the ad asks for, and what I've done in each part.",
+    "sv": "Det annonsen tar upp, och vad jag har gjort inom varje del."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Sales",
+        "sv": "Försäljning"
+      },
+      "quote": {
+        "en": "We think you have experience of sales and feel at home in the world of schools or teaching materials.",
+        "sv": "Vi tror att du har erfarenhet av försäljning och känner dig hemma i skolans eller läromedlens värld."
+      },
+      "body": {
+        "en": "I've worked actively with selling services for about five years. I did it in three consulting firms and at an HR tech company.",
+        "sv": "Jag har jobbat aktivt med försäljning av tjänster i ca 5 år. Det har jag gjort i tre konsultbolag och på ett HR-techbolag."
+      }
+    },
+    {
+      "title": {
+        "en": "Schools and teachers",
+        "sv": "Skolor och lärare"
+      },
+      "quote": {
+        "en": "Make new contacts and build long-term relationships with schools and teachers.",
+        "sv": "Skapa nya kontakter och bygga långsiktiga relationer med skolor och lärare."
+      },
+      "body": {
+        "en": "I was an education manager at a vocational IT school and took part in recruiting teachers. I was also in touch with companies and found internship placements for the students.",
+        "sv": "Jag var utbildningsledare på en yrkeshögskola inom IT och var med och rekryterade lärare. Jag hade också kontakt med företag och tog fram praktikplatser åt studenterna."
+      }
+    },
+    {
+      "title": {
+        "en": "Listening to what the customer needs",
+        "sv": "Lyssna in vad kunden behöver"
+      },
+      "quote": {
+        "en": "Good at listening, building trust and telling people about our teaching materials in an engaging way.",
+        "sv": "Bra på att lyssna, skapa förtroende och berätta om våra läromedel på ett engagerande sätt."
+      },
+      "body": {
+        "en": "I've had clients in the consulting firms. I asked what they needed and then looked for people who fit. As a recruitment consultant I advised the managers on the client side during the whole process.",
+        "sv": "I konsultbolagen har jag haft kunder. Jag frågade vad de behövde och letade sedan upp personer som passade. Som rekryteringskonsult gav jag råd till cheferna hos kunden under hela processen."
+      }
+    },
+    {
+      "title": {
+        "en": "School visits, meetings and fairs",
+        "sv": "Skolbesök, lärarträffar och mässor"
+      },
+      "quote": {
+        "en": "Plan and carry out school visits and teacher meetings, and take part in fairs.",
+        "sv": "Planera och genomföra skolbesök och lärarträffar samt delta på mässor."
+      },
+      "body": {
+        "en": "At an HR tech company I planned conferences and training sessions and ran them. In an IT consultancy I held internal workshops, among other things on gamification.",
+        "sv": "På ett HR-techbolag planerade jag konferenser och utbildningar och höll i dem. I ett IT-konsultbolag höll jag interna workshops, bland annat om gamification."
+      }
+    },
+    {
+      "title": {
+        "en": "Following up",
+        "sv": "Uppföljning"
+      },
+      "quote": {
+        "en": "Follow up interest from campaigns, fairs, sample copies and webinars.",
+        "sv": "Följa upp intresse från kampanjer, mässor, provexemplar och webbinarier."
+      },
+      "body": {
+        "en": "As a recruiter I often had many processes going at once. I was the candidates' contact person and followed up on them in the ATS system every day.",
+        "sv": "Som rekryterare hade jag ofta många processer igång samtidigt. Jag var kandidaternas kontaktperson och följde upp dem i ATS-systemet varje dag."
+      }
+    },
+    {
+      "title": {
+        "en": "Existing customers and support",
+        "sv": "Befintliga kunder och support"
+      },
+      "quote": {
+        "en": "Look after existing customers and give ongoing support by email and phone.",
+        "sv": "Ta hand om befintliga kunder och ge löpande support via mejl och telefon."
+      },
+      "body": {
+        "en": "In an IT consultancy I was in regular contact with the consultants and gave them HR support. While a recruitment was running I handled the contact between the client and the candidates.",
+        "sv": "I ett IT-konsultbolag hade jag löpande kontakt med konsulterna och gav dem HR-stöd. Medan en rekrytering pågick skötte jag kontakten mellan kunden och kandidaterna."
+      }
+    },
+    {
+      "title": {
+        "en": "A new role",
+        "sv": "En ny roll"
+      },
+      "quote": {
+        "en": "The role is new to us, which gives you plenty of room to shape how we work with sales and customer relationships.",
+        "sv": "Rollen är ny hos oss, vilket ger dig stort utrymme att forma hur vi arbetar med försäljning och kundrelationer."
+      },
+      "body": {
+        "en": "In an IT consultancy I set up how we worked in the ATS system. I've also built onboarding in two companies that didn't have any.",
+        "sv": "I ett IT-konsultbolag satte jag upp hur vi jobbade i ATS-systemet. Jag har också byggt onboarding i två bolag som inte hade någon."
+      }
+    },
+    {
+      "title": {
+        "en": "Working with the editorial side",
+        "sv": "Nära redaktionen"
+      },
+      "quote": {
+        "en": "All in close collaboration with colleagues in marketing and editorial.",
+        "sv": "Allt i nära samarbete med kollegorna på marknad och redaktion."
+      },
+      "body": {
+        "en": "At an HR tech company I developed course material in HR together with subject matter experts. I kept the material up to date and improved the pedagogical structure. I'm also a certified education manager.",
+        "sv": "På ett HR-techbolag tog jag fram kursmaterial inom HR tillsammans med ämnesexperter. Jag höll materialet aktuellt och förbättrade den pedagogiska strukturen. Jag är också certifierad utbildningsledare."
+      }
+    },
+    {
+      "title": {
+        "en": "Swedish and driving licence",
+        "sv": "Svenska och körkort"
+      },
+      "quote": {
+        "en": "You express yourself well in Swedish and have a driving licence … you like the freedom of taking your own responsibility, are structured …",
+        "sv": "Du uttrycker dig väl på svenska och har körkort … gillar friheten i att ta eget ansvar, är strukturerad …"
+      },
+      "body": {
+        "en": "Swedish is my native language and I have a driving licence (B). I've written job ads and course material, and I like planning my own work.",
+        "sv": "Svenska är mitt modersmål och jag har körkort (B). Jag har skrivit jobbannonser och kursmaterial, och jag gillar att lägga upp arbetet själv."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "About 5 years selling services",
+      "sv": "Ca 5 år inom försäljning av tjänster"
+    },
+    "#top .stat-num": [
+      "~5",
+      "4",
+      "YH"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years selling services",
+        "sv": "År av försäljning av tjänster"
+      },
+      {
+        "en": "Roles where I've sold services",
+        "sv": "Roller där jag har sålt tjänster"
+      },
+      {
+        "en": "Education manager at a vocational IT school",
+        "sv": "Utbildningsledare på en yrkeshögskola inom IT"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "Has he worked with schools?",
+        "sv": "Har han jobbat med skolor?"
+      },
+      {
+        "en": "How has he worked with clients?",
+        "sv": "Hur har han jobbat med kunder?"
+      },
+      {
+        "en": "Has he run conferences or training?",
+        "sv": "Har han hållit konferenser eller utbildningar?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background",
+      "sv": "Fråga om min bakgrund"
+    },
+    "#about .sec-title": {
+      "en": "From vocational school to sales",
+      "sv": "Från yrkeshögskola till försäljning"
+    },
+    "#about .about-quote": {
+      "en": "I like talking to people and understanding what they need.",
+      "sv": "Jag tycker om att prata med folk och förstå vad de behöver."
+    },
+    "#about .about-body": [
+      {
+        "en": "I started at a vocational school. There I led programmes and took part in recruiting teachers.",
+        "sv": "Jag började på en yrkeshögskola. Där ledde jag utbildningsprogram och var med och rekryterade lärare."
+      },
+      {
+        "en": "Since then I've mostly worked in consulting and recruitment firms. There I sold services and was in touch with both clients and candidates.",
+        "sv": "Sedan dess har jag mest jobbat i konsult- och rekryteringsbolag. Där har jag sålt tjänster och haft kontakt med både kunder och kandidater."
+      },
+      {
+        "en": "For almost a year I developed course material in HR at an HR tech company and ran training sessions. I have a bachelor's degree in behavioural science and I'm a certified education manager.",
+        "sv": "Under knappt ett år tog jag fram kursmaterial inom HR på ett HR-techbolag och höll utbildningar. Jag har en kandidatexamen i beteendevetenskap och är certifierad utbildningsledare."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Listening to what someone needs",
+        "sv": "Att lyssna in vad någon behöver"
+      },
+      {
+        "en": "Keeping in touch with people over time",
+        "sv": "Att hålla kontakten med folk över tid"
+      },
+      {
+        "en": "Standing in front of a group and explaining something",
+        "sv": "Att stå framför en grupp och förklara något"
+      },
+      {
+        "en": "Getting planning and follow-up in order",
+        "sv": "Att få ordning på planering och uppföljning"
+      },
+      {
+        "en": "Being part of building something new",
+        "sv": "Att vara med och bygga upp något nytt"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Material and ways of working I've built",
+      "sv": "Material och arbetssätt jag byggt"
+    },
+    "#built .sec-lead": {
+      "en": "I built most of this together with colleagues, for example course material in HR and an internal learning system. A few tools I've built myself with AI.",
+      "sv": "Det mesta här byggde jag tillsammans med kollegor, till exempel kursmaterial inom HR och ett internt lärsystem. Några verktyg har jag byggt själv med AI."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
+      "en": "You type what you're looking for, in free text or with filters, and the tool searches through GitHub, portfolios and technical blogs to find and rank candidates that match, even when they've described themselves in different words than you used. The search runs in the background, and you can save candidates, write notes, track where they are in the process and export the results.",
+      "sv": "Du skriver in vad du letar efter, i fritext eller med filter, och verktyget söker igenom GitHub, portfolios och tekniska bloggar för att hitta och ranka kandidater som matchar, även om de beskrivit sig själva med andra ord än du. Sökningen körs i bakgrunden, och du kan spara kandidater, skriva anteckningar, följa var de är i processen och exportera resultatet."
+    },
+    "#experience .sec-title": {
+      "en": "Where I have worked",
+      "sv": "Var jag har jobbat"
+    },
+    "#experience .sec-lead": {
+      "en": "I started at a vocational school and have since worked in tech, mostly in consulting and recruitment firms.",
+      "sv": "Jag började på en yrkeshögskola och har sedan dess jobbat i techbranschen, mest i konsult- och rekryteringsbolag."
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science and pedagogy",
+      "sv": "Beteendevetenskap och pedagogik"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments: how people work in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer: hur människor fungerar i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Certified education manager from the Swedish National Agency for Higher Vocational Education, focused on pedagogical planning and course design.",
+        "sv": "Certifierad utbildningsledare från Myndigheten för yrkeshögskolan, med fokus på pedagogisk planering och kursdesign."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Education",
+      "sv": "Utbildning"
+    },
+    "#education .callout-title": {
+      "en": "What the education gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science gave me a good grounding in how people and groups work. I took the education manager certification in 2020, while I was working at the vocational school.",
+      "sv": "Beteendevetenskapen gav mig en bra grund i hur människor och grupper fungerar. Certifieringen som utbildningsledare tog jag 2020, medan jag jobbade på yrkeshögskolan."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "Learning & Development",
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      "Employer Branding",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      "Learning Management Systems (LMS)",
+      "Gamification",
+      "HR",
+      "People & Culture",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      }
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Office 365",
+      "Canva",
+      "Monday.com",
+      "Slack",
+      "Teamtailor",
+      "Workbuster",
+      "Claude Code",
+      "Winningtemp"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Here's a bit about me outside work.",
+      "sv": "Här är lite om mig utanför jobbet."
+    },
+    "#personal .personal-card:nth-of-type(1) .personal-text": {
+      "en": "I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&D adventures as a Game Master. I enjoy food and cooking, and like trying different kinds of food, from street food to nicer restaurants. I also get together over board games sometimes, and watch Critical Role, a live-action D&D series that feeds my creativity as a Game Master.",
+      "sv": "Jag är en kreativ person i grunden. Jag läser mycket fantasy och kanaliserar det till att skriva D&D-äventyr som Game Master. Jag gillar mat och matlagning, och tycker om att prova olika sorters mat, från streetfood till lite finare restauranger. Jag samlas också ibland över brädspel, och tittar på Critical Role, en live-action D&D-serie som ger bränsle till min kreativitet som Game Master."
+    },
+    "#personal .personal-card:nth-of-type(3) .personal-text": {
+      "en": "I live in Gothenburg with my fiancée and our son, who's almost three. Time with the people I care about is what matters most: good conversations, dinners and shared experiences.",
+      "sv": "Jag bor i Göteborg med min fästmö och vår son, som snart fyller tre. Tid med människorna jag bryr mig om är det som betyder mest: bra samtal, middagar och delade upplevelser."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science · Education manager (YH)",
+        "sv": "Utbildning: kand. beteendevetenskap · utbildningsledare (YH)"
+      },
+      {
+        "en": "Driving licence: B",
+        "sv": "Körkort: B"
+      },
+      {
+        "en": "Applying for: Sales Representative, Tukan läromedel",
+        "sv": "Söker: Säljare, Tukan läromedel"
+      }
+    ]
+  }
+}
