@@ -72,6 +72,9 @@ WORK EXPERIENCE:
 5. Education Manager / ICT Manager — IT-Högskolan, Gothenburg (June 2019 – Oct 2020)
    Company: One of Sweden's largest providers of vocational higher education within IT and tech.
    - Led and developed education programmes in close collaboration with the labour market
+   - Ran the programmes' steering group work (ledningsgruppsarbete)
+   - Handled the admission of students
+   - Drove the programmes towards set targets (resultatmål)
    - Coached and guided students in their career journey into the IT industry
    - Worked with competence supply by matching education to market needs
    - Participated in recruiting teachers and ensured relevant competence
