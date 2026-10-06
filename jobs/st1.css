@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800;6..12,900&display=swap');
+
+/* St1 Refinery — HR Business Partner, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /st1 and by cv.html?job=st1, from the head script, so the page
+   is drawn in these colours from the first frame.
+
+   The palette is St1's own, read off the tokens on st1.se:
+     #ffbe00  primary yellow, the filled pill buttons ("Godkänn alla")
+     #17181c  their black, all text and the outlined buttons
+     #ed1b2e  the red of the logo (tertiary-500)
+     #eef1f6  the cool grey of their card lists (secondary-50)
+     #dfe2ea  one step darker (secondary-100)
+     #5c6270  secondary-600, their muted text
+
+   Their identity is a white page, heavy Nunito Sans headings (800–900),
+   pill buttons with a 2rem radius in yellow with black text, and cool grey
+   rounded cards. The yellow is never used for text; it fills things. The
+   red stays in the logo, so here it stays on small marks.
+
+   Tokens first, then a handful of rules at the bottom. The layout and
+   structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #eef1f6;
+  --bg3:           #dfe2ea;
+  --white:         #ffffff;
+
+  --border:        rgba(23,24,28,0.12);
+  --border-light:  rgba(23,24,28,0.07);
+  --border-strong: rgba(23,24,28,0.3);
+
+  --ink:           #17181c;
+  --ink-mid:       #2e3138;
+  --ink-light:     #5c6270;
+  --ink-dim:       #8f95a3;
+
+  /* Links and small labels in the logo red, a shade deeper so it holds
+     on white and on the grey. Tints and glows come from the yellow. */
+  --amber:         #c8101c;
+  --amber-light:   #ed1b2e;
+
+  --accent-rgb:    255,190,0;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 4px rgba(23,24,28,0.08);
+  --shadow-sm:     0 1px 3px rgba(23,24,28,0.06);
+  --shadow-lg:     0 10px 32px rgba(23,24,28,0.12);
+
+  --radius:        16px;
+  --radius-lg:     32px;
+  --radius-pill:   32px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.92) 45%,
+    rgba(238,241,246,0.86) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2317181c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Nunito Sans throughout, as on st1.se. No serif and no mono. */
+  --serif: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+  --sans:  'Nunito Sans', system-ui, -apple-system, sans-serif;
+  --mono:  'Nunito Sans', system-ui, -apple-system, sans-serif;
+}
+
+body { font-size: 15.5px; }
+
+/* Heavy headings, like "Är du vår nästa Game Changer?". */
+.hero-name,
+.cv-name { font-weight: 900; letter-spacing: -0.02em; }
+.sec-title { font-weight: 800; letter-spacing: -0.015em; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title,
+.stat-num { font-weight: 800; letter-spacing: -0.005em; }
+
+/* Their site has no italics. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-size: 0.85rem;
+}
+
+/* Their eyebrow-style mark: a short yellow bar before section labels. */
+.band .eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 6px;
+  margin-right: 0.55rem;
+  background: #ffbe00;
+  border-radius: 3px;
+  vertical-align: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white, like their header, with the brand dot in the logo red
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(23,24,28,0.08);
+}
+.nav-bar { border-top-color: rgba(23,24,28,0.06); }
+.nav-links a { font-family: var(--sans); font-weight: 700; color: #17181c; font-size: 0.86rem; }
+.nav-links a:hover { background: #eef1f6; }
+.nav-links a.active { color: #17181c; background: #ffbe00; }
+.brand { font-weight: 900; letter-spacing: -0.01em; }
+.brand em { font-style: normal; }
+.brand-dot { background: #ed1b2e; box-shadow: 0 0 0 3px rgba(255,190,0,0.45); }
+.nav-mobile { background: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their yellow pills with black text, and the outlined black one
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-weight: 800; border-radius: 32px; }
+.btn-primary {
+  background: #ffbe00;
+  border: 2px solid #ffbe00;
+  color: #17181c;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #ffffff;
+  border-color: #17181c;
+  color: #17181c;
+  box-shadow: none;
+}
+.btn-ghost {
+  background: #ffffff;
+  border: 2px solid #17181c;
+  color: #17181c;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #17181c; border-color: #17181c; color: #ffffff; }
+
+/* Flat rounded cards, like their card lists. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  border-color: transparent;
+  box-shadow: var(--shadow);
+}
+.band--alt .card { background: #ffffff; }
+
+.pill {
+  background: #eef1f6;
+  border: none;
+  border-radius: 32px;
+  color: #17181c;
+  font-weight: 600;
+}
+.band--alt .pill { background: #ffffff; }
+.pill--accent { background: #ffbe00; color: #17181c; }
+.ask-chip {
+  background: #ffffff;
+  border: 2px solid #17181c;
+  border-radius: 32px;
+  color: #17181c;
+  font-weight: 700;
+}
+.ask-chip:hover { background: #ffbe00; border-color: #ffbe00; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #ffbe00, rgba(23,24,28,0.15) 60%, transparent);
+}
+.job::before { border-color: #ffbe00; }
+.job-company { color: #17181c; }
+
+.point-rule { background: #ffbe00; height: 6px; border-radius: 3px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero
+   ─────────────────────────────────────────────────────────────────────────
+   White and bright, as on their career page: the Gothenburg photo under a
+   white veil, a heavy heading, and the stats on a yellow card.
+   ───────────────────────────────────────────────────────────────────────── */
+#top .eyebrow { color: #17181c; }
+#top .hero-role { color: #5c6270; font-weight: 700; }
+#top .hero-photo { border-radius: 32px; border-color: transparent; }
+#top .stat-strip {
+  background: #ffbe00;
+  border-color: transparent;
+  box-shadow: none;
+  border-radius: 32px;
+}
+#top .stat-num { color: #17181c; font-weight: 900; }
+#top .stat-label { color: #17181c; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their cool grey
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #eef1f6; }
+#match .card { background: #ffffff; border-radius: 32px; }
+#match .eyebrow { color: #17181c; }
+#match .point-num { color: #17181c; font-weight: 900; }
+#match .point-quote { border-left: 4px solid #ffbe00; color: #5c6270; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the HR work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link.
+     Companies:  onboarding, course content in HR, ATS, LMS, career programme
+   Course content is the odd last card in the markup and spans the full
+   width there, so the span moves to the career programme, which now comes
+   last.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 2; grid-column: auto; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 5; grid-column: 1 / -1; }
+
+/* With AI: the HR process tools first, then this site.
+     Recruitment OS, agentic OS, this site, QuestLog, finance, more */
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon {
+  background: #ffbe00;
+  border-color: transparent;
+  border-radius: 50%;
+  color: #17181c;
+}
+.built-link { color: #17181c; font-weight: 800; text-decoration-color: #ffbe00; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a yellow "HR" tag on the roles with HR work in them
+   ─────────────────────────────────────────────────────────────────────────
+   The timeline stays chronological. The tag marks the roles where HR was
+   part of the job, as the Experience bullets say:
+     2 Course Developer   courses in HR
+     3 Business Manager   HR support for consultants
+     4 TA Lead            HR responsibilities for 15+ consultants
+   ───────────────────────────────────────────────────────────────────────── */
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #ffbe00; }
+
+#experience .job:nth-of-type(2) .job-company::after,
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after {
+  content: 'HR';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0 0.65rem;
+  background: #ffbe00;
+  border-radius: 32px;
+  color: #17181c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.7;
+  vertical-align: 1px;
+}
+
+#experience .roles-card { background: #ffffff; border-radius: 32px; }
+
+#education .edu-school { color: #17181c; }
+#education .callout {
+  background: #eef1f6;
+  border-left: none;
+  border-radius: 32px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact and footer
+   ─────────────────────────────────────────────────────────────────────────
+   The facts as grey pills, the role itself in yellow. The footer in their
+   black, with the yellow on the link.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.3rem 0.9rem;
+  background: #eef1f6;
+  border-radius: 32px;
+  color: #17181c;
+  font-weight: 600;
+}
+#contact .contact-facts span:last-child {
+  background: #ffbe00;
+  font-weight: 800;
+}
+
+.site-footer {
+  background: #17181c;
+  border-top: none;
+  padding: 2.6rem 0;
+}
+.site-footer p { color: #dfe2ea; font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0; }
+.site-footer a { color: #ffbe00; font-weight: 800; }
+.site-footer a:hover { color: #ffd333; }

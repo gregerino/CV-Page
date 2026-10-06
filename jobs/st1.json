@@ -1,0 +1,347 @@
+{
+  "company": "St1 Refinery",
+  "roleName": "HR Business Partner",
+  "eyebrow": {
+    "en": "Application · HR Business Partner · St1 Refinery",
+    "sv": "Ansökan · HR Business Partner · St1 Refinery"
+  },
+  "role": {
+    "en": "HR, close to managers and employees",
+    "sv": "HR, nära chefer och medarbetare"
+  },
+  "lead": {
+    "en": "I've worked with people and competence since 2019, in recent years mostly with recruitment in IT and tech companies. I like getting to know the people in a business and helping where it's needed. With you I'd like to work more broadly with HR and learn from your team.",
+    "sv": "Jag har jobbat med människor och kompetens sedan 2019, de senaste åren mest med rekrytering i IT- och teknikbolag. Jag tycker om att lära känna människorna i en verksamhet och hjälpa till där det behövs. Hos er skulle jag gärna få jobba bredare med HR och lära mig av ert team."
+  },
+  "cta": {
+    "en": "See my background for the role",
+    "sv": "Se min bakgrund för rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Points from the ad, with what I've done in each one.",
+    "sv": "Punkter ur annonsen, med vad jag har gjort inom var och en."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Support for managers and employees",
+        "sv": "Stöd till chefer och medarbetare"
+      },
+      "quote": {
+        "en": "Give qualified support and advice to managers and employees.",
+        "sv": "Ge kvalificerat stöd och rådgivning till chefer och medarbetare."
+      },
+      "body": {
+        "en": "In an IT consultancy I sat on the management team and was responsible for a group of 15+ consultants. I helped them with HR questions and their development. In my next job I was the consultants' contact for HR questions. As a recruiter I've advised managers on requirement profiles and selection.",
+        "sv": "I ett IT-konsultbolag satt jag i ledningsgruppen och ansvarade för en grupp på 15+ konsulter. Jag hjälpte dem med HR-frågor och deras utveckling. På nästa jobb var jag konsulternas kontakt i HR-frågor. Som rekryterare har jag gett chefer råd kring kravprofil och urval."
+      }
+    },
+    {
+      "title": {
+        "en": "Recruitment and onboarding",
+        "sv": "Rekrytering och onboarding"
+      },
+      "quote": {
+        "en": "Drive and support HR processes such as recruitment, onboarding and rehabilitation.",
+        "sv": "Driva och stötta HR-processer som rekrytering, onboarding och rehabilitering."
+      },
+      "body": {
+        "en": "I've recruited for about five years and run the whole processes myself, usually for technical roles. In two companies there was no onboarding when I started, so I built one.",
+        "sv": "Jag har rekryterat i ca 5 år och drivit hela processerna själv, oftast till tekniska roller. I två bolag fanns det ingen onboarding när jag började, så jag byggde en."
+      }
+    },
+    {
+      "title": {
+        "en": "Digitalisation and new ways of working",
+        "sv": "Digitalisering och nya arbetssätt"
+      },
+      "quote": {
+        "en": "Take part in and drive improvement and development projects in HR, including digitalisation, HR systems and new ways of working.",
+        "sv": "Delta i och driva förbättrings- och utvecklingsprojekt inom HR, inklusive digitalisering, HR-system och nya arbetssätt."
+      },
+      "body": {
+        "en": "When I led talent acquisition, I implemented an ATS and built the workflows in it. I was also part of shaping an internal LMS from the start. I use AI every day and have built my own tools with it, such as Recruitment OS. I like reading about AI in my spare time too.",
+        "sv": "När jag ledde talent acquisition implementerade jag ett ATS och byggde flödena i det. Jag var också med och formade ett internt LMS från start. AI använder jag varje dag, och med det har jag byggt egna verktyg som Recruitment OS. Jag läser gärna om AI på fritiden också."
+      }
+    },
+    {
+      "title": {
+        "en": "Developing the organisation",
+        "sv": "Utveckling av organisationen"
+      },
+      "quote": {
+        "en": "Contribute to organisational change and business development.",
+        "sv": "Bidra i organisationsförändringar och verksamhetsutveckling."
+      },
+      "body": {
+        "en": "At a vocational college I improved the internal communication flows. Later, in a fast-growing IT consultancy, I helped build a career programme for junior developers. There I also ran internal workshops for my colleagues.",
+        "sv": "På en yrkeshögskola förbättrade jag de interna kommunikationsflödena. Senare, i ett IT-konsultbolag som växte snabbt, var jag med och byggde ett karriärprogram för juniora utvecklare. Där höll jag också interna workshops för kollegorna."
+      }
+    },
+    {
+      "title": {
+        "en": "Independent in a varied day",
+        "sv": "Självgående i en varierad vardag"
+      },
+      "quote": {
+        "en": "You are independent and structured, and enjoy a varied day where you need to prioritise.",
+        "sv": "Du är självgående och strukturerad, och trivs i en varierad vardag där du behöver prioritera."
+      },
+      "body": {
+        "en": "I've often had many processes going at once and had to prioritise on my own. That suits me. In recruitment I talked to managers and candidates every day.",
+        "sv": "Jag har ofta haft många processer igång samtidigt och fått prioritera själv. Det passar mig bra. I rekryteringen pratade jag med chefer och kandidater varje dag."
+      }
+    },
+    {
+      "title": {
+        "en": "Behavioural science and two languages",
+        "sv": "Beteendevetenskap och två språk"
+      },
+      "quote": {
+        "en": "An education in HR, personnel science or equivalent. Communicative, and at ease in Swedish and English.",
+        "sv": "Har utbildning inom HR/personalvetenskap eller motsvarande. Är kommunikativ och uttrycker dig obehindrat på svenska och engelska."
+      },
+      "body": {
+        "en": "I have a bachelor's degree in behavioural science from Umeå University, 180 credits. At an HR tech company I developed courses in HR together with HR experts. Swedish is my native language and I speak and write English fluently.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap från Umeå universitet, 180 hp. På ett HR-techbolag tog jag fram kurser inom HR tillsammans med HR-experter. Svenska är mitt modersmål och engelska talar och skriver jag obehindrat."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Recruitment and HR since 2020",
+      "sv": "Rekrytering och HR sedan 2020"
+    },
+    "#top .stat-num": [
+      "5+",
+      "15+",
+      "2"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years with recruitment and HR",
+        "sv": "År med rekrytering och HR"
+      },
+      {
+        "en": "Consultants I was responsible for",
+        "sv": "Konsulter jag ansvarade för"
+      },
+      {
+        "en": "Companies where I built onboarding",
+        "sv": "Bolag där jag byggde onboarding"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "How has he supported managers and employees?",
+        "sv": "Hur har han stöttat chefer och medarbetare?"
+      },
+      {
+        "en": "What has he done with HR systems and digitalisation?",
+        "sv": "Vad har han gjort inom HR-system och digitalisering?"
+      },
+      {
+        "en": "How has he worked with onboarding?",
+        "sv": "Hur har han jobbat med onboarding?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my HR background",
+      "sv": "Fråga om min bakgrund inom HR"
+    },
+    "#about .sec-title": {
+      "en": "HR close to the business",
+      "sv": "HR nära verksamheten"
+    },
+    "#about .about-quote": {
+      "en": "I like being someone managers and employees can turn to.",
+      "sv": "Jag trivs med att vara någon som chefer och medarbetare kan vända sig till."
+    },
+    "#about .about-body": [
+      {
+        "en": "I've mostly worked in IT and tech companies. The best part of the job has been the contact with the people.",
+        "sv": "Jag har mest jobbat i IT- och teknikbolag. Det bästa med jobbet har varit kontakten med människorna."
+      },
+      {
+        "en": "I'm creative and like building things, at work and at home.",
+        "sv": "Jag är kreativ och bygger gärna saker, på jobbet och hemma."
+      },
+      {
+        "en": "I'm also a certified education manager.",
+        "sv": "Jag är också certifierad utbildningsledare."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Being a support for managers in their everyday work",
+        "sv": "Att vara ett stöd för chefer i vardagen"
+      },
+      {
+        "en": "HR processes that are easy to follow",
+        "sv": "HR-processer som är lätta att följa"
+      },
+      {
+        "en": "A good start for new employees",
+        "sv": "En bra start för nya medarbetare"
+      },
+      {
+        "en": "New systems and digital ways of working",
+        "sv": "Nya system och digitala arbetssätt"
+      },
+      {
+        "en": "Workshops and training for colleagues",
+        "sv": "Workshops och utbildningar för kollegor"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Processes and tools I've built",
+      "sv": "Processer och verktyg jag byggt"
+    },
+    "#built .sec-lead": {
+      "en": "Some of this I built with colleagues at work. The rest I've built on my own with AI.",
+      "sv": "En del av det här byggde jag med kollegor på jobbet. Resten har jag byggt själv med AI."
+    },
+    "#experience .sec-title": {
+      "en": "Recruitment, HR and education",
+      "sv": "Rekrytering, HR och utbildning"
+    },
+    "#experience .sec-lead": {
+      "en": "The roles with a yellow HR tag are the ones where HR work was part of the job. In the others I mostly worked with recruitment and education.",
+      "sv": "Rollerna med en gul HR-etikett är de där HR-arbete ingick. I de andra jobbade jag mest med rekrytering och utbildning."
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science at the base",
+      "sv": "Beteendevetenskap i grunden"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments: how people and groups work in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer: hur människor och grupper fungerar i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Certified education manager, with a focus on pedagogical planning and course design.",
+        "sv": "Certifierad utbildningsledare, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science, in practice",
+      "sv": "Beteendevetenskap, i praktiken"
+    },
+    "#education .callout-title": {
+      "en": "What the education gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "The degree was about how people and groups work in organisations. I've had use for it in almost every role.",
+      "sv": "Utbildningen handlade om hur människor och grupper fungerar i organisationer. Jag har haft nytta av den i nästan varje roll."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "HR",
+      "People & Culture",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "Learning & Development",
+      "Learning Management Systems (LMS)",
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Employer Branding",
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "The role has a lot of people to meet, and I like meeting new people. Here's a bit about me outside work.",
+      "sv": "Rollen har många kontaktytor, och jag gillar att träffa nya människor. Här är lite om mig utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: HR Business Partner, St1 Refinery",
+        "sv": "Söker: HR Business Partner, St1 Refinery"
+      }
+    ]
+  }
+}
