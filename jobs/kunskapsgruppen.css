@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap');
+
+/* Kunskapsgruppen Yrkeshögskola — Utbildningsledare YH, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /kunskapsgruppen and by cv.html?job=kunskapsgruppen, from the
+   head script, so the page is drawn in these colours from the first frame.
+
+   The palette is Kunskapsgruppen's own, read off kunskapsgruppen.se:
+     #0da642  the bright green of their filled buttons and the logo
+     #2c622c  --main-color, the darker green
+     #234923  --link-color
+     #00504b  the deep petrol of their webinar band
+     #003246  the navy of their "Vad tycker våra deltagare?" band
+     #e6f5eb  the mint of their course cards
+     #e7f2e9  the footer
+     #e2eff9  the pale blue of their "Vi utbildar" band
+     #222222  their text
+
+   Their identity is a white page, uppercase extra-condensed headings
+   (Proxima Nova Extra Condensed; Barlow Condensed is the free stand-in),
+   square buttons in green with uppercase labels, flat mint cards with no
+   rounding, a hero photo under a dark veil with a wave at the bottom, and
+   big centred numbers in "Våra resultat talar för sig själva".
+
+   Tokens first, then the rules that carry their look through each section.
+   The layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #e6f5eb;
+  --bg3:           #e2eff9;
+  --white:         #ffffff;
+
+  --border:        rgba(34,34,34,0.12);
+  --border-light:  rgba(34,34,34,0.07);
+  --border-strong: rgba(34,34,34,0.28);
+
+  --ink:           #222222;
+  --ink-mid:       #333333;
+  --ink-light:     #4f4f54;
+  --ink-dim:       #959ba1;
+
+  /* Links and small labels in their darker green, which holds on white
+     and on the mint. The bright green fills buttons and marks. */
+  --amber:         #2c622c;
+  --amber-light:   #234923;
+
+  --accent-rgb:    13,166,66;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        none;
+  --shadow-sm:     none;
+  --shadow-lg:     0 10px 30px rgba(0,50,70,0.14);
+
+  --radius:        0px;
+  --radius-lg:     0px;
+  --radius-pill:   2px;
+
+  /* Their hero: the photo under a dark petrol-navy veil. */
+  --photo-veil: linear-gradient(160deg,
+    rgba(0,50,70,0.90) 0%,
+    rgba(0,62,72,0.86) 50%,
+    rgba(0,80,75,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230da642' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --sans:  'Figtree', system-ui, -apple-system, sans-serif;
+  --mono:  'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+}
+
+body { color: #333333; }
+
+/* Uppercase condensed headings, like "KORTA, EFFEKTIVA UTBILDNINGAR". */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.sec-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.05;
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 1.15;
+}
+.point-title,
+.built-title,
+.job-title,
+.edu-degree { font-size: 1.35rem; }
+
+/* Their site has no italics. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+/* Their category labels ("LEDARSKAP & HR"): condensed, uppercase, green. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2c622c;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white like their sticky header, with a green square for the logo
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(34,34,34,0.08);
+}
+.nav-bar { border-top-color: rgba(34,34,34,0.06); }
+.nav-links a {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #222222;
+  border-radius: 0;
+}
+.nav-links a:hover { background: #e6f5eb; color: #222222; }
+.nav-links a.active { background: #0da642; color: #ffffff; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.brand em { color: #2c622c; }
+.brand-dot {
+  width: 12px; height: 16px;
+  border-radius: 0;
+  background: #0da642;
+  box-shadow: inset -4px 0 0 #2c622c;
+}
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { font-family: var(--serif); font-weight: 600; text-transform: uppercase; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their square green ones with condensed uppercase labels
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 0;
+  padding: 0.85rem 1.7rem;
+}
+.btn:hover { transform: none; }
+.btn-primary {
+  background: #0da642;
+  border: 2px solid #0da642;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #2c622c; border-color: #2c622c; color: #ffffff; box-shadow: none; }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #003246;
+  color: #003246;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #003246; border-color: #003246; color: #ffffff; }
+
+/* Flat cards: mint on white, white on mint, no rounding and no shadow. */
+.card {
+  background: #e6f5eb;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+}
+.band--alt .card { background: #ffffff; }
+
+.pill {
+  background: #ffffff;
+  border: 1px solid rgba(44,98,44,0.35);
+  border-radius: 2px;
+  color: #222222;
+  font-weight: 500;
+}
+.pill--accent { background: #0da642; border-color: #0da642; color: #ffffff; }
+.ask-chip {
+  background: #ffffff;
+  border: 2px solid #003246;
+  border-radius: 0;
+  color: #003246;
+  font-weight: 600;
+}
+.ask-chip:hover { background: #003246; color: #ffffff; border-color: #003246; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #0da642, rgba(44,98,44,0.2) 60%, transparent);
+}
+.job::before { border-color: #0da642; border-radius: 0; }
+.job-company { color: #2c622c; }
+
+.point-rule { background: #0da642; height: 4px; width: 44px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero
+   ─────────────────────────────────────────────────────────────────────────
+   As on kunskapsgruppen.se: the photo under a dark veil, white uppercase
+   heading, a green button, and a white wave across the bottom edge. The
+   wave sits in the veil layer so it needs no extra markup.
+   ───────────────────────────────────────────────────────────────────────── */
+#top { padding-bottom: 6.5rem; }
+#top::after {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 46 C 240 6 480 6 720 34 S 1200 74 1440 30 L1440 80 L0 80 Z' fill='%23ffffff'/%3E%3C/svg%3E") bottom / 100% 70px no-repeat,
+    var(--photo-veil);
+}
+#top .eyebrow { color: #7fd89c; }
+#top .hero-name { color: #ffffff; font-size: clamp(3rem, 7vw, 4.8rem); }
+#top .hero-role { color: #ffffff; font-family: var(--serif); font-weight: 600; font-size: 1.45rem; text-transform: uppercase; letter-spacing: 0.01em; line-height: 1.2; }
+#top .hero-lead { color: rgba(255,255,255,0.9); }
+#top .hero-lead strong { color: #ffffff; }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.85); }
+#top .meta-row svg { stroke: #7fd89c; }
+#top .meta-row .sep { color: #0da642; }
+#top .btn-ghost { border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; color: #003246; }
+#top .hero-photo { border: none; border-radius: 0; box-shadow: 10px 10px 0 #0da642; }
+
+/* The stats as their results row: white panel, big centred numbers. */
+#top .stat-strip {
+  background: #ffffff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+#top .stat-num {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5vw, 3.4rem);
+  line-height: 1;
+  color: #003246;
+}
+#top .stat-label { color: #333333; font-size: 0.86rem; }
+
+/* The ask bar on white, right under the wave. */
+.ask { background: #ffffff; border-top: none; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their pale blue, white cards with a green rule
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #e2eff9; }
+#match .card { background: #ffffff; }
+#match .point-num { font-family: var(--serif); font-weight: 700; color: #003246; }
+#match .point-quote { border-left: 3px solid #0da642; color: #4f4f54; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the education work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link.
+     Companies:  course content, LMS, career programme, onboarding, ATS
+   Course content is the odd last card in the markup and spans the full
+   width there; it comes first now, so the span moves to the ATS card.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 1; grid-column: auto; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 5; grid-column: 1 / -1; }
+
+/* With AI: Recruitment OS (for appointing teachers), the planning tool,
+   this site, then the rest.
+     Recruitment OS, QuestLog, this site, agentic OS, finance, more */
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon {
+  background: #0da642;
+  border-color: transparent;
+  border-radius: 0;
+  color: #ffffff;
+}
+.built-link { color: #2c622c; font-weight: 700; text-decoration-color: #0da642; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: green tags on the roles with education in them
+   ─────────────────────────────────────────────────────────────────────────
+   The timeline stays chronological. The tags follow the Experience bullets:
+     2 Course Developer      courses, conferences and training sessions
+     4 TA Lead               internal workshops and the LMS
+     5 Education Manager     the vocational college itself, tagged "YH"
+   ───────────────────────────────────────────────────────────────────────── */
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #0da642; }
+
+#experience .job:nth-of-type(2) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after,
+#experience .job:nth-of-type(5) .job-company::after {
+  content: 'Utbildning';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0 0.6rem;
+  background: #e6f5eb;
+  color: #2c622c;
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 1px;
+}
+html[lang="en"] #experience .job:nth-of-type(2) .job-company::after,
+html[lang="en"] #experience .job:nth-of-type(4) .job-company::after { content: 'Education'; }
+#experience .job:nth-of-type(5) .job-company::after,
+html[lang="en"] #experience .job:nth-of-type(5) .job-company::after {
+  content: 'YH';
+  background: #0da642;
+  color: #ffffff;
+}
+#experience .job:nth-of-type(5) {
+  background: #ffffff;
+  border-left: 4px solid #0da642;
+  padding: 1.4rem 1.6rem;
+}
+
+#experience .roles-card { background: #ffffff; }
+
+#education .edu-school { color: #2c622c; }
+#education .callout {
+  background: #e6f5eb;
+  border-left: 4px solid #0da642;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact, in their navy band, and the footer in their mint
+   ───────────────────────────────────────────────────────────────────────── */
+#contact::after { background: linear-gradient(160deg, rgba(0,50,70,0.94), rgba(0,50,70,0.9)); }
+#contact .eyebrow { color: #7fd89c; }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead,
+#contact p { color: rgba(255,255,255,0.85); }
+#contact a:not(.btn) { color: #ffffff; }
+#contact .btn-primary:hover { background: #ffffff; border-color: #ffffff; color: #003246; }
+#contact .btn-ghost { border-color: #ffffff; color: #ffffff; }
+#contact .btn-ghost:hover { background: #ffffff; color: #003246; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.3rem 0.85rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff;
+  font-weight: 500;
+}
+#contact .contact-facts span:last-child {
+  background: #0da642;
+  border-color: #0da642;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #e7f2e9;
+  border-top: none;
+  padding: 2.6rem 0;
+}
+.site-footer p { color: #333333; font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0; }
+.site-footer a { color: #2c622c; font-weight: 700; }
+.site-footer a:hover { color: #0da642; }
