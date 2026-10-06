@@ -30,6 +30,10 @@
 
   if (RESERVED.indexOf(slug) !== -1 || !/^[a-z0-9-]+$/.test(slug)) { done(); return; }
 
+  // Before the fetch, so a quick click on CV (or a pack that fails to load)
+  // still takes the reader back to this page from the CV.
+  carrySlug();
+
   // Never leave the page hidden because a request hung.
   var safety = setTimeout(done, 4000);
 
@@ -119,8 +123,6 @@
     robots.name = 'robots';
     robots.content = 'noindex, nofollow';
     document.head.appendChild(robots);
-
-    carrySlug();
 
     if (window.CVLang) window.CVLang.refresh();
   }

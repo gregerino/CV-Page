@@ -17,6 +17,18 @@
       theme.rel = 'stylesheet';
       theme.href = '/jobs/' + encodeURIComponent(slug) + '.css';
       document.head.appendChild(theme);
+
+      // Every way out of the CV leads back to the application page the reader
+      // came from (/<slug>, keeping any #section), not to the base CV at "/".
+      document.addEventListener('DOMContentLoaded', function () {
+        var base = '/' + encodeURIComponent(slug);
+        document.querySelectorAll('a[href^="index.html"]').forEach(function (a) {
+          a.setAttribute('href', base + a.getAttribute('href').slice('index.html'.length));
+        });
+        document.querySelectorAll('a[href="cv.html"]').forEach(function (a) {
+          a.setAttribute('href', 'cv.html?job=' + encodeURIComponent(slug));
+        });
+      });
     })();
   </script>
 </head>
