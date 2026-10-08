@@ -1,0 +1,388 @@
+{
+  "company": "Plushögskolan AB",
+  "roleName": "Affärsutvecklare",
+  "eyebrow": {
+    "en": "Application · Business Developer · Plushögskolan AB",
+    "sv": "Ansökan · Affärsutvecklare · Plushögskolan AB"
+  },
+  "role": {
+    "en": "Education and relationships with industry",
+    "sv": "Utbildning och relationer med näringslivet"
+  },
+  "lead": {
+    "en": "My first job after graduating was as an education manager at a vocational college in IT. Since then I have worked with recruitment and selling services in IT and tech companies. Now I would like to go back to vocational higher education and develop new programmes together with industry.",
+    "sv": "Mitt första jobb efter examen var som utbildningsledare på en yrkeshögskola inom IT. Sedan dess har jag arbetat med rekrytering och försäljning av tjänster i IT- och teknikbolag. Nu skulle jag gärna vilja tillbaka till yrkeshögskolan och ta fram nya utbildningar tillsammans med näringslivet."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Points from the ad, with what I've done in each one.",
+    "sv": "Punkter ur annonsen, med vad jag har gjort inom var och en."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Programmes developed with employers",
+        "sv": "Utbildningar i samråd med näringslivet"
+      },
+      "quote": {
+        "en": "Develop new education concepts and the programmes of the future in close consultation with industry.",
+        "sv": "Ta fram nya utbildningskoncept och utveckla framtidens utbildningar i nära samråd med näringslivet."
+      },
+      "body": {
+        "en": "At the vocational college I led and developed programmes in close collaboration with the labour market, and matched the content to what employers were asking for. Later, at an IT consultancy, we worked with vocational higher education programmes and helped change them based on what the industry needed.",
+        "sv": "På yrkeshögskolan ledde och utvecklade jag utbildningsprogram i nära samarbete med arbetsmarknaden och matchade innehållet mot det företagen efterfrågade. Senare, på ett IT-konsultbolag, arbetade vi med yrkeshögskoleutbildningar och var med och förändrade utbildningarna utifrån vad branschen behövde."
+      }
+    },
+    {
+      "title": {
+        "en": "Developing existing programmes",
+        "sv": "Vidareutveckla befintliga utbildningar"
+      },
+      "quote": {
+        "en": "Further develop existing programmes. You will be assigned several education areas that you are measured and followed up on.",
+        "sv": "Vidareutveckla befintliga utbildningar. Du tilldelas flera utbildningsområden som du mäts och följs upp på."
+      },
+      "body": {
+        "en": "As a course developer I created courses in HR together with subject matter experts and improved the pedagogical structure. At the vocational college I drove the programmes towards set targets.",
+        "sv": "Som kursutvecklare tog jag fram kurser inom HR tillsammans med ämnesexperter och förbättrade den pedagogiska strukturen. På yrkeshögskolan drev jag utbildningarna mot uppsatta resultatmål."
+      }
+    },
+    {
+      "title": {
+        "en": "Networks and long-term relationships",
+        "sv": "Nätverk och långsiktiga relationer"
+      },
+      "quote": {
+        "en": "Experience of networking, working with clients and building long-term relationships with others.",
+        "sv": "Erfarenhet av att nätverka, bedriva kundbearbetning och bygga långsiktiga relationer med andra."
+      },
+      "body": {
+        "en": "As an education manager I built partnerships with companies, among other things to secure internship placements (LIA) for the students. In recruitment I have had ongoing contact with clients and candidates.",
+        "sv": "Med företagen byggde jag upp samarbeten när jag var utbildningsledare, bland annat för att säkra LIA-platser åt de studerande. I rekryteringen har jag haft löpande kontakt med kunder och kandidater."
+      }
+    },
+    {
+      "title": {
+        "en": "Creating and developing business",
+        "sv": "Skapa och utveckla affärer"
+      },
+      "quote": {
+        "en": "Previous experience of creating and developing business.",
+        "sv": "Tidigare erfarenhet av att skapa och utveckla affärer."
+      },
+      "body": {
+        "en": "I have sold services for about five years. As a business manager I matched IT consultants with our clients' needs.",
+        "sv": "Jag har arbetat med försäljning av tjänster i ca 5 år. Som affärsansvarig matchade jag IT-konsulter mot kundernas behov."
+      }
+    },
+    {
+      "title": {
+        "en": "Writing in Swedish",
+        "sv": "Skriva på svenska"
+      },
+      "quote": {
+        "en": "Very good skills in writing and communicating in Swedish, and experience of writing persuasive texts.",
+        "sv": "Mycket god kompetens i att skriva och kommunicera på svenska, och erfarenhet av att skriva säljande texter."
+      },
+      "body": {
+        "en": "As a recruiter I wrote job ads to fit each client's needs. I have worked with employer branding and written course material and help material for new employees. Swedish is my native language.",
+        "sv": "Som rekryterare skrev jag jobbannonser efter kundens behov. Jag har arbetat med employer branding och tagit fram kursmaterial och hjälpmaterial för nyanställda. Svenska är mitt modersmål."
+      }
+    },
+    {
+      "title": {
+        "en": "Following developments and the market",
+        "sv": "Omvärldsbevakning och marknad"
+      },
+      "quote": {
+        "en": "Actively monitor current education areas, and carry out market analyses as a basis for business development.",
+        "sv": "Aktivt omvärldsbevaka aktuella utbildningsområden och göra marknadsanalyser som underlag för affärsutveckling."
+      },
+      "body": {
+        "en": "When I worked on courses in HR I built market insights and research into the content and kept it up to date. In my own time I read a lot about AI and how it can change the way we work.",
+        "sv": "När jag arbetade med kurser inom HR byggde jag in marknadsinsikter och forskning i innehållet och höll det aktuellt. Privat läser jag mycket om AI och hur den kan förändra sättet vi arbetar."
+      }
+    },
+    {
+      "title": {
+        "en": "Fast-growing organisations",
+        "sv": "Snabbväxande organisationer"
+      },
+      "quote": {
+        "en": "Used to fast-growing organisations, with a high degree of self-leadership and the ability to prioritise between many tasks.",
+        "sv": "Van att arbeta i snabbväxande organisationer, med ett stort mått av självledarskap och förmåga att prioritera mellan många olika arbetsuppgifter."
+      },
+      "body": {
+        "en": "At a fast-growing IT consultancy I was on the management team and responsible for recruitment. There was no onboarding, so I built it from scratch. I like planning my own work and have often had many processes running at once.",
+        "sv": "I ett snabbväxande IT-konsultbolag satt jag i ledningsgruppen och ansvarade för rekryteringen. Någon onboarding fanns inte, så jag byggde upp den från grunden. Jag planerar gärna mitt eget arbete och har ofta haft många processer igång samtidigt."
+      }
+    },
+    {
+      "title": {
+        "en": "New occupational areas",
+        "sv": "Nya yrkesområden"
+      },
+      "quote": {
+        "en": "Curious about learning new occupational areas and specialisations.",
+        "sv": "Nyfiken på att lära dig nya yrkesområden och inriktningar."
+      },
+      "body": {
+        "en": "I enjoy learning new things, and as a recruiter I have got to know many different occupations, from software developers to power engineers. Before each new role I went through with the client what it required.",
+        "sv": "Jag lär mig gärna nya saker, och som rekryterare har jag satt mig in i många olika yrkesroller, från mjukvaruutvecklare till ingenjörer inom elkraft. Inför varje ny roll gick jag igenom med kunden vad den krävde."
+      }
+    },
+    {
+      "title": {
+        "en": "Vocational higher education",
+        "sv": "Erfarenhet från yrkeshögskolan"
+      },
+      "quote": {
+        "en": "Documented previous experience of working with vocational higher education is a merit.",
+        "sv": "Det är meriterande om du har dokumenterad tidigare erfarenhet av att arbeta med yrkeshögskolan."
+      },
+      "body": {
+        "en": "From 2019 to 2020 I was an education manager at one of Sweden's largest vocational colleges in IT. I ran the steering group work and was responsible for admissions. During that period I was certified as an education manager by the Swedish National Agency for Higher Vocational Education.",
+        "sv": "Mellan 2019 och 2020 var jag utbildningsledare på en av Sveriges största yrkeshögskolor inom IT. Jag drev ledningsgruppsarbetet och höll i antagningen. Under perioden blev jag certifierad utbildningsledare av Myndigheten för yrkeshögskolan."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Education manager in vocational higher education 2019–2020",
+      "sv": "Utbildningsledare inom YH 2019–2020"
+    },
+    "#top .stat-num": [
+      {
+        "en": "c. 5",
+        "sv": "ca 5"
+      },
+      "2019",
+      "20+"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years selling services",
+        "sv": "År med försäljning av tjänster"
+      },
+      {
+        "en": "The year I started as an education manager in vocational higher education",
+        "sv": "Året jag började som utbildningsledare inom YH"
+      },
+      {
+        "en": "Different roles I have recruited for",
+        "sv": "Olika roller jag har rekryterat till"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background",
+      "sv": "Fråga om min bakgrund"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What did he do as an education manager?",
+        "sv": "Vad gjorde han som utbildningsledare?"
+      },
+      {
+        "en": "What experience does he have of sales?",
+        "sv": "Vilken erfarenhet har han av försäljning?"
+      },
+      {
+        "en": "How has he worked with companies?",
+        "sv": "Hur har han samarbetat med företag?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "Education and industry",
+      "sv": "Utbildning och näringsliv"
+    },
+    "#about .about-quote": {
+      "en": "I care about people and like building relationships that last.",
+      "sv": "Jag tycker om människor och att bygga relationer som håller."
+    },
+    "#about .about-body": [
+      {
+        "en": "In most of my roles I have worked closely with companies. Over my years as a recruiter I learned a lot about what employers look for in different industries.",
+        "sv": "I de flesta av mina roller har jag arbetat nära företag. Under åren som rekryterare lärde jag mig mycket om vad arbetsgivare letar efter i olika branscher."
+      },
+      {
+        "en": "I am creative and like building new things. Lately that has mostly been my own tools, built with AI.",
+        "sv": "Jag är kreativ och gillar att bygga nytt. På senare tid har det mest blivit egna verktyg, byggda med AI."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Developing programmes that industry asks for",
+        "sv": "Att ta fram utbildningar som näringslivet efterfrågar"
+      },
+      {
+        "en": "Long-term relationships with companies",
+        "sv": "Långsiktiga relationer med företag"
+      },
+      {
+        "en": "Writing clear texts that sell",
+        "sv": "Att skriva tydliga texter som säljer"
+      },
+      {
+        "en": "Getting to know new occupational areas",
+        "sv": "Att sätta mig in i nya yrkesområden"
+      },
+      {
+        "en": "Turning an idea into a finished programme",
+        "sv": "Att få en idé att bli en färdig utbildning"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "The first part I built with colleagues at work. The tools further down I've built on my own with AI.",
+      "sv": "Den första delen byggde jag med kollegor på jobbet. Verktygen längre ner har jag byggt själv med AI."
+    },
+    "#built .built-sub:first-of-type": {
+      "en": "At work, together with colleagues",
+      "sv": "På jobbet, tillsammans med kollegor"
+    },
+    "#experience .sec-lead": {
+      "en": "I started at a vocational college, at the bottom of the list. The tags show the roles where I sold services and where education was part of the job.",
+      "sv": "Jag började på en yrkeshögskola, längst ner i listan. Etiketterna visar i vilka roller jag sålde tjänster och var utbildning ingick i jobbet."
+    },
+    "#experience .roles-lead": {
+      "en": "A selection, mostly in software, embedded and engineering.",
+      "sv": "Ett axplock, mest inom mjukvara, embedded och ingenjörskonst."
+    },
+    "#education .sec-title": {
+      "en": "My education",
+      "sv": "Min utbildning"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments: how people and groups work in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer: hur människor och grupper fungerar i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning and course design.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "It was about how people and groups work in organisations. That has been useful whenever I have needed to understand what a company needs.",
+      "sv": "Den handlade om hur människor och grupper fungerar i organisationer. Det har jag haft nytta av när jag behövt förstå vad ett företag behöver."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Learning & Development",
+      "Employer Branding",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      "Learning Management Systems (LMS)",
+      "People & Culture",
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "You put a lot of weight on personal qualities, so here is a bit about me outside work.",
+      "sv": "Ni lägger stor vikt vid personliga egenskaper, så här är lite om mig utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Driving licence: B",
+        "sv": "Körkort: B"
+      },
+      {
+        "en": "Applying for: Business Developer, Plushögskolan AB",
+        "sv": "Söker: Affärsutvecklare, Plushögskolan AB"
+      }
+    ]
+  }
+}
