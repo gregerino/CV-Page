@@ -1,0 +1,416 @@
+{
+  "company": "Detechtiv",
+  "roleName": "Customer & Product Specialist",
+  "eyebrow": {
+    "en": "Application · Customer & Product Specialist · Detechtiv",
+    "sv": "Ansökan · Customer & Product Specialist · Detechtiv"
+  },
+  "role": {
+    "en": "A recruiter who builds with AI",
+    "sv": "Rekryterare som bygger med AI"
+  },
+  "lead": {
+    "en": "For the last few years I've worked as a recruiter in IT and tech companies, with ongoing client contact. In parallel I build my own tools with AI, without a background in programming. I'm now looking for a role where I get the opportunity to use my competence and experience in AI to develop a product and a company.",
+    "sv": "De senaste åren har jag arbetat som rekryterare i IT- och techbolag, med löpande kundkontakt. Parallellt bygger jag egna verktyg med AI, utan bakgrund inom programmering. Nu söker jag en roll där jag får möjligheten att använda min kompetens och erfarenhet inom AI för att utveckla en produkt och ett bolag."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Points from the ad, with what I've done in each one.",
+    "sv": "Punkter ur annonsen, med vad jag har gjort inom var och en."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "AI as a work tool",
+        "sv": "AI som arbetsverktyg"
+      },
+      "quote": {
+        "en": "Use AI as a natural work tool for research, problem solving, documentation, testing, analysis and prototypes.",
+        "sv": "Använda AI som ett naturligt arbetsverktyg för research, problemlösning, dokumentation, testning, analys och prototyper."
+      },
+      "body": {
+        "en": "In recruitment I used AI to prepare interviews and streamline recurring tasks. Today I also build my own tools with AI, mainly in Claude Code.",
+        "sv": "I rekryteringen använde jag AI för att förbereda intervjuer och effektivisera återkommande moment. Idag bygger jag även egna verktyg med AI, främst i Claude Code."
+      }
+    },
+    {
+      "title": {
+        "en": "Things I've built with AI",
+        "sv": "Byggt med AI"
+      },
+      "quote": {
+        "en": "You have probably already built or automated something with tools like Claude, ChatGPT, Codex, Lovable or Google AI Studio.",
+        "sv": "Du har sannolikt redan byggt eller automatiserat något med verktyg som Claude, ChatGPT, Codex, Lovable eller Google AI Studio."
+      },
+      "body": {
+        "en": "I've built a system for recruitment where AI agents carry out the initial work. They make a first assessment of CVs and book interviews, while the recruiter makes the decisions. I also built a sourcing tool that searches for candidates on GitHub and in technical blogs. Since LinkedIn's own APIs can't be used, the tool also runs searches on its own. You can see more of the tools further down, under \"What I've built\".",
+        "sv": "Jag har byggt ett system för rekrytering där AI-agenter utför det inledande arbetet. De gör en första bedömning av CV:n och bokar intervjuer, medan rekryteraren fattar besluten. Därtill byggde jag ett sourcingverktyg som söker kandidater på GitHub och i tekniska bloggar. Eftersom det inte går att använda LinkedIns egna API:er gör verktyget även sökningar på egen hand. Mer om verktygen finns längre ner under \"Vad jag byggt\"."
+      }
+    },
+    {
+      "title": {
+        "en": "Quick, personal contact",
+        "sv": "Snabb och personlig kontakt"
+      },
+      "quote": {
+        "en": "Have ongoing contact with customers and give quick, personal support.",
+        "sv": "Ha löpande kontakt med kunder och ge snabb, personlig support."
+      },
+      "body": {
+        "en": "As a recruiter I was the candidates' main point of contact and got back to them quickly when they reached out. I coordinated the communication between client and candidate throughout the process.",
+        "sv": "Som rekryterare var jag kandidaternas huvudsakliga kontaktperson och återkopplade snabbt när de hörde av sig. Jag samordnade kommunikationen mellan kund och kandidat genom hela processen."
+      }
+    },
+    {
+      "title": {
+        "en": "What the client actually needs",
+        "sv": "Vad kunden egentligen behöver"
+      },
+      "quote": {
+        "en": "Understand what the customer says, but also what the customer actually needs.",
+        "sv": "Förstå vad kunden säger, men också vad kunden egentligen behöver."
+      },
+      "body": {
+        "en": "Before each recruitment I carried out a needs analysis together with the hiring manager. I advised on competence requirements and timelines, and wrote the ad based on what we had agreed.",
+        "sv": "Inför varje rekrytering genomförde jag en behovsanalys tillsammans med den rekryterande chefen. Jag gav råd kring kompetenskrav och tidplan, och utformade annonsen utifrån det vi kommit överens om."
+      }
+    },
+    {
+      "title": {
+        "en": "A sense for product",
+        "sv": "Produktkänsla"
+      },
+      "quote": {
+        "en": "See when something works technically but is still needlessly complicated for the user.",
+        "sv": "Se när något fungerar tekniskt men ändå är onödigt krångligt för användaren."
+      },
+      "body": {
+        "en": "At an IT consultancy I was involved in developing an internal learning system, from the point where we defined what it should solve. The system was later sold as a product to other companies.",
+        "sv": "I ett IT-konsultbolag var jag delaktig i att ta fram ett internt lärandesystem, redan från det att vi definierade vad det skulle lösa. Systemet såldes senare som produkt till andra bolag."
+      }
+    },
+    {
+      "title": {
+        "en": "Documentation and help material",
+        "sv": "Dokumentation och hjälpmaterial"
+      },
+      "quote": {
+        "en": "Create documentation, help material and short support and product videos.",
+        "sv": "Skapa dokumentation, hjälpmaterial och korta support- och produktvideor."
+      },
+      "body": {
+        "en": "At an HR tech company I developed course content together with subject matter experts. I improved the pedagogical structure of the material so it was easier for participants to take in. I've also created documentation and help material when building onboarding, and in my role as Talent Acquisition Lead at an IT consultancy.",
+        "sv": "På ett HR-techbolag utvecklade jag kursinnehåll tillsammans med ämnesexperter. Jag förbättrade materialets pedagogiska struktur så att det blev lättare för deltagarna att ta till sig. Jag har även tagit fram dokumentation och hjälpmaterial när jag byggt upp onboarding, och i min roll som Talent Acquisition Lead i ett IT-konsultbolag."
+      }
+    },
+    {
+      "title": {
+        "en": "Helping new people get started",
+        "sv": "Hjälpa nya att komma igång"
+      },
+      "quote": {
+        "en": "Help new customers get started.",
+        "sv": "Hjälpa nya kunder att komma igång."
+      },
+      "body": {
+        "en": "In two companies I built the onboarding process from scratch, with the aim of increasing engagement and improving retention among new hires.",
+        "sv": "I två bolag byggde jag upp onboardingprocessen från grunden, med syftet att öka engagemanget och stärka retentionen bland nyanställda."
+      }
+    },
+    {
+      "title": {
+        "en": "Technically curious",
+        "sv": "Tekniskt nyfiken"
+      },
+      "quote": {
+        "en": "You learn quickly and aren't afraid of technology. An API, an integration or an unfamiliar system should spark curiosity.",
+        "sv": "Du lär dig snabbt och är tekniskt orädd. Ett API, en integration eller ett okänt system ska väcka nyfikenhet."
+      },
+      "body": {
+        "en": "I've always been interested in technology and have long experience of helping customers with technical products, all the way from computers at work to a job at a telecom operator in my teens. The assistant on this site gets its answers from Claude through an API, and my project tool QuestLog runs as a desktop app and as a web version with login and sync. I build prototypes as artifacts in Claude, then keep building on them in Claude Code so I can publish them. Building my own tools has given me an understanding of how all of this fits together, and I want to use it more in my daily work.",
+        "sv": "Jag har alltid varit intresserad av teknik och har lång erfarenhet av att hjälpa kunder med tekniska produkter, allt från datorer på jobbet till ett jobb hos en telekomoperatör under ungdomsåren. Assistenten på den här sidan hämtar sina svar från Claude via ett API, och mitt projektverktyg QuestLog finns som skrivbordsapp och som webbversion med inloggning och synk. Prototyper bygger jag som artefakter i Claude, och sedan bygger jag vidare på dem i Claude Code för att kunna publicera dem. Verktygen jag bygger har gett mig förståelse för hur allt detta hänger ihop, och jag vill använda det mer i min arbetsvardag."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Client-facing roles since 2020",
+      "sv": "Kundnära roller sedan 2020"
+    },
+    "#top .stat-num": [
+      "5+",
+      {
+        "en": "c. 5",
+        "sv": "ca 5"
+      },
+      "Claude"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Tools of my own that I've built with AI",
+        "sv": "Egna verktyg som jag byggt med AI"
+      },
+      {
+        "en": "Years selling services",
+        "sv": "År med försäljning av tjänster"
+      },
+      {
+        "en": "My main AI tool, which I use every day, together with Claude Code and Claude Design. I also use Codex, ChatGPT and Kling AI.",
+        "sv": "Mitt främsta AI-verktyg, som jag använder varje dag, tillsammans med Claude Code och Claude Design. Jag använder även Codex, ChatGPT och Kling AI."
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about what I've built with AI",
+      "sv": "Fråga om vad jag byggt med AI"
+    },
+    ".ask-sub": {
+      "en": "The assistant has my full CV and answers directly. I built it myself.",
+      "sv": "Assistenten har hela mitt CV och svarar direkt. Jag har byggt den själv."
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What has he built with AI?",
+        "sv": "Vad har han byggt med AI?"
+      },
+      {
+        "en": "How has he worked with clients?",
+        "sv": "Hur har han jobbat med kunder?"
+      },
+      {
+        "en": "Has he worked on a product?",
+        "sv": "Har han jobbat med en produkt?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "Customer focus and AI in my daily work",
+      "sv": "Kundfokus och AI i vardagen"
+    },
+    "#about .about-quote": {
+      "en": "I'm driven by understanding what people need and helping them move forward.",
+      "sv": "Jag drivs av att förstå vad människor behöver och hjälpa dem vidare."
+    },
+    "#about .about-body": [
+      {
+        "en": "I started my career as an education manager at a vocational college in IT, and have since worked mainly with recruitment.",
+        "sv": "Jag inledde min karriär som utbildningsledare på en yrkeshögskola inom IT och har sedan dess främst arbetat med rekrytering."
+      },
+      {
+        "en": "I keep up to date on AI and how it can make work more efficient. Being able to be creative in my work is something that motivates me.",
+        "sv": "Jag håller mig uppdaterad om AI och hur det kan effektivisera arbetet. Att få vara kreativ i mitt arbete är något som motiverar mig."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Helping customers move forward when they're stuck",
+        "sv": "Att hjälpa kunder vidare när de fastnat"
+      },
+      {
+        "en": "Building tools with AI",
+        "sv": "Att bygga verktyg med AI"
+      },
+      {
+        "en": "Quick feedback and personal contact",
+        "sv": "Snabb återkoppling och personlig kontakt"
+      },
+      {
+        "en": "User-friendly flows",
+        "sv": "Användarvänliga flöden"
+      },
+      {
+        "en": "Explaining complex things simply",
+        "sv": "Att förklara komplexa saker enkelt"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Things I've built",
+      "sv": "Det jag har byggt"
+    },
+    "#built .sec-lead": {
+      "en": "The tools at the top I've built myself with AI. Further down is what I built with colleagues at work.",
+      "sv": "Verktygen överst har jag byggt själv med AI. Längre ner finns det jag byggde med kollegor på jobbet."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
+      "en": "The user describes what they're looking for, in free text or with filters. The tool searches GitHub, portfolios and technical blogs and ranks the candidates, even when they describe themselves in other words. Candidates can be saved and followed through the process.",
+      "sv": "Användaren beskriver vad den söker, i fritext eller med filter. Verktyget söker igenom GitHub, portfolios och tekniska bloggar och rankar kandidaterna, även när de beskriver sig med andra ord. Kandidater kan sparas och följas genom processen."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(5) .built-text": {
+      "en": "The assistant at the top has my full CV and answers questions directly. Each application gets its own version of the site, like this one.",
+      "sv": "Assistenten längst upp har hela mitt CV och svarar på frågor direkt. Varje ansökan får en egen version av sidan, som den här."
+    },
+    "#experience .sec-title": {
+      "en": "Where I've worked",
+      "sv": "Var jag har jobbat"
+    },
+    "#experience .sec-lead": {
+      "en": "The green tags show where I worked with clients.",
+      "sv": "De gröna etiketterna visar var jag jobbade med kunder."
+    },
+    "#education .sec-title": {
+      "en": "Education and tools",
+      "sv": "Utbildning och verktyg"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer."
+      },
+      {
+        "en": "Certification in education management for vocational higher education, with a focus on pedagogical planning and course design.",
+        "sv": "Certifiering i utbildningsledning för yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "It was about how people work in digital and technical environments. I've had use for it when interviewing candidates and talking to managers.",
+      "sv": "Den handlade om hur människor fungerar i digitala och tekniska miljöer. Jag har haft nytta av den när jag intervjuat kandidater och pratat med chefer."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Gamification",
+      "Learning & Development",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Employer Branding",
+      "People & Culture",
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      }
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Claude Code",
+      "Slack",
+      "Teamtailor",
+      "Monday.com",
+      "Workbuster",
+      "Office 365",
+      "Canva",
+      "Winningtemp"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "You're a small team, so here's a bit about who I am outside work.",
+      "sv": "Ni är ett litet team, så här är lite om vem jag är utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: Customer & Product Specialist, via Detechtiv",
+        "sv": "Söker: Customer & Product Specialist, via Detechtiv"
+      }
+    ],
+    "#built .built-grid:last-of-type .built-card:nth-of-type(1) .built-text": {
+      "en": "A tool for managers and recruiters. The user enters a requirements profile and gets back an interview package with structured questions and scorecards. The aim is for two managers hiring for the same role to assess the same things.",
+      "sv": "Ett verktyg för chefer och rekryterare. Användaren lägger in en kravprofil och får tillbaka ett intervjupaket med strukturerade frågor och scorecards. Syftet är att två chefer som rekryterar till samma roll ska bedöma samma saker."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-text": {
+      "en": "Agents carry out the initial work in the background, for example a first assessment of a CV when an application comes in. They then create a task for the recruiter, who makes the decision. An overview shows what the agents have done and what is waiting.",
+      "sv": "Agenter utför det inledande arbetet i bakgrunden, till exempel en första bedömning av ett CV när en ansökan kommer in. Därefter skapar de en uppgift åt rekryteraren, som fattar beslutet. En översikt visar vad agenterna har gjort och vad som väntar."
+    },
+    "#built .built-sub:first-of-type": {
+      "en": "At work, together with colleagues",
+      "sv": "På jobbet, tillsammans med kollegor"
+    },
+    "#experience .roles-lead": {
+      "en": "Mainly technical roles, with ongoing dialogue with developers and engineers.",
+      "sv": "Främst tekniska roller, med löpande dialog med utvecklare och ingenjörer."
+    }
+  }
+}

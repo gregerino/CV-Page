@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Pixelify+Sans:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Detechtiv — Customer & Product Specialist, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /detechtiv and by cv.html?job=detechtiv, from the head script,
+   so the page is drawn in these colours from the first frame.
+
+   The palette is Detechtiv's own, read off detechtiv.se:
+     #efc3ba  the dusty pink of the page and the hero
+     #9be3bf  the mint of their buttons and the pixel art
+     #a5e7c6  the lighter mint they use for text on dark
+     #96c0eb  the pale blue
+     #202020  their dark bands and their text
+     #111112  the darkest tone, borders and the footer
+
+   Their identity is a retro game: pixel fonts (their own "Detechtiv" face
+   and PP NeueBit; Silkscreen and Pixelify Sans are the free stand-ins),
+   square mint buttons with a thick black border, flat colour with no
+   rounding, and pink bands that alternate with near-black ones. The hero
+   is pixel art, so the photo here sits under a pink veil with a pixel
+   skyline along the bottom, like the city in the window of their office.
+
+   Tokens first, then the rules that carry the look through each section.
+   The dark bands redefine the tokens locally, and the cards inside them
+   set them back, so the base rules keep working without overrides.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #efc3ba;
+  --bg2:           #202020;
+  --bg3:           #f6dcd6;
+  --white:         #fdf3f0;
+
+  --border:        rgba(17,17,18,0.16);
+  --border-light:  rgba(17,17,18,0.08);
+  --border-strong: #202020;
+
+  --ink:           #202020;
+  --ink-mid:       #2b2726;
+  --ink-light:     #4a403e;
+  --ink-dim:       #7a6a67;
+
+  /* A deep green for links and labels, which holds on the pink. The mint
+     itself fills buttons and marks, always with dark text on top. */
+  --amber:         #14523a;
+  --amber-light:   #0d3a29;
+
+  --accent-rgb:    155,227,191;
+  --white-rgb:     253,243,240;
+  --bg-rgb:        239,195,186;
+
+  --shadow:        none;
+  --shadow-sm:     none;
+  --shadow-lg:     6px 6px 0 #202020;
+
+  --radius:        0px;
+  --radius-lg:     0px;
+  --radius-pill:   0px;
+
+  --photo-veil: linear-gradient(180deg,
+    rgba(239,195,186,0.95) 0%,
+    rgba(239,195,186,0.93) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath fill='%2314523a' d='M6 1h1v1H6zM5 2h1v1H5zM4 3h1v1H4zM1 3h1v1H1zM2 4h1v1H2zM3 4h1v1H3zM3 5h1v1H3z'/%3E%3C/svg%3E");
+
+  --serif: 'Silkscreen', ui-monospace, monospace;
+  --sans:  'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --mono:  'Silkscreen', ui-monospace, monospace;
+  --pixel: 'Pixelify Sans', 'Silkscreen', system-ui, sans-serif;
+}
+
+body { color: var(--ink-mid); font-size: 15.5px; }
+::selection { background: #9be3bf; color: #202020; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Dark bands, like their #202020 sections: light text and mint accents.
+   The cards inside go back to the light tokens.
+   ───────────────────────────────────────────────────────────────────────── */
+.band--alt,
+#contact {
+  --ink:           #ffffff;
+  --ink-mid:       rgba(255,255,255,0.86);
+  --ink-light:     rgba(255,255,255,0.72);
+  --ink-dim:       rgba(255,255,255,0.5);
+  --border:        rgba(255,255,255,0.16);
+  --border-light:  rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.4);
+  --amber:         #a5e7c6;
+  --amber-light:   #c6f2dc;
+  color: var(--ink-mid);
+}
+.band--alt { background: #202020; }
+.band + .band--alt, .band--alt + .band { border-top: none; }
+
+.band--alt .card,
+.band--alt .pick {
+  --ink:           #202020;
+  --ink-mid:       #2b2726;
+  --ink-light:     #4a403e;
+  --ink-dim:       #7a6a67;
+  --border:        rgba(17,17,18,0.16);
+  --border-strong: #202020;
+  --amber:         #14523a;
+  --amber-light:   #0d3a29;
+  color: var(--ink-mid);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: pixel headings, a pixel face for the smaller titles, and a plain
+   grotesk for reading
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  max-width: 26ch;
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--pixel);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+.point-title,
+.built-title,
+.job-title,
+.edu-degree { font-size: 1.3rem; }
+
+/* Their site has no italics. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote,
+.point-quote { font-family: var(--pixel); font-weight: 500; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: pink like their header, pixel labels, mint for the active link
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #efc3ba;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 3px solid #202020;
+}
+.nav-bar { border-top-color: rgba(17,17,18,0.12); }
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #202020;
+  border: 2px solid transparent;
+}
+.nav-links a:hover { background: #f6dcd6; color: #202020; }
+.nav-links a.active { background: #9be3bf; border-color: #202020; color: #202020; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.brand em { color: #202020; }
+.brand-dot {
+  width: 14px; height: 14px;
+  border-radius: 0;
+  background: #9be3bf;
+  box-shadow: inset 0 0 0 3px #202020;
+}
+.nav-mobile { background: #efc3ba; }
+.nav-mobile a { font-family: var(--mono); text-transform: uppercase; color: #202020; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their square mint ones with a thick black border, lifting onto
+   a hard shadow on hover like a game button
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 0;
+  border-width: 3px;
+  padding: 0.85rem 1.4rem;
+  transition: transform 0.12s, box-shadow 0.12s, background 0.12s, color 0.12s;
+}
+.btn:hover { transform: translate(-2px, -2px); }
+.btn-primary {
+  background: #9be3bf;
+  border-color: #202020;
+  color: #202020;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #9be3bf; border-color: #202020; color: #202020; box-shadow: 4px 4px 0 #202020; }
+.btn-ghost {
+  background: #fdf3f0;
+  border-color: #202020;
+  color: #202020;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #fdf3f0; border-color: #202020; color: #202020; box-shadow: 4px 4px 0 #202020; }
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover { transform: none; }
+}
+
+/* Flat light cards with a black border and a hard offset shadow. */
+.card {
+  background: #fdf3f0;
+  backdrop-filter: none;
+  border: 3px solid #202020;
+  box-shadow: 6px 6px 0 #202020;
+}
+.band--alt .card { box-shadow: 6px 6px 0 #9be3bf; border-color: #111112; }
+
+.pill {
+  background: #fdf3f0;
+  border: 2px solid #202020;
+  border-radius: 0;
+  color: #202020;
+  font-weight: 500;
+}
+.pill--accent { background: #9be3bf; border-color: #202020; color: #202020; font-weight: 600; }
+
+.pick {
+  background: #fdf3f0;
+  border: 2px solid #111112;
+  border-radius: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: pink under the veil, a framed photo, and a pixel skyline along the
+   bottom edge. The skyline sits in the veil layer, so it needs no markup.
+   ───────────────────────────────────────────────────────────────────────── */
+#top { padding-bottom: 7rem; }
+#top::after {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' shape-rendering='crispEdges'%3E%3Cg fill='%239be3bf'%3E%3Cpath d='M2 10h12v12H2zM15 4h10v18H15zM27 13h8v9h-8zM37 7h14v15H37zM53 15h9v7h-9zM64 2h8v20h-8zM74 11h12v11H74zM88 6h10v16H88zM100 14h8v8h-8zM110 9h9v13h-9z'/%3E%3C/g%3E%3Cg fill='%235fa883'%3E%3Cpath d='M2 10h12v1H2zM15 4h10v1H15zM27 13h8v1h-8zM37 7h14v1H37zM53 15h9v1h-9zM64 2h8v1h-8zM74 11h12v1H74zM88 6h10v1H88zM100 14h8v1h-8zM110 9h9v1h-9z'/%3E%3Cpath d='M4 13h2v2H4zM9 13h2v2H9zM4 17h2v2H4zM17 7h2v2h-2zM21 7h2v2h-2zM17 12h2v2h-2zM21 16h2v2h-2zM29 16h2v2h-2zM40 10h2v2h-2zM45 10h2v2h-2zM40 15h2v2h-2zM45 18h2v2h-2zM56 18h2v2h-2zM66 5h2v2h-2zM66 10h2v2h-2zM66 15h2v2h-2zM77 14h2v2h-2zM81 14h2v2h-2zM77 18h2v2h-2zM90 9h2v2h-2zM94 13h2v2h-2zM102 17h2v2h-2zM112 12h2v2h-2zM115 16h2v2h-2z'/%3E%3C/g%3E%3Cpath fill='%23202020' d='M0 22h120v2H0z'/%3E%3C/svg%3E") left bottom / 240px 48px repeat-x,
+    var(--photo-veil);
+}
+#top .eyebrow { color: #14523a; }
+#top .hero-name { color: #202020; font-size: clamp(2.3rem, 5.4vw, 4rem); }
+#top .hero-role {
+  color: #202020;
+  font-family: var(--pixel);
+  font-weight: 600;
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+#top .hero-lead { color: #2b2726; }
+#top .hero-lead strong { color: #202020; }
+#top .meta-row,
+#top .meta-row span { color: #2b2726; }
+#top .meta-row svg { stroke: #14523a; }
+#top .meta-row .sep { color: #14523a; }
+#top .hero-photo {
+  border: 4px solid #202020;
+  border-radius: 0;
+  box-shadow: 10px 10px 0 #9be3bf, 10px 10px 0 4px #202020;
+}
+
+/* The stats as a mint panel in the same black frame. */
+#top .stat-strip {
+  background: #9be3bf;
+  backdrop-filter: none;
+  border: 4px solid #202020;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 #202020;
+}
+#top .stat { border-right: 3px solid #202020; }
+#top .stat:last-child { border-right: none; }
+#top .stat-num {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+  color: #202020;
+}
+#top .stat-label { color: #202020; font-size: 0.84rem; }
+@media (max-width: 720px) {
+  #top .stat { border-right: none; border-bottom: 3px solid #202020; }
+  #top .stat:last-child { border-bottom: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar in their pale blue. The assistant is one of the things I
+   built, so it gets the same game-panel treatment.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask {
+  background: #96c0eb;
+  border-top: 3px solid #202020;
+  border-bottom: 3px solid #202020;
+}
+.ask .ask-title { color: #202020; font-size: 1.5rem; }
+.ask .ask-sub { color: #202020; }
+.ask-input {
+  background: #ffffff;
+  border: 3px solid #202020;
+  border-radius: 0;
+  box-shadow: 5px 5px 0 #202020;
+  color: #202020;
+}
+.ask-input:focus { border-color: #202020; box-shadow: 5px 5px 0 #9be3bf, 5px 5px 0 3px #202020; }
+.ask-input::placeholder { color: #6b6f78; }
+.ask-btn {
+  background: #9be3bf;
+  border: 3px solid #202020;
+  border-radius: 0;
+}
+.ask-btn:hover { background: #c6f2dc; }
+.ask-btn svg { stroke: #202020; }
+.ask-chip {
+  background: #ffffff;
+  border: 2px solid #202020;
+  border-radius: 0;
+  color: #202020;
+  font-weight: 600;
+}
+.ask-chip:hover { background: #9be3bf; border-color: #202020; color: #202020; }
+.ask-out { border-radius: 0; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match": light cards on the dark band, numbered like levels
+   ───────────────────────────────────────────────────────────────────────── */
+#match .point-rule {
+  width: 44px; height: 8px;
+  background: #9be3bf;
+  border: 2px solid #202020;
+}
+#match .point-num { font-family: var(--serif); font-size: 1rem; color: #202020; }
+#match .point-quote {
+  color: #2b2726;
+  background: rgba(155,227,191,0.4);
+  border-left: 4px solid #202020;
+  padding: 0.6rem 0.9rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the AI tools first, then the work inside companies
+   ─────────────────────────────────────────────────────────────────────────
+   The two groups are swapped visually by making the wrap a column, so the
+   markup and every link stay where they are. The gap above a group label
+   moves with them.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .wrap { display: flex; flex-direction: column; }
+#built .sec-head                          { order: 0; }
+#built .built-sub:last-of-type            { order: 1; margin-top: 0; }
+#built .built-grid:last-of-type           { order: 2; }
+#built .built-sub:first-of-type           { order: 3; margin-top: 2.8rem; }
+#built .built-grid:not(:last-of-type)     { order: 4; }
+
+/* With AI: this site (it talks to an API), Recruitment OS, the agentic
+   system, the sourcing tool, QuestLog, then the rest.
+     DOM: 1 Recruitment OS, 2 agentic, 3 QuestLog, 4 sourcing, 5 site, 6 more */
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+/* In companies: the LMS that became a product, the ATS, course content,
+   onboarding, then the career programme. Course content is the odd last
+   card in the markup and spans the width there, so the span moves to the
+   career programme card, which now comes last.
+     DOM: 1 career, 2 LMS, 3 onboarding, 4 ATS, 5 course content */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 3; grid-column: auto; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 5; grid-column: 1 / -1; }
+@media (max-width: 900px) {
+  #built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { grid-column: auto; }
+}
+
+#built .built-icon {
+  background: #9be3bf;
+  border: 2px solid #202020;
+  border-radius: 0;
+}
+#built .built-icon svg { stroke: #202020; }
+.built-link {
+  color: #14523a;
+  font-weight: 700;
+  border-bottom: 2px solid #9be3bf;
+}
+.built-link:hover { color: #202020; border-color: #202020; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience on the dark band: a mint timeline, square markers, and mint
+   tags on the roles where I worked with clients
+   ─────────────────────────────────────────────────────────────────────────
+   The timeline stays chronological. The tags follow the roles where I
+   sold services and had client contact:
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 3px; background: linear-gradient(to bottom, #9be3bf, rgba(155,227,191,0.25) 70%, transparent); }
+.job::before {
+  border-radius: 0;
+  background: #202020;
+  border: 3px solid #9be3bf;
+}
+#experience .job:nth-of-type(-n+4)::before { background: #9be3bf; }
+#experience .job:nth-of-type(-n+4) .job-company::after {
+  content: 'Kunder';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0 0.55rem;
+  background: #9be3bf;
+  border: 2px solid #9be3bf;
+  color: #202020;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+html[lang="en"] #experience .job:nth-of-type(-n+4) .job-company::after { content: 'Clients'; }
+
+#education .edu-school { color: #14523a; }
+#education .callout {
+  background: #9be3bf;
+  border: 3px solid #202020;
+  border-radius: 0;
+  box-shadow: 6px 6px 0 #202020;
+}
+#education .callout-label { color: #14523a; }
+#education .callout-text { color: #202020; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on their near-black, and the footer in the darkest tone
+   ───────────────────────────────────────────────────────────────────────── */
+#contact::after { background: linear-gradient(180deg, rgba(32,32,32,0.96), rgba(32,32,32,0.93)); }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead,
+#contact p { color: rgba(255,255,255,0.85); }
+#contact a:not(.btn) { color: #a5e7c6; }
+#contact .btn-primary { border-color: #9be3bf; }
+#contact .btn-primary svg { fill: #202020; }
+#contact .btn-primary:hover { box-shadow: 4px 4px 0 #ffffff; }
+#contact .btn-ghost {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+#contact .btn-ghost:hover { background: transparent; color: #ffffff; box-shadow: 4px 4px 0 #9be3bf; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.3rem 0.85rem;
+  border: 2px solid rgba(255,255,255,0.35);
+  color: #ffffff;
+  font-weight: 500;
+}
+#contact .contact-facts span:last-child {
+  background: #9be3bf;
+  border-color: #9be3bf;
+  color: #202020;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #111112;
+  border-top: 3px solid #9be3bf;
+  padding: 2.4rem 0;
+}
+.site-footer p { color: rgba(255,255,255,0.75); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.03em; }
+.site-footer a { color: #a5e7c6; }
+.site-footer a:hover { color: #ffffff; }
+
+/* Roles recruited for: product and projects first, then software.
+     DOM: 1 software, 2 automotive & embedded, 3 product & projects, 4 engineering */
+#experience .roles-group:nth-of-type(3) { order: 1; }
+#experience .roles-group:nth-of-type(1) { order: 2; }
+#experience .roles-group:nth-of-type(2) { order: 3; }
+#experience .roles-group:nth-of-type(4) { order: 4; }
