@@ -383,6 +383,14 @@
         "en": "Applying for: Business Developer, Plushögskolan AB",
         "sv": "Söker: Affärsutvecklare, Plushögskolan AB"
       }
-    ]
+    ],
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
+      "en": "The user describes what they're looking for, in free text or with filters. The tool searches GitHub, portfolios and technical blogs and ranks the candidates, even when they describe themselves in other words. Candidates can be saved and followed through the process.",
+      "sv": "Användaren beskriver vad den söker, i fritext eller med filter. Verktyget söker igenom GitHub, portfolios och tekniska bloggar och rankar kandidaterna, även när de beskriver sig med andra ord. Kandidater kan sparas och följas genom processen."
+    }
   }
 }
