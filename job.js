@@ -155,6 +155,16 @@
       if (p.quote) body.appendChild(text('p', 'point-quote', p.quote));
       if (p.body) body.appendChild(text('p', 'point-body', p.body));
 
+      // The roles the evidence comes from, as job titles from Experience.
+      if (Array.isArray(p.roles) && p.roles.length) {
+        var roles = el('div', 'point-roles');
+        var many = p.roles.length > 1;
+        roles.appendChild(text('span', 'point-roles-label',
+          { en: many ? 'Roles' : 'Role', sv: many ? 'Roller' : 'Roll' }));
+        p.roles.forEach(function (r) { roles.appendChild(text('span', 'pill', r)); });
+        body.appendChild(roles);
+      }
+
       card.appendChild(numWrap);
       card.appendChild(body);
       host.appendChild(card);

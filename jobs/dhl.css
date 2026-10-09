@@ -285,6 +285,9 @@ body { background: #fff; color: var(--ink-mid); }
   border-radius: 0 4px 4px 0;
   padding: 0.65rem 1rem;
 }
+#match .point-roles { border-top-color: #e6e6e6; }
+#match .point-roles-label { font-family: var(--sans); font-weight: 700; color: #d40511; }
+#match .point-roles .pill { background: #f2f2f2; border-color: #e6e6e6; color: #000; font-weight: 500; }
 
 /* ─────────────────────────────────────────────────────────────────────────
    Built: the work inside companies first, led by what belongs to the

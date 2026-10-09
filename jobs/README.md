@@ -40,6 +40,8 @@ keeps working. A plain string is used for both languages.
 
 Each entry in `points` takes `title`, `quote` and `body`. `quote` is the
 requirement lifted from the ad; `body` is the evidence that you already do it.
+An optional `roles` array lists the job titles from Experience that the
+evidence comes from; it is shown as a row of pills at the foot of the card.
 
 The base page has a "Roles I've recruited for" card in Experience, above the
 timeline, so every pack shows it. A pack that needs a different selection can

@@ -42,7 +42,21 @@
       "body": {
         "en": "I have had recruitment as my main task for about five years. In a recruitment and consulting firm I ran whole recruitment processes on my own, mostly for technical roles. Before that I led the recruitment work in an IT consultancy and took the processes on to the onboarding of the new employees.",
         "sv": "Jag har haft rekrytering som huvuduppgift i ca 5 år. I ett rekryterings- och konsultföretag drev jag hela rekryteringsprocesser på egen hand, mest till tekniska roller. Dessförinnan ledde jag rekryteringsarbetet i ett IT-konsultbolag och tog processerna vidare till onboarding av de nya medarbetarna."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -56,7 +70,17 @@
       "body": {
         "en": "I started my processes with a needs analysis together with the hiring manager. There we agreed on the requirement profile and how the candidates would be assessed. Further on I advised the manager on the set-up and the timeline.",
         "sv": "Jag inledde mina processer med en behovsanalys tillsammans med den rekryterande chefen. Där kom vi överens om kravprofilen och hur kandidaterna skulle bedömas. Längre fram i processen gav jag chefen råd om upplägg och tidsplan."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -70,7 +94,21 @@
       "body": {
         "en": "I wrote the job ads based on the client's needs and published them. Alongside the ads I searched for candidates myself and kept in touch with them over time. For search I have built my own sourcing tool with AI.",
         "sv": "Jag skrev annonserna utifrån kundens behov och publicerade dem. Vid sidan av annonserna sökte jag upp kandidater själv och höll kontakten med dem över tid. För search har jag byggt ett eget sourcingverktyg med AI."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -84,7 +122,21 @@
       "body": {
         "en": "I made the selection and held the interviews. I booked the interviews between the candidates and the hiring managers and made sure everyone was prepared before each step.",
         "sv": "Jag gjorde urvalet och höll i intervjuerna. Jag bokade intervjuerna mellan kandidaterna och de rekryterande cheferna och såg till att alla var förberedda inför varje steg."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -98,7 +150,21 @@
       "body": {
         "en": "As a recruitment consultant I was the candidates' main contact. I was careful to reply quickly and give clear answers. Earlier I coordinated the communication between clients and candidates at an IT consultancy.",
         "sv": "Som rekryteringskonsult var jag kandidaternas huvudkontakt. Jag var noga med att svara snabbt och ge tydliga besked. Tidigare samordnade jag kommunikationen mellan kunder och kandidater på ett IT-konsultbolag."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -112,7 +178,21 @@
       "body": {
         "en": "I worked in the ATS every day and have used Teamtailor and Workbuster, among others. I implemented the ATS workflows in an IT consultancy and later helped improve the recruitment workflows at a recruitment firm. When something in my work takes longer than it should, I build my own tool with AI.",
         "sv": "Jag arbetade i ATS-systemet varje dag och har använt bland annat Teamtailor och Workbuster. Jag införde ATS-flödena i ett IT-konsultbolag och var senare med och förbättrade arbetsflödena på ett rekryteringsföretag. När något i mitt arbete tar längre tid än det borde bygger jag ett eget verktyg med AI."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -126,7 +206,21 @@
       "body": {
         "en": "I had many recruitment processes going in parallel at a fast-moving IT consultancy. I planned my own time and prioritised between the processes. I find it easy to keep things in order when there is a lot going on at once.",
         "sv": "Jag hade många rekryteringsprocesser igång parallellt på ett IT-konsultbolag med högt tempo. Jag planerade min egen tid och prioriterade mellan processerna. Jag har lätt för att hålla ordning när det händer mycket på en gång."
-      }
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
     },
     {
       "title": {
@@ -140,7 +234,21 @@
       "body": {
         "en": "With people responsibility for a consultant group of 15+ in an IT consultancy, I handled their HR questions and personal development. At another consultancy I gave the consultants ongoing HR support. Later, at an HR tech company, I developed course content in HR together with experts in the field.",
         "sv": "Med personalansvar för en konsultgrupp på 15+ i ett IT-konsultbolag tog jag hand om deras HR-frågor och personalutveckling. På ett annat konsultbolag gav jag konsulterna löpande HR-stöd. Senare, på ett HR-techbolag, tog jag fram kursinnehåll inom HR tillsammans med experter på området."
-      }
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        }
+      ]
     },
     {
       "title": {
