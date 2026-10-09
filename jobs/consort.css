@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+/* Consort Nordic — Team Manager, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /consort and by cv.html?job=consort, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is Consort's own, read off consortnordic.se and their career
+   site jobb.consortnordic.se:
+     #000000  the page, everywhere on their main site
+     #1c1c1c  their cards and form fields
+     #fafafa  body text on black
+     #dcdcdc  their headings
+     #0ecd75  the green of their buttons and the career site
+     #0090f0, #00e0e0, #00d090
+              the three rows of dots they use as a signature mark
+
+   Their type is Poppins 800 for headings and Noto Sans for reading, with
+   pill-shaped green buttons (black text, their own contrast colour). The
+   career site is one big green field, so "How I match" is drawn in that
+   green, with black cards on it.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #000000;
+  --bg2:           #0d0d0d;
+  --bg3:           #141414;
+  --white:         #1c1c1c;
+
+  --border:        rgba(255,255,255,0.10);
+  --border-light:  rgba(255,255,255,0.06);
+  --border-strong: rgba(255,255,255,0.24);
+
+  --ink:           #fafafa;
+  --ink-mid:       #dcdcdc;
+  --ink-light:     rgba(250,250,250,0.72);
+  --ink-dim:       rgba(250,250,250,0.48);
+
+  --amber:         #0ecd75;
+  --amber-light:   #32f39c;
+
+  --accent-rgb:    14,205,117;
+  --white-rgb:     28,28,28;
+  --bg-rgb:        0,0,0;
+
+  --shadow:        none;
+  --shadow-sm:     none;
+  --shadow-lg:     0 20px 60px rgba(0,0,0,0.6);
+
+  --radius:        16px;
+  --radius-lg:     22px;
+  --radius-pill:   300px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(0,0,0,0.95) 0%,
+    rgba(0,0,0,0.90) 55%,
+    rgba(0,0,0,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ecd75' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Their three rows of dots, blue to green. */
+  --dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 24'%3E%3Cg fill='%230090F0'%3E%3Ccircle cx='4' cy='4' r='1.6'/%3E%3Ccircle cx='12' cy='4' r='1.6'/%3E%3Ccircle cx='20' cy='4' r='1.6'/%3E%3Ccircle cx='28' cy='4' r='1.6'/%3E%3Ccircle cx='36' cy='4' r='1.6'/%3E%3Ccircle cx='44' cy='4' r='1.6'/%3E%3Ccircle cx='52' cy='4' r='1.6'/%3E%3Ccircle cx='60' cy='4' r='1.6'/%3E%3Ccircle cx='68' cy='4' r='1.6'/%3E%3Ccircle cx='76' cy='4' r='1.6'/%3E%3Ccircle cx='84' cy='4' r='1.6'/%3E%3C/g%3E%3Cg fill='%2300E0E0'%3E%3Ccircle cx='4' cy='12' r='1.6'/%3E%3Ccircle cx='12' cy='12' r='1.6'/%3E%3Ccircle cx='20' cy='12' r='1.6'/%3E%3Ccircle cx='28' cy='12' r='1.6'/%3E%3Ccircle cx='36' cy='12' r='1.6'/%3E%3Ccircle cx='44' cy='12' r='1.6'/%3E%3Ccircle cx='52' cy='12' r='1.6'/%3E%3Ccircle cx='60' cy='12' r='1.6'/%3E%3Ccircle cx='68' cy='12' r='1.6'/%3E%3Ccircle cx='76' cy='12' r='1.6'/%3E%3Ccircle cx='84' cy='12' r='1.6'/%3E%3Ccircle cx='92' cy='12' r='1.6'/%3E%3Ccircle cx='100' cy='12' r='1.6'/%3E%3C/g%3E%3Cg fill='%2300D090'%3E%3Ccircle cx='4' cy='20' r='1.6'/%3E%3Ccircle cx='12' cy='20' r='1.6'/%3E%3Ccircle cx='20' cy='20' r='1.6'/%3E%3Ccircle cx='28' cy='20' r='1.6'/%3E%3Ccircle cx='36' cy='20' r='1.6'/%3E%3Ccircle cx='44' cy='20' r='1.6'/%3E%3Ccircle cx='52' cy='20' r='1.6'/%3E%3Ccircle cx='60' cy='20' r='1.6'/%3E%3Ccircle cx='68' cy='20' r='1.6'/%3E%3Ccircle cx='76' cy='20' r='1.6'/%3E%3Ccircle cx='84' cy='20' r='1.6'/%3E%3Ccircle cx='92' cy='20' r='1.6'/%3E%3Ccircle cx='100' cy='20' r='1.6'/%3E%3Ccircle cx='108' cy='20' r='1.6'/%3E%3Ccircle cx='116' cy='20' r='1.6'/%3E%3Ccircle cx='124' cy='20' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+
+  --serif: 'Poppins', system-ui, -apple-system, sans-serif;
+  --sans:  'Noto Sans', system-ui, -apple-system, sans-serif;
+  --mono:  'Noto Sans', system-ui, -apple-system, sans-serif;
+}
+
+body { background: #000; color: var(--ink-mid); font-size: 15.5px; }
+::selection { background: #0ecd75; color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: Poppins 800 headings in their light grey, Noto Sans for reading,
+   and no italics, as on their site
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 800;
+  color: #dcdcdc;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.hero-role,
+.about-quote { font-family: var(--serif); font-weight: 600; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+/* The dots under every section heading. */
+.sec-head::after {
+  content: '';
+  display: block;
+  width: 128px; height: 24px;
+  margin-top: 1.6rem;
+  background: var(--dots) left center / 128px 24px no-repeat;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: black glass, green for the active link
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: rgba(0,0,0,0.82);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-links a { font-weight: 500; color: rgba(250,250,250,0.72); }
+.nav-links a:hover { color: #fafafa; background: rgba(255,255,255,0.07); }
+.nav-links a.active { color: #0ecd75; background: rgba(14,205,117,0.12); }
+.brand { font-family: var(--serif); font-weight: 800; letter-spacing: -0.01em; }
+.brand-dot { background: #0ecd75; box-shadow: 0 0 0 3px rgba(14,205,117,0.22); }
+.lang-toggle { background: transparent; }
+.nav-mobile { background: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their green pill, with black text
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-weight: 600; padding: 0.95rem 1.7rem; }
+.btn-primary {
+  background: #0ecd75;
+  border-color: #0ecd75;
+  color: #000;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #32f39c;
+  border-color: #32f39c;
+  color: #000;
+  box-shadow: 0 8px 24px rgba(14,205,117,0.28);
+}
+.btn-primary svg { fill: #000; }
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(250,250,250,0.32);
+  color: #fafafa;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { border-color: #0ecd75; color: #0ecd75; }
+
+/* Flat cards in their #1c1c1c, like the fields in their contact form. */
+.card {
+  background: #1c1c1c;
+  backdrop-filter: none;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: none;
+}
+.pill {
+  background: #1c1c1c;
+  border-color: rgba(255,255,255,0.12);
+  color: #dcdcdc;
+}
+.pill--accent { background: rgba(14,205,117,0.14); border-color: rgba(14,205,117,0.45); color: #0ecd75; }
+.pick { background: #1c1c1c; border-color: rgba(255,255,255,0.10); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: black over the photo, the dots in the corner, a round photo with
+   a green ring like the circle around their tree
+   ───────────────────────────────────────────────────────────────────────── */
+#top::after {
+  background:
+    var(--dots) right 2.5rem bottom 2.2rem / 192px 36px no-repeat,
+    var(--photo-veil);
+}
+#top .hero-name { color: #fafafa; font-size: clamp(2.6rem, 6vw, 4.4rem); }
+#top .hero-role { color: #0ecd75; font-size: 1.35rem; }
+#top .hero-lead { color: rgba(250,250,250,0.8); }
+#top .meta-row,
+#top .meta-row span { color: rgba(250,250,250,0.72); }
+#top .hero-photo {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 3px solid #0ecd75;
+  box-shadow: 0 0 0 10px rgba(14,205,117,0.12), var(--shadow-lg);
+}
+
+#top .stat-strip {
+  background: #1c1c1c;
+  backdrop-filter: none;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: none;
+}
+#top .stat { border-right-color: rgba(255,255,255,0.08); }
+#top .stat-num { font-family: var(--serif); font-weight: 800; color: #0ecd75; }
+#top .stat-label { color: rgba(250,250,250,0.7); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar, in their form style: dark rounded fields, a green button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #0d0d0d; border-color: rgba(255,255,255,0.06); }
+.ask-input {
+  background: #1c1c1c;
+  border-color: rgba(255,255,255,0.10);
+  box-shadow: none;
+  color: #fafafa;
+}
+.ask-input:focus { border-color: #0ecd75; box-shadow: 0 0 0 3px rgba(14,205,117,0.18); }
+.ask-btn { background: #0ecd75; }
+.ask-btn:hover { background: #32f39c; }
+.ask-btn svg { stroke: #000; }
+.ask-chip { background: #1c1c1c; border-color: rgba(255,255,255,0.12); color: #dcdcdc; }
+.ask-chip:hover { border-color: #0ecd75; color: #0ecd75; }
+.ask-out { background: #1c1c1c; border-color: rgba(255,255,255,0.08); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on the green of their career site, with black cards.
+   The band redefines the tokens for black on green; the cards set them
+   back to light on black.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #0ccd76;
+  --ink:           #000000;
+  --ink-mid:       #062b1a;
+  --ink-light:     rgba(0,0,0,0.72);
+  --ink-dim:       rgba(0,0,0,0.55);
+  --amber:         #000000;
+  color: var(--ink-mid);
+}
+#match .sec-title { color: #000; }
+#match .sec-head::after { filter: brightness(0); opacity: 0.55; }
+#match .card {
+  --ink:           #fafafa;
+  --ink-mid:       #dcdcdc;
+  --ink-light:     rgba(250,250,250,0.72);
+  --ink-dim:       rgba(250,250,250,0.48);
+  --amber:         #0ecd75;
+  background: #000;
+  border-color: #000;
+  color: var(--ink-mid);
+}
+#match .point-rule { height: 3px; border-radius: 3px; background: #0ecd75; }
+#match .point-num { font-family: var(--serif); font-weight: 800; color: #0ecd75; }
+#match .point-quote {
+  color: #dcdcdc;
+  background: rgba(14,205,117,0.10);
+  border-left: 3px solid #0ecd75;
+  border-radius: 0 12px 12px 0;
+  padding: 0.65rem 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the work inside companies first, led by what has to do with
+   taking in and developing people.
+     DOM: 1 career, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   Course content stays last, so it keeps spanning the width.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-icon { background: rgba(14,205,117,0.12); border-color: rgba(14,205,117,0.3); border-radius: 50%; }
+#built .built-icon svg { stroke: #0ecd75; }
+.built-link { color: #0ecd75; border-bottom-color: rgba(14,205,117,0.45); }
+.built-link:hover { color: #32f39c; border-color: #32f39c; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a green timeline. The tags mark the roles where I sold
+   services, and the one where I sat on the management team.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #0ecd75, rgba(14,205,117,0.2) 75%, transparent); }
+.job::before { background: #000; border-color: #0ecd75; }
+#experience .job:nth-of-type(-n+4)::before { background: #0ecd75; }
+
+#experience .job:nth-of-type(-n+4) .job-company::after,
+#experience .job:nth-of-type(4) .job-title::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.05rem 0.65rem;
+  border-radius: 300px;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(-n+4) .job-company::after {
+  content: 'Försäljning';
+  background: rgba(14,205,117,0.14);
+  color: #0ecd75;
+}
+#experience .job:nth-of-type(4) .job-title::after {
+  content: 'Ledningsgrupp';
+  background: #0ecd75;
+  color: #000;
+}
+html[lang="en"] #experience .job:nth-of-type(-n+4) .job-company::after { content: 'Sales'; }
+html[lang="en"] #experience .job:nth-of-type(4) .job-title::after { content: 'Management team'; }
+
+#education .edu-school { color: #0ecd75; }
+#education .callout {
+  background: #1c1c1c;
+  border-left: 3px solid #0ecd75;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on black over the photo, and the footer with their dots
+   ───────────────────────────────────────────────────────────────────────── */
+#contact::after { background: linear-gradient(180deg, rgba(0,0,0,0.94), rgba(0,0,0,0.9)); }
+#contact .sec-title { color: #fafafa; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.35rem 0.95rem;
+  background: #1c1c1c;
+  border-radius: 300px;
+  color: #dcdcdc;
+  font-weight: 500;
+}
+#contact .contact-facts span:last-child {
+  background: #0ecd75;
+  color: #000;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 2.6rem 0 2.2rem;
+}
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 128px; height: 24px;
+  margin: 0 auto 1.2rem;
+  background: var(--dots) center / 128px 24px no-repeat;
+}
+.site-footer p { font-family: var(--sans); color: rgba(250,250,250,0.6); }
+.site-footer a { color: #0ecd75; }
+.site-footer a:hover { color: #32f39c; }

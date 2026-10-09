@@ -1,0 +1,378 @@
+{
+  "company": "Consort Nordic AB",
+  "roleName": "Team Manager",
+  "eyebrow": {
+    "en": "Application · Team Manager · Consort Nordic AB",
+    "sv": "Ansökan · Team Manager · Consort Nordic AB"
+  },
+  "role": {
+    "en": "Leading and developing people",
+    "sv": "Att leda och utveckla människor"
+  },
+  "lead": {
+    "en": "I have worked with recruitment and HR, mostly in IT and tech companies. I like working closely with people and seeing them grow. Now I want to take the next step and lead a team.",
+    "sv": "Jag har arbetat med rekrytering och HR, mest i IT- och techbolag. Jag tycker om att arbeta nära människor och se dem utvecklas. Nu vill jag ta nästa steg och leda ett team."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "The points come from the ad. Under each one I have written what I have done that corresponds to it.",
+    "sv": "Punkterna kommer från annonsen. Under varje punkt har jag skrivit vad jag har gjort som motsvarar den."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Leading a team in consulting",
+        "sv": "Leda team i konsultverksamhet"
+      },
+      "quote": {
+        "en": "Experience of leading teams, preferably in sales, customer service or consulting.",
+        "sv": "Har erfarenhet av att leda team – gärna inom försäljning, kundservice eller konsultverksamhet."
+      },
+      "body": {
+        "en": "At a fast-growing IT consultancy I had people responsibility for a consultant group of 15+. I planned the consultants' schedules around their assignments and ran their development activities. The consultants came to me with their HR questions. At another consultancy I gave the consultants ongoing HR support and kept in touch with them.",
+        "sv": "I ett snabbväxande IT-konsultbolag hade jag personalansvar för en konsultgrupp på 15+. Jag styrde konsulternas scheman utifrån uppdragen och höll i deras personalutveckling. Konsulterna vände sig till mig med sina HR-frågor. På ett annat konsultbolag gav jag löpande HR-stöd till konsulterna och höll kontakten med dem."
+      }
+    },
+    {
+      "title": {
+        "en": "On the management team",
+        "sv": "I ledningsgruppen"
+      },
+      "quote": {
+        "en": "Take part in strategic initiatives and contribute actively in the management team.",
+        "sv": "Delta i strategiska initiativ och bidra aktivt i ledningsgruppen."
+      },
+      "body": {
+        "en": "At the consultancy I sat on the management team and was responsible for the talent acquisition strategy. Among other things I led the work on employer branding and process improvements. Before that I ran the programmes' steering group work at a vocational college.",
+        "sv": "På konsultbolaget satt jag i ledningsgruppen och ansvarade för strategin inom talent acquisition. Där drev jag bland annat arbetet med employer branding och processförbättringar. Innan dess drev jag utbildningarnas ledningsgruppsarbete på en yrkeshögskola."
+      }
+    },
+    {
+      "title": {
+        "en": "Targets and results",
+        "sv": "Mål och resultat"
+      },
+      "quote": {
+        "en": "Thrive in a target-driven environment and have documented results.",
+        "sv": "Trivs i en målstyrd miljö och har dokumenterade resultat."
+      },
+      "body": {
+        "en": "At the vocational college the programmes had set targets, and I drove the work towards them. I was responsible for admissions and matched the programmes to what the labour market needed. An internal LMS that I helped shape from the start was later sold to other companies.",
+        "sv": "På yrkeshögskolan hade utbildningarna uppsatta resultatmål, och jag drev arbetet mot dem. Jag ansvarade för antagningen och matchade utbildningarna mot det arbetsmarknaden behövde. Ett internt LMS som jag var med och formade från start såldes senare till andra företag."
+      }
+    },
+    {
+      "title": {
+        "en": "A coaching leader",
+        "sv": "Ett coachande ledarskap"
+      },
+      "quote": {
+        "en": "A secure, coaching leader who can build engagement and team spirit.",
+        "sv": "Är en trygg, coachande ledare med förmåga att bygga engagemang och laganda."
+      },
+      "body": {
+        "en": "I coached students as they took the step into the IT industry and secured internship placements for them. For the consultants I ran internal workshops, among them one on gamification. I helped build a career programme for junior developers, with a structure for what they should learn and who supported them.",
+        "sv": "Jag coachade studerande inför steget ut i IT-branschen och säkrade LIA-platser åt dem. För konsulterna höll jag interna workshops, bland annat i gamification. Jag var med och byggde ett karriärprogram för juniora utvecklare, med en struktur för vad de skulle lära sig och vem som stöttade dem."
+      }
+    },
+    {
+      "title": {
+        "en": "Recruitment and onboarding",
+        "sv": "Rekrytering och onboarding"
+      },
+      "quote": {
+        "en": "Recruit, introduce and develop new employees.",
+        "sv": "Rekrytera, introducera och utveckla nya medarbetare."
+      },
+      "body": {
+        "en": "I have recruited for about five years and run full processes, mostly for technical roles. I have written and published the job ads and held the interviews. Two of the companies had no onboarding, so I built it from scratch.",
+        "sv": "Jag har arbetat med rekrytering i ca 5 år och drivit hela processer, oftast till tekniska roller. Jag har skrivit och publicerat annonserna och hållit i intervjuerna. I två av bolagen fanns ingen onboarding, så jag byggde upp den från grunden."
+      }
+    },
+    {
+      "title": {
+        "en": "Quality and satisfied clients",
+        "sv": "Kvalitet och nöjda kunder"
+      },
+      "quote": {
+        "en": "Ensure high quality, delivery and customer satisfaction.",
+        "sv": "Säkerställa hög kvalitet, leverans och kundnöjdhet."
+      },
+      "body": {
+        "en": "As a recruitment consultant I advised the clients' hiring managers and was the candidates' contact through the whole process. Before that I matched IT consultants with our clients' needs and coordinated the communication between client and candidate. At the vocational college I built partnerships with companies and other external stakeholders.",
+        "sv": "Som rekryteringskonsult var jag rådgivare till kundernas rekryterande chefer och kandidaternas kontaktperson genom hela processen. Tidigare matchade jag IT-konsulter mot kundernas behov och samordnade kommunikationen mellan kund och kandidat. På yrkeshögskolan byggde jag upp samarbeten med företag och andra externa parter."
+      }
+    },
+    {
+      "title": {
+        "en": "Improving how we work",
+        "sv": "Förbättra arbetssätten"
+      },
+      "quote": {
+        "en": "Follow up results and drive improvement work.",
+        "sv": "Följa upp resultat och driva förbättringsarbete."
+      },
+      "body": {
+        "en": "I introduced and developed ATS workflows for how a role was opened and how candidates moved through the process. At the recruitment firm I helped improve the recruitment workflows. When something in my work takes longer than it should, I build my own tool with AI.",
+        "sv": "Jag införde och utvecklade ATS-flöden för hur en roll öppnades och hur kandidaterna gick vidare i processen. På rekryteringsbolaget var jag med och förbättrade arbetsflödena i rekryteringen. När något i mitt arbete tar längre tid än det borde bygger jag ett eget verktyg med AI."
+      }
+    },
+    {
+      "title": {
+        "en": "Swedish and English",
+        "sv": "Svenska och engelska"
+      },
+      "quote": {
+        "en": "Speak fluent Swedish and English; other Nordic languages are a merit.",
+        "sv": "Talar flytande svenska och engelska – andra nordiska språk är meriterande."
+      },
+      "body": {
+        "en": "Swedish is my native language and I speak fluent English. My CV and this page are available in both languages.",
+        "sv": "Jag har svenska som modersmål och talar flytande engelska. Mitt CV och den här sidan finns på båda språken."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "About 5 years in consulting companies",
+      "sv": "Ca 5 år i konsultbolag"
+    },
+    "#top .stat-num": [
+      "15+",
+      {
+        "en": "c. 5",
+        "sv": "ca 5"
+      },
+      "20+"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Consultants in the group I had people responsibility for",
+        "sv": "Konsulter i gruppen jag hade personalansvar för"
+      },
+      {
+        "en": "Years selling services",
+        "sv": "År med försäljning av tjänster"
+      },
+      {
+        "en": "Different roles I have recruited for",
+        "sv": "Olika roller jag har rekryterat till"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background",
+      "sv": "Fråga om min bakgrund"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What people responsibility has he had?",
+        "sv": "Vilket personalansvar har han haft?"
+      },
+      {
+        "en": "How has he worked with onboarding?",
+        "sv": "Hur har han arbetat med onboarding?"
+      },
+      {
+        "en": "What experience does he have of sales?",
+        "sv": "Vilken erfarenhet har han av försäljning?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "Close to people and the business",
+      "sv": "Nära människor och verksamhet"
+    },
+    "#about .about-quote": {
+      "en": "I care about the people I work with.",
+      "sv": "Jag bryr mig om människorna jag arbetar med."
+    },
+    "#about .about-body": [
+      {
+        "en": "My first job was at a telecom operator, where as a teenager I helped customers with technical products. Since then I have had client contact in almost every role.",
+        "sv": "Mitt första jobb var på en telekomoperatör, där jag som tonåring hjälpte kunder med tekniska produkter. Sedan dess har jag haft kundkontakt i nästan alla mina roller."
+      },
+      {
+        "en": "I am creative and like learning new things. Right now I read a lot about AI and how it can change the way we work.",
+        "sv": "Jag är kreativ och lär mig gärna nytt. Just nu läser jag mycket om AI och hur det kan förändra sättet vi arbetar."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Leading a team towards shared goals",
+        "sv": "Att leda ett team mot gemensamma mål"
+      },
+      {
+        "en": "Coaching people in their development",
+        "sv": "Att coacha människor i deras utveckling"
+      },
+      {
+        "en": "Recruiting and welcoming new colleagues",
+        "sv": "Att rekrytera och ta emot nya kollegor"
+      },
+      {
+        "en": "Building structure the team can use",
+        "sv": "Att bygga struktur som teamet har nytta av"
+      },
+      {
+        "en": "Keeping close contact with clients",
+        "sv": "Att ha nära kontakt med kunderna"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "At the top is what I built with colleagues at work, mostly for welcoming and developing new employees. Further down are tools I've built on my own with AI.",
+      "sv": "Överst finns det jag byggde med kollegor på jobbet, mest för att ta emot och utveckla nya medarbetare. Längre ner finns verktyg jag byggt själv med AI."
+    },
+    "#built .built-sub:first-of-type": {
+      "en": "At work, together with colleagues",
+      "sv": "På jobbet, tillsammans med kollegor"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
+      "en": "The user describes what they're looking for, in free text or with filters. The tool searches GitHub, portfolios and technical blogs and ranks the candidates, even when they describe themselves in other words. Candidates can be saved and followed through the process.",
+      "sv": "Användaren beskriver vad den söker, i fritext eller med filter. Verktyget söker igenom GitHub, portfolios och tekniska bloggar och rankar kandidaterna, även när de beskriver sig med andra ord. Kandidater kan sparas och följas genom processen."
+    },
+    "#experience .sec-lead": {
+      "en": "The tags show the roles where I sold services and where I sat on the management team.",
+      "sv": "Etiketterna visar i vilka roller jag sålde tjänster och var jag satt i ledningsgruppen."
+    },
+    "#education .sec-title": {
+      "en": "My education",
+      "sv": "Min utbildning"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning and course design.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "It gave me a grounding in how people and groups work in organisations. It was most useful when I had people responsibility for the consultant group.",
+      "sv": "Den gav mig en grund i hur människor och grupper fungerar i organisationer. Jag hade mest nytta av den när jag hade personalansvar för konsultgruppen."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      "People & Culture",
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "HR",
+      "Employer Branding",
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      "Learning & Development",
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Driving licence: B",
+        "sv": "Körkort: B"
+      },
+      {
+        "en": "Applying for: Team Manager, Consort Nordic AB",
+        "sv": "Söker: Team Manager, Consort Nordic AB"
+      }
+    ]
+  }
+}
