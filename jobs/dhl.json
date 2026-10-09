@@ -1,0 +1,414 @@
+{
+  "company": "DHL Supply Chain",
+  "roleName": "HR-specialist, rekrytering",
+  "eyebrow": {
+    "en": "Application · HR Specialist, Recruitment · DHL Supply Chain",
+    "sv": "Ansökan · HR-specialist, rekrytering · DHL Supply Chain"
+  },
+  "role": {
+    "en": "Recruitment, from start to finish",
+    "sv": "Rekrytering från ax till limpa"
+  },
+  "lead": {
+    "en": "I have worked with recruitment mainly in IT consultancies and in a recruitment and consulting firm. I ran the processes on my own and was in daily contact with hiring managers and candidates. I like having many processes going at once and keeping track of where each one stands.",
+    "sv": "Jag har arbetat med rekrytering främst i IT-konsultbolag och i ett rekryterings- och konsultföretag. Jag drev processerna på egen hand och hade daglig kontakt med rekryterande chefer och kandidater. Jag tycker om att ha många processer igång samtidigt och hålla koll på var varje process står."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "The points come from the ad. Under each one I have written what I have done that corresponds to it.",
+    "sv": "Punkterna kommer från annonsen. Under varje punkt har jag skrivit vad jag har gjort som motsvarar den."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "The whole process, on my own",
+        "sv": "Hela processen, självständigt"
+      },
+      "quote": {
+        "en": "Be responsible for the whole recruitment process within DHL Supply Chain Sweden.",
+        "sv": "Ansvara för hela rekryteringsprocessen inom DHL Supply Chain Sverige."
+      },
+      "body": {
+        "en": "I have had recruitment as my main task for about five years. In a recruitment and consulting firm I ran whole recruitment processes on my own, mostly for technical roles. Before that I led the recruitment work in an IT consultancy and took the processes on to the onboarding of the new employees.",
+        "sv": "Jag har haft rekrytering som huvuduppgift i ca 5 år. I ett rekryterings- och konsultföretag drev jag hela rekryteringsprocesser på egen hand, mest till tekniska roller. Dessförinnan ledde jag rekryteringsarbetet i ett IT-konsultbolag och tog processerna vidare till onboarding av de nya medarbetarna."
+      }
+    },
+    {
+      "title": {
+        "en": "The requirement profile, together with the manager",
+        "sv": "Kravprofilen, tillsammans med chefen"
+      },
+      "quote": {
+        "en": "Hold requirement profile meetings with hiring managers and draw up role profiles based on global guidelines.",
+        "sv": "Hålla kravprofilsmöten tillsammans med rekryterande chefer och ta fram rollprofiler utifrån globala riktlinjer."
+      },
+      "body": {
+        "en": "I started my processes with a needs analysis together with the hiring manager. There we agreed on the requirement profile and how the candidates would be assessed. Further on I advised the manager on the set-up and the timeline.",
+        "sv": "Jag inledde mina processer med en behovsanalys tillsammans med den rekryterande chefen. Där kom vi överens om kravprofilen och hur kandidaterna skulle bedömas. Längre fram i processen gav jag chefen råd om upplägg och tidsplan."
+      }
+    },
+    {
+      "title": {
+        "en": "Job ads and search",
+        "sv": "Annonser och search"
+      },
+      "quote": {
+        "en": "Draw up and publish job ads. Work with search and proactive candidate sourcing.",
+        "sv": "Ta fram och publicera annonser. Arbeta med search och proaktiv kandidatsökning."
+      },
+      "body": {
+        "en": "I wrote the job ads based on the client's needs and published them. Alongside the ads I searched for candidates myself and kept in touch with them over time. For search I have built my own sourcing tool with AI.",
+        "sv": "Jag skrev annonserna utifrån kundens behov och publicerade dem. Vid sidan av annonserna sökte jag upp kandidater själv och höll kontakten med dem över tid. För search har jag byggt ett eget sourcingverktyg med AI."
+      }
+    },
+    {
+      "title": {
+        "en": "Selection and interviews",
+        "sv": "Urval och intervjuer"
+      },
+      "quote": {
+        "en": "Carry out selection and first interviews. Book and coordinate interviews between candidates and hiring managers.",
+        "sv": "Genomföra urval och första intervjuer. Boka och koordinera intervjuer mellan kandidater och rekryterande chefer."
+      },
+      "body": {
+        "en": "I made the selection and held the interviews. I booked the interviews between the candidates and the hiring managers and made sure everyone was prepared before each step.",
+        "sv": "Jag gjorde urvalet och höll i intervjuerna. Jag bokade intervjuerna mellan kandidaterna och de rekryterande cheferna och såg till att alla var förberedda inför varje steg."
+      }
+    },
+    {
+      "title": {
+        "en": "The candidates through the whole process",
+        "sv": "Kandidaterna genom hela processen"
+      },
+      "quote": {
+        "en": "Be responsible for candidate management and ongoing communication throughout the process.",
+        "sv": "Ansvara för kandidathantering och löpande kommunikation genom hela processen."
+      },
+      "body": {
+        "en": "As a recruitment consultant I was the candidates' main contact. I was careful to reply quickly and give clear answers. Earlier I coordinated the communication between clients and candidates at an IT consultancy.",
+        "sv": "Som rekryteringskonsult var jag kandidaternas huvudkontakt. Jag var noga med att svara snabbt och ge tydliga besked. Tidigare samordnade jag kommunikationen mellan kunder och kandidater på ett IT-konsultbolag."
+      }
+    },
+    {
+      "title": {
+        "en": "Recruitment systems and ways of working",
+        "sv": "Rekryteringssystem och arbetssätt"
+      },
+      "quote": {
+        "en": "Work in our recruitment systems and help develop and improve ways of working.",
+        "sv": "Arbeta i våra rekryteringssystem och bidra till att utveckla och förbättra arbetssätt."
+      },
+      "body": {
+        "en": "I worked in the ATS every day and have used Teamtailor and Workbuster, among others. I implemented the ATS workflows in an IT consultancy and later helped improve the recruitment workflows at a recruitment firm. When something in my work takes longer than it should, I build my own tool with AI.",
+        "sv": "Jag arbetade i ATS-systemet varje dag och har använt bland annat Teamtailor och Workbuster. Jag införde ATS-flödena i ett IT-konsultbolag och var senare med och förbättrade arbetsflödena på ett rekryteringsföretag. När något i mitt arbete tar längre tid än det borde bygger jag ett eget verktyg med AI."
+      }
+    },
+    {
+      "title": {
+        "en": "Many processes at once",
+        "sv": "Många processer på en gång"
+      },
+      "quote": {
+        "en": "During the first months you will mainly work on a larger recruitment project, so you need to be confident in prioritising and keeping things in order.",
+        "sv": "Du kommer under vikariatets första månader primärt arbeta med ett större rekryteringsprojekt, och behöver därför vara trygg i att prioritera och hålla ordning."
+      },
+      "body": {
+        "en": "I had many recruitment processes going in parallel at a fast-moving IT consultancy. I planned my own time and prioritised between the processes. I find it easy to keep things in order when there is a lot going on at once.",
+        "sv": "Jag hade många rekryteringsprocesser igång parallellt på ett IT-konsultbolag med högt tempo. Jag planerade min egen tid och prioriterade mellan processerna. Jag har lätt för att hålla ordning när det händer mycket på en gång."
+      }
+    },
+    {
+      "title": {
+        "en": "HR support to the business",
+        "sv": "HR-stöd till verksamheten"
+      },
+      "quote": {
+        "en": "Experience of HR administration and HR support to the business is a merit.",
+        "sv": "Det är meriterande om du har erfarenhet av HR-administration och HR-stöd till verksamhet."
+      },
+      "body": {
+        "en": "With people responsibility for a consultant group of 15+ in an IT consultancy, I handled their HR questions and personal development. At another consultancy I gave the consultants ongoing HR support. Later, at an HR tech company, I developed course content in HR together with experts in the field.",
+        "sv": "Med personalansvar för en konsultgrupp på 15+ i ett IT-konsultbolag tog jag hand om deras HR-frågor och personalutveckling. På ett annat konsultbolag gav jag konsulterna löpande HR-stöd. Senare, på ett HR-techbolag, tog jag fram kursinnehåll inom HR tillsammans med experter på området."
+      }
+    },
+    {
+      "title": {
+        "en": "Education and languages",
+        "sv": "Utbildning och språk"
+      },
+      "quote": {
+        "en": "Post-secondary education in human resources, HR or equivalent work experience. Very good Swedish and English, spoken and written.",
+        "sv": "Eftergymnasial utbildning inom personalvetenskap, HR eller motsvarande arbetslivserfarenhet. Mycket goda kunskaper i svenska och engelska, både i tal och skrift."
+      },
+      "body": {
+        "en": "I have a bachelor's degree in behavioural science, 180 credits, with a focus on people in IT environments. Swedish is my native language and I speak and write fluent English. My CV and this page are available in both languages.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i IT-miljöer. Jag har svenska som modersmål och talar och skriver flytande engelska. Mitt CV och den här sidan finns på båda språken."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Recruitment and HR support",
+      "sv": "Rekrytering och HR-stöd"
+    },
+    "#top .stat-num": [
+      {
+        "en": "c. 5",
+        "sv": "ca 5"
+      },
+      "20+",
+      "180"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years with recruitment as the main part of the job",
+        "sv": "År med rekrytering som huvuduppgift"
+      },
+      {
+        "en": "Different roles I have recruited for",
+        "sv": "Olika roller jag har rekryterat till"
+      },
+      {
+        "en": "Credits in behavioural science",
+        "sv": "Högskolepoäng i beteendevetenskap"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my recruitment background",
+      "sv": "Fråga om min bakgrund inom rekrytering"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "How does he run a recruitment process?",
+        "sv": "Hur driver han en rekryteringsprocess?"
+      },
+      {
+        "en": "How does he work with search and sourcing?",
+        "sv": "Hur arbetar han med search och sourcing?"
+      },
+      {
+        "en": "What HR support has he given?",
+        "sv": "Vilket HR-stöd har han gett?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "Close to managers and candidates",
+      "sv": "Nära chefer och kandidater"
+    },
+    "#about .about-quote": {
+      "en": "I want everyone in a recruitment to know where they stand.",
+      "sv": "Jag vill att alla i en rekrytering ska veta var de står."
+    },
+    "#about .about-body": [
+      {
+        "en": "My first job was at a telecom operator, where as a teenager I helped customers with technical products. Since then I have almost always worked close to people, and in recent years mostly with recruitment.",
+        "sv": "Mitt första jobb var på en telekomoperatör, där jag som tonåring hjälpte kunder med tekniska produkter. Sedan dess har jag nästan alltid arbetat nära människor, och de senaste åren mest med rekrytering."
+      },
+      {
+        "en": "Many candidates are in the middle of a big decision when we talk. I want them to get straight answers and to feel that someone is holding the process together. With the managers I spend time at the start understanding the role properly.",
+        "sv": "Många kandidater står mitt i ett stort beslut när vi pratar. Jag vill att de ska få raka besked och känna att någon håller ihop processen. Med cheferna lägger jag tid i början på att förstå rollen ordentligt."
+      },
+      {
+        "en": "I pick up new systems quickly. I bring experience with AI and the skills to build my own tools to change the way we work with HR.",
+        "sv": "Jag sätter mig snabbt in i nya system. Jag tar med mig AI-erfarenhet och kompetens att utveckla egna verktyg för att förändra sättet vi arbetar med HR."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Finding the right person for the right role",
+        "sv": "Att hitta rätt person till rätt roll"
+      },
+      {
+        "en": "Giving candidates quick and straight answers",
+        "sv": "Att ge kandidaterna snabba och raka besked"
+      },
+      {
+        "en": "Working against a clear requirement profile",
+        "sv": "Att arbeta mot en tydlig kravprofil"
+      },
+      {
+        "en": "Having a clear plan for every recruitment",
+        "sv": "Att ha en tydlig plan för varje rekrytering"
+      },
+      {
+        "en": "Improving the ways we recruit",
+        "sv": "Att förbättra sätten vi rekryterar på"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Tools and processes I've built",
+      "sv": "Verktyg och processer jag byggt"
+    },
+    "#built .sec-lead": {
+      "en": "At the top is what I built with colleagues at work, such as the ATS workflows and the onboarding. Further down are recruitment tools I've built on my own with AI.",
+      "sv": "Överst finns det jag byggde med kollegor på jobbet, till exempel ATS-flödena och onboardingen. Längre ner finns rekryteringsverktyg jag byggt själv med AI."
+    },
+    "#built .built-sub:first-of-type": {
+      "en": "At work, together with colleagues",
+      "sv": "På jobbet, tillsammans med kollegor"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
+      "en": "A sourcing tool for recruiters",
+      "sv": "Ett sourcingverktyg för rekryterare"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
+      "en": "The user describes what they're looking for, in free text or with filters. The tool searches GitHub, portfolios and technical blogs and ranks the candidates, even when they describe themselves in other words. Candidates can be saved and followed through the process.",
+      "sv": "Användaren beskriver vad den söker, i fritext eller med filter. Verktyget söker igenom GitHub, portfolios och tekniska bloggar och rankar kandidaterna, även när de beskriver sig med andra ord. Kandidater kan sparas och följas genom processen."
+    },
+    "#experience .sec-title": {
+      "en": "Where I have recruited",
+      "sv": "Där jag har rekryterat"
+    },
+    "#experience .sec-lead": {
+      "en": "The tags show the roles where recruitment was my main task, and where I gave HR support to the business.",
+      "sv": "Etiketterna visar i vilka roller rekrytering var min huvuduppgift, och var jag gav HR-stöd till verksamheten."
+    },
+    "#education .sec-title": {
+      "en": "Education and skills",
+      "sv": "Utbildning och kompetens"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on people in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "It gave me a grounding in how people and groups work in organisations. I have had use of it in interviews and when I assess candidates against a requirement profile.",
+      "sv": "Den gav mig en grund i hur människor och grupper fungerar i organisationer. Jag har haft nytta av den i intervjuerna och när jag bedömer kandidater mot en kravprofil."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      "Employer Branding",
+      "People & Culture",
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      "Learning & Development",
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Teamtailor",
+      "Workbuster",
+      "Office 365",
+      "Slack",
+      "Monday.com",
+      "Winningtemp",
+      "Canva",
+      "Claude Code"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: HR Specialist, Recruitment, DHL Supply Chain",
+        "sv": "Söker: HR-specialist, rekrytering, DHL Supply Chain"
+      }
+    ]
+  }
+}

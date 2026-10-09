@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Fira+Sans+Extra+Condensed:wght@700;800;900&display=swap');
+
+/* DHL Supply Chain — HR-specialist, rekrytering, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /dhl and by cv.html?job=dhl, from the head script, so the page
+   is drawn in these colours from the first frame.
+
+   The palette is DHL's own brand colours:
+     #ffcc00  DHL yellow: the header, the big bands, the hero
+     #ffe57f, #fff0b2
+              the lighter yellows their hero gradients fade into
+     #d40511  DHL red: buttons, links, the speed stripes of the logo
+     #b2040e  the darker red buttons go to on hover
+     #323232  their body text
+     #666666, #8c8c8c
+              secondary text and labels
+     #f2f2f2, #e6e6e6
+              their grey panels and dividers
+
+   DHL's own typeface, Delivery, is not public. Fira Sans is the closest
+   humanist sans for reading, and Fira Sans Extra Condensed in black stands
+   in for the condensed headlines of their campaigns. Their signature mark,
+   the three red speed stripes of the logo, sits under every heading.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f2f2f2;
+  --bg3:           #ebebeb;
+  --white:         #ffffff;
+
+  --border:        #e6e6e6;
+  --border-light:  #efefef;
+  --border-strong: #cccccc;
+
+  --ink:           #000000;
+  --ink-mid:       #323232;
+  --ink-light:     #595959;
+  --ink-dim:       #8c8c8c;
+
+  --amber:         #d40511;
+  --amber-light:   #b2040e;
+
+  --accent-rgb:    212,5,17;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.08);
+  --shadow-lg:     0 12px 32px rgba(0,0,0,0.16);
+
+  /* Their buttons and cards have small, firm corners. */
+  --radius:        4px;
+  --radius-lg:     4px;
+  --radius-pill:   4px;
+
+  /* The yellow gradient of their hero banners, over the Gothenburg photo. */
+  --photo-veil: linear-gradient(90deg,
+    rgba(255,204,0,0.97) 0%,
+    rgba(255,204,0,0.95) 35%,
+    rgba(255,229,127,0.93) 75%,
+    rgba(255,240,178,0.92) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d40511' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* The three slanted red stripes of the logo. */
+  --stripes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 18'%3E%3Cg fill='%23d40511'%3E%3Cpolygon points='4,0 120,0 116,4 0,4'/%3E%3Cpolygon points='4,7 120,7 116,11 0,11'/%3E%3Cpolygon points='4,14 120,14 116,18 0,18'/%3E%3C/g%3E%3C/svg%3E");
+
+  --serif: 'Fira Sans Extra Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --sans:  'Fira Sans', Verdana, system-ui, sans-serif;
+  --mono:  'Fira Sans', Verdana, system-ui, sans-serif;
+}
+
+body { background: #fff; color: var(--ink-mid); }
+::selection { background: #ffcc00; color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: condensed black headlines in black, Fira Sans for reading, and no
+   italics, as on dhl.com
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 800;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote { font-family: var(--sans); font-weight: 600; color: #000; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d40511;
+}
+
+/* The speed stripes under every section heading. */
+.sec-head::after {
+  content: '';
+  display: block;
+  width: 72px; height: 11px;
+  margin-top: 1.4rem;
+  background: var(--stripes) left center / 72px 11px no-repeat;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: the yellow header bar of dhl.com, black links, red when active
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffcc00;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+}
+.nav-links a { font-weight: 500; color: #000; }
+.nav-links a:hover { color: #d40511; background: rgba(255,255,255,0.45); }
+.nav-links a.active { color: #d40511; background: rgba(255,255,255,0.6); }
+.brand { font-family: var(--serif); font-weight: 900; text-transform: uppercase; color: #d40511; letter-spacing: 0.01em; }
+.brand em { font-style: normal; color: #d40511; }
+.brand-dot { background: #d40511; border-radius: 1px; transform: skewX(-20deg); box-shadow: none; }
+.lang-toggle { background: #fff; border-color: #fff; color: #000; }
+.nav-mobile { background: #ffcc00; }
+.nav-mobile a { color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their filled red with white text, and a white secondary with a
+   red outline
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-family: var(--sans); font-weight: 700; padding: 0.9rem 1.6rem; }
+.btn-primary {
+  background: #d40511;
+  border-color: #d40511;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #b2040e;
+  border-color: #b2040e;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(212,5,17,0.25);
+}
+.btn-primary svg { fill: #fff; }
+.btn-ghost {
+  background: #fff;
+  border: 2px solid #d40511;
+  color: #d40511;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #d40511; color: #fff; }
+
+/* Flat white cards with a thin grey line, like the tiles on dhl.com. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  border: 1px solid #e6e6e6;
+  box-shadow: var(--shadow-sm);
+}
+.pill {
+  background: #f2f2f2;
+  border-color: #e6e6e6;
+  color: #323232;
+}
+.pill--accent { background: #ffcc00; border-color: #ffcc00; color: #000; }
+.pick { background: #fff; border-color: #e6e6e6; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: their yellow banner over the photo, black type, the stripes in
+   the corner and a red frame on the photo
+   ───────────────────────────────────────────────────────────────────────── */
+#top::after {
+  background:
+    var(--stripes) right 2.5rem bottom 2.2rem / 168px 25px no-repeat,
+    var(--photo-veil);
+}
+#top .eyebrow { color: #000; }
+#top .hero-name { color: #d40511; font-size: clamp(3rem, 7vw, 5.2rem); }
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #000;
+}
+#top .hero-lead { color: #1a1a1a; }
+#top .meta-row,
+#top .meta-row span { color: #323232; }
+#top .hero-photo {
+  border-radius: 4px;
+  border: 4px solid #fff;
+  box-shadow: 10px 10px 0 #d40511, var(--shadow-lg);
+}
+
+#top .stat-strip {
+  background: #fff;
+  backdrop-filter: none;
+  border: none;
+  border-top: 4px solid #d40511;
+  box-shadow: var(--shadow);
+}
+#top .stat { border-right-color: #e6e6e6; }
+#top .stat-num { font-family: var(--serif); font-weight: 900; color: #d40511; }
+#top .stat-label { color: #595959; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar, in their search style: a white field, a red button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f2f2f2; border-color: #e6e6e6; }
+.ask-input {
+  background: #fff;
+  border-color: #cccccc;
+  box-shadow: none;
+  color: #000;
+}
+.ask-input:focus { border-color: #d40511; box-shadow: 0 0 0 3px rgba(212,5,17,0.15); }
+.ask-btn { background: #d40511; }
+.ask-btn:hover { background: #b2040e; }
+.ask-btn svg { stroke: #fff; }
+.ask-chip { background: #fff; border-color: #cccccc; color: #323232; }
+.ask-chip:hover { border-color: #d40511; color: #d40511; }
+.ask-out { background: #fff; border-color: #e6e6e6; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on a full DHL-yellow band, with white cards. The stripes
+   and the red rules carry the logo into every card.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: linear-gradient(90deg, #ffcc00 0%, #ffcc00 40%, #ffe57f 85%, #fff0b2 100%);
+  --ink:       #000000;
+  --ink-mid:   #1a1a1a;
+  --ink-light: #323232;
+  --ink-dim:   #4d4d4d;
+  color: var(--ink-mid);
+}
+#match .eyebrow { color: #000; }
+#match .sec-title { color: #000; }
+#match .card {
+  --ink:       #000000;
+  --ink-mid:   #323232;
+  --ink-light: #595959;
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+}
+#match .point-rule { height: 4px; width: 44px; border-radius: 0; background: #d40511; transform: skewX(-20deg); }
+#match .point-num { font-family: var(--serif); font-weight: 900; color: #d40511; }
+#match .point-quote {
+  color: #323232;
+  background: #fff8d6;
+  border-left: 4px solid #ffcc00;
+  border-radius: 0 4px 4px 0;
+  padding: 0.65rem 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the work inside companies first, led by what belongs to the
+   recruitment process.
+     DOM: 1 career, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   Course content stays last, so it keeps spanning the width.
+   With AI, the recruitment tools come first.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 sourcing,
+          5 this site, 6 more tools
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon { background: #ffcc00; border-color: #ffcc00; border-radius: 4px; }
+#built .built-icon svg { stroke: #d40511; }
+.built-link { color: #d40511; border-bottom-color: rgba(212,5,17,0.4); font-weight: 600; }
+.built-link:hover { color: #b2040e; border-color: #b2040e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a red timeline. The tags mark the roles where recruitment
+   was the main task (red) and where I gave HR support (yellow).
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 3px; background: linear-gradient(to bottom, #d40511, rgba(212,5,17,0.25) 75%, transparent); }
+.job::before { background: #fff; border-color: #d40511; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #d40511; }
+.job-company { color: #d40511; }
+
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.05rem 0.6rem;
+  border-radius: 3px;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after {
+  content: 'Recruitment';
+  background: #d40511;
+  color: #fff;
+}
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after {
+  content: 'HR support';
+  margin-left: 0.4rem;
+  background: #ffcc00;
+  color: #000;
+}
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Rekrytering'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company::after { content: 'HR-stöd'; }
+
+.roles-group .pill { background: #fff; }
+
+#education .edu-school { color: #d40511; }
+#education .callout {
+  background: #fff8d6;
+  border-left: 4px solid #ffcc00;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the yellow banner, the facts as white chips with the role in
+   red, and the footer as their yellow bar with the stripes
+   ───────────────────────────────────────────────────────────────────────── */
+#contact::after { background: var(--photo-veil); }
+#contact .eyebrow,
+#contact .sec-title { color: #000; }
+#contact .sec-lead { color: #1a1a1a; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.35rem 0.9rem;
+  background: #fff;
+  border-radius: 4px;
+  color: #000;
+  font-weight: 500;
+}
+#contact .contact-facts span:last-child {
+  background: #d40511;
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #ffcc00;
+  border-top: none;
+  padding: 2.6rem 0 2.2rem;
+}
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 96px; height: 15px;
+  margin: 0 auto 1.2rem;
+  background: var(--stripes) center / 96px 15px no-repeat;
+}
+.site-footer p { font-family: var(--sans); color: #1a1a1a; }
+.site-footer a { color: #d40511; font-weight: 600; }
+.site-footer a:hover { color: #b2040e; }
