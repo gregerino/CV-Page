@@ -1,0 +1,459 @@
+{
+  "company": "ABF Väst",
+  "roleName": "Verksamhetsutvecklare",
+  "eyebrow": {
+    "en": "Application · Development Officer · ABF Väst",
+    "sv": "Ansökan · Verksamhetsutvecklare · ABF Väst"
+  },
+  "role": {
+    "en": "Education manager and course developer",
+    "sv": "Utbildningsledare och kursutvecklare"
+  },
+  "lead": {
+    "sv": "Mitt första jobb efter examen var som utbildningsledare på en yrkeshögskola. Där ledde jag utbildningar i nära samarbete med arbetslivet. Senare har jag tagit fram kurser och hållit workshops på flera arbetsplatser. Jag tycker om att se människor lära sig och växa.",
+    "en": "My first job after graduating was as an education manager at a vocational college. There I led programmes in close collaboration with employers. Later I have put together courses and run workshops at several workplaces. I like seeing people learn and grow."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "The points come from the ad. Under each one I have written what I have done that corresponds to it.",
+    "sv": "Punkterna kommer från annonsen. Under varje punkt har jag skrivit vad jag har gjort som motsvarar den."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Working with external partners",
+        "sv": "Samverkan med externa parter"
+      },
+      "quote": {
+        "en": "Develop and work together with local member organisations and partners, civil society and municipalities.",
+        "sv": "Utveckla och samverka med lokala medlemsorganisationer och samverkansparter, civilsamhälle och kommuner."
+      },
+      "body": {
+        "en": "At the vocational college I built and maintained partnerships with companies and other external stakeholders. We developed the programmes together with them, and I secured internship placements (LIA) for the students. I ran the steering group work for my programmes. At an IT consultancy we later worked with vocational programmes and helped change them based on what the industry needed.",
+        "sv": "På yrkeshögskolan byggde jag upp och förvaltade samarbeten med företag och andra externa parter. Tillsammans med dem utvecklade vi utbildningarna, och jag säkrade praktikplatser (LIA) för de studerande. Jag drev ledningsgruppsarbetet för mina utbildningar. På ett IT-konsultbolag arbetade vi senare med yrkeshögskoleutbildningar och var med och förändrade dem utifrån vad branschen behövde."
+      },
+      "roles": [
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Teaching and pedagogical development",
+        "sv": "Utbildning och pedagogisk utveckling"
+      },
+      "quote": {
+        "en": "Develop, educate and contribute to pedagogical development and support.",
+        "sv": "Utveckla, utbilda och bidra till pedagogisk utveckling och stöd."
+      },
+      "body": {
+        "en": "At an HR tech company I developed courses in HR and Learning & Development together with subject matter experts. I reworked the course materials and improved their pedagogical structure. Before that I ran internal workshops and learning sessions at an IT consultancy, among them a training in gamification as a method. I am a certified education manager through the Swedish National Agency for Higher Vocational Education.",
+        "sv": "På ett HR-techbolag utvecklade jag kurser inom HR och Learning & Development tillsammans med ämnesexperter. Jag arbetade om kursmaterialet och förbättrade den pedagogiska strukturen. Dessförinnan höll jag interna workshops och lärtillfällen på ett IT-konsultbolag, bland annat en utbildning i gamification som metod. Jag är certifierad utbildningsledare genom Myndigheten för yrkeshögskolan."
+      },
+      "roles": [
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Structures for learning",
+        "sv": "Strukturer för lärande"
+      },
+      "quote": {
+        "en": "Create networks, meeting places and structures for learning and sharing experience.",
+        "sv": "Skapa nätverk, mötesplatser och strukturer för lärande och erfarenhetsutbyte."
+      },
+      "body": {
+        "en": "I was involved from the start in shaping an internal learning platform (LMS) at an IT consultancy. I worked out what it should solve and how the content should be structured, and it was later sold as a product. There I helped build a career programme for junior developers, with a plan for what they should learn and who would support them. At the HR tech company I planned and ran conferences and training sessions for the participants.",
+        "sv": "Jag var med från start och utformade en intern lärplattform (LMS) på ett IT-konsultbolag. Jag tog fram vad den skulle lösa och hur innehållet skulle struktureras, och den såldes senare som produkt. Där var jag med och byggde ett karriärprogram för juniora utvecklare, med en plan för vad de skulle lära sig och vem som skulle stötta dem. På HR-techbolaget planerade och genomförde jag konferenser och utbildningstillfällen för deltagarna."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Quality and set targets",
+        "sv": "Kvalitet och uppsatta mål"
+      },
+      "quote": {
+        "en": "Deliver high-quality activities in line with our guidelines and conditions.",
+        "sv": "Leverera en hög kvalitativ verksamhet i linje med våra riktlinjer och villkor."
+      },
+      "body": {
+        "en": "As an education manager I drove the programmes towards set targets and was responsible for admitting students. I took part in recruiting teachers and made sure they had the right competence. I improved the internal communication flows and developed the structure of the learning platform. At the HR tech company I kept the course content up to date with current HR practice.",
+        "sv": "Som utbildningsledare drev jag utbildningarna mot uppsatta resultatmål och ansvarade för antagningen av studerande. Jag deltog i rekryteringen av lärare och säkerställde att de hade rätt kompetens. Jag förbättrade de interna kommunikationsflödena och utvecklade strukturen i lärplattformen. På HR-techbolaget höll jag kursinnehållet uppdaterat efter aktuella behov inom HR."
+      },
+      "roles": [
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Relationships and leading processes",
+        "sv": "Relationer och processer"
+      },
+      "quote": {
+        "en": "Enjoy building relationships, developing partnerships and leading processes.",
+        "sv": "Trivs med att bygga relationer, utveckla samarbeten och leda processer."
+      },
+      "body": {
+        "en": "I coached and guided the students ahead of their move into working life. In my recruitment roles I have run processes independently and been in daily contact with managers and candidates. In two companies I built up an onboarding where there was none before, to increase engagement among new employees.",
+        "sv": "Jag coachade och vägledde de studerande inför steget ut i arbetslivet. I rekryteringsrollerna har jag drivit processer självständigt och haft daglig kontakt med chefer och kandidater. I två bolag byggde jag upp en onboarding där det inte fanns någon tidigare, för att öka engagemanget hos nya medarbetare."
+      },
+      "roles": [
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "The same ground for everyone",
+        "sv": "Samma grund för alla"
+      },
+      "quote": {
+        "en": "Good knowledge of norm-critical work and inclusive ways of working.",
+        "sv": "God kunskap om normkritiskt arbete och inkluderande arbetssätt."
+      },
+      "body": {
+        "en": "In my recruitments I assessed every candidate against the same requirement profile, which the manager and I drew up together. I have built an AI tool for structured interviews with shared assessment criteria and support for reducing bias. It matters to me that everyone gets the same chance.",
+        "sv": "I mina rekryteringar bedömde jag alla kandidater mot samma kravprofil, som chefen och jag tog fram tillsammans. Jag har byggt ett AI-verktyg för strukturerade intervjuer med gemensamma bedömningsgrunder och stöd för att minska bias. Det är viktigt för mig att alla får samma chans."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Structure and new ideas",
+        "sv": "Struktur och nya idéer"
+      },
+      "quote": {
+        "en": "Work in a structured and long-term way, both independently and with others. Enjoy trying new ideas.",
+        "sv": "Arbeta strukturerat och långsiktigt, både självständigt och tillsammans med andra. Tycker om att prova nya idéer."
+      },
+      "body": {
+        "en": "Together with colleagues I have built several things from scratch, such as the ATS workflows and the onboarding. On my own I build tools with AI, among them a project tool with gamification. I am a creative person and like to test new ideas at work.",
+        "sv": "Tillsammans med kollegor har jag byggt flera saker från grunden, till exempel ATS-flödena och onboardingen. På egen hand bygger jag verktyg med AI, bland annat ett projektverktyg med gamification. Jag är en kreativ person och testar gärna nya idéer i arbetet."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Education and communication",
+        "sv": "Utbildning och kommunikation"
+      },
+      "quote": {
+        "en": "Post-secondary education in a relevant field. Very good communication skills, spoken and written, and used to administrative systems and Microsoft 365. A B driving licence is a merit.",
+        "sv": "Eftergymnasial utbildning inom relevant område. Mycket god kommunikativ förmåga i tal och skrift, van vid administrativa system och Microsoft365. B-körkort är meriterande."
+      },
+      "body": {
+        "en": "I have a bachelor's degree in behavioural science, 180 credits, from Umeå University. Swedish is my native language and I speak and write fluent English. I have worked in Office 365 and in several learning platforms and recruitment systems. I hold a B driving licence.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap, 180 hp, från Umeå universitet. Svenska är mitt modersmål och jag talar och skriver flytande engelska. I arbetet har jag använt Office 365 och flera lärplattformar och rekryteringssystem. Jag har B-körkort."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Education and pedagogical development",
+      "sv": "Utbildning och pedagogisk utveckling"
+    },
+    "#top .stat-num": [
+      "3",
+      "7+",
+      "180"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Roles where education was part of the job",
+        "sv": "Roller där utbildning ingick i uppdraget"
+      },
+      {
+        "en": "Years working with competence development and recruitment",
+        "sv": "År med kompetensutveckling och rekrytering"
+      },
+      {
+        "en": "Credits in behavioural science",
+        "sv": "Högskolepoäng i beteendevetenskap"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background in education",
+      "sv": "Fråga om min bakgrund inom utbildning"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What did he do as an education manager?",
+        "sv": "Vad gjorde han som utbildningsledare?"
+      },
+      {
+        "en": "How has he worked with pedagogical development?",
+        "sv": "Hur har han arbetat med pedagogisk utveckling?"
+      },
+      {
+        "en": "How has he worked with external partners?",
+        "sv": "Hur har han samarbetat med externa parter?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "A bit about me",
+      "sv": "Lite om mig"
+    },
+    "#about .about-quote": {
+      "en": "I want what people learn to be something they can use.",
+      "sv": "Jag vill att det man lär sig ska gå att använda."
+    },
+    "#about .about-body": [
+      {
+        "sv": "Mitt första jobb var på en telekomoperatör, där jag som tonåring hjälpte kunder med tekniska produkter. Sedan dess har jag nästan alltid arbetat nära människor.",
+        "en": "My first job was at a telecom operator, where as a teenager I helped customers with technical products. Since then I have almost always worked close to people."
+      },
+      {
+        "sv": "Jag lär gärna känna dem jag arbetar med och tar reda på vad de behöver. Själv är jag nyfiken och lär mig hela tiden nya saker, just nu mest inom AI.",
+        "en": "I like getting to know the people I work with and finding out what they need. I am curious myself and keep learning new things, at the moment mostly within AI."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Developing education together with others",
+        "sv": "Att utveckla utbildning tillsammans med andra"
+      },
+      {
+        "en": "Making content clear and useful",
+        "sv": "Att göra innehåll tydligt och användbart"
+      },
+      {
+        "en": "Building partnerships with external parties",
+        "sv": "Att bygga samarbeten med externa parter"
+      },
+      {
+        "en": "Creating structure where it is missing",
+        "sv": "Att skapa struktur där den saknas"
+      },
+      {
+        "en": "Trying new ideas and tools",
+        "sv": "Att prova nya idéer och verktyg"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "What I have built",
+      "sv": "Det jag har byggt"
+    },
+    "#built .sec-lead": {
+      "en": "At the top is what I built with colleagues at work, with the course content and the learning platform first. Further down are tools I have built on my own with AI.",
+      "sv": "Överst finns det jag byggde med kollegor på jobbet, med kursinnehållet och lärplattformen först. Längre ner finns verktyg jag byggt själv med AI."
+    },
+    "#built .built-sub:first-of-type": {
+      "en": "At work, together with colleagues",
+      "sv": "På jobbet, tillsammans med kollegor"
+    },
+    "#experience .sec-title": {
+      "en": "Where I have worked",
+      "sv": "Var jag har arbetat"
+    },
+    "#experience .sec-lead": {
+      "en": "I started at a vocational college, at the bottom of the list. The red tags show the roles where education was part of the job.",
+      "sv": "Jag började på en yrkeshögskola, längst ner i listan. De röda etiketterna visar i vilka roller utbildning ingick i uppdraget."
+    },
+    "#education .sec-title": {
+      "en": "Education and skills",
+      "sv": "Utbildning och kompetens"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on people in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning and course design.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "It gave me a grounding in how people and groups work in organisations. I have used it when coaching students and when planning training.",
+      "sv": "Den gav mig en grund i hur människor och grupper fungerar i organisationer. Jag har haft nytta av den när jag coachat studerande och planerat utbildningar."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Learning & Development",
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Gamification",
+      "People & Culture",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      "HR",
+      "Employer Branding",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      }
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Office 365",
+      "Canva",
+      "Slack",
+      "Monday.com",
+      "Winningtemp",
+      "Teamtailor",
+      "Workbuster",
+      "Claude Code"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: Development Officer, ABF Väst",
+        "sv": "Söker: Verksamhetsutvecklare, ABF Väst"
+      }
+    ]
+  }
+}

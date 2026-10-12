@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,350..700&display=swap');
+
+/* ABF Väst — Verksamhetsutvecklare, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /abfvast and by cv.html?job=abfvast, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is taken from abf.se/vast:
+     #d90812  ABF red: the big bands, filled buttons, the logo circle
+     #a50d1f  the darker red of their underlined links
+     #000000  their headings and body text
+     #616161, #757575
+              secondary text
+     #f1efee  the warm grey of their footer
+     #e7e7e7  dividers
+
+   Their own fonts are public: Roboto Condensed for headings and Roboto Flex
+   for reading. Their signature is the headline set on slightly tilted
+   strips, red text on white or white text on red, as if taped onto the
+   photo. That strip carries the name in the hero and the headings in the
+   red bands.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f1efee;
+  --bg3:           #e9e6e4;
+  --white:         #ffffff;
+
+  --border:        #e7e7e7;
+  --border-light:  #f0eeed;
+  --border-strong: #c9c5c3;
+
+  --ink:           #000000;
+  --ink-mid:       #1f1f1f;
+  --ink-light:     #4b4b4b;
+  --ink-dim:       #757575;
+
+  --amber:         #d90812;
+  --amber-light:   #a50d1f;
+
+  --accent-rgb:    217,8,18;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 10px rgba(0,0,0,0.07);
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.07);
+  --shadow-lg:     0 14px 36px rgba(0,0,0,0.16);
+
+  /* Rounded cards and photos, square filled buttons. */
+  --radius:        16px;
+  --radius-lg:     24px;
+  --radius-pill:   999px;
+
+  /* A dark veil over the Gothenburg photo, so the white strips stand out. */
+  --photo-veil: linear-gradient(90deg,
+    rgba(0,0,0,0.62) 0%,
+    rgba(0,0,0,0.48) 45%,
+    rgba(0,0,0,0.22) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d90812' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Roboto Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --sans:  'Roboto Flex', Roboto, system-ui, sans-serif;
+  --mono:  'Roboto Flex', Roboto, system-ui, sans-serif;
+}
+
+body { background: #fff; color: var(--ink-mid); }
+::selection { background: #d90812; color: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: Roboto Condensed headings in black, no italics, as on abf.se
+   ───────────────────────────────────────────────────────────────────────── */
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 1.1;
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+}
+.cv-name { font-family: var(--serif); font-weight: 700; letter-spacing: 0; }
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #d90812;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote { font-family: var(--serif); font-weight: 500; color: #000; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d90812;
+}
+
+a { text-underline-offset: 3px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white, their red circle as the brand mark, dark-red underlined links
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #e7e7e7;
+}
+.nav-links a { font-weight: 450; color: #000; }
+.nav-links a:hover { color: #a50d1f; background: transparent; text-decoration: underline; }
+.nav-links a.active { color: #a50d1f; background: transparent; text-decoration: underline; }
+.brand { font-family: var(--serif); font-weight: 700; color: #000; letter-spacing: 0; }
+.brand em { font-style: normal; color: #d90812; }
+.brand-dot {
+  background: #d90812;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #d90812;
+}
+.lang-toggle { background: #fff; border-color: #c9c5c3; color: #000; border-radius: 999px; }
+.nav-mobile { background: #fff; }
+.nav-mobile a { color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their filled red with square corners, and a white pill with an
+   arrow like their link buttons
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-family: var(--sans); font-weight: 500; padding: 0.9rem 1.2rem; }
+.btn-primary {
+  background: #d90812;
+  border-color: #d90812;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #a50d1f;
+  border-color: #a50d1f;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary svg { fill: #fff; }
+.btn-ghost {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #d90812;
+  border-radius: 999px;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #fff; color: #a50d1f; border-color: #a50d1f; }
+
+/* White cards with soft corners and no heavy shadow. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  box-shadow: none;
+}
+.pill {
+  background: #fff;
+  border-color: #c9c5c3;
+  color: #1f1f1f;
+}
+.pill--accent { background: #d90812; border-color: #d90812; color: #fff; }
+.pick { background: #fff; border-color: #e7e7e7; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: the photo darkened, the name on a tilted white strip in red, the
+   role on a red strip in white, like "Välkommen till ABF Väst!"
+   ───────────────────────────────────────────────────────────────────────── */
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #fff; }
+#top .hero-name {
+  display: inline-block;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6.4vw, 4.8rem);
+  letter-spacing: 0;
+  line-height: 1.12;
+  color: #d90812;
+  background: #fff;
+  padding: 0 0.22em;
+  transform: rotate(-2deg);
+  transform-origin: left center;
+  margin-bottom: 0.9rem;
+}
+#top .hero-role {
+  display: inline-block;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #d90812;
+  padding: 0.1rem 0.6rem;
+  transform: rotate(1deg);
+  transform-origin: left center;
+}
+#top .hero-lead,
+#top .hero-lead strong { color: #fff; }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.88); }
+#top .meta-row svg { stroke: #fff; }
+#top .hero-photo {
+  border-radius: 24px;
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+#top .stat-strip {
+  background: #fff;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+#top .stat { border-right-color: #e7e7e7; }
+#top .stat-num { font-family: var(--serif); font-weight: 700; color: #d90812; }
+#top .stat-label { color: #4b4b4b; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar, in their search style: a rounded field and a round red button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f1efee; border-color: #e7e7e7; }
+.ask-input {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 999px;
+  box-shadow: none;
+  color: #000;
+}
+.ask-input:focus { border-color: #d90812; box-shadow: 0 0 0 3px rgba(217,8,18,0.15); }
+.ask-btn { background: #a50d1f; border-radius: 50%; }
+.ask-btn:hover { background: #d90812; }
+.ask-btn svg { stroke: #fff; }
+.ask-chip { background: #fff; border-color: #c9c5c3; color: #a50d1f; border-radius: 999px; }
+.ask-chip:hover { border-color: #d90812; color: #d90812; }
+.ask-out { background: #fff; border-color: #e7e7e7; border-radius: 16px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on a full ABF-red band with white cards, as their "Hitta
+   bland våra kurser" block. The heading sits on a white strip and every
+   card is numbered in their red circle.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #d90812;
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.9);
+  --ink-dim:   rgba(255,255,255,0.8);
+  color: #fff;
+}
+#match .eyebrow { color: #fff; }
+#match .sec-title {
+  display: inline-block;
+  color: #d90812;
+  background: #fff;
+  padding: 0 0.3em;
+  transform: rotate(-1.5deg);
+  transform-origin: left center;
+}
+#match .sec-lead { color: #fff; }
+#match .card {
+  --ink:       #000000;
+  --ink-mid:   #1f1f1f;
+  --ink-light: #4b4b4b;
+  --ink-dim:   #757575;
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  box-shadow: none;
+  color: #1f1f1f;
+}
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: #d90812;
+  color: #fff;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+#match .point-title { color: #d90812; }
+#match .point-quote {
+  color: #1f1f1f;
+  background: #f1efee;
+  border-left: 4px solid #d90812;
+  border-radius: 0 8px 8px 0;
+  padding: 0.65rem 1rem;
+}
+#match .point-roles { border-top-color: #e7e7e7; }
+#match .point-roles-label { font-family: var(--serif); font-weight: 700; color: #d90812; }
+#match .point-roles .pill { background: #fff; border-color: #c9c5c3; color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   About: the list ticks in red, the quote with a red strip beside it
+   ───────────────────────────────────────────────────────────────────────── */
+#about .about-quote { border-left: 4px solid #d90812; padding-left: 1rem; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the learning work first.
+     DOM: 1 career, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   Course content leads, the ATS card closes and spans the width.
+   With AI, the site and QuestLog come first.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+          5 this site, 6 more tools
+   The finance tool is left out of this pack.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 1; grid-column: auto; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 5; grid-column: 1 / -1; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { display: none; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon { background: #d90812; border-color: #d90812; border-radius: 50%; }
+#built .built-icon svg { stroke: #fff; }
+.built-link { color: #a50d1f; border-bottom-color: rgba(165,13,31,0.4); font-weight: 500; }
+.built-link:hover { color: #d90812; border-color: #d90812; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a red timeline. The tags mark the roles where education was
+   part of the job.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 3px; background: linear-gradient(to bottom, #d90812, rgba(217,8,18,0.25) 75%, transparent); }
+.job::before { background: #fff; border-color: #d90812; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #d90812; }
+.job-company { color: #a50d1f; }
+
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after {
+  content: 'Education';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.05rem 0.7rem;
+  border-radius: 999px;
+  background: #d90812;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildning'; }
+
+.roles-group .pill { background: #fff; }
+
+#education .edu-school { color: #a50d1f; }
+#education .callout {
+  background: #f1efee;
+  border-left: 4px solid #d90812;
+  border-radius: 0 16px 16px 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the dark photo with the heading on a white strip, the facts as
+   white pills with the role in red, and the footer in their warm grey with
+   the red circle
+   ───────────────────────────────────────────────────────────────────────── */
+#contact::after { background: var(--photo-veil); }
+#contact .eyebrow { color: #fff; }
+#contact .sec-title {
+  display: inline-block;
+  color: #d90812;
+  background: #fff;
+  padding: 0 0.3em;
+  transform: rotate(-1.5deg);
+}
+#contact .sec-lead { color: #fff; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.4rem 1rem;
+  background: #fff;
+  border-radius: 999px;
+  color: #000;
+  font-weight: 450;
+}
+#contact .contact-facts span:last-child {
+  background: #d90812;
+  color: #fff;
+  font-weight: 600;
+}
+
+.site-footer {
+  background: #f1efee;
+  border-top: none;
+  padding: 2.8rem 0 2.4rem;
+}
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 56px; height: 56px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  background: #d90812;
+  box-shadow: inset 0 0 0 3px #d90812, inset 0 0 0 5px #fff;
+}
+.site-footer p { font-family: var(--sans); color: #000; }
+.site-footer a { color: #a50d1f; text-decoration: underline; }
+.site-footer a:hover { color: #d90812; }
