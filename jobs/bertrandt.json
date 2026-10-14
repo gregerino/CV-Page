@@ -1,0 +1,507 @@
+{
+  "company": "Bertrandt",
+  "roleName": "HR Generalist",
+  "eyebrow": {
+    "en": "Application · HR Generalist · Bertrandt",
+    "sv": "Ansökan · HR Generalist · Bertrandt"
+  },
+  "role": {
+    "en": "HR close to employees and managers",
+    "sv": "HR nära medarbetare och chefer"
+  },
+  "lead": {
+    "sv": "Sedan 2020 har jag arbetat med HR och rekrytering, främst i konsultbolag inom IT och teknik. Jag har haft personalansvar för en konsultgrupp och gett konsulterna löpande HR-stöd. Jag trivs i breda roller med många olika frågor i vardagen.",
+    "en": "Since 2020 I have worked with HR and recruitment, mainly in consulting companies in IT and technology. I have had people responsibility for a group of consultants and given them ongoing HR support. I enjoy broad roles with many different questions in a day."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "The points come from the ad. Under each one I have written what I have done that corresponds to it.",
+    "sv": "Punkterna kommer från annonsen. Under varje punkt har jag skrivit vad jag har gjort som motsvarar den."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "The employee lifecycle",
+        "sv": "Medarbetarens hela tid i bolaget"
+      },
+      "quote": {
+        "en": "Prepare employment contracts and contract amendments in accordance with legal requirements and internal corporate policies. Manage and support the entire employee lifecycle, from onboarding and ongoing HR administration through to offboarding.",
+        "sv": "Ta fram anställningsavtal och avtalsändringar enligt lagkrav och interna riktlinjer. Hantera och stötta hela medarbetarresan, från onboarding och löpande HR-administration till offboarding."
+      },
+      "body": {
+        "en": "With people responsibility for a consultant group of 15+, I worked with employment contracts and terminations under the Employment Protection Act (LAS). In the same company I built a structured onboarding framework from scratch, with documentation and support material for the new employees. At a consultant intermediary in IT I designed an onboarding process with the aim of strengthening engagement and getting the consultants to stay longer.",
+        "sv": "Med personalansvar för en konsultgrupp på 15+ arbetade jag med anställningsavtal och uppsägningar enligt LAS. I samma bolag byggde jag upp ett strukturerat ramverk för onboarding från grunden, med dokumentation och stödmaterial för de nya medarbetarna. På en konsultförmedlare inom IT utformade jag en onboardingprocess med syftet att stärka engagemanget och få konsulterna att stanna längre."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Advice on HR matters",
+        "sv": "Rådgivning i HR-frågor"
+      },
+      "quote": {
+        "en": "Advise employees and managers on HR-related matters.",
+        "sv": "Ge råd till medarbetare och chefer i HR-relaterade frågor."
+      },
+      "body": {
+        "en": "In the consultant group I was the one the employees turned to with personnel questions. At the consultant intermediary I gave the consultants ongoing HR support and kept in regular contact with them during their assignments. With hiring managers I went through what each role required and advised them on the timeline and the assessment of candidates.",
+        "sv": "I konsultgruppen var jag den som medarbetarna vände sig till med personalfrågor. På konsultförmedlaren gav jag konsulterna löpande HR-stöd och höll regelbunden kontakt med dem under uppdragen. Med de rekryterande cheferna gick jag igenom vad rollen krävde och gav råd om tidsplan och bedömning av kandidaterna."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Recruitment alongside a central team",
+        "sv": "Rekrytering i samarbete med ett centralt team"
+      },
+      "quote": {
+        "en": "Support and coordinate local recruitment activities in close cooperation with the Recruiting team in Romania, which manages and handles the operational recruitment process.",
+        "sv": "Stötta och koordinera lokala rekryteringsaktiviteter i nära samarbete med rekryteringsteamet i Rumänien, som driver den operativa rekryteringsprocessen."
+      },
+      "body": {
+        "en": "I have had recruitment as my main task for about five years, in a recruitment and consulting firm and in two IT companies. I started each recruitment with a needs analysis together with the hiring manager. I booked and coordinated the interviews and kept the candidates informed throughout the process. I have recruited developers and engineers, among them roles in ADAS and automotive.",
+        "sv": "Jag har haft rekrytering som huvuduppgift i ca 5 år, i ett rekryterings- och konsultföretag och i två IT-bolag. Varje rekrytering inledde jag med en behovsanalys tillsammans med den rekryterande chefen. Jag bokade och koordinerade intervjuerna och höll kandidaterna informerade genom hela processen. Jag har rekryterat utvecklare och ingenjörer, bland annat till roller inom ADAS och fordon."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Staffing needs together with management",
+        "sv": "Bemanningsbehov tillsammans med ledningen"
+      },
+      "quote": {
+        "en": "Coordinate local staffing requirements in close alignment with the management team in Sweden.",
+        "sv": "Koordinera de lokala bemanningsbehoven i nära samråd med ledningsgruppen i Sverige."
+      },
+      "body": {
+        "en": "In an IT company I sat on the management team and was responsible for the company's talent acquisition strategy. There I planned the consultants' schedules around their assignments. At the consultant intermediary I matched IT consultants against the clients' needs. Earlier, at a vocational college, I worked with competence supply by matching the programmes to the needs of the labour market.",
+        "sv": "I ett IT-bolag satt jag i ledningsgruppen och ansvarade för bolagets strategi för talent acquisition. Där planerade jag konsulternas scheman utifrån uppdragen. På konsultförmedlaren matchade jag IT-konsulter mot kundernas behov. Tidigare, på en yrkeshögskola, arbetade jag med kompetensförsörjning genom att matcha utbildningarna mot arbetsmarknadens behov."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Training and development reviews",
+        "sv": "Utbildning och utvecklingssamtal"
+      },
+      "quote": {
+        "en": "Coordinate training activities, employee review processes, benefits and HR policies in close alignment with the relevant corporate functions in the Holding in Germany.",
+        "sv": "Koordinera utbildningsinsatser, medarbetarsamtal, förmåner och HR-policyer i nära samråd med berörda koncernfunktioner i Tyskland."
+      },
+      "body": {
+        "en": "I held development reviews with the consultants and was responsible for the personnel development in the group. I created internal workshops and learning sessions, and helped shape and run an internal LMS. At an HR tech company I developed course content in HR together with subject matter experts. I planned and ran conferences and training sessions there with a focus on what the participants got out of them.",
+        "sv": "Jag höll utvecklingssamtal med konsulterna och ansvarade för personalutvecklingen i gruppen. Jag tog fram interna workshops och utbildningstillfällen och var med och formade ett internt LMS. På ett HR-techbolag utvecklade jag kursinnehåll inom HR tillsammans med experter på området. Där planerade och genomförde jag konferenser och utbildningar med fokus på vad deltagarna fick ut av dem."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "HR systems and sensitive data",
+        "sv": "HR-system och känsliga uppgifter"
+      },
+      "quote": {
+        "en": "Confidence in working with HR systems and Microsoft Office. A high level of discretion and responsibility when handling sensitive employee data.",
+        "sv": "Van att arbeta i HR-system och Microsoft Office. Hög diskretion och ansvarstagande i hanteringen av känsliga personaluppgifter."
+      },
+      "body": {
+        "en": "I worked in ATS systems every day and made sure the candidate data was accurate throughout the process. In an IT company I was responsible for introducing the ATS and setting up the workflows in it. Day to day I have used Office 365 and Teamtailor, and I pick up new systems quickly. I have handled personnel matters and candidate information with discretion.",
+        "sv": "Jag arbetade dagligen i ATS-system och såg till att kandidatdatan var korrekt genom hela processen. I ett IT-bolag ansvarade jag för att införa ATS-systemet och bygga upp flödena i det. I vardagen har jag använt Office 365 och Teamtailor, och jag sätter mig snabbt in i nya system. Personalärenden och kandidatuppgifter hanterade jag med diskretion."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Working with many parties",
+        "sv": "Samarbete med många parter"
+      },
+      "quote": {
+        "en": "Work closely with local management, the HR department in Germany, relevant corporate functions and external partners.",
+        "sv": "Arbeta nära den lokala ledningen, HR-avdelningen i Tyskland, berörda koncernfunktioner och externa partners."
+      },
+      "body": {
+        "en": "At the consultant intermediary I coordinated the communication between the clients and the candidates during the hiring process. At the vocational college I built partnerships with companies and external stakeholders and found internship placements for the students. In the IT company I worked closely with the rest of the management team.",
+        "sv": "På konsultförmedlaren samordnade jag kommunikationen mellan kunderna och kandidaterna under rekryteringen. På yrkeshögskolan byggde jag samarbeten med företag och externa intressenter och ordnade praktikplatser åt studenterna. I IT-bolaget arbetade jag nära resten av ledningsgruppen."
+      },
+      "roles": [
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Developing HR processes",
+        "sv": "Att utveckla HR-processer"
+      },
+      "quote": {
+        "en": "The opportunity to actively contribute to the further development of HR processes in Sweden.",
+        "sv": "Möjligheten att aktivt bidra till att vidareutveckla HR-processerna i Sverige."
+      },
+      "body": {
+        "en": "In the IT company I built the ATS workflows and a career programme for junior talent together with colleagues. At the recruitment and consulting firm I helped improve the workflows and bring a clearer structure to the recruitment. On my own I build HR and recruitment tools with AI, among them an operating system for recruitment.",
+        "sv": "I IT-bolaget byggde jag tillsammans med kollegor upp ATS-flödena och ett karriärprogram för juniora talanger. På rekryterings- och konsultföretaget bidrog jag till att förbättra arbetsflödena och skapa en tydligare struktur i rekryteringen. På egen hand bygger jag HR- och rekryteringsverktyg med AI, bland annat ett operativsystem för rekrytering."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Education and languages",
+        "sv": "Utbildning och språk"
+      },
+      "quote": {
+        "en": "A degree or comparable qualification with a focus on Human Resources, Business Administration or Employment Law. Excellent English and Swedish language skills.",
+        "sv": "Examen eller motsvarande kvalifikation med inriktning mot HR, företagsekonomi eller arbetsrätt. Mycket goda kunskaper i engelska och svenska."
+      },
+      "body": {
+        "en": "I have a bachelor's degree in behavioural science, 180 credits, from Umeå University, with a focus on people in IT environments. I am a certified education manager through the Swedish National Agency for Higher Vocational Education. Swedish is my native language and I speak and write fluent English. This page is available in both languages.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap, 180 hp, från Umeå universitet, med inriktning mot människor i IT-miljöer. Jag är certifierad utbildningsledare genom Myndigheten för yrkeshögskolan. Svenska är mitt modersmål och jag talar och skriver flytande engelska. Den här sidan finns på båda språken."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "HR in technical environments",
+      "sv": "HR i tekniska miljöer"
+    },
+    "#top .stat-num": [
+      "5+",
+      "15+",
+      "180"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years working with HR and recruitment",
+        "sv": "År med HR och rekrytering"
+      },
+      {
+        "en": "Consultants in the group I had people responsibility for",
+        "sv": "Konsulter i gruppen jag hade personalansvar för"
+      },
+      {
+        "en": "Credits in behavioural science",
+        "sv": "Högskolepoäng i beteendevetenskap"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my HR experience",
+      "sv": "Fråga om min HR-erfarenhet"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What HR support has he given?",
+        "sv": "Vilket HR-stöd har han gett?"
+      },
+      {
+        "en": "How did he build the onboarding?",
+        "sv": "Hur byggde han upp onboardingen?"
+      },
+      {
+        "en": "How does he work with managers?",
+        "sv": "Hur arbetar han med chefer?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "Someone to turn to",
+      "sv": "Någon att vända sig till"
+    },
+    "#about .about-quote": {
+      "en": "I want employees to know where they can turn.",
+      "sv": "Jag vill att medarbetarna ska veta vart de kan vända sig."
+    },
+    "#about .about-body": [
+      {
+        "sv": "Mitt första jobb var på en telekomoperatör, där jag som tonåring hjälpte kunder med tekniska produkter. Sedan dess har jag nästan alltid arbetat nära människor, de senaste åren med HR och rekrytering i tekniska miljöer.",
+        "en": "My first job was at a telecom operator, where as a teenager I helped customers with technical products. Since then I have almost always worked close to people, in recent years with HR and recruitment in technical environments."
+      },
+      {
+        "sv": "Jag växte upp till hälften i Sverige och till hälften i Thailand. Jag ser fram emot att arbeta i en internationell koncern med kollegor i flera länder.",
+        "en": "I grew up half in Sweden and half in Thailand. I look forward to working in an international group with colleagues in several countries."
+      },
+      {
+        "sv": "Jag tycker om att lära mig nya saker, särskilt om AI och hur vi kan effektivisera sättet vi arbetar på.",
+        "en": "I like learning new things, especially about AI and how we can make the way we work more efficient."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Being a clear support for employees and managers",
+        "sv": "Att vara ett tydligt stöd för medarbetare och chefer"
+      },
+      {
+        "en": "Giving new employees a good start",
+        "sv": "Att ge nya medarbetare en bra start"
+      },
+      {
+        "en": "Keeping order and structure in the HR work",
+        "sv": "Att hålla ordning och struktur i HR-arbetet"
+      },
+      {
+        "en": "Developing and improving HR processes",
+        "sv": "Att utveckla och förbättra HR-processer"
+      },
+      {
+        "en": "Training that gives the participants something",
+        "sv": "Utbildning som ger deltagarna något"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Processes and tools I've built",
+      "sv": "Processer och verktyg jag byggt"
+    },
+    "#built .sec-lead": {
+      "en": "At the top are HR processes I built with colleagues at work, such as the onboarding and the internal LMS. Further down are tools I've built on my own with AI.",
+      "sv": "Överst finns HR-processer jag byggde med kollegor på jobbet, till exempel onboardingen och det interna LMS:et. Längre ner finns verktyg jag byggt själv med AI."
+    },
+    "#built .built-sub:first-of-type": {
+      "en": "At work, together with colleagues",
+      "sv": "På jobbet, tillsammans med kollegor"
+    },
+    "#experience .sec-title": {
+      "en": "Where I have worked with HR",
+      "sv": "Där jag har arbetat med HR"
+    },
+    "#experience .sec-lead": {
+      "en": "The tags show which parts of HR each role was about.",
+      "sv": "Etiketterna visar vilka delar av HR varje roll handlade om."
+    },
+    "#education .sec-title": {
+      "en": "Education and skills",
+      "sv": "Utbildning och kompetens"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on people in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "It gave me a grounding in how people and groups work in organisations. I have had use of it in conversations with employees and managers.",
+      "sv": "Den gav mig en grund i hur människor och grupper fungerar i organisationer. Jag har haft nytta av den i samtal med medarbetare och chefer."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      "People & Culture",
+      {
+        "en": "Onboarding & HR support",
+        "sv": "Onboarding & HR-stöd"
+      },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Learning & Development",
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coaching"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Learning Management Systems (LMS)",
+      "Employer Branding",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Office 365",
+      "Teamtailor",
+      "Workbuster",
+      "Winningtemp",
+      "Monday.com",
+      "Slack",
+      "Canva",
+      "Claude Code"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: HR Generalist, Bertrandt",
+        "sv": "Söker: HR Generalist, Bertrandt"
+      }
+    ]
+  }
+}

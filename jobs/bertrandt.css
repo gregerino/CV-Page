@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Bertrandt — HR Generalist, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /bertrandt and by cv.html?job=bertrandt, from the head script,
+   so the page is drawn in these colours from the first frame.
+
+   The palette is taken from the custom properties on bertrandt.com:
+     #ffed00  --c-yellow: the "b" of the logo, the big shapes over photos
+     #000000  --c-black: headings, links, the footer bar
+     #d2e0e8  --c-bright-blue: their "Find out more" buttons
+     #93b1bf  --c-metallic-blue: the state those buttons hover to
+     #44779d  --c-dark-blue: small labels
+     #ebebeb  --c-grey-light: the grey band above the footer
+     #aaaaaa  --c-grey: thin outlines
+
+   Their fonts are both public: Orbitron for every heading and button, PT Sans
+   for reading. The site is mostly white and flat, with square photos and
+   no shadows. The signature is the yellow "b" from the logo, laid big and
+   half off-screen over a dark photo. Here it sits in the hero corner, as a
+   bar under every heading and as the mark in the footer.
+
+   Yellow cannot carry text on white, so the accent for text and links is
+   black, as on their site, and yellow is kept for fills.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f3f3f3;
+  --bg3:           #ebebeb;
+  --white:         #ffffff;
+
+  --border:        #e2e2e2;
+  --border-light:  #ebebeb;
+  --border-strong: #aaaaaa;
+
+  --ink:           #000000;
+  --ink-mid:       #262626;
+  --ink-light:     #555555;
+  --ink-dim:       #767676;
+
+  --amber:         #000000;
+  --amber-light:   #44779d;
+
+  --accent-rgb:    68,119,157;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 8px rgba(0,0,0,0.06);
+  --shadow-sm:     none;
+  --shadow-lg:     0 14px 36px rgba(0,0,0,0.22);
+
+  /* Square photos and cards, rounded pills, as on bertrandt.com. */
+  --radius:        0;
+  --radius-lg:     0;
+  --radius-pill:   30px;
+
+  /* Their dark slides: the photo dimmed so white Orbitron reads on it. */
+  --photo-veil: linear-gradient(90deg,
+    rgba(0,0,0,0.86) 0%,
+    rgba(0,0,0,0.78) 45%,
+    rgba(0,0,0,0.55) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* The "b" of the logo: a stem and a rounded bowl with a hole in it. */
+  --b-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 260'%3E%3Cpath fill='%23ffed00' fill-rule='evenodd' d='M0 0H50V90H148A52 52 0 0 1 200 142V208A52 52 0 0 1 148 260H0Z M50 140V210H138A12 12 0 0 0 150 198V152A12 12 0 0 0 138 140Z'/%3E%3C/svg%3E");
+
+  --serif: 'Orbitron', 'Arial', system-ui, sans-serif;
+  --sans:  'PT Sans', 'Trebuchet MS', system-ui, sans-serif;
+  --mono:  'PT Sans', 'Trebuchet MS', system-ui, sans-serif;
+}
+
+body { background: #fff; color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #ffed00; color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: Orbitron headings in black, PT Sans for reading, no italics.
+   Orbitron runs wide, so the sizes sit a step below the base page.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.08;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #000;
+}
+.ask-title,
+.roles-title { font-family: var(--serif); font-weight: 600; }
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; line-height: 1.5; color: #000; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #44779d;
+}
+
+/* The yellow bar under every section heading. */
+.sec-head::after {
+  content: '';
+  display: block;
+  width: 56px; height: 8px;
+  margin-top: 1.4rem;
+  background: #ffed00;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white with a thin grey line, the name in lower case like their
+   wordmark, small upper-case links
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #000;
+  border-radius: 0;
+}
+.nav-links a:hover { color: #000; background: #ebebeb; }
+.nav-links a.active { color: #000; background: #ffed00; }
+.brand { font-family: var(--serif); font-weight: 700; text-transform: lowercase; color: #000; letter-spacing: 0.02em; }
+.brand em { font-style: normal; color: #000; }
+.brand-dot { background: #ffed00; border-radius: 0; box-shadow: none; }
+.lang-toggle { background: #fff; border-color: #aaaaaa; color: #000; border-radius: 30px; }
+.lang-toggle:hover { border-color: #000; color: #000; }
+.nav-mobile { background: #fff; }
+.nav-mobile a { color: #000; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #000; background: #ffed00; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: Orbitron labels. The main one in their yellow, the others in
+   the pale blue of their "Find out more" buttons.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  padding: 0.9rem 1.5rem;
+}
+.btn-primary {
+  background: #ffed00;
+  border-color: #ffed00;
+  color: #000;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #000;
+  border-color: #000;
+  color: #ffed00;
+  box-shadow: none;
+}
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: #d2e0e8;
+  border: 1px solid #d2e0e8;
+  color: #000;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #93b1bf; border-color: #93b1bf; color: #000; }
+
+/* Flat white cards with a thin grey line, like the tiles on bertrandt.com. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  border: 1px solid #e2e2e2;
+  box-shadow: none;
+}
+.pill {
+  background: #f3f3f3;
+  border-color: #e2e2e2;
+  color: #262626;
+  border-radius: 30px;
+}
+.pill--accent { background: #ffed00; border-color: #ffed00; color: #000; }
+.pick { background: #fff; border-color: #e2e2e2; }
+.pick b { color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: their dark photo slide, white Orbitron on it, and the yellow "b"
+   half off the left edge. The photo is square with a yellow offset.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  --ink-light: rgba(255,255,255,0.78);
+  --ink-dim:   rgba(255,255,255,0.62);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+/* The "b" only where the margin beside the text is wide enough for it. */
+@media (min-width: 1320px) {
+  #top::after {
+    background:
+      var(--b-mark) left -80px bottom 7rem / 210px auto no-repeat,
+      var(--photo-veil);
+  }
+}
+#top .eyebrow { color: #d2e0e8; }
+#top .hero-name { color: #fff; font-size: clamp(2.3rem, 5.2vw, 3.9rem); }
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1rem, 1.9vw, 1.3rem);
+  color: #ffed00;
+}
+#top .hero-lead { color: rgba(255,255,255,0.9); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.78); }
+#top .meta-row .sep { color: #ffed00; }
+#top .meta-row svg { stroke: #ffed00; }
+#top .hero-photo {
+  border-radius: 0;
+  border: none;
+  box-shadow: 14px 14px 0 #ffed00, var(--shadow-lg);
+}
+
+#top .stat-strip {
+  --ink:       #000000;
+  --ink-mid:   #262626;
+  --ink-light: #555555;
+  background: #fff;
+  backdrop-filter: none;
+  border: none;
+  border-top: 8px solid #ffed00;
+  box-shadow: var(--shadow-lg);
+}
+#top .stat { border-right-color: #ebebeb; }
+#top .stat-num { font-family: var(--serif); font-weight: 700; color: #000; }
+#top .stat-label { color: #555; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on their light grey, a rounded field and a round black
+   button with a yellow arrow, like the arrows on their sliders
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #ebebeb; border-color: #e2e2e2; }
+.ask-input {
+  background: #fff;
+  border-color: #aaaaaa;
+  border-radius: 30px;
+  box-shadow: none;
+  color: #000;
+}
+.ask-input:focus { border-color: #000; box-shadow: 0 0 0 3px rgba(255,237,0,0.6); }
+.ask-btn { background: #000; border-radius: 50%; }
+.ask-btn:hover { background: #44779d; }
+.ask-btn svg { stroke: #ffed00; }
+.ask-chip { background: #fff; border-color: #aaaaaa; color: #262626; border-radius: 30px; }
+.ask-chip:hover { border-color: #000; background: #ffed00; color: #000; }
+.ask-out { background: #fff; border-color: #e2e2e2; border-radius: 0; }
+.ask-dot { background: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   About: black ticks, the quote with a yellow bar beside it
+   ───────────────────────────────────────────────────────────────────────── */
+#about .about-quote { border-left: 6px solid #ffed00; padding-left: 1.2rem; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on their light grey, with flat white cards. The numbers sit
+   in thin circles like the arrow buttons on their sliders.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #f3f3f3; }
+#match .card { background: #fff; border: 1px solid #e2e2e2; }
+#match .point-rule { width: 40px; height: 6px; background: #ffed00; }
+#match .point-num {
+  display: grid;
+  place-items: center;
+  width: 2.8rem; height: 2.8rem;
+  border: 1.5px solid #000;
+  border-radius: 50%;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #000;
+}
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #262626;
+  background: #fffbcc;
+  border-left: 4px solid #ffed00;
+  border-radius: 0;
+  padding: 0.65rem 1rem;
+}
+#match .point-roles { border-top-color: #ebebeb; }
+#match .point-roles-label { font-family: var(--sans); font-weight: 700; color: #44779d; }
+#match .point-roles .pill { background: #d2e0e8; border-color: #d2e0e8; color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the HR processes first.
+     DOM: 1 career, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   Onboarding leads, course content stays last and keeps spanning the width.
+   With AI, this site comes first.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+          5 this site, 6 more tools
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+
+#built .built-icon { background: #ffed00; border-color: #ffed00; border-radius: 0; }
+#built .built-icon svg { stroke: #000; }
+/* Their "LEARN MORE →" links: small, bold, upper case, black. */
+.built-link {
+  color: #000;
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.built-link:hover { color: #44779d; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a black timeline. The tags show which part of HR each role
+   was about: HR (yellow), recruitment (black), training (pale blue).
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   The automotive and engineering roles lead the "Roles I've recruited for"
+   card.
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #000, #aaaaaa 70%, transparent); }
+.job::before { background: #fff; border-color: #000; border-radius: 0; }
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #ffed00; }
+.job-company { color: #44779d; }
+
+#experience .job .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.05rem 0.7rem;
+  border-radius: 30px;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after {
+  content: 'HR';
+  background: #ffed00;
+  color: #000;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after {
+  content: 'Recruitment';
+  background: #000;
+  color: #fff;
+}
+#experience .job:nth-of-type(3) .job-company::after,
+#experience .job:nth-of-type(4) .job-company::after { margin-left: 0.4rem; }
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after {
+  content: 'Training';
+  background: #d2e0e8;
+  color: #000;
+}
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company::after { content: 'Rekrytering'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildning'; }
+
+#experience .roles-group:nth-of-type(2) { order: 1; }
+#experience .roles-group:nth-of-type(4) { order: 2; }
+#experience .roles-group:nth-of-type(1) { order: 3; }
+#experience .roles-group:nth-of-type(3) { order: 4; }
+.roles-group .pill { background: #fff; }
+
+#education .edu-school { color: #44779d; }
+#education .callout {
+  background: #f3f3f3;
+  border-left: 6px solid #ffed00;
+  border-radius: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the same dark photo as the hero, the facts as white chips
+   with the role in yellow. The footer is their black bar with small
+   upper-case links, and the "b" as its mark.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  --ink-light: rgba(255,255,255,0.78);
+  --ink-dim:   rgba(255,255,255,0.62);
+}
+#contact .eyebrow { color: #d2e0e8; }
+#contact .sec-title { color: #fff; }
+#contact .sec-lead { color: rgba(255,255,255,0.88); }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.35rem 0.95rem;
+  background: #fff;
+  border-radius: 30px;
+  color: #000;
+}
+#contact .contact-facts span:last-child {
+  background: #ffed00;
+  color: #000;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #000;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 22px; height: 29px;
+  margin: 0 auto 1.1rem;
+  background: var(--b-mark) center / contain no-repeat;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+}
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: #ffed00; }
