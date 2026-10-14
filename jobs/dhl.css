@@ -310,6 +310,7 @@ body { background: #fff; color: var(--ink-mid); }
 #built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
 #built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 #built .built-icon { background: #ffcc00; border-color: #ffcc00; border-radius: 4px; }
 #built .built-icon svg { stroke: #d40511; }

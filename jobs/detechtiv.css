@@ -388,6 +388,7 @@ body { color: var(--ink-mid); font-size: 15.5px; }
 #built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 4; }
 #built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 /* In companies: the LMS that became a product, the ATS, course content,
    onboarding, then the career programme. Course content is the odd last

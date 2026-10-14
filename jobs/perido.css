@@ -189,6 +189,7 @@
 #built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
 #built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 /* ─────────────────────────────────────────────────────────────────────────
    Roles: automotive first, in green

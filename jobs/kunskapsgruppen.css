@@ -306,6 +306,7 @@ body { color: #333333; }
 #built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
 #built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 #built .built-icon {
   background: #0da642;

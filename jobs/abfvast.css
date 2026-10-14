@@ -342,6 +342,7 @@ a { text-underline-offset: 3px; }
 #built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
 #built .built-grid:last-of-type .built-card:nth-of-type(4) { display: none; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 #built .built-icon { background: #d90812; border-color: #d90812; border-radius: 50%; }
 #built .built-icon svg { stroke: #fff; }

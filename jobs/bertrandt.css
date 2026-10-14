@@ -351,6 +351,7 @@ body { background: #fff; color: var(--ink-mid); font-family: var(--sans); }
 #built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
 #built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
 #built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 #built .built-icon { background: #ffed00; border-color: #ffed00; border-radius: 0; }
 #built .built-icon svg { stroke: #000; }

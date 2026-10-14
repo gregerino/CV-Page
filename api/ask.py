@@ -111,6 +111,11 @@ TOOLS MARCUS HAS BUILT HIMSELF (with AI, without a coding background):
   recruitment system. Other agents find candidates and book interviews; only the booking agent may
   act without approval. A visual cockpit shows what the agents have done and what is waiting, and the
   system reminds the recruiter of feedback that needs to be sent.
+- A complete onboarding platform for new hires. New hires find everything about the company in one
+  place: history, values and organisation, who is responsible for what, and what the first two weeks
+  look like, day by day. The new hire has a checklist to work through, and the manager and HR have a
+  list of what needs to be ready before the first day. Policies, benefits and the routines for
+  absence and time reporting are gathered there, and the content is adapted to role and department.
 - A finance tool for keeping track of the numbers in one place and following them over time.
 - This CV site, including the AI assistant that answers questions about his background.
 
