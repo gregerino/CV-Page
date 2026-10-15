@@ -1,0 +1,528 @@
+/* Jeppesen ForeFlight — Senior Talent Partner, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /jeppesen and by cv.html?job=jeppesen, from the head script,
+   so the page is drawn in these colours from the first frame.
+
+   The palette is read off jeppesen.com:
+     #0a2240  navy: every heading and link, the text on white
+     #e14504  orange: their filled and outlined buttons
+     #3f8ad4  sky blue: the announcement bar at the top of the page
+     #121b22  near-black: the footer
+     #c9cdd1  light grey: footer links and thin lines
+     #6b747c  slate: secondary text
+
+   The site is set in Helvetica Neue, bold for headings, with square
+   buttons in small upper-case letters spaced wide and a 2px border. The
+   hero is a photo of an aircraft under a blue wash with white text on it.
+
+   Orange on white is too light for body-sized text, so the text accent is
+   a darker shade of it, and #e14504 is kept for fills and small marks.
+   The heading rule is drawn like a route on one of their charts: a short
+   orange leg, a dashed track and a waypoint.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f3f5f7;
+  --bg3:           #e8ecf0;
+  --white:         #ffffff;
+
+  --border:        #dde1e5;
+  --border-light:  #e8ecf0;
+  --border-strong: #c9cdd1;
+
+  --ink:           #0a2240;
+  --ink-mid:       #1f3550;
+  --ink-light:     #4f5b66;
+  --ink-dim:       #6b747c;
+
+  --amber:         #c23b00;
+  --amber-light:   #e14504;
+
+  --accent-rgb:    225,69,4;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 8px rgba(10,34,64,0.08);
+  --shadow-sm:     none;
+  --shadow-lg:     0 16px 40px rgba(10,34,64,0.28);
+
+  /* Square everything, as on jeppesen.com. */
+  --radius:        0;
+  --radius-lg:     0;
+  --radius-pill:   0;
+
+  /* Their hero: the photo under a deep blue wash. */
+  --photo-veil: linear-gradient(100deg,
+    rgba(10,34,64,0.94) 0%,
+    rgba(14,52,104,0.86) 45%,
+    rgba(40,100,180,0.62) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e14504' stroke-width='3.5' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* A small aircraft seen from above, for the footer mark. */
+  --plane: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e14504' d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z'/%3E%3C/svg%3E");
+
+  --serif: 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --sans:  'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --mono:  'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+}
+
+body { background: #fff; color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #e14504; color: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: bold Helvetica Neue in navy, no italics, small spaced capitals for
+   labels like the ones on their buttons.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.06;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: #0a2240;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #0a2240;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote { font-family: var(--serif); font-weight: 700; font-size: 1.25rem; line-height: 1.45; color: #0a2240; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c23b00;
+}
+
+/* The heading rule: an orange leg, a dashed track and a waypoint ring,
+   like a route on a navigation chart. */
+.sec-head::after {
+  content: '';
+  display: block;
+  width: 150px; height: 10px;
+  margin-top: 1.4rem;
+  background:
+    radial-gradient(circle at 145px 5px, #fff 0 2px, #e14504 2.5px 4.5px, transparent 5px),
+    linear-gradient(#e14504, #e14504) 0 4px / 48px 3px no-repeat,
+    repeating-linear-gradient(90deg, #c9cdd1 0 6px, transparent 6px 11px) 54px 4.5px / 86px 2px no-repeat;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white with a thin line, the name spaced in capitals like their
+   wordmark, the sky-blue bar of their announcement strip along the top
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-top: 4px solid #3f8ad4;
+  border-bottom: 1px solid #dde1e5;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+  color: #0a2240;
+  border-radius: 0;
+}
+.nav-links a:hover { color: #0a2240; background: #e8ecf0; }
+.nav-links a.active { color: #fff; background: #0a2240; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #0a2240;
+}
+@media (max-width: 480px) { .brand { letter-spacing: 0.06em; } }
+.brand em { font-style: normal; color: #0a2240; }
+.brand-dot { background: #e14504; border-radius: 0; box-shadow: none; }
+.lang-toggle { background: #fff; border: 2px solid #0a2240; color: #0a2240; border-radius: 0; }
+.lang-toggle:hover { background: #0a2240; color: #fff; }
+.nav-mobile { background: #fff; }
+.nav-mobile a { color: #0a2240; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #fff; background: #0a2240; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their square buttons with spaced capitals and a 2px border.
+   Filled orange for the main one, outlined for the rest.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  border-radius: 0;
+  border-width: 2px;
+  padding: 1rem 1.6rem;
+}
+.btn-primary {
+  background: #e14504;
+  border: 2px solid #e14504;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #c23b00;
+  border-color: #c23b00;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #0a2240;
+  color: #0a2240;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #0a2240; border-color: #0a2240; color: #fff; }
+
+/* Flat white cards with a thin line and no rounding. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  border: 1px solid #dde1e5;
+  box-shadow: none;
+}
+.pill {
+  background: #f3f5f7;
+  border-color: #dde1e5;
+  color: #1f3550;
+  border-radius: 0;
+}
+.pill--accent { background: #0a2240; border-color: #0a2240; color: #fff; }
+.pick { background: #fff; border-color: #dde1e5; border-radius: 0; }
+.pick b { color: #0a2240; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: the photo under their blue wash, white bold type, the outlined
+   white button from their hero. The photo is square with an orange edge.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  --ink-light: rgba(255,255,255,0.8);
+  --ink-dim:   rgba(255,255,255,0.64);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #ffffff; opacity: 0.9; }
+#top .hero-name { color: #fff; font-size: clamp(2.4rem, 5.6vw, 4.2rem); }
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  color: #fff;
+}
+#top .hero-role::after {
+  content: '';
+  display: block;
+  width: 48px; height: 3px;
+  margin-top: 0.9rem;
+  background: #e14504;
+}
+#top .hero-lead { color: rgba(255,255,255,0.92); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.8); }
+#top .meta-row .sep { color: #e14504; }
+#top .meta-row svg { stroke: #fff; }
+#top .btn-ghost { border-color: #fff; color: #fff; }
+#top .btn-ghost:hover { background: #fff; color: #0a2240; }
+#top .hero-photo {
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 0 4px #fff, 12px 12px 0 4px #e14504, var(--shadow-lg);
+}
+
+#top .stat-strip {
+  --ink:       #0a2240;
+  --ink-mid:   #1f3550;
+  --ink-light: #4f5b66;
+  background: #fff;
+  backdrop-filter: none;
+  border: none;
+  border-top: 4px solid #e14504;
+  border-radius: 0;
+  box-shadow: var(--shadow-lg);
+}
+#top .stat { border-right-color: #e8ecf0; }
+#top .stat-num { font-family: var(--serif); font-weight: 700; color: #0a2240; }
+#top .stat-label { color: #4f5b66; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on pale grey, a square field and a navy send button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f3f5f7; border-color: #dde1e5; }
+.ask-input {
+  background: #fff;
+  border: 2px solid #c9cdd1;
+  border-radius: 0;
+  box-shadow: none;
+  color: #0a2240;
+}
+.ask-input:focus { border-color: #0a2240; box-shadow: 0 0 0 3px rgba(225,69,4,0.25); }
+.ask-btn { background: #e14504; border-radius: 0; }
+.ask-btn:hover { background: #0a2240; }
+.ask-btn svg { stroke: #fff; }
+.ask-chip { background: #fff; border-color: #c9cdd1; color: #0a2240; border-radius: 0; }
+.ask-chip:hover { border-color: #0a2240; background: #0a2240; color: #fff; }
+.ask-out { background: #fff; border-color: #dde1e5; border-radius: 0; }
+.ask-dot { background: #e14504; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   About: the quote with an orange bar beside it, orange ticks
+   ───────────────────────────────────────────────────────────────────────── */
+#about .about-quote { border-left: 4px solid #e14504; padding-left: 1.2rem; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on navy, like the dark bands on their site, with white
+   cards. Numbers as orange squares, the ad's words on pale grey.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #0a2240;
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  --ink-light: rgba(255,255,255,0.75);
+  --ink-dim:   rgba(255,255,255,0.6);
+}
+#match .eyebrow { color: #ff8a52; }
+#match .sec-title { color: #fff; }
+#match .sec-lead { color: rgba(255,255,255,0.82); }
+#match .sec-head::after {
+  background:
+    radial-gradient(circle at 145px 5px, #0a2240 0 2px, #e14504 2.5px 4.5px, transparent 5px),
+    linear-gradient(#e14504, #e14504) 0 4px / 48px 3px no-repeat,
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0 6px, transparent 6px 11px) 54px 4.5px / 86px 2px no-repeat;
+}
+#match .card {
+  --ink:       #0a2240;
+  --ink-mid:   #1f3550;
+  --ink-light: #4f5b66;
+  --ink-dim:   #6b747c;
+  background: #fff;
+  border: none;
+  border-top: 4px solid #e14504;
+  color: #1f3550;
+}
+#match .point-rule { display: none; }
+#match .point-num {
+  display: grid;
+  place-items: center;
+  width: 2.6rem; height: 2.6rem;
+  background: #e14504;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+#match .point-title { color: #0a2240; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1f3550;
+  background: #f3f5f7;
+  border-left: 3px solid #3f8ad4;
+  border-radius: 0;
+  padding: 0.65rem 1rem;
+}
+#match .point-body { color: #1f3550; }
+#match .point-roles { border-top-color: #e8ecf0; }
+#match .point-roles-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #c23b00;
+}
+#match .point-roles .pill { background: #e8ecf0; border-color: #e8ecf0; color: #0a2240; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the recruitment work first.
+     DOM: 1 career, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   ATS leads, course content stays last and keeps spanning the width.
+   With AI, the recruitment tools come first: Recruitment OS, the sourcing
+   tool (in the finance tool's place, via the pack's text map) and the
+   agentic OS, then this site and the onboarding platform.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 sourcing tool,
+          5 this site, 6 onboarding platform, 7 more tools
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-icon { background: #0a2240; border-color: #0a2240; border-radius: 0; }
+#built .built-icon svg { stroke: #fff; }
+/* Their "LEARN MORE" links: small, bold, spaced capitals in orange. */
+.built-link {
+  color: #c23b00;
+  border-bottom: none;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.built-link:hover { color: #0a2240; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a navy timeline with square waypoints. Recruitment roles
+   are filled orange and tagged.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   The automotive and engineering roles lead the "Roles I've recruited for"
+   card.
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #0a2240, #c9cdd1 70%, transparent); }
+.job::before { background: #fff; border-color: #0a2240; border-radius: 0; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #e14504; border-color: #e14504; }
+.job-company { color: #c23b00; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.1rem 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after {
+  content: 'Recruitment';
+  background: #e14504;
+  color: #fff;
+}
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after {
+  content: 'Education';
+  background: #e8ecf0;
+  color: #0a2240;
+}
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Rekrytering'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildning'; }
+
+#experience .roles-group:nth-of-type(2) { order: 1; }
+#experience .roles-group:nth-of-type(4) { order: 2; }
+#experience .roles-group:nth-of-type(1) { order: 3; }
+#experience .roles-group:nth-of-type(3) { order: 4; }
+#experience .roles-group:nth-of-type(2) .pill { background: #0a2240; border-color: #0a2240; color: #fff; }
+.roles-group .pill { background: #fff; }
+
+#education .edu-school { color: #c23b00; }
+#education .callout {
+  background: #f3f5f7;
+  border-left: 4px solid #e14504;
+  border-radius: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the same blue-washed photo as the hero, the facts as square
+   white chips with the role in orange. The footer is their near-black bar
+   with grey links and a small aircraft as its mark.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  --ink-light: rgba(255,255,255,0.8);
+  --ink-dim:   rgba(255,255,255,0.64);
+}
+#contact .eyebrow { color: #fff; opacity: 0.9; }
+#contact .sec-title { color: #fff; }
+#contact .sec-lead { color: rgba(255,255,255,0.88); }
+#contact .btn-ghost { border-color: #fff; color: #fff; }
+#contact .btn-ghost:hover { background: #fff; color: #0a2240; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.4rem 0.95rem;
+  background: #fff;
+  border-radius: 0;
+  color: #0a2240;
+}
+#contact .contact-facts span:last-child {
+  background: #e14504;
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #121b22;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 26px; height: 26px;
+  margin: 0 auto 1.1rem;
+  background: var(--plane) center / contain no-repeat;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c9cdd1;
+}
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: #e14504; }
