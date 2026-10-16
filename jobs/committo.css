@@ -1,0 +1,255 @@
+/* Committo — a page to get in touch, not an application
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /committo and by cv.html?job=committo, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is Committo's own, read off the computed styles on committo.se:
+     #ff6f61  their coral: the header band and the big colour fields
+     #fab8b8  the soft pink of their secondary panels
+     #fff8e2  the cream of the paper, the headings on coral and the buttons
+     #000000  the black of the logo, body text and the footer
+
+   Their headings are set in Roslindale Display, a light high-contrast serif,
+   and the body in Nohemi, a geometric sans. Neither is on Google Fonts, so
+   Fraunces (light) and Outfit stand in. Coral is too light for body-sized
+   text on cream, so a deeper coral carries the small accents and black the
+   filled buttons, as on their site.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg:            #fff8e2;
+  --bg2:           #fdeedd;
+  --bg3:           #fbe3d2;
+  --white:         #fffcf2;
+
+  --border:        #efd9c4;
+  --border-light:  #f5e6d4;
+  --border-strong: #d9b9a0;
+
+  --ink:           #111111;
+  --ink-mid:       #262323;
+  --ink-light:     #514a46;
+  --ink-dim:       #7a706a;
+
+  --amber:         #c23e2e;
+  --amber-light:   #ff6f61;
+
+  --accent-rgb:    255,111,97;
+  --white-rgb:     255,252,242;
+  --bg-rgb:        255,248,226;
+
+  --shadow:        0 2px 10px rgba(17,17,17,0.08), 0 1px 3px rgba(17,17,17,0.06);
+  --shadow-sm:     0 1px 3px rgba(17,17,17,0.08);
+  --shadow-lg:     0 14px 36px rgba(17,17,17,0.16);
+
+  --radius:        18px;
+  --radius-lg:     28px;
+  --radius-pill:   999px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,248,226,0.97) 0%,
+    rgba(255,248,226,0.94) 45%,
+    rgba(250,184,184,0.86) 80%,
+    rgba(255,111,97,0.78) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c23e2e' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Fraunces', 'Roslindale Variable Display', Georgia, serif;
+  --sans:  'Outfit', 'Nohemi', system-ui, sans-serif;
+  --mono:  'Outfit', 'Nohemi', system-ui, sans-serif;
+}
+
+/* Headings light and large, the way Roslindale sits on their coral. */
+.hero-name,
+.cv-name,
+.sec-title { font-weight: 400; letter-spacing: -0.015em; color: #111111; }
+.hero-role { font-family: var(--serif); font-style: italic; font-weight: 300; color: #c23e2e; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.built-title,
+.roles-title,
+.job-title,
+.edu-degree { font-family: var(--serif); font-weight: 500; color: #111111; }
+
+/* Their small labels are bold uppercase sans, as on the "Lediga jobb" pill. */
+.eyebrow {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: #c23e2e;
+}
+.tool-label,
+.built-sub {
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  color: #514a46;
+}
+
+/* Their header is a solid coral band with the black word mark. */
+.nav {
+  background: #ff6f61;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+}
+.nav-links a,
+.nav-contact-link,
+.lang-toggle { color: #111111; }
+.nav-links a:hover { color: #fff8e2; }
+.brand { color: #111111; font-weight: 700; letter-spacing: -0.02em; }
+.brand em { font-style: normal; color: #111111; }
+.brand-dot { background: #fff8e2; box-shadow: none; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons as on committo.se: full pills, cream with black type on coral,
+   black with cream type on the paper.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-weight: 600; letter-spacing: 0.02em; border-radius: 999px; }
+.btn-primary {
+  background: #111111;
+  border: 2px solid #111111;
+  color: #fff8e2;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #ff6f61;
+  border-color: #ff6f61;
+  color: #111111;
+  box-shadow: none;
+}
+.btn-ghost {
+  background: #fff8e2;
+  border: 2px solid #111111;
+  color: #111111;
+}
+.btn-ghost:hover { background: #fab8b8; border-color: #111111; color: #111111; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #fff8e2, 0 0 0 4px #111111; }
+
+/* Their photos are cut with one big sweeping corner. */
+.hero-photo {
+  border: none;
+  border-radius: 28px 28px 28px 46%;
+  background: #ff6f61;
+  box-shadow: none;
+}
+
+/* Soft cream cards, no frosted glass. */
+.card {
+  background: #fffcf2;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #efd9c4;
+  box-shadow: none;
+}
+.card:hover { box-shadow: var(--shadow-sm); }
+.pill { background: #fffcf2; border-color: #efd9c4; color: #262323; }
+
+.built-icon { background: #fab8b8; border: none; }
+.built-icon svg { stroke: #111111; }
+.built-link { color: #c23e2e; font-weight: 600; }
+.built-link:hover { color: #111111; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #ff6f61, rgba(255,111,97,0.25) 60%, transparent);
+}
+.job::before { border-color: #ff6f61; }
+.stat-num { font-family: var(--serif); color: #c23e2e; font-weight: 400; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "What I bring", on their coral
+   ─────────────────────────────────────────────────────────────────────────
+   Their page is built from big coral fields with cream headings. The
+   section the page exists for gets the same: a coral band with cream
+   cards, each with a soft pink edge.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #ff6f61;
+  border-top: none;
+}
+#match .eyebrow   { color: #111111; }
+#match .sec-title { color: #fff8e2; }
+#match .sec-lead  { color: #111111; }
+#match .card {
+  background: #fff8e2;
+  border-color: #fff8e2;
+  box-shadow: 0 10px 28px rgba(17,17,17,0.14);
+}
+#match .point { border-top: 6px solid #fab8b8; }
+#match .point-rule { background: #ff6f61; }
+#match .point-num { color: #c23e2e; }
+
+/* The last point, Role for Growth, gets the pink panel. */
+#match .point:last-child { background: #fab8b8; border-color: #fab8b8; border-top-color: #fff8e2; }
+
+/* The About quote in the light serif of their headings. */
+#about .about-quote { font-family: var(--serif); font-weight: 300; color: #111111; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the learning work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link. The last card in
+   the work grid stays last, since the base page lets an odd last card span
+   the full width.
+     At work:  onboarding, LMS, career programme, ATS workflows, course content
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+/* Recruitment and the learning pills first, in pink. */
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+4) {
+  background: #fab8b8;
+  border-color: #fab8b8;
+  color: #111111;
+  font-weight: 500;
+}
+
+#education .callout {
+  background: #fab8b8;
+  border: none;
+  border-radius: 28px 28px 28px 0;
+}
+#education .callout-label { color: #111111; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact facts as their contact card: black on pink, big rounded corner.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .contact-facts {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 440px;
+  padding: 1.4rem 1.6rem 1.5rem;
+  background: #fab8b8;
+  border-radius: 28px 28px 28px 0;
+  color: #111111;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+#contact .contact-facts span { font-weight: 400; }
+
+/* Their footer is black with cream type. */
+.site-footer {
+  background: #111111;
+  border-top: 6px solid #ff6f61;
+}
+.site-footer p { color: rgba(255,248,226,0.88); font-size: 0.85rem; letter-spacing: 0.02em; }
+.site-footer a { color: #fff8e2; font-weight: 500; }
+.site-footer a:hover { color: #ff6f61; }
+
+/* Two numbers under the hero, not three: the third box is hidden and the
+   strip drops to two columns. */
+#top .stat:nth-child(3) { display: none; }
+#top .stat-strip { grid-template-columns: repeat(2, 1fr); }
+#top .stat:nth-child(2) { border-right: none; border-bottom: none; }
+@media (max-width: 780px) {
+  #top .stat-strip { grid-template-columns: 1fr; }
+  #top .stat:nth-child(1) { border-bottom: 1px solid var(--border); }
+}
