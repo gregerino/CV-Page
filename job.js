@@ -109,6 +109,7 @@
 
     if (Array.isArray(job.points) && job.points.length) buildPoints(job.points);
     if (job.roles && Array.isArray(job.roles.groups)) buildRoles(job.roles);
+    if (Array.isArray(job.built) && job.built.length) addBuilt(job.built);
 
     if (job.text) applyText(job.text);
 
@@ -201,6 +202,40 @@
 
     timeline.parentNode.insertBefore(card, timeline);
     if (window.CVSite) window.CVSite.watchReveals(card.parentNode);
+  }
+
+  // Extra cards in "What I've built", for work that belongs on one
+  // application but not on the base page. They are appended after the base
+  // cards, so `text` selectors that count the base cards still hit the same
+  // ones. `group` is "ai" (the "Built myself" grid, the default) or "work";
+  // `icon` is a list of SVG path strings in the base icons' 24×24 box.
+  function addBuilt(cards) {
+    var grids = document.querySelectorAll('#built .built-grid');
+    if (!grids.length) return;
+
+    cards.forEach(function (c) {
+      var grid = c.group === 'work' ? grids[0] : grids[grids.length - 1];
+      var card = el('article', 'card built-card reveal');
+
+      var icon = el('div', 'built-icon');
+      var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('stroke-linecap', 'round');
+      svg.setAttribute('stroke-linejoin', 'round');
+      (c.icon || ['M12 3l2.4 5 5.6.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.6-.8z']).forEach(function (d) {
+        var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', d);
+        svg.appendChild(path);
+      });
+      icon.appendChild(svg);
+
+      card.appendChild(icon);
+      card.appendChild(text('h3', 'built-title', c.title));
+      card.appendChild(text('p', 'built-text', c.text));
+      grid.appendChild(card);
+    });
+
+    if (window.CVSite) window.CVSite.watchReveals(document.querySelector('#built'));
   }
 
   function el(tag, className) {

@@ -1,0 +1,518 @@
+/* Lorensbergs — Client Interaction Lead, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /lorensbergs and by cv.html?job=lorensbergs, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on lorensbergs.se:
+     #2c2e3f  deep navy: the whole page background, the header and the
+              text on their white panels
+     #f74c99  pink: the highlighted word in their headings, the asterisk
+              in the logo, the "Let's connect" link
+     #41a153  green: the filled "Apply now" button
+     #e3e1e8  lavender grey: thin lines and the quiet panels
+     #ffffff  white: headings on navy and the content panels
+
+   The site is set in Montserrat, bold for headings. Panels and buttons are
+   cut as a leaf, square at two corners and rounded at the other two
+   (border-radius: 0 20px). The wordmark ends in a pink asterisk.
+
+   Pink on white is too light for body-sized text, so a deeper pink carries
+   the small accents on the light sections, and #f74c99 is kept for navy.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+:root {
+  --bg:            #f4f3f7;
+  --bg2:           #ebe9f0;
+  --bg3:           #e3e1e8;
+  --white:         #ffffff;
+
+  --border:        #e3e1e8;
+  --border-light:  #ebe9f0;
+  --border-strong: #c9c6d3;
+
+  --ink:           #2c2e3f;
+  --ink-mid:       #383a4d;
+  --ink-light:     #575a6e;
+  --ink-dim:       #73768a;
+
+  --amber:         #c8146f;
+  --amber-light:   #f74c99;
+
+  --accent-rgb:    247,76,153;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        244,243,247;
+
+  --shadow:        0 2px 10px rgba(44,46,63,0.08);
+  --shadow-sm:     0 1px 4px rgba(44,46,63,0.08);
+  --shadow-lg:     0 18px 44px rgba(20,21,32,0.35);
+
+  --radius:        0 20px;
+  --radius-lg:     0 28px;
+  --radius-pill:   999px;
+
+  /* Their hero: a photo under a deep navy wash. */
+  --photo-veil: linear-gradient(110deg,
+    rgba(44,46,63,0.97) 0%,
+    rgba(44,46,63,0.92) 50%,
+    rgba(44,46,63,0.78) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2341a153' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Montserrat', system-ui, sans-serif;
+  --sans:  'Montserrat', system-ui, sans-serif;
+  --mono:  'Montserrat', system-ui, sans-serif;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #f74c99; color: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: bold Montserrat, no italics, tight headings as on their site
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.sec-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: #2c2e3f;
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: #2c2e3f;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c8146f;
+}
+
+/* The pink asterisk from their wordmark, in front of every section label. */
+.sec-head .eyebrow::before,
+#contact .eyebrow::before {
+  content: '*';
+  margin-right: 0.35em;
+  font-size: 1.35em;
+  line-height: 0;
+  vertical-align: -0.28em;
+  color: #f74c99;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their navy header, white links, the name as a wordmark with the
+   pink asterisk at the end
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #2c2e3f;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 500;
+  color: rgba(255,255,255,0.86);
+}
+.nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.nav-links a.active { color: #f74c99; background: transparent; }
+.nav-contact-link a { color: #f74c99; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.brand em { font-style: normal; color: #fff; }
+/* .brand is a flex row with a gap, so the asterisk is pulled back to sit
+   on the last letter, as in their wordmark. */
+.brand::after {
+  content: '*';
+  margin-left: calc(-0.6rem + 0.04em);
+  font-size: 1.5em;
+  line-height: 1;
+  position: relative;
+  top: -0.12em;
+  color: #f74c99;
+}
+.brand-dot { display: none; }
+.lang-toggle { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: #fff; }
+.lang-toggle:hover { background: #fff; color: #2c2e3f; }
+.nav-hamburger span { background: #fff; }
+.nav-mobile { background: #2c2e3f; }
+.nav-mobile a { color: rgba(255,255,255,0.88); border-color: rgba(255,255,255,0.08); }
+.nav-mobile a:hover, .nav-mobile a.active { color: #f74c99; background: rgba(255,255,255,0.05); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their green "Apply now", leaf-cut, semibold. Ghost buttons are
+   outlined in the same shape.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: 0;
+  border-radius: 0 20px;
+}
+.btn-primary {
+  background: #41a153;
+  border: 2px solid #41a153;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #348843;
+  border-color: #348843;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #2c2e3f;
+  color: #2c2e3f;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #2c2e3f; border-color: #2c2e3f; color: #fff; }
+
+/* White leaf-cut panels, as their content boxes. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #e3e1e8;
+  border-radius: 0 24px;
+  box-shadow: none;
+}
+.card:hover { box-shadow: var(--shadow); }
+.pill { background: #fff; border-color: #e3e1e8; color: #383a4d; }
+.pill--accent { background: #2c2e3f; border-color: #2c2e3f; color: #fff; }
+.pick { background: #fff; border-color: #e3e1e8; }
+.pick b { color: #c8146f; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: navy, white bold type, the role line in their pink. The photo is
+   cut as a leaf.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  --ink-light: rgba(255,255,255,0.8);
+  --ink-dim:   rgba(255,255,255,0.64);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: rgba(255,255,255,0.78); }
+#top .hero-name { color: #fff; }
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #f74c99;
+}
+#top .hero-lead { color: rgba(255,255,255,0.9); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.78); }
+#top .meta-row .sep { color: #f74c99; }
+#top .meta-row svg { stroke: #f74c99; }
+#top .btn-ghost { border-color: rgba(255,255,255,0.7); color: #fff; }
+#top .btn-ghost:hover { background: #fff; border-color: #fff; color: #2c2e3f; }
+#top .hero-photo {
+  border: none;
+  border-radius: 0 48px;
+  box-shadow: var(--shadow-lg);
+}
+
+#top .stat-strip {
+  --ink:       #2c2e3f;
+  --ink-mid:   #383a4d;
+  --ink-light: #575a6e;
+  background: #fff;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 0 28px;
+  box-shadow: var(--shadow-lg);
+}
+#top .stat { border-color: #e3e1e8; }
+#top .stat-num { font-family: var(--sans); font-weight: 800; color: #c8146f; }
+#top .stat-label { color: #575a6e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar: a white leaf field and the green send button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #ebe9f0; border-color: #e3e1e8; }
+.ask-input {
+  background: #fff;
+  border: 2px solid #e3e1e8;
+  border-radius: 0 20px;
+  box-shadow: none;
+  color: #2c2e3f;
+}
+.ask-input:focus { border-color: #2c2e3f; box-shadow: 0 0 0 3px rgba(247,76,153,0.22); }
+.ask-btn { background: #41a153; border-radius: 0 16px; }
+.ask-btn:hover { background: #2c2e3f; }
+.ask-btn svg { stroke: #fff; }
+.ask-chip { background: #fff; border-color: #e3e1e8; color: #2c2e3f; }
+.ask-chip:hover { border-color: #2c2e3f; background: #2c2e3f; color: #fff; }
+.ask-out { background: #fff; border-color: #e3e1e8; border-radius: 0 20px; }
+.ask-dot { background: #f74c99; }
+
+/* About: the quote large and bold with a pink bar beside it. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #2c2e3f;
+  border-left: 4px solid #f74c99;
+  padding-left: 1.2rem;
+}
+#about .brings { border-top: 6px solid #41a153; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on their navy, with white leaf panels. Numbers in pink,
+   the ad's words on lavender grey with a green edge.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #2c2e3f;
+  border-top: none;
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  --ink-light: rgba(255,255,255,0.75);
+  --ink-dim:   rgba(255,255,255,0.6);
+}
+#match .eyebrow { color: #f74c99; }
+#match .sec-title { color: #fff; }
+#match .sec-lead { color: rgba(255,255,255,0.82); }
+#match .card {
+  --ink:       #2c2e3f;
+  --ink-mid:   #383a4d;
+  --ink-light: #575a6e;
+  --ink-dim:   #73768a;
+  background: #fff;
+  border: none;
+  color: #383a4d;
+}
+#match .point-rule { background: #f74c99; }
+#match .point-num { font-family: var(--sans); font-weight: 800; color: #c8146f; }
+#match .point-title { color: #2c2e3f; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #383a4d;
+  background: #f4f3f7;
+  border-left: 3px solid #41a153;
+  border-radius: 0 14px 0 0;
+  padding: 0.7rem 1rem;
+}
+#match .point-body { color: #383a4d; }
+#match .point-roles { border-top-color: #ebe9f0; }
+#match .point-roles-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c8146f;
+}
+#match .point-roles .pill { background: #ebe9f0; border-color: #ebe9f0; color: #2c2e3f; }
+
+/* The two AI points get the pink edge, so they read as a pair. */
+#match .point:nth-child(6),
+#match .point:nth-child(7) { box-shadow: inset 6px 0 0 #f74c99; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the AI tools come first, above the work done with colleagues.
+   The section is laid out as a column so the two groups can swap places
+   without moving any markup.
+     DOM: sec-head, sub "at work", grid at work, sub "with AI", grid with AI
+   Role for Growth (added by the pack's `built` field) leads the grid, since
+   team development is Lorensbergs' own field. Then the coordination and
+   project tools. The sourcing tool is in the "more tools" card's place, via
+   the pack's text map.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+          5 this site, 6 onboarding platform, 7 sourcing tool,
+          8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .wrap { display: flex; flex-direction: column; }
+#built .sec-head { order: 0; }
+#built .built-sub:nth-of-type(2) { order: 1; margin-top: 0; }
+#built .built-grid:last-of-type { order: 2; }
+#built .built-sub:nth-of-type(1) { order: 3; margin-top: 2.8rem; }
+#built .built-grid:not(:last-of-type) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+/* The sourcing tool searches; the star icon of "more tools" becomes a lens. */
+#built .built-grid:last-of-type .built-card:nth-of-type(7) .built-icon svg { display: none; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) .built-icon::before {
+  content: '';
+  width: 19px; height: 19px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M21 21l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+#built .built-grid:last-of-type .built-card { border-top: 4px solid #f74c99; }
+#built .built-icon { background: #2c2e3f; border-color: #2c2e3f; border-radius: 0 12px; }
+#built .built-icon svg { stroke: #fff; }
+.built-link { color: #c8146f; border-bottom: none; font-weight: 700; }
+.built-link:hover { color: #2c2e3f; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a navy timeline. The four roles with client contact and
+   sales are tagged in green, the vocational college role in pink.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #2c2e3f, #c9c6d3 70%, transparent); }
+.job::before { background: #41a153; border-color: #41a153; }
+#experience .job:nth-of-type(5)::before { background: #f74c99; border-color: #f74c99; }
+.job-company { color: #c8146f; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.12rem 0.65rem;
+  border-radius: 0 8px;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(-n+4) .job-company > span::after {
+  content: 'Clients';
+  background: #41a153;
+  color: #fff;
+}
+#experience .job:nth-of-type(5) .job-company > span::after {
+  content: 'Programmes';
+  background: #f74c99;
+  color: #fff;
+}
+:root:lang(sv) #experience .job:nth-of-type(-n+4) .job-company > span::after { content: 'Kunder'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Program'; }
+
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: the callout as a navy leaf, since it ties the degree to the
+   work Lorensbergs does. Project management and communication lead the
+   pills, in pink.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #c8146f; }
+#education .callout {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  background: #2c2e3f;
+  border: none;
+  border-radius: 0 28px;
+}
+#education .callout-label { color: #f74c99; }
+#education .callout-title { color: #fff; }
+#education .callout-text { color: rgba(255,255,255,0.88); }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+2) {
+  background: #f74c99;
+  border-color: #f74c99;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the same navy-washed photo as the hero, the facts as white
+   leaf chips with the role in green. The footer is a darker navy with the
+   asterisk as its mark.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  --ink-light: rgba(255,255,255,0.8);
+  --ink-dim:   rgba(255,255,255,0.64);
+}
+#contact .eyebrow { color: rgba(255,255,255,0.8); }
+#contact .sec-title { color: #fff; }
+#contact .sec-lead { color: rgba(255,255,255,0.88); }
+#contact .btn-ghost { border-color: rgba(255,255,255,0.7); color: #fff; }
+#contact .btn-ghost:hover { background: #fff; border-color: #fff; color: #2c2e3f; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.42rem 0.95rem;
+  background: #fff;
+  border-radius: 0 12px;
+  color: #2c2e3f;
+}
+#contact .contact-facts span:last-child {
+  background: #41a153;
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #23242f;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer::before {
+  content: '*';
+  display: block;
+  margin: 0 auto 0.6rem;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 0.6;
+  color: #f74c99;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.72);
+}
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: #f74c99; }
