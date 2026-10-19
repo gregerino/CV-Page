@@ -461,7 +461,7 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 
 /* ─────────────────────────────────────────────────────────────────────────
    Contact on the same navy-washed photo as the hero, the facts as white
-   leaf chips with the role in green. The footer is a darker navy with the
+   leaf chips. The footer is a darker navy with the
    asterisk as its mark.
    ───────────────────────────────────────────────────────────────────────── */
 #contact {
@@ -487,11 +487,6 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
   border-radius: 0 12px;
   color: #2c2e3f;
 }
-#contact .contact-facts span:last-child {
-  background: #41a153;
-  color: #fff;
-  font-weight: 700;
-}
 
 .site-footer {
   background: #23242f;
@@ -516,3 +511,18 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 }
 .site-footer a { color: #fff; }
 .site-footer a:hover { color: #f74c99; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The personal section is switched off on every page in style.css. This
+   application brings it back, with its nav links, on the lavender band
+   with white leaf cards like the rest of the page.
+   ───────────────────────────────────────────────────────────────────────── */
+#personal { display: block !important; }
+.nav-links li:has(> a[href="#personal"]) { display: list-item !important; }
+.nav-mobile a[href="#personal"] { display: block !important; }
+#personal .personal-title { color: #2c2e3f; }
+#personal .pick { border-radius: 0 12px; }
+
+/* No quick picks on this application: the block after the cards goes. */
+#personal .personal-grid + .reveal { display: none; }
+#personal .personal-grid { margin-bottom: 0; }

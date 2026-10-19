@@ -146,7 +146,7 @@ LANGUAGES:
 Swedish (native), English (professional fluency)
 
 PERSONAL LIFE:
-- Lives in Gothenburg with his fiancée and their 2.5-year-old son.
+- Lives in Gothenburg with his fiancée and their 3-year-old son.
 - Hobbies: Creative person who reads a lot of fantasy and writes D&D adventures as a Game Master. Huge passion for food and cooking, loves all food from street food joints to Michelin restaurants. Enjoys board games. Loves watching Critical Role, a live-action D&D series.
 - Travel: Loves travelling, especially to Spain and Costa del Sol. Grew up half and half in Thailand. Has been stuck on the African savannah.
 - Music: Music omnivore, currently stuck on funk soul. Favourite track right now: "Beirut" by Wanda Wonderful. Prefers music over podcasts.

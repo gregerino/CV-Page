@@ -268,8 +268,8 @@
     },
     "#top .stat-num": [
       "4",
-      "15+",
-      "7"
+      "L&D",
+      "AI"
     ],
     "#top .stat-label": [
       {
@@ -277,12 +277,12 @@
         "sv": "Roller med kundkontakt och försäljning av tjänster"
       },
       {
-        "en": "Consultants under my people responsibility",
-        "sv": "Konsulter med personalansvar"
+        "en": "Experience in Learning & Development and recruitment",
+        "sv": "Erfarenhet inom Learning & Development och rekrytering"
       },
       {
-        "en": "Tools I have built myself with AI",
-        "sv": "Verktyg jag byggt själv med AI"
+        "en": "Experience and skills in developing my own tools with AI",
+        "sv": "Erfarenhet och kompetens inom att utveckla egna verktyg med AI"
       }
     ],
     ".ask-title": {
@@ -485,10 +485,6 @@
       {
         "en": "Education: BSc. Behavioural Science",
         "sv": "Utbildning: kand. beteendevetenskap"
-      },
-      {
-        "en": "Applying for: Client Interaction Lead, Lorensbergs",
-        "sv": "Söker: Client Interaction Lead, Lorensbergs"
       }
     ],
     "#built .built-sub:nth-of-type(2)": {
@@ -502,6 +498,10 @@
     "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
       "en": "A tool for planning and following up a household's finances, with an overview of income and expenses month by month. Shared costs and the joint food account are divided automatically according to each person's share of the income. Fixed and variable expenses are recorded by category, and personal savings goals can be set as a percentage or in kronor. The reports show expenses per category and the result for each month. An AI assistant answers questions about the finances, for example what the savings rate is, and data can be imported and exported via Excel, CSV or JSON. The data syncs between devices with a Google login.",
       "sv": "Ett verktyg för att planera och följa upp ett hushålls ekonomi, med en översikt över inkomster och utgifter månad för månad. Gemensamma kostnader och matkontot fördelas automatiskt efter varje persons andel av inkomsten. Fasta och rörliga utgifter registreras per kategori, och personliga sparmål kan anges i procent eller kronor. Rapporterna visar utgifter per kategori och resultatet för varje månad. En AI-assistent besvarar frågor om ekonomin, till exempel hur stor sparandegraden är, och data kan importeras och exporteras via Excel, CSV eller JSON. Uppgifterna synkas mellan enheter med inloggning via Google."
+    },
+    "#personal .personal-card:nth-of-type(1) .personal-text": {
+      "en": "I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&D adventures as a Dungeon Master. I have a huge passion for food and cooking, and love all food, from street food joints to Michelin restaurants. I also really enjoy getting together over board games, and love watching Critical Role, a live-action D&D series that fuels my creativity as a Dungeon Master.",
+      "sv": "Jag är en kreativ person i grunden. Jag läser mycket fantasy och kanaliserar det till att skriva D&D-äventyr som Dungeon Master. Jag har en enorm passion för mat och matlagning, och älskar all mat, från streetfood till Michelin-restauranger. Jag gillar också att samlas över brädspel och älskar att titta på Critical Role, en live-action D&D-serie som ger bränsle till min kreativitet som Dungeon Master."
     }
   }
 }
