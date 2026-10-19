@@ -126,7 +126,7 @@ PERSONAL LIFE:
 - Lives in Gothenburg with his fiancée and their 3-year-old son.
 - Hobbies: Creative person who reads a lot of fantasy and writes D&D adventures as a Game Master. Huge passion for food and cooking, loves all food from street food joints to Michelin restaurants. Enjoys board games. Loves watching Critical Role, a live-action D&D series.
 - Travel: Loves travelling, especially to Spain and Costa del Sol. Grew up half and half in Thailand. Has been stuck on the African savannah.
-- Music: Music omnivore, currently stuck on funk soul. Favourite track right now: "Beirut" by Wanda Wonderful. Prefers music over podcasts.
+- Music: Music omnivore, currently stuck on funk soul and an 80s retro vibe. Favourite track right now: "Beirut" by Wanda Wonderful. Prefers music over podcasts.
 - Curiosity & learning: Loves reading and watching videos to learn new things, especially about AI and how to streamline and optimise work. Being creative at work is something that makes him feel good.
 - Quick picks: Burger over Pizza, Wine over Beer, Beach over Mountains, Night over Morning, Series over Movie, Slack over Teams, iPhone over Android, Spicy over Mild food, Marvel over Star Wars, Claude over ChatGPT.
 - What drives him: Genuinely cares about people. Believes in building real connections, staying curious and always trying to grow.
