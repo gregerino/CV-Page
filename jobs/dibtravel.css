@@ -1,0 +1,474 @@
+/* DIB Travel — Training, Quality & Recruitment Manager, remote
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /dibtravel and by cv.html?job=dibtravel, from the head script,
+   so the page is drawn in these colours from the first frame.
+
+   The palette is read off the Elementor kit on dibtravel.com:
+     #00B054  DIB green: the header bar, the footer, buttons, one word in
+              every two-tone heading
+     #008B42  deep green: the active nav item, green text on white
+     #87FFA2  mint: the round badges behind their feature icons
+     #F2F4F7  light grey: the rounded feature panels (8px radius, no border)
+     #1B1B1B  near-black: headings and body copy
+     #69727D  grey: secondary copy
+
+   Headings are Poppins 600, body copy is Inter. Buttons are 4px-radius
+   rectangles, white on green. A signature detail: one word in a heading
+   sits in a thin green outlined box ("Boka [Hyrbil] på ett ställe"), which
+   is used here for the section labels.
+
+   #00B054 on white is fine for large type and fills but light for body
+   text, so #008B42 carries small green text on white.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f2f4f7;
+  --bg3:           #e8ebf0;
+  --white:         #ffffff;
+
+  --border:        #e3e6ec;
+  --border-light:  #eceef2;
+  --border-strong: #c9ced6;
+
+  --ink:           #1b1b1b;
+  --ink-mid:       #333333;
+  --ink-light:     #555c66;
+  --ink-dim:       #69727d;
+
+  --amber:         #008b42;
+  --amber-light:   #00b054;
+
+  --accent-rgb:    0,176,84;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 6px 24px rgba(27,27,27,0.08);
+  --shadow-sm:     0 1px 4px rgba(27,27,27,0.06);
+  --shadow-lg:     0 20px 48px rgba(0,60,28,0.28);
+
+  --radius:        8px;
+  --radius-lg:     8px;
+  --radius-pill:   999px;
+
+  /* Their hero is a full-bleed photo with white type. Here the Gothenburg
+     photo sits under a deep green wash. */
+  --photo-veil: linear-gradient(115deg,
+    rgba(0,107,51,0.96) 0%,
+    rgba(0,139,66,0.92) 50%,
+    rgba(0,176,84,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300b054' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Poppins', system-ui, sans-serif;
+  --sans:  'Inter', system-ui, sans-serif;
+  --mono:  'Inter', system-ui, sans-serif;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #87ffa2; color: #1b1b1b; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: Poppins 600 for headings, as on their site. No italics.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
+  color: #1b1b1b;
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #1b1b1b;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #008b42;
+}
+
+/* Their outlined word: the section label sits in a thin green box, the
+   way "Hyrbil" does in their headings. */
+.sec-head .eyebrow {
+  display: inline-block;
+  padding: 0.28rem 0.7rem;
+  border: 2px solid #00b054;
+  border-radius: 4px;
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #00b054;
+  margin-bottom: 0.8rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their green header bar with white Inter links. The active link
+   gets the deep green fill they use for the current page.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #00b054;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #ffffff;
+}
+.nav-links a:hover { color: #ffffff; background: rgba(255,255,255,0.14); }
+.nav-links a.active { color: #ffffff; background: #008b42; box-shadow: none; }
+.nav-contact-link a { color: #ffffff; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  color: #ffffff;
+}
+.brand em { font-style: normal; color: #ffffff; }
+.brand-dot { background: #87ffa2; }
+.lang-toggle { background: transparent; border: 1px solid #ffffff; border-radius: 4px; color: #ffffff; }
+.lang-toggle:hover { background: #ffffff; color: #1b1b1b; }
+.nav-hamburger span { background: #ffffff; }
+.nav-mobile { background: #00b054; }
+.nav-mobile a { color: #ffffff; border-color: rgba(255,255,255,0.22); }
+.nav-mobile a:hover, .nav-mobile a.active { color: #ffffff; background: #008b42; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their 4px rectangles. Primary is filled green, ghost is
+   outlined; on the green bands they flip to white, as "Titta på demo"
+   and "Logga in" do in their hero.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0;
+  border-radius: 4px;
+}
+.btn-primary {
+  background: #00b054;
+  border: 1px solid #00b054;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #008b42; border-color: #008b42; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #00b054;
+  color: #008b42;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #00b054; border-color: #00b054; color: #ffffff; }
+
+/* Their feature panels: light grey, 8px radius, no border or shadow. */
+.card {
+  background: #f2f4f7;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.card:hover { box-shadow: var(--shadow); }
+/* On the grey bands the panels turn white, as on their footer. */
+#experience .card,
+#personal .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #e3e6ec; color: #333333; border-radius: 4px; }
+.pill--accent { background: #00b054; border-color: #00b054; color: #ffffff; }
+.pick { background: #f2f4f7; border-color: #f2f4f7; }
+.pick b { color: #008b42; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: white Poppins on the green wash, the role line in mint.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.94);
+  --ink-light: rgba(255,255,255,0.84);
+  --ink-dim:   rgba(255,255,255,0.68);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #87ffa2; }
+#top .hero-name { color: #fff; }
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: #87ffa2;
+}
+#top .hero-lead { color: rgba(255,255,255,0.92); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.82); }
+#top .meta-row .sep { color: #87ffa2; }
+#top .meta-row svg { stroke: #87ffa2; }
+#top .btn-primary { background: #ffffff; border-color: #ffffff; color: #1b1b1b; }
+#top .btn-primary:hover { background: #87ffa2; border-color: #87ffa2; color: #1b1b1b; }
+#top .btn-ghost { border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; color: #1b1b1b; }
+#top .hero-photo {
+  border: 4px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
+#top .stat-strip {
+  --ink:       #1b1b1b;
+  --ink-mid:   #333333;
+  --ink-light: #555c66;
+  background: #ffffff;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+#top .stat { border-color: #eceef2; }
+#top .stat-num { font-family: var(--serif); font-weight: 600; color: #00b054; }
+#top .stat-label { color: #555c66; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar: a white field on grey, a green send button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f2f4f7; border-color: #f2f4f7; }
+.ask-input {
+  background: #fff;
+  border: 1px solid #e3e6ec;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #1b1b1b;
+}
+.ask-input:focus { border-color: #00b054; box-shadow: 0 0 0 3px rgba(0,176,84,0.2); }
+.ask-btn { background: #00b054; border-radius: 4px; }
+.ask-btn:hover { background: #008b42; }
+.ask-btn svg { stroke: #fff; }
+.ask-chip { background: #fff; border-color: #e3e6ec; color: #1b1b1b; border-radius: 4px; }
+.ask-chip:hover { border-color: #00b054; background: #00b054; color: #fff; }
+.ask-out { background: #fff; border-color: #e3e6ec; border-radius: 8px; }
+.ask-dot { background: #00b054; }
+
+/* About: the quote large in Poppins, with a green bar beside it. */
+#about .about-quote {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #1b1b1b;
+  border-left: 4px solid #00b054;
+  padding-left: 1.2rem;
+}
+#about .brings { border-top: 4px solid #00b054; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" as a run of their grey feature panels on white. The number
+   sits in a mint badge, like the round icon badges beside their features.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #ffffff; border-top: none; }
+#match .card { background: #f2f4f7; padding-top: 2.4rem; padding-bottom: 2.4rem; }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #87ffa2;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #006b33;
+}
+#match .point-title { font-size: 1.3rem; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333333;
+  background: #ffffff;
+  border-left: 3px solid #00b054;
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+}
+#match .point-body { color: #333333; }
+#match .point-roles { border-top-color: #e3e6ec; }
+#match .point-roles-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #008b42;
+}
+#match .point-roles .pill { background: #ffffff; border-color: #ffffff; color: #1b1b1b; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: onboarding first, then course content and the learning platform.
+     DOM: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   In the AI grid the onboarding platform leads, then Role for Growth
+   (added by the pack's `built` field) and the recruitment tools.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+          5 this site, 6 onboarding platform, 7 more tools,
+          8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-icon { width: 48px; height: 48px; background: #87ffa2; border: none; border-radius: 50%; }
+#built .built-icon svg { stroke: #006b33; }
+.built-link { color: #008b42; border-bottom: none; font-weight: 600; }
+.built-link:hover { color: #00b054; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a green timeline. The three roles where education and
+   learning were central get a filled dot and a tag.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #00b054, #c9ced6 70%, transparent); }
+.job::before { background: #fff; border-color: #00b054; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #00b054; border-color: #00b054; }
+.job-company { color: #008b42; }
+
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after {
+  content: 'Education';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.12rem 0.6rem;
+  border-radius: 4px;
+  background: #87ffa2;
+  color: #006b33;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildning'; }
+
+.roles-card { border-top: 3px solid #00b054; }
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: the callout on DIB green, since it ties the degree to how I
+   teach. Pedagogy and course development lead the pills, in mint.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #008b42; }
+#education .callout {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  background: #00b054;
+  border: none;
+  border-radius: 8px;
+}
+#education .callout-label { color: #87ffa2; }
+#education .callout-title { color: #fff; }
+#education .callout-text { color: rgba(255,255,255,0.94); }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+2) {
+  background: #87ffa2;
+  border-color: #87ffa2;
+  color: #1b1b1b;
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the same green wash as the hero, the facts as white chips.
+   The footer is their green band.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.94);
+  --ink-light: rgba(255,255,255,0.84);
+  --ink-dim:   rgba(255,255,255,0.68);
+}
+#contact .eyebrow { color: #ffffff; border-color: #ffffff; }
+#contact .sec-title { color: #fff; }
+#contact .sec-lead { color: rgba(255,255,255,0.9); }
+#contact .btn-primary { background: #ffffff; border-color: #ffffff; color: #1b1b1b; }
+#contact .btn-primary:hover { background: #87ffa2; border-color: #87ffa2; }
+#contact .btn-ghost { border-color: #ffffff; color: #fff; }
+#contact .btn-ghost:hover { background: #ffffff; color: #1b1b1b; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.42rem 0.95rem;
+  background: #fff;
+  border-radius: 4px;
+  color: #1b1b1b;
+}
+
+.site-footer {
+  background: #00b054;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.88);
+}
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: #87ffa2; }
