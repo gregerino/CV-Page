@@ -1,0 +1,493 @@
+/* Tenstar Simulation — Product Training Specialist, Tanumshede
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /tenstar and by cv.html?job=tenstar, from the head script, so
+   the page is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on tenstarsimulation.com:
+     #40505e  slate: headings on light, body copy in their sections, the
+              footer band
+     #93cb4d  lime green: the first line of their two-tone headings, the
+              3px outline on every "Read more" button, the simulator seat
+     #1f2124  near-black: the hero and the dark photo sections
+     #e9e9e9  light grey: the contact band and the filled contact button
+     #f1f1f1  lighter grey: quiet panels
+
+   The site is set in Ubuntu. Headings are bold and in capitals, often split
+   over two lines in green and slate. Buttons are outlined with a 3px green
+   border and an 8px radius.
+
+   Lime on white is too light for body-sized text, so a deeper green carries
+   the small accents on the light sections, and #93cb4d is kept for dark
+   bands, borders and marks.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+  --bg:            #f6f6f6;
+  --bg2:           #f1f1f1;
+  --bg3:           #e9e9e9;
+  --white:         #ffffff;
+
+  --border:        #e2e4e6;
+  --border-light:  #eceeef;
+  --border-strong: #c6ccd1;
+
+  --ink:           #40505e;
+  --ink-mid:       #333b42;
+  --ink-light:     #55636f;
+  --ink-dim:       #76828c;
+
+  --amber:         #4d7d19;
+  --amber-light:   #93cb4d;
+
+  --accent-rgb:    147,203,77;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        246,246,246;
+
+  --shadow:        0 2px 12px rgba(31,33,36,0.08);
+  --shadow-sm:     0 1px 4px rgba(31,33,36,0.08);
+  --shadow-lg:     0 18px 44px rgba(0,0,0,0.45);
+
+  --radius:        8px;
+  --radius-lg:     12px;
+  --radius-pill:   999px;
+
+  /* Their hero: a simulator lit out of black. The photo sits under an
+     almost opaque near-black wash. */
+  --photo-veil: linear-gradient(110deg,
+    rgba(14,15,17,0.97) 0%,
+    rgba(24,26,29,0.93) 55%,
+    rgba(31,33,36,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2393cb4d' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Ubuntu', system-ui, sans-serif;
+  --sans:  'Ubuntu', system-ui, sans-serif;
+  --mono:  'Ubuntu', system-ui, sans-serif;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #93cb4d; color: #1f2124; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: bold Ubuntu in capitals for headings, as on their site. No italics.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.02;
+}
+.sec-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.1;
+  color: #40505e;
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #40505e;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4d7d19;
+}
+
+/* Their two-tone headings: the section label sits right above the title in
+   green capitals, so the pair reads as one green-and-slate heading. */
+.sec-head .eyebrow {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #6aa22c;
+  margin-bottom: 0.2rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their white header with slate capitals. The name is set as a
+   wide-spaced wordmark with a green star, after the star in their logo.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #e9e9e9;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #40505e;
+}
+.nav-links a:hover { color: #1f2124; background: #f1f1f1; }
+.nav-links a.active { color: #4d7d19; background: transparent; box-shadow: inset 0 -3px 0 #93cb4d; border-radius: 0; }
+.nav-contact-link a { color: #4d7d19; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #40505e;
+}
+.brand em { font-style: normal; color: #40505e; }
+.brand::after {
+  content: '★';
+  margin-left: calc(-0.6rem + 0.1em);
+  font-size: 0.8em;
+  line-height: 1;
+  color: #93cb4d;
+}
+.brand-dot { display: none; }
+.lang-toggle { background: transparent; border: 2px solid #93cb4d; border-radius: 8px; color: #40505e; }
+.lang-toggle:hover { background: #93cb4d; color: #1f2124; }
+.nav-hamburger span { background: #40505e; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { color: #40505e; border-color: #e9e9e9; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.04em; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #4d7d19; background: #f1f1f1; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their "Read more", outlined with 3px green and an 8px radius.
+   The primary one is filled green, the ghost one keeps the outline.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+.btn-primary {
+  background: #93cb4d;
+  border: 3px solid #93cb4d;
+  color: #1f2124;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: transparent;
+  border-color: #93cb4d;
+  color: #40505e;
+  box-shadow: none;
+}
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 3px solid #93cb4d;
+  color: #40505e;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #93cb4d; border-color: #93cb4d; color: #1f2124; }
+
+/* White panels with a soft radius, as their content boxes. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #e2e4e6;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.card:hover { box-shadow: var(--shadow); }
+.pill { background: #fff; border-color: #e2e4e6; color: #333b42; border-radius: 8px; }
+.pill--accent { background: #40505e; border-color: #40505e; color: #fff; }
+.pick { background: #fff; border-color: #e2e4e6; }
+.pick b { color: #4d7d19; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: near-black, white capitals, the role line in their lime. The
+   photo gets a green base line, like the lit seat of their simulator.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  --ink-light: rgba(255,255,255,0.8);
+  --ink-dim:   rgba(255,255,255,0.62);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #93cb4d; }
+#top .hero-name { color: #fff; }
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #93cb4d;
+}
+#top .hero-lead { color: rgba(255,255,255,0.88); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.75); }
+#top .meta-row .sep { color: #93cb4d; }
+#top .meta-row svg { stroke: #93cb4d; }
+#top .btn-primary:hover { color: #fff; }
+#top .btn-ghost { border-color: #93cb4d; color: #fff; }
+#top .btn-ghost:hover { background: #93cb4d; color: #1f2124; }
+#top .hero-photo {
+  border: none;
+  border-bottom: 6px solid #93cb4d;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
+#top .stat-strip {
+  --ink:       #40505e;
+  --ink-mid:   #333b42;
+  --ink-light: #55636f;
+  background: #fff;
+  backdrop-filter: none;
+  border: none;
+  border-top: 3px solid #93cb4d;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+#top .stat { border-color: #e9e9e9; }
+#top .stat-num { font-family: var(--sans); font-weight: 700; color: #4d7d19; }
+#top .stat-label { color: #55636f; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar: a white field with the green outline, a green send button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f1f1f1; border-color: #e9e9e9; }
+.ask-input {
+  background: #fff;
+  border: 2px solid #e2e4e6;
+  border-radius: 8px;
+  box-shadow: none;
+  color: #40505e;
+}
+.ask-input:focus { border-color: #93cb4d; box-shadow: 0 0 0 3px rgba(147,203,77,0.25); }
+.ask-btn { background: #93cb4d; border-radius: 8px; }
+.ask-btn:hover { background: #40505e; }
+.ask-btn svg { stroke: #1f2124; }
+.ask-btn:hover svg { stroke: #fff; }
+.ask-chip { background: #fff; border-color: #e2e4e6; color: #40505e; border-radius: 8px; }
+.ask-chip:hover { border-color: #40505e; background: #40505e; color: #fff; }
+.ask-out { background: #fff; border-color: #e2e4e6; border-radius: 8px; }
+.ask-dot { background: #93cb4d; }
+
+/* About: the quote large, in slate, with a green bar beside it. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  color: #40505e;
+  border-left: 4px solid #93cb4d;
+  padding-left: 1.2rem;
+}
+#about .brings { border-top: 4px solid #93cb4d; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on their slate, with white panels. Numbers in green, the
+   ad's words on light grey with a green edge.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #40505e;
+  border-top: none;
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  --ink-light: rgba(255,255,255,0.78);
+  --ink-dim:   rgba(255,255,255,0.6);
+}
+#match .sec-head .eyebrow { color: #93cb4d; }
+#match .sec-title { color: #fff; }
+#match .sec-lead { color: rgba(255,255,255,0.84); }
+#match .card {
+  --ink:       #40505e;
+  --ink-mid:   #333b42;
+  --ink-light: #55636f;
+  --ink-dim:   #76828c;
+  background: #fff;
+  border: none;
+  border-top: 3px solid #93cb4d;
+  color: #333b42;
+}
+#match .point-rule { background: #93cb4d; }
+#match .point-num { font-family: var(--sans); font-weight: 700; color: #4d7d19; }
+#match .point-title { color: #40505e; text-transform: uppercase; font-size: 1.05rem; letter-spacing: 0.01em; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333b42;
+  background: #f1f1f1;
+  border-left: 3px solid #93cb4d;
+  border-radius: 0 8px 8px 0;
+  padding: 0.7rem 1rem;
+}
+#match .point-body { color: #333b42; }
+#match .point-roles { border-top-color: #eceeef; }
+#match .point-roles-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4d7d19;
+}
+#match .point-roles .pill { background: #f1f1f1; border-color: #f1f1f1; color: #40505e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the work with learning comes first, as in the base page. Inside
+   it, course content and the learning platform lead.
+     DOM: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+   In the AI grid, Role for Growth (added by the pack's `built` field) leads,
+   then the onboarding platform and the site.
+     DOM: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+          5 this site, 6 onboarding platform, 7 more tools,
+          8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-grid:not(:last-of-type) .built-card { border-top: 3px solid #93cb4d; }
+#built .built-icon { background: #40505e; border-color: #40505e; border-radius: 8px; }
+#built .built-icon svg { stroke: #93cb4d; }
+.built-link { color: #4d7d19; border-bottom: none; font-weight: 700; }
+.built-link:hover { color: #40505e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a slate timeline. The three roles where education and
+   learning were central are marked in green.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #40505e, #c6ccd1 70%, transparent); }
+.job::before { background: #fff; border-color: #40505e; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #93cb4d; border-color: #93cb4d; }
+.job-company { color: #4d7d19; }
+
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after {
+  content: 'Education';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.12rem 0.65rem;
+  border-radius: 6px;
+  background: #93cb4d;
+  color: #1f2124;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildning'; }
+
+.roles-card { border-top: 3px solid #93cb4d; }
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: the callout on slate, since it ties the degree to how I
+   teach. Pedagogy and course development lead the pills, in green.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #4d7d19; }
+#education .callout {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.9);
+  background: #40505e;
+  border: none;
+  border-radius: 8px;
+}
+#education .callout-label { color: #93cb4d; }
+#education .callout-title { color: #fff; text-transform: uppercase; }
+#education .callout-text { color: rgba(255,255,255,0.88); }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+2) {
+  background: #93cb4d;
+  border-color: #93cb4d;
+  color: #1f2124;
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the same near-black photo as the hero, the facts as white
+   chips. The footer is their slate band.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   rgba(255,255,255,0.92);
+  --ink-light: rgba(255,255,255,0.8);
+  --ink-dim:   rgba(255,255,255,0.62);
+}
+#contact .eyebrow { color: #93cb4d; }
+#contact .sec-title { color: #fff; }
+#contact .sec-lead { color: rgba(255,255,255,0.86); }
+#contact .btn-primary:hover { color: #fff; }
+#contact .btn-ghost { border-color: #93cb4d; color: #fff; }
+#contact .btn-ghost:hover { background: #93cb4d; color: #1f2124; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.42rem 0.95rem;
+  background: #fff;
+  border-radius: 8px;
+  color: #40505e;
+}
+
+.site-footer {
+  background: #40505e;
+  border-top: 6px solid #93cb4d;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.78);
+}
+.site-footer a { color: #fff; }
+.site-footer a:hover { color: #93cb4d; }
