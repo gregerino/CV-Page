@@ -1,0 +1,543 @@
+/* Fully — open application, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /fullystudios and by cv.html?job=fullystudios, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on fully.se:
+     #f4f0ff  lavender: the page background, and the service cards on navy
+     #0c051d  near-black navy: all text, the filled pill buttons, the dark
+              bands and the footer
+     #bb8af7  purple, #669ef2 blue, #ffd464 yellow, #ff9c64 orange,
+     #60e47c  green, #ffaea9 pink: the small squares beside each service,
+              and the big colour blocks ("How we do it", "Some of our friends")
+     #ffd6d4  pale pink: the "Studio work" panel
+
+   The site is set in Work Sans: black (900) for the hero line, bold for the
+   other headings, with Fira Mono alongside. Buttons are pills with a 3px navy
+   border. Photos sit as slightly tilted cards in the hero.
+
+   The pastels are too light for text on lavender, so they only ever fill
+   shapes; text stays navy throughout, as on their site.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&family=Fira+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg:            #f4f0ff;
+  --bg2:           #ebe5fb;
+  --bg3:           #e0d8f5;
+  --white:         #ffffff;
+
+  --border:        #ddd5f2;
+  --border-light:  #ebe5fb;
+  --border-strong: #0c051d;
+
+  --ink:           #0c051d;
+  --ink-mid:       #1d1530;
+  --ink-light:     #463f58;
+  --ink-dim:       #6a6380;
+
+  --amber:         #6b2fd1;
+  --amber-light:   #bb8af7;
+
+  --accent-rgb:    187,138,247;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        244,240,255;
+
+  --shadow:        0 2px 10px rgba(12,5,29,0.08);
+  --shadow-sm:     0 1px 4px rgba(12,5,29,0.08);
+  --shadow-lg:     0 18px 44px rgba(12,5,29,0.22);
+
+  --radius:        10px;
+  --radius-lg:     16px;
+  --radius-pill:   9999px;
+
+  /* Their hero has no photo behind the type, only lavender. */
+  --photo-veil: linear-gradient(180deg,
+    rgba(244,240,255,0.97) 0%,
+    rgba(244,240,255,0.94) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c051d' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Work Sans', system-ui, sans-serif;
+  --sans:  'Work Sans', system-ui, sans-serif;
+  --mono:  'Fira Mono', ui-monospace, monospace;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #bb8af7; color: #0c051d; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: Work Sans black for the name, bold for headings, no italics
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--sans);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+  color: #0c051d;
+}
+.sec-title {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #0c051d;
+}
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #0c051d;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0c051d;
+}
+
+/* The coloured square from their service list, in front of every section
+   label. */
+.sec-head .eyebrow::before,
+#contact .eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.55em;
+  border-radius: 2px;
+  vertical-align: -0.08em;
+  background: #bb8af7;
+}
+#built .sec-head .eyebrow::before      { background: #669ef2; }
+#experience .sec-head .eyebrow::before { background: #ffd464; }
+#education .sec-head .eyebrow::before  { background: #60e47c; }
+#personal .sec-head .eyebrow::before   { background: #ff9c64; }
+#contact .eyebrow::before              { background: #ffaea9; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: lavender, the name as a heavy wordmark like their logo
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: rgba(244,240,255,0.94);
+  border-bottom: none;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: #0c051d;
+  border-radius: 9999px;
+}
+.nav-links a:hover { background: #e0d8f5; color: #0c051d; }
+.nav-links a.active { background: #0c051d; color: #f4f0ff; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: 1.3rem;
+  letter-spacing: -0.03em;
+  color: #0c051d;
+}
+.brand em { font-style: normal; color: #0c051d; }
+.brand-dot { display: none; }
+.lang-toggle {
+  background: #0c051d;
+  border: 3px solid #0c051d;
+  border-radius: 9999px;
+  color: #fff;
+}
+.lang-toggle:hover { background: transparent; color: #0c051d; }
+.nav-hamburger { background: #0c051d; border-radius: 50%; }
+.nav-hamburger span { background: #f4f0ff; }
+.nav-mobile { background: #f4f0ff; }
+.nav-mobile a { color: #0c051d; border-color: #e0d8f5; font-weight: 600; }
+.nav-mobile a:hover, .nav-mobile a.active { background: #e0d8f5; color: #0c051d; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their navy pills with a 3px border. Ghost buttons keep the
+   border and drop the fill.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  letter-spacing: 0;
+  border-radius: 9999px;
+}
+.btn-primary {
+  background: #0c051d;
+  border: 3px solid #0c051d;
+  color: #fff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: transparent;
+  border-color: #0c051d;
+  color: #0c051d;
+  box-shadow: none;
+}
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 3px solid #0c051d;
+  color: #0c051d;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #0c051d; border-color: #0c051d; color: #fff; }
+
+/* White cards with soft corners, as their case tiles. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.card:hover { box-shadow: var(--shadow); }
+.pill { background: #fff; border-color: #ddd5f2; color: #0c051d; border-radius: 9999px; }
+.pill--accent { background: #0c051d; border-color: #0c051d; color: #fff; }
+.pick { background: #fff; border-color: #ddd5f2; }
+.pick b { color: #6b2fd1; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: lavender with the name in black type, the photo as one of their
+   tilted cards
+   ───────────────────────────────────────────────────────────────────────── */
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #0c051d; }
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #0c051d;
+}
+#top .hero-role::before {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  margin-right: 0.5em;
+  border-radius: 2px;
+  background: #ff9c64;
+}
+#top .hero-lead { color: #1d1530; }
+#top .meta-row,
+#top .meta-row span { color: #463f58; }
+#top .meta-row .sep { color: #bb8af7; }
+#top .meta-row svg { stroke: #0c051d; }
+#top .hero-photo {
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transform: rotate(3deg);
+}
+
+#top .stat-strip {
+  background: #0c051d;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 16px;
+  box-shadow: none;
+}
+#top .stat { border-color: rgba(244,240,255,0.14); }
+#top .stat-num { font-family: var(--sans); font-weight: 900; color: #f4f0ff; }
+#top .stat:nth-child(1) .stat-num { color: #bb8af7; }
+#top .stat:nth-child(2) .stat-num { color: #ffd464; }
+#top .stat:nth-child(3) .stat-num { color: #60e47c; }
+#top .stat-label { color: rgba(244,240,255,0.78); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar: a white pill field and the navy round send button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #ebe5fb; border-color: #ddd5f2; }
+.ask-input {
+  background: #fff;
+  border: 3px solid #0c051d;
+  border-radius: 9999px;
+  box-shadow: none;
+  color: #0c051d;
+}
+.ask-input:focus { border-color: #0c051d; box-shadow: 0 0 0 4px rgba(187,138,247,0.45); }
+.ask-btn { background: #0c051d; border-radius: 50%; }
+.ask-btn:hover { background: #6b2fd1; }
+.ask-btn svg { stroke: #fff; }
+.ask-chip { background: #fff; border: 2px solid #0c051d; border-radius: 9999px; color: #0c051d; }
+.ask-chip:hover { background: #0c051d; color: #fff; }
+.ask-out { background: #fff; border-color: #ddd5f2; border-radius: 12px; }
+.ask-dot { background: #bb8af7; }
+
+/* About: the quote big and bold, the list on their pale pink panel. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: #0c051d;
+  border-left: none;
+  padding-left: 0;
+}
+#about .brings {
+  background: #ffd6d4;
+  border: none;
+  border-radius: 16px;
+}
+#about .brings-label { color: #0c051d; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on their navy band, with lavender cards like the service
+   list. Each number sits in one of their coloured squares.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #0c051d;
+  border-top: none;
+  --ink:       #f4f0ff;
+  --ink-mid:   rgba(244,240,255,0.9);
+  --ink-light: rgba(244,240,255,0.75);
+  --ink-dim:   rgba(244,240,255,0.6);
+}
+#match .eyebrow { color: #f4f0ff; }
+#match .sec-title { color: #f4f0ff; }
+#match .sec-lead { color: rgba(244,240,255,0.82); }
+#match .card {
+  --ink:       #0c051d;
+  --ink-mid:   #1d1530;
+  --ink-light: #463f58;
+  --ink-dim:   #6a6380;
+  background: #f4f0ff;
+  border: none;
+  border-radius: 10px;
+  color: #1d1530;
+}
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 4px;
+  background: #bb8af7;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #0c051d;
+}
+#match .point:nth-child(2) .point-num { background: #669ef2; }
+#match .point:nth-child(3) .point-num { background: #ffd464; }
+#match .point:nth-child(4) .point-num { background: #ff9c64; }
+#match .point:nth-child(5) .point-num { background: #60e47c; }
+#match .point:nth-child(6) .point-num { background: #ffaea9; }
+#match .point:nth-child(7) .point-num { background: #bb8af7; }
+#match .point:nth-child(8) .point-num { background: #669ef2; }
+#match .point-title { color: #0c051d; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #1d1530;
+  background: #fff;
+  border-left: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+#match .point-body { color: #1d1530; }
+#match .point-roles { border-top-color: #ddd5f2; }
+#match .point-roles-label {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #463f58;
+}
+#match .point-roles .pill { background: #fff; border-color: #fff; color: #0c051d; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the work done on my own comes first. Role for Growth leads, then
+   Recruitment OS and QuestLog, so learning and recruitment sit side by
+   side at the top. At work, the LMS and the ATS workflows lead. The section is laid out as a column so the two groups can swap
+   places without moving any markup.
+     DOM: sec-head, sub "at work", grid at work, sub "with AI", grid with AI
+     AI grid: 1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth
+     Work grid: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+                5 course content
+   ───────────────────────────────────────────────────────────────────────── */
+#built .wrap { display: flex; flex-direction: column; }
+#built .sec-head { order: 0; }
+#built .built-sub:nth-of-type(2) { order: 1; margin-top: 0; }
+#built .built-grid:last-of-type { order: 2; }
+#built .built-sub:nth-of-type(1) { order: 3; margin-top: 2.8rem; }
+#built .built-grid:not(:last-of-type) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-icon { background: #bb8af7; border-color: #bb8af7; border-radius: 4px; }
+#built .built-icon svg { stroke: #0c051d; }
+#built .built-card:nth-of-type(6n+2) .built-icon { background: #669ef2; border-color: #669ef2; }
+#built .built-card:nth-of-type(6n+3) .built-icon { background: #ffd464; border-color: #ffd464; }
+#built .built-card:nth-of-type(6n+4) .built-icon { background: #ff9c64; border-color: #ff9c64; }
+#built .built-card:nth-of-type(6n+5) .built-icon { background: #60e47c; border-color: #60e47c; }
+#built .built-card:nth-of-type(6n)   .built-icon { background: #ffaea9; border-color: #ffaea9; }
+.built-link { color: #0c051d; border-bottom: 2px solid #bb8af7; font-weight: 700; }
+.built-link:hover { color: #6b2fd1; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a navy timeline. Learning is tagged on yellow, recruitment
+   on blue, and the role that had both on purple.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 3px; background: linear-gradient(to bottom, #0c051d, #ddd5f2 70%, transparent); }
+.job::before { background: #0c051d; border-color: #0c051d; border-radius: 3px; }
+.job-company { color: #6b2fd1; }
+
+#experience .job .job-company > span::after {
+  content: 'Learning';
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.12rem 0.7rem;
+  border-radius: 9999px;
+  background: #ffd464;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+  color: #0c051d;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Recruitment'; background: #669ef2; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Learning · Recruitment'; background: #bb8af7; }
+:root:lang(sv) #experience .job .job-company > span::after { content: 'Lärande'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after,
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Rekrytering'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Lärande · Rekrytering'; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(5)::before { background: #ffd464; border-color: #0c051d; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(3)::before { background: #669ef2; border-color: #0c051d; }
+#experience .job:nth-of-type(4)::before { background: #bb8af7; border-color: #0c051d; }
+
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: the callout as one of their big colour blocks, in purple.
+   The learning and recruitment pills lead, filled navy.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #6b2fd1; }
+#education .callout {
+  background: #bb8af7;
+  border: none;
+  border-radius: 16px;
+}
+#education .callout-label { color: #0c051d; }
+#education .callout-title { color: #0c051d; }
+#education .callout-text { color: #0c051d; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+5) {
+  background: #0c051d;
+  border-color: #0c051d;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Personal: switched off on every page in style.css. This application
+   brings it back, with its nav links, on the orange block from their
+   "Some of our friends" band, with lavender cards.
+   ───────────────────────────────────────────────────────────────────────── */
+#personal { display: block !important; background: #ff9c64; }
+.nav-links li:has(> a[href="#personal"]) { display: list-item !important; }
+.nav-mobile a[href="#personal"] { display: block !important; }
+#personal .sec-head .eyebrow::before { background: #0c051d; }
+#personal .sec-lead { color: #0c051d; }
+#personal .personal-card { background: #f4f0ff; }
+#personal .personal-title { color: #0c051d; }
+
+/* No quick picks on this application: the block after the cards goes. */
+#personal .personal-grid + .reveal { display: none; }
+#personal .personal-grid { margin-bottom: 0; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on their navy, the facts as lavender pills. The footer is the
+   same navy, as on fully.se.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #f4f0ff;
+  --ink-mid:   rgba(244,240,255,0.92);
+  --ink-light: rgba(244,240,255,0.8);
+  --ink-dim:   rgba(244,240,255,0.64);
+  --photo-veil: linear-gradient(180deg, rgba(12,5,29,0.96) 0%, rgba(12,5,29,0.92) 100%);
+}
+#contact::after { background: var(--photo-veil); }
+#contact .eyebrow { color: #f4f0ff; }
+#contact .sec-title { color: #f4f0ff; }
+#contact .sec-lead { color: rgba(244,240,255,0.88); }
+#contact .btn-primary { background: #f4f0ff; border-color: #f4f0ff; color: #0c051d; }
+#contact .btn-primary:hover { background: transparent; color: #f4f0ff; }
+#contact .btn-ghost { border-color: #f4f0ff; color: #f4f0ff; }
+#contact .btn-ghost:hover { background: #f4f0ff; color: #0c051d; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.42rem 1rem;
+  background: #f4f0ff;
+  border-radius: 9999px;
+  color: #0c051d;
+}
+
+.site-footer {
+  background: #0c051d;
+  border-top: 1px solid rgba(244,240,255,0.1);
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: rgba(244,240,255,0.72);
+}
+.site-footer a { color: #f4f0ff; }
+.site-footer a:hover { color: #bb8af7; }
