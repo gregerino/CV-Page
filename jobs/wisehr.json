@@ -1,0 +1,389 @@
+{
+  "company": "Wise HR",
+  "pageTitle": {
+    "en": "Marcus Hultberg — for Wise HR",
+    "sv": "Marcus Hultberg — till Wise HR"
+  },
+  "eyebrow": {
+    "en": "For Wise HR · Talent Network Gothenburg",
+    "sv": "Till Wise HR · Talent Network Göteborg"
+  },
+  "role": {
+    "en": "Recruitment and HR in Gothenburg",
+    "sv": "Rekrytering och HR i Göteborg"
+  },
+  "lead": {
+    "sv": "Sedan 2020 har jag arbetat med rekrytering och HR, främst i IT- och konsultbolag i Göteborg. Jag har ansvarat för rekryteringsprocesser till tekniska roller i sin helhet och gett löpande HR-stöd och personalutveckling till konsulter. Dessförinnan var jag utbildningsledare på en yrkeshögskola inom IT. I mina senare roller har jag utformat onboardingprocesser och utvecklat kursinnehåll i nära samarbete med verksamheten.",
+    "en": "Since 2020 I have worked with recruitment and HR, mainly in IT and consulting companies in Gothenburg. I have been responsible for recruitment processes for technical roles as a whole and provided ongoing HR support and personnel development to consultants. Before that I was an education manager at a vocational college in IT. In my later roles I have designed onboarding processes and developed course content in close collaboration with the business."
+  },
+  "cta": {
+    "en": "See what I can contribute",
+    "sv": "Se vad jag kan bidra med"
+  },
+  "matchEyebrow": {
+    "en": "What I bring",
+    "sv": "Det jag bidrar med"
+  },
+  "matchTitle": {
+    "en": "My experience within HR",
+    "sv": "Min erfarenhet inom HR"
+  },
+  "matchLead": {
+    "en": "Wise HR continuously looks for profiles within a number of HR areas. Below I describe my experience in the areas closest to my background.",
+    "sv": "Wise HR söker löpande profiler inom ett antal HR-områden. Nedan beskriver jag min erfarenhet inom de områden som ligger närmast min bakgrund."
+  },
+  "points": [
+    {
+      "title": "Talent Acquisition",
+      "body": {
+        "sv": "Jag har arbetat med rekrytering i ca 5 år, främst till tekniska roller som utvecklare och ingenjörer. Varje process inleddes med en behovsanalys tillsammans med den rekryterande chefen, och utifrån kravprofilen skrev jag annonsen och arbetade aktivt med sourcing. Jag agerade rådgivande mot de rekryterande cheferna i rekryteringsprocesserna från start till slut, bland annat kring tidsplaner och kandidatutvärdering. Under processen var jag kandidaternas huvudsakliga kontaktperson och säkerställde en professionell kandidatupplevelse. I ett IT-konsultbolag ingick jag i ledningsgruppen och ansvarade för bolagets strategi för talent acquisition, inklusive employer branding.",
+        "en": "I have worked with recruitment for about five years, mainly for technical roles such as developers and engineers. Each process started with a needs analysis together with the hiring manager, and based on the requirement profile I wrote the ad and worked actively with sourcing. I acted as an advisor to the hiring managers in the recruitment processes from start to finish, for example on timelines and candidate evaluation. During the process I was the candidates' main point of contact and ensured a professional candidate experience. At an IT consultancy I was part of the management team and responsible for the company's talent acquisition strategy, including employer branding."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "HR Generalist and HR support",
+        "sv": "HR Generalist och HR-stöd"
+      },
+      "body": {
+        "sv": "I ett IT-konsultbolag hade jag personal- och HR-ansvar för en konsultgrupp på över 15 personer. Jag genomförde personalutvecklingsinsatser och planerade konsulternas scheman utifrån deras uppdrag. I nästa konsultbolag gav jag löpande HR-stöd och förde en kontinuerlig dialog med konsulterna. Där utformade jag en strukturerad onboardingprocess i syfte att stärka engagemanget och öka andelen medarbetare som stannar.",
+        "en": "At an IT consultancy I had people and HR responsibility for a consultant group of more than 15 people. I carried out personnel development activities and planned the consultants' schedules around their assignments. At the next consultancy I provided ongoing HR support and kept a continuous dialogue with the consultants. There I designed a structured onboarding process with the aim of strengthening engagement and improving retention."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    },
+    {
+      "title": "Learning & Development",
+      "body": {
+        "sv": "Mitt första uppdrag efter examen var som utbildningsledare på en yrkeshögskola inom IT, där jag ledde och utvecklade utbildningsprogram i nära samarbete med arbetsmarknaden. Jag drev utbildningarnas ledningsgruppsarbete och coachade 100 studerande inför övergången till arbetslivet. På ett HR-techbolag utvecklade jag därefter kursinnehåll inom HR tillsammans med ämnesexperter. I ett konsultbolag med fokus på utbildning ansvarade jag för utbildningsinsatser mot kund och drev dem utifrån kundernas behov. Internt tog jag fram workshops och lärandetillfällen, bland annat i gamification-metodik, och utformade ett strukturerat ramverk för onboarding av nyanställda. Jag var med och byggde ett karriärutvecklingsprogram för juniora talanger och medverkade i att forma och förvalta bolagets interna LMS.",
+        "en": "My first position after graduating was as an education manager at a vocational college in IT, where I led and developed education programmes in close collaboration with the labour market. I ran the programmes' steering group work and coached 100 students in their transition to working life. At an HR tech company I then developed course content in HR together with subject matter experts. At a consultancy focused on education I was responsible for training initiatives for clients and ran them based on the clients' needs. Internally I developed workshops and learning sessions, including gamification methodology, and designed a structured onboarding framework for new hires. I helped build a career development programme for junior talent and took part in shaping and running the company's internal LMS."
+      },
+      "roles": [
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": "HRIS & HR Tech",
+      "body": {
+        "sv": "I ett IT-konsultbolag implementerade jag bolagets ATS och utvecklade arbetsflödena för hur roller öppnades och hur kandidaterna rörde sig genom processen. I mina senare rekryteringsroller arbetade jag löpande i ATS-system och säkerställde att kandidatdatan var korrekt. Jag använder AI dagligen i arbetet, bland annat för att förbereda intervjuer och kvalitetsgranska annonser. På egen hand har jag utvecklat HR-verktyg med AI, bland annat Recruitment OS och en onboardingplattform för nyanställda.",
+        "en": "At an IT consultancy I implemented the company's ATS and developed the workflows for how roles were opened and how candidates moved through the process. In my later recruitment roles I worked continuously in ATS systems and ensured that the candidate data was accurate. I use AI daily in my work, for example to prepare interviews and quality-check job ads. On my own I have developed HR tools with AI, including Recruitment OS and an onboarding platform for new hires."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Experience of the consulting role",
+        "sv": "Erfarenhet av konsultrollen"
+      },
+      "body": {
+        "sv": "De flesta av mina roller sedan 2020 har varit i konsult- och rekryteringsbolag. Som rekryteringskonsult drev jag uppdrag åt kunder och förde en löpande dialog med deras rekryterande chefer. I ett IT-konsultbolag ansvarade jag för att rekrytera och matcha IT-konsulter mot kundernas behov och samordnade kommunikationen mellan kunder och kandidater. Jag har lett projekt i varje roll jag haft och är van att driva flera processer parallellt.",
+        "en": "Most of my roles since 2020 have been at consulting and recruitment companies. As a recruitment consultant I ran assignments for clients and kept an ongoing dialogue with their hiring managers. At an IT consultancy I was responsible for recruiting and matching IT consultants to the clients' needs and coordinated the communication between clients and candidates. I have led projects in every role I have had and am used to running several processes in parallel."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    }
+  ],
+  "built": [
+    {
+      "group": "ai",
+      "icon": ["M12 2l9 5v10l-9 5-9-5V7z", "M3 7l9 5 9-5", "M12 12v10"],
+      "title": {
+        "en": "Role for Growth, team development through roleplay",
+        "sv": "Role for Growth, teamutveckling genom rollspel"
+      },
+      "text": {
+        "en": "A method for team development through roleplay, built on the QUEST framework. The team plays a scenario based on a real challenge and then goes through what happened in a structured debrief. Each participant then chooses one skill to develop, and the follow-up runs over six weeks.",
+        "sv": "En metod för teamutveckling genom rollspel, byggd på ramverket QUEST. Teamet spelar ett scenario utifrån en verklig utmaning och går därefter igenom förloppet i en strukturerad debrief. Varje deltagare väljer sedan en förmåga att utveckla, och uppföljningen sker under sex veckor."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "What I bring",
+      "sv": "Det jag bidrar med"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "What I bring",
+      "sv": "Det jag bidrar med"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Recruitment and HR",
+      "sv": "Rekrytering och HR"
+    },
+    "#top .stat-num": [
+      "~5",
+      "4",
+      "AI"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years working with recruitment",
+        "sv": "År med rekrytering"
+      },
+      {
+        "en": "Years with education and learning",
+        "sv": "År med utbildning och lärande"
+      },
+      {
+        "en": "Experience and skills in developing my own tools with AI",
+        "sv": "Erfarenhet och kompetens inom att utveckla egna verktyg med AI"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask the AI assistant I built",
+      "sv": "Ställ en fråga till AI-assistenten jag byggt"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "Which roles has he recruited for?",
+        "sv": "Vilka roller har han rekryterat till?"
+      },
+      {
+        "en": "How has he supported consultants with HR?",
+        "sv": "Hur har han gett HR-stöd till konsulter?"
+      },
+      {
+        "en": "Which HR tools has he built with AI?",
+        "sv": "Vilka HR-verktyg har han byggt med AI?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "People and HR in technical environments",
+      "sv": "Människor och HR i tekniska miljöer"
+    },
+    "#about .about-quote": {
+      "en": "I work to make sure people end up in the right role and get the conditions they need to develop in it.",
+      "sv": "Jag arbetar för att människor ska hamna i rätt roll och få de förutsättningar de behöver för att utvecklas i den."
+    },
+    "#about .about-body": [
+      {
+        "en": "I am interested in people and in what makes them thrive and develop in their work. That interest led me to behavioural science, and from there to working with recruitment and education. I have worked closely with managers and employees in all my roles.",
+        "sv": "Jag är intresserad av människor och av vad som får dem att trivas och utvecklas i sitt arbete. Det intresset ledde mig till beteendevetenskap och därifrån till arbete med rekrytering och utbildning. I alla mina roller har jag arbetat nära chefer och medarbetare."
+      },
+      {
+        "en": "I have spent most of my career at IT and consulting companies in Gothenburg. I have a good understanding of the roles in the industry and of how a consultancy works day to day.",
+        "sv": "Större delen av min karriär har jag arbetat i IT- och konsultbolag i Göteborg. Jag har god förståelse för branschens roller och för hur ett konsultbolag fungerar i vardagen."
+      },
+      {
+        "en": "I am curious by nature and follow developments in AI closely. I am AI native and develop my own tools with AI to support my work with recruitment and HR.",
+        "sv": "Jag är nyfiken av naturen och följer utvecklingen inom AI nära. Jag är AI Native och utvecklar egna verktyg med AI som stöd i arbetet med rekrytering och HR."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Matching the right person with the right role",
+        "sv": "Att matcha rätt person med rätt roll"
+      },
+      {
+        "en": "Being a dependable support for hiring managers",
+        "sv": "Att vara ett tryggt stöd för rekryterande chefer"
+      },
+      {
+        "en": "Giving new employees a good start",
+        "sv": "Att ge nya medarbetare en bra start"
+      },
+      {
+        "en": "Building structures that hold over time",
+        "sv": "Att bygga strukturer som håller över tid"
+      },
+      {
+        "en": "Using AI to develop HR work",
+        "sv": "Att använda AI för att utveckla HR-arbetet"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "First, what I have built in the companies where I have worked, with recruitment and onboarding first. After that, methods and tools I have developed on my own, mainly with AI.",
+      "sv": "Först visas det jag har byggt i de bolag där jag har arbetat, med rekrytering och onboarding först. Därefter följer metoder och verktyg som jag har utvecklat på egen hand, främst med AI."
+    },
+    "#built .built-sub:nth-of-type(2)": {
+      "en": "Built on my own, mainly with AI",
+      "sv": "Byggt på egen hand, främst med AI"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-text": {
+      "en": "Agents carry out the initial work in the background, for example a first assessment of a CV when an application comes in. They then create a task for the recruiter, who makes the decision. Other agents book interviews, and the system reminds the recruiter of feedback that needs to go out. An overview shows what the agents have done and what is waiting.",
+      "sv": "Agenter utför det inledande arbetet i bakgrunden, till exempel en första bedömning av ett CV när en ansökan kommer in. Därefter skapar de en uppgift åt rekryteraren, som fattar beslutet. Andra agenter bokar intervjuer, och systemet påminner rekryteraren om återkoppling som ska skickas. En översikt visar vad agenterna har gjort och vad som väntar."
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-title": {
+      "en": "AIconomics, a tool for household finances",
+      "sv": "AIconomics, ett verktyg för hushållsekonomin"
+    },
+    "#built .built-grid:last-of-type .built-card:nth-of-type(4) .built-text": {
+      "en": "A tool for planning and following up a household's finances, with an overview of income and expenses month by month. Shared costs are divided automatically according to each person's share of the income, and savings goals can be set as a percentage or in kronor. An AI assistant answers questions about the finances, and the data syncs between devices with a Google login.",
+      "sv": "Ett verktyg för att planera och följa upp ett hushålls ekonomi, med en översikt över inkomster och utgifter månad för månad. Gemensamma kostnader fördelas automatiskt efter varje persons andel av inkomsten, och sparmål kan anges i procent eller kronor. En AI-assistent besvarar frågor om ekonomin, och uppgifterna synkas mellan enheter med inloggning via Google."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in Gothenburg. Each role is marked with the HR areas where the main weight of the work lay.",
+      "sv": "Fem roller i Göteborg. Varje roll är märkt med de HR-områden där tyngdpunkten i arbetet låg."
+    },
+    "#education .sec-title": {
+      "en": "Education and skills",
+      "sv": "Utbildning och kompetens"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on people in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning and course design.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      "HR",
+      "People & Culture",
+      "Learning & Development",
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Employer Branding",
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "Learning Management Systems (LMS)",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Teamtailor",
+      "Workbuster",
+      "Winningtemp",
+      "Monday.com",
+      "Claude Code",
+      "Office 365",
+      "Slack",
+      "Canva"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the page",
+      "sv": "Personen bakom sidan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför arbetet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Open to new opportunities",
+        "sv": "Öppen för nya möjligheter"
+      }
+    ]
+  }
+}

@@ -1,0 +1,503 @@
+/* Wise HR — Talent Network Göteborg, a page to join the network
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /wisehr and by cv.html?job=wisehr, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on wise.se/specialistomraden/hr:
+     #013218  Wise HR deep green: the hero, "What we do", the stats panel
+     #75f0ac  mint: every display heading on green, outlined buttons, cards
+     #45bf5f  mid green: the logo heart
+     #ecece9  warm off-white: the alternate bands and quote text on green
+     #141414  near-black: body copy on white
+     #000000  the footer
+
+   Their display type is Gravity Compressed (huge, uppercase), the
+   subheadings Feature Condensed Display (a narrow serif) and the body
+   Helvetica Now. Anton, Instrument Serif and Helvetica stand in. Buttons
+   are full pills with a 2px mint outline and bold uppercase type. Their
+   service cards are dark green with a thin mint border and an arrow.
+
+   Mint is too light for text on white, so deep green carries headings
+   and small accents on the light bands, and mint stays on the green ones.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #ecece9;
+  --bg3:           #e0e0dc;
+  --white:         #ffffff;
+
+  --border:        #d6d6d6;
+  --border-light:  #e0e0dc;
+  --border-strong: #b8b8b4;
+
+  --ink:           #013218;
+  --ink-mid:       #141414;
+  --ink-light:     #3d3d3d;
+  --ink-dim:       #6b6b6b;
+
+  --amber:         #013218;
+  --amber-light:   #45bf5f;
+
+  --accent-rgb:    69,191,95;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 6px 24px rgba(1,50,24,0.10);
+  --shadow-sm:     0 1px 4px rgba(1,50,24,0.08);
+  --shadow-lg:     0 22px 50px rgba(0,0,0,0.35);
+
+  --radius:        16px;
+  --radius-lg:     16px;
+  --radius-pill:   160px;
+
+  /* Their hero is a solid deep green field. The Gothenburg photo shows
+     through only faintly at the bottom. */
+  --photo-veil: linear-gradient(180deg,
+    rgba(1,50,24,0.99) 0%,
+    rgba(1,50,24,0.97) 60%,
+    rgba(1,50,24,0.92) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2345bf5f' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --display: 'Anton', 'Gravity Compressed', Impact, sans-serif;
+  --serif:   'Instrument Serif', 'Feature Condensed Display', Georgia, serif;
+  --sans:    'Helvetica Now', 'Helvetica Neue', Helvetica, 'Inter', Arial, sans-serif;
+  --mono:    'Helvetica Now', 'Helvetica Neue', Helvetica, 'Inter', Arial, sans-serif;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #75f0ac; color: #013218; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: the compressed uppercase display for names and section titles,
+   the narrow serif for the lines under them, as "DON'T MIND THE HR-GAP"
+   sits over "Konsulter och rekrytering inom HR".
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+.sec-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #013218;
+  max-width: 20ch;
+}
+.sec-lead { font-size: 1.02rem; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #013218;
+}
+
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+
+/* Their small labels: bold uppercase, widely spaced, as on
+   "STRATEGIC HR EXPERTISE" and "OUR SERVICES". */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #013218;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their white header bar with bold black links.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #e0e0dc;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #000000;
+}
+.nav-links a:hover { color: #013218; background: #ecece9; }
+.nav-links a.active { color: #013218; background: #75f0ac; box-shadow: none; }
+.nav-contact-link a { color: #000000; font-weight: 700; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.01em;
+}
+.brand em { font-style: normal; color: #000000; }
+.brand-dot { background: #45bf5f; box-shadow: none; }
+.lang-toggle { background: transparent; border: 2px solid #000000; border-radius: 160px; color: #000000; font-weight: 700; }
+.lang-toggle:hover { background: #000000; color: #ffffff; }
+.nav-hamburger span { background: #000000; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { color: #000000; font-weight: 700; border-color: #e0e0dc; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #013218; background: #75f0ac; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: full pills with a 2px outline and bold uppercase Helvetica,
+   as "VÅRA TJÄNSTER" and "KONTAKTA OSS". Primary is filled.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 160px;
+  border-width: 2px;
+  padding: 1rem 1.7rem;
+}
+.btn-primary {
+  background: #013218;
+  border: 2px solid #013218;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #75f0ac; border-color: #013218; color: #013218; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #013218;
+  color: #013218;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #013218; border-color: #013218; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #45bf5f; }
+
+/* Cards: white with a thin grey line, no glass. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #d6d6d6;
+  border-radius: 16px;
+  box-shadow: none;
+}
+.card:hover { border-color: #013218; box-shadow: none; }
+#experience .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #d6d6d6; color: #141414; }
+.pill--accent { background: #75f0ac; border-color: #75f0ac; color: #013218; }
+.pick { background: #ecece9; border-color: #ecece9; }
+.pick b { color: #013218; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: the deep green field with the name in huge mint capitals.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #75f0ac;
+  --ink-mid:   #ecece9;
+  --ink-light: rgba(236,236,233,0.86);
+  --ink-dim:   rgba(236,236,233,0.66);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #75f0ac; }
+#top .hero-name {
+  color: #75f0ac;
+  font-size: clamp(3.6rem, 10vw, 7.6rem);
+  margin-bottom: 0.9rem;
+}
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  color: #75f0ac;
+}
+#top .hero-lead { color: #ecece9; }
+#top .meta-row,
+#top .meta-row span { color: rgba(236,236,233,0.86); }
+#top .meta-row .sep { color: #75f0ac; }
+#top .meta-row svg { stroke: #75f0ac; }
+#top .btn-primary { background: #75f0ac; border-color: #75f0ac; color: #013218; }
+#top .btn-primary:hover { background: transparent; border-color: #75f0ac; color: #75f0ac; }
+#top .btn-ghost { border-color: #75f0ac; color: #75f0ac; }
+#top .btn-ghost:hover { background: #75f0ac; color: #013218; }
+#top .hero-photo {
+  border: none;
+  border-radius: 16px;
+  box-shadow: none;
+  outline: 2px solid #75f0ac;
+  outline-offset: 10px;
+}
+
+/* The stats as their numbers panel: huge mint figures, serif labels,
+   thin mint rules between them on the green. */
+#top .stat-strip {
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
+  border-top: 2px solid #75f0ac;
+  border-radius: 0;
+  box-shadow: none;
+}
+#top .stat { border-color: rgba(117,240,172,0.35); padding: 1.6rem 1.6rem 0.4rem 0; }
+#top .stat + .stat { padding-left: 1.6rem; }
+#top .stat-num {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  color: #75f0ac;
+  margin-bottom: 0.3rem;
+}
+#top .stat-label {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #75f0ac;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on the warm off-white
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #ecece9; border-color: #e0e0dc; }
+.ask-title { font-family: var(--serif); font-weight: 400; font-size: 1.7rem; }
+.ask-input {
+  background: #fff;
+  border: 2px solid #013218;
+  border-radius: 160px;
+  box-shadow: none;
+  color: #141414;
+}
+.ask-input:focus { border-color: #45bf5f; box-shadow: 0 0 0 3px rgba(117,240,172,0.5); }
+.ask-btn { background: #013218; border-radius: 160px; }
+.ask-btn:hover { background: #45bf5f; }
+.ask-btn svg { stroke: #75f0ac; }
+.ask-chip { background: #fff; border: 2px solid #013218; color: #013218; border-radius: 160px; font-weight: 700; }
+.ask-chip:hover { background: #013218; border-color: #013218; color: #75f0ac; }
+.ask-out { background: #fff; border-color: #d6d6d6; border-radius: 16px; }
+.ask-dot { background: #45bf5f; }
+
+/* About: the quote in their narrow serif, large, as their testimonials. */
+#about .about-quote {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.2;
+  color: #013218;
+}
+#about .brings {
+  background: #75f0ac;
+  border: none;
+  border-radius: 16px;
+}
+#about .brings-label { color: #013218; }
+#about .brings-list li { color: #013218; }
+#about .brings { --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23013218' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "What I bring" as their "WHAT WE DO" band: deep green, mint capitals,
+   and the service cards with a thin mint border and a mint arrow.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  --ink:       #75f0ac;
+  --ink-mid:   #ecece9;
+  --ink-light: rgba(236,236,233,0.86);
+  background: #013218;
+  border-top: none;
+}
+#match .sec-head { text-align: center; }
+#match .sec-title { color: #75f0ac; margin-left: auto; margin-right: auto; }
+#match .sec-lead { color: #ecece9; margin-left: auto; margin-right: auto; }
+#match .eyebrow { color: #75f0ac; }
+#match .card {
+  position: relative;
+  background: transparent;
+  border: 2px solid #75f0ac;
+  border-radius: 16px;
+}
+#match .card:hover { background: rgba(117,240,172,0.06); }
+#match .card::after {
+  content: '→';
+  position: absolute;
+  top: 1.3rem;
+  right: 1.5rem;
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #75f0ac;
+}
+#match .point-rule { display: none; }
+#match .point-num {
+  font-family: var(--display);
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #75f0ac;
+}
+#match .point-title { font-size: 1.35rem; color: #ffffff; }
+#match .point-body { color: #ecece9; }
+#match .point-roles { border-top-color: rgba(117,240,172,0.3); }
+#match .point-roles-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #75f0ac;
+}
+#match .point-roles .pill { background: #75f0ac; border-color: #75f0ac; color: #013218; font-weight: 600; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: recruitment and onboarding first. Course content stays last in
+   the work grid, since the base page lets an odd last card span the width.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+              5 course content
+   In the AI grid the recruitment tools lead, then the onboarding platform
+   and Role for Growth (added by the pack's `built` field).
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-icon { width: 48px; height: 48px; background: #75f0ac; border: none; border-radius: 50%; }
+#built .built-icon svg { stroke: #013218; }
+.built-link { color: #013218; border-bottom: 2px solid #75f0ac; font-weight: 700; }
+.built-link:hover { color: #45bf5f; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a deep green timeline. Each role carries a mint tag with the
+   HR area from the network's list where the weight of the work lay.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #013218, #b8b8b4 70%, transparent); }
+.job::before { background: #75f0ac; border-color: #013218; }
+.job-company { color: #013218; font-weight: 600; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.14rem 0.65rem;
+  border-radius: 160px;
+  background: #75f0ac;
+  color: #013218;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Talent Acquisition'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Talent Acquisition · HR · Learning & Development'; }
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Learning & Development'; }
+
+.roles-card { border-top: 4px solid #75f0ac; }
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: no "What the degree gave me" callout on this page. HR and
+   recruitment lead the pills, on deep green.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #013218; font-weight: 600; }
+#education .callout { display: none; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+4) {
+  background: #013218;
+  border-color: #013218;
+  color: #75f0ac;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the same deep green as the hero, the facts as mint pills.
+   The footer is their black band.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #75f0ac;
+  --ink-mid:   #ecece9;
+  --ink-light: rgba(236,236,233,0.86);
+  --ink-dim:   rgba(236,236,233,0.66);
+}
+#contact .eyebrow { color: #75f0ac; }
+#contact .sec-title { color: #75f0ac; }
+#contact .sec-lead { color: #ecece9; }
+#contact .btn-primary { background: #75f0ac; border-color: #75f0ac; color: #013218; }
+#contact .btn-primary:hover { background: transparent; color: #75f0ac; }
+#contact .btn-ghost { border-color: #75f0ac; color: #75f0ac; }
+#contact .btn-ghost:hover { background: #75f0ac; color: #013218; }
+#contact .contact-facts {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.45rem 1rem;
+  border: 2px solid #75f0ac;
+  border-radius: 160px;
+  color: #75f0ac;
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #000000;
+  border-top: none;
+  padding: 2.6rem 0 2.4rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.82);
+}
+.site-footer a { color: #ffffff; font-weight: 700; }
+.site-footer a:hover { color: #75f0ac; }
+
+@media (max-width: 780px) {
+  #top .stat,
+  #top .stat + .stat { padding: 1.2rem 0; border-right: none; }
+  #match .card::after { top: 1rem; right: 1.1rem; }
+}
