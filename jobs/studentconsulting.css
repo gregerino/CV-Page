@@ -1,0 +1,495 @@
+/* StudentConsulting — Rekryterande konsultchef, White Collar Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /studentconsulting and by cv.html?job=studentconsulting, from
+   the head script, so the page is drawn in these colours from the first
+   frame.
+
+   The palette is read off the computed styles on studentconsulting.com:
+     #003ca0  StudentConsulting blue: the footer, the logo, headings here
+     #0b1f4d  the deep navy their hero photo is washed into
+     #2980b9  link blue: job titles, outlined pill buttons, "Visa alla"
+     #d3e3ff  pale blue: the cookie bar and soft highlights
+     #f4f4f4  light grey: the job facts strip and alternate bands
+     #3e3e3e  body copy
+     #95a5a6  the small uppercase labels ("PUBLICERAD", "OMFATTNING")
+
+   Their type is DIN 2014 throughout, bold for headings. Barlow stands in.
+   Buttons are full pills (27px radius) with a thin outline. The signature
+   detail is the job facts strip: small grey uppercase labels over values,
+   between thin rules. It carries the stats and the contact facts here, and
+   the "How I match" cards are drawn as their job listing cards.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f4f4f4;
+  --bg3:           #e9edf3;
+  --white:         #ffffff;
+
+  --border:        #dcdfe3;
+  --border-light:  #e9ebee;
+  --border-strong: #b9c0c8;
+
+  --ink:           #003ca0;
+  --ink-mid:       #3e3e3e;
+  --ink-light:     #5a5a5a;
+  --ink-dim:       #8d8f90;
+
+  --amber:         #2980b9;
+  --amber-light:   #003ca0;
+
+  --accent-rgb:    41,128,185;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 6px 24px rgba(0,60,160,0.08);
+  --shadow-sm:     0 1px 4px rgba(0,60,160,0.06);
+  --shadow-lg:     0 22px 50px rgba(11,31,77,0.30);
+
+  --radius:        6px;
+  --radius-lg:     8px;
+  --radius-pill:   27px;
+
+  /* Their hero is a photo washed into deep navy. The Gothenburg photo
+     shows through the same way. */
+  --photo-veil: linear-gradient(180deg,
+    rgba(11,31,77,0.90) 0%,
+    rgba(11,31,77,0.82) 55%,
+    rgba(0,60,160,0.78) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232980b9' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'DIN 2014', 'din-2014', 'Barlow', Arial, sans-serif;
+  --sans:  'DIN 2014', 'din-2014', 'Barlow', Arial, sans-serif;
+  --mono:  'DIN 2014', 'din-2014', 'Barlow', Arial, sans-serif;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #d3e3ff; color: #003ca0; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: bold DIN for every heading, no italics, as "Meet your future" and
+   "2380 lediga jobb".
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name,
+.sec-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01em;
+}
+.sec-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  line-height: 1.1;
+  color: #3e3e3e;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+  color: #2980b9;
+}
+
+.hero-role,
+.about-quote,
+.job-about { font-style: normal; }
+
+/* Their facts labels: small grey uppercase, widely spaced. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8d8f90;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their white bar, with the blue "Lediga jobb" pill as the active link.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #e9ebee;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #3e3e3e;
+  border-radius: 27px;
+}
+.nav-links a:hover { color: #003ca0; background: #f4f4f4; }
+.nav-links a.active { color: #003ca0; background: #ffffff; box-shadow: inset 0 0 0 1.5px #003ca0; }
+.nav-contact-link a { color: #003ca0; font-weight: 700; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #003ca0;
+  letter-spacing: 0;
+}
+.brand em { font-style: normal; color: #003ca0; }
+.brand-dot { background: #003ca0; box-shadow: none; }
+.lang-toggle { background: transparent; border: 1.5px solid #003ca0; border-radius: 27px; color: #003ca0; font-weight: 700; }
+.lang-toggle:hover { background: #003ca0; color: #ffffff; }
+.nav-hamburger span { background: #003ca0; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { color: #3e3e3e; font-weight: 600; border-color: #e9ebee; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #003ca0; background: #f4f4f4; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: full pills with a thin outline, as "Jag söker jobb" and
+   "Sök jobbet". Primary is filled blue.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 27px;
+  border-width: 2px;
+  padding: 0.9rem 1.7rem;
+}
+.btn-primary {
+  background: #2980b9;
+  border: 2px solid #2980b9;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #003ca0; border-color: #003ca0; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #2980b9;
+  color: #2980b9;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #2980b9; border-color: #2980b9; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #2980b9; }
+
+/* Cards: white with a thin grey line and a soft shadow, as their job cards. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #dcdfe3;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,60,160,0.06);
+}
+.card:hover { border-color: #2980b9; box-shadow: 0 6px 24px rgba(0,60,160,0.08); }
+#experience .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #dcdfe3; color: #3e3e3e; border-radius: 27px; }
+.pill--accent { background: #d3e3ff; border-color: #d3e3ff; color: #003ca0; }
+.pick { background: #f4f4f4; border-color: #f4f4f4; }
+.pick b { color: #003ca0; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: the navy photo field with the name in bold white, as their
+   "Meet your future", and white pill buttons.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.88);
+  --ink-dim:   rgba(255,255,255,0.68);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--photo-veil); }
+#top .eyebrow { color: #d3e3ff; }
+#top .hero-name {
+  color: #ffffff;
+  font-size: clamp(3rem, 8vw, 5.6rem);
+  line-height: 1;
+}
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+  color: #ffffff;
+}
+#top .hero-lead { color: rgba(255,255,255,0.92); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.86); }
+#top .meta-row .sep { color: #d3e3ff; }
+#top .meta-row svg { stroke: #d3e3ff; }
+#top .btn-primary { background: #ffffff; border-color: #ffffff; color: #003ca0; }
+#top .btn-primary:hover { background: transparent; border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost { background: rgba(11,31,77,0.35); border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; color: #003ca0; }
+#top .hero-photo {
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 22px 50px rgba(11,31,77,0.35);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+#top .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* The stats as their job facts strip: grey uppercase labels between
+   thin rules, on white, so it reads like "Fakta om jobbet". */
+#top .stat-strip {
+  background: #ffffff;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 6px 24px rgba(11,31,77,0.25);
+}
+#top .stat { border-color: #e9ebee; }
+#top .stat-num {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(2.2rem, 4.4vw, 3rem);
+  color: #003ca0;
+}
+#top .stat-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  color: #8d8f90;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on light grey, with a pill search field as their job search.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f4f4f4; border-color: #e9ebee; }
+.ask-title { font-size: 1.45rem; color: #3e3e3e; }
+.ask-input {
+  background: #fff;
+  border: 1.5px solid #b9c0c8;
+  border-radius: 27px;
+  box-shadow: none;
+  color: #3e3e3e;
+}
+.ask-input:focus { border-color: #2980b9; box-shadow: 0 0 0 3px rgba(41,128,185,0.18); }
+.ask-btn { background: #2980b9; border-radius: 27px; }
+.ask-btn:hover { background: #003ca0; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #fff; border: 1.5px solid #2980b9; color: #2980b9; border-radius: 27px; font-weight: 600; }
+.ask-chip:hover { background: #2980b9; border-color: #2980b9; color: #ffffff; }
+.ask-out { background: #fff; border-color: #dcdfe3; border-radius: 6px; }
+.ask-dot { background: #2980b9; }
+
+/* About: the quote large and bold, as their lead paragraphs. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.3vw, 1.7rem);
+  line-height: 1.3;
+  color: #3e3e3e;
+}
+#about .brings {
+  background: #f4f4f4;
+  border: none;
+  border-top: 4px solid #003ca0;
+  border-radius: 6px;
+  box-shadow: none;
+}
+#about .brings-list li { color: #3e3e3e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" as their job listing: a light grey band of white cards,
+   each with a blue bold title, the ad's line in grey italic as their
+   listing excerpt, and the roles as the facts row at the foot.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #f4f4f4; border-top: none; }
+#match .card {
+  background: #ffffff;
+  border: 1px solid #dcdfe3;
+  border-radius: 6px;
+}
+#match .point-rule { display: none; }
+#match .point-num {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #8d8f90;
+}
+#match .point-title { font-size: 1.3rem; line-height: 1.25; color: #2980b9; }
+#match .point-quote {
+  font-style: italic;
+  color: #5a5a5a;
+  border-left-color: #d3e3ff;
+}
+#match .point-body { color: #3e3e3e; }
+#match .point-roles { border-top: 1px solid #e9ebee; }
+#match .point-roles .pill { background: #f4f4f4; border-color: #f4f4f4; color: #003ca0; font-weight: 600; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: onboarding and recruitment first. Course content stays last in
+   the work grid, since the base page lets an odd last card span the width.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+              5 course content
+   In the AI grid the recruitment tools lead, then the onboarding platform.
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-icon { width: 46px; height: 46px; background: #003ca0; border: none; border-radius: 50%; }
+#built .built-icon svg { stroke: #ffffff; }
+.built-link { color: #2980b9; border-bottom: 1.5px solid #d3e3ff; font-weight: 700; }
+.built-link:hover { color: #003ca0; border-bottom-color: #003ca0; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a blue timeline. Each role carries a pale blue tag with the
+   areas of responsibility from the ad where the weight of the work lay.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #003ca0, #b9c0c8 70%, transparent); }
+.job::before { background: #ffffff; border-color: #2980b9; }
+.job-company { color: #003ca0; font-weight: 600; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.14rem 0.7rem;
+  border-radius: 27px;
+  background: #d3e3ff;
+  color: #003ca0;
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Recruitment · Client responsibility'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Learning'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Recruitment · Matching · Consultant responsibility'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Recruitment · Consultant responsibility · Administration'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Client contact · Teacher recruitment'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Rekrytering · Kundansvar'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Utbildning'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Rekrytering · Matchning · Konsultansvar'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Rekrytering · Konsultansvar · Administration'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Kundkontakt · Rekrytering av lärare'; }
+
+.roles-card { border-top: 4px solid #003ca0; }
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: the degree is described in the match section, so the callout
+   is left out. Recruitment and competence supply lead the pills.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #003ca0; font-weight: 600; }
+#education .callout { display: none; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) {
+  background: #003ca0;
+  border-color: #003ca0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on navy, with the facts as their "Fakta om jobbet" panel.
+   The footer is their blue band.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.88);
+  --ink-dim:   rgba(255,255,255,0.68);
+}
+#contact::after { background: var(--photo-veil); }
+#contact .eyebrow { color: #d3e3ff; }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead { color: rgba(255,255,255,0.9); }
+#contact .btn-primary { background: #ffffff; border-color: #ffffff; color: #003ca0; }
+#contact .btn-primary:hover { background: transparent; color: #ffffff; }
+#contact .btn-primary svg { fill: currentColor; }
+#contact .btn-ghost { border-color: #ffffff; color: #ffffff; }
+#contact .btn-ghost:hover { background: #ffffff; color: #003ca0; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 0.4rem 1.4rem 1.1rem;
+  background: #ffffff;
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts::before {
+  content: 'About me';
+  flex-basis: 100%;
+  padding: 0.8rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #e9ebee;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8d8f90;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Fakta om mig'; }
+#contact .contact-facts span {
+  padding: 0.5rem 1.4rem 0 0;
+  border: none;
+  color: #3e3e3e;
+  font-weight: 600;
+}
+
+.site-footer {
+  background: #003ca0;
+  border-top: none;
+  padding: 2.6rem 0 2.4rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+}
+.site-footer a { color: #ffffff; font-weight: 700; }
+.site-footer a:hover { color: #d3e3ff; }
+
+@media (max-width: 780px) {
+  #top .hero-photo { max-width: 220px; }
+  #contact .contact-facts span { flex-basis: 100%; }
+}
