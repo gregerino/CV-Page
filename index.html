@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marcus Hultberg — People &amp; Culture, Talent Acquisition &amp; L&amp;D</title>
-  <meta name="description" content="Marcus Hultberg — People &amp; Culture, Talent Acquisition and Learning &amp; Development in technical environments. Gothenburg, Sweden." />
+  <title>Marcus Hultberg — Learning &amp; Development, Recruitment &amp; AI</title>
+  <meta name="description" content="Marcus Hultberg — learning, course development and recruitment for technical roles, with tools built using AI. Gothenburg, Sweden." />
   <link rel="stylesheet" href="style.css?v=7" />
   <script>
     // A job slug in the URL means two things.
@@ -17,17 +17,25 @@
     // linked from here, while the page is still parsing, so the page is drawn
     // in the company's colours from the first frame. A pack without a theme
     // file simply has no stylesheet to load and keeps the base colours.
+    //
+    // Without a slug this is the main page, which has a theme of its own in
+    // theme.css. Application pages never load it.
     (function () {
       var params = new URLSearchParams(location.search);
       var slug = (params.get('job') ||
                   location.pathname.replace(/^\/+|\/+$/g, '').replace(/\.html$/, '')
                  ).toLowerCase().trim();
-      if (['', 'index', 'cv'].indexOf(slug) !== -1 || !/^[a-z0-9-]+$/.test(slug)) return;
+      var theme = document.createElement('link');
+      theme.rel = 'stylesheet';
+
+      if (['', 'index', 'cv'].indexOf(slug) !== -1 || !/^[a-z0-9-]+$/.test(slug)) {
+        theme.href = '/theme.css';
+        document.head.appendChild(theme);
+        return;
+      }
 
       document.documentElement.className += ' job-pending';
 
-      var theme = document.createElement('link');
-      theme.rel = 'stylesheet';
       theme.href = '/jobs/' + encodeURIComponent(slug) + '.css';
       document.head.appendChild(theme);
     })();
@@ -80,20 +88,23 @@
 
     <!-- Per-application wording comes from /jobs/<slug>.json — see jobs/README.md.
          This is what shows on the base page and whenever a pack leaves it out. -->
-    <p class="eyebrow reveal" data-sv="People &amp; Culture · Talent Acquisition · Learning &amp; Development">
-      People &amp; Culture · Talent Acquisition · Learning &amp; Development
+    <p class="eyebrow reveal" data-sv="Learning &amp; Development · Rekrytering · AI">
+      Learning &amp; Development · Recruitment · AI
     </p>
 
     <h1 class="hero-name reveal">Marcus Hultberg</h1>
 
-    <p class="hero-role reveal" data-sv="People &amp; Culture i tekniska miljöer">
-      People &amp; Culture in technical environments
+    <p class="hero-role reveal">
+      People, learning &amp; recruitment enthusiast who builds AI tools
     </p>
 
-    <p class="hero-lead reveal" data-sv-html="Jag arbetar med rekrytering, HR och Learning &amp; Development, framför allt i <strong>IT- och techbolag</strong>. Under sju år har jag rekryterat till tekniska roller, byggt onboarding och kompetensutveckling och stöttat chefer i arbetet med sina team.">
-      I work with recruitment, HR and Learning &amp; Development, mainly in <strong>IT and tech
-      companies</strong>. Over seven years I have recruited for technical roles, built onboarding and
-      competence development, and supported managers in the work with their teams.
+    <p class="hero-lead reveal" data-sv="Sedan 2019 har jag arbetat med utbildning och rekrytering i Göteborg, främst i IT- och konsultbolag. Som utbildningsledare på en av Sveriges största yrkeshögskolor inom IT ansvarade jag för utbildningsprogram inom IT. I ett IT-konsultbolag ingick jag senare i ledningsgruppen, med ansvar för rekrytering och konsulternas utveckling. Totalt har jag rekryterat i ca 5 år, främst utvecklare och ingenjörer. Vid sidan av arbetet bygger jag egna verktyg med AI, bland annat för rekrytering och onboarding.">
+      Since 2019 I have worked with education and recruitment in Gothenburg, mostly at IT and
+      consulting companies. As education manager at one of Sweden's largest vocational IT colleges I
+      was responsible for programmes within IT. Later, at an IT consultancy, I was part of the
+      management team with responsibility for recruitment and the development of our consultants. In
+      total I have recruited for about five years, mainly developers and engineers. Alongside my work
+      I build my own tools with AI, including for recruitment and onboarding.
     </p>
 
     <div class="meta-row reveal">
@@ -104,11 +115,11 @@
       <span class="sep">◆</span>
       <span data-sv="Svenska &amp; engelska">Swedish &amp; English</span>
       <span class="sep">◆</span>
-      <span data-sv="7+ år inom rekrytering, HR och L&amp;D">7+ years in recruitment, HR and L&amp;D</span>
+      <span data-sv="Lärande sedan 2019, rekrytering sedan 2020">Learning since 2019, recruitment since 2020</span>
     </div>
 
     <div class="hero-cta reveal">
-      <a href="#match" class="btn btn-primary"><span class="btn-label" data-sv="Se vad jag gör">See what I do</span> <span class="arr">→</span></a>
+      <a href="#match" class="btn btn-primary"><span class="btn-label" data-sv="Se var jag kan passa in">See where I could fit in</span> <span class="arr">→</span></a>
       <a href="cv.html" class="btn btn-ghost" data-sv-html="Läs hela CV:t <span class=&quot;arr&quot;>→</span>">Read the full CV <span class="arr">→</span></a>
       <a href="CV Marcus Hultberg.pdf" target="_blank" rel="noopener" class="btn btn-ghost" data-sv-html="PDF <span class=&quot;arr&quot;>↗</span>">PDF <span class="arr">↗</span></a>
     </div>
@@ -121,16 +132,16 @@
 
     <div class="stat-strip reveal">
       <div class="stat">
-        <div class="stat-num">7+</div>
-        <div class="stat-label" data-sv="År inom rekrytering, HR och Learning &amp; Development">Years across recruitment, HR and Learning &amp; Development</div>
+        <div class="stat-num">4</div>
+        <div class="stat-label" data-sv="År med utbildning och lärande">Years working with education and learning</div>
       </div>
       <div class="stat">
-        <div class="stat-num">15+</div>
-        <div class="stat-label" data-sv="Konsulter med personalansvar, som del av ledningsgruppen">Consultants under my people responsibility, on the management team</div>
+        <div class="stat-num">~5</div>
+        <div class="stat-label" data-sv="År med rekrytering av utvecklare och ingenjörer">Years recruiting developers and engineers</div>
       </div>
       <div class="stat">
-        <div class="stat-num" data-sv="Tech">Tech</div>
-        <div class="stat-label" data-sv="Branschfokus genom hela karriären: IT, tech, rekrytering och konsult">Industry focus across my whole career: IT, tech, recruitment and consulting</div>
+        <div class="stat-num">AI</div>
+        <div class="stat-label" data-sv="Erfarenhet och kompetens inom att utveckla egna verktyg med AI">Experience and skills in developing my own tools with AI</div>
       </div>
     </div>
   </div>
@@ -140,7 +151,7 @@
 <section class="ask">
   <div class="wrap">
     <div class="ask-inner reveal">
-      <h2 class="ask-title" data-sv="Ställ en fråga om min bakgrund">Ask a question about my background</h2>
+      <h2 class="ask-title" data-sv="Ställ en fråga till AI-assistenten jag byggt">Ask a question to the AI assistant I built</h2>
       <p class="ask-sub" data-sv="Assistenten har hela mitt CV och svarar direkt.">The assistant has my full CV and answers directly.</p>
       <div class="ask-field">
         <input class="ask-input" id="ai-input" type="text"
@@ -152,9 +163,9 @@
         </button>
       </div>
       <div class="ask-chips" id="ask-chips">
-        <button class="ask-chip" data-sv="Vilken erfarenhet har han av rekrytering?">What is his recruitment experience?</button>
-        <button class="ask-chip" data-sv="Har han arbetat med onboarding?">Has he worked with onboarding?</button>
-        <button class="ask-chip" data-sv="Varför tech-branschen?">Why the tech industry?</button>
+        <button class="ask-chip" data-sv="Vad har han gjort inom utbildning?">What has he done in education?</button>
+        <button class="ask-chip" data-sv="Vilka roller har han rekryterat till?">Which roles has he recruited for?</button>
+        <button class="ask-chip" data-sv="Hur har han arbetat med gamification?">How has he worked with gamification?</button>
       </div>
       <div class="ask-out ask-load" id="ai-loading">
         <span class="ask-dot"></span><span class="ask-dot"></span><span class="ask-dot"></span>
@@ -173,41 +184,43 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="eyebrow" data-sv="Om mig">About</p>
-      <h2 class="sec-title" data-sv="Rekrytering, HR och Learning &amp; Development i tech">Recruitment, HR and Learning &amp; Development in tech</h2>
+      <h2 class="sec-title" data-sv="Lärande och rekrytering">Learning and recruitment</h2>
     </div>
 
     <div class="about-grid">
       <div class="reveal">
-        <p class="about-quote" data-sv="Bred erfarenhet av att arbeta inom rekrytering, HR, Learning &amp; Development och organisationsutveckling, främst i tekniska miljöer.">
-          Experienced in working broadly within recruitment, HR, Learning &amp; Development and
-          organisational development, primarily in technical environments.
+        <p class="about-quote" data-sv="Jag vill hjälpa människor att hamna rätt och att fortsätta lära sig i sin roll.">
+          I want to help people end up in the right place and keep learning in their role.
         </p>
-        <p class="about-body" data-sv="Det som driver mig är möjligheten att arbeta nära människor och verksamhet, och att skapa förutsättningar för både individer och organisationer att växa. Genom mina roller har jag fått bygga och förbättra processer inom rekrytering, onboarding och kompetensutveckling, alltid med fokus på att skapa en fantastisk medarbetarupplevelse.">
-          What drives me is the opportunity to work closely with people and business, and to create
-          conditions for both individuals and organisations to grow. Through my roles I have had the
-          chance to build and improve processes within recruitment, onboarding and competence
-          development, always with a focus on creating a great and engaging employee experience.
+        <p class="about-body" data-sv="Jag har alltid haft ett stort intresse för lärande. Mitt första jobb efter examen var som utbildningsledare på en yrkeshögskola inom IT, där jag coachade och vägledde 100 studerande inför övergången till arbetslivet. Sedan dess har jag arbetat med lärande i de flesta av mina roller, genom kursutveckling och onboarding. Mitt mål har varit att människor ska kunna använda det de lär sig i sitt arbete.">
+          I have always had a strong interest in learning. My first job after graduating was as an
+          education manager at a vocational IT college, where I coached and guided 100 students ahead of
+          their move into working life. Since then I have worked with learning in most of my roles,
+          through course development and onboarding. My aim has been that people can use what they
+          learn in their work.
         </p>
-        <p class="about-body" data-sv="Jag trivs i samarbete med chefer och team, där jag bidrar med struktur, perspektiv och stöd i hur vi kan arbeta smartare och mer hållbart över tid.">
-          I thrive in collaboration with managers and teams, contributing with structure, perspective
-          and support in how we can work smarter and more sustainably over time.
+        <p class="about-body" data-sv="I rekryteringsrollerna ansvarade jag för hela processer tillsammans med de rekryterande cheferna, ofta flera parallellt. Jag har rekryterat till ett brett spann av tekniska roller, bland annat Rust-utvecklare och HVDC-ingenjörer. Jag lägger stor vikt vid en strukturerad bedömning av kandidaterna.">
+          In my recruitment roles I was responsible for whole processes together with the hiring
+          managers, often several in parallel. I have recruited for a wide range of technical roles,
+          among them Rust developers and HVDC engineers. I place great importance on a structured
+          assessment of the candidates.
         </p>
-        <p class="about-body" data-sv="Största delen av min karriär har tillbringats i IT- och techföretag, vilket innebär att jag förstår språket, behoven och utmaningarna i verksamheten. Det skapar bättre rekryteringsprocesser, mer träffsäkra kompetenskrav och starkare förtroende från både kandidater och rekryterande chefer.">
-          The majority of my career has been spent in IT and tech companies, which means I understand
-          the language, needs and challenges of the business. This creates better recruitment
-          processes, more accurate competence profiles and stronger trust from both candidates and
-          hiring managers.
+        <p class="about-body" data-sv="Jag är nyfiken av naturen och följer utvecklingen inom AI nära. När något i mitt arbete tar längre tid än det borde bygger jag ett verktyg för det. Jag har bland annat byggt ett verktyg som omvandlar en kravprofil till ett strukturerat intervjupaket och en onboardingplattform för nyanställda.">
+          I am curious by nature and follow developments in AI closely. When something in my work takes
+          longer than it should, I build a tool for it. Among other things I have built a tool that
+          turns a requirements profile into a structured interview package, and an onboarding platform
+          for new hires.
         </p>
       </div>
 
       <div class="card brings reveal">
         <p class="brings-label" data-sv="Det jag brinner för">What I'm passionate about</p>
         <ul class="brings-list">
-          <li data-sv="Att matcha rätt person med rätt roll och skapa förutsättningar för dem att lyckas">Matching the right person with the right role, and creating conditions for them to succeed</li>
-          <li data-sv="Att bygga strukturer och processer som skapar långsiktig hållbarhet">Building structures and processes that create long-term sustainability</li>
-          <li data-sv="Att arbeta nära verksamheten för att förstå dess behov">Working closely with the business to understand its needs</li>
-          <li data-sv="Att skapa engagerande medarbetarupplevelser från dag ett">Creating engaging employee experiences from day one</li>
-          <li data-sv="Att kombinera datadrivet tänkande med ett genuint fokus på människor">Combining data-driven thinking with a genuine focus on people</li>
+          <li data-sv="Att utforma lärande som deltagarna har nytta av i sitt arbete">Designing learning that participants can use in their work</li>
+          <li data-sv="Att hitta rätt person till rätt roll, med en strukturerad bedömning">Finding the right person for the right role, with a structured assessment</li>
+          <li data-sv="Spel och gamification som verktyg för lärande">Games and gamification as tools for learning</li>
+          <li data-sv="Att ge nya medarbetare en bra start och stöd att utvecklas">Giving new employees a good start and support to develop</li>
+          <li data-sv="Att använda AI för att utveckla lärande och rekrytering">Using AI to develop learning and recruitment</li>
         </ul>
       </div>
     </div>
@@ -223,9 +236,9 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="eyebrow" data-sv="Vad jag gör">What I do</p>
-      <h2 class="sec-title" data-sv="Sex områden, punkt för punkt">Six areas, point by point</h2>
-      <p class="sec-lead" data-sv="Under varje område har jag skrivit vad jag gjort och var.">
-        Under each area I have written what I have done and where.
+      <h2 class="sec-title" data-sv="Det jag kan bidra med">What I can bring</h2>
+      <p class="sec-lead" data-sv="Nedan beskriver jag mina kompetenser och vad jag har gjort inom respektive område i mina roller.">
+        Below I describe my competences and what I have done in each area in my roles.
       </p>
     </div>
 
@@ -233,99 +246,115 @@
       <article class="card point reveal">
         <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">01</div></div>
         <div>
-          <h3 class="point-title" data-sv="Talent Acquisition">Talent Acquisition</h3>
-          <p class="point-quote" data-sv="Äga hela rekryteringsprocessen, från behovsanalys och sourcing till erbjudande och onboarding.">
-            Own the full recruitment process, from needs analysis and sourcing to offer and onboarding.
-          </p>
-          <p class="point-body" data-sv="Det här har varit den största delen av mitt arbete i över sju år. På Mpya Sci &amp; Tech drev jag fullständiga rekryteringsprocesser för tekniska roller och var rådgivare till rekryterande chefer kring kompetenskrav, urval och kandidatutvärdering. På ZoCom ledde jag talent acquisition-arbetet som del av ledningsgruppen, och på A Society ansvarade jag för rekrytering och matchning av IT-konsulter.">
-            This has been the main part of my work for over seven years. At Mpya Sci &amp; Tech I drove
-            full recruitment processes for technical roles and advised hiring managers on competence
-            profiles, selection and candidate evaluation. At ZoCom I led the talent acquisition work as
-            part of the management team, and at A Society I was responsible for recruiting and matching
-            IT consultants.
-          </p>
+          <h3 class="point-title" data-sv="Pedagogik och kursutveckling">Pedagogy and course development</h3>
+          <p class="point-quote" data-sv="Jag planerar och utvecklar utbildningar och kursinnehåll på pedagogisk grund, med deltagarnas behov i fokus.">I plan and develop training and course content on a pedagogical foundation, with the participants' needs in focus.</p>
+          <p class="point-body" data-sv="Som utbildningsledare på en yrkeshögskola inom IT ledde och utvecklade jag utbildningsprogrammen i nära samarbete med arbetslivet. Jag ansvarade för att programmen följdes upp mot uppsatta resultatmål och höll i antagningen av studerande. Senare, som kursutvecklare i ett nordiskt HR-techbolag, utvecklade jag kursinnehåll inom HR för ett ledande HR-system, med fokus på medarbetarupplevelsen. Jag samarbetade med ämnesexperter och förbättrade löpande den pedagogiska strukturen. Jag är certifierad utbildningsledare, en certifiering utfärdad av Myndigheten för yrkeshögskolan.">As education manager at a vocational IT college I led and developed the programmes in close collaboration with the industry. I was responsible for following the programmes up against set targets and handled the admission of students. Later, as course developer at a Nordic HR tech company, I developed course content in HR for a leading HR system, with a focus on the employee experience. I worked with subject matter experts and continuously improved the pedagogical structure. I am a certified education manager, a certification issued by the Swedish National Agency for Higher Vocational Education.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Utbildningsledare / ICT-ansvarig">Education Manager / ICT Manager</span>
+            <span class="pill" data-sv="Kursutvecklare">Course Developer</span>
+          </div>
         </div>
       </article>
 
       <article class="card point reveal">
         <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">02</div></div>
         <div>
-          <h3 class="point-title" data-sv="People &amp; Culture">People &amp; Culture</h3>
-          <p class="point-quote" data-sv="Vara den chefer och medarbetare vänder sig till kring HR-processer, onboarding och medarbetarupplevelse.">
-            Be the person managers and employees turn to on HR processes, onboarding and the employee experience.
-          </p>
-          <p class="point-body" data-sv="På ZoCom hade jag HR-stöd och utvecklingsansvar för en konsultgrupp på 15+ personer, och på A Society arbetade jag med onboarding och löpande HR-stöd till konsulter. Jag har byggt onboardingstrukturer från grunden i två bolag, båda gånger för att öka engagemang och retention.">
-            At ZoCom I held HR support and development responsibility for a consultant group of 15+
-            people, and at A Society I worked with onboarding and ongoing HR support for consultants.
-            I have built onboarding structures from scratch in two companies, both times to increase
-            engagement and retention.
-          </p>
+          <h3 class="point-title" data-sv="Rekrytering till tekniska roller">Recruitment for technical roles</h3>
+          <p class="point-quote" data-sv="Jag driver rekryteringar till tekniska roller och bedömer kandidater strukturerat mot rollens krav.">I run recruitments for technical roles and assess candidates in a structured way against what the role requires.</p>
+          <p class="point-body" data-sv="Jag har drivit kompletta rekryteringsprocesser till tekniska roller, ofta flera parallellt. Utifrån kravprofilen skrev och publicerade jag annonsen och arbetade aktivt med sourcing för att upprätthålla en stark kandidatpipeline. Under processen var jag rådgivare till de rekryterande cheferna kring urval och kandidatutvärdering. Förutom utvecklare och ingenjörer har jag rekryterat projektledare och produktutvecklare. I ett IT-konsultbolag ansvarade jag dessutom för att rekrytera IT-konsulter och matcha dem mot den kompetens kundernas uppdrag krävde.">I have run complete recruitment processes for technical roles, often several in parallel. Based on the requirements profile I wrote and published the ad and sourced candidates proactively to keep a strong talent pipeline. During the process I advised the hiring managers on selection and candidate evaluation. Besides developers and engineers, I have recruited project managers and product developers. At an IT consultancy I was also responsible for recruiting IT consultants and matching them against the competence the clients' assignments required.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Rekryteringskonsult">Recruitment Consultant</span>
+            <span class="pill" data-sv="Affärsansvarig">Business Manager</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+          </div>
         </div>
       </article>
 
       <article class="card point reveal">
         <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">03</div></div>
         <div>
-          <h3 class="point-title" data-sv="Learning &amp; Development">Learning &amp; Development</h3>
-          <p class="point-quote" data-sv="Utveckla utbildning och kompetensprogram som människor använder i sitt arbete.">
-            Develop training and competence programmes that people use in their work.
-          </p>
-          <p class="point-body" data-sv="På Simployer utvecklade jag utbildningsinnehåll inom HR för ett ledande HR-system, tillsammans med ämnesexperter, och planerade och genomförde konferenser och utbildningar. På IT-Högskolan ledde jag utbildningsprogram i nära samarbete med arbetsmarknaden, och på ZoCom var jag med från start och utformade ett internt LMS som senare såldes B2B. Jag är också certifierad utbildningsledare.">
-            At Simployer I developed training content within HR for a leading HR
-            system, together with subject matter experts, and planned and ran conferences and training
-            sessions. At IT-Högskolan I led education programmes in close collaboration with the labour
-            market, and at ZoCom I was in from the start and helped shape an internal LMS that was later sold
-            B2B. I am also a certified
-            education manager.
-          </p>
+          <h3 class="point-title" data-sv="Utbildning och gamification">Training and gamification</h3>
+          <p class="point-quote" data-sv="Jag håller utbildningar och workshops och använder gamification som metod för lärande.">I run training sessions and workshops and use gamification as a method for learning.</p>
+          <p class="point-body" data-sv="I ett konsultbolag med fokus på utbildning arbetade jag med utbildningsleveranser på olika nivåer, utifrån behov. Jag höll utbildningar internt för medarbetarna och för externa deltagare. Internt tog jag fram och höll workshops och lärandetillfällen, bland annat en utbildning i gamification-metodik. I arbetet anpassade jag upplägg och innehåll efter olika deltagargrupper.">At a consultancy focused on education I worked with training deliveries at different levels, based on what was needed. I ran training sessions for employees internally and for external participants. Internally I created and ran workshops and learning sessions, including a training in gamification methodology. In this work I adapted the format and content to different groups of participants.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roll">Role</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+          </div>
         </div>
       </article>
 
       <article class="card point reveal">
         <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">04</div></div>
         <div>
-          <h3 class="point-title" data-sv="Employer branding">Employer branding</h3>
-          <p class="point-quote" data-sv="Stärka arbetsgivarvarumärket och nå rätt kandidater.">
-            Strengthen the employer brand and reach the right candidates.
-          </p>
-          <p class="point-body" data-sv="På ZoCom arbetade jag med employer branding parallellt med rekryteringen, vilket innebar att vara tydlig med vilka vi var som arbetsgivare och hur vi presenterade oss utåt. Jag drev också interna workshops och utbildningsinitiativ, och var med och byggde ett karriärprogram för juniora talanger som gjorde bolaget mer attraktivt för personer tidigt i karriären.">
-            At ZoCom I worked with employer branding alongside the recruitment, which meant being clear
-            about who we were as an employer and how we presented ourselves externally. I also ran
-            internal workshops and training initiatives, and helped build a career programme for junior
-            talent that made the company more attractive to people early in their career.
-          </p>
+          <h3 class="point-title" data-sv="Vägledning av nya talanger">Guiding new talent</h3>
+          <p class="point-quote" data-sv="Jag vägleder människor tidigt i karriären och bygger strukturer som hjälper dem in i arbetslivet.">I guide people early in their careers and build structures that help them into working life.</p>
+          <p class="point-body" data-sv="På yrkeshögskolan byggde jag partnerskap med företag och säkrade praktikplatser åt de studerande. Jag coachade och vägledde 100 studerande på deras väg in i IT-branschen. I ett IT-konsultbolag var jag med och byggde ett karriärprogram för juniora talanger, med en struktur för vad de skulle lära sig och vem som stöttade dem. Som kandidaternas huvudsakliga kontaktperson i rekryteringen ansvarade jag för en professionell och engagerande kandidatupplevelse, med snabb och tydlig återkoppling.">At the vocational college I built partnerships with companies and secured internship placements for the students. I coached and guided 100 students on their way into the IT industry. At an IT consultancy I helped build a career programme for junior talent, with a structure for what they should learn and who supported them. As the candidates' main point of contact in recruitment I was responsible for a professional and engaging candidate experience, with prompt and clear feedback.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Utbildningsledare / ICT-ansvarig">Education Manager / ICT Manager</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+            <span class="pill" data-sv="Rekryteringskonsult">Recruitment Consultant</span>
+          </div>
         </div>
       </article>
 
       <article class="card point reveal">
         <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">05</div></div>
         <div>
-          <h3 class="point-title" data-sv="Organisationsutveckling">Organisational development</h3>
-          <p class="point-quote" data-sv="Bygga strukturer och processer som håller när bolaget växer.">
-            Build structures and processes that hold as the company grows.
-          </p>
-          <p class="point-body" data-sv="Jag har byggt onboardingstrukturer, ATS-arbetsflöden, ett karriärprogram för juniora talanger och ett internt LMS, och förbättrat de interna kommunikationsflödena. Det arbetet gör jag nära verksamheten, tillsammans med de chefer och medarbetare som ska använda resultatet.">
-            I have built onboarding structures, ATS workflows, a career programme for junior talent and
-            an internal LMS, and improved the internal communication flows. I do that work close to the
-            business, together with the managers and employees who will be using the result.
-          </p>
+          <h3 class="point-title" data-sv="Behovsanalys och kompetensförsörjning">Needs analysis and competence supply</h3>
+          <p class="point-quote" data-sv="Jag kartlägger vilken kompetens en verksamhet behöver och omsätter det i rekryteringar och utbildningar.">I map the competence an organisation needs and turn it into recruitments and training.</p>
+          <p class="point-body" data-sv="Inför varje rekrytering genomförde jag en behovsanalys med den rekryterande chefen, där vi gick igenom kompetenskrav och tidplan. På yrkeshögskolan drev jag utbildningarnas ledningsgruppsarbete och matchade utbildningarna mot arbetsmarknadens behov. Senare, i ett IT-konsultbolag, arbetade vi med yrkeshögskoleutbildningar, och jag var med och förändrade dem utifrån vad branschen behövde. Som kursutvecklare arbetade jag in marknadsinsikter och forskning i kursinnehållet.">Before each recruitment I carried out a needs analysis with the hiring manager, covering competence requirements and timeline. At the vocational college I ran the programmes' steering group work and matched the programmes to the needs of the labour market. Later, at an IT consultancy, we worked with vocational higher education programmes, and I helped change them based on what the industry needed. As a course developer I worked market insights and research into the course content.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Rekryteringskonsult">Recruitment Consultant</span>
+            <span class="pill" data-sv="Utbildningsledare / ICT-ansvarig">Education Manager / ICT Manager</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+            <span class="pill" data-sv="Kursutvecklare">Course Developer</span>
+          </div>
         </div>
       </article>
 
       <article class="card point reveal">
         <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">06</div></div>
         <div>
-          <h3 class="point-title" data-sv="AI och digitalisering av HR-arbetet">AI and digitalising HR work</h3>
-          <p class="point-quote" data-sv="Använda AI för att få det manuella i HR-arbetet att gå fortare.">
-            Use AI to make the manual parts of HR work go faster.
-          </p>
-          <p class="point-body" data-sv="Jag använder AI dagligen, framför allt Claude, för att strukturera kravprofiler, kvalitetssäkra annonser, förbereda intervjuer och snabba upp återkommande arbete. Jag har också byggt egna verktyg: Recruitment OS, som gör om en kravprofil till ett intervjupaket, ett projektverktyg med gamification, ett ekonomiverktyg och den här sidan med sin assistent. Jag har ingen bakgrund inom programmering.">
-            I use AI daily, mainly Claude, to structure competence profiles, quality-check job ads,
-            prepare interviews and speed up repetitive work. I have also built my own tools: Recruitment
-            OS, which turns a requirements profile into an interview package, a project tool with
-            gamification, a finance tool, and this site with its assistant. I have no background in
-            programming.
-          </p>
+          <h3 class="point-title" data-sv="Onboarding och konsultstöd">Onboarding and consultant support</h3>
+          <p class="point-quote" data-sv="Jag bygger onboarding och ger konsulterna det stöd de behöver för att utvecklas i sina uppdrag.">I build onboarding and give consultants the support they need to develop in their assignments.</p>
+          <p class="point-body" data-sv="Jag har byggt upp en strukturerad onboarding från grunden i två konsultbolag där det tidigare saknades. Syftet båda gångerna var att öka engagemanget hos nyanställda och få dem att stanna. I ett IT-konsultbolag ingick jag i ledningsgruppen och ansvarade för personalutveckling och HR-frågor för en konsultgrupp på 15+ personer. Jag planerade också konsulternas scheman utifrån deras uppdrag och tog fram dokumentation och hjälpmaterial till onboardingen.">I have built structured onboarding from scratch at two consultancies where none existed before. In both cases the aim was to increase engagement among new employees and get them to stay. At an IT consultancy I was part of the management team and responsible for personnel development and HR matters for a consultant group of 15+ people. I also planned the consultants' schedules around their assignments and produced documentation and help material for the onboarding.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Affärsansvarig">Business Manager</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card point reveal">
+        <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">07</div></div>
+        <div>
+          <h3 class="point-title" data-sv="Employer branding och evenemang">Employer branding and events</h3>
+          <p class="point-quote" data-sv="Jag arbetar med arbetsgivarvarumärket och representerar bolaget utåt, i rekryteringen och vid evenemang.">I work with the employer brand and represent the company externally, in recruitment and at events.</p>
+          <p class="point-body" data-sv="I ett IT-konsultbolag ledde jag strategin för talent acquisition som del av ledningsgruppen, med employer branding som en central del. Arbetet handlade om att vara tydliga med vilka vi var som arbetsgivare och hur vi presenterade oss utåt. Jag har representerat bolag vid mässor och kundevent, bland annat som konferencier. I ett nordiskt HR-techbolag planerade och genomförde jag konferenser med fokus på vad deltagarna fick ut av dem.">At an IT consultancy I led the talent acquisition strategy as part of the management team, with employer branding as a central part. The work was about being clear about who we were as an employer and how we presented ourselves externally. I have represented companies at trade fairs and customer events, including as master of ceremonies. At a Nordic HR tech company I planned and ran conferences with the focus on what the participants gained from them.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+            <span class="pill" data-sv="Kursutvecklare">Course Developer</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card point reveal">
+        <div class="point-num-wrap"><div class="point-rule"></div><div class="point-num">08</div></div>
+        <div>
+          <h3 class="point-title" data-sv="Lärplattformar och arbetsflöden">Learning platforms and workflows</h3>
+          <p class="point-quote" data-sv="Jag är med och utformar digitala verktyg för lärande och rekrytering och de arbetsflöden de bygger på.">I help shape digital tools for learning and recruitment and the workflows they are built on.</p>
+          <p class="point-body" data-sv="I ett IT-konsultbolag var jag med från start och formade en intern lärplattform, bland annat vilka behov den skulle möta och hur innehållet skulle struktureras. Plattformen fungerade så väl att den senare såldes som en produkt till andra företag. I samma bolag ledde jag införandet av ett ATS och utformade arbetsflödena, från hur en roll öppnades till hur kandidaterna rörde sig genom processen. På yrkeshögskolan utvecklade jag strukturen i lärplattformen och förbättrade de interna kommunikationsflödena.">At an IT consultancy I helped shape an internal learning platform from the start, including which needs it should meet and how the content should be structured. The platform worked well enough that it was later sold as a product to other companies. In the same company I led the introduction of an ATS and designed the workflows, from how a role was opened to how candidates moved through the process. At the vocational college I developed the structure of the learning platform and improved the internal communication flows.</p>
+          <div class="point-roles">
+            <span class="point-roles-label" data-sv="Roller">Roles</span>
+            <span class="pill" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</span>
+            <span class="pill" data-sv="Utbildningsledare / ICT-ansvarig">Education Manager / ICT Manager</span>
+          </div>
         </div>
       </article>
     </div>
@@ -338,9 +367,9 @@
     <div class="sec-head reveal">
       <p class="eyebrow" data-sv="Vad jag byggt">What I've built</p>
       <h2 class="sec-title" data-sv="Sådant jag har byggt">Things I have built</h2>
-      <p class="sec-lead" data-sv="En del har jag byggt tillsammans med kollegor på jobbet. En del har jag byggt på egen hand, med AI, när jag stött på ett problem jag ville lösa.">
-        Some of it I built together with colleagues at work. Some I built on my own, with AI, when I ran
-        into a problem I wanted solved.
+      <p class="sec-lead" data-sv="Först visas det jag har utvecklat på egen hand, främst med AI. Därefter följer det jag har byggt tillsammans med kollegor i de bolag där jag har arbetat.">
+        First, what I have developed on my own, mainly with AI. After that, what I have built together
+        with colleagues at the companies where I have worked.
       </p>
     </div>
 
@@ -395,7 +424,7 @@
       </article>
     </div>
 
-    <p class="built-sub reveal" data-sv="Byggt själv, med AI">Built myself, with AI</p>
+    <p class="built-sub reveal" data-sv="Byggt på egen hand, främst med AI">Built on my own, mainly with AI</p>
     <div class="built-grid">
       <article class="card built-card reveal">
         <div class="built-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
@@ -437,12 +466,14 @@
       </article>
 
       <article class="card built-card reveal">
-        <!-- TODO Marcus: fyll gärna på med vad ekonomiverktyget faktiskt gör, och länk om det finns någon -->
         <div class="built-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div>
-        <h3 class="built-title" data-sv="Ett ekonomiverktyg">A finance tool</h3>
-        <p class="built-text" data-sv="Ett verktyg jag byggt för att hålla ordning på ekonomin, med siffrorna samlade på ett ställe och följda över tid.">
-          A tool I built to keep the finances in order, with the numbers gathered in one place and
-          followed over time.
+        <h3 class="built-title" data-sv="AIconomics, ett verktyg för hushållsekonomin">AIconomics, a tool for household finances</h3>
+        <p class="built-text" data-sv="Ett verktyg för att planera och följa upp ett hushålls ekonomi, med en översikt över inkomster och utgifter månad för månad. Gemensamma kostnader fördelas automatiskt efter varje persons andel av inkomsten, och sparmål kan anges i procent eller kronor. En AI-assistent besvarar frågor om ekonomin, och uppgifterna synkas mellan enheter med inloggning via Google.">
+          A tool for planning and following up a household's finances, with an overview of income and
+          expenses month by month. Shared costs are divided automatically according to each person's
+          share of the income, and savings goals can be set as a percentage or in kronor. An AI
+          assistant answers questions about the finances, and the data syncs between devices with a
+          Google login.
         </p>
       </article>
 
@@ -477,6 +508,17 @@
           in my own work takes longer than it should.
         </p>
       </article>
+
+      <article class="card built-card reveal">
+        <div class="built-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg></div>
+        <h3 class="built-title" data-sv="Role for Growth, teamutveckling genom rollspel">Role for Growth, team development through roleplay</h3>
+        <p class="built-text" data-sv="En metod för teamutveckling genom rollspel, byggd på ramverket QUEST. Teamet spelar ett scenario utifrån en verklig utmaning och går därefter igenom förloppet i en strukturerad debrief. Varje deltagare väljer sedan en förmåga att utveckla, och uppföljningen sker under sex veckor.">
+          A method for team development through roleplay, built on the QUEST framework. The team plays a
+          scenario based on a real challenge and then goes through what happened in a structured
+          debrief. Each participant then chooses one skill to develop, and the follow-up runs over six
+          weeks.
+        </p>
+      </article>
     </div>
   </div>
 </section>
@@ -487,9 +529,9 @@
     <div class="sec-head reveal">
       <p class="eyebrow" data-sv="Erfarenhet">Experience</p>
       <h2 class="sec-title" data-sv="Var jag har arbetat">Where I have worked</h2>
-      <p class="sec-lead" data-sv="Fem roller i och nära techbranschen, med rekrytering, HR och kompetensutveckling som röd tråd.">
-        Five roles in and around the tech industry, with recruitment, HR and competence development as
-        the common thread.
+      <p class="sec-lead" data-sv="Fem roller i Göteborg, alla i och kring techbranschen. Taggarna visar var lärande eller rekrytering var en central del av mitt ansvar.">
+        Five roles in Gothenburg, all in and around the tech industry. The tags show where learning or
+        recruitment was a central part of my responsibility.
       </p>
     </div>
 
@@ -666,7 +708,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="eyebrow" data-sv="Utbildning &amp; kompetenser">Education &amp; Skills</p>
-      <h2 class="sec-title" data-sv="Beteendevetenskap möter tekniska miljöer">Behavioural science meets technical environments</h2>
+      <h2 class="sec-title" data-sv="Beteendevetenskap och pedagogik">Behavioural science and pedagogy</h2>
     </div>
 
     <div class="edu-list">
@@ -676,9 +718,8 @@
           <span class="edu-date">2016 — 2019</span>
         </div>
         <p class="edu-school" data-sv="Umeå universitet">Umeå University</p>
-        <p class="edu-desc" data-sv="Kandidatexamen med fokus på mänskligt beteende i digitala och tekniska organisationer: en solid grund för People &amp; Culture-arbete i techbranschen.">
-          Bachelor's degree focused on human behaviour in digital and technical organisations: a solid
-          foundation for People &amp; Culture work in the tech industry.
+        <p class="edu-desc" data-sv="Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer.">
+          A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments.
         </p>
       </article>
 
@@ -688,20 +729,20 @@
           <span class="edu-date">2020</span>
         </div>
         <p class="edu-school">Myndigheten för Yrkeshögskolan</p>
-        <p class="edu-desc" data-sv="Certifiering inom utbildningsledning med fokus på yrkeshögskola, direkt tillämpbar i L&amp;D-roller med betoning på pedagogisk planering och kursdesign.">
-          Certification in education management focused on vocational higher education, directly
-          applicable in L&amp;D roles with emphasis on pedagogical planning and course design.
+        <p class="edu-desc" data-sv="Certifiering inom utbildningsledning för yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg.">
+          Certification in education management for vocational higher education, focused on
+          pedagogical planning and course design.
         </p>
       </article>
     </div>
 
     <div class="callout reveal">
-      <p class="callout-label" data-sv="Kärnan i utbildningen">The core of the education</p>
-      <h3 class="callout-title" data-sv="Vad utbildningen gav mig">What the education gave me</h3>
-      <p class="callout-text" data-sv="Kombinationen av beteendevetenskap och IT-perspektiv ger en unik förståelse för hur människor fungerar i moderna, snabbföränderliga organisationer, och förmågan att överbrygga klyftan mellan HR och verksamheten.">
-        The combination of behavioural science and an IT perspective provides a unique understanding of
-        how people function in modern, fast-changing organisations, and the ability to bridge the gap
-        between HR and the business.
+      <p class="callout-label" data-sv="Beteendevetenskap">Behavioural science</p>
+      <h3 class="callout-title" data-sv="En grund för lärande och urval">A grounding for learning and selection</h3>
+      <p class="callout-text" data-sv="Utbildningen handlade om hur människor och grupper fungerar i organisationer, med inriktning mot IT-miljöer. Den kunskapen har jag använt när jag bedömt kandidater och när jag planerat utbildningar och onboarding.">
+        The degree covered how people and groups function in organisations, with a focus on IT
+        environments. I have drawn on that knowledge when I assessed candidates and when I planned
+        training and onboarding.
       </p>
     </div>
 
@@ -710,45 +751,45 @@
         <p class="tool-label" data-sv="Expertisområden">Areas of expertise</p>
         <div class="pill-row">
           <span class="pill">Learning &amp; Development</span>
-          <span class="pill">Employer Branding</span>
-          <span class="pill" data-sv="Instruktionsdesign &amp; kursutveckling">Instructional design &amp; Course Development</span>
-          <span class="pill">Gamification</span>
-          <span class="pill">Learning Management Systems (LMS)</span>
-          <span class="pill">People &amp; Culture</span>
-          <span class="pill" data-sv="Svensk arbetsrätt">Swedish labour law</span>
-          <span class="pill">HR</span>
-          <span class="pill" data-sv="Kommunikation">Communication</span>
-          <span class="pill" data-sv="Projektledning">Project Management</span>
-          <span class="pill" data-sv="Pedagogik &amp; didaktik">Pedagogy &amp; didactics</span>
           <span class="pill" data-sv="Rekrytering &amp; urval">Recruitment &amp; selection</span>
-          <span class="pill" data-sv="Ledarskap &amp; coachning">Leadership &amp; coaching</span>
+          <span class="pill">Gamification</span>
+          <span class="pill" data-sv="Instruktionsdesign &amp; kursutveckling">Instructional design &amp; Course Development</span>
           <span class="pill" data-sv="Kompetensförsörjning">Competence supply</span>
+          <span class="pill" data-sv="Pedagogik &amp; didaktik">Pedagogy &amp; didactics</span>
+          <span class="pill">Employer Branding</span>
+          <span class="pill">Learning Management Systems (LMS)</span>
+          <span class="pill" data-sv="Ledarskap &amp; coachning">Leadership &amp; coaching</span>
+          <span class="pill" data-sv="Projektledning">Project Management</span>
+          <span class="pill" data-sv="Kommunikation">Communication</span>
+          <span class="pill">People &amp; Culture</span>
+          <span class="pill">HR</span>
+          <span class="pill" data-sv="Svensk arbetsrätt">Swedish labour law</span>
         </div>
       </div>
 
       <div class="tool-group">
         <p class="tool-label" data-sv="System &amp; verktyg">Systems &amp; tools</p>
         <div class="pill-row">
-          <span class="pill">Winningtemp</span>
-          <span class="pill">Monday.com</span>
+          <span class="pill">Claude Code</span>
           <span class="pill">Teamtailor</span>
+          <span class="pill">Workbuster</span>
+          <span class="pill">Canva</span>
+          <span class="pill">Monday.com</span>
           <span class="pill">Slack</span>
           <span class="pill">Office 365</span>
-          <span class="pill">Canva</span>
-          <span class="pill">Workbuster</span>
-          <span class="pill">Claude Code</span>
+          <span class="pill">Winningtemp</span>
         </div>
       </div>
 
       <div class="tool-group">
         <p class="tool-label" data-sv="Så arbetar jag">How I work</p>
         <div class="pill-row">
+          <span class="pill pill--accent" data-sv="Pedagogisk, lär ut det jag bygger">Pedagogical, teaches what I build</span>
+          <span class="pill pill--accent" data-sv="Bygger från noll">Builds from zero</span>
+          <span class="pill pill--accent" data-sv="AI-native i vardagen">AI-native day to day</span>
           <span class="pill pill--accent" data-sv="Strukturerad och processdriven">Structured and process-driven</span>
           <span class="pill pill--accent" data-sv="Rådgivande mot chefer och intressenter">Advisory to managers and stakeholders</span>
-          <span class="pill pill--accent" data-sv="Bygger från noll">Builds from zero</span>
-          <span class="pill pill--accent" data-sv="Pedagogisk, lär ut det jag bygger">Pedagogical, teaches what I build</span>
           <span class="pill pill--accent" data-sv="Trygg med många parallella processer">Comfortable with many parallel processes</span>
-          <span class="pill pill--accent" data-sv="AI-native i vardagen">AI-native day to day</span>
         </div>
       </div>
 
@@ -769,9 +810,8 @@
     <div class="sec-head reveal">
       <p class="eyebrow" data-sv="Utanför jobbet">Beyond work</p>
       <h2 class="sec-title" data-sv="Vem jag är utanför jobbet">Who I am outside work</h2>
-      <p class="sec-lead" data-sv="Det finns mer i livet än jobb. Här är en glimt av vem jag är utanför kontoret: det som håller mig nyfiken, jordad och energisk.">
-        There's more to life than work. Here's a glimpse of who I am outside the office: the things that
-        keep me curious, grounded and energised.
+      <p class="sec-lead" data-sv="Lite om vem jag är utanför arbetet.">
+        A little about who I am outside work.
       </p>
     </div>
 
@@ -779,12 +819,12 @@
       <article class="card personal-card reveal">
         <span class="personal-emoji">🎲</span>
         <h3 class="personal-title" data-sv="Intressen">Hobbies</h3>
-        <p class="personal-text" data-sv="Jag är en kreativ person i grunden. Jag läser mycket fantasy och kanaliserar det till att skriva D&amp;D-äventyr som Game Master. Jag har en enorm passion för mat och matlagning, och älskar all mat, från streetfood till Michelin-restauranger. Jag gillar också att samlas över brädspel och älskar att titta på Critical Role, en live-action D&amp;D-serie som ger bränsle till min kreativitet som Game Master.">
+        <p class="personal-text" data-sv="Jag är en kreativ person i grunden. Jag läser mycket fantasy och kanaliserar det till att skriva D&amp;D-äventyr som Dungeon Master. Jag har en enorm passion för mat och matlagning, och älskar all mat, från streetfood till Michelin-restauranger. Jag gillar också att samlas över brädspel och älskar att titta på Critical Role, en live-action D&amp;D-serie som ger bränsle till min kreativitet som Dungeon Master.">
           I'm a creative person at heart. I read a lot of fantasy and channel that into writing D&amp;D
-          adventures as a Game Master. I have a huge passion for food and cooking, and love all food,
+          adventures as a Dungeon Master. I have a huge passion for food and cooking, and love all food,
           from street food joints to Michelin restaurants. I also really enjoy getting together over
           board games, and love watching Critical Role, a live-action D&amp;D series that fuels my
-          creativity as a Game Master.
+          creativity as a Dungeon Master.
         </p>
       </article>
 
@@ -882,10 +922,9 @@
       </div>
 
       <div class="contact-facts">
-        <span data-sv="Göteborg, Sverige">Gothenburg, Sweden</span>
-        <span data-sv="Svenska &amp; engelska">Swedish &amp; English</span>
-        <span data-sv="Kand. beteendevetenskap">BSc. Behavioural Science</span>
-        <span data-sv="Öppen för nya möjligheter">Open to new opportunities</span>
+        <span data-sv="Ort: Göteborg">Location: Gothenburg</span>
+        <span data-sv="Språk: svenska &amp; engelska">Languages: Swedish &amp; English</span>
+        <span data-sv="Utbildning: kand. beteendevetenskap">Education: BSc. Behavioural Science</span>
       </div>
     </div>
   </div>
