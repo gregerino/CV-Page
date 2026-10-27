@@ -1,0 +1,277 @@
+/* Kronofogden — Rekryteringspartner
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /kronofogden and by cv.html?job=kronofogden, from the head
+   script, so the page is drawn in these colours from the first frame.
+
+   The palette is Kronofogden's own, read off the tokens in main.min.css on
+   kronofogden.se:
+     #641e3c  their plum: headings, primary buttons, links in body text
+     #844a63  the plum their buttons hover to
+     #e0d2d8  the pale plum of button hovers and tip boxes
+     #fbf4f7  the faintest plum wash
+     #53666a  the slate grey of secondary text and the footer
+     #414e50  the darker slate under the footer
+     #f2f4f4  the grey of their secondary panels
+     #dde0e1  "iron", every card border and divider
+     #878e26  the olive of the logo and the line icons
+     #006769  the teal of plain links
+
+   Their identity is a white page with square, thin-bordered white cards,
+   plum bold headings in Roboto, olive line icons, and a slate footer.
+   Only tokens are set here, plus a handful of rules at the bottom. The
+   layout and structure are the base page's, unchanged.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f2f4f4;
+  --bg3:           #e7eaea;
+  --white:         #ffffff;
+
+  --border:        #dde0e1;
+  --border-light:  #e8eaeb;
+  --border-strong: #bac2c3;
+
+  --ink:           #1b1b1b;
+  --ink-mid:       #333333;
+  --ink-light:     #53666a;
+  --ink-dim:       #758588;
+
+  --amber:         #641e3c;
+  --amber-light:   #844a63;
+
+  --accent-rgb:    100,30,60;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 10px rgba(83,102,106,0.12), 0 1px 3px rgba(83,102,106,0.08);
+  --shadow-sm:     0 1px 3px rgba(83,102,106,0.12);
+  --shadow-lg:     0 10px 32px rgba(83,102,106,0.18);
+
+  /* Their cards and buttons are almost square. */
+  --radius:        2px;
+  --radius-lg:     3px;
+  --radius-pill:   3px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(255,255,255,0.97) 0%,
+    rgba(255,255,255,0.94) 40%,
+    rgba(242,244,244,0.90) 70%,
+    rgba(224,210,216,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23878e26' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  /* Roboto is all of Kronofogden's type. It replaces the base serif and
+     sans, and the mono labels too, since their site has no monospace. */
+  --serif: 'Roboto', Arial, system-ui, sans-serif;
+  --sans:  'Roboto', Arial, system-ui, sans-serif;
+  --mono:  'Roboto', Arial, system-ui, sans-serif;
+}
+
+/* Headings in Roboto bold, in their plum, as on every page of their site. */
+.hero-name,
+.cv-name,
+.sec-title { font-weight: 700; letter-spacing: -0.01em; color: #641e3c; }
+.hero-role { font-style: normal; font-weight: 400; color: #53666a; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.built-title,
+.roles-title,
+.job-title,
+.edu-degree { font-weight: 700; color: #641e3c; }
+
+/* Labels: Roboto medium in slate, a little larger than the base mono. */
+.eyebrow {
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: #53666a;
+}
+.tool-label,
+.built-sub {
+  font-weight: 700;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  color: #53666a;
+}
+
+/* Their header is white with a thin iron line under it. */
+.nav {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #dde0e1;
+}
+
+/* Their logo is an olive diamond beside the word mark. */
+.brand-dot {
+  background: #878e26;
+  border-radius: 0;
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+.brand { color: #1b1b1b; font-weight: 500; }
+.brand em { font-style: normal; color: #641e3c; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons as on kronofogden.se
+   ─────────────────────────────────────────────────────────────────────────
+   Primary: filled plum that turns pale plum with plum text on hover.
+   Secondary: white with a plum border, the same pale plum on hover.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-weight: 500; letter-spacing: 0.01em; }
+.btn-primary {
+  background: #641e3c;
+  border: 2px solid #641e3c;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover {
+  background: #e0d2d8;
+  border-color: #641e3c;
+  color: #641e3c;
+  box-shadow: none;
+}
+.btn-ghost {
+  background: #ffffff;
+  border: 2px solid #641e3c;
+  color: #641e3c;
+}
+.btn-ghost:hover { background: #e0d2d8; color: #641e3c; border-color: #641e3c; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #641e3c; }
+
+/* Flat, square, iron-bordered cards. No frosted glass. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #dde0e1;
+  box-shadow: none;
+}
+.card:hover { box-shadow: var(--shadow-sm); }
+.pill { background: #ffffff; border-color: #dde0e1; color: #333333; }
+
+/* The olive of their line icons. */
+.built-icon { background: #ffffff; border: 1px solid #dde0e1; }
+.built-icon svg { stroke: #878e26; }
+.built-link { color: #006769; font-weight: 500; }
+.built-link:hover { color: #641e3c; }
+
+.timeline::before {
+  background: linear-gradient(to bottom, #641e3c, rgba(100,30,60,0.2) 60%, transparent);
+}
+.job::before { border-color: #641e3c; }
+
+.stat-num { color: #641e3c; font-weight: 700; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match", on their plum
+   ─────────────────────────────────────────────────────────────────────────
+   The section the page exists for gets a full plum band with white cards,
+   each with an olive edge down its left, like the accent on their logo.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #641e3c;
+  border-top: 1px solid #641e3c;
+}
+#match + .band { border-top: 1px solid #dde0e1; }
+
+#match .eyebrow   { color: #e0d2d8; }
+#match .sec-title { color: #ffffff; }
+#match .sec-lead  { color: rgba(255,255,255,0.88); }
+
+#match .card {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+}
+#match .point { border-left: 4px solid #878e26; }
+#match .point-rule { background: #878e26; }
+#match .point-num { color: #641e3c; }
+#match .point-quote { color: #53666a; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the recruitment work first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link. The last card in
+   each grid stays last, since the base page lets an odd last card span
+   the full width.
+     Companies:  ATS workflows, onboarding, career programme, LMS, course content
+     With AI:    Recruitment OS, agentic OS, this site, QuestLog, finance, more
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+/* The two recruitment tools get a plum top edge. */
+#built .built-grid:last-of-type .built-card:nth-of-type(-n+2) {
+  border-top: 3px solid #641e3c;
+}
+
+/* Competence supply and recruitment pills first, in pale plum. */
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+2),
+#education .tool-group:nth-of-type(3) .pill:first-child {
+  background: #fbf4f7;
+  border-color: #c2a5b1;
+  color: #641e3c;
+  font-weight: 500;
+}
+
+/* The callout as one of their tip boxes. */
+#education .callout {
+  background: #fbf4f7;
+  border: 1px solid #c2a5b1;
+  border-left: 4px solid #641e3c;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact facts as their "Bra att veta" box
+   ─────────────────────────────────────────────────────────────────────────
+   Their job ads close with a "Bra att veta" section. The same box here
+   holds the facts about me, on their pale grey with a plum edge.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .contact-facts {
+  display: grid;
+  gap: 0.45rem;
+  max-width: 440px;
+  padding: 1.4rem 1.6rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #dde0e1;
+  border-left: 4px solid #641e3c;
+  color: #333333;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+#contact .contact-facts::before {
+  content: 'Good to know';
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #641e3c;
+  margin-bottom: 0.3rem;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Bra att veta'; }
+#contact .contact-facts span { font-weight: 400; }
+
+/* Their footer is a solid slate band. */
+.site-footer {
+  background: #53666a;
+  border-top: 4px solid #414e50;
+}
+.site-footer p { color: rgba(255,255,255,0.9); font-size: 0.85rem; letter-spacing: 0.02em; }
+.site-footer a { color: #ffffff; font-weight: 500; }
+.site-footer a:hover { color: #e0d2d8; }

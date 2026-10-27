@@ -1,0 +1,489 @@
+{
+  "company": "Kronofogden",
+  "roleName": "Rekryteringspartner",
+  "eyebrow": {
+    "en": "Application · Recruitment Partner · Kronofogden",
+    "sv": "Ansökan · Rekryteringspartner · Kronofogden"
+  },
+  "role": {
+    "en": "Recruitment, close to the managers",
+    "sv": "Rekrytering, nära cheferna"
+  },
+  "lead": {
+    "en": "I've worked with recruitment for about five years, in IT consultancies and in a recruitment and consulting firm. I've run whole processes for many different roles and worked closely with the hiring managers. My degree is a bachelor's in behavioural science. I'd like to keep doing this at Kronofogden.",
+    "sv": "Jag har jobbat med rekrytering i ca 5 år, i IT-konsultbolag och i ett rekryterings- och konsultföretag. Jag har drivit hela processer till många olika roller och jobbat nära de rekryterande cheferna. Min utbildning är en kandidatexamen i beteendevetenskap. Jag skulle gärna fortsätta med det hos er på Kronofogden."
+  },
+  "cta": {
+    "en": "See how my background fits the role",
+    "sv": "Se hur min bakgrund passar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "What the ad asks for, and what I've done in each part.",
+    "sv": "Det annonsen tar upp, och vad jag har gjort inom varje del."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Consultative support to managers",
+        "sv": "Konsultativt stöd till chefer"
+      },
+      "quote": {
+        "en": "As a recruitment partner you are a consultative support to our managers and support them through the whole recruitment process.",
+        "sv": "I rollen som rekryteringspartner är du ett konsultativt stöd till våra chefer och stöttar dem genom hela rekryteringsprocessen."
+      },
+      "body": {
+        "en": "I've advised hiring managers in every recruitment role I've had, mostly on the requirement profile and how we assess candidates. I started the processes with a needs analysis together with the manager.",
+        "sv": "Jag har rådgett rekryterande chefer i varje rekryteringsroll jag haft, mest kring kravprofilen och hur vi bedömer kandidaterna. Jag började processerna med en behovsanalys tillsammans med chefen."
+      }
+    },
+    {
+      "title": {
+        "en": "Whole processes, for varied roles",
+        "sv": "Hela processer, till varierande roller"
+      },
+      "quote": {
+        "en": "Several years of recent experience of recruiting for varied roles in whole processes, where recruitment has been your main occupation.",
+        "sv": "Flerårig aktuell erfarenhet av att arbeta med rekrytering till varierande roller i hela processer, där rekrytering har varit din huvudsysselsättning."
+      },
+      "body": {
+        "en": "I've had recruitment as my main task for about five years, most recently until June 2026. I ran the processes myself, for everything from developers to project managers. At a vocational college I took part in recruiting teachers.",
+        "sv": "Jag har haft rekrytering som huvuduppgift i ca 5 år, senast fram till juni 2026. Jag drev processerna själv, för allt från utvecklare till projektledare. På en yrkeshögskola var jag med och rekryterade lärare."
+      }
+    },
+    {
+      "title": {
+        "en": "Competency-based and structured",
+        "sv": "Kompetensbaserat och strukturerat"
+      },
+      "quote": {
+        "en": "Recent experience and knowledge of competency-based recruitment methods.",
+        "sv": "Aktuell erfarenhet och kunskap om kompetensbaserad rekryteringsmetodik."
+      },
+      "body": {
+        "en": "I've helped managers set requirement profiles and assess candidates against them. I've also built Recruitment OS, an AI tool that turns a requirement profile into structured, competency-based interviews with scorecards.",
+        "sv": "Jag har hjälpt chefer att sätta kravprofiler och bedöma kandidaterna mot dem. Jag har också byggt Recruitment OS, ett AI-verktyg som gör om en kravprofil till strukturerade, kompetensbaserade intervjuer med scorecards."
+      }
+    },
+    {
+      "title": {
+        "en": "The candidate experience",
+        "sv": "Kandidatupplevelsen"
+      },
+      "quote": {
+        "en": "Would you like to work with competency-based recruitment, manager support and the candidate experience?",
+        "sv": "Vill du arbeta med kompetensbaserad rekrytering, chefsstöd och kandidatupplevelse?"
+      },
+      "body": {
+        "en": "In a recruitment and consulting firm I was the candidates' main contact through the whole process. I tried to give them quick and clear answers. I also planned the interviews and worked in the ATS every day.",
+        "sv": "I ett rekryterings- och konsultföretag var jag kandidaternas huvudkontakt genom hela processen. Jag försökte ge dem snabba och tydliga besked. Jag planerade också intervjuerna och jobbade i ATS-systemet varje dag."
+      }
+    },
+    {
+      "title": {
+        "en": "On my own and with colleagues",
+        "sv": "Självständigt och tillsammans med kollegor"
+      },
+      "quote": {
+        "en": "You plan your working day independently and run processes both on your own and together with colleagues. The role has many points of contact, internal and external.",
+        "sv": "Du planerar självständigt din arbetsdag och driver processer både själv och tillsammans med kollegor. I rollen har du många kontaktytor både internt och externt."
+      },
+      "body": {
+        "en": "I've run many recruitment processes in parallel and planned my own time. I've been in daily contact with candidates and hiring managers.",
+        "sv": "Jag har drivit många rekryteringsprocesser parallellt och planerat min egen tid. Jag har haft daglig kontakt med kandidater och rekryterande chefer."
+      }
+    },
+    {
+      "title": {
+        "en": "An HR department that is developing",
+        "sv": "En HR-avdelning i utvecklingsfas"
+      },
+      "quote": {
+        "en": "An authority and HR department in an exciting phase of development. You'll be part of a newly formed unit for competence supply.",
+        "sv": "En myndighet och HR-avdelning som är i en spännande utvecklingsfas. Du kommer ingå i en nybildad enhet för kompetensförsörjning."
+      },
+      "body": {
+        "en": "When I led talent acquisition in an IT consultancy, I implemented the ATS workflows and built the onboarding from scratch. In a recruitment and consulting firm I helped improve the recruitment workflows.",
+        "sv": "När jag ledde talent acquisition i ett IT-konsultbolag implementerade jag ATS-flödena och byggde onboardingen från grunden. I ett rekryterings- och konsultföretag var jag med och förbättrade rekryteringsflödena."
+      }
+    },
+    {
+      "title": {
+        "en": "Training for managers and colleagues",
+        "sv": "Utbildning för chefer och kollegor"
+      },
+      "quote": {
+        "en": "It is desirable that you have recent experience of training efforts for managers, employees and colleagues.",
+        "sv": "Det är önskvärt att du har aktuell erfarenhet av utbildningsinsatser för chefer, medarbetare och kollegor."
+      },
+      "body": {
+        "en": "In an IT consultancy I ran internal workshops and learning sessions for my colleagues. As a course developer at an HR tech company I developed courses in HR and ran training sessions. I'm also a certified education manager.",
+        "sv": "I ett IT-konsultbolag höll jag interna workshops och utbildningar för kollegorna. Som kursutvecklare på ett HR-techbolag tog jag fram kurser inom HR och höll i utbildningar. Jag är också certifierad utbildningsledare."
+      }
+    },
+    {
+      "title": {
+        "en": "A bachelor's in behavioural science",
+        "sv": "En kandidatexamen i beteendevetenskap"
+      },
+      "quote": {
+        "en": "An academic education of at least 180 credits, preferably in HR or what the employer judges relevant for the position.",
+        "sv": "Akademisk utbildning om minst 180 högskolepoäng inom företrädelsevis HR-området eller vad arbetsgivaren bedömer relevant för tjänsten."
+      },
+      "body": {
+        "en": "I have a bachelor's degree in behavioural science, 180 credits, with a focus on people in IT environments. I use what I learned there when I assess a candidate.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i IT-miljöer. Jag använder det jag lärde mig där när jag bedömer en kandidat."
+      }
+    }
+  ],
+  "roles": {
+    "title": {
+      "en": "Roles I've recruited for",
+      "sv": "Roller jag har rekryterat till"
+    },
+    "lead": {
+      "en": "A selection, mostly technical roles.",
+      "sv": "Ett axplock, mest tekniska roller."
+    },
+    "groups": [
+      {
+        "label": "Engineering",
+        "items": [
+          {
+            "en": "Electronics Engineer",
+            "sv": "Elektronikingenjör"
+          },
+          {
+            "en": "Electrical Engineer",
+            "sv": "Elingenjör"
+          },
+          {
+            "en": "Automation Engineer",
+            "sv": "Automationsingenjör"
+          },
+          {
+            "en": "Mechanical Engineer",
+            "sv": "Mekanikingenjör"
+          },
+          {
+            "en": "Mechanical Design Engineer",
+            "sv": "Mechanical Design Engineer / Mekanikkonstruktör"
+          },
+          {
+            "en": "Electronics System Architect",
+            "sv": "Systemarkitekt inom elektronik"
+          },
+          "HVDC Engineer",
+          "LVDC Engineer",
+          {
+            "en": "Expert Engineer, Electrical Power Grid Safety",
+            "sv": "Expert Engineer inom Electrical Power Grid Safety"
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "Software development",
+          "sv": "Mjukvaruutveckling"
+        },
+        "items": [
+          "Software Developer",
+          "Software Engineer",
+          "Backend Developer",
+          "Frontend Developer",
+          "Golang Developer",
+          ".NET / C# Developer",
+          "C/C++ Developer",
+          "Rust Developer",
+          "COBOL Developer"
+        ]
+      },
+      {
+        "label": {
+          "en": "Product & projects",
+          "sv": "Produkt & projekt"
+        },
+        "items": [
+          {
+            "en": "Project Manager",
+            "sv": "Projektledare"
+          },
+          {
+            "en": "Product Developer",
+            "sv": "Produktutvecklare"
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "Education",
+          "sv": "Utbildning"
+        },
+        "items": [
+          {
+            "en": "Teacher, vocational college",
+            "sv": "Lärare på yrkeshögskola"
+          }
+        ]
+      },
+      {
+        "label": "Automotive & Embedded",
+        "items": [
+          {
+            "en": "Android Developer, hardware-near, Automotive",
+            "sv": "Hårdvarunära Android-utvecklare inom Automotive"
+          },
+          {
+            "en": "ADAS Developer",
+            "sv": "ADAS-utvecklare"
+          },
+          "Hardware Developer"
+        ]
+      }
+    ]
+  },
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "About 5 years in recruitment",
+      "sv": "Ca 5 år inom rekrytering"
+    },
+    "#top .stat-num": [
+      "~5",
+      "3",
+      "180"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years with recruitment as the main part of the job",
+        "sv": "År med rekrytering som huvuduppgift"
+      },
+      {
+        "en": "Roles where recruitment was the main part of the job",
+        "sv": "Roller där rekrytering var huvuddelen av jobbet"
+      },
+      {
+        "en": "Credits in behavioural science",
+        "sv": "Högskolepoäng i beteendevetenskap"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "How does he work with competency-based recruitment?",
+        "sv": "Hur jobbar han med kompetensbaserad rekrytering?"
+      },
+      {
+        "en": "How does he support hiring managers?",
+        "sv": "Hur stöttar han rekryterande chefer?"
+      },
+      {
+        "en": "Has he trained managers or colleagues?",
+        "sv": "Har han utbildat chefer eller kollegor?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my recruitment background",
+      "sv": "Fråga om min bakgrund inom rekrytering"
+    },
+    "#about .sec-title": {
+      "en": "Recruiting together with the manager",
+      "sv": "Rekrytering tillsammans med chefen"
+    },
+    "#about .about-quote": {
+      "en": "I like helping a manager find the right person for their team.",
+      "sv": "Jag gillar att hjälpa en chef att hitta rätt person till sitt team."
+    },
+    "#about .about-body": [
+      {
+        "en": "I've recruited for most of my working life, in IT consultancies and in a recruitment and consulting firm. I've run whole processes and worked closely with the managers.",
+        "sv": "Jag har rekryterat under större delen av mitt yrkesliv, i IT-konsultbolag och i ett rekryterings- och konsultföretag. Jag har drivit hela processer och jobbat nära cheferna."
+      },
+      {
+        "en": "I've worked close to HR too. In an IT consultancy I sat on the management team and supported 15+ consultants with HR and development. Later I developed courses in HR and ran training sessions.",
+        "sv": "Jag har jobbat nära HR också. I ett IT-konsultbolag satt jag i ledningsgruppen och stöttade 15+ konsulter med HR och utveckling. Senare tog jag fram kurser inom HR och höll utbildningar."
+      },
+      {
+        "en": "My degree is a bachelor's in behavioural science. I'm also a certified education manager.",
+        "sv": "Min utbildning är en kandidatexamen i beteendevetenskap. Jag är också certifierad utbildningsledare."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Understanding what a manager and a team need",
+        "sv": "Att förstå vad en chef och ett team behöver"
+      },
+      {
+        "en": "Structured interviews with clear criteria",
+        "sv": "Strukturerade intervjuer med tydliga kriterier"
+      },
+      {
+        "en": "Giving candidates a good experience of the process",
+        "sv": "Att ge kandidaterna en bra upplevelse av processen"
+      },
+      {
+        "en": "Teaching colleagues what I know",
+        "sv": "Att lära ut det jag kan till kollegor"
+      },
+      {
+        "en": "Improving the recruitment process",
+        "sv": "Att förbättra rekryteringsprocessen"
+      }
+    ],
+    "#built .sec-title": {
+      "en": "Tools and processes I've built",
+      "sv": "Verktyg och processer jag byggt"
+    },
+    "#built .sec-lead": {
+      "en": "I built some of this together with colleagues, like the ATS workflows and the onboarding. Some I've built on my own with AI, for example Recruitment OS, which turns a requirement profile into an interview package.",
+      "sv": "En del av det här byggde jag tillsammans med kollegor, till exempel ATS-flödena och onboardingen. En del har jag byggt själv med AI, till exempel Recruitment OS, som gör om en kravprofil till ett intervjupaket."
+    },
+    "#experience .sec-title": {
+      "en": "Recruitment and competence supply",
+      "sv": "Rekrytering och kompetensförsörjning"
+    },
+    "#experience .sec-lead": {
+      "en": "I've recruited in most of the roles below. In the others I worked with competence supply and training.",
+      "sv": "Jag har rekryterat i de flesta av rollerna nedan. I de andra jobbade jag med kompetensförsörjning och utbildning."
+    },
+    "#education .sec-title": {
+      "en": "A bachelor's in behavioural science",
+      "sv": "En kandidatexamen i beteendevetenskap"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments: human behaviour in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer: mänskligt beteende i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Certified education manager. I use it when I plan a training session.",
+        "sv": "Certifierad utbildningsledare. Jag har nytta av den när jag planerar en utbildning."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science, in practice",
+      "sv": "Beteendevetenskap, i praktiken"
+    },
+    "#education .callout-title": {
+      "en": "What the education gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science taught me a lot about how people and groups work. I use it when I assess a candidate against a requirement profile.",
+      "sv": "Beteendevetenskapen lärde mig mycket om hur människor och grupper fungerar. Jag använder det när jag bedömer en kandidat mot en kravprofil."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      "Learning & Development",
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      "People & Culture",
+      "Employer Branding",
+      "Learning Management Systems (LMS)",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "The role has a lot of people to meet, and I like that. Here's a bit about me outside work.",
+      "sv": "Rollen har många kontaktytor, och det gillar jag. Här är lite om mig utanför jobbet."
+    },
+    "#contact .sec-title": {
+      "en": "Get in touch",
+      "sv": "Hör gärna av dig"
+    },
+    "#contact .sec-lead": {
+      "en": "It is a permanent position as recruitment partner in Kronofogden's new unit for competence supply, based in Gothenburg. The application goes through Varbi, reference number 2026/159. If you want to know more about my background, get in touch here.",
+      "sv": "Det är en tillsvidaretjänst som rekryteringspartner i Kronofogdens nya enhet för kompetensförsörjning, med placering i Göteborg. Ansökan går via Varbi, referensnummer 2026/159. Vill du veta mer om min bakgrund, hör gärna av dig här."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Applying for: Recruitment Partner, Kronofogden",
+        "sv": "Söker: Rekryteringspartner, Kronofogden"
+      }
+    ]
+  }
+}
