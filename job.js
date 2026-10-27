@@ -110,6 +110,7 @@
     if (Array.isArray(job.points) && job.points.length) buildPoints(job.points);
     if (job.roles && Array.isArray(job.roles.groups)) buildRoles(job.roles);
     if (Array.isArray(job.built) && job.built.length) addBuilt(job.built);
+    if (Array.isArray(job.jobs) && job.jobs.length) addJobs(job.jobs);
 
     if (job.text) applyText(job.text);
 
@@ -236,6 +237,48 @@
     });
 
     if (window.CVSite) window.CVSite.watchReveals(document.querySelector('#built'));
+  }
+
+  // Extra roles in the Experience timeline, for work that belongs on one
+  // application but not on the base page. They are appended after the base
+  // roles, so the timeline should stay newest first: a pack only adds roles
+  // older than the last one. Each takes `title`, `date`, `company`, and
+  // optionally `place`, `about`, `desc` and `bullets`, in the same markup as
+  // the base roles so the theme styles them the same way.
+  function addJobs(jobs) {
+    var timeline = document.querySelector('#experience .timeline');
+    if (!timeline) return;
+
+    jobs.forEach(function (j) {
+      var article = el('article', 'job reveal');
+
+      var head = el('div', 'job-head');
+      head.appendChild(text('h3', 'job-title', j.title));
+      head.appendChild(text('span', 'job-date', j.date));
+      article.appendChild(head);
+
+      // The place sits in a span inside the company line, as in the base
+      // markup, which the themes hang their role tags on. The company name is
+      // plain text: a translated line would have its span wiped by the
+      // language toggle, which rewrites the whole element.
+      var company = el('p', 'job-company');
+      company.appendChild(document.createTextNode(j.company + ' '));
+      if (j.place) company.appendChild(text('span', '', j.place));
+      article.appendChild(company);
+
+      if (j.about) article.appendChild(text('p', 'job-about', j.about));
+      if (j.desc) article.appendChild(text('p', 'job-desc', j.desc));
+
+      if (Array.isArray(j.bullets) && j.bullets.length) {
+        var list = el('ul', 'job-bullets');
+        j.bullets.forEach(function (b) { list.appendChild(text('li', '', b)); });
+        article.appendChild(list);
+      }
+
+      timeline.appendChild(article);
+    });
+
+    if (window.CVSite) window.CVSite.watchReveals(timeline);
   }
 
   function el(tag, className) {

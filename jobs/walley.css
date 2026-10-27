@@ -1,0 +1,582 @@
+/* Walley — Training Manager Contact Center, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /walley and by cv.html?job=walley, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on walley.se:
+     #0d3843  deep petrol: the dark corner of their gradient, footer
+     #082229  the darkest petrol, under the gradient
+     #e4007e  magenta: the heart of the gradient, used as the accent here
+     #ff4d06  orange: the warm corner of the gradient
+     #ffdd00  yellow: the highlight where magenta meets orange
+     #f6f7f8  light grey: their alternate bands and soft cards
+     #000000  headings and body copy, on white
+     #555555  secondary copy
+
+   Their type is DM Sans throughout, set large and light (400) for headings
+   rather than bold. Buttons are full pills (50px radius): white on the
+   gradient, black on white. The signature is the gradient itself, a stack
+   of radial glows from petrol into magenta, orange and yellow. It carries
+   the hero and the contact band here.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f6f7f8;
+  --bg3:           #eef0f2;
+  --white:         #ffffff;
+
+  --border:        #e7e7e7;
+  --border-light:  #efefef;
+  --border-strong: #d7d7d7;
+
+  --ink:           #000000;
+  --ink-mid:       #272727;
+  --ink-light:     #555555;
+  --ink-dim:       #8e8e8e;
+
+  --amber:         #e4007e;
+  --amber-light:   #ff4d06;
+
+  --accent-rgb:    228,0,126;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 10px 30px rgba(8,34,41,0.08);
+  --shadow-sm:     0 1px 3px rgba(8,34,41,0.06);
+  --shadow-lg:     0 24px 60px rgba(8,34,41,0.35);
+
+  --radius:        16px;
+  --radius-lg:     24px;
+  --radius-pill:   50px;
+
+  /* Their hero gradient, as computed on walley.se, over solid petrol so the
+     Gothenburg photo underneath does not show through. */
+  --walley-gradient:
+    radial-gradient(circle at 100% 0%, #ffffff 2%, rgba(0,0,0,0) 15%),
+    radial-gradient(circle at 90% -10%, #ffdd00 5%, rgba(0,0,0,0) 40%),
+    radial-gradient(circle at 70% 0%, #e4007e 25%, rgba(0,0,0,0) 70%),
+    radial-gradient(circle at 10% 90%, #0d3843 30%, rgba(0,0,0,0) 100%),
+    radial-gradient(circle at 100% 100%, #ff4d06 30%, rgba(0,0,0,0) 70%),
+    #0d3843;
+  /* Their section gradient: the same glows, mirrored to the bottom edge. */
+  --walley-gradient-low:
+    radial-gradient(circle at 100% 100%, #ffffff 2%, rgba(0,0,0,0) 15%),
+    radial-gradient(circle at 90% 110%, #ffdd00 5%, rgba(0,0,0,0) 40%),
+    radial-gradient(circle at 70% 100%, #e4007e 25%, rgba(0,0,0,0) 70%),
+    radial-gradient(circle at 10% 40%, #0d3843 30%, rgba(0,0,0,0) 100%),
+    radial-gradient(circle at 80% 0%, #ff4d06 30%, rgba(0,0,0,0) 70%),
+    #0d3843;
+  --photo-veil: var(--walley-gradient);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e4007e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'DM Sans', Arial, Helvetica, sans-serif;
+  --sans:  'DM Sans', Arial, Helvetica, sans-serif;
+  --mono:  'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #e4007e; color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: DM Sans, large and light for headings, as "Betala med Walley, hur
+   och när du vill". Medium weight for card titles, as their feature cards.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name,
+.sec-title {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.025em;
+}
+.sec-title {
+  font-size: clamp(2.1rem, 4.4vw, 2.75rem);
+  line-height: 1.12;
+  color: #000000;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.hero-role,
+.about-quote,
+.job-about { font-style: normal; }
+
+/* Small labels: quiet grey, sentence weight, no shouting. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8e8e8e;
+}
+.sec-head .eyebrow { color: #e4007e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white bar with plain links and a black pill, as their header on the
+   white pages ("Kundservice", "Logga in").
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #efefef;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #000000;
+  border-radius: 50px;
+}
+.nav-links a:hover { color: #000000; background: #f6f7f8; }
+.nav-links a.active { color: #ffffff; background: #000000; box-shadow: none; }
+.nav-contact-link a { color: #e4007e; font-weight: 500; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.02em;
+}
+.brand em { font-style: normal; color: #000000; }
+.brand-dot { background: linear-gradient(135deg, #e4007e, #ff4d06); box-shadow: none; }
+.lang-toggle { background: #f6f7f8; border: 1px solid #e7e7e7; border-radius: 50px; color: #000000; font-weight: 500; }
+.lang-toggle:hover { background: #000000; border-color: #000000; color: #ffffff; }
+.nav-hamburger span { background: #000000; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { color: #000000; font-weight: 400; border-color: #efefef; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #e4007e; background: #f6f7f8; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: full pills, black filled or thin outlined, as "Logga in" and
+   "Upptäck Walley-appen".
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 50px;
+  border-width: 1px;
+  padding: 0.85rem 1.7rem;
+}
+.btn-primary {
+  background: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #e4007e; border-color: #e4007e; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #000000;
+  color: #000000;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #000000; border-color: #000000; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #e4007e; }
+
+/* Cards: soft grey fields with generous rounding, as their feature tiles. */
+.card {
+  background: #f6f7f8;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  box-shadow: none;
+}
+.card:hover { border-color: #e7e7e7; box-shadow: var(--shadow); }
+#experience .card { background: #f6f7f8; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #e7e7e7; color: #000000; border-radius: 50px; }
+.pill--accent { background: #000000; border-color: #000000; color: #ffffff; }
+.pick { background: #ffffff; border-color: #e7e7e7; }
+.pick b { color: #e4007e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: their gradient field with the name light and white, and white pill
+   buttons, as the walley.se front page.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.9);
+  --ink-dim:   rgba(255,255,255,0.72);
+  color: var(--ink-mid);
+}
+#top::after { background: var(--walley-gradient); }
+#top .eyebrow { color: rgba(255,255,255,0.86); }
+#top .hero-name {
+  color: #ffffff;
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  line-height: 1;
+}
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+#top .hero-lead { color: rgba(255,255,255,0.94); }
+#top .meta-row,
+#top .meta-row span { color: rgba(255,255,255,0.88); }
+#top .meta-row .sep { color: #ffdd00; }
+#top .meta-row svg { stroke: #ffffff; }
+#top .btn-primary { background: #ffffff; border-color: #ffffff; color: #000000; }
+#top .btn-primary:hover { background: #000000; border-color: #000000; color: #ffffff; }
+#top .btn-ghost { background: transparent; border-color: rgba(255,255,255,0.9); color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; border-color: #ffffff; color: #000000; }
+#top .hero-photo {
+  border: none;
+  border-radius: 32px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+#top .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* The stats as their white app cards floating on the gradient: big light
+   numbers in black, a quiet grey label beneath. */
+#top .stat-strip {
+  background: #ffffff;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+}
+#top .stat { border-color: #efefef; }
+#top .stat-num {
+  font-family: var(--sans);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.4rem, 4.6vw, 3.2rem);
+  color: #000000;
+}
+#top .stat:nth-child(1) .stat-num { color: #0d3843; }
+#top .stat:nth-child(2) .stat-num { color: #e4007e; }
+#top .stat:nth-child(3) .stat-num { color: #ff4d06; }
+#top .stat-label {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.45;
+  color: #555555;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on light grey, with a pill field as their search.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f6f7f8; border-color: #efefef; }
+.ask-title { font-size: 1.5rem; font-weight: 400; color: #000000; }
+.ask-input {
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 50px;
+  box-shadow: none;
+  color: #000000;
+}
+.ask-input:focus { border-color: #e4007e; box-shadow: 0 0 0 3px rgba(228,0,126,0.15); }
+.ask-btn { background: #000000; border-radius: 50px; }
+.ask-btn:hover { background: #e4007e; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #fff; border: 1px solid #d7d7d7; color: #000000; border-radius: 50px; font-weight: 400; }
+.ask-chip:hover { background: #000000; border-color: #000000; color: #ffffff; }
+.ask-out { background: #fff; border-color: #e7e7e7; border-radius: 24px; }
+.ask-dot { background: #e4007e; }
+
+/* About: the quote large and light, as their section headings. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+#about .brings {
+  background: #f6f7f8;
+  border: none;
+  border-radius: 24px;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+}
+#about .brings::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0d3843, #e4007e 55%, #ff4d06 85%, #ffdd00);
+}
+#about .brings-list li { color: #000000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match": white cards on the light grey band. The gradient runs as a
+   thin bar down each card's edge, and the ad's line sits as a quiet quote.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #f6f7f8; border-top: none; }
+#match .card {
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+#match .card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, #e4007e, #ff4d06 70%, #ffdd00);
+}
+#match .point-rule { display: none; }
+#match .point-num {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #e4007e;
+}
+#match .point-title { font-size: 1.4rem; font-weight: 500; line-height: 1.25; color: #000000; }
+#match .point-quote {
+  font-style: normal;
+  color: #555555;
+  border-left-color: #e7e7e7;
+}
+#match .point-body { color: #272727; }
+#match .point-roles { border-top: 1px solid #efefef; }
+#match .point-roles .pill { background: #f6f7f8; border-color: #f6f7f8; color: #0d3843; font-weight: 500; }
+
+/* Call listening and Telia are what this application leads with: those two
+   cards sit on the petrol, as their dark app sections. */
+#match .card:nth-child(2),
+#match .card:nth-child(3) { background: #0d3843; border-color: #0d3843; }
+#match .card:nth-child(2) .point-title,
+#match .card:nth-child(3) .point-title,
+#match .card:nth-child(2) .point-body,
+#match .card:nth-child(3) .point-body { color: #ffffff; }
+#match .card:nth-child(2) .point-quote,
+#match .card:nth-child(3) .point-quote { color: rgba(255,255,255,0.78); border-left-color: rgba(255,255,255,0.25); }
+#match .card:nth-child(2) .point-num,
+#match .card:nth-child(3) .point-num { color: #ffdd00; }
+#match .card:nth-child(2) .point-roles,
+#match .card:nth-child(3) .point-roles { border-top-color: rgba(255,255,255,0.16); }
+#match .card:nth-child(2) .point-roles-label,
+#match .card:nth-child(3) .point-roles-label { color: rgba(255,255,255,0.6); }
+#match .card:nth-child(2) .point-roles .pill,
+#match .card:nth-child(3) .point-roles .pill { background: rgba(255,255,255,0.1); border-color: transparent; color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: learning first. Course content stays last in the work grid, since
+   the base page lets an odd last card span the width.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+              5 course content
+   In the AI grid Role for Growth and the onboarding platform lead.
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #e4007e, #ff4d06);
+  border: none;
+  border-radius: 50%;
+}
+#built .built-icon svg { stroke: #ffffff; }
+.built-link { color: #000000; border-bottom: 1px solid #e4007e; font-weight: 500; }
+.built-link:hover { color: #e4007e; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a gradient timeline. Each role carries a tag with the parts
+   of the ad where the weight of the work lay, and the three teaching roles
+   get the gradient dot, as does Telia for its coaching of new colleagues.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager        6 First Line Support, Telia (from the pack)
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #e4007e, #ff4d06 45%, #e7e7e7 80%, transparent); }
+.job::before { background: #ffffff; border-color: #d7d7d7; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before,
+#experience .job:nth-of-type(6)::before { background: #e4007e; border-color: #e4007e; }
+.job-company { color: #0d3843; font-weight: 500; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.75rem;
+  border-radius: 50px;
+  background: #f6f7f8;
+  color: #0d3843;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after,
+#experience .job:nth-of-type(6) .job-company > span::after { background: #e4007e; color: #ffffff; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Assessment · Feedback · Candidate experience'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Training material · Learning'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Client contact · Follow-up'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Onboarding · Personnel development · Implementation'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Education management · Coaching · Result targets'; }
+#experience .job:nth-of-type(6) .job-company > span::after { content: 'Customer service · Coaching · Knowledge sharing'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Bedömning · Återkoppling · Kandidatupplevelse'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Utbildningsmaterial · Lärande'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Kundkontakt · Uppföljning'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Onboarding · Personalutveckling · Implementering'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildningsledning · Coachning · Resultatmål'; }
+:root:lang(sv) #experience .job:nth-of-type(6) .job-company > span::after { content: 'Kundservice · Coachning · Kunskapsdelning'; }
+
+.roles-card { position: relative; overflow: hidden; }
+.roles-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, #0d3843, #e4007e 55%, #ff4d06 85%, #ffdd00);
+}
+.roles-group .pill { background: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: coaching, call listening and pedagogy lead the pills.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #0d3843; font-weight: 500; }
+#education .callout { background: #0d3843; border: none; border-radius: 24px; }
+#education .callout-label { color: #ffdd00; }
+#education .callout-title,
+#education .callout-text { color: #ffffff; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on their section gradient, with the facts as a white app card.
+   The footer is the deep petrol.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.9);
+  --ink-dim:   rgba(255,255,255,0.72);
+}
+#contact::after { background: var(--walley-gradient-low); }
+#contact .eyebrow { color: rgba(255,255,255,0.86); }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead { color: rgba(255,255,255,0.92); }
+#contact .btn-primary { background: #ffffff; border-color: #ffffff; color: #000000; }
+#contact .btn-primary:hover { background: #000000; border-color: #000000; color: #ffffff; }
+#contact .btn-primary svg { fill: currentColor; }
+#contact .btn-ghost { border-color: rgba(255,255,255,0.9); color: #ffffff; }
+#contact .btn-ghost:hover { background: #ffffff; color: #000000; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 0.4rem 1.5rem 1.2rem;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts::before {
+  content: 'About me';
+  flex-basis: 100%;
+  padding: 0.9rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #efefef;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #e4007e;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Fakta om mig'; }
+#contact .contact-facts span {
+  padding: 0.5rem 1.5rem 0 0;
+  border: none;
+  color: #000000;
+  font-weight: 400;
+}
+
+.site-footer {
+  background: #0d3843;
+  border-top: none;
+  padding: 2.6rem 0 2.4rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.82);
+}
+.site-footer a { color: #ffffff; font-weight: 500; }
+.site-footer a:hover { color: #ffdd00; }
+
+/* No links to the separate CV page on this application: the menu item, the
+   mobile menu item and the hero button. job.js adds ?job= to their hrefs,
+   hence the prefix match. */
+.nav-links li:has(> a[href^="cv.html"]),
+.nav-mobile a[href^="cv.html"],
+#top a.btn[href^="cv.html"] { display: none; }
+
+@media (max-width: 780px) {
+  #top .hero-photo { max-width: 220px; }
+  #contact .contact-facts span { flex-basis: 100%; }
+}

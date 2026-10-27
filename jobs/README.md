@@ -38,6 +38,7 @@ keeps working. A plain string is used for both languages.
 | `text` | Any other text on the page, keyed by CSS selector — see below |
 | `roles` | Replaces the "Roles I've recruited for" card in Experience — see below |
 | `built` | Extra cards in "What I've built": each takes `title`, `text`, an optional `group` (`"ai"`, the default, or `"work"`) and an optional `icon` (a list of SVG path strings, 24×24). They are added after the base cards |
+| `jobs` | Extra roles at the end of the Experience timeline, for older work that belongs on one application only: each takes `title`, `date`, `company` and optionally `place` (e.g. `{"en": "· Gothenburg", "sv": "· Göteborg"}`), `about`, `desc` and `bullets` |
 
 Each entry in `points` takes `title`, `quote` and `body`. `quote` is the
 requirement lifted from the ad; `body` is the evidence that you already do it.
