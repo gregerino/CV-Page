@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap');
+
+/* Airon — Head of People and Culture, Gothenburg / Lidköping
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /airon and by cv.html?job=airon, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is Airon's own, read off airon.ai:
+     #000000 / #0F0F0F  the black of their hero and dark bands
+     #FFFFFF            the white page
+     #F3F3F3            the grey of the "Sign up" button and light bands
+     #111B1C            the teal-black ink on their buttons
+     #A2FFE3            the mint of "Login" and "Get started"
+     #D5D9DB            the cool grey of their image panels
+
+   Their identity is black and white with one mint accent: Newgrotesk set
+   large in a regular weight with tight tracking, small uppercase mono labels
+   ("NVIDIA® HGX B200", "Gothenburg; Hybrid"), and flat buttons with 8px
+   corners, mint on dark ink or dark ink on mint. Geist and Geist Mono stand
+   in for Newgrotesk and Newgrotesk Mono, as the closest open faces.
+
+   The hero, "How I match" and contact are their black bands. Each one
+   redefines the ink tokens locally, so the base components read white on
+   black without being restyled one by one.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f3f3f3;
+  --bg3:           #e8eaeb;
+  --white:         #ffffff;
+
+  --border:        rgba(17,27,28,0.10);
+  --border-light:  rgba(17,27,28,0.06);
+  --border-strong: rgba(17,27,28,0.22);
+
+  --ink:           #000000;
+  --ink-mid:       #1b2324;
+  --ink-light:     #4f5759;
+  --ink-dim:       #82898b;
+
+  /* Mint can't carry text on white, so the text accent is their teal-black
+     ink and the mint goes on fills and small marks below. */
+  --amber:         #111b1c;
+  --amber-light:   #000000;
+  --amber-pale:    rgba(162,255,227,0.35);
+
+  --accent-rgb:    17,27,28;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-sm:     none;
+  --shadow-lg:     0 18px 50px rgba(0,0,0,0.35);
+
+  --radius:        8px;
+  --radius-lg:     8px;
+  --radius-pill:   8px;
+
+  --photo-veil: linear-gradient(160deg,
+    rgba(0,0,0,0.93) 0%,
+    rgba(15,15,15,0.88) 50%,
+    rgba(17,27,28,0.84) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111b1c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+  --sans:  'Geist', 'Helvetica Neue', Arial, sans-serif;
+  --mono:  'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+::selection { background: #a2ffe3; color: #111b1c; }
+
+/* The dark bands: their black hero, and the same black for the match and
+   contact sections. Tokens are inherited, so redefining them here turns
+   every heading, label and border inside white-on-black. */
+#top,
+.cv-head,
+#match,
+#contact {
+  --ink:           #ffffff;
+  --ink-mid:       rgba(255,255,255,0.86);
+  --ink-light:     rgba(255,255,255,0.66);
+  --ink-dim:       rgba(255,255,255,0.46);
+  --border:        rgba(255,255,255,0.12);
+  --border-light:  rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.24);
+  --amber:         #a2ffe3;
+  color: #ffffff;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: large and regular, tightly tracked, as on airon.ai
+   ───────────────────────────────────────────────────────────────────────── */
+body { font-size: 15.5px; color: var(--ink-mid); }
+
+.hero-name,
+.cv-name { font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; }
+.sec-title { font-weight: 400; letter-spacing: -0.04em; line-height: 1.05; max-width: 20ch; }
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title { font-weight: 400; letter-spacing: -0.03em; }
+.stat-num { font-weight: 400; letter-spacing: -0.04em; }
+
+/* No italics on their site. */
+.hero-role,
+.about-quote,
+.point-quote,
+.job-about { font-style: normal; }
+.about-quote { font-weight: 400; letter-spacing: -0.025em; }
+
+/* Labels in their small uppercase mono. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.ask-out-label {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.eyebrow { color: var(--ink-light); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: white, flat, with their mint "Login" button as the call to action
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: rgba(255,255,255,0.94);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.nav-bar { border-top-color: rgba(0,0,0,0.05); }
+.brand { font-weight: 500; letter-spacing: -0.04em; font-size: 1.2rem; }
+.brand em { color: #000; }
+.brand-dot { background: #a2ffe3; box-shadow: 0 0 0 3px #111b1c; width: 9px; height: 9px; }
+.nav-links a { font-size: 0.85rem; font-weight: 400; color: #000; border-radius: 8px; }
+.nav-links a:hover { background: #f3f3f3; color: #000; }
+.nav-links a.active { background: #f3f3f3; color: #000; }
+.lang-toggle { border-radius: 8px; }
+.lang-toggle:hover { border-color: #111b1c; color: #111b1c; }
+.nav-mobile { background: #fff; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: mint on ink, ink on mint, 8px corners, no shadow
+   ───────────────────────────────────────────────────────────────────────── */
+.btn { font-weight: 400; border-radius: 8px; padding: 0.8rem 1.3rem; letter-spacing: -0.01em; }
+.btn:hover { transform: none; }
+.btn-sm { padding: 0.5rem 0.9rem; }
+.btn-primary {
+  background: #a2ffe3;
+  border-color: #a2ffe3;
+  color: #111b1c;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #8cf7d6; border-color: #8cf7d6; box-shadow: none; }
+.btn-primary svg { fill: #111b1c; }
+.btn-ghost {
+  background: #f3f3f3;
+  border-color: #f3f3f3;
+  color: #000;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #e8eaeb; border-color: #e8eaeb; color: #000; }
+
+/* On black, the ghost buttons become their "Explore our compute": ink
+   with mint text. */
+#top .btn-ghost,
+.cv-head .btn-ghost,
+#contact .btn-ghost {
+  background: #111b1c;
+  border-color: rgba(162,255,227,0.22);
+  color: #a2ffe3;
+}
+#top .btn-ghost:hover,
+.cv-head .btn-ghost:hover,
+#contact .btn-ghost:hover { background: #18292a; border-color: rgba(162,255,227,0.5); color: #a2ffe3; }
+
+/* Flat cards and tags. */
+.card {
+  background: #fff;
+  backdrop-filter: none;
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: none;
+}
+.band--alt .card { background: #fff; border-color: transparent; }
+.pill {
+  background: #f3f3f3;
+  border-color: transparent;
+  color: #000;
+  border-radius: 8px;
+}
+.band--alt .pill { background: #fff; }
+.band--alt .card .pill { background: #f3f3f3; }
+.pill--accent { background: #a2ffe3; border-color: #a2ffe3; color: #111b1c; font-weight: 400; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: their black, with "Gothenburg; Hybrid" in mono
+   ───────────────────────────────────────────────────────────────────────── */
+#top .eyebrow { color: #a2ffe3; }
+#top .hero-role,
+.cv-head .hero-role { color: #a2ffe3; font-weight: 400; letter-spacing: -0.02em; }
+#top .hero-lead { color: rgba(255,255,255,0.78); }
+#top .hero-photo { border-radius: 8px; border-color: rgba(255,255,255,0.1); filter: grayscale(0.15); }
+
+#top .meta-row {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.72);
+  gap: 0.4rem 0;
+}
+#top .meta-row svg { stroke: #a2ffe3; }
+#top .meta-row .sep { font-size: 0; margin: 0 0.6rem 0 0; }
+#top .meta-row .sep::before { content: ';'; font-size: 0.82rem; color: rgba(255,255,255,0.72); }
+
+#top .stat-strip {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+#top .stat { border-right-color: rgba(255,255,255,0.1); }
+#top .stat-num { color: #a2ffe3; }
+
+.cv-head .cv-lead,
+.cv-head .cv-contact { color: rgba(255,255,255,0.72); }
+.cv-head .cv-contact a { color: rgba(255,255,255,0.86); }
+.cv-head .cv-contact a:hover { color: #a2ffe3; border-color: #a2ffe3; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Ask bar: their grey band, white field, ink button
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f3f3f3; border-color: transparent; }
+.ask-input { background: #fff; border-color: transparent; border-radius: 8px; box-shadow: none; }
+.ask-input:focus { border-color: #111b1c; box-shadow: 0 0 0 3px rgba(162,255,227,0.7); }
+.ask-btn { background: #111b1c; border-radius: 6px; }
+.ask-btn svg { stroke: #a2ffe3; }
+.ask-btn:hover { background: #000; }
+.ask-chip { background: #fff; border-color: transparent; border-radius: 8px; color: #000; }
+.ask-chip:hover { background: #a2ffe3; border-color: #a2ffe3; color: #111b1c; }
+.ask-dot { background: #111b1c; }
+.ask-out { border-radius: 8px; }
+
+/* About: the tick on a mint dot. */
+.brings-list li::before { background-color: #a2ffe3; border-color: #a2ffe3; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match": a black band, ink cards, mint numbers
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #0f0f0f; border-top: none; }
+#match .eyebrow { color: #a2ffe3; }
+#match .card {
+  background: #111b1c;
+  border-color: rgba(162,255,227,0.08);
+}
+#match .point-rule { background: #a2ffe3; height: 2px; width: 32px; }
+#match .point-num { color: #a2ffe3; }
+#match .point-quote {
+  border-left-color: rgba(162,255,227,0.4);
+  color: rgba(255,255,255,0.6);
+}
+#match .point-body { color: rgba(255,255,255,0.86); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: onboarding and the ATS first
+   ─────────────────────────────────────────────────────────────────────────
+   Reordered visually, so every card keeps its own link.
+     Companies:  onboarding, ATS, career programme, LMS, course content
+   Course content is last in the markup too, so the base rule still lets it
+   span the full width.
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 5; }
+
+/* With AI: the recruitment tools, then this site and the rest.
+     Recruitment OS, agentic OS, this site, onboarding platform, more tools,
+     QuestLog, finance */
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+
+#built .built-card { background: #f3f3f3; border-color: transparent; }
+#built .built-icon { background: #111b1c; border-color: #111b1c; border-radius: 8px; }
+#built .built-icon svg { stroke: #a2ffe3; }
+.built-link { color: #000; text-decoration: underline; text-decoration-color: #a2ffe3; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: the roles in their mono spec labels
+   ─────────────────────────────────────────────────────────────────────────
+   airon.ai labels each GPU with a small uppercase mono line. Here each role
+   gets one, naming the part closest to this job. Order stays chronological.
+     1 Recruitment Consultant   Tech recruiting
+     2 Course Developer         HR content
+     3 Business Manager         Onboarding
+     4 TA Lead                  Management team
+     5 Education Manager        Education
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { background: linear-gradient(to bottom, #111b1c, rgba(17,27,28,0.15) 70%, transparent); }
+.job::before { background: #a2ffe3; border-color: #111b1c; }
+.job-company { color: #000; font-weight: 500; }
+.job-date { font-family: var(--mono); }
+.job-bullets li::before { background: #111b1c; }
+
+#experience .job .job-company::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  background: #a2ffe3;
+  border-radius: 4px;
+  color: #111b1c;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 1px;
+}
+#experience .job:nth-of-type(1) .job-company::after { content: 'Tech recruiting'; }
+#experience .job:nth-of-type(2) .job-company::after { content: 'HR content'; }
+#experience .job:nth-of-type(3) .job-company::after { content: 'Onboarding'; }
+#experience .job:nth-of-type(4) .job-company::after { content: 'Management team'; }
+#experience .job:nth-of-type(5) .job-company::after { content: 'Education'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company::after { content: 'Teknisk rekrytering'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company::after { content: 'HR-innehåll'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company::after { content: 'Ledningsgrupp'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company::after { content: 'Utbildning'; }
+
+/* Roles recruited for: engineering first, since Airon builds and runs its
+   own datacenters. Then software, embedded, and product. */
+#experience .roles-group:nth-of-type(4) { order: 1; }
+#experience .roles-group:nth-of-type(1) { order: 2; }
+#experience .roles-group:nth-of-type(2) { order: 3; }
+#experience .roles-group:nth-of-type(3) { order: 4; }
+
+/* Education: flat grey callout with a mint rule. */
+#education .edu-school { color: #000; font-weight: 500; }
+#education .edu-date { font-family: var(--mono); }
+#education .callout {
+  background: #f3f3f3;
+  border-left: 3px solid #a2ffe3;
+  border-radius: 0 8px 8px 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact and footer
+   ─────────────────────────────────────────────────────────────────────────
+   Their closing "Ready to join us?" band in black. The facts as mono spec
+   lines, the role itself on mint. Footer white with mono, as theirs.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact .eyebrow { color: #a2ffe3; }
+#contact .contact-btns .btn-primary svg { fill: #111b1c; }
+#contact .contact-facts {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  gap: 0.5rem;
+}
+#contact .contact-facts span {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 6px;
+  color: rgba(255,255,255,0.78);
+}
+#contact .contact-facts span:last-child {
+  background: #a2ffe3;
+  border-color: #a2ffe3;
+  color: #111b1c;
+}
+
+.site-footer { background: #fff; border-top: 1px solid rgba(0,0,0,0.08); }
+.site-footer p { font-family: var(--mono); color: #4f5759; text-transform: uppercase; letter-spacing: 0.05em; }
+.site-footer a { color: #000; }
+.site-footer a:hover { color: #000; text-decoration: underline; text-decoration-color: #a2ffe3; text-decoration-thickness: 2px; }
+
+@media (max-width: 720px) {
+  #experience .job .job-company::after { display: table; margin: 0.4rem 0 0; }
+}

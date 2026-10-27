@@ -1,0 +1,418 @@
+{
+  "company": "Airon",
+  "roleName": "Head of People and Culture",
+  "eyebrow": {
+    "en": "Application · Head of People and Culture · Airon",
+    "sv": "Ansökan · Head of People and Culture · Airon"
+  },
+  "role": {
+    "en": "Recruitment and HR in tech companies",
+    "sv": "Rekrytering och HR i techbolag"
+  },
+  "lead": {
+    "en": "I've worked in IT and tech companies for about seven years, mostly with recruitment and HR. In a fast-growing IT consultancy I sat on the management team. There I built the onboarding from scratch and brought in an ATS. Now I'd like to help build the people work at Airon from the start.",
+    "sv": "Jag har jobbat i IT- och techbolag i ungefär sju år, mest med rekrytering och HR. I ett snabbväxande IT-konsultbolag satt jag i ledningsgruppen. Där byggde jag onboardingen från grunden och införde ett ATS. Nu skulle jag gärna vara med och bygga upp HR-arbetet hos er från början."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Lines from the ad, and what I've done in each part.",
+    "sv": "Rader ur annonsen, och vad jag har gjort inom varje del."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Building the people work from the start",
+        "sv": "Bygga upp HR-arbetet från början"
+      },
+      "quote": {
+        "en": "Have built or substantially rebuilt a people function in a growing company, and have done the work yourself rather than only led it.",
+        "sv": "Har byggt upp eller i grunden byggt om en HR-funktion i ett växande bolag, och har gjort jobbet själv snarare än bara lett det."
+      },
+      "body": {
+        "en": "In a fast-growing IT consultancy I sat on the management team and was responsible for recruitment and a group of 15+ consultants. There I brought in an ATS and built the onboarding from scratch. I was also part of building a career programme for junior developers.",
+        "sv": "I ett snabbväxande IT-konsultbolag satt jag i ledningsgruppen och ansvarade för rekryteringen och en konsultgrupp på 15+ personer. Där införde jag ett ATS och byggde onboardingen från grunden. Jag var också med och byggde ett karriärprogram för juniora utvecklare."
+      }
+    },
+    {
+      "title": {
+        "en": "Recruiting for technical roles",
+        "sv": "Rekrytering till tekniska roller"
+      },
+      "quote": {
+        "en": "Are strong on recruiting, particularly for technical and operational roles in a tight market.",
+        "sv": "Är stark inom rekrytering, särskilt till tekniska och operativa roller på en tuff marknad."
+      },
+      "body": {
+        "en": "I've recruited for about five years, mostly for technical roles, from developers to electrical and HVDC engineers. I ran the processes myself, from needs analysis to final selection, and searched for candidates actively.",
+        "sv": "Jag har rekryterat i ca 5 år, mest till tekniska roller, från utvecklare till el- och HVDC-ingenjörer. Jag drev processerna själv, från behovsanalys till slutligt urval, och sökte upp kandidater aktivt."
+      }
+    },
+    {
+      "title": {
+        "en": "Process and employer brand",
+        "sv": "Process och arbetsgivarvarumärke"
+      },
+      "quote": {
+        "en": "Build our recruiting engine (process, employer brand and pipeline) and personally drive hiring while we grow.",
+        "sv": "Bygga vår rekryteringsmotor (process, arbetsgivarvarumärke och pipeline) och själv driva rekryteringen medan vi växer."
+      },
+      "body": {
+        "en": "In an IT consultancy I was responsible for employer branding alongside the recruitment, and I set up the workflows in the ATS. As a recruitment consultant I kept a pipeline of candidates going for the roles I worked on.",
+        "sv": "I ett IT-konsultbolag ansvarade jag för employer branding vid sidan av rekryteringen, och jag satte upp arbetsflödena i ATS:et. Som rekryteringskonsult höll jag igång en pipeline av kandidater till rollerna jag jobbade med."
+      }
+    },
+    {
+      "title": "Onboarding",
+      "quote": {
+        "en": "Own onboarding, so that people are productive and part of the team from their first week.",
+        "sv": "Äga onboardingen, så att nya medarbetare är produktiva och en del av teamet från första veckan."
+      },
+      "body": {
+        "en": "I've built onboarding in two companies that didn't have any before. Both times the aim was that new employees would feel engaged and want to stay.",
+        "sv": "Jag har byggt onboarding i två bolag som inte hade någon sedan tidigare. Båda gångerna var målet att nyanställda skulle känna sig engagerade och vilja stanna."
+      }
+    },
+    {
+      "title": {
+        "en": "HR support and development",
+        "sv": "HR-stöd och utveckling"
+      },
+      "quote": {
+        "en": "Put the practical foundation in place: employment terms, policies, work environment, performance and development.",
+        "sv": "Lägga den praktiska grunden: anställningsvillkor, policyer, arbetsmiljö, prestation och utveckling."
+      },
+      "body": {
+        "en": "I had HR responsibility for a group of 15+ consultants and looked after their competence development. At an HR tech company I developed course content in HR together with HR experts and kept it up to date.",
+        "sv": "Jag hade HR-ansvar för en konsultgrupp på 15+ personer och tog hand om deras kompetensutveckling. På ett HR-techbolag tog jag fram kursinnehåll inom HR tillsammans med HR-experter och höll det aktuellt."
+      }
+    },
+    {
+      "title": {
+        "en": "Close to leadership and managers",
+        "sv": "Nära ledning och chefer"
+      },
+      "quote": {
+        "en": "Are comfortable being a strategic partner to leadership and the person who fixes the practical things.",
+        "sv": "Trivs med att vara strategisk partner till ledningen och den som fixar det praktiska."
+      },
+      "body": {
+        "en": "I've sat on a management team, and I've advised hiring managers on the process and how to assess candidates. I've also booked the interviews and been the candidates' contact person.",
+        "sv": "Jag har suttit i en ledningsgrupp, och jag har gett råd till rekryterande chefer om processen och hur kandidaterna ska bedömas. Jag har också bokat intervjuerna och varit kandidaternas kontaktperson."
+      }
+    },
+    {
+      "title": {
+        "en": "Culture as the company grows",
+        "sv": "Kulturen när bolaget växer"
+      },
+      "quote": {
+        "en": "Keep our culture deliberate rather than accidental as headcount grows across sites.",
+        "sv": "Hålla kulturen medveten snarare än slumpmässig när antalet anställda växer på flera orter."
+      },
+      "body": {
+        "en": "In an IT consultancy I held internal workshops and helped shape an internal learning system. At a vocational school I improved the internal communication flows.",
+        "sv": "I ett IT-konsultbolag höll jag interna workshops och var med och utformade ett internt lärandesystem. På en yrkeshögskola förbättrade jag de interna kommunikationsflödena."
+      }
+    },
+    {
+      "title": {
+        "en": "AI in the everyday work",
+        "sv": "AI i vardagsarbetet"
+      },
+      "quote": {
+        "en": "Have a genuine interest in using AI and modern tools to improve how work gets done.",
+        "sv": "Har ett genuint intresse av att använda AI och moderna verktyg för att förbättra hur arbetet görs."
+      },
+      "body": {
+        "en": "I use AI every day, mostly Claude. I've built Recruitment OS, which turns a requirements profile into an interview package. I've also built a system where agents do the groundwork in recruitment and the recruiter makes the decisions. I have no background in programming.",
+        "sv": "Jag använder AI varje dag, mest Claude. Jag har byggt Recruitment OS, som gör om en kravprofil till ett intervjupaket. Jag har också byggt ett system där agenter gör grovjobbet i rekryteringen och rekryteraren fattar besluten. Jag har ingen bakgrund inom programmering."
+      }
+    },
+    {
+      "title": {
+        "en": "A broad role",
+        "sv": "En bred roll"
+      },
+      "quote": {
+        "en": "Are open to a flexible and evolving role that might also include more general and coordinating tasks.",
+        "sv": "Är öppen för en flexibel roll som kan förändras och även innehålla mer allmänna och samordnande uppgifter."
+      },
+      "body": {
+        "en": "I've often had two roles in one. At a vocational school I was both education manager and ICT manager. In an IT consultancy I was Talent Acquisition Lead and consultant manager at the same time.",
+        "sv": "Jag har ofta haft två roller i en. På en yrkeshögskola var jag både utbildningsledare och ICT-ansvarig. I ett IT-konsultbolag var jag Talent Acquisition Lead och konsultansvarig samtidigt."
+      }
+    },
+    {
+      "title": {
+        "en": "Gothenburg and Lidköping",
+        "sv": "Göteborg och Lidköping"
+      },
+      "quote": {
+        "en": "Location: Gothenburg. Hybrid setup is possible for the right person. Regular presence in Lidköping expected.",
+        "sv": "Ort: Göteborg. Hybrid är möjligt för rätt person. Regelbunden närvaro i Lidköping förväntas."
+      },
+      "body": {
+        "en": "I live in Gothenburg and have a driving licence (B), so regular days in Lidköping work for me. Swedish is my native language and I'm fluent in English.",
+        "sv": "Jag bor i Göteborg och har körkort (B), så regelbundna dagar i Lidköping fungerar för mig. Svenska är mitt modersmål och jag är flytande i engelska."
+      }
+    }
+  ],
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Driving licence (B)",
+      "sv": "Körkort (B)"
+    },
+    "#top .stat-num": [
+      "~5",
+      "15+",
+      "2"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years recruiting, mostly for technical roles",
+        "sv": "År av rekrytering, mest till tekniska roller"
+      },
+      {
+        "en": "Consultants I had HR responsibility for, on the management team",
+        "sv": "Konsulter jag hade HR-ansvar för, som del av ledningsgruppen"
+      },
+      {
+        "en": "Companies where I built onboarding from scratch",
+        "sv": "Bolag där jag byggt onboarding från grunden"
+      }
+    ],
+    "#ask-chips .ask-chip": [
+      {
+        "en": "Has he built onboarding from scratch?",
+        "sv": "Har han byggt onboarding från grunden?"
+      },
+      {
+        "en": "How has he worked with leadership?",
+        "sv": "Hur har han jobbat med ledningen?"
+      },
+      {
+        "en": "How does he use AI at work?",
+        "sv": "Hur använder han AI i jobbet?"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background",
+      "sv": "Fråga om min bakgrund"
+    },
+    "#about .sec-title": {
+      "en": "From vocational school to HR in tech",
+      "sv": "Från yrkeshögskola till HR i tech"
+    },
+    "#about .about-quote": {
+      "en": "I like building things from the start, together with the people who will use them.",
+      "sv": "Jag tycker om att bygga upp saker från början, tillsammans med dem som ska använda dem."
+    },
+    "#about .about-body": [
+      {
+        "en": "I started at a vocational IT school. There I led programmes and took part in recruiting teachers.",
+        "sv": "Jag började på en yrkeshögskola inom IT. Där ledde jag utbildningsprogram och var med och rekryterade lärare."
+      },
+      {
+        "en": "After that I joined a fast-growing IT consultancy and sat on the management team. I was responsible for recruitment and for a group of 15+ consultants, and I built the onboarding there.",
+        "sv": "Sedan gick jag till ett snabbväxande IT-konsultbolag och satt i ledningsgruppen. Jag ansvarade för rekryteringen och för en konsultgrupp på 15+ personer, och byggde onboardingen där."
+      },
+      {
+        "en": "Since then I've recruited for technical roles in consulting firms and developed course content in HR at an HR tech company. I have a bachelor's degree in behavioural science.",
+        "sv": "Sedan dess har jag rekryterat till tekniska roller i konsultbolag och tagit fram kursinnehåll inom HR på ett HR-techbolag. Jag har en kandidatexamen i beteendevetenskap."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "Building something where there was nothing before",
+        "sv": "Att bygga upp något där det inte fanns något förut"
+      },
+      {
+        "en": "Finding the right person for a role",
+        "sv": "Att hitta rätt person till en roll"
+      },
+      {
+        "en": "Giving new colleagues a good first week",
+        "sv": "Att ge nya kollegor en bra första vecka"
+      },
+      {
+        "en": "Working closely with managers",
+        "sv": "Att jobba nära chefer"
+      },
+      {
+        "en": "Using AI so the everyday work goes faster",
+        "sv": "Att använda AI så att vardagsarbetet går fortare"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "I built most of this together with colleagues at work, for example onboarding and the workflows in an ATS. The AI tools I built on my own.",
+      "sv": "Det mesta här byggde jag tillsammans med kollegor, till exempel onboarding och arbetsflöden i ett ATS. AI-verktygen har jag byggt själv."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in and around the tech industry, mostly in consulting and recruitment firms.",
+      "sv": "Fem roller i och nära techbranschen, mest i konsult- och rekryteringsbolag."
+    },
+    "#experience .roles-lead": {
+      "en": "A selection, from software to electrical and power engineering.",
+      "sv": "Ett axplock, från mjukvara till el- och kraftteknik."
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science in technical environments",
+      "sv": "Beteendevetenskap i tekniska miljöer"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, focused on how people work in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning på hur människor fungerar i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Certified education manager from the Swedish National Agency for Higher Vocational Education, focused on pedagogical planning and course design.",
+        "sv": "Certifierad utbildningsledare från Myndigheten för yrkeshögskolan, med fokus på pedagogisk planering och kursdesign."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Education",
+      "sv": "Utbildning"
+    },
+    "#education .callout-title": {
+      "en": "What the education gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "Behavioural science gave me a grounding in how people and groups work. I've had the most use of it when I recruit and when I plan onboarding.",
+      "sv": "Beteendevetenskapen gav mig en grund i hur människor och grupper fungerar. Mest nytta har jag haft av den när jag rekryterar och planerar onboarding."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "People & Culture",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      "HR",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      "Employer Branding",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      "Learning & Development",
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Claude Code",
+      "Teamtailor",
+      "Workbuster",
+      "Slack",
+      "Monday.com",
+      "Winningtemp",
+      "Office 365",
+      "Canva"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "Here's a bit about me outside work.",
+      "sv": "Här är lite om mig utanför jobbet."
+    },
+    "#contact .sec-title": {
+      "en": "I'd be glad to talk more",
+      "sv": "Jag pratar gärna mer"
+    },
+    "#contact .sec-lead": {
+      "en": "The role is based in Gothenburg, with regular days in Lidköping. I'm sending my application to career@airon.ai. If you have questions before then, you're welcome to call or email me.",
+      "sv": "Rollen är placerad i Göteborg, med regelbunden närvaro i Lidköping. Min ansökan skickar jag till career@airon.ai. Har ni frågor innan dess går det bra att ringa eller mejla mig."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Driving licence: B",
+        "sv": "Körkort: B"
+      },
+      {
+        "en": "Applying for: Head of People and Culture, Airon",
+        "sv": "Söker: Head of People and Culture, Airon"
+      }
+    ]
+  }
+}
