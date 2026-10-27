@@ -645,6 +645,10 @@
         "en": "Customer service: Telia, 5 years",
         "sv": "Kundservice: Telia, 5 år"
       }
-    ]
+    ],
+    ".site-footer p": {
+      "en": "Built by Marcus Hultberg · Gothenburg · 2026",
+      "sv": "Byggd av Marcus Hultberg · Göteborg · 2026"
+    }
   }
 }

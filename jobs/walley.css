@@ -569,6 +569,15 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 .site-footer a { color: #ffffff; font-weight: 500; }
 .site-footer a:hover { color: #ffdd00; }
 
+/* The ad asks for no photo, so the portrait is left out and the hero text
+   takes the full width. */
+#top .hero-photo { display: none; }
+#top .hero-grid { grid-template-columns: minmax(0, 1fr); }
+
+/* The CV PDF carries the same photo, so the hero button to it goes too. The
+   footer line is rewritten without its PDF link in walley.json. */
+#top a.btn[href$=".pdf"] { display: none; }
+
 /* No links to the separate CV page on this application: the menu item, the
    mobile menu item and the hero button. job.js adds ?job= to their hrefs,
    hence the prefix match. */
