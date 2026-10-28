@@ -278,8 +278,8 @@
       }
     ],
     ".ask-title": {
-      "en": "Ask a question to the AI assistant I built",
-      "sv": "Ställ en fråga till AI-assistenten jag byggt"
+      "en": "Ask my AI Assistant about me",
+      "sv": "Fråga min AI-assistent om mig"
     },
     "#ask-chips .ask-chip": [
       { "en": "How has he built onboarding for new hires?", "sv": "Hur har han byggt onboarding för nyanställda?" },
