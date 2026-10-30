@@ -169,6 +169,28 @@
     if (window.CVLang) window.CVLang.refresh();
   }
 
+  // Colour helpers for the link below: the first opaque background up the
+  // tree, and the WCAG contrast ratio between two rgb() strings.
+  function rgb(c) { return (c.match(/[\d.]+/g) || []).map(Number); }
+  function backdrop(el) {
+    for (; el; el = el.parentElement) {
+      var c = rgb(getComputedStyle(el).backgroundColor);
+      if (c.length && (c.length < 4 || c[3] > 0.5)) return c;
+    }
+    return [255, 255, 255];
+  }
+  function luminance(c) {
+    var v = c.slice(0, 3).map(function (x) {
+      x /= 255;
+      return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+  }
+  function contrast(color, ground) {
+    var a = luminance(rgb(color)), b = luminance(ground);
+    return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+  }
+
   // The link at the foot of a tile that opens the whole section.
   var MORE = {
     match:      { en: 'Everything in full', sv: 'Allt i sin helhet' },
@@ -186,13 +208,34 @@
     btn.innerHTML = text(MORE[id].en, MORE[id].sv) + ' <span aria-hidden="true">→</span>';
     btn.addEventListener('click', function () { lastTrigger = btn; openSection(section); });
     section.querySelector(':scope > .wrap').appendChild(btn);
-    // Job themes paint some tiles dark without touching --ink. The tile's
-    // small label is the one colour every theme makes readable there.
-    var label = section.querySelector('.eyebrow');
-    if (label) btn.style.color = getComputedStyle(label).color;
+    // Job themes paint some tiles dark without touching --ink, and some
+    // give the small label a pale accent. Take whichever of the label's and
+    // the heading's colour stands out more against the tile.
+    var picks = [section.querySelector('.eyebrow'), section.querySelector('.sec-title')]
+      .filter(Boolean)
+      .map(function (el) { return getComputedStyle(el).color; });
+    if (picks.length) {
+      var ground = backdrop(section);
+      picks.sort(function (a, b) { return contrast(b, ground) - contrast(a, ground); });
+      btn.style.color = picks[0];
+    }
   });
 
   enhance();
+
+  // The Experience tile puts its dates in a column; size it to the widest
+  // date once the fonts are in, since a job theme may bring a wide one.
+  function sizeDates() {
+    var tl = document.querySelector('#experience > .wrap .timeline');
+    if (!tl) return;
+    var widest = 0;
+    tl.querySelectorAll('.job-date').forEach(function (d) {
+      widest = Math.max(widest, d.getBoundingClientRect().width);
+    });
+    if (widest) tl.style.setProperty('--date-col', Math.ceil(widest) + 'px');
+  }
+  sizeDates();
+  if (document.fonts) document.fonts.ready.then(sizeDates);
 
   // About and Personal live in sheets: <dialog class="sheet"> around the
   // section. A link to #about (the nav, "More about me", an old /about.html
@@ -222,7 +265,10 @@
   if (initial) initial.showModal();
 
   // job.js builds cards and roles after load and needs them picked up too.
-  window.CVSite = { watchReveals: watchReveals, enhance: enhance };
+  window.CVSite = {
+    watchReveals: watchReveals,
+    enhance: function (root) { enhance(root); sizeDates(); }
+  };
 
   /* ── Active section in the nav ── */
   var navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');

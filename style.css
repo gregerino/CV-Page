@@ -1105,6 +1105,15 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
 .cv-main .job { padding-bottom: 2rem; }
 .cv-main .job:last-child { padding-bottom: 0; }
 
+/* An application's CV (cv.html?job=<slug>): the pack's lead under the role,
+   and "How I match" above the roles. Added by job.js. */
+.cv-profile { max-width: 68ch; font-size: 0.98rem; line-height: 1.65; color: var(--ink-mid); margin: -0.6rem 0 1.3rem; }
+.cv-match { padding-bottom: 1.6rem; margin-bottom: 1.8rem; border-bottom: 1px solid var(--border); }
+.cv-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.6rem; margin-top: 0.8rem; }
+.cv-point-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; }
+.cv-point-body { font-size: 0.85rem; line-height: 1.55; color: var(--ink-mid); }
+@media (max-width: 720px) { .cv-points { grid-template-columns: 1fr; } }
+
 @media (max-width: 900px) {
   .cv-layout { grid-template-columns: 1fr; }
 }
@@ -1135,6 +1144,7 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
   .cv-top .eyebrow { margin-bottom: 1mm; font-size: 7pt; }
   .cv-name { font-size: 26pt; margin-bottom: 1mm; }
   .cv-top .hero-role { margin: 0; font-size: 11pt; }
+  .cv-profile { margin: 2mm 0 0; max-width: none; font-size: 9pt; line-height: 1.45; }
 
   .cv-layout { grid-template-columns: 60mm minmax(0, 1fr); gap: 6mm; }
   .cv-side { gap: 3.5mm; }
@@ -1155,6 +1165,11 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
   .cv-main .eyebrow { font-size: 7pt; margin-bottom: 1mm; }
   .cv-main .sec-title { font-size: 15pt; margin-bottom: 3mm; }
   .cv-lead { display: none; }
+  .cv-match { padding-bottom: 4mm; margin-bottom: 4mm; }
+  .cv-points { gap: 2.5mm 5mm; margin-top: 0; }
+  .cv-point { break-inside: avoid; }
+  .cv-point-title { font-size: 9pt; margin-bottom: 0.5mm; }
+  .cv-point-body { font-size: 8.2pt; line-height: 1.4; }
   .timeline { padding-left: 6mm; }
   .timeline::before { left: 1.6mm; }
   .job::before { left: -6mm; top: 1.2mm; width: 3mm; height: 3mm; }
@@ -1214,7 +1229,6 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
 .bento > .tile {
   position: relative;
   min-width: 0;
-  background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1225,6 +1239,9 @@ body:has(.bento) .nav-top { max-width: 1440px; padding: 0 1.25rem; }
 body:has(.cv) .nav-top { max-width: 1240px; padding: 0 1.25rem; }
 /* The AI button sits over the bottom-right tile; its links stop above it. */
 .bento > #contact { padding-bottom: 4.6rem; }
+/* The tile colour is a default only: :where() keeps it below a job
+   theme's own `.band--alt { background }`, which comes with light text. */
+:where(.bento) > .tile { background: var(--white); }
 .bento > .tile:target { outline: 3px solid var(--amber); outline-offset: 2px; }
 .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap {
   max-width: none;
@@ -1322,7 +1339,7 @@ body:has(.cv) .nav-top { max-width: 1240px; padding: 0 1.25rem; }
   flex-wrap: wrap;
   align-items: baseline;
   column-gap: 0.6rem;
-  padding: 0.35rem 0.6rem 0.35rem 9.2rem;
+  padding: 0.35rem 0.6rem 0.35rem calc(var(--date-col, 8rem) + 1.4rem);
   margin-left: -0.6rem;
   border-radius: 10px;
 }
@@ -1331,8 +1348,9 @@ body:has(.cv) .nav-top { max-width: 1240px; padding: 0 1.25rem; }
 .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-title { order: 0; font-size: 0.9rem; line-height: 1.3; }
 .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-company { order: 1; font-size: 0.78rem; margin: 0; }
 /* Dates first, in a column of their own, as on Oscar's career list. They
-   sit in the row's left padding, so a title that wraps stays in line. */
-.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-date { position: absolute; left: 0.6rem; top: 0.55rem; font-size: 0.68rem; }
+   sit in the row's left padding, so a title that wraps stays in line;
+   site.js sets --date-col to the widest date, whatever the theme's font. */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-date { position: absolute; left: 0.6rem; top: 0.55rem; font-size: 0.68rem; white-space: nowrap; }
 /* The town is the same for every role; the tile keeps only the role tag
    that hangs off it. */
 .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-company > span { font-size: 0; }
@@ -1401,6 +1419,9 @@ dialog.sheet {
   overflow: auto;
   overscroll-behavior: contain;
 }
+/* A popup takes its tile's colour, so a dark tile's light text stays
+   readable in it. */
+dialog.detail { background: inherit; }
 dialog.detail::backdrop,
 dialog.sheet::backdrop { background: rgba(12,5,29,0.55); }
 .detail-body { display: flex; flex-direction: column; padding: 0 2rem 2rem; }
@@ -1417,7 +1438,7 @@ dialog.sheet::backdrop { background: rgba(12,5,29,0.55); }
   width: 38px; height: 38px;
   margin: 0.8rem 0.8rem 0.2rem auto;
   color: var(--ink);
-  background: var(--white);
+  background: transparent;
   border: 1px solid var(--border-strong);
   border-radius: 50%;
   cursor: pointer;

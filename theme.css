@@ -348,6 +348,9 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
   padding: 0.75rem 1rem;
 }
 #match dialog.detail { background: #0c051d; }
+#experience dialog.detail,
+#built dialog.detail,
+#education dialog.detail { background: #f4f0ff; }
 #match .point-body { color: #1d1530; }
 #match .point-sum { color: #463f58; }
 #match .point-roles { border-top-color: #ddd5f2; }
