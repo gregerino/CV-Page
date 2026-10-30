@@ -125,12 +125,31 @@ Keep the accent readable: `--amber` sits behind body-sized text and on filled
 buttons, so a brand's loudest colour usually belongs on the small marks
 instead — a few extra rules at the bottom of the theme, as in the Picadeli one.
 
+## The CV and its PDF
+
+An application has its own CV. `cv.html?job=<slug>` loads `job.js` too, which
+puts the pack's `eyebrow`, `role` and `lead` at the top and any `jobs` at the
+end of the timeline. The match section (`matchTitle`, `points`) stays on the
+web page only. Anything else on the CV
+can be rewritten with `cv.text`, keyed by selector on `cv.html` the way
+`text` is on the job page.
+
+Every PDF link on the job page and its CV leads to that CV printed, in
+`pdf/<slug>/` — `CV Marcus Hultberg.pdf`, or `CV Marcus Hultberg (sv).pdf`
+when the page is read in Swedish — never to the base CV. Build it with
+
+    sh build_cv_pdf.sh <slug>
+
+and again whenever the pack changes; `sh build_cv_pdf.sh all` rebuilds every
+pack.
+
 ## Adding one
 
 1. Copy `exempel.json` to `<company>.json`.
 2. Replace the hero lines, and give `points` one entry per requirement in the ad.
 3. Optionally add `<company>.css` with the company's colours.
 4. Check it at `/<company>` — or locally at `/index.html?job=<company>`.
+5. Build its PDF: `sh build_cv_pdf.sh <company>`.
 
 Everything else on the page — About, What I've built, Experience, Education &
 Skills, Personal, Contact — stays as it is, for every application.

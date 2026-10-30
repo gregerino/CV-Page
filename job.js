@@ -13,6 +13,11 @@
 // head script in index.html, before the first paint, so the page never has to
 // be repainted in the company's palette after the fact.
 //
+// The CV page (cv.html?job=<slug>) runs this file too. There it applies the
+// parts of the pack that belong on a CV — see applyCv — and both pages point
+// their PDF links at the pack's own PDF, printed from that CV by
+// build_cv_pdf.sh, never at the base CV.
+//
 // See jobs/README.md for the full list of fields.
 (function () {
   'use strict';
@@ -33,6 +38,7 @@
   // Before the fetch, so a quick click on CV (or a pack that fails to load)
   // still takes the reader back to this page from the CV.
   carrySlug();
+  linkPdf();
 
   // Never leave the page hidden because a request hung.
   var safety = setTimeout(done, 4000);
@@ -42,7 +48,7 @@
       if (!r.ok) throw new Error('no pack for ' + slug);
       return r.json();
     })
-    .then(apply)
+    .then(document.body.classList.contains('cv-page') ? applyCv : apply)
     .catch(function () { /* unknown slug: the base CV is a fine fallback */ })
     .then(function () { clearTimeout(safety); done(); });
 
@@ -138,6 +144,47 @@
     document.head.appendChild(robots);
 
     if (window.CVLang) window.CVLang.refresh();
+  }
+
+  // The CV for this application: what the job page says, on the CV page.
+  // The heading takes the pack's eyebrow, role and lead, and roles the pack
+  // adds go at the end of the timeline. "How I match" stays on the web page
+  // only. `cv.text` rewrites anything else on cv.html, keyed by CSS
+  // selector like `text` on the job page.
+  function applyCv(job) {
+    put('.cv-top .eyebrow', job.eyebrow);
+    put('.cv-top .hero-role', job.role);
+
+    if (job.lead) {
+      var role = document.querySelector('.cv-top .hero-role');
+      if (role) role.parentNode.insertBefore(text('p', 'cv-profile', job.lead), role.nextSibling);
+    }
+
+    if (Array.isArray(job.jobs) && job.jobs.length) addJobs(job.jobs);
+    if (job.cv && job.cv.text) applyText(job.cv.text);
+
+    if (job.company) {
+      document.title = 'CV — Marcus Hultberg — ' + (job.roleName ? job.roleName + ', ' : '') + job.company;
+    }
+    var robots = document.createElement('meta');
+    robots.name = 'robots';
+    robots.content = 'noindex, nofollow';
+    document.head.appendChild(robots);
+
+    if (window.CVLang) window.CVLang.refresh();
+  }
+
+  // Every PDF link leads to this application's CV, in the language the page
+  // is read in at the moment of the click. build_cv_pdf.sh writes both.
+  function linkPdf() {
+    var base = '/pdf/' + encodeURIComponent(slug) + '/CV Marcus Hultberg';
+    document.querySelectorAll('a[href$=".pdf"]').forEach(function (a) {
+      a.setAttribute('href', base + '.pdf');
+      a.addEventListener('click', function () {
+        var sv = window.CVLang && window.CVLang.current() === 'sv';
+        a.setAttribute('href', base + (sv ? ' (sv)' : '') + '.pdf');
+      });
+    });
   }
 
   // The CV is a separate page, so the slug has to travel with the click for
@@ -259,7 +306,7 @@
   // optionally `place`, `about`, `desc` and `bullets`, in the same markup as
   // the base roles so the theme styles them the same way.
   function addJobs(jobs) {
-    var timeline = document.querySelector('#experience .timeline');
+    var timeline = document.querySelector('#experience .timeline, .cv-main .timeline');
     if (!timeline) return;
 
     jobs.forEach(function (j) {

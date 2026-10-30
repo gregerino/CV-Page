@@ -71,7 +71,9 @@
      Laid out like the start page: a sidebar with contact details, skills
      and education, and the roles beside it. The downloadable PDF is this
      page printed: see the CV PAGE print rules in style.css, and
-     build_cv_pdf.sh, which renders "CV Marcus Hultberg.pdf" from it. -->
+     build_cv_pdf.sh, which renders "CV Marcus Hultberg.pdf" from it.
+     As cv.html?job=<slug> it is that application's CV: job.js adds the
+     pack's role, lead and extra roles, and its PDF is pdf/<slug>/. -->
 <main class="cv">
   <header class="cv-top">
     <div class="wrap">
@@ -338,6 +340,7 @@
 
 <script src="lang.js"></script>
 <script src="site.js?v=8"></script>
+<script src="job.js?v=9"></script>
 <script src="tracking.js"></script>
 </body>
 </html>

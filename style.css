@@ -1105,14 +1105,9 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
 .cv-main .job { padding-bottom: 2rem; }
 .cv-main .job:last-child { padding-bottom: 0; }
 
-/* An application's CV (cv.html?job=<slug>): the pack's lead under the role,
-   and "How I match" above the roles. Added by job.js. */
+/* An application's CV (cv.html?job=<slug>): the pack's lead under the role.
+   Added by job.js. */
 .cv-profile { max-width: 68ch; font-size: 0.98rem; line-height: 1.65; color: var(--ink-mid); margin: -0.6rem 0 1.3rem; }
-.cv-match { padding-bottom: 1.6rem; margin-bottom: 1.8rem; border-bottom: 1px solid var(--border); }
-.cv-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.6rem; margin-top: 0.8rem; }
-.cv-point-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; }
-.cv-point-body { font-size: 0.85rem; line-height: 1.55; color: var(--ink-mid); }
-@media (max-width: 720px) { .cv-points { grid-template-columns: 1fr; } }
 
 @media (max-width: 900px) {
   .cv-layout { grid-template-columns: 1fr; }
@@ -1165,11 +1160,6 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
   .cv-main .eyebrow { font-size: 7pt; margin-bottom: 1mm; }
   .cv-main .sec-title { font-size: 15pt; margin-bottom: 3mm; }
   .cv-lead { display: none; }
-  .cv-match { padding-bottom: 4mm; margin-bottom: 4mm; }
-  .cv-points { gap: 2.5mm 5mm; margin-top: 0; }
-  .cv-point { break-inside: avoid; }
-  .cv-point-title { font-size: 9pt; margin-bottom: 0.5mm; }
-  .cv-point-body { font-size: 8.2pt; line-height: 1.4; }
   .timeline { padding-left: 6mm; }
   .timeline::before { left: 1.6mm; }
   .job::before { left: -6mm; top: 1.2mm; width: 3mm; height: 3mm; }
