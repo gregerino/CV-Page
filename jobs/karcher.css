@@ -574,6 +574,10 @@ strong, b { font-weight: 700; }
 .nav-mobile a[href^="cv.html"],
 #top a.btn[href^="cv.html"] { display: none; }
 
+/* No PDF either: the hero button goes here, and the footer line is
+   rewritten without its PDF link in karcher.json. */
+#top a.btn[href$=".pdf"] { display: none; }
+
 @media (max-width: 780px) {
   #top .hero-photo { max-width: 220px; box-shadow: 8px 8px 0 #ffed00; }
   #contact .contact-facts span { flex-basis: 100%; }

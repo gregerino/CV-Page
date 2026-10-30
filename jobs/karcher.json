@@ -376,6 +376,10 @@
       { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
       { "en": "Education: BSc. Behavioural Science", "sv": "Utbildning: kand. beteendevetenskap" },
       { "en": "Education and learning: 4 years", "sv": "Utbildning och lärande: 4 år" }
-    ]
+    ],
+    ".site-footer p": {
+      "en": "Built by Marcus Hultberg · Gothenburg · 2026",
+      "sv": "Byggd av Marcus Hultberg · Göteborg · 2026"
+    }
   }
 }
