@@ -115,7 +115,7 @@
       el.removeAttribute('id');
       el.classList.remove('reveal');
     });
-    node.querySelectorAll('.tile-hit, .tile-more').forEach(function (el) { el.remove(); });
+    node.querySelectorAll('.tile-hit, .tile-more, .tile-hint').forEach(function (el) { el.remove(); });
     return node;
   }
 
@@ -208,17 +208,33 @@
     btn.innerHTML = text(MORE[id].en, MORE[id].sv) + ' <span aria-hidden="true">→</span>';
     btn.addEventListener('click', function () { lastTrigger = btn; openSection(section); });
     section.querySelector(':scope > .wrap').appendChild(btn);
+    // A hint beside the label: visitors don't see that the titles open.
+    // The titles' own buttons already say "Read more" to screen readers.
+    var hint = document.createElement('span');
+    hint.className = 'tile-hint';
+    hint.setAttribute('aria-hidden', 'true');
+    hint.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round"><path d="M9 9l10.5 3.5-4.5 1.5-1.5 4.5z"/>' +
+      '<path d="M5 3v2M3 5h2M9 3.5L8 5M3.5 9L5 8"/></svg>' +
+      text('Click to know more', 'Klicka för att veta mer');
+    var head = section.querySelector(':scope > .wrap > .sec-head');
+    if (head) head.appendChild(hint);
     // Job themes paint some tiles dark without touching --ink, and some
     // give the small label a pale accent. Take whichever of the label's and
-    // the heading's colour stands out more against the tile.
-    var picks = [section.querySelector('.eyebrow'), section.querySelector('.sec-title')]
-      .filter(Boolean)
-      .map(function (el) { return getComputedStyle(el).color; });
-    if (picks.length) {
+    // the heading's colour stands out more against the tile. The theme is a
+    // stylesheet added by script, so look again once it has loaded.
+    function paint() {
+      var picks = [section.querySelector('.eyebrow'), section.querySelector('.sec-title')]
+        .filter(Boolean)
+        .map(function (el) { return getComputedStyle(el).color; });
+      if (!picks.length) return;
       var ground = backdrop(section);
       picks.sort(function (a, b) { return contrast(b, ground) - contrast(a, ground); });
       btn.style.color = picks[0];
+      hint.style.color = picks[0];
     }
+    paint();
+    window.addEventListener('load', paint);
   });
 
   enhance();

@@ -342,10 +342,8 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
   font-size: 0.95rem;
   line-height: 1.6;
   color: #1d1530;
-  background: #fff;
-  border-left: none;
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
+  border-left: 3px solid #bb8af7;
+  padding: 0.1rem 0 0.1rem 1rem;
 }
 #match dialog.detail { background: #0c051d; }
 #experience dialog.detail,

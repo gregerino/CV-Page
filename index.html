@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcus Hultberg — Learning &amp; Development, Recruitment &amp; AI</title>
   <meta name="description" content="Marcus Hultberg — learning, course development and recruitment for technical roles, with tools built using AI. Gothenburg, Sweden." />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
   <script>
     // A job slug in the URL means two things.
     //
@@ -29,7 +29,7 @@
       theme.rel = 'stylesheet';
 
       if (['', 'index', 'cv'].indexOf(slug) !== -1 || !/^[a-z0-9-]+$/.test(slug)) {
-        theme.href = '/theme.css';
+        theme.href = '/theme.css?v=2';
         document.head.appendChild(theme);
         return;
       }
@@ -989,7 +989,7 @@
 </section>
 
 <script src="lang.js"></script>
-<script src="site.js?v=8"></script>
+<script src="site.js?v=10"></script>
 <script src="job.js?v=9"></script>
 <script src="tracking.js"></script>
 </body>
