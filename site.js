@@ -334,11 +334,50 @@
     return item;
   }
 
+  // The assistant writes a little markdown: **bold**, and lists in lines that
+  // start with "- " or "* ". Those become real elements; everything is set
+  // as text, never as HTML, so an answer cannot inject markup.
+  function inline(parent, text) {
+    text.split(/\*\*(.+?)\*\*/).forEach(function (part, i) {
+      if (!part) return;
+      if (i % 2) {
+        var b = document.createElement('strong');
+        b.textContent = part;
+        parent.appendChild(b);
+      } else {
+        parent.appendChild(document.createTextNode(part));
+      }
+    });
+  }
+
+  function formatted(text) {
+    var box = document.createElement('div');
+    box.className = 'ask-out-text';
+    var list = null;
+    text.split('\n').forEach(function (raw) {
+      var l = raw.trim();
+      if (!l) { list = null; return; }
+      var bullet = /^[-*•]\s+/.exec(l);
+      if (bullet) {
+        if (!list) { list = document.createElement('ul'); box.appendChild(list); }
+        var li = document.createElement('li');
+        inline(li, l.slice(bullet[0].length));
+        list.appendChild(li);
+      } else {
+        list = null;
+        var p = document.createElement('p');
+        inline(p, l.replace(/^#+\s*/, ''));
+        box.appendChild(p);
+      }
+    });
+    return box;
+  }
+
   function answer(item, text) {
     var out = document.createElement('div');
     out.className = 'ask-out visible';
     out.appendChild(line('ask-out-label', fallback('Svar', 'Answer')));
-    out.appendChild(line('ask-out-text', text));
+    out.appendChild(formatted(text));
     item.appendChild(out);
     log.scrollTop = log.scrollHeight;
   }

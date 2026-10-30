@@ -586,7 +586,11 @@ img { max-width: 100%; display: block; }
   color: var(--amber);
   margin-bottom: 0.4rem;
 }
-.ask-out-text { font-size: 0.9rem; color: var(--ink-mid); line-height: 1.7; white-space: pre-line; }
+.ask-out-text { font-size: 0.9rem; color: var(--ink-mid); line-height: 1.65; }
+.ask-out-text > * + * { margin-top: 0.55rem; }
+.ask-out-text strong { font-weight: 700; color: var(--ink); }
+.ask-out-text ul { padding-left: 1.1rem; }
+.ask-out-text li + li { margin-top: 0.25rem; }
 .ask-load { display: none; align-items: center; gap: 0.45rem; margin: 0; padding: 0.4rem 0.2rem; background: none; border: none; }
 .ask-load.visible { display: flex; }
 .ask-dot { width: 5px; height: 5px; background: var(--amber); border-radius: 50%; animation: askpulse 1.2s ease-in-out infinite; }
