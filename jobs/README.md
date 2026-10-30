@@ -14,6 +14,12 @@ slug, fetches `jobs/<slug>.json` and rewrites the hero and the "What I do"
 section before the page is shown. Colours come from an optional
 `jobs/<slug>.css`, linked earlier still — see below.
 
+The page is one screen of tiles (intro, How I match, Projects, Experience,
+Education, Contact). A tile shows titles only and opens the full text in a
+popup, so everything a pack writes is still on the page, one click away.
+About and Personal open as sheets from the nav. A long `lead` or many
+`points` make the page a little taller than one screen; that is fine.
+
 Anything a pack leaves out keeps the base wording, so a pack can be as small
 as a new hero line. If the slug has no file, the visitor simply gets the base
 CV — nothing breaks.

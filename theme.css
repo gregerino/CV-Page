@@ -7,11 +7,12 @@
    and six pastels (purple, blue, yellow, orange, green, pink) that only fill
    shapes. Work Sans throughout, Fira Mono for the small labels.
 
-   "What I've built" is laid out as a column so the two groups swap places
-   without moving markup: the AI grid comes first, led by Role for Growth.
+   "Selected projects" orders cards without moving markup (style.css puts the
+   AI grid first). The four featured cards lead, each with its own colour
+   behind the preview; the rest show under "View all projects".
      AI grid:   1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 AIconomics,
                 5 this site, 6 onboarding platform, 7 more tools,
-                8 Role for Growth
+                8 Role for Growth  (featured: 1, 2, 6, 8)
      Work grid: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
                 5 course content
    Experience tags each role: 1 and 3 recruitment, 2 and 5 learning, 4 both.
@@ -180,7 +181,7 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
   color: #0c051d;
   box-shadow: none;
 }
-.btn-primary svg { fill: currentColor; }
+.btn-primary svg:not([fill="none"]) { fill: currentColor; }
 .btn-ghost {
   background: transparent;
   border: 3px solid #0c051d;
@@ -231,21 +232,35 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
   transform: rotate(3deg);
 }
 
-#top .stat-strip {
-  background: #0c051d;
-  backdrop-filter: none;
-  border: none;
-  border-radius: 16px;
-  box-shadow: none;
+#top .glance-label { color: #0c051d; }
+#top .stat-strip { border-top: 3px solid #0c051d; }
+#top .stat { border-color: #ddd5f2; }
+#top .stat-num { font-family: var(--sans); font-weight: 900; font-size: 2.3rem; color: #0c051d; }
+#top .stat-num::after {
+  content: '';
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  margin-left: 0.25em;
+  border-radius: 2px;
+  background: #bb8af7;
 }
-#top .stat { border-color: rgba(244,240,255,0.14); }
-#top .stat-num { font-family: var(--sans); font-weight: 900; color: #f4f0ff; }
-#top .stat:nth-child(1) .stat-num { color: #bb8af7; }
-#top .stat:nth-child(2) .stat-num { color: #ffd464; }
-#top .stat:nth-child(3) .stat-num { color: #60e47c; }
-#top .stat-label { color: rgba(244,240,255,0.78); }
+#top .stat:nth-child(2) .stat-num::after { background: #ffd464; }
+#top .stat:nth-child(3) .stat-num::after { background: #60e47c; }
+#top .stat-label { color: #463f58; }
+@media (max-width: 780px) { #top .stat-num { font-size: 1.7rem; } }
 
-.ask { background: #ebe5fb; border-color: #ddd5f2; }
+.ask-fab {
+  background: #0c051d;
+  border: 3px solid #0c051d;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(12,5,29,0.28);
+}
+.ask-fab:hover { background: #6b2fd1; border-color: #6b2fd1; }
+.ask { background: #fff; border: 3px solid #0c051d; border-radius: 16px; box-shadow: 0 18px 44px rgba(12,5,29,0.22); }
+.ask-close { border: 2px solid #0c051d; color: #0c051d; }
+.ask-close:hover { background: #ebe5fb; }
+.ask-q { background: #ebe5fb; color: #0c051d; }
 .ask-input {
   background: #fff;
   border: 3px solid #0c051d;
@@ -259,7 +274,8 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 .ask-btn svg { stroke: #fff; }
 .ask-chip { background: #fff; border: 2px solid #0c051d; border-radius: 9999px; color: #0c051d; }
 .ask-chip:hover { background: #0c051d; color: #fff; }
-.ask-out { background: #fff; border-color: #ddd5f2; border-radius: 12px; }
+.ask-out { background: #f4f0ff; border: none; border-radius: 12px; }
+.ask-out-label { color: #6b2fd1; }
 .ask-dot { background: #bb8af7; }
 
 #about .about-quote {
@@ -331,7 +347,9 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
   border-radius: 8px;
   padding: 0.75rem 1rem;
 }
+#match dialog.detail { background: #0c051d; }
 #match .point-body { color: #1d1530; }
+#match .point-sum { color: #463f58; }
 #match .point-roles { border-top-color: #ddd5f2; }
 #match .point-roles-label {
   font-family: var(--mono);
@@ -343,20 +361,13 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 }
 #match .point-roles .pill { background: #fff; border-color: #fff; color: #0c051d; }
 
-#built .wrap { display: flex; flex-direction: column; }
-#built .sec-head { order: 0; }
-#built .built-sub:nth-of-type(2) { order: 1; margin-top: 0; }
-#built .built-grid:last-of-type { order: 2; }
-#built .built-sub:nth-of-type(1) { order: 3; margin-top: 2.8rem; }
-#built .built-grid:not(:last-of-type) { order: 4; }
-
-#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
-#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
-#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 2; }
-#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
-#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 4; }
-#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 5; }
-#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 6; }
 #built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
 
 #built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 0; }
@@ -372,6 +383,12 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 #built .built-card:nth-of-type(6n+4) .built-icon { background: #ff9c64; border-color: #ff9c64; }
 #built .built-card:nth-of-type(6n+5) .built-icon { background: #60e47c; border-color: #60e47c; }
 #built .built-card:nth-of-type(6n)   .built-icon { background: #ffaea9; border-color: #ffaea9; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) .built-icon { background: #bb8af7; border-color: #bb8af7; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) .built-icon { background: #669ef2; border-color: #669ef2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) .built-icon { background: #ffd464; border-color: #ffd464; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) .built-icon { background: #60e47c; border-color: #60e47c; }
+#built .built-card.is-featured .built-icon { border-radius: 8px; }
+#built .built-cat { color: #463f58; }
 .built-link { color: #0c051d; border-bottom: 2px solid #bb8af7; font-weight: 700; }
 .built-link:hover { color: #6b2fd1; }
 
@@ -409,6 +426,12 @@ body { background: var(--bg); color: var(--ink-mid); font-family: var(--sans); }
 #experience .job:nth-of-type(4)::before { background: #bb8af7; border-color: #0c051d; }
 
 .roles-group .pill { background: #fff; }
+
+.more-btn { color: #0c051d; border-bottom-color: #bb8af7; font-weight: 700; }
+.more-btn:hover { color: #6b2fd1; border-bottom-color: #6b2fd1; }
+#match :focus-visible,
+#contact :focus-visible,
+.site-footer :focus-visible { outline-color: #bb8af7; }
 
 #education .edu-school { color: #6b2fd1; }
 #education .callout {

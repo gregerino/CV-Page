@@ -13,7 +13,13 @@
 
   var STORAGE_KEY = 'cv-lang';
 
+  // ?lang=sv or ?lang=en picks the language for this visit without storing
+  // it; build_cv_pdf.sh uses it to print the Swedish CV.
+  var forced = new URLSearchParams(location.search).get('lang');
+  if (forced !== 'sv' && forced !== 'en') forced = null;
+
   function getLang() {
+    if (forced) return forced;
     return localStorage.getItem(STORAGE_KEY) === 'sv' ? 'sv' : 'en';
   }
 
@@ -49,6 +55,7 @@
   }
 
   function setLang(lang) {
+    forced = null;
     localStorage.setItem(STORAGE_KEY, lang);
     applyLang(lang);
   }

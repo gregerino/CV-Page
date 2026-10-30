@@ -98,10 +98,18 @@
   }
 
   function apply(job) {
+    // Shows the "How I match" nav link and lays the match cards out as an
+    // open list rather than the base page's compact grid.
+    document.documentElement.classList.add('has-pack');
+
     put('.hero .eyebrow', job.eyebrow);
     put('.hero-role', job.role);
     put('.hero-lead', job.lead);
     put('.hero-cta .btn-primary .btn-label', job.cta);
+    // On the base page the primary button leads to Experience; an
+    // application leads to how Marcus matches the role.
+    var primary = document.querySelector('.hero-cta .btn-primary');
+    if (primary) primary.setAttribute('href', '#match');
 
     put('#match .eyebrow', job.matchEyebrow);
     put('#match .sec-title', job.matchTitle);
@@ -113,6 +121,9 @@
     if (Array.isArray(job.jobs) && job.jobs.length) addJobs(job.jobs);
 
     if (job.text) applyText(job.text);
+
+    // Cards and roles the pack built need their "read more" buttons.
+    if (window.CVSite) window.CVSite.enhance();
 
     if (job.pageTitle) {
       document.title = job.pageTitle.en != null ? job.pageTitle.en : job.pageTitle;
@@ -216,7 +227,9 @@
 
     cards.forEach(function (c) {
       var grid = c.group === 'work' ? grids[0] : grids[grids.length - 1];
-      var card = el('article', 'card built-card reveal');
+      // A card brought for one application is shown among the featured
+      // projects, not behind "View all projects".
+      var card = el('article', 'card built-card reveal' + (c.group === 'work' ? '' : ' is-featured'));
 
       var icon = el('div', 'built-icon');
       var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

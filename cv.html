@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV — Marcus Hultberg</title>
   <meta name="description" content="Full CV for Marcus Hultberg: roles, responsibilities and what I did in each one." />
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
   <script>
-    // Reached from an application page as cv.html?job=<slug>. The colour theme
-    // that page uses is linked here too, so the CV keeps the company's colours
+    // The base CV wears the start page's theme. Reached from an application
+    // page as cv.html?job=<slug>, it links that page's colour theme instead, so the CV keeps the company's colours
     // instead of dropping back to the base palette mid-visit. See job.js.
     (function () {
       var slug = (new URLSearchParams(location.search).get('job') || '').toLowerCase().trim();
-      if (!/^[a-z0-9-]+$/.test(slug)) return;
       var theme = document.createElement('link');
       theme.rel = 'stylesheet';
+      if (!/^[a-z0-9-]+$/.test(slug)) {
+        theme.href = '/theme.css';
+        document.head.appendChild(theme);
+        return;
+      }
       theme.href = '/jobs/' + encodeURIComponent(slug) + '.css';
       document.head.appendChild(theme);
 
@@ -37,300 +41,294 @@
 <header class="nav">
   <div class="nav-top">
     <a href="index.html" class="brand"><span class="brand-dot"></span>Marcus <em>Hultberg</em></a>
+    <nav class="nav-bar" aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="index.html" data-sv="Hem">Home</a></li>
+        <li><a href="index.html#experience" data-sv="Erfarenhet">Experience</a></li>
+        <li><a href="index.html#built" data-sv="Projekt">Projects</a></li>
+        <li><a href="index.html#about" data-sv="Om mig">About</a></li>
+        <li><a href="index.html#contact" data-sv="Kontakt">Contact</a></li>
+      </ul>
+    </nav>
     <div class="nav-actions">
       <!-- lang toggle injected by lang.js -->
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <button class="nav-hamburger" id="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-  <div class="nav-bar">
-    <ul class="nav-links">
-      <li><a href="index.html#about" data-sv="Om mig">About me</a></li>
-      <li><a href="index.html#match" data-sv="Vad jag gör">What I do</a></li>
-      <li><a href="index.html#built" data-sv="Vad jag byggt">What I've built</a></li>
-      <li><a href="cv.html" class="active">CV</a></li>
-      <li><a href="index.html#education" data-sv="Utbildning &amp; kompetenser">Education &amp; Skills</a></li>
-      <li><a href="index.html#personal" data-sv="Personligt">Personal</a></li>
-      <li class="nav-contact-link"><a href="index.html#contact" data-sv="Kontakt">Contact</a></li>
-    </ul>
-    <a href="index.html#contact" class="btn btn-primary btn-sm" data-sv="Kontakta mig">Get in touch</a>
-  </div>
 </header>
 
 <div class="nav-mobile" id="mobile-nav">
-  <a href="index.html#about" data-sv="Om mig">About me</a>
-  <a href="index.html#match" data-sv="Vad jag gör">What I do</a>
-  <a href="index.html#built" data-sv="Vad jag byggt">What I've built</a>
-  <a href="cv.html" class="active">CV</a>
-  <a href="index.html#education" data-sv="Utbildning &amp; kompetenser">Education &amp; Skills</a>
-  <a href="index.html#personal" data-sv="Personligt">Personal</a>
+  <a href="index.html" data-sv="Hem">Home</a>
+  <a href="index.html#experience" data-sv="Erfarenhet">Experience</a>
+  <a href="index.html#built" data-sv="Projekt">Projects</a>
+  <a href="index.html#about" data-sv="Om mig">About</a>
   <a href="index.html#contact" data-sv="Kontakt">Contact</a>
 </div>
 
-<!-- ══════════════════════ CV HEADER ══════════════════════ -->
-<section class="band band--photo cv-head">
-  <div class="wrap">
-    <p class="eyebrow reveal" data-sv="Curriculum vitae">Curriculum vitae</p>
-    <h1 class="cv-name reveal">Marcus Hultberg</h1>
-    <p class="hero-role reveal" data-sv="People &amp; Culture · Talent Acquisition · Learning &amp; Development">
-      People &amp; Culture · Talent Acquisition · Learning &amp; Development
-    </p>
-
-    <p class="cv-lead reveal" data-sv="Mina roller i omvänd kronologisk ordning, med ansvar och arbetsuppgifter under varje.">
-      My roles in reverse chronological order, with responsibilities and tasks under each one.
-    </p>
-
-    <div class="cv-contact reveal">
-      <a href="mailto:marcus.hultberg@live.se">marcus.hultberg@live.se</a>
-      <a href="tel:+46703445947">0703 44 59 47</a>
-      <a href="https://www.linkedin.com/in/marcus-hultberg-505b386a/" target="_blank" rel="noopener">LinkedIn</a>
-      <span data-sv="Göteborg, Sverige">Gothenburg, Sweden</span>
+<!-- ══════════════════════ CV ══════════════════════
+     Laid out like the start page: a sidebar with contact details, skills
+     and education, and the roles beside it. The downloadable PDF is this
+     page printed: see the CV PAGE print rules in style.css, and
+     build_cv_pdf.sh, which renders "CV Marcus Hultberg.pdf" from it. -->
+<main class="cv">
+  <header class="cv-top">
+    <div class="wrap">
+      <p class="eyebrow" data-sv="Curriculum vitae">Curriculum vitae</p>
+      <h1 class="cv-name">Marcus Hultberg</h1>
+      <p class="hero-role" data-sv="People &amp; Culture · Talent Acquisition · Learning &amp; Development">
+        People &amp; Culture · Talent Acquisition · Learning &amp; Development
+      </p>
+      <div class="hero-cta">
+        <a href="CV Marcus Hultberg.pdf" target="_blank" rel="noopener" class="btn btn-primary"
+           data-sv-html="Ladda ner som PDF <span class=&quot;arr&quot;>↓</span>">Download as PDF <span class="arr">↓</span></a>
+        <a href="index.html" class="btn btn-ghost"
+           data-sv-html="<span class=&quot;arr&quot;>←</span> Tillbaka till startsidan"><span class="arr">←</span> Back to the start page</a>
+      </div>
     </div>
+  </header>
 
-    <div class="hero-cta reveal">
-      <a href="CV Marcus Hultberg.pdf" target="_blank" rel="noopener" class="btn btn-primary"
-         data-sv-html="Ladda ner som PDF <span class=&quot;arr&quot;>↗</span>">Download as PDF <span class="arr">↗</span></a>
-      <a href="index.html" class="btn btn-ghost"
-         data-sv-html="<span class=&quot;arr&quot;>←</span> Tillbaka till startsidan"><span class="arr">←</span> Back to the start page</a>
-    </div>
+  <div class="wrap cv-layout">
+    <aside class="cv-side">
+      <div class="card cv-card cv-id">
+        <img class="cv-photo" src="Marcus-800.jpg" alt="Portrait of Marcus Hultberg" width="800" height="800" />
+        <ul class="cv-contact">
+          <li><span data-sv="Göteborg, Sverige">Gothenburg, Sweden</span></li>
+          <li><a href="mailto:marcus.hultberg@live.se">marcus.hultberg@live.se</a></li>
+          <li><a href="tel:+46703445947">0703 44 59 47</a></li>
+          <li><a href="https://www.linkedin.com/in/marcus-hultberg-505b386a/" target="_blank" rel="noopener">linkedin.com/in/marcus-hultberg</a></li>
+          <li><a href="https://www.marcushultberg.dev/">marcushultberg.dev</a></li>
+        </ul>
+      </div>
+      <div class="card cv-card">
+        <div class="tool-group">
+          <p class="tool-label" data-sv="Expertisområden">Areas of expertise</p>
+          <div class="pill-row">
+            <span class="pill">Learning &amp; Development</span>
+            <span class="pill">Employer Branding</span>
+            <span class="pill" data-sv="Instruktionsdesign &amp; kursutveckling">Instructional design &amp; Course Development</span>
+            <span class="pill">Gamification</span>
+            <span class="pill">Learning Management Systems (LMS)</span>
+            <span class="pill">People &amp; Culture</span>
+            <span class="pill" data-sv="Svensk arbetsrätt">Swedish labour law</span>
+            <span class="pill">HR</span>
+            <span class="pill" data-sv="Kommunikation">Communication</span>
+            <span class="pill" data-sv="Projektledning">Project Management</span>
+            <span class="pill" data-sv="Pedagogik &amp; didaktik">Pedagogy &amp; didactics</span>
+            <span class="pill" data-sv="Rekrytering &amp; urval">Recruitment &amp; selection</span>
+            <span class="pill" data-sv="Ledarskap &amp; coachning">Leadership &amp; coaching</span>
+            <span class="pill" data-sv="Kompetensförsörjning">Competence supply</span>
+          </div>
+        </div>
+      </div>
+      <div class="card cv-card">
+        <div class="tool-group">
+          <p class="tool-label" data-sv="System &amp; verktyg">Systems &amp; tools</p>
+          <div class="pill-row">
+            <span class="pill">Winningtemp</span>
+            <span class="pill">Monday.com</span>
+            <span class="pill">Teamtailor</span>
+            <span class="pill">Slack</span>
+            <span class="pill">Office 365</span>
+            <span class="pill">Canva</span>
+            <span class="pill">Workbuster</span>
+            <span class="pill">Claude Code</span>
+          </div>
+        </div>
+      </div>
+      <div class="card cv-card">
+        <p class="tool-label" data-sv="Utbildning">Education</p>
+        <article class="edu-card">
+          <div class="edu-top">
+            <h3 class="edu-degree" data-sv="Kandidatexamen i beteendevetenskap med inriktning mot IT-miljöer">BSc. Behavioural Science with focus on IT environments</h3>
+            <span class="edu-date">2016 — 2019</span>
+          </div>
+          <p class="edu-school" data-sv="Umeå universitet">Umeå University</p>
+          <p class="edu-desc" data-sv="Kandidatexamen med fokus på mänskligt beteende i digitala och tekniska organisationer: en solid grund för People &amp; Culture-arbete i techbranschen.">
+            Bachelor's degree focused on human behaviour in digital and technical organisations: a solid
+            foundation for People &amp; Culture work in the tech industry.
+          </p>
+        </article>
+        <p class="tool-label" data-sv="Certifieringar">Certifications</p>
+        <article class="edu-card">
+          <div class="edu-top">
+            <h3 class="edu-degree" data-sv="Certifierad utbildningsledare">Certified Education Manager</h3>
+            <span class="edu-date">2020</span>
+          </div>
+          <p class="edu-school">Myndigheten för Yrkeshögskolan</p>
+          <p class="edu-desc" data-sv="Certifiering inom utbildningsledning med fokus på yrkeshögskola, direkt tillämpbar i L&amp;D-roller med betoning på pedagogisk planering och kursdesign.">
+            Certification in education management focused on vocational higher education, directly
+            applicable in L&amp;D roles with emphasis on pedagogical planning and course design.
+          </p>
+        </article>
+      </div>
+      <div class="card cv-card">
+        <div class="tool-group">
+          <p class="tool-label" data-sv="Språk">Languages</p>
+          <div class="pill-row">
+            <span class="pill" data-sv="Svenska, modersmål">Swedish, native</span>
+            <span class="pill" data-sv="Engelska, flytande">English, fluent</span>
+          </div>
+        </div>
+      </div>
+      <div class="card cv-card">
+        <div class="tool-group">
+          <p class="tool-label" data-sv="Så arbetar jag">How I work</p>
+          <div class="pill-row">
+            <span class="pill pill--accent" data-sv="Strukturerad och processdriven">Structured and process-driven</span>
+            <span class="pill pill--accent" data-sv="Rådgivande mot chefer och intressenter">Advisory to managers and stakeholders</span>
+            <span class="pill pill--accent" data-sv="Bygger från noll">Builds from zero</span>
+            <span class="pill pill--accent" data-sv="Pedagogisk, lär ut det jag bygger">Pedagogical, teaches what I build</span>
+            <span class="pill pill--accent" data-sv="Trygg med många parallella processer">Comfortable with many parallel processes</span>
+            <span class="pill pill--accent" data-sv="AI-native i vardagen">AI-native day to day</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="card cv-main" aria-labelledby="cv-experience">
+      <p class="eyebrow" data-sv="Erfarenhet">Experience</p>
+      <h2 class="sec-title" id="cv-experience" data-sv="Arbetslivserfarenhet">Work experience</h2>
+      <p class="cv-lead" data-sv="Mina roller i omvänd kronologisk ordning, med ansvar och arbetsuppgifter under varje.">
+        My roles in reverse chronological order, with responsibilities and tasks under each one.
+      </p>
+
+  <div class="timeline">
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title" data-sv="Rekryteringskonsult">Recruitment Consultant</h3>
+        <span class="job-date">Jun 2024 — Jun 2026</span>
+      </div>
+      <p class="job-company">Mpya Sci &amp; Tech <span>· Gothenburg</span></p>
+      <p class="job-about" data-sv="Rekryterings- och konsultföretag specialiserat på vetenskap, teknik och ingenjörskonst.">Recruitment and consulting firm specialising in science, technology and engineering.</p>
+      <p class="job-desc" data-sv="Matchning av rätt person med rätt arbetsplats, samtidigt som jag agerade rådgivare till rekryterande chefer kring kompetens och kulturell passform.">
+        Matching the right person with the right workplace while acting as an advisor to hiring
+        managers on competence and cultural fit.
+      </p>
+      <ul class="job-bullets">
+        <li data-sv="Drev fullständiga rekryteringsprocesser, från behovsanalys till slutligt urval, över flera olika roller, från utvecklare till ingenjörer">Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, varying from developers to engineers</li>
+        <li data-sv="Koordinerade och strukturerade intervjuprocesser, inklusive schemaläggning, förberedelser och kommunikation med intressenter">Coordinated and structured interview processes, including scheduling, preparation, and stakeholder communication</li>
+        <li data-sv="Var kandidaternas huvudsakliga kontaktperson och säkerställde en professionell, responsiv och engagerande kandidatupplevelse">Acted as main point of contact for candidates, ensuring a professional, responsive, and engaging candidate experience</li>
+        <li data-sv="Arbetade löpande i ATS-system för att hantera kandidatdata och säkerställa korrekthet genom hela processen">Worked continuously in ATS systems to manage candidate data and ensure accuracy throughout the process</li>
+        <li data-sv="Skrev och publicerade jobbannonser utifrån kundens behov, med fokus på tydlighet och relevans">Wrote and published job ads based on client needs, ensuring clarity and relevance</li>
+        <li data-sv="Sökte och engagerade kandidater proaktivt och underhöll en stark kandidatpipeline">Proactively sourced and engaged candidates, maintaining a strong talent pipeline</li>
+        <li data-sv="Rådgav rekryterande chefer kring rekryteringsprocesser, tidplaner och kandidatutvärdering">Advised hiring managers on recruitment processes, timelines, and candidate evaluation</li>
+        <li data-sv="Bidrog till att förbättra rekryteringsflöden och säkerställa strukturerade processer">Contributed to improving recruitment workflows and ensuring structured processes</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title" data-sv="Kursutvecklare">Course Developer</h3>
+        <span class="job-date">Sep 2023 — Jun 2024</span>
+      </div>
+      <p class="job-company">Simployer <span>· Gothenburg</span></p>
+      <p class="job-about" data-sv="Ledande nordiskt HR-techbolag som erbjuder HR-system, lönelösningar och utbildning.">Leading Nordic HR tech company providing HR systems, payroll solutions and training.</p>
+      <p class="job-desc" data-sv="Utvecklade och förbättrade utbildningsinnehåll inom HR för ett ledande HR-system med starkt fokus på medarbetarupplevelsen.">
+        Developed and improved training content in HR for a leading HR system
+        with a strong focus on the employee experience.
+      </p>
+      <ul class="job-bullets">
+        <li data-sv="Utvecklade och förbättrade kurser inom HR och Learning &amp; Development">Developed and improved courses within HR and Learning &amp; Development</li>
+        <li data-sv="Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov">Ensured content was up to date and aligned with current HR trends and needs</li>
+        <li data-sv="Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet">Collaborated with subject matter experts to create relevant and high-quality training</li>
+        <li data-sv="Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde">Planned and executed conferences and training sessions focused on participant value</li>
+        <li data-sv="Förbättrade kursmaterial och pedagogiska strukturer">Improved course materials and pedagogical structures</li>
+        <li data-sv="Integrerade marknadsinsikter och forskning i utbildningsinnehållet">Integrated market insights and research into training content</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title" data-sv="Affärsansvarig">Business Manager</h3>
+        <span class="job-date">Apr 2022 — Sep 2023</span>
+      </div>
+      <p class="job-company">A Society <span>· Gothenburg</span></p>
+      <p class="job-about" data-sv="IT-konsultföretag som kopplar samman techtalanger med företag över hela Sverige.">IT consulting firm connecting tech talent with companies across Sweden.</p>
+      <p class="job-desc" data-sv="Ansvarig för rekrytering och matchning av IT-konsulter samt löpande HR-stöd i en snabbrörlig konsultmiljö.">
+        Responsible for recruitment and matching of IT consultants alongside ongoing HR support in a
+        fast-moving consulting environment.
+      </p>
+      <ul class="job-bullets">
+        <li data-sv="Drev rekryteringsprocesser för IT-konsulter och säkerställde träffsäker kompetensmatchning">Managed recruitment processes for IT consultants, ensuring accurate competence matching</li>
+        <li data-sv="Koordinerade kommunikationen mellan kunder och kandidater genom hela rekryteringsprocessen">Coordinated communication between clients and candidates throughout the hiring process</li>
+        <li data-sv="Gav HR-relaterat stöd och hade löpande kontakt med konsulterna">Provided HR-related support and maintained ongoing contact with consultants</li>
+        <li data-sv="Utformade strukturerade onboardingprocesser för att öka engagemang och retention">Designed structured onboarding processes to improve engagement and retention</li>
+        <li data-sv="Hanterade flera parallella processer i en snabbrörlig miljö">Managed multiple parallel processes in a fast-paced environment</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</h3>
+        <span class="job-date">Nov 2020 — Apr 2022</span>
+      </div>
+      <p class="job-company">ZoCom <span>· Gothenburg</span></p>
+      <p class="job-about" data-sv="Bolag inom utbildningsprodukter och innovation i IT-sektorn.">Educational product and innovation company in the IT sector.</p>
+      <p class="job-desc" data-sv="Del av ledningsgruppen med fullt ansvar för talent acquisition och en konsultgrupp på 15+ personer i ett IT-konsultbolag.">
+        Part of the management team with full responsibility for talent acquisition and a consultant
+        group of 15+ people at an IT consultancy.
+      </p>
+      <ul class="job-bullets">
+        <li data-sv="Ledde bolagets talent acquisition-strategi, inklusive employer branding, processoptimering och implementering av ATS">Led the company's talent acquisition strategy, including employer branding, process optimisation and ATS implementation</li>
+        <li data-sv="Drev rekryteringsprocesser från början till slut, från screening och intervjuer till onboarding av nyanställda">Managed recruitment processes end to end, from screening and interviewing to onboarding of new employees</li>
+        <li data-sv="Genomförde kompetensutvecklingsinsatser och HR-relaterat ansvar för en konsultgrupp på 15+ personer">Conducted personnel development activities and HR-related responsibilities for a consultant group of 15+</li>
+        <li data-sv="Utformade och genomförde ett strukturerat onboardingramverk för nyanställda">Designed and executed a structured onboarding framework for new hires</li>
+        <li data-sv="Skapade interna workshops och lärandetillfällen, inklusive utbildning i gamification-metodik">Created internal workshops and learning sessions, including gamification methodology training</li>
+        <li data-sv="Var med och byggde ett karriärutvecklingsprogram för att stötta juniora talanger in i IT-branschen">Helped build a career development programme aimed at supporting junior talent in entering the IT industry</li>
+        <li data-sv="Bidrog till intern organisationsutveckling genom att vara med och utforma och förvalta ett internt Learning Management System (LMS)">Contributed to internal organisational development by helping shape and run an internal Learning Management System (LMS)</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title" data-sv="Utbildningsledare / ICT-ansvarig">Education Manager / ICT Manager</h3>
+        <span class="job-date">Jun 2019 — Oct 2020</span>
+      </div>
+      <p class="job-company">IT-Högskolan <span>· Gothenburg</span></p>
+      <p class="job-about" data-sv="En av Sveriges största aktörer inom yrkeshögskola med fokus på IT och tech.">One of Sweden's largest providers of vocational higher education within IT and tech.</p>
+      <p class="job-desc" data-sv="Ledde utbildningsprogram på en av Sveriges största yrkeshögskolor inom IT och stöttade studenter i deras övergång till techbranschen.">
+        Led education programmes at one of Sweden's largest vocational IT schools and supported
+        students in their transition into the tech industry.
+      </p>
+      <ul class="job-bullets">
+        <li data-sv="Ledde och utvecklade utbildningsprogram i nära samarbete med arbetsmarknaden">Led and developed education programmes in close collaboration with the labour market</li>
+        <li data-sv="Drev utbildningarnas ledningsgruppsarbete">Ran the programmes' steering group work</li>
+        <li data-sv="Höll i antagningen av studerande">Handled the admission of students</li>
+        <li data-sv="Drev utbildningarna mot uppsatta resultatmål">Drove the programmes towards set targets</li>
+        <li data-sv="Coachade och vägledde studenter i deras karriärresa in i IT-branschen">Coached and guided students in their career journey into the IT industry</li>
+        <li data-sv="Arbetade med kompetensförsörjning genom att matcha utbildning mot marknadens behov">Worked with competence supply by matching education to market needs</li>
+        <li data-sv="Deltog i rekrytering av lärare och säkerställde relevant kompetens">Participated in recruiting teachers and ensured relevant competence</li>
+        <li data-sv="Byggde och underhöll partnerskap med företag och externa intressenter">Built and maintained partnerships with companies and external stakeholders</li>
+        <li data-sv="Säkrade praktikplatser och stöttade studenter i övergången till arbetslivet">Secured internship placements and supported students in transitioning to working life</li>
+        <li data-sv="Förbättrade interna kommunikationsflöden och utvecklade LMS-struktur">Improved internal communication flows and developed LMS structure</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3 class="job-title" data-sv="First Line Support / butikssäljare">First Line Support / Store Sales</h3>
+        <span class="job-date">2013 — 2018</span>
+      </div>
+      <p class="job-company">Telia Company <span>· Gothenburg / Umeå</span></p>
+      <p class="job-about" data-sv="Sveriges största telekomleverantör, med ett brett utbud av tjänster.">Sweden's largest telecom provider, with a broad range of services.</p>
+      <p class="job-desc" data-sv="Kundservice och försäljning i first line support och i butik, där jag även stöttade onboardingen av nya medarbetare.">
+        Customer service and sales in first line support and in store, where I also supported the
+        onboarding of new colleagues.
+      </p>
+      <ul class="job-bullets">
+        <li data-sv="Stöttade onboardingen av nya medarbetare genom coachning och deltagande i rekrytering">Supported the onboarding of new employees through coaching and by taking part in recruitment</li>
+        <li data-sv="Bidrog till förbättrad kunskapsdelning och förbättrade arbetssätt inom supporten">Contributed to improved knowledge sharing and ways of working within support</li>
+        <li data-sv="Arbetade med kundservice via telefon, chatt och mejl">Worked with customer service by phone, chat and email</li>
+        <li data-sv="Utvecklade en stark kommunikativ förmåga och problemlösningsförmåga">Developed strong communication and problem-solving skills</li>
+      </ul>
+    </article>
+
   </div>
-</section>
-
-<!-- ══════════════════════ ROLES ══════════════════════ -->
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow" data-sv="Roller">Roles</p>
-      <h2 class="sec-title" data-sv="Arbetslivserfarenhet">Work experience</h2>
-    </div>
-
-    <div class="timeline">
-      <article class="job reveal">
-        <div class="job-head">
-          <h3 class="job-title" data-sv="Rekryteringskonsult">Recruitment Consultant</h3>
-          <span class="job-date">Jun 2024 — Jun 2026</span>
-        </div>
-        <p class="job-company">Mpya Sci &amp; Tech <span>· Gothenburg</span></p>
-        <p class="job-about" data-sv="Rekryterings- och konsultföretag specialiserat på vetenskap, teknik och ingenjörskonst.">Recruitment and consulting firm specialising in science, technology and engineering.</p>
-        <p class="job-desc" data-sv="Matchning av rätt person med rätt arbetsplats, samtidigt som jag agerade rådgivare till rekryterande chefer kring kompetens och kulturell passform.">
-          Matching the right person with the right workplace while acting as an advisor to hiring
-          managers on competence and cultural fit.
-        </p>
-        <ul class="job-bullets">
-          <li data-sv="Drev fullständiga rekryteringsprocesser, från behovsanalys till slutligt urval, över flera olika roller, från utvecklare till ingenjörer">Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, varying from developers to engineers</li>
-          <li data-sv="Koordinerade och strukturerade intervjuprocesser, inklusive schemaläggning, förberedelser och kommunikation med intressenter">Coordinated and structured interview processes, including scheduling, preparation, and stakeholder communication</li>
-          <li data-sv="Var kandidaternas huvudsakliga kontaktperson och säkerställde en professionell, responsiv och engagerande kandidatupplevelse">Acted as main point of contact for candidates, ensuring a professional, responsive, and engaging candidate experience</li>
-          <li data-sv="Arbetade löpande i ATS-system för att hantera kandidatdata och säkerställa korrekthet genom hela processen">Worked continuously in ATS systems to manage candidate data and ensure accuracy throughout the process</li>
-          <li data-sv="Skrev och publicerade jobbannonser utifrån kundens behov, med fokus på tydlighet och relevans">Wrote and published job ads based on client needs, ensuring clarity and relevance</li>
-          <li data-sv="Sökte och engagerade kandidater proaktivt och underhöll en stark kandidatpipeline">Proactively sourced and engaged candidates, maintaining a strong talent pipeline</li>
-          <li data-sv="Rådgav rekryterande chefer kring rekryteringsprocesser, tidplaner och kandidatutvärdering">Advised hiring managers on recruitment processes, timelines, and candidate evaluation</li>
-          <li data-sv="Bidrog till att förbättra rekryteringsflöden och säkerställa strukturerade processer">Contributed to improving recruitment workflows and ensuring structured processes</li>
-        </ul>
-      </article>
-
-      <article class="job reveal">
-        <div class="job-head">
-          <h3 class="job-title" data-sv="Kursutvecklare">Course Developer</h3>
-          <span class="job-date">Sep 2023 — Jun 2024</span>
-        </div>
-        <p class="job-company">Simployer <span>· Gothenburg</span></p>
-        <p class="job-about" data-sv="Ledande nordiskt HR-techbolag som erbjuder HR-system, lönelösningar och utbildning.">Leading Nordic HR tech company providing HR systems, payroll solutions and training.</p>
-        <p class="job-desc" data-sv="Utvecklade och förbättrade utbildningsinnehåll inom HR för ett ledande HR-system med starkt fokus på medarbetarupplevelsen.">
-          Developed and improved training content in HR for a leading HR system
-          with a strong focus on the employee experience.
-        </p>
-        <ul class="job-bullets">
-          <li data-sv="Utvecklade och förbättrade kurser inom HR och Learning &amp; Development">Developed and improved courses within HR and Learning &amp; Development</li>
-          <li data-sv="Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov">Ensured content was up to date and aligned with current HR trends and needs</li>
-          <li data-sv="Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet">Collaborated with subject matter experts to create relevant and high-quality training</li>
-          <li data-sv="Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde">Planned and executed conferences and training sessions focused on participant value</li>
-          <li data-sv="Förbättrade kursmaterial och pedagogiska strukturer">Improved course materials and pedagogical structures</li>
-          <li data-sv="Integrerade marknadsinsikter och forskning i utbildningsinnehållet">Integrated market insights and research into training content</li>
-        </ul>
-      </article>
-
-      <article class="job reveal">
-        <div class="job-head">
-          <h3 class="job-title" data-sv="Affärsansvarig">Business Manager</h3>
-          <span class="job-date">Apr 2022 — Sep 2023</span>
-        </div>
-        <p class="job-company">A Society <span>· Gothenburg</span></p>
-        <p class="job-about" data-sv="IT-konsultföretag som kopplar samman techtalanger med företag över hela Sverige.">IT consulting firm connecting tech talent with companies across Sweden.</p>
-        <p class="job-desc" data-sv="Ansvarig för rekrytering och matchning av IT-konsulter samt löpande HR-stöd i en snabbrörlig konsultmiljö.">
-          Responsible for recruitment and matching of IT consultants alongside ongoing HR support in a
-          fast-moving consulting environment.
-        </p>
-        <ul class="job-bullets">
-          <li data-sv="Drev rekryteringsprocesser för IT-konsulter och säkerställde träffsäker kompetensmatchning">Managed recruitment processes for IT consultants, ensuring accurate competence matching</li>
-          <li data-sv="Koordinerade kommunikationen mellan kunder och kandidater genom hela rekryteringsprocessen">Coordinated communication between clients and candidates throughout the hiring process</li>
-          <li data-sv="Gav HR-relaterat stöd och hade löpande kontakt med konsulterna">Provided HR-related support and maintained ongoing contact with consultants</li>
-          <li data-sv="Utformade strukturerade onboardingprocesser för att öka engagemang och retention">Designed structured onboarding processes to improve engagement and retention</li>
-          <li data-sv="Hanterade flera parallella processer i en snabbrörlig miljö">Managed multiple parallel processes in a fast-paced environment</li>
-        </ul>
-      </article>
-
-      <article class="job reveal">
-        <div class="job-head">
-          <h3 class="job-title" data-sv="Talent Acquisition Lead / Konsultansvarig">Talent Acquisition Lead / Consultant Manager</h3>
-          <span class="job-date">Nov 2020 — Apr 2022</span>
-        </div>
-        <p class="job-company">ZoCom <span>· Gothenburg</span></p>
-        <p class="job-about" data-sv="Bolag inom utbildningsprodukter och innovation i IT-sektorn.">Educational product and innovation company in the IT sector.</p>
-        <p class="job-desc" data-sv="Del av ledningsgruppen med fullt ansvar för talent acquisition och en konsultgrupp på 15+ personer i ett snabbväxande IT-företag.">
-          Part of the management team with full responsibility for talent acquisition and a consultant
-          group of 15+ people in a high-growth IT company.
-        </p>
-        <ul class="job-bullets">
-          <li data-sv="Ledde bolagets talent acquisition-strategi, inklusive employer branding, processoptimering och implementering av ATS">Led the company's talent acquisition strategy, including employer branding, process optimisation and ATS implementation</li>
-          <li data-sv="Drev rekryteringsprocesser från början till slut, från screening och intervjuer till onboarding av nyanställda">Managed recruitment processes end to end, from screening and interviewing to onboarding of new employees</li>
-          <li data-sv="Genomförde kompetensutvecklingsinsatser och HR-relaterat ansvar för en konsultgrupp på 15+ personer">Conducted personnel development activities and HR-related responsibilities for a consultant group of 15+</li>
-          <li data-sv="Utformade och genomförde ett strukturerat onboardingramverk för nyanställda">Designed and executed a structured onboarding framework for new hires</li>
-          <li data-sv="Skapade interna workshops och lärandetillfällen, inklusive utbildning i gamification-metodik">Created internal workshops and learning sessions, including gamification methodology training</li>
-          <li data-sv="Var med och byggde ett karriärutvecklingsprogram för att stötta juniora talanger in i IT-branschen">Helped build a career development programme aimed at supporting junior talent in entering the IT industry</li>
-          <li data-sv="Bidrog till intern organisationsutveckling genom att vara med och utforma och förvalta ett internt Learning Management System (LMS)">Contributed to internal organisational development by helping shape and run an internal Learning Management System (LMS)</li>
-        </ul>
-      </article>
-
-      <article class="job reveal">
-        <div class="job-head">
-          <h3 class="job-title" data-sv="Utbildningsledare / ICT-ansvarig">Education Manager / ICT Manager</h3>
-          <span class="job-date">Jun 2019 — Oct 2020</span>
-        </div>
-        <p class="job-company">IT-Högskolan <span>· Gothenburg</span></p>
-        <p class="job-about" data-sv="En av Sveriges största aktörer inom yrkeshögskola med fokus på IT och tech.">One of Sweden's largest providers of vocational higher education within IT and tech.</p>
-        <p class="job-desc" data-sv="Ledde utbildningsprogram på en av Sveriges största yrkeshögskolor inom IT och stöttade studenter i deras övergång till techbranschen.">
-          Led education programmes at one of Sweden's largest vocational IT schools and supported
-          students in their transition into the tech industry.
-        </p>
-        <ul class="job-bullets">
-          <li data-sv="Ledde och utvecklade utbildningsprogram i nära samarbete med arbetsmarknaden">Led and developed education programmes in close collaboration with the labour market</li>
-          <li data-sv="Drev utbildningarnas ledningsgruppsarbete">Ran the programmes' steering group work</li>
-          <li data-sv="Höll i antagningen av studerande">Handled the admission of students</li>
-          <li data-sv="Drev utbildningarna mot uppsatta resultatmål">Drove the programmes towards set targets</li>
-          <li data-sv="Coachade och vägledde studenter i deras karriärresa in i IT-branschen">Coached and guided students in their career journey into the IT industry</li>
-          <li data-sv="Arbetade med kompetensförsörjning genom att matcha utbildning mot marknadens behov">Worked with competence supply by matching education to market needs</li>
-          <li data-sv="Deltog i rekrytering av lärare och säkerställde relevant kompetens">Participated in recruiting teachers and ensured relevant competence</li>
-          <li data-sv="Byggde och underhöll partnerskap med företag och externa intressenter">Built and maintained partnerships with companies and external stakeholders</li>
-          <li data-sv="Säkrade praktikplatser och stöttade studenter i övergången till arbetslivet">Secured internship placements and supported students in transitioning to working life</li>
-          <li data-sv="Förbättrade interna kommunikationsflöden och utvecklade LMS-struktur">Improved internal communication flows and developed LMS structure</li>
-        </ul>
-      </article>
-
-      <article class="job reveal">
-        <div class="job-head">
-          <h3 class="job-title" data-sv="First Line Support / butikssäljare">First Line Support / Store Sales</h3>
-          <span class="job-date">2013 — 2018</span>
-        </div>
-        <p class="job-company">Telia Company <span>· Gothenburg / Umeå</span></p>
-        <p class="job-about" data-sv="Sveriges största telekomleverantör, med ett brett utbud av tjänster.">Sweden's largest telecom provider, with a broad range of services.</p>
-        <p class="job-desc" data-sv="Kundservice och försäljning i first line support och i butik, där jag även stöttade onboardingen av nya medarbetare.">
-          Customer service and sales in first line support and in store, where I also supported the
-          onboarding of new colleagues.
-        </p>
-        <ul class="job-bullets">
-          <li data-sv="Stöttade onboardingen av nya medarbetare genom coachning och deltagande i rekrytering">Supported the onboarding of new employees through coaching and by taking part in recruitment</li>
-          <li data-sv="Bidrog till förbättrad kunskapsdelning och förbättrade arbetssätt inom supporten">Contributed to improved knowledge sharing and ways of working within support</li>
-          <li data-sv="Arbetade med kundservice via telefon, chatt och mejl">Worked with customer service by phone, chat and email</li>
-          <li data-sv="Utvecklade en stark kommunikativ förmåga och problemlösningsförmåga">Developed strong communication and problem-solving skills</li>
-        </ul>
-      </article>
-
-    </div>
+    </section>
   </div>
-</section>
-
-<!-- ══════════════════════ EDUCATION ══════════════════════ -->
-<section class="band band--alt">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="eyebrow" data-sv="Utbildning &amp; kompetenser">Education &amp; Skills</p>
-      <h2 class="sec-title" data-sv="Akademisk bakgrund och kompetenser">Academic background and capabilities</h2>
-    </div>
-
-    <div class="edu-list">
-      <article class="card edu-card reveal">
-        <div class="edu-top">
-          <h3 class="edu-degree" data-sv="Kandidatexamen i beteendevetenskap med inriktning mot IT-miljöer">BSc. Behavioural Science with focus on IT environments</h3>
-          <span class="edu-date">2016 — 2019</span>
-        </div>
-        <p class="edu-school" data-sv="Umeå universitet">Umeå University</p>
-        <p class="edu-desc" data-sv="Kandidatexamen med fokus på mänskligt beteende i digitala och tekniska organisationer: en solid grund för People &amp; Culture-arbete i techbranschen.">
-          Bachelor's degree focused on human behaviour in digital and technical organisations: a solid
-          foundation for People &amp; Culture work in the tech industry.
-        </p>
-      </article>
-
-      <article class="card edu-card reveal">
-        <div class="edu-top">
-          <h3 class="edu-degree" data-sv="Certifierad utbildningsledare">Certified Education Manager</h3>
-          <span class="edu-date">2020</span>
-        </div>
-        <p class="edu-school">Myndigheten för Yrkeshögskolan</p>
-        <p class="edu-desc" data-sv="Certifiering inom utbildningsledning med fokus på yrkeshögskola, direkt tillämpbar i L&amp;D-roller med betoning på pedagogisk planering och kursdesign.">
-          Certification in education management focused on vocational higher education, directly
-          applicable in L&amp;D roles with emphasis on pedagogical planning and course design.
-        </p>
-      </article>
-    </div>
-
-    <div class="reveal">
-      <div class="tool-group">
-        <p class="tool-label" data-sv="Expertisområden">Areas of expertise</p>
-        <div class="pill-row">
-          <span class="pill">Learning &amp; Development</span>
-          <span class="pill">Employer Branding</span>
-          <span class="pill" data-sv="Instruktionsdesign &amp; kursutveckling">Instructional design &amp; Course Development</span>
-          <span class="pill">Gamification</span>
-          <span class="pill">Learning Management Systems (LMS)</span>
-          <span class="pill">People &amp; Culture</span>
-          <span class="pill" data-sv="Svensk arbetsrätt">Swedish labour law</span>
-          <span class="pill">HR</span>
-          <span class="pill" data-sv="Kommunikation">Communication</span>
-          <span class="pill" data-sv="Projektledning">Project Management</span>
-          <span class="pill" data-sv="Pedagogik &amp; didaktik">Pedagogy &amp; didactics</span>
-          <span class="pill" data-sv="Rekrytering &amp; urval">Recruitment &amp; selection</span>
-          <span class="pill" data-sv="Ledarskap &amp; coachning">Leadership &amp; coaching</span>
-          <span class="pill" data-sv="Kompetensförsörjning">Competence supply</span>
-        </div>
-      </div>
-
-      <div class="tool-group">
-        <p class="tool-label" data-sv="System &amp; verktyg">Systems &amp; tools</p>
-        <div class="pill-row">
-          <span class="pill">Winningtemp</span>
-          <span class="pill">Monday.com</span>
-          <span class="pill">Teamtailor</span>
-          <span class="pill">Slack</span>
-          <span class="pill">Office 365</span>
-          <span class="pill">Canva</span>
-          <span class="pill">Workbuster</span>
-          <span class="pill">Claude Code</span>
-        </div>
-      </div>
-
-      <div class="tool-group">
-        <p class="tool-label" data-sv="Så arbetar jag">How I work</p>
-        <div class="pill-row">
-          <span class="pill pill--accent" data-sv="Strukturerad och processdriven">Structured and process-driven</span>
-          <span class="pill pill--accent" data-sv="Rådgivande mot chefer och intressenter">Advisory to managers and stakeholders</span>
-          <span class="pill pill--accent" data-sv="Bygger från noll">Builds from zero</span>
-          <span class="pill pill--accent" data-sv="Pedagogisk, lär ut det jag bygger">Pedagogical, teaches what I build</span>
-          <span class="pill pill--accent" data-sv="Trygg med många parallella processer">Comfortable with many parallel processes</span>
-          <span class="pill pill--accent" data-sv="AI-native i vardagen">AI-native day to day</span>
-        </div>
-      </div>
-
-      <div class="tool-group">
-        <p class="tool-label" data-sv="Språk">Languages</p>
-        <div class="pill-row">
-          <span class="pill" data-sv="Svenska, modersmål">Swedish, native</span>
-          <span class="pill" data-sv="Engelska, flytande">English, fluent</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -339,7 +337,7 @@
 </footer>
 
 <script src="lang.js"></script>
-<script src="site.js"></script>
+<script src="site.js?v=8"></script>
 <script src="tracking.js"></script>
 </body>
 </html>

@@ -38,7 +38,7 @@
   --radius-lg:     18px;
   --radius-pill:   100px;
   --max:           1080px;
-  --nav-h:         104px;
+  --nav-h:         64px;
   --shadow:        0 2px 12px rgba(28,23,16,0.10), 0 1px 3px rgba(28,23,16,0.06);
   --shadow-sm:     0 1px 4px rgba(28,23,16,0.07);
   --shadow-lg:     0 10px 40px rgba(28,23,16,0.13);
@@ -54,14 +54,27 @@ body {
   background: var(--bg);
   color: var(--ink-mid);
   font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.75;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
 ::selection { background: rgba(var(--accent-rgb),0.18); }
+
+/* Keyboard focus is always visible; mouse clicks don't draw the ring. */
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ══════════════════════════════════════════
    NAV
@@ -75,17 +88,16 @@ img { max-width: 100%; display: block; }
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
-.nav-top,
-.nav-bar {
+.nav-top {
   max-width: var(--max);
+  height: var(--nav-h);
   margin: 0 auto;
   padding: 0 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1.5rem;
 }
-.nav-top { height: 52px; }
-.nav-bar { height: 52px; border-top: 1px solid var(--border-light); gap: 1rem; }
+.nav-bar { margin-left: auto; min-width: 0; }
 
 .brand {
   display: flex;
@@ -120,20 +132,26 @@ img { max-width: 100%; display: block; }
   -ms-overflow-style: none;
 }
 .nav-links::-webkit-scrollbar { display: none; }
-.nav-contact-link { display: none; }
 .nav-links a {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 500;
   color: var(--ink-light);
   text-decoration: none;
-  padding: 0.35rem 0.6rem;
+  padding: 0.45rem 0.85rem;
   border-radius: var(--radius-pill);
   transition: color 0.15s, background 0.15s;
   white-space: nowrap;
 }
 .nav-links a:hover { color: var(--ink); background: rgba(216,208,192,0.28); }
 .nav-links a.active { color: var(--amber); background: var(--amber-pale); }
+
+/* "What I do" is in the nav only on application pages, where packs retitle
+   it "How I match". job.js sets .has-pack once a pack has been applied. */
+.nav-links .nav-match,
+.nav-mobile .nav-match { display: none; }
+.has-pack .nav-links .nav-match { display: list-item; }
+.has-pack .nav-mobile .nav-match { display: block; }
 
 /* Language toggle */
 .lang-toggle {
@@ -173,7 +191,7 @@ img { max-width: 100%; display: block; }
 .nav-mobile {
   display: none;
   position: fixed;
-  inset: 52px 0 0;
+  inset: var(--nav-h) 0 0;
   z-index: 99;
   background: rgba(var(--bg-rgb),0.98);
   backdrop-filter: blur(16px);
@@ -235,7 +253,7 @@ img { max-width: 100%; display: block; }
    ══════════════════════════════════════════ */
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 2.5rem; }
 
-.band { position: relative; padding: 5.5rem 0; }
+.band { position: relative; padding: 6rem 0; }
 .band--alt { background: var(--bg2); }
 .band--tint { background: var(--bg3); }
 .band + .band--alt, .band--alt + .band { border-top: 1px solid var(--border-light); }
@@ -257,7 +275,7 @@ img { max-width: 100%; display: block; }
   background: var(--photo-veil);
   z-index: 0;
 }
-.band--photo > * { position: relative; z-index: 1; }
+.band--photo > :not(dialog) { position: relative; z-index: 1; }
 
 /* Section heading block */
 .eyebrow {
@@ -285,7 +303,8 @@ img { max-width: 100%; display: block; }
   max-width: 62ch;
   margin-top: 1.1rem;
 }
-.sec-head { margin-bottom: 3rem; }
+.sec-head { margin-bottom: 2.75rem; }
+.sec-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
 
 /* Cards */
 .card {
@@ -311,18 +330,19 @@ img { max-width: 100%; display: block; }
 .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.45s ease, transform 0.45s ease; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .btn:hover { transform: none; }
+  .ask-dot { animation: none; }
 }
 
 /* ══════════════════════════════════════════
    HERO
    ══════════════════════════════════════════ */
-.hero { padding: calc(var(--nav-h) + 3.5rem) 0 4.5rem; }
+.hero { padding: calc(var(--nav-h) + 4rem) 0 4rem; }
 
 /* Portrait and header text sit side by side, vertically centred on each
    other, rather than the photo stacking above the name. */
@@ -331,7 +351,7 @@ img { max-width: 100%; display: block; }
   grid-template-columns: minmax(0, 1fr) 290px;
   gap: 4rem;
   align-items: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: 4rem;
 }
 .hero-photo {
   width: 100%;
@@ -361,10 +381,10 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.6rem;
 }
 .hero-lead {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.08rem;
+  line-height: 1.75;
   color: var(--ink-mid);
-  max-width: 54ch;
+  max-width: 58ch;
   margin-bottom: 1.8rem;
 }
 .hero-lead strong { font-weight: 600; color: var(--ink); }
@@ -383,18 +403,23 @@ img { max-width: 100%; display: block; }
 
 .hero-cta { display: flex; flex-wrap: wrap; gap: 0.7rem; }
 
-/* Stat strip */
+/* At a glance: three numbers in a row, split by thin rules. */
+.glance-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 0.9rem;
+}
 .stat-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background: rgba(var(--white-rgb),0.6);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.5);
-  overflow: hidden;
+  border-top: 1px solid var(--border-strong);
 }
-.stat { padding: 1.5rem 1.6rem; border-right: 1px solid var(--border); }
+.stat { padding: 1.4rem 1.6rem 0.2rem; border-right: 1px solid var(--border); }
+.stat:first-child { padding-left: 0; }
 .stat:last-child { border-right: none; }
 .stat-num {
   font-family: var(--serif);
@@ -407,18 +432,95 @@ img { max-width: 100%; display: block; }
 .stat-label { font-size: 0.8rem; color: var(--ink-light); line-height: 1.5; }
 
 /* ══════════════════════════════════════════
-   AI ASK BAR
+   AI ASSISTANT — floating button and panel
+   Position and size hang on the ids, so a job theme that styles `.ask` as
+   a band (padding, borders) only reaches the colours.
    ══════════════════════════════════════════ */
-.ask { padding: 3.2rem 0; background: var(--bg2); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
-.ask-inner { max-width: 660px; }
+.ask-fab {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--amber);
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0.85rem 1.3rem;
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform 0.18s, background 0.18s;
+}
+.ask-fab:hover { transform: translateY(-2px); background: var(--amber-light); }
+
+#ask-panel {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 5.4rem;
+  z-index: 95;
+  width: min(420px, calc(100vw - 2rem));
+  max-height: min(640px, calc(100vh - var(--nav-h) - 7rem));
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+#ask-panel[hidden] { display: none; }
+.ask {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+#ask-panel .ask-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  padding: 1.3rem 1.3rem 1.2rem;
+}
+.ask-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
 .ask-title {
   font-family: var(--serif);
-  font-size: 1.35rem;
+  font-size: 1.08rem;
   font-weight: 600;
+  line-height: 1.3;
   color: var(--ink);
-  margin-bottom: 0.4rem;
 }
-.ask-sub { font-size: 0.9rem; color: var(--ink-light); margin-bottom: 1.3rem; }
+.ask-close {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px; height: 36px;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ask-close svg { width: 16px; height: 16px; }
+.ask-close:hover { background: var(--bg2); }
+.ask-sub { font-size: 0.86rem; color: var(--ink-light); line-height: 1.55; }
+
+.ask-log { flex: 1 1 auto; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; }
+.ask-log:empty { display: none; }
+.ask-q {
+  align-self: flex-end;
+  max-width: 85%;
+  margin-left: auto;
+  font-size: 0.86rem;
+  color: var(--ink);
+  background: var(--bg2);
+  border-radius: 14px 14px 4px 14px;
+  padding: 0.55rem 0.9rem;
+  width: fit-content;
+}
 .ask-field { position: relative; }
 .ask-input {
   width: 100%;
@@ -428,17 +530,16 @@ img { max-width: 100%; display: block; }
   background: rgba(var(--white-rgb),0.85);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-pill);
-  padding: 1rem 3.6rem 1rem 1.5rem;
+  padding: 0.85rem 3.4rem 0.85rem 1.2rem;
   outline: none;
-  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255,255,255,0.5);
   transition: border-color 0.15s, box-shadow 0.15s;
 }
-.ask-input:focus { border-color: var(--amber); box-shadow: 0 2px 18px rgba(var(--accent-rgb),0.14); }
+.ask-input:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.25); }
 .ask-input::placeholder { color: var(--ink-dim); }
 .ask-btn {
-  position: absolute; right: 6px; top: 50%;
+  position: absolute; right: 5px; top: 50%;
   transform: translateY(-50%);
-  width: 40px; height: 40px;
+  width: 38px; height: 38px;
   background: var(--amber);
   border: none; border-radius: 50%;
   cursor: pointer;
@@ -449,28 +550,32 @@ img { max-width: 100%; display: block; }
 .ask-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .ask-btn svg { width: 17px; height: 17px; }
 
-.ask-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.9rem; }
+.ask-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+/* Once a conversation is under way the suggestions shrink to one row that
+   scrolls sideways, leaving the room to the answers. */
+.ask-log:not(:empty) ~ .ask-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; flex-shrink: 0; }
+.ask-log:not(:empty) ~ .ask-chips .ask-chip { white-space: nowrap; }
 .ask-chip {
   font-family: var(--sans);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   color: var(--ink-light);
   background: rgba(var(--white-rgb),0.6);
   border: 1px solid var(--border);
   border-radius: var(--radius-pill);
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 0.85rem;
   cursor: pointer;
+  text-align: left;
   transition: border-color 0.15s, color 0.15s;
 }
 .ask-chip:hover { border-color: var(--amber); color: var(--amber); }
 
 .ask-out {
   display: none;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   background: rgba(var(--white-rgb),0.75);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.25rem 1.5rem;
-  box-shadow: var(--shadow-sm);
+  padding: 0.9rem 1.1rem;
 }
 .ask-out.visible { display: block; }
 .ask-out-label {
@@ -479,16 +584,29 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--amber);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
-.ask-out-text { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.8; }
-.ask-load { display: none; align-items: center; gap: 0.45rem; }
+.ask-out-text { font-size: 0.9rem; color: var(--ink-mid); line-height: 1.7; white-space: pre-line; }
+.ask-load { display: none; align-items: center; gap: 0.45rem; margin: 0; padding: 0.4rem 0.2rem; background: none; border: none; }
 .ask-load.visible { display: flex; }
 .ask-dot { width: 5px; height: 5px; background: var(--amber); border-radius: 50%; animation: askpulse 1.2s ease-in-out infinite; }
 .ask-dot:nth-child(2) { animation-delay: 0.2s; }
 .ask-dot:nth-child(3) { animation-delay: 0.4s; }
 .ask-load span { font-size: 0.85rem; color: var(--ink-dim); margin-left: 0.35rem; }
 @keyframes askpulse { 0%,100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1); } }
+
+/* Phones: the panel becomes a sheet along the bottom, and the button steps
+   aside while it is open. */
+@media (max-width: 620px) {
+  .ask-fab { right: 1rem; bottom: 1rem; padding: 0.75rem 1.1rem; font-size: 0.86rem; }
+  #ask-panel {
+    left: 0.5rem; right: 0.5rem; bottom: 0.5rem;
+    width: auto;
+    max-height: calc(100vh - var(--nav-h) - 1rem);
+  }
+  .ask-open .ask-fab { display: none; }
+  .site-footer { padding-bottom: 5rem; }
+}
 
 /* ══════════════════════════════════════════
    ABOUT
@@ -537,7 +655,8 @@ img { max-width: 100%; display: block; }
 }
 
 /* ══════════════════════════════════════════
-   POINTS (numbered, per-role match)
+   POINTS — "What I do", in full (the popups; the tile has its own rules
+   under BENTO)
    ══════════════════════════════════════════ */
 .points { display: flex; flex-direction: column; gap: 1rem; }
 .point {
@@ -546,6 +665,7 @@ img { max-width: 100%; display: block; }
   gap: 1.5rem;
   padding: 2rem 2.2rem;
 }
+.point-sum { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.65; margin-bottom: 1.1rem; }
 .point-num-wrap { padding-top: 0.35rem; }
 .point-rule { width: 44px; height: 2px; background: var(--amber); margin-bottom: 0.7rem; }
 .point-num {
@@ -596,9 +716,44 @@ img { max-width: 100%; display: block; }
 .point-roles .pill { font-size: 0.78rem; }
 
 /* ══════════════════════════════════════════
-   BUILT GRID
+   BUILT GRID — "Selected projects"
+   On the base page the AI group comes first, with the featured cards at
+   its head. Packs reach cards by :nth-of-type, so this is all done with
+   order, never by moving markup. Application pages keep the work group
+   first, as their own lead paragraphs describe it.
    ══════════════════════════════════════════ */
-.built-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+#built .wrap { display: flex; flex-direction: column; }
+
+html:not(.has-pack) #built .sec-head { order: 0; }
+html:not(.has-pack) #built .built-sub:nth-of-type(2) { order: 1; margin-top: 0; }
+html:not(.has-pack) #built .built-grid:last-of-type { order: 2; }
+html:not(.has-pack) #built .built-sub:nth-of-type(1) { order: 3; margin-top: 2.8rem; }
+html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
+#built .built-grid:last-of-type .is-featured { order: -1; }
+
+.built-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; align-items: start; }
+
+.built-card.is-featured { display: flex; flex-direction: column; padding: 1.1rem 1.1rem 1.6rem; }
+.built-card.is-featured > :not(.built-icon) { margin-left: 0.6rem; margin-right: 0.6rem; }
+.built-card.is-featured .built-icon {
+  width: auto;
+  height: 150px;
+  border-radius: calc(var(--radius-lg) - 6px);
+  margin-bottom: 1.3rem;
+}
+.built-card.is-featured .built-icon svg { width: 54px; height: 54px; stroke-width: 1.4; }
+.built-card.is-featured .built-title { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.built-card.is-featured .built-link { align-self: flex-start; }
+.built-card.is-featured .built-text { margin-top: 1rem; }
+.built-cat {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 0.45rem;
+}
+.built-sum { font-size: 0.93rem; color: var(--ink-mid); line-height: 1.65; }
 .built-card { padding: 1.8rem 1.9rem; }
 .built-icon {
   width: 42px; height: 42px;
@@ -622,6 +777,11 @@ img { max-width: 100%; display: block; }
 /* ══════════════════════════════════════════
    TIMELINE / EXPERIENCE
    ══════════════════════════════════════════ */
+#experience .wrap { display: flex; flex-direction: column; }
+#experience .sec-head { order: 0; }
+#experience .timeline { order: 1; }
+#experience .roles-card { order: 2; margin: 3.5rem 0 0; }
+
 .timeline { position: relative; padding-left: 2rem; }
 .timeline::before {
   content: '';
@@ -630,7 +790,7 @@ img { max-width: 100%; display: block; }
   width: 1px;
   background: linear-gradient(to bottom, var(--amber), var(--border-strong) 70%, transparent);
 }
-.job { position: relative; padding-bottom: 3rem; }
+.job { position: relative; padding-bottom: 2.6rem; }
 .job:last-child { padding-bottom: 0; }
 .job::before {
   content: '';
@@ -676,7 +836,7 @@ img { max-width: 100%; display: block; }
   color: var(--ink-dim);
   margin-top: 0.5rem;
 }
-.job-desc { font-size: 0.94rem; color: var(--ink-mid); line-height: 1.85; margin-top: 0.9rem; }
+.job-desc { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.7; margin-top: 0.6rem; max-width: 68ch; }
 .job-bullets { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.45rem; }
 .job-bullets li {
   position: relative;
@@ -696,7 +856,23 @@ img { max-width: 100%; display: block; }
 /* ══════════════════════════════════════════
    EDUCATION
    ══════════════════════════════════════════ */
-.edu-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+/* Education and certifications on the left, skills and tools on the right. */
+.edu-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+}
+.edu-sub {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.9rem;
+}
+.edu-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+.edu-skills .edu-sub { margin-bottom: 1.2rem; }
+.edu-col .callout { margin-bottom: 0; }
 .edu-card { padding: 1.7rem 1.9rem; }
 .edu-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
 .edu-degree {
@@ -731,7 +907,8 @@ img { max-width: 100%; display: block; }
 /* ══════════════════════════════════════════
    TOOLBOX
    ══════════════════════════════════════════ */
-.tool-group { margin-bottom: 2rem; }
+.tool-group { margin-bottom: 1.8rem; }
+.tool-group:last-child { margin-bottom: 0; }
 
 /* "Roles I've recruited for" — only on job packs that bring a `roles`
    field; job.js builds it into Experience, above the timeline. */
@@ -787,6 +964,7 @@ img { max-width: 100%; display: block; }
    ══════════════════════════════════════════ */
 .contact-btns { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 2rem 0 2rem; }
 .contact-btns .btn svg { width: 17px; height: 17px; }
+.contact-btns .btn svg[fill="none"] { fill: none; }
 .contact-facts {
   display: flex; flex-wrap: wrap;
   gap: 0.5rem 2rem;
@@ -815,17 +993,22 @@ img { max-width: 100%; display: block; }
    ══════════════════════════════════════════ */
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .built-grid, .personal-grid { grid-template-columns: 1fr; }
+  .personal-grid { grid-template-columns: 1fr; }
+  .edu-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 680px) {
+  .built-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 780px) {
   .nav-top, .wrap { padding: 0 1.25rem; }
-  .band { padding: 3.5rem 0; }
+  .band { padding: 4rem 0; }
   .hero { padding: calc(var(--nav-h) + 2.2rem) 0 3rem; }
   .band--photo::before { background-attachment: scroll; }
-  .stat-strip { grid-template-columns: 1fr; }
-  .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 1.2rem 1.4rem; }
-  .stat:last-child { border-bottom: none; }
+  .stat { padding: 1rem 0.8rem 0.2rem; }
+  .stat-num { font-size: 1.6rem; }
+  .stat-label { font-size: 0.74rem; }
   .point { grid-template-columns: 1fr; gap: 0.9rem; padding: 1.6rem 1.4rem; }
   .point-num-wrap { display: flex; align-items: center; gap: 0.8rem; padding-top: 0; }
   .point-rule { margin-bottom: 0; }
@@ -836,8 +1019,8 @@ img { max-width: 100%; display: block; }
   .job-head { gap: 0.25rem; }
   .job-date { font-size: 0.7rem; }
   .hero-cta .btn, .contact-btns .btn { flex: 1 1 auto; justify-content: center; }
-  .ask-input { font-size: 0.88rem; padding: 0.85rem 3.2rem 0.85rem 1.2rem; }
 }
+
 
 /* ── BUILT: sub-group label and project links ── */
 .built-sub {
@@ -874,9 +1057,12 @@ img { max-width: 100%; display: block; }
 }
 
 /* ══════════════════════════════════════════
-   CV PAGE
+   CV PAGE — as on oscarrickett.com/cv: a sidebar with contact details,
+   skills and education, and the roles beside it
    ══════════════════════════════════════════ */
-.cv-head { padding: calc(var(--nav-h) + 3.5rem) 0 4rem; }
+.cv { max-width: 1240px; margin: 0 auto; padding: calc(var(--nav-h) + 1rem) 1.25rem 2.5rem; }
+.cv .wrap { max-width: none; padding: 0; }
+.cv-top { padding: 1.4rem 0 1.6rem; }
 .cv-name {
   font-family: var(--serif);
   font-size: clamp(2.3rem, 5vw, 3.6rem);
@@ -886,71 +1072,393 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
   margin-bottom: 0.4rem;
 }
-.cv-lead {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--ink-mid);
-  max-width: 58ch;
-  margin-bottom: 1.6rem;
-}
-.cv-contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.6rem;
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  color: var(--ink-light);
-  margin-bottom: 2rem;
-}
-.cv-contact a { color: var(--ink-light); text-decoration: none; border-bottom: 1px solid var(--border-strong); }
-.cv-contact a:hover { color: var(--amber); border-color: var(--amber); }
+.cv-top .hero-role { margin-bottom: 1.3rem; }
 
-@media (max-width: 780px) {
-  .cv-head { padding: calc(var(--nav-h) + 2.2rem) 0 2.5rem; }
+.cv-layout {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+.cv-side { display: flex; flex-direction: column; gap: 1rem; }
+.cv-card { padding: 1.2rem 1.3rem; }
+.cv-card .tool-group { margin: 0; }
+.cv-card .tool-label { margin-bottom: 0.7rem; }
+.cv-card .pill-row { gap: 0.35rem; }
+.cv-card .pill { font-size: 0.76rem; padding: 0.3rem 0.7rem; }
+.cv-photo { width: 96px; height: 96px; object-fit: cover; object-position: top; border-radius: 14px; margin-bottom: 1rem; }
+.cv-contact { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: var(--ink-mid); }
+.cv-contact a { color: var(--ink-mid); text-decoration: none; border-bottom: 1px solid var(--border-strong); }
+.cv-contact a:hover { color: var(--amber); border-color: var(--amber); }
+.cv-card .edu-card { margin-bottom: 1.1rem; }
+.cv-card .edu-card:last-child { margin-bottom: 0; }
+.cv-card .edu-degree { font-size: 0.92rem; }
+.cv-card .edu-desc { font-size: 0.8rem; line-height: 1.6; }
+
+.cv-main { padding: 1.6rem 1.9rem 2rem; }
+.cv-main .sec-title { font-size: 1.6rem; max-width: none; }
+.cv-lead { font-size: 0.9rem; color: var(--ink-light); line-height: 1.6; margin: 0.4rem 0 1.8rem; }
+.cv-main .job { padding-bottom: 2rem; }
+.cv-main .job:last-child { padding-bottom: 0; }
+
+@media (max-width: 900px) {
+  .cv-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .cv { padding: calc(var(--nav-h) + 0.6rem) 0.6rem 1.5rem; }
+  .cv-top { padding: 1rem 0.6rem 1.2rem; }
+  .cv-main { padding: 1.3rem 1.2rem 1.5rem; }
 }
 
 /* ══════════════════════════════════════════
-   PRINT — the CV page should print as a CV
+   PRINT — the CV page prints as the downloadable CV (build_cv_pdf.sh):
+   A4, white pages, the sidebar boxes kept in the page's colours
    ══════════════════════════════════════════ */
 @media print {
+  @page { size: A4; margin: 11mm 11mm 12mm; }
   :root { --nav-h: 0px; }
-  .nav, .nav-mobile, .site-footer, .hero-cta, .ask, .built-link { display: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .nav, .nav-mobile, .site-footer, .hero-cta, .ask, .ask-fab, .built-link, .tile-hit, .tile-more { display: none !important; }
   .band--photo::before, .band--photo::after { display: none !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
 
-  body { background: #fff; color: #000; font-size: 10.5pt; line-height: 1.5; }
-  .band, .band--alt, .band--tint { background: #fff !important; padding: 0.8rem 0; border: none; }
-  .cv-head { padding: 0 0 1rem; }
-  .wrap { padding: 0; max-width: none; }
+  html, body { background: #fff !important; }
+  body { font-size: 9.5pt; line-height: 1.45; }
+  a { color: inherit; text-decoration: none; }
 
-  .card { background: #fff !important; box-shadow: none !important; border-color: #ccc; backdrop-filter: none; }
-  .sec-head { margin-bottom: 1.2rem; }
-  .sec-title, .cv-name { color: #000; }
-  .job, .edu-card, .built-card, .point { page-break-inside: avoid; break-inside: avoid; }
-  .job { padding-bottom: 1.2rem; }
-  .job-bullets { gap: 0.15rem; }
-  a { color: #000; text-decoration: none; }
+  .cv { max-width: none; padding: 0; }
+  .cv-top { padding: 0 0 4mm; margin-bottom: 5mm; border-bottom: 2.5pt solid var(--ink); }
+  .cv-top .eyebrow { margin-bottom: 1mm; font-size: 7pt; }
+  .cv-name { font-size: 26pt; margin-bottom: 1mm; }
+  .cv-top .hero-role { margin: 0; font-size: 11pt; }
+
+  .cv-layout { grid-template-columns: 60mm minmax(0, 1fr); gap: 6mm; }
+  .cv-side { gap: 3.5mm; }
+  .card { box-shadow: none !important; backdrop-filter: none; }
+  .cv-card { padding: 3.5mm 4mm; background: var(--bg) !important; border: none; border-radius: 3mm; break-inside: avoid; }
+  .cv-card .tool-label { font-size: 6.8pt; margin-bottom: 2mm; }
+  .cv-card .pill { font-size: 7.4pt; padding: 0.6mm 2.2mm; background: #fff; }
+  .cv-card .pill--accent { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+  .cv-photo { width: 24mm; height: 24mm; margin-bottom: 3mm; border-radius: 3mm; }
+  .cv-contact { font-size: 8pt; gap: 1mm; }
+  .cv-contact a { border: none; }
+  .cv-card .edu-card { padding: 0; margin-bottom: 3mm; background: none; }
+  .cv-card .edu-degree { font-size: 8.8pt; }
+  .cv-card .edu-date, .cv-card .edu-school { font-size: 7.6pt; }
+  .cv-card .edu-desc { font-size: 7.6pt; line-height: 1.4; margin-top: 1mm; }
+
+  .cv-main { padding: 0; background: none !important; border: none; }
+  .cv-main .eyebrow { font-size: 7pt; margin-bottom: 1mm; }
+  .cv-main .sec-title { font-size: 15pt; margin-bottom: 3mm; }
+  .cv-lead { display: none; }
+  .timeline { padding-left: 6mm; }
+  .timeline::before { left: 1.6mm; }
+  .job::before { left: -6mm; top: 1.2mm; width: 3mm; height: 3mm; }
+  .cv-main .job { padding-bottom: 4.5mm; }
+  .job-head { break-after: avoid; }
+  .job-title { font-size: 10.5pt; }
+  .job-date { font-size: 7.6pt; }
+  .job-company { font-size: 8.6pt; margin-top: 0.5mm; }
+  .job-about { font-size: 8pt; margin-top: 1mm; }
+  .job-desc { font-size: 8.8pt; line-height: 1.45; margin-top: 1.5mm; max-width: none; }
+  .job-bullets { margin-top: 1.5mm; gap: 0.6mm; }
+  .job-bullets li { font-size: 8.4pt; line-height: 1.4; break-inside: avoid; }
+}
 }
 
-/* Below this the CTA button costs more room than it earns: drop it and let
-   Contact join the links, so every header stays on screen. */
-@media (max-width: 880px) {
-  .nav-bar > .btn { display: none; }
-  .nav-contact-link { display: block; }
-  /* Only once the links can actually run out of room: fade the right edge so
-     it reads as scrollable rather than cut off. */
-  .nav-links {
-    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
-            mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
-  }
-}
-
-/* The section headers stay visible across desktop and tablet; the nav links
-   scroll sideways rather than collapsing. Only phones get the hamburger. */
-@media (max-width: 620px) {
-  :root { --nav-h: 52px; }
+/* Five links fit on one row down to tablet width; below that the hamburger
+   takes over. */
+@media (max-width: 720px) {
+  :root { --nav-h: 56px; }
   .nav-bar { display: none; }
+  .nav-actions { margin-left: auto; }
   .nav-hamburger { display: flex; }
+}
+
+/* ══════════════════════════════════════════
+   BENTO — the start page as one screen of tiles
+   Two rows of four columns, as on oscarrickett.com: the intro (wide), What
+   I do and Projects on top; Experience (wide), Education and Contact below. Each tile shows the short version and
+   site.js opens the rest in a popup (a <dialog> inside the same section).
+
+   Rules that size and trim the tiles start from the section ids, so a job
+   theme that styles `#match` or `.hero` as a full-width band still ends up
+   as a tile. What sits in a popup is outside `.wrap`, so these rules never
+   reach it and it keeps the full styles above.
+   ══════════════════════════════════════════ */
+.bento {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 0.6rem) 1.25rem 0.3rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "intro intro match built"
+    "exp   exp   edu   contact";
+  gap: 0.7rem;
+  /* At least one screen; a long application lead may make it a little more. */
+  min-height: 100vh;
+}
+.bento > #top        { grid-area: intro; }
+.bento > #match      { grid-area: match; }
+.bento > #experience { grid-area: exp; }
+.bento > #built      { grid-area: built; }
+.bento > #education  { grid-area: edu; }
+.bento > #contact    { grid-area: contact; }
+
+.bento > .tile {
+  position: relative;
+  min-width: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) { padding: 1.1rem 1.3rem; margin: 0; }
+/* The nav spans the same width as the tiles. */
+body:has(.bento) .nav-top { max-width: 1440px; padding: 0 1.25rem; }
+body:has(.cv) .nav-top { max-width: 1240px; padding: 0 1.25rem; }
+/* The AI button sits over the bottom-right tile; its links stop above it. */
+.bento > #contact { padding-bottom: 4.2rem; }
+.bento > .tile:target { outline: 3px solid var(--amber); outline-offset: 2px; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap {
+  max-width: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bento .reveal, dialog .reveal { opacity: 1; transform: none; }
+
+/* Tile headings */
+/* Tile headings: the small label only, as on Oscar's. The section title
+   and lead are in the popup that opens the whole section. */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-head { margin-bottom: 0.75rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .eyebrow { font-size: 0.66rem; margin-bottom: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-head .sec-title,
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-lead { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-title { font-size: 1.12rem; line-height: 1.25; max-width: none; letter-spacing: -0.01em; }
+
+/* "Read more" over a whole item, and the link at the foot of a tile */
+.tile-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-radius: inherit;
+  cursor: pointer;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap :is(.point, .job, .built-card, .edu-card) { position: relative; transition: background 0.15s, box-shadow 0.15s; }
+.tile-more {
+  order: 20;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.9rem 0 0.1rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgba(var(--accent-rgb),0.5);
+  cursor: pointer;
+}
+.tile-more:hover { color: var(--amber); border-color: var(--amber); }
+
+/* Intro */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-grid {
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-photo { width: 84px; aspect-ratio: 1; border-radius: 14px; transform: none; box-shadow: none; order: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .eyebrow { margin-bottom: 0.4rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-name { font-size: clamp(1.9rem, 2.5vw, 2.5rem); margin-bottom: 0.3rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-role { font-size: 0.98rem; line-height: 1.4; margin: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-lead { font-size: 0.9rem; line-height: 1.6; max-width: none; margin-bottom: 0.8rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .meta-row { font-size: 0.76rem; gap: 0.3rem 0.7rem; margin-bottom: 0.9rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .glance-label { margin-bottom: 0.4rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .stat-strip { margin-bottom: 0.85rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .stat { padding: 0.6rem 0.8rem 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .stat:first-child { padding-left: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .stat-num { font-size: 1.5rem; margin-bottom: 0.2rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .stat-label { font-size: 0.73rem; line-height: 1.4; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-cta { margin-top: auto; gap: 0.45rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-cta .btn { padding: 0.65rem 1rem; font-size: 0.8rem; }
+
+/* What I do: a list of titles */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .points { display: flex; flex-direction: column; gap: 0.25rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.32rem 0.55rem;
+  border-radius: 10px;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point-num-wrap { padding: 0; display: block; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point-rule { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point-num { width: 1.6rem; height: 1.6rem; font-size: 0.68rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point-title { font-size: 0.84rem; line-height: 1.3; margin: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point :is(.point-sum, .point-quote, .point-body, .point-roles) { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point:hover { box-shadow: 0 0 0 2px rgba(var(--accent-rgb),0.7); }
+
+/* Experience: dates, title and company per role */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-actions { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .roles-card { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .timeline { padding-left: 1.4rem; }
+/* One line per role: title, company, dates. */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 1rem;
+  padding: 0.5rem 0.6rem;
+  margin-left: -0.6rem;
+  border-radius: 10px;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job::before { left: -0.85rem; top: 0.85rem; width: 11px; height: 11px; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-head { display: contents; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-title { grid-column: 1; grid-row: 1; font-size: 0.9rem; line-height: 1.3; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-company { grid-column: 2; grid-row: 1; font-size: 0.78rem; margin: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-date { grid-column: 3; grid-row: 1; font-size: 0.68rem; }
+/* The town is the same for every role; the tile keeps only the role tag
+   that hangs off it. */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-company > span { font-size: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job :is(.job-about, .job-desc, .job-bullets) { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job:hover { background: var(--bg); }
+
+/* Projects: the featured cards as a list, a coloured icon before each */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-sub,
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-grid:not(:last-of-type),
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-card:not(.is-featured) { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-grid:last-of-type { display: flex; flex-direction: column; gap: 0.45rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-card {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  column-gap: 0.75rem;
+  align-items: center;
+  padding: 0.45rem 0.55rem;
+  background: var(--bg);
+  border: none;
+  border-radius: 12px;
+  box-shadow: none;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-card > :not(.built-icon) { margin: 0; grid-column: 2; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-icon { grid-row: 1 / span 2; width: 44px; height: 44px; margin: 0; border-radius: 8px; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-icon svg { width: 22px; height: 22px; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-cat { font-size: 0.58rem; margin: 0; align-self: end; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-title { font-size: 0.82rem; line-height: 1.3; margin: 0; align-self: start; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-card :is(.built-sum, .built-text, .built-link) { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-card:hover { box-shadow: 0 0 0 2px rgba(var(--accent-rgb),0.7); }
+
+/* Education: degree and certification, skills behind the link */
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-layout { display: block; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-skills,
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .callout,
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-desc { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-sub { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-list { gap: 0.4rem; margin-bottom: 0.4rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-card { padding: 0.6rem 0.75rem; background: var(--bg); border: none; box-shadow: none; border-radius: 10px; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-degree { font-size: 0.84rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-date { font-size: 0.66rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-school { font-size: 0.74rem; margin-top: 0.1rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-card:hover { box-shadow: 0 0 0 2px rgba(var(--accent-rgb),0.7); }
+
+/* Contact */
+.bento > #contact > .wrap > div { display: flex; flex-direction: column; height: 100%; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-lead,
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .contact-facts { display: none; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .contact-btns { display: grid; grid-template-columns: 1fr; gap: 0.4rem; margin: auto 0 0; padding-top: 0.8rem; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .contact-btns .btn { padding: 0.5rem 0.8rem; font-size: 0.76rem; justify-content: flex-start; min-width: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .contact-btns .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── Popups ── */
+dialog.detail,
+dialog.sheet {
+  width: min(800px, calc(100vw - 2rem));
+  max-height: calc(100vh - 3rem);
+  margin: auto;
+  padding: 0;
+  color: var(--ink-mid);
+  background: var(--bg);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+dialog.detail::backdrop,
+dialog.sheet::backdrop { background: rgba(12,5,29,0.55); }
+.detail-body { display: flex; flex-direction: column; padding: 0 2rem 2rem; }
+.detail-body .is-off { display: none !important; }
+.detail-body--item > .timeline { padding-left: 2rem; }
+.detail-body--item .job { padding-bottom: 0; }
+.detail-body > .tile-more { display: none; }
+.dialog-close {
+  position: sticky;
+  top: 0.8rem;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 38px; height: 38px;
+  margin: 0.8rem 0.8rem 0.2rem auto;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dialog-close svg { width: 16px; height: 16px; }
+dialog.sheet > :is(#about, #personal) { padding: 0.5rem 0 2rem; background: transparent; border: none; }
+dialog.sheet > :is(#about, #personal) > .wrap { padding: 0 2rem; }
+dialog.sheet > :is(#about, #personal)::before,
+dialog.sheet > :is(#about, #personal)::after { display: none; }
+dialog .about-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open] { animation: dialog-in 0.18s ease-out; }
+}
+@keyframes dialog-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* The footer only shows once the page scrolls, on smaller screens. */
+.bento ~ .site-footer { display: none; }
+
+/* Tablet: two columns, and the page scrolls. */
+@media (max-width: 1180px), (max-height: 680px) {
+  .bento {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: none;
+    grid-template-areas:
+      "intro   intro"
+      "match   built"
+      "exp     exp"
+      "edu     contact";
+    height: auto;
+    min-height: 0;
+  }
+  .bento ~ .site-footer { display: block; }
+}
+
+/* Phone: one column, in reading order. */
+@media (max-width: 720px) {
+  .bento {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "intro" "match" "exp" "built" "edu" "contact";
+    padding: calc(var(--nav-h) + 0.6rem) 0.6rem 0.6rem;
+    gap: 0.6rem;
+  }
+  .bento > :is(#top, #match, #experience, #built, #education, #contact) { padding: 1.2rem 1.1rem; }
+  .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-grid { grid-template-columns: 76px minmax(0, 1fr); }
+  .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .hero-photo { width: 76px; }
+  .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job { grid-template-columns: minmax(0, 1fr) auto; row-gap: 0.15rem; }
+  .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job-company { grid-column: 1 / -1; grid-row: 2; }
+  .detail-body { padding: 0 1.2rem 1.4rem; }
+  dialog.sheet > :is(#about, #personal) > .wrap { padding: 0 1.2rem; }
+  dialog.detail, dialog.sheet { width: calc(100vw - 1rem); max-height: calc(100vh - 1rem); }
 }
 
 /* ══════════════════════════════════════════
