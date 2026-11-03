@@ -43,6 +43,7 @@ keeps working. A plain string is used for both languages.
 | `pageTitle` | Sets the tab title outright, instead of `company` / `roleName` |
 | `text` | Any other text on the page, keyed by CSS selector — see below |
 | `roles` | Replaces the "Roles I've recruited for" card in Experience — see below |
+| `rolesStat` | The number (1–3) of a stat under the hero that opens the "Roles I've recruited for" card in a popup, e.g. a "20+ job titles" stat |
 | `built` | Extra cards in "What I've built": each takes `title`, `text`, an optional `group` (`"ai"`, the default, or `"work"`) and an optional `icon` (a list of SVG path strings, 24×24). They are added after the base cards |
 | `jobs` | Extra roles at the end of the Experience timeline, for older work that belongs on one application only: each takes `title`, `date`, `company` and optionally `place` (e.g. `{"en": "· Gothenburg", "sv": "· Göteborg"}`), `about`, `desc` and `bullets` |
 

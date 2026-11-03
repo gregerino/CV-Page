@@ -166,6 +166,25 @@
       hit.addEventListener('click', function () { lastTrigger = hit; openItem(item); });
       item.appendChild(hit);
     });
+    // A stat a job pack marks with data-opens="roles" opens the "Roles I've
+    // recruited for" card, in Experience's own popup so its styles apply.
+    (root || document).querySelectorAll('.stat[data-opens="roles"]').forEach(function (stat) {
+      var card = document.querySelector('#experience .roles-card');
+      if (!card || stat.querySelector(':scope > .tile-hit')) return;
+      var label = stat.querySelector('.stat-label');
+      if (label && !label.id) label.id = 'tile-' + Math.random().toString(36).slice(2, 9);
+      var hit = document.createElement('button');
+      hit.type = 'button';
+      hit.className = 'tile-hit';
+      if (label) hit.setAttribute('aria-describedby', label.id);
+      hit.innerHTML = '<span class="sr-only">' + text('Show the roles:', 'Visa rollerna:') + '</span>';
+      hit.addEventListener('click', function () {
+        lastTrigger = hit;
+        show(card.closest('.tile') || card.parentNode, [card.cloneNode(true)], 'roles');
+      });
+      stat.classList.add('stat--opens');
+      stat.appendChild(hit);
+    });
     if (window.CVLang) window.CVLang.refresh();
   }
 

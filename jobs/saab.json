@@ -29,6 +29,7 @@
     "en": "Below are the responsibilities and requirements in the ad for Recruitment Specialist, together with my experience in each area.",
     "sv": "Nedan följer annonsens uppdrag och krav för rollen som rekryteringsspecialist, tillsammans med min erfarenhet inom respektive område."
   },
+  "rolesStat": 2,
   "points": [
     {
       "title": {
@@ -44,9 +45,18 @@
         "sv": "Som rekryteringskonsult ansvarade jag för hela rekryteringsprocesser och inledde varje process med en behovsanalys tillsammans med den rekryterande chefen. Jag rådgav cheferna kring tidsplan och bedömning av kandidaterna, och förde en löpande dialog med dem under processens gång. I ett IT-konsultbolag ansvarade jag för bolagets rekryteringar hela vägen till onboardingen av de nyanställda. I ett konsultbolag drev jag rekryteringen av IT-konsulter med fokus på en träffsäker kompetensmatchning."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Business Manager", "sv": "Affärsansvarig" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -63,9 +73,18 @@
         "sv": "Jag har bedömt kandidater mot kravprofiler i varje rekryteringsroll jag haft, med strukturerade intervjuer och tydliga kriterier. Inför det slutliga urvalet gick jag igenom bedömningen tillsammans med den rekryterande chefen och gav råd inför beslutet. Jag har byggt Recruitment OS, ett AI-verktyg som gör om en kravprofil till ett intervjupaket med strukturerade frågor och scorecards. I verktyget byggde jag in ett kompetensbibliotek med nivåindikatorer och personlighetskompetenser utifrån Big Five."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Business Manager", "sv": "Affärsansvarig" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -82,10 +101,22 @@
         "sv": "Jag har haft rekrytering som huvuduppgift i ca fem år, senast fram till juni 2026. Jag har främst rekryterat till kvalificerade tekniska roller inom mjukvara och ingenjörsområdet, upp till systemarkitekter och expertingenjörer. I ett rekryterings- och konsultföretag rekryterade jag åt kundernas chefer, och i ett IT-konsultbolag ansvarade jag för bolagets egen talent acquisition. På en yrkeshögskola deltog jag i rekryteringen av lärare och säkerställde att de hade relevant kompetens."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Business Manager", "sv": "Affärsansvarig" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
-        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
       ]
     },
     {
@@ -102,9 +133,18 @@
         "sv": "Jag har drivit mina rekryteringsprocesser självständigt och planerat min egen tid utifrån var varje process befann sig. I ett IT-konsultbolag ingick jag i ledningsgruppen och ledde bolagets strategi för talent acquisition, bland annat implementeringen av ett ATS. Jag ansvarade samtidigt för personalutveckling och HR-frågor i en konsultgrupp på fler än 15 personer. Jag har lett projekt i varje roll jag haft."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Business Manager", "sv": "Affärsansvarig" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -121,9 +161,18 @@
         "sv": "Jag har arbetat nära kollegor och chefer i alla mina roller. Som affärsansvarig i en snabbrörlig konsultmiljö samordnade jag kommunikationen mellan kunder och kandidater genom hela rekryteringsprocessen. I ett IT-konsultbolag höll jag interna workshops och utbildningar för kollegorna, bland annat i gamification-metodik. Flera av de arbetssätt jag har byggt, som ATS-flödena och onboardingen, tog jag fram tillsammans med kollegor."
       },
       "roles": [
-        { "en": "Business Manager", "sv": "Affärsansvarig" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" }
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
       ]
     },
     {
@@ -140,8 +189,14 @@
         "sv": "Som rekryteringskonsult arbetade jag dagligen i ATS-systemet och säkerställde att kandidatdatan var korrekt genom hela processen. Jag samordnade intervjuprocesserna, med schemaläggning och förberedelser inför varje intervju. I ett IT-konsultbolag implementerade och utvecklade jag ATS-flödena, med en tydlig ordning för hur en roll öppnades och vem som gjorde vad i processen. I ett konsultbolag hanterade jag många parallella processer och höll ordning på var varje kandidat befann sig."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -158,8 +213,14 @@
         "sv": "Jag bygger egna rekryteringsverktyg med AI. Ett av dem är ett agentbaserat operativsystem för rekrytering, där agenter gör en första bedömning av ett CV mot kompetenserna och skapar en uppgift åt rekryteraren, som fattar beslutet. I ett rekryterings- och konsultföretag bidrog jag till att förbättra rekryteringsflödena och göra processerna mer strukturerade. Jag är van vid att lära ut nya system och arbetssätt till kollegor."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -176,8 +237,14 @@
         "sv": "Svenska är mitt modersmål och jag talar och skriver engelska flytande. Som rekryteringskonsult var jag kandidaternas huvudkontakt genom hela processen och såg till att de fick snabba och tydliga besked. Jag skrev och publicerade platsannonser utifrån kundens behov, med fokus på ett tydligt och relevant budskap. Som kursutvecklare tog jag fram utbildningsmaterial inom HR i samarbete med ämnesexperter."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Course Developer", "sv": "Kursutvecklare" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        }
       ]
     },
     {
@@ -194,19 +261,35 @@
         "sv": "På yrkeshögskolan coachade och vägledde jag 100 studerande inför övergången till arbetslivet. Inom rekrytering har jag arbetat med strukturerade intervjuer och samma kriterier för alla kandidater. Recruitment OS har stöd för att minska bias i bedömningen. Det är viktigt för mig att alla kandidater får samma chans."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
       ]
     }
   ],
   "text": {
-    ".nav-links li:nth-child(2) a": { "en": "How I match", "sv": "Hur jag matchar" },
-    ".nav-mobile a:nth-child(2)": { "en": "How I match", "sv": "Hur jag matchar" },
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
     "#top .meta-row > span:last-child": {
       "en": "About 5 years in recruitment",
       "sv": "Ca 5 år inom rekrytering"
     },
-    "#top .stat-num": ["~5", "20+", "AI"],
+    "#top .stat-num": [
+      "~5",
+      "20+",
+      "AI"
+    ],
     "#top .stat-label": [
       {
         "en": "Years with recruitment as the main part of the job",
@@ -226,9 +309,18 @@
       "sv": "Fråga min AI-assistent om mig"
     },
     "#ask-chips .ask-chip": [
-      { "en": "How does he assess candidates?", "sv": "Hur bedömer han kandidater?" },
-      { "en": "How has he worked with hiring managers?", "sv": "Hur har han arbetat med rekryterande chefer?" },
-      { "en": "Which recruitment tools has he built?", "sv": "Vilka rekryteringsverktyg har han byggt?" }
+      {
+        "en": "How does he assess candidates?",
+        "sv": "Hur bedömer han kandidater?"
+      },
+      {
+        "en": "How has he worked with hiring managers?",
+        "sv": "Hur har han arbetat med rekryterande chefer?"
+      },
+      {
+        "en": "Which recruitment tools has he built?",
+        "sv": "Vilka rekryteringsverktyg har han byggt?"
+      }
     ],
     "#about .sec-title": {
       "en": "The right person for the right role",
@@ -253,11 +345,26 @@
       }
     ],
     "#about .brings-list li": [
-      { "en": "Whole recruitment processes in close collaboration with the manager", "sv": "Hela rekryteringsprocesser i nära samarbete med chefen" },
-      { "en": "Structured, competency-based candidate assessment", "sv": "Strukturerad och kompetensbaserad kandidatbedömning" },
-      { "en": "A professional candidate experience", "sv": "En professionell kandidatupplevelse" },
-      { "en": "New ways of working and AI in recruitment", "sv": "Nya arbetssätt och AI i rekryteringen" },
-      { "en": "Sharing what I know with colleagues", "sv": "Att dela med mig av det jag kan till kollegor" }
+      {
+        "en": "Whole recruitment processes in close collaboration with the manager",
+        "sv": "Hela rekryteringsprocesser i nära samarbete med chefen"
+      },
+      {
+        "en": "Structured, competency-based candidate assessment",
+        "sv": "Strukturerad och kompetensbaserad kandidatbedömning"
+      },
+      {
+        "en": "A professional candidate experience",
+        "sv": "En professionell kandidatupplevelse"
+      },
+      {
+        "en": "New ways of working and AI in recruitment",
+        "sv": "Nya arbetssätt och AI i rekryteringen"
+      },
+      {
+        "en": "Sharing what I know with colleagues",
+        "sv": "Att dela med mig av det jag kan till kollegor"
+      }
     ],
     "#built .sec-lead": {
       "en": "First, what I have built in my work with recruitment and onboarding at the companies where I have worked. After that, tools I have developed on my own with AI, with the recruitment tools first.",
@@ -281,7 +388,10 @@
         "sv": "Certifierad utbildningsledare, en certifiering utfärdad av Myndigheten för yrkeshögskolan."
       }
     ],
-    "#education .callout-label": { "en": "Behavioural science", "sv": "Beteendevetenskap" },
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
     "#education .callout-title": {
       "en": "A foundation for candidate assessment",
       "sv": "En grund för kandidatbedömning"
@@ -291,54 +401,184 @@
       "sv": "Utbildningen behandlade hur individer och grupper fungerar i organisationer. Den kunskapen använder jag när jag bedömer kandidater mot en kravprofil."
     },
     "#education .tool-group:nth-of-type(1) .pill": [
-      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
-      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
       "HR",
-      { "en": "Communication", "sv": "Kommunikation" },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
       "Employer Branding",
-      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
-      { "en": "Project Management", "sv": "Projektledning" },
-      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
       "People & Culture",
-      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
       "Learning & Development",
-      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
       "Learning Management Systems (LMS)",
       "Gamification"
     ],
     "#education .tool-group:nth-of-type(3) .pill": [
-      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
-      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
-      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
-      { "en": "AI-native day to day", "sv": "AI-native i vardagen" },
-      { "en": "Builds from zero", "sv": "Bygger från noll" },
-      { "en": "Pedagogical, teaches what I build", "sv": "Pedagogisk, lär ut det jag bygger" }
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      }
     ],
-    "#personal .sec-title": { "en": "The person behind the application", "sv": "Personen bakom ansökan" },
-    "#personal .sec-lead": { "en": "A little about who I am outside work.", "sv": "Lite om vem jag är utanför arbetet." },
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför arbetet."
+    },
     "#contact .contact-facts span": [
-      { "en": "Location: Gothenburg", "sv": "Ort: Göteborg" },
-      { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
-      { "en": "Education: BSc. Behavioural Science", "sv": "Utbildning: kand. beteendevetenskap" },
-      { "en": "Recruitment: about 5 years", "sv": "Rekrytering: ca 5 år" }
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      },
+      {
+        "en": "Recruitment: about 5 years",
+        "sv": "Rekrytering: ca 5 år"
+      }
     ],
     "#experience .job:nth-of-type(2) .job-bullets li": [
-      { "en": "Developed and improved courses within HR and Learning & Development", "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development" },
-      { "en": "Ensured content was up to date and aligned with current HR trends and needs", "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov" },
-      { "en": "Collaborated with subject matter experts to create relevant and high-quality training", "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet" },
-      { "en": "Planned and executed conferences and training sessions focused on participant value", "sv": "Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde" },
-      { "en": "Improved course materials and pedagogical structures", "sv": "Förbättrade kursmaterial och pedagogiska strukturer" }
+      {
+        "en": "Developed and improved courses within HR and Learning & Development",
+        "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development"
+      },
+      {
+        "en": "Ensured content was up to date and aligned with current HR trends and needs",
+        "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov"
+      },
+      {
+        "en": "Collaborated with subject matter experts to create relevant and high-quality training",
+        "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet"
+      },
+      {
+        "en": "Planned and executed conferences and training sessions focused on participant value",
+        "sv": "Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde"
+      },
+      {
+        "en": "Improved course materials and pedagogical structures",
+        "sv": "Förbättrade kursmaterial och pedagogiska strukturer"
+      }
     ]
   },
   "cv": {
     "linkPage": true,
     "text": {
       ".job:nth-of-type(2) .job-bullets li": [
-        { "en": "Developed and improved courses within HR and Learning & Development", "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development" },
-        { "en": "Ensured content was up to date and aligned with current HR trends and needs", "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov" },
-        { "en": "Collaborated with subject matter experts to create relevant and high-quality training", "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet" },
-        { "en": "Planned and executed conferences and training sessions focused on participant value", "sv": "Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde" },
-        { "en": "Improved course materials and pedagogical structures", "sv": "Förbättrade kursmaterial och pedagogiska strukturer" }
+        {
+          "en": "Developed and improved courses within HR and Learning & Development",
+          "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development"
+        },
+        {
+          "en": "Ensured content was up to date and aligned with current HR trends and needs",
+          "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov"
+        },
+        {
+          "en": "Collaborated with subject matter experts to create relevant and high-quality training",
+          "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet"
+        },
+        {
+          "en": "Planned and executed conferences and training sessions focused on participant value",
+          "sv": "Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde"
+        },
+        {
+          "en": "Improved course materials and pedagogical structures",
+          "sv": "Förbättrade kursmaterial och pedagogiska strukturer"
+        }
+      ],
+      ".cv-card:has(.tool-label[data-sv=\"Expertisområden\"]) .pill": [
+        {
+          "en": "Recruitment & selection",
+          "sv": "Rekrytering & urval"
+        },
+        {
+          "en": "Competence supply",
+          "sv": "Kompetensförsörjning"
+        },
+        "HR",
+        {
+          "en": "Communication",
+          "sv": "Kommunikation"
+        },
+        "Employer Branding",
+        {
+          "en": "Swedish labour law",
+          "sv": "Svensk arbetsrätt"
+        },
+        {
+          "en": "Project Management",
+          "sv": "Projektledning"
+        },
+        {
+          "en": "Leadership & coaching",
+          "sv": "Ledarskap & coachning"
+        },
+        "People & Culture",
+        {
+          "en": "Pedagogy & didactics",
+          "sv": "Pedagogik & didaktik"
+        },
+        "Learning & Development",
+        {
+          "en": "Instructional design & Course Development",
+          "sv": "Instruktionsdesign & kursutveckling"
+        },
+        "Learning Management Systems (LMS)",
+        "Gamification"
       ]
     }
   }

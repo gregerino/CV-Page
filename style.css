@@ -1445,6 +1445,18 @@ dialog.sheet::backdrop { background: rgba(12,5,29,0.55); }
 .detail-body--item .built-grid { grid-template-columns: 1fr; }
 .detail-body > .tile-more,
 .detail-body .tile-hint { display: none; }
+/* The roles card opened from a stat: the popup is its frame. */
+#experience .detail-body--roles .roles-card { margin: 0; padding: 0; background: none; border: none; box-shadow: none; }
+/* A stat that opens a popup: its label reads as a link. */
+.stat--opens { position: relative; transition: background 0.15s; }
+.stat--opens:hover { background: rgba(var(--accent-rgb),0.06); }
+.stat--opens .stat-label {
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb),0.5);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.stat--opens .stat-label::after { content: ' →'; }
 .dialog-close {
   position: sticky;
   top: 0.8rem;

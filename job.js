@@ -128,6 +128,12 @@
 
     if (job.text) applyText(job.text);
 
+    // `rolesStat` (1-based) makes that stat open the roles card in a popup.
+    if (job.rolesStat) {
+      var stat = document.querySelectorAll('#top .stat')[job.rolesStat - 1];
+      if (stat) stat.setAttribute('data-opens', 'roles');
+    }
+
     // Cards and roles the pack built need their "read more" buttons.
     if (window.CVSite) window.CVSite.enhance();
 

@@ -469,6 +469,8 @@ strong, b { font-weight: 600; }
 #experience .roles-card { background: #ececea; border-color: #ececea; border-radius: 0; }
 #experience .roles-group:nth-of-type(4) { order: -1; }
 .roles-group .pill { background: #fff; border-color: #fff; }
+/* In the popup opened from the "20+" stat the card has no grey behind it. */
+#experience .detail-body--roles .roles-group .pill { background: #f3f3f2; border-color: #f3f3f2; }
 
 /* ─────────────────────────────────────────────────────────────────────────
    Education: recruitment, competence supply and HR lead the pills on dark
