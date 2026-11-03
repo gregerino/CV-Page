@@ -132,7 +132,9 @@ puts the pack's `eyebrow`, `role` and `lead` at the top and any `jobs` at the
 end of the timeline. The match section (`matchTitle`, `points`) stays on the
 web page only. Anything else on the CV
 can be rewritten with `cv.text`, keyed by selector on `cv.html` the way
-`text` is on the job page.
+`text` is on the job page. With `"linkPage": true` in `cv`, the site link in
+the CV's sidebar leads to `marcushultberg.dev/<slug>` instead of the start
+page.
 
 Every PDF link on the job page and its CV leads to that CV printed, in
 `pdf/<slug>/` — `CV Marcus Hultberg.pdf`, or `CV Marcus Hultberg (sv).pdf`

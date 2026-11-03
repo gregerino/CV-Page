@@ -163,6 +163,16 @@
     if (Array.isArray(job.jobs) && job.jobs.length) addJobs(job.jobs);
     if (job.cv && job.cv.text) applyText(job.cv.text);
 
+    // With `cv.linkPage`, the site link in the sidebar leads to this
+    // application's page instead of the start page.
+    if (job.cv && job.cv.linkPage) {
+      var site = document.querySelector('a[href="https://www.marcushultberg.dev/"]');
+      if (site) {
+        site.setAttribute('href', 'https://www.marcushultberg.dev/' + encodeURIComponent(slug));
+        site.textContent = 'marcushultberg.dev/' + slug;
+      }
+    }
+
     if (job.company) {
       document.title = 'CV — Marcus Hultberg — ' + (job.roleName ? job.roleName + ', ' : '') + job.company;
     }

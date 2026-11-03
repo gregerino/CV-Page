@@ -353,6 +353,25 @@
       { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
       { "en": "Education: BSc. Behavioural Science", "sv": "Utbildning: kand. beteendevetenskap" },
       { "en": "Education and learning: 4 years", "sv": "Utbildning och lärande: 4 år" }
+    ],
+    "#experience .job:nth-of-type(2) .job-bullets li": [
+      { "en": "Developed and improved courses within HR and Learning & Development", "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development" },
+      { "en": "Ensured content was up to date and aligned with current HR trends and needs", "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov" },
+      { "en": "Collaborated with subject matter experts to create relevant and high-quality training", "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet" },
+      { "en": "Planned and executed conferences and training sessions focused on participant value", "sv": "Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde" },
+      { "en": "Improved course materials and pedagogical structures", "sv": "Förbättrade kursmaterial och pedagogiska strukturer" }
     ]
+  },
+  "cv": {
+    "linkPage": true,
+    "text": {
+      ".job:nth-of-type(2) .job-bullets li": [
+        { "en": "Developed and improved courses within HR and Learning & Development", "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development" },
+        { "en": "Ensured content was up to date and aligned with current HR trends and needs", "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov" },
+        { "en": "Collaborated with subject matter experts to create relevant and high-quality training", "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet" },
+        { "en": "Planned and executed conferences and training sessions focused on participant value", "sv": "Planerade och genomförde konferenser och utbildningar med fokus på deltagarvärde" },
+        { "en": "Improved course materials and pedagogical structures", "sv": "Förbättrade kursmaterial och pedagogiska strukturer" }
+      ]
+    }
   }
 }
