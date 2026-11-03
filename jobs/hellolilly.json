@@ -1,0 +1,359 @@
+{
+  "company": "HelloLilly",
+  "roleName": "Karriärcoach",
+  "eyebrow": {
+    "en": "Application · Career Coach · HelloLilly",
+    "sv": "Ansökan · Karriärcoach · HelloLilly"
+  },
+  "role": {
+    "en": "Coaching and matching towards work and studies",
+    "sv": "Coachning och matchning mot arbete och studier"
+  },
+  "lead": {
+    "en": "After my bachelor's degree in behavioural science I became an education manager at a vocational college in IT, where I coached and guided 100 students ahead of their transition into working life. Since 2020 I have worked with recruitment and matching at consulting companies, where I assessed candidates against employers' requirements and was their point of contact throughout the process. I have worked in a structured way in recruitment systems and followed up my work against set targets. I want to use that experience to help jobseekers find their way to a job or a course of study that suits them.",
+    "sv": "Efter min kandidatexamen i beteendevetenskap blev jag utbildningsledare på en yrkeshögskola inom IT, där jag coachade och vägledde 100 studerande inför övergången till arbetslivet. Sedan 2020 har jag arbetat med rekrytering och matchning i konsultbolag, där jag bedömt kandidater mot arbetsgivarnas krav och varit deras kontaktperson genom processen. Jag har arbetat strukturerat i rekryteringssystem och följt upp mitt arbete mot uppsatta mål. Jag vill använda den erfarenheten till att hjälpa arbetssökande vidare till ett arbete eller en utbildning som passar dem."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Below are the duties and requirements in the ad for Career Coach in Rusta och matcha, together with my experience in each area.",
+    "sv": "Nedan följer annonsens arbetsuppgifter och krav för Karriärcoach inom Rusta och matcha, tillsammans med min erfarenhet inom respektive område."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Coaching conversations and motivation",
+        "sv": "Coachande samtal och motivation"
+      },
+      "quote": {
+        "en": "Hold regular coaching and development conversations. Confident in coaching conversations and able to motivate different individuals.",
+        "sv": "Hålla regelbundna coachnings- och utvecklingssamtal. Är trygg i coachande samtal och kan motivera olika individer."
+      },
+      "body": {
+        "en": "As education manager at a vocational college I coached and guided 100 students ahead of their transition into working life. I supported them in their career choices on their way into the IT industry. At an IT consultancy I held development conversations with the consultants and was responsible for personnel development in a group of more than 15 people. In recruitment I gave candidates prompt and clear feedback during the process.",
+        "sv": "Som utbildningsledare på en yrkeshögskola coachade och vägledde jag 100 studerande inför övergången till arbetslivet. Jag stöttade dem i deras karriärval på väg in i IT-branschen. I ett IT-konsultbolag höll jag utvecklingssamtal med konsulterna och ansvarade för personalutvecklingen i en grupp på fler än 15 personer. I rekryteringen gav jag kandidaterna snabb och tydlig återkoppling under processen."
+      },
+      "roles": [
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Mapping and individual plans",
+        "sv": "Kartläggning och individuell planering"
+      },
+      "quote": {
+        "en": "Carry out a mapping and draw up an individual action plan.",
+        "sv": "Genomföra kartläggning och upprätta individuell handlingsplan."
+      },
+      "body": {
+        "en": "In my recruitment roles every process started with a needs analysis, where the hiring manager and I mapped the competence requirements and the timeline. I then assessed the candidates' competence and experience in a structured way against the requirements profile. At an IT consultancy I matched the consultants' competence against what the clients' assignments required, and planned their schedules around the assignments. At the vocational college I handled the admission of students to the programmes.",
+        "sv": "I mina rekryteringsroller började varje process med en behovsanalys, där chefen och jag kartlade kompetenskrav och tidplan. Därefter bedömde jag kandidaternas kompetens och erfarenhet strukturerat mot kravprofilen. I ett IT-konsultbolag matchade jag konsulternas kompetens mot vad kundernas uppdrag krävde och planerade deras scheman utifrån uppdragen. På yrkeshögskolan höll jag i antagningen av studerande till utbildningarna."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Support with job search, CVs and interviews",
+        "sv": "Stöd i jobbsökning, CV och intervjuer"
+      },
+      "quote": {
+        "en": "Support with job search, CV and cover letter, interview training and choice of education.",
+        "sv": "Stötta i jobbsökning, CV/PB, intervjuträning och utbildningsval."
+      },
+      "body": {
+        "en": "As a recruiter I have assessed CVs and conducted interviews for about five years. I therefore have a good picture of what employers look for in an application and in an interview. I have built an AI tool that turns a requirements profile into competency-based interview questions with follow-up questions and scorecards. At the vocational college I secured internship placements and supported the students in their transition into working life.",
+        "sv": "Som rekryterare har jag bedömt CV:n och genomfört intervjuer i ca fem år. Jag har därför en god bild av vad arbetsgivare letar efter i en ansökan och i en intervju. Jag har byggt ett AI-verktyg som gör om en kravprofil till kompetensbaserade intervjufrågor med följdfrågor och bedömningsmallar. På yrkeshögskolan säkrade jag praktikplatser och stöttade de studerande i övergången till arbetslivet."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Matching towards work or education",
+        "sv": "Matchning mot arbete eller utbildning"
+      },
+      "quote": {
+        "en": "Match participants towards work or education.",
+        "sv": "Matcha deltagare mot arbete eller utbildning."
+      },
+      "body": {
+        "en": "I have worked with matching for about five years, as a recruiter and as a consultant manager. I matched candidates against technical roles at employers, and IT consultants against the clients' assignments, often in several processes in parallel. I sourced candidates proactively and built up a talent pool for coming needs. At the vocational college I worked with competence supply by matching the programmes to the needs of the labour market.",
+        "sv": "Jag har arbetat med matchning i ca fem år, som rekryterare och som konsultansvarig. Jag matchade kandidater mot tekniska roller hos arbetsgivare och IT-konsulter mot kundernas uppdrag, ofta i flera processer parallellt. Jag sourcade kandidater proaktivt och byggde upp en kandidatpool för kommande behov. På yrkeshögskolan arbetade jag med kompetensförsörjning genom att matcha utbildningarna mot arbetsmarknadens behov."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Working with employers and colleagues",
+        "sv": "Samarbete med arbetsgivare och kollegor"
+      },
+      "quote": {
+        "en": "Work with employers and internal teams. Enjoy taking your own responsibility with strong ownership of your work, while you value working together and contributing to the team's shared success.",
+        "sv": "Samarbeta med arbetsgivare och interna team. Trivs i att ta eget ansvar med stort ägandeskap av ditt arbete samtidigt som du uppskattar att samarbeta och bidra till teamets gemensamma framgång."
+      },
+      "body": {
+        "en": "I have had client contact in every role I have had. As a recruiter I advised hiring managers on the process and the assessment of candidates, and coordinated the communication between employers and candidates. At the vocational college I built and maintained partnerships with companies and other external stakeholders. In my recruitment roles I was responsible for whole processes myself, in close collaboration with colleagues and managers.",
+        "sv": "Jag har haft kundkontakt i alla mina roller. Som rekryterare rådgav jag rekryterande chefer kring processen och bedömningen av kandidater, och samordnade kommunikationen mellan arbetsgivare och kandidater. På yrkeshögskolan byggde och förvaltade jag samarbeten med företag och andra externa aktörer. I mina rekryteringsroller ansvarade jag för hela processer själv, i nära samarbete med kollegor och chefer."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Documentation and systems",
+        "sv": "Dokumentation och systemvana"
+      },
+      "quote": {
+        "en": "Be responsible for documentation in our systems and report according to the agreement with Arbetsförmedlingen. Structured and administratively thorough, with good experience of systems.",
+        "sv": "Ansvara för dokumentation i våra system och rapportera enligt avtal med Arbetsförmedlingen. Är strukturerad och administrativt noggrann och har god systemvana."
+      },
+      "body": {
+        "en": "I have worked daily in recruitment systems such as Teamtailor and Workbuster, and made sure the candidate data was accurate throughout the process. At an IT consultancy I led the introduction of an ATS and designed the workflows in it. I have produced documentation and help material for onboarding, and developed the structure of the learning platform at a vocational college. I learn new systems quickly and build my own tools with AI when something in my work takes longer than it should.",
+        "sv": "Jag har arbetat dagligen i rekryteringssystem som Teamtailor och Workbuster, och säkerställde att kandidatuppgifterna var korrekta genom hela processen. I ett IT-konsultbolag ledde jag införandet av ett ATS och utformade arbetsflödena i det. Jag har tagit fram dokumentation och hjälpmaterial för onboarding och utvecklat lärplattformens struktur på en yrkeshögskola. Jag lär mig nya system snabbt och bygger egna verktyg med AI när något i arbetet tar längre tid än det borde."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Results and follow-up",
+        "sv": "Resultat och uppföljning"
+      },
+      "quote": {
+        "en": "Results-oriented and motivated by reaching goals. Follow up participants even after they have found employment.",
+        "sv": "Är resultatinriktad och motiveras av att nå mål. Följa upp deltagare även efter att de nått sysselsättning."
+      },
+      "body": {
+        "en": "At the vocational college I followed up the programmes against the result targets set for each one and drove them towards those targets. At two consultancies I built a structured onboarding where there had been no coherent process before. The aim was to increase engagement among new employees and get them to stay. I have followed up the processes I have been responsible for and used the results to improve the workflows.",
+        "sv": "På yrkeshögskolan följde jag upp utbildningarna mot de resultatmål som var satta för respektive utbildning och drev dem mot målen. I två konsultbolag byggde jag en strukturerad onboarding där det tidigare saknades en sammanhållen process. Syftet var att öka engagemanget hos nyanställda och få dem att stanna. Jag har följt upp de processer jag ansvarat för och använt resultaten för att förbättra arbetsflödena."
+      },
+      "roles": [
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Eligibility for Rusta och matcha",
+        "sv": "Behörighet för Rusta och matcha"
+      },
+      "quote": {
+        "en": "A university education with at least 180 credits and 2 years of work experience. Experience of coaching, matching, recruitment or labour market programmes is a merit.",
+        "sv": "Högskoleutbildad med godkänt i minst 180 högskolepoäng samt 2 års arbetslivserfarenhet. Erfarenhet av coachning, matchning, rekrytering eller arbete inom arbetsmarknadsinsatser är meriterande."
+      },
+      "body": {
+        "en": "I hold a bachelor's degree in behavioural science, 180 credits, from Umeå University, completed in 2019. Since then I have seven years of work experience, in five roles in Gothenburg. Of those, I have worked with recruitment and matching for about five years. At the vocational college I coached students in their career choices.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap om 180 hp från Umeå universitet, med examen 2019. Sedan dess har jag sju års arbetslivserfarenhet, i fem roller i Göteborg. Av dem har jag arbetat med rekrytering och matchning i ca fem år. På yrkeshögskolan coachade jag studerande i deras karriärval."
+      }
+    }
+  ],
+  "roles": {
+    "title": {
+      "en": "Guidance and matching I have worked with",
+      "sv": "Vägledning och matchning jag har arbetat med"
+    },
+    "lead": {
+      "en": "A selection from vocational higher education and my roles in recruitment.",
+      "sv": "Ett urval från yrkeshögskolan och mina roller inom rekrytering."
+    },
+    "groups": [
+      {
+        "label": { "en": "Coaching and guidance", "sv": "Coachning och vägledning" },
+        "items": [
+          { "en": "Career coaching of students", "sv": "Karriärcoachning av studerande" },
+          { "en": "Development conversations", "sv": "Utvecklingssamtal" },
+          { "en": "Feedback to candidates", "sv": "Återkoppling till kandidater" },
+          { "en": "Career programme for junior talent", "sv": "Karriärprogram för juniora" }
+        ]
+      },
+      {
+        "label": { "en": "Matching", "sv": "Matchning" },
+        "items": [
+          { "en": "Full-cycle recruitment", "sv": "Hela rekryteringsprocesser" },
+          { "en": "Consultants matched to assignments", "sv": "Konsulter mot uppdrag" },
+          { "en": "Competency-based assessment", "sv": "Kompetensbaserad bedömning" },
+          "Sourcing"
+        ]
+      },
+      {
+        "label": { "en": "Employers and partnerships", "sv": "Arbetsgivare och samarbeten" },
+        "items": [
+          { "en": "Advising hiring managers", "sv": "Rådgivning till rekryterande chefer" },
+          { "en": "Partnerships with companies", "sv": "Samarbeten med företag" },
+          { "en": "Internship placements", "sv": "Praktikplatser" },
+          "Employer branding"
+        ]
+      },
+      {
+        "label": { "en": "Structure and follow-up", "sv": "Struktur och uppföljning" },
+        "items": [
+          { "en": "ATS and recruitment systems", "sv": "ATS och rekryteringssystem" },
+          { "en": "Result targets", "sv": "Resultatmål" },
+          "Onboarding",
+          { "en": "Student admissions", "sv": "Antagning" }
+        ]
+      }
+    ]
+  },
+  "text": {
+    ".nav-links li:nth-child(2) a": { "en": "How I match", "sv": "Hur jag matchar" },
+    ".nav-mobile a:nth-child(2)": { "en": "How I match", "sv": "Hur jag matchar" },
+    "#top .meta-row > span:last-child": {
+      "en": "Guidance since 2019, recruitment since 2020",
+      "sv": "Vägledning sedan 2019, rekrytering sedan 2020"
+    },
+    "#top .stat-num": ["100", "~5", "15+"],
+    "#top .stat-label": [
+      {
+        "en": "Students I coached and guided ahead of working life",
+        "sv": "Studerande som jag coachade och vägledde inför arbetslivet"
+      },
+      {
+        "en": "Years with recruitment and matching",
+        "sv": "År med rekrytering och matchning"
+      },
+      {
+        "en": "Consultants I held development conversations with",
+        "sv": "Konsulter som jag höll utvecklingssamtal med"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask my AI assistant about me",
+      "sv": "Fråga min AI-assistent om mig"
+    },
+    "#ask-chips .ask-chip": [
+      { "en": "How has he coached people?", "sv": "Hur har han coachat människor?" },
+      { "en": "How has he worked with matching?", "sv": "Hur har han arbetat med matchning?" },
+      { "en": "Which systems has he worked in?", "sv": "Vilka system har han arbetat i?" }
+    ],
+    "#about .sec-title": {
+      "en": "A job or a course of study that fits",
+      "sv": "Ett jobb eller en utbildning som passar"
+    },
+    "#about .about-quote": {
+      "en": "I want to help people find a job or a course of study where they can grow.",
+      "sv": "Jag vill hjälpa människor att hitta ett arbete eller en utbildning där de kan växa."
+    },
+    "#about .about-body": [
+      {
+        "en": "My interest in learning and in people's development has always been there, and after my degree in behavioural science it became my profession. At the vocational college I worked closely with students who were about to take the step into working life. I supported them in their career choices and worked at the same time with the companies that took them on as interns.",
+        "sv": "Mitt intresse för lärande och människors utveckling har alltid funnits där, och efter min examen i beteendevetenskap blev det mitt yrke. På yrkeshögskolan arbetade jag nära studerande som stod inför steget ut i arbetslivet. Jag stöttade dem i deras karriärval och arbetade samtidigt med de företag som tog emot dem på praktik."
+      },
+      {
+        "en": "Since 2020 I have worked with recruitment and matching at consulting companies, often with several processes in parallel. I assessed candidates in a structured way against requirements profiles and worked closely with the hiring managers. I was the candidates' main point of contact and placed great importance on a professional and engaging candidate experience.",
+        "sv": "Sedan 2020 har jag arbetat med rekrytering och matchning i konsultbolag, ofta med flera processer parallellt. Jag bedömde kandidater strukturerat mot kravprofiler och arbetade nära de rekryterande cheferna. Jag var kandidaternas huvudkontakt och lade stor vikt vid en professionell och engagerande kandidatupplevelse."
+      },
+      {
+        "en": "I am curious by nature and follow developments in AI closely. I work in a structured way and am used to having many processes under way at the same time. All five of my roles have been in Gothenburg.",
+        "sv": "Jag är nyfiken av naturen och följer utvecklingen inom AI nära. Jag arbetar strukturerat och är van vid att ha många processer igång samtidigt. Jag har haft alla mina fem roller i Göteborg."
+      }
+    ],
+    "#about .brings-list li": [
+      { "en": "Helping people on to work or studies", "sv": "Att hjälpa människor vidare till arbete eller studier" },
+      { "en": "Matching people and employers", "sv": "Matchning mellan människor och arbetsgivare" },
+      { "en": "A structured assessment of competence", "sv": "En strukturerad bedömning av kompetens" },
+      { "en": "Close collaboration with employers and colleagues", "sv": "Nära samarbete med arbetsgivare och kollegor" },
+      { "en": "AI and digital tools in the work", "sv": "AI och digitala verktyg i arbetet" }
+    ],
+    "#built .sec-lead": {
+      "en": "First, what I have built at the companies where I have worked, among them a career programme for junior developers and a structured onboarding. After that, tools and methods I have developed on my own, mainly with AI.",
+      "sv": "Först visas det jag har byggt i de bolag där jag har arbetat, bland annat ett karriärprogram för juniora utvecklare och en strukturerad onboarding. Därefter följer verktyg och metoder som jag har utvecklat på egen hand, främst med AI."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in Gothenburg since 2019. In the four roles marked below, coaching, recruitment or matching was a central part of the work.",
+      "sv": "Fem roller i Göteborg sedan 2019. I de fyra roller som är markerade nedan var coachning, rekrytering eller matchning en central del av arbetet."
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science and guidance",
+      "sv": "Beteendevetenskap och vägledning"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, focused on how people and groups function in organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot hur människor och grupper fungerar i organisationer."
+      },
+      {
+        "en": "Certification in education management for vocational higher education, focused on pedagogical planning and course design.",
+        "sv": "Certifiering inom utbildningsledning för yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": { "en": "Behavioural science", "sv": "Beteendevetenskap" },
+    "#education .callout-title": {
+      "en": "A foundation for coaching and assessment",
+      "sv": "En grund för coachning och bedömning"
+    },
+    "#education .callout-text": {
+      "en": "The degree covered how people and groups function in organisations. I have drawn on that knowledge when I assessed candidates and coached students.",
+      "sv": "Utbildningen behandlade hur människor och grupper fungerar i organisationer. Jag har använt den kunskapen när jag bedömt kandidater och coachat studerande."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
+      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+      { "en": "Communication", "sv": "Kommunikation" },
+      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
+      "Learning & Development",
+      "People & Culture",
+      "HR",
+      { "en": "Project Management", "sv": "Projektledning" },
+      "Employer Branding",
+      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      "Learning Management Systems (LMS)",
+      "Gamification",
+      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" }
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
+      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
+      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
+      { "en": "Pedagogical, teaches what I build", "sv": "Pedagogisk, lär ut det jag bygger" },
+      { "en": "Builds from zero", "sv": "Bygger från noll" },
+      { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
+    ],
+    "#personal .sec-title": { "en": "The person behind the application", "sv": "Personen bakom ansökan" },
+    "#personal .sec-lead": { "en": "A little about who I am outside work.", "sv": "Lite om vem jag är utanför arbetet." },
+    "#contact .contact-facts span": [
+      { "en": "Location: Gothenburg", "sv": "Ort: Göteborg" },
+      { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
+      { "en": "Education: BSc. Behavioural Science, 180 credits", "sv": "Utbildning: kand. beteendevetenskap, 180 hp" },
+      { "en": "Recruitment and matching: about 5 years", "sv": "Rekrytering och matchning: ca 5 år" }
+    ]
+  },
+  "cv": {
+    "linkPage": true
+  }
+}
