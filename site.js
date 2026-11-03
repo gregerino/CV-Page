@@ -280,6 +280,35 @@
     wireDialog(sheet);
   });
 
+  // The portrait opens larger in a popup of its own. The big file is only
+  // fetched on the first click.
+  var photo = document.querySelector('#top .hero-photo');
+  if (photo) {
+    var photoView = document.createElement('dialog');
+    photoView.className = 'photo-view';
+    var big = document.createElement('img');
+    big.alt = photo.querySelector('img').alt;
+    big.width = 1200;
+    big.height = 1200;
+    big.addEventListener('click', function () { photoView.close(); });
+    photoView.appendChild(closeButton(photoView));
+    photoView.appendChild(big);
+    document.body.appendChild(photoView);
+    wireDialog(photoView);
+
+    var zoom = document.createElement('button');
+    zoom.type = 'button';
+    zoom.className = 'tile-hit photo-hit';
+    zoom.innerHTML = '<span class="sr-only">' + text('Show a larger photo', 'Visa en större bild') + '</span>';
+    zoom.addEventListener('click', function () {
+      lastTrigger = zoom;
+      if (!big.getAttribute('src')) big.src = 'Marcus-1200.jpg';
+      photoView.showModal();
+    });
+    photo.appendChild(zoom);
+    if (window.CVLang) window.CVLang.refresh();
+  }
+
   function sheetFor(hash) {
     if (!hash || hash.length < 2) return null;
     var target = document.getElementById(hash.slice(1));
