@@ -1,0 +1,358 @@
+{
+  "company": "Bris",
+  "roleName": "Utbildningsansvarig",
+  "eyebrow": {
+    "en": "Application · Utbildningsansvarig · Bris",
+    "sv": "Ansökan · Utbildningsansvarig · Bris"
+  },
+  "role": {
+    "en": "Education and knowledge development",
+    "sv": "Utbildning och kunskapsutveckling"
+  },
+  "lead": {
+    "en": "I have worked with education and learning since 2019. After my bachelor's degree in behavioural science I became an education manager at one of Sweden's largest vocational colleges in IT, where I led the programmes in close collaboration with the labour market. Since then I have developed course content together with subject matter experts and delivered training internally and for external clients. In several roles I have sold services and worked closely with clients over time. I want to develop training that adults can put to use in their work.",
+    "sv": "Jag har arbetat med utbildning och lärande sedan 2019. Efter min kandidatexamen i beteendevetenskap blev jag utbildningsledare på en av Sveriges största yrkeshögskolor inom IT, där jag ledde utbildningsprogrammen i nära samarbete med arbetslivet. Därefter har jag utvecklat kursinnehåll tillsammans med ämnesexperter och genomfört utbildningar internt och för externa kunder. I flera roller har jag sålt tjänster och arbetat nära kunder över tid. Jag vill utveckla utbildningar som vuxna kan omsätta i sitt arbete."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Below are the responsibilities and qualifications in the ad for Utbildningsansvarig, together with my experience in each area.",
+    "sv": "Nedan följer annonsens uppdrag och kvalifikationer för Utbildningsansvarig, tillsammans med min erfarenhet inom respektive område."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "Developing training together with experts",
+        "sv": "Utbildningar som tas fram tillsammans med experter"
+      },
+      "quote": {
+        "en": "Develop the offering: create training together with our experts and make sure it builds on current research.",
+        "sv": "Utveckla utbudet: ta fram utbildningar tillsammans med våra experter och se till att de bygger på aktuell forskning."
+      },
+      "body": {
+        "en": "As a course developer at a Nordic HR tech company I developed courses in HR and Learning & Development in collaboration with subject matter experts. I made sure the content was up to date and brought market insights and research into the training material. At vocational college I led and developed the programmes in close collaboration with the labour market, and matched them to the skills the market asked for. At an IT consultancy we worked with vocational programmes and helped change them according to what the industry needed.",
+        "sv": "Som kursutvecklare i ett nordiskt HR-techbolag utvecklade jag kurser inom HR och Learning & Development i samarbete med ämnesexperter. Jag säkerställde att innehållet var aktuellt och arbetade in marknadsinsikter och forskning i utbildningsmaterialet. På yrkeshögskolan ledde och utvecklade jag utbildningsprogrammen i nära samarbete med arbetslivet och matchade dem mot de kompetenser marknaden efterfrågade. I ett IT-konsultbolag arbetade vi med yrkeshögskoleutbildningar och var med och förändrade dem utifrån vad branschen behövde."
+      },
+      "roles": [
+        { "en": "Course Developer", "sv": "Kursutvecklare" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Delivering training",
+        "sv": "Att genomföra utbildningar"
+      },
+      "quote": {
+        "en": "Experience of developing and delivering training, in the public, non-profit or private sector.",
+        "sv": "Erfarenhet av att utveckla och leverera utbildningar, inom offentlig, ideell eller privat sektor."
+      },
+      "body": {
+        "en": "At a consultancy focused on education I delivered training internally and for external clients, planned on the basis of each group's needs. Among other things I ran workshops in gamification methodology. At vocational college I coached and guided 100 students ahead of their transition into working life. As a course developer I planned and ran conferences with a focus on what the participants gained from them.",
+        "sv": "I ett konsultbolag med fokus på utbildning genomförde jag utbildningar internt och för externa kunder, planerade utifrån varje grupps behov. Där höll jag bland annat workshops i gamification-metodik. På yrkeshögskolan coachade och vägledde jag 100 studerande inför övergången till arbetslivet. Som kursutvecklare planerade och genomförde jag konferenser med fokus på vad deltagarna fick ut av dem."
+      },
+      "roles": [
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Course Developer", "sv": "Kursutvecklare" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Knowledge production",
+        "sv": "Kunskapsproduktion"
+      },
+      "quote": {
+        "en": "Experience of knowledge production.",
+        "sv": "Erfarenhet av kunskapsproduktion."
+      },
+      "body": {
+        "en": "As a course developer I produced course content in HR for a leading HR system and continuously improved the course material and its pedagogical structure. At two consultancies I built a structured onboarding where there had been no coherent process before, and in one of them I produced the documentation and help material that went with it. At an IT consultancy I helped build a career programme for junior developers, with a structure for what they should learn and who supported them. On my own I have developed Role for Growth, a method for team development through roleplay with a structured debrief and follow-up of an individual development goal over six weeks.",
+        "sv": "Som kursutvecklare tog jag fram kursinnehåll inom HR för ett ledande HR-system och förbättrade löpande kursmaterialet och dess pedagogiska struktur. I två konsultbolag byggde jag en strukturerad onboarding där det tidigare saknades en sammanhållen process, och i det ena tog jag fram tillhörande dokumentation och hjälpmaterial. I ett IT-konsultbolag var jag med och byggde ett karriärprogram för juniora utvecklare, med en struktur för vad de skulle lära sig och vem som stöttade dem. På egen hand har jag utvecklat Role for Growth, en metod för teamutveckling genom rollspel med strukturerad debrief och uppföljning av ett individuellt utvecklingsmål under sex veckor."
+      },
+      "roles": [
+        { "en": "Course Developer", "sv": "Kursutvecklare" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Sales and client relationships",
+        "sv": "Försäljning och kundrelationer"
+      },
+      "quote": {
+        "en": "Sell and build relationships: be in contact with clients and be responsible for agreements and marketing. Good business sense and the ability to turn social benefit into attractive offers.",
+        "sv": "Sälja och bygga relationer: ha kontakt med kunder och ansvara för avtal och marknadsföring. God affärsförståelse och förmåga att omsätta samhällsnytta i attraktiva erbjudanden."
+      },
+      "body": {
+        "en": "I have sold services for about five years, in four roles at consulting and HR tech companies. I have had client contact in every role and kept an ongoing dialogue with clients about their needs before proposing a way forward. At an IT consultancy I was part of the management team and led the company's talent acquisition strategy, including employer branding. I have written and published job ads based on the client's needs, with a focus on a clear and relevant message.",
+        "sv": "Jag har sålt tjänster i ca fem år, i fyra roller i konsult- och HR-techbolag. Jag har haft kundkontakt i alla mina roller och fört en löpande dialog med kunderna om deras behov innan jag föreslagit ett upplägg. I ett IT-konsultbolag ingick jag i ledningsgruppen och ledde bolagets strategi för talent acquisition, bland annat employer branding. Jag har skrivit och publicerat annonser utifrån kundens behov, med fokus på ett tydligt och relevant budskap."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Course Developer", "sv": "Kursutvecklare" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Coordination and support for colleagues",
+        "sv": "Samordning och stöd till kollegor"
+      },
+      "quote": {
+        "en": "You are responsible for the day-to-day coordination of the training activities and have a supporting role towards colleagues who deliver training.",
+        "sv": "Du ansvarar för den dagliga samordningen av utbildningsverksamheten och har en stödjande roll gentemot kollegor som genomför utbildningar."
+      },
+      "body": {
+        "en": "As education manager at vocational college I was responsible for the programmes and ran their steering group work. I handled the admission of students and took part in recruiting teachers, where I made sure they had the relevant expertise. At an IT consultancy I was part of the management team and responsible for personnel development in a consultant group of more than 15 people. I have led projects in every role I have had.",
+        "sv": "Som utbildningsledare på yrkeshögskolan ansvarade jag för utbildningsprogrammen och drev deras ledningsgruppsarbete. Jag höll i antagningen av studerande och deltog i rekryteringen av lärare, där jag säkerställde att de hade relevant kompetens. I ett IT-konsultbolag ingick jag i ledningsgruppen och ansvarade för personalutvecklingen i en konsultgrupp på fler än 15 personer. Jag har lett projekt i varje roll jag haft."
+      },
+      "roles": [
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Learning platforms and digital tools",
+        "sv": "Lärplattformar och digitala verktyg"
+      },
+      "quote": {
+        "en": "Coordinate and administer: plan training, and be responsible for and administer the digital tools and learning platforms we use.",
+        "sv": "Samordna och administrera: planera utbildningar, ansvara för och administrera de digitala verktyg och lärplattformar vi använder."
+      },
+      "body": {
+        "en": "As ICT manager at vocational college I developed the structure of the learning platform and improved the internal communication flows between staff, teachers and students. At an IT consultancy I was involved from the start in shaping an internal learning management system, including how the content should be structured. It was later sold as a product. I use AI every day and have built my own tools, among them an onboarding platform that gathers everything a new hire needs in one place.",
+        "sv": "Som ICT-ansvarig på yrkeshögskolan utvecklade jag lärplattformens struktur och förbättrade de interna kommunikationsflödena mellan personal, lärare och studerande. I ett IT-konsultbolag var jag med från start i utformningen av en intern lärplattform, bland annat i hur innehållet skulle struktureras. Den såldes senare som produkt. Jag använder AI dagligen och har byggt egna verktyg, bland annat en onboardingplattform som samlar allt en nyanställd behöver på ett ställe."
+      },
+      "roles": [
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Partnerships and representing externally",
+        "sv": "Samarbeten och extern representation"
+      },
+      "quote": {
+        "en": "Represent Bris: follow what is happening in the wider world, find new partners and represent Bris externally.",
+        "sv": "Representera Bris: följa vad som händer i omvärlden, hitta nya samarbetspartner och företräda Bris externt."
+      },
+      "body": {
+        "en": "At vocational college I built and maintained partnerships with companies and other external stakeholders, and secured internship placements for the students. I have represented companies at trade fairs, customer events and other industry activities, among other things as master of ceremonies. As a course developer I followed trends and needs in HR so that the training stayed current. I follow developments in AI closely and bring what I learn into my work.",
+        "sv": "På yrkeshögskolan byggde och förvaltade jag samarbeten med företag och andra externa aktörer, och säkrade praktikplatser för de studerande. Jag har representerat bolag på mässor, kundevent och andra branschaktiviteter, bland annat som konferencier. Som kursutvecklare följde jag trender och behov inom HR för att hålla utbildningarna aktuella. Jag följer utvecklingen inom AI nära och tar med mig det jag lär mig in i arbetet."
+      },
+      "roles": [
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Course Developer", "sv": "Kursutvecklare" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Analysing needs and results",
+        "sv": "Analys av behov och resultat"
+      },
+      "quote": {
+        "en": "Good ability to analyse the market, needs and operational results.",
+        "sv": "God förmåga att analysera marknad, behov och verksamhetsresultat."
+      },
+      "body": {
+        "en": "At vocational college I worked with competence supply by matching the programmes to the needs of the market. I followed up the programmes against the result targets set for each one and drove them towards those targets. In recruitment I was responsible for whole processes, starting with a needs analysis. I have followed up the processes I have been responsible for and used the results to improve the workflows.",
+        "sv": "På yrkeshögskolan arbetade jag med kompetensförsörjning genom att matcha utbildningarna mot marknadens behov. Jag följde upp utbildningarna mot de resultatmål som var satta för respektive utbildning och drev dem mot målen. Inom rekrytering ansvarade jag för hela processer, med start i en behovsanalys. Jag har följt upp de processer jag ansvarat för och använt resultaten för att förbättra arbetsflödena."
+      },
+      "roles": [
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    }
+  ],
+  "roles": {
+    "title": {
+      "en": "Education and learning I have worked with",
+      "sv": "Utbildning och lärande jag har arbetat med"
+    },
+    "lead": {
+      "en": "A selection from vocational higher education, course development and my roles at consulting companies.",
+      "sv": "Ett urval från yrkeshögskolan, kursutvecklingen och mina roller i konsultbolag."
+    },
+    "groups": [
+      {
+        "label": { "en": "Developing training", "sv": "Utveckla utbildningar" },
+        "items": [
+          { "en": "Course development", "sv": "Kursutveckling" },
+          { "en": "Collaboration with subject matter experts", "sv": "Samarbete med ämnesexperter" },
+          { "en": "Programme development", "sv": "Utbildningsutveckling" },
+          { "en": "Documentation and help material", "sv": "Dokumentation och hjälpmaterial" },
+          "Role for Growth"
+        ]
+      },
+      {
+        "label": { "en": "Delivering training", "sv": "Genomföra utbildningar" },
+        "items": [
+          { "en": "Training for external clients", "sv": "Utbildningar för externa kunder" },
+          { "en": "Workshops and gamification", "sv": "Workshops och gamification" },
+          { "en": "Conferences", "sv": "Konferenser" },
+          { "en": "Career coaching of students", "sv": "Karriärcoachning av studerande" }
+        ]
+      },
+      {
+        "label": { "en": "Clients and partnerships", "sv": "Kunder och samarbeten" },
+        "items": [
+          { "en": "Selling services", "sv": "Försäljning av tjänster" },
+          { "en": "Partnerships with companies", "sv": "Samarbeten med företag" },
+          { "en": "Trade fairs and events", "sv": "Mässor och event" },
+          "Employer branding"
+        ]
+      },
+      {
+        "label": { "en": "Coordination and follow-up", "sv": "Samordning och uppföljning" },
+        "items": [
+          { "en": "Steering group work", "sv": "Ledningsgruppsarbete" },
+          { "en": "Result targets", "sv": "Resultatmål" },
+          { "en": "Student admissions", "sv": "Antagning" },
+          { "en": "Learning management system", "sv": "Lärplattform" }
+        ]
+      }
+    ]
+  },
+  "text": {
+    ".nav-links li:nth-child(2) a": { "en": "How I match", "sv": "Hur jag matchar" },
+    ".nav-mobile a:nth-child(2)": { "en": "How I match", "sv": "Hur jag matchar" },
+    "#top .meta-row > span:last-child": {
+      "en": "Education manager and course developer",
+      "sv": "Utbildningsledare och kursutvecklare"
+    },
+    "#top .stat-num": ["4", "100", "~5"],
+    "#top .stat-label": [
+      {
+        "en": "Years working with education and learning",
+        "sv": "År med utbildning och lärande"
+      },
+      {
+        "en": "Students I coached ahead of working life at vocational college",
+        "sv": "Studerande som jag coachade inför arbetslivet på yrkeshögskolan"
+      },
+      {
+        "en": "Years selling services, in four roles",
+        "sv": "År med försäljning av tjänster, i fyra roller"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask my AI assistant about me",
+      "sv": "Fråga min AI-assistent om mig"
+    },
+    "#ask-chips .ask-chip": [
+      { "en": "How has he developed training?", "sv": "Hur har han utvecklat utbildningar?" },
+      { "en": "What training has he delivered?", "sv": "Vilka utbildningar har han genomfört?" },
+      { "en": "What sales experience does he have?", "sv": "Vilken erfarenhet har han av försäljning?" }
+    ],
+    "#about .sec-title": {
+      "en": "Knowledge that is put to use",
+      "sv": "Kunskap som kommer till användning"
+    },
+    "#about .about-quote": {
+      "en": "I want participants to be able to use what they learn in their work.",
+      "sv": "Jag vill att deltagarna ska kunna använda det de lär sig i sitt arbete."
+    },
+    "#about .about-body": [
+      {
+        "en": "I have always been interested in learning, and after my degree in behavioural science it became my profession. In my roles I have started from what the participants and the organisation need before putting together a plan. I have long experience of client relationships and see the value of following up and taking in feedback.",
+        "sv": "Mitt intresse för lärande har alltid funnits där, och efter min examen i beteendevetenskap blev det mitt yrke. I mina roller har jag utgått från vad deltagarna och verksamheten behöver innan jag tagit fram ett upplägg. Jag har lång erfarenhet av kundrelationer och ser värdet i att följa upp och ta in återkoppling."
+      },
+      {
+        "en": "Since 2020 I have worked at consulting and HR tech companies, where sales and client contact have been a large part of the work. At an IT consultancy I was part of the management team and at the same time responsible for the day-to-day work with recruitment and personnel development.",
+        "sv": "Sedan 2020 har jag arbetat i konsult- och HR-techbolag, där försäljning och kundkontakt har varit en stor del av arbetet. I ett IT-konsultbolag ingick jag i ledningsgruppen och ansvarade samtidigt för det dagliga arbetet med rekrytering och personalutveckling."
+      },
+      {
+        "en": "I am curious by nature and follow developments in AI closely. When something in my work takes longer than it should, I build a tool for it. I learn new systems quickly and am used to teaching them to colleagues.",
+        "sv": "Jag är nyfiken av naturen och följer utvecklingen inom AI nära. När något i arbetet tar längre tid än det borde bygger jag ett verktyg för det. Jag lär mig nya system snabbt och är van vid att lära ut dem till kollegor."
+      }
+    ],
+    "#about .brings-list li": [
+      { "en": "Training that participants can use in their work", "sv": "Utbildningar som deltagarna kan använda i sitt arbete" },
+      { "en": "Developing training together with subject matter experts", "sv": "Utbildningsutveckling tillsammans med ämnesexperter" },
+      { "en": "Long-term relationships with clients and partners", "sv": "Långsiktiga relationer med kunder och samarbetspartner" },
+      { "en": "Follow-up against set targets", "sv": "Uppföljning mot uppsatta mål" },
+      { "en": "AI and digital tools in learning", "sv": "AI och digitala verktyg i lärandet" }
+    ],
+    "#built .sec-lead": {
+      "en": "First, what I have built in my work with training, onboarding and learning platforms at the companies where I have worked. After that, methods and tools I have developed on my own, mainly with AI.",
+      "sv": "Först visas det jag har byggt i arbetet med utbildning, onboarding och lärplattformar i de bolag där jag har arbetat. Därefter följer metoder och verktyg som jag har utvecklat på egen hand, främst med AI."
+    },
+    "#experience .sec-lead": {
+      "en": "Five roles in Gothenburg since 2019, from vocational higher education to course development and consulting companies. In the three roles marked below, education and learning were a central part of the work.",
+      "sv": "Fem roller i Göteborg sedan 2019, från yrkeshögskolan till kursutveckling och konsultbolag. I de tre roller som är markerade nedan var utbildning och lärande en central del av arbetet."
+    },
+    "#education .sec-title": {
+      "en": "Behavioural science and education management",
+      "sv": "Beteendevetenskap och utbildningsledning"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, focused on how individuals and groups learn and function in organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot hur individer och grupper lär sig och fungerar i organisationer."
+      },
+      {
+        "en": "Certification in education management for vocational higher education, focused on pedagogical planning and course design.",
+        "sv": "Certifiering inom utbildningsledning för yrkeshögskolan, med fokus på pedagogisk planering och kursupplägg."
+      }
+    ],
+    "#education .callout-label": { "en": "Behavioural science", "sv": "Beteendevetenskap" },
+    "#education .callout-title": {
+      "en": "A foundation for education work",
+      "sv": "En grund för utbildningsarbete"
+    },
+    "#education .callout-text": {
+      "en": "The degree covered how individuals and groups learn and function in organisations. I use that knowledge when I analyse needs and plan training.",
+      "sv": "Utbildningen behandlade hur individer och grupper lär sig och fungerar i organisationer. Jag använder den kunskapen när jag analyserar behov och planerar utbildningar."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "Learning & Development",
+      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
+      "Learning Management Systems (LMS)",
+      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+      { "en": "Project Management", "sv": "Projektledning" },
+      { "en": "Communication", "sv": "Kommunikation" },
+      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+      "Gamification",
+      "People & Culture",
+      "HR",
+      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
+      "Employer Branding",
+      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" }
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      { "en": "Pedagogical, teaches what I build", "sv": "Pedagogisk, lär ut det jag bygger" },
+      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
+      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
+      { "en": "Builds from zero", "sv": "Bygger från noll" },
+      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
+      { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
+    ],
+    "#personal .sec-title": { "en": "The person behind the application", "sv": "Personen bakom ansökan" },
+    "#personal .sec-lead": { "en": "A little about who I am outside work.", "sv": "Lite om vem jag är utanför arbetet." },
+    "#contact .contact-facts span": [
+      { "en": "Location: Gothenburg", "sv": "Ort: Göteborg" },
+      { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
+      { "en": "Education: BSc. Behavioural Science", "sv": "Utbildning: kand. beteendevetenskap" },
+      { "en": "Education and learning: 4 years", "sv": "Utbildning och lärande: 4 år" }
+    ]
+  }
+}
