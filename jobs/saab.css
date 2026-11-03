@@ -1,0 +1,558 @@
+/* Saab — Rekryteringsspecialist, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /saab and by cv.html?job=saab, from the head script, so the page
+   is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on saab.com:
+     #34322e  the warm dark grey of the header, nav and footer
+     #f3f3f2  the light grey page background
+     #ececea  the slightly deeper grey bands
+     #ffbd00  Saab yellow: the active nav item and the small marks
+     #f8b749  the yellow of headings set on the dark grey
+     #004c97  the blue of the filled "Apply for this job!" button
+     #5f625f  secondary text and tags
+     #afb0af  divider lines
+
+   Their type is Aktiv Grotesk (Light, Regular, Medium), with no rounding on
+   buttons or panels. It is not on Google Fonts, so Archivo stands in. Small
+   labels are uppercase and light, as their "JOB OPPORTUNITIES" crumb.
+
+   Yellow is unreadable as text on white, so the accent token is the blue,
+   and yellow is kept for the dark panels and the marks.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --bg:            #f3f3f2;
+  --bg2:           #ececea;
+  --bg3:           #e3e3e0;
+  --white:         #ffffff;
+
+  --border:        #d9d9d6;
+  --border-light:  #e6e6e3;
+  --border-strong: #afb0af;
+
+  --ink:           #000000;
+  --ink-mid:       #1f1e1b;
+  --ink-light:     #44433f;
+  --ink-dim:       #5f625f;
+
+  --amber:         #004c97;
+  --amber-light:   #0060be;
+
+  --accent-rgb:    0,76,151;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        243,243,242;
+
+  --shadow:        0 8px 24px rgba(52,50,46,0.08);
+  --shadow-sm:     0 1px 3px rgba(52,50,46,0.06);
+  --shadow-lg:     0 18px 44px rgba(52,50,46,0.16);
+
+  --radius:        0px;
+  --radius-lg:     0px;
+  --radius-pill:   0px;
+
+  --s-dark:   #34322e;
+  --s-dark2:  #2c2a26;
+  --s-yellow: #ffbd00;
+  --s-gold:   #f8b749;
+  --s-blue:   #004c97;
+  --s-grey:   #5f625f;
+
+  /* Their hero is a photo under a dark warm veil with white type. */
+  --photo-veil: linear-gradient(90deg, rgba(52,50,46,0.96) 0%, rgba(52,50,46,0.9) 50%, rgba(52,50,46,0.78) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffbd00' stroke-width='3' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Archivo', 'AktivGroteskMedium', Arial, sans-serif;
+  --sans:  'Archivo', 'AktivGroteskRegular', Arial, sans-serif;
+  --mono:  'Archivo', 'AktivGroteskRegular', Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink-mid);
+  font-family: var(--sans);
+  font-weight: 400;
+}
+::selection { background: #ffbd00; color: #000000; }
+strong, b { font-weight: 600; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: medium-weight grotesque headings with a slight negative tracking,
+   as their page titles. No italics.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name,
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+.sec-title {
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  line-height: 1.1;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.hero-role,
+.about-quote,
+.job-about { font-style: normal; }
+
+/* Small labels: light uppercase, as their breadcrumb and section tags. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5f625f;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: their dark grey bar with white links, the active one in yellow, and
+   the contact link as a yellow block.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #34322e;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #2c2a26;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #ffffff;
+  border-radius: 0;
+}
+.nav-links a:hover { color: #ffbd00; background: transparent; }
+.nav-links a.active { color: #ffbd00; background: transparent; box-shadow: none; }
+.nav-contact-link a { color: #000000; background: #ffbd00; font-weight: 500; }
+.nav-contact-link a:hover { color: #000000; background: #f8b749; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.brand em { font-style: normal; color: #ffffff; }
+.brand-dot { background: #ffbd00; border-radius: 0; }
+.lang-toggle { background: transparent; border: 1px solid #5f625f; border-radius: 0; color: #ffffff; font-weight: 500; }
+.lang-toggle:hover { background: #ffbd00; border-color: #ffbd00; color: #000000; }
+.nav-hamburger span { background: #ffffff; }
+.nav-mobile { background: #34322e; }
+.nav-mobile a { font-family: var(--sans); color: #ffffff; font-weight: 400; border-color: #44423d; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #ffbd00; background: #2c2a26; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: square. Blue filled as "Apply for this job!", and an outlined
+   ghost as their secondary links.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  border-radius: 0;
+  border-width: 1px;
+  padding: 0.85rem 1.5rem;
+}
+.btn-primary {
+  background: #004c97;
+  border: 1px solid #004c97;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #003d7a; border-color: #003d7a; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #34322e;
+  color: #000000;
+  font-weight: 500;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #34322e; border-color: #34322e; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #004c97; }
+
+/* Cards: white and square with a hairline, as their article tiles. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #e6e6e3;
+  border-radius: 0;
+  box-shadow: none;
+}
+.card:hover { border-color: #afb0af; box-shadow: 0 8px 24px rgba(52,50,46,0.08); }
+#experience .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #d9d9d6; color: #1f1e1b; border-radius: 0; font-weight: 400; }
+.pill--accent { background: #34322e; border-color: #34322e; color: #ffbd00; }
+.pick { background: #ffffff; border-color: #e6e6e3; border-radius: 0; }
+.pick b { color: #000000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: the Gothenburg photo under their dark veil, white type and the
+   location line in yellow, as on the job ad.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #ffffff;
+  --ink-mid:   #f3f3f2;
+  --ink-light: #dcdcda;
+  --ink-dim:   #afb0af;
+  color: var(--ink-mid);
+}
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.4rem 0.8rem 0.36rem;
+  background: #ffbd00;
+  border-radius: 0;
+  color: #000000;
+  font-size: 0.74rem;
+}
+#top .hero-name {
+  color: #ffffff;
+  font-size: clamp(3rem, 7.4vw, 5.2rem);
+  line-height: 1;
+}
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+  letter-spacing: 0;
+  color: #f8b749;
+}
+#top .hero-role::before { display: none; }
+#top .hero-lead { color: #f3f3f2; font-weight: 300; }
+#top .meta-row,
+#top .meta-row span { color: #dcdcda; font-weight: 400; }
+#top .meta-row .sep { color: #ffbd00; }
+#top .meta-row svg { stroke: #ffbd00; }
+#top .btn-ghost { border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; color: #000000; }
+#top .hero-photo {
+  border: none;
+  border-radius: 0;
+  box-shadow: 12px 12px 0 #ffbd00;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+#top .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
+
+/* The stats on a white panel with a yellow top rule. */
+#top .stat-strip {
+  background: #ffffff;
+  backdrop-filter: none;
+  border: none;
+  border-top: 4px solid #ffbd00;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1rem 1.3rem;
+}
+#top .stat { border-color: #e6e6e3; }
+#top .stat-num {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1;
+  color: #000000;
+}
+#top .stat-label {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+  color: #44433f;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar as their search: a square white field on the light grey,
+   with a blue send button.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #ffffff; border-color: #e6e6e3; border-radius: 0; }
+.ask-title { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; color: #000000; }
+.ask-input {
+  background: #fff;
+  border: 1px solid #afb0af;
+  border-radius: 0;
+  box-shadow: none;
+  color: #000000;
+  font-weight: 400;
+}
+.ask-input:focus { border-color: #004c97; box-shadow: 0 0 0 3px rgba(0,76,151,0.18); }
+.ask-btn { background: #004c97; border-radius: 0; }
+.ask-btn:hover { background: #003d7a; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #f3f3f2; border: 1px solid #e6e6e3; color: #1f1e1b; border-radius: 0; font-weight: 400; }
+.ask-chip:hover { background: #34322e; border-color: #34322e; color: #ffbd00; }
+.ask-out { background: #fff; border-color: #e6e6e3; border-radius: 0; }
+.ask-dot { background: #ffbd00; }
+
+/* About: the quote with a yellow rule, and the list on the dark grey as
+   their footer panels. */
+#about .about-quote {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #000000;
+  padding-left: 1.1rem;
+  border-left: 4px solid #ffbd00;
+}
+#about .brings {
+  background: #34322e;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+#about .brings-label { color: #f8b749; }
+#about .brings-list li { color: #ffffff; font-weight: 400; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match": white tiles on the deeper grey, each numbered in a yellow
+   square. Candidate assessment, the heart of the ad, sits on dark grey.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #ececea; border-top: none; }
+#match .card {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+}
+#match .card:hover { border-color: #afb0af; }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6rem;
+  height: 2.6rem;
+  padding: 0 0.4rem;
+  border-radius: 0;
+  background: #ffbd00;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #000000;
+}
+#match .point-title { font-size: 1.22rem; font-weight: 500; line-height: 1.25; color: #000000; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  color: #44433f;
+  border-left: 3px solid #ffbd00;
+}
+#match .point-body { color: #1f1e1b; font-weight: 400; }
+#match .point-roles { border-top: 1px solid #e6e6e3; }
+#match .point-roles .pill { background: #f3f3f2; border-color: #f3f3f2; color: #1f1e1b; font-weight: 400; }
+
+#match .card:nth-child(2) { background: #34322e; border-color: #34322e; }
+#match .card:nth-child(2) .point-title,
+#match .card:nth-child(2) .point-body { color: #ffffff; }
+#match .card:nth-child(2) .point-quote { color: #dcdcda; border-left-color: #ffbd00; }
+#match .card:nth-child(2) .point-roles { border-top-color: rgba(255,255,255,0.2); }
+#match .card:nth-child(2) .point-roles-label { color: #f8b749; }
+#match .card:nth-child(2) .point-roles .pill { background: rgba(255,255,255,0.1); border-color: transparent; color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the ATS workflows and onboarding lead the work grid, and the two
+   recruitment tools lead the AI grid.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+              5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+
+#built .built-icon {
+  width: 48px;
+  height: 48px;
+  background: #34322e;
+  border: none;
+  border-radius: 0;
+}
+#built .built-icon svg { stroke: #ffbd00; }
+.built-link { color: #004c97; border-bottom: 2px solid #ffbd00; font-weight: 500; }
+.built-link:hover { color: #000000; border-bottom-color: #004c97; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a grey timeline with yellow squares on the three recruitment
+   roles, each tagged with where the weight of the work lay.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   Engineering leads the roles card, then software.
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #34322e, #34322e 55%, #afb0af 85%, transparent); }
+.job::before { background: #ffffff; border-color: #afb0af; border-radius: 0; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #ffbd00; border-color: #34322e; }
+.job-company { color: #000000; font-weight: 500; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.6rem 0.12rem;
+  border-radius: 0;
+  background: #e3e3e0;
+  color: #1f1e1b;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after { background: #34322e; color: #ffbd00; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Full-cycle processes · Candidate assessment'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Course development · HR'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Recruitment · Parallel processes'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Talent acquisition · ATS · Management team'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Teacher recruitment · Competence supply'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Hela processer · Kandidatbedömning'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Kursutveckling · HR'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Rekrytering · Parallella processer'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Talent acquisition · ATS · Ledningsgrupp'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Lärarrekrytering · Kompetensförsörjning'; }
+
+#experience .roles-card { background: #ececea; border-color: #ececea; border-radius: 0; }
+#experience .roles-group:nth-of-type(4) { order: -1; }
+.roles-group .pill { background: #fff; border-color: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: recruitment, competence supply and HR lead the pills on dark
+   grey, and the callout is their blue.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #000000; font-weight: 500; }
+#education .callout { background: #004c97; border: none; border-radius: 0; }
+#education .callout-label { color: #ffbd00; }
+#education .callout-title,
+#education .callout-text { color: #ffffff; }
+#education .callout-title { font-family: var(--serif); font-weight: 500; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) {
+  background: #34322e;
+  border-color: #34322e;
+  color: #ffbd00;
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The start page tiles: square throughout, as their panels. The tile lists
+   round their rows and icons in style.css, so they are squared here.
+   ───────────────────────────────────────────────────────────────────────── */
+html body .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap :is(.point, .job, .built-card, .built-icon, .hero-photo, .hero-photo img, .edu-card, .tile-hint) { border-radius: 0; }
+html body .bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point-num { border-radius: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 7; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the light grey, with the facts as a white panel under a yellow
+   rule. The footer is their dark grey.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #000000;
+  --ink-mid:   #000000;
+  --ink-light: #1f1e1b;
+  --ink-dim:   #44433f;
+}
+#contact::after { background: #ffbd00; }
+#contact .eyebrow { color: #5f625f; }
+#contact .sec-title { color: #000000; }
+#contact .sec-lead { color: #1f1e1b; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 0.4rem 1.5rem 1.2rem;
+  background: #ffffff;
+  border-top: 4px solid #ffbd00;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts::before {
+  content: 'About me';
+  flex-basis: 100%;
+  padding: 0.9rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #e6e6e3;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #000000;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Fakta om mig'; }
+#contact .contact-facts span {
+  padding: 0.5rem 1.5rem 0 0;
+  border: none;
+  color: #1f1e1b;
+  font-weight: 400;
+}
+
+.site-footer {
+  background: #34322e;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #dcdcda;
+}
+.site-footer a { color: #ffffff; font-weight: 500; border-bottom: 2px solid #ffbd00; }
+.site-footer a:hover { color: #ffbd00; }
