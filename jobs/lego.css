@@ -1,0 +1,585 @@
+/* LEGO Group — Field Account Manager, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /lego and by cv.html?job=lego, from the head script, so the page
+   is drawn in these colours from the first frame.
+
+   The palette is the LEGO brand's own:
+     #e3000b  LEGO red, the logo tile and the filled buttons
+     #b8000a  the deeper red for hovers and red type on white
+     #ffcf00  LEGO yellow, the logo outline and the small marks
+     #fff6cc  a pale yellow wash for bands and tiles
+     #006cb7  LEGO blue, used sparingly for links
+     #000000  black, the heavy headings and the footer
+     #f6f6f6  the light grey of their product pages
+
+   Their type is Cera Pro, a geometric sans set heavy for headings. It is not
+   on Google Fonts, so Outfit stands in. The signature detail is the brick:
+   numbers sit on a red brick with two studs, and headings carry a short
+   yellow brick under them.
+
+   Yellow is unreadable as text on white, so the accent token is the red,
+   and yellow is kept for fills behind black type and the marks.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f6f6f6;
+  --bg3:           #fff6cc;
+  --white:         #ffffff;
+
+  --border:        #e4e4e4;
+  --border-light:  #efefef;
+  --border-strong: #c8c8c8;
+
+  --ink:           #000000;
+  --ink-mid:       #1a1a1a;
+  --ink-light:     #3d3d3d;
+  --ink-dim:       #5c5c5c;
+
+  --amber:         #b8000a;
+  --amber-light:   #e3000b;
+
+  --accent-rgb:    227,0,11;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 8px 24px rgba(0,0,0,0.08);
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg:     0 18px 44px rgba(0,0,0,0.14);
+
+  --radius:        8px;
+  --radius-lg:     12px;
+  --radius-pill:   8px;
+
+  --l-red:    #e3000b;
+  --l-red2:   #b8000a;
+  --l-yellow: #ffcf00;
+  --l-wash:   #fff6cc;
+  --l-blue:   #006cb7;
+  --l-grey:   #f6f6f6;
+
+  /* A two-stud brick, drawn as two circles on a block. Used as a mark. */
+  --l-studs: radial-gradient(circle at 25% 50%, rgba(255,255,255,0.28) 0 22%, transparent 24%),
+             radial-gradient(circle at 75% 50%, rgba(255,255,255,0.28) 0 22%, transparent 24%);
+
+  --photo-veil: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0.78) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e3000b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Outfit', 'Cera Pro', Arial, sans-serif;
+  --sans:  'Outfit', 'Cera Pro', Arial, sans-serif;
+  --mono:  'Outfit', 'Cera Pro', Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink-mid);
+  font-family: var(--sans);
+  font-weight: 400;
+}
+::selection { background: #ffcf00; color: #000000; }
+strong, b { font-weight: 700; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: heavy black headings with a short yellow brick under the section
+   titles. Card titles bold in black.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name,
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.sec-title {
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  line-height: 1.08;
+}
+.sec-title::after {
+  content: '';
+  display: block;
+  width: 3.2rem;
+  height: 0.7rem;
+  margin-top: 0.8rem;
+  border-radius: 3px;
+  background: var(--l-studs), #ffcf00;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.hero-role,
+.about-quote,
+.job-about { font-style: normal; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b8000a;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: a yellow bar as the top of lego.com, with black links and the
+   contact link as a red button.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: #ffcf00;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #000000;
+  border-radius: 8px;
+}
+.nav-links a:hover { color: #000000; background: rgba(0,0,0,0.08); }
+.nav-links a.active { color: #000000; background: rgba(0,0,0,0.1); box-shadow: none; }
+.nav-contact-link a { color: #ffffff; background: #e3000b; font-weight: 700; }
+.nav-contact-link a:hover { color: #ffffff; background: #b8000a; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.brand em { font-style: normal; color: #000000; }
+.brand-dot { display: none; }
+.lang-toggle { background: #ffffff; border: 1px solid #ffffff; border-radius: 8px; color: #000000; font-weight: 700; }
+.lang-toggle:hover { background: #fff6cc; border-color: #fff6cc; color: #000000; }
+.nav-hamburger span { background: #000000; }
+.nav-mobile { background: #ffcf00; }
+.nav-mobile a { font-family: var(--sans); color: #000000; font-weight: 600; border-color: rgba(0,0,0,0.1); }
+.nav-mobile a:hover, .nav-mobile a.active { color: #000000; background: rgba(0,0,0,0.08); }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: red filled with white type, and black outlined as the secondary.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 8px;
+  border-width: 2px;
+  padding: 0.8rem 1.4rem;
+}
+.btn-primary {
+  background: #e3000b;
+  border: 2px solid #e3000b;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #b8000a; border-color: #b8000a; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #000000; border-color: #000000; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #006cb7; }
+
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  box-shadow: none;
+}
+.card:hover { border-color: #ffcf00; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+#experience .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #e4e4e4; color: #000000; border-radius: 6px; font-weight: 500; }
+.pill--accent { background: #000000; border-color: #000000; color: #ffffff; }
+.pick { background: #ffffff; border-color: #e4e4e4; border-radius: 8px; }
+.pick b { color: #000000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: white, the eyebrow as a red tag and the name in heavy black. The
+   photo sits in a frame with a yellow offset, as a brick on a plate.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #000000;
+  --ink-mid:   #1a1a1a;
+  --ink-light: #3d3d3d;
+  --ink-dim:   #5c5c5c;
+  color: var(--ink-mid);
+}
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.42rem 0.8rem 0.38rem;
+  background: #e3000b;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.76rem;
+}
+#top .hero-name {
+  color: #000000;
+  font-weight: 900;
+  font-size: clamp(3rem, 7.4vw, 5.2rem);
+  line-height: 1;
+}
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+#top .hero-role::before { display: none; }
+#top .hero-lead { color: #1a1a1a; font-weight: 400; }
+#top .meta-row,
+#top .meta-row span { color: #3d3d3d; font-weight: 500; }
+#top .meta-row .sep { color: #e3000b; }
+#top .meta-row svg { stroke: #e3000b; }
+#top .hero-photo {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 12px 12px 0 #ffcf00;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+#top .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+
+/* The stats on pale yellow, with heavy red numerals. */
+#top .stat-strip {
+  background: #fff6cc;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 1rem 1.3rem;
+}
+#top .stat { border-color: rgba(0,0,0,0.12); }
+#top .stat-num {
+  font-family: var(--serif);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.6rem, 5.2vw, 3.6rem);
+  line-height: 1;
+  color: #e3000b;
+}
+#top .stat-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on light grey, with a white input in a black frame.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f6f6f6; border-color: #f6f6f6; border-radius: 12px; }
+.ask-title { font-family: var(--serif); font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em; color: #000000; }
+.ask-input {
+  background: #fff;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-shadow: none;
+  color: #000000;
+  font-weight: 400;
+}
+.ask-input:focus { border-color: #006cb7; box-shadow: 0 0 0 3px rgba(0,108,183,0.2); }
+.ask-btn { background: #e3000b; border-radius: 8px; }
+.ask-btn:hover { background: #b8000a; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #fff; border: 1px solid #e4e4e4; color: #000000; border-radius: 6px; font-weight: 500; }
+.ask-chip:hover { background: #ffcf00; border-color: #ffcf00; color: #000000; }
+.ask-out { background: #fff; border-color: #e4e4e4; border-radius: 8px; }
+.ask-dot { background: #e3000b; }
+
+/* About: the quote in heavy black, the list on the pale yellow wash. */
+#about .about-quote {
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #000000;
+  padding-left: 0;
+  border-left: none;
+}
+#about .brings {
+  background: #fff6cc;
+  border: none;
+  border-radius: 12px;
+  box-shadow: none;
+}
+#about .brings-label { color: #b8000a; }
+#about .brings-list li { color: #1a1a1a; font-weight: 500; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on a LEGO red band, with white tiles numbered on a yellow
+   brick with two studs. Customer partnership sits on the yellow tile.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: #e3000b;
+  border-top: none;
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.9);
+  --ink-dim:   rgba(255,255,255,0.8);
+}
+#match .sec-title { color: #ffffff; }
+#match .eyebrow { color: #ffcf00; }
+#match .sec-lead { color: rgba(255,255,255,0.92); }
+#match .card {
+  --ink:       #000000;
+  --ink-mid:   #1a1a1a;
+  --ink-light: #3d3d3d;
+  --ink-dim:   #5c5c5c;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+}
+#match .card:hover { border-color: #ffcf00; }
+#match .point-rule { display: none; }
+#match .point-num {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2rem;
+  height: 2.4rem;
+  margin-top: 0.6rem;
+  padding: 0 0.4rem;
+  border-radius: 4px;
+  background: #ffcf00;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000000;
+}
+/* The two studs on top of the brick. */
+#match .point-num::before,
+#match .point-num::after {
+  content: '';
+  position: absolute;
+  top: -0.45rem;
+  width: 1rem;
+  height: 0.5rem;
+  border-radius: 3px 3px 0 0;
+  background: #ffcf00;
+}
+#match .point-num::before { left: 0.45rem; }
+#match .point-num::after { right: 0.45rem; }
+#match .point-title { font-size: 1.25rem; font-weight: 700; line-height: 1.25; color: #000000; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #3d3d3d;
+  border-left: 4px solid #ffcf00;
+}
+#match .point-body { color: #1a1a1a; font-weight: 400; }
+#match .point-roles { border-top: 1px solid #efefef; }
+#match .point-roles .pill { background: #f6f6f6; border-color: #f6f6f6; color: #000000; font-weight: 500; }
+
+#match .card:nth-child(4) { background: #ffcf00; border-color: #ffcf00; }
+#match .card:nth-child(4) .point-num,
+#match .card:nth-child(4) .point-num::before,
+#match .card:nth-child(4) .point-num::after { background: #e3000b; color: #ffffff; }
+#match .card:nth-child(4) .point-quote { color: #1a1a1a; border-left-color: #e3000b; }
+#match .card:nth-child(4) .point-roles { border-top-color: rgba(0,0,0,0.15); }
+#match .card:nth-child(4) .point-roles .pill { background: #ffffff; border-color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the ATS workflows and onboarding lead the work grid.
+     At work: 1 ATS, 2 onboarding, 3 LMS, 4 career programme,
+              5 course content
+   In the AI grid this site and the onboarding platform lead.
+     AI:      1 this site, 2 onboarding platform, 3 Recruitment OS,
+              4 agentic OS, 5 QuestLog, 6 finance tool, 7 more tools,
+              8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 7; }
+
+#built .built-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff6cc;
+  border: none;
+  border-radius: 8px;
+}
+#built .built-icon svg { stroke: #e3000b; }
+.built-link { color: #006cb7; border-bottom: 2px solid #ffcf00; font-weight: 700; }
+.built-link:hover { color: #000000; border-bottom-color: #e3000b; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a red timeline. Each role carries a tag with the parts of the
+   ad where the weight of the work lay, and the four roles where sales of
+   services was part of the work get the red dot.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 3px; background: linear-gradient(to bottom, #e3000b, #e3000b 70%, #ffcf00 88%, transparent); }
+.job::before { background: #ffffff; border-color: #ffcf00; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #e3000b; border-color: #e3000b; }
+.job-company { color: #000000; font-weight: 600; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.6rem 0.12rem;
+  border-radius: 4px;
+  background: #fff6cc;
+  color: #000000;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Sales · Customer advice'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Sales · Conferences'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Sales · Customer contact'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Sales · New processes'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Partnerships · Result targets'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Försäljning · Rådgivning'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Försäljning · Konferenser'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Försäljning · Kundkontakt'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Försäljning · Nya processer'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Samarbeten · Resultatmål'; }
+
+#experience .roles-card { background: #f6f6f6; border-color: #f6f6f6; border-radius: 12px; }
+.roles-group .pill { background: #fff; border-color: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: communication, project management and employer branding lead
+   the pills in black, and the callout is a black panel with yellow marks.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #000000; font-weight: 600; }
+#education .callout { background: #000000; border: none; border-radius: 12px; }
+#education .callout-label,
+#education .callout-title,
+#education .callout-text { color: #ffffff; }
+#education .callout-label { color: #ffcf00; }
+#education .callout-title { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the yellow wash, with the facts as a white tile. The footer is
+   black, as lego.com's.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #000000;
+  --ink-mid:   #000000;
+  --ink-light: #1a1a1a;
+  --ink-dim:   #3d3d3d;
+}
+#contact::after { background: #ffcf00; }
+#contact .eyebrow { color: #b8000a; }
+#contact .sec-title { color: #000000; }
+#contact .sec-lead { color: #1a1a1a; }
+#contact .btn-ghost { background: #ffffff; border-color: #000000; color: #000000; }
+#contact .btn-ghost:hover { background: #000000; border-color: #000000; color: #ffffff; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 0.4rem 1.5rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  box-shadow: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts::before {
+  content: 'About me';
+  flex-basis: 100%;
+  padding: 0.9rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #efefef;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Fakta om mig'; }
+#contact .contact-facts span {
+  padding: 0.5rem 1.5rem 0 0;
+  border: none;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.site-footer {
+  background: #000000;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.site-footer a { color: #ffffff; font-weight: 600; border-bottom: 2px solid #ffcf00; }
+.site-footer a:hover { border-bottom-color: #e3000b; }
