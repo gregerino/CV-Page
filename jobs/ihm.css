@@ -1,0 +1,550 @@
+/* IHM Yrkeshögskola — Utbildningschef, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /ihm and by cv.html?job=ihm, from the head script, so the page
+   is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on ihm.se/yh:
+     #404040  headings and body copy, the main ink of the whole site
+     #333333  card titles ("Digital Marketing Specialist")
+     #5c5c5c  secondary copy and the "Läs mer" links
+     #000000  the IHM Business School wordmark
+     #fff44c  IHM yellow: the 6px bar along the bottom of every course card
+     #ff426f  IHM pink: the filled square uppercase buttons
+     #fae3de  the blush "Nyhet" chip
+     #fafafa  the grey band behind the course cards
+     rgba(0,0,0,0.08)  the grey subject chips ("Marknadsföring", "Ledarskap")
+
+   Their type is Inter throughout: 700 for headings, with section headings
+   set uppercase ("POPULÄRA YH-UTBILDNINGAR"), 500 for sub-headings. Inter is
+   on Google Fonts, so it is used as is. Cards are white with 8px corners and
+   no shadow, carried by the yellow bar underneath; chips are rounded pills.
+
+   Pink is too light for body-sized text on white, so the accent token is a
+   deeper pink, and the brand pink carries buttons and small marks. Yellow
+   only ever carries bars and fields with dark text on them.
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #fafafa;
+  --bg3:           #f2f2f2;
+  --white:         #ffffff;
+
+  --border:        #e6e6e6;
+  --border-light:  #efefef;
+  --border-strong: #cfcfcf;
+
+  --ink:           #333333;
+  --ink-mid:       #404040;
+  --ink-light:     #5c5c5c;
+  --ink-dim:       #757575;
+
+  --amber:         #d1144a;
+  --amber-light:   #ff426f;
+
+  --accent-rgb:    255,66,111;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 8px 24px rgba(0,0,0,0.06);
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.05);
+  --shadow-lg:     0 18px 44px rgba(0,0,0,0.12);
+
+  --radius:        8px;
+  --radius-lg:     8px;
+  --radius-pill:   16px;
+
+  --i-yellow: #fff44c;
+  --i-pink:   #ff426f;
+  --i-blush:  #fae3de;
+  --i-chip:   #ebebeb;
+
+  /* Their hero is plain white, so the Gothenburg photo is washed white. */
+  --photo-veil: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.93) 50%, rgba(255,255,255,0.82) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff426f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Inter', 'Avenir Next', Arial, sans-serif;
+  --sans:  'Inter', 'Avenir Next', Arial, sans-serif;
+  --mono:  'Inter', 'Avenir Next', Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink-mid);
+  font-family: var(--sans);
+  font-weight: 400;
+}
+::selection { background: #fff44c; color: #000000; }
+strong, b { font-weight: 700; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: Inter 700. Section headings uppercase as "POPULÄRA YH-UTBILDNINGAR",
+   the name in normal case as the "IHM Yrkeshögskola" page heading.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #404040;
+}
+.sec-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  line-height: 1.15;
+  color: #404040;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+  color: #333333;
+}
+
+.hero-role,
+.about-quote,
+.job-about { font-style: normal; }
+
+/* Small labels: Inter 600 uppercase, quiet grey. */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5c5c5c;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: a white 64px bar, the name in black as their wordmark, and the
+   contact link as their pink square button.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #efefef;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #404040;
+  border-radius: 16px;
+}
+.nav-links a:hover { color: #404040; background: rgba(0,0,0,0.06); }
+.nav-links a.active { color: #000000; background: rgba(0,0,0,0.08); box-shadow: none; }
+.nav-contact-link a {
+  color: #ffffff;
+  background: #ff426f;
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+.nav-contact-link a:hover { color: #ffffff; background: #d1144a; }
+.brand {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+.brand em { font-style: normal; color: #000000; }
+.brand-dot { background: #fff44c; }
+.lang-toggle { background: rgba(0,0,0,0.08); border: 1px solid transparent; border-radius: 16px; color: #404040; font-weight: 600; }
+.lang-toggle:hover { background: #fff44c; border-color: #fff44c; color: #000000; }
+.nav-hamburger span { background: #404040; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { font-family: var(--sans); color: #404040; font-weight: 500; border-color: #efefef; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #000000; background: #fafafa; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: square and uppercase. Pink filled with a white label as their
+   main call to action, grey chip with dark text as the secondary.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 0;
+  border-width: 1px;
+  padding: 0.85rem 2rem;
+}
+.btn-primary {
+  background: #ff426f;
+  border: 1px solid #ff426f;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #d1144a; border-color: #d1144a; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: #ffffff;
+  border: 1px solid #404040;
+  color: #404040;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #404040; border-color: #404040; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ff426f; }
+
+/* Cards: white, 8px corners, no shadow, and the yellow bar along the bottom
+   as their course cards. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #ececec;
+  border-bottom: 6px solid #fff44c;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.card:hover { border-color: #e0e0e0; border-bottom-color: #fff44c; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+#experience .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; border-bottom: none; }
+.pill { background: rgba(0,0,0,0.08); border-color: transparent; color: #404040; border-radius: 16px; font-weight: 400; }
+.pill--accent { background: #fff44c; border-color: #fff44c; color: #000000; font-weight: 600; }
+.pick { background: #ffffff; border-color: #ececec; border-radius: 8px; }
+.pick b { color: #333333; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: plain white as their page heading, the eyebrow as the blush
+   "Nyhet" chip, and the photo framed by the yellow bar.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #333333;
+  --ink-mid:   #404040;
+  --ink-light: #5c5c5c;
+  --ink-dim:   #757575;
+  color: var(--ink-mid);
+}
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.38rem 0.8rem 0.34rem;
+  background: #fae3de;
+  border-radius: 16px;
+  color: #404040;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+}
+#top .hero-name {
+  color: #404040;
+  font-size: clamp(2.8rem, 7vw, 4.8rem);
+  line-height: 1.02;
+}
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  letter-spacing: 0;
+  color: #404040;
+}
+#top .hero-role::before { background: #fff44c; }
+#top .hero-lead { color: #404040; font-weight: 400; }
+#top .meta-row,
+#top .meta-row span { color: #5c5c5c; font-weight: 500; }
+#top .meta-row .sep { color: #ff426f; }
+#top .meta-row svg { stroke: #ff426f; }
+#top .hero-photo {
+  border: none;
+  border-bottom: 6px solid #fff44c;
+  border-radius: 8px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+/* The stats on the yellow field, dark numerals in Inter 800. */
+#top .stat-strip {
+  background: #fff44c;
+  backdrop-filter: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+}
+#top .stat { border-color: rgba(0,0,0,0.15); }
+#top .stat-num {
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+#top .stat-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #333333;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on their grey band, the input square, the chips as their
+   subject chips.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #fafafa; border-color: #efefef; border-radius: 8px; }
+.ask-title { font-size: 1.15rem; text-transform: uppercase; letter-spacing: 0.01em; color: #404040; }
+.ask-input {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  box-shadow: none;
+  color: #333333;
+}
+.ask-input:focus { border-color: #404040; box-shadow: 0 0 0 3px rgba(255,244,76,0.8); }
+.ask-btn { background: #ff426f; border-radius: 0; }
+.ask-btn:hover { background: #d1144a; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: rgba(0,0,0,0.08); border: 1px solid transparent; color: #404040; border-radius: 16px; font-weight: 400; }
+.ask-chip:hover { background: #fff44c; border-color: #fff44c; color: #000000; }
+.ask-out { background: #fff; border-color: #ececec; border-radius: 8px; }
+.ask-dot { background: #ff426f; }
+
+/* About: the quote as one of their 500 sub-headings with a yellow bar, the
+   list on the grey band. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  line-height: 1.35;
+  color: #333333;
+  padding-left: 1rem;
+  border-left: 6px solid #fff44c;
+}
+#about .brings {
+  background: #fafafa;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+}
+#about .brings-list li { color: #404040; font-weight: 500; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match": their course cards on the grey band, numbered in a yellow
+   square. Leading people sits on the dark tile.
+   ───────────────────────────────────────────────────────────────────────── */
+#match { background: #fafafa; border-top: none; }
+#match .card { background: #ffffff; }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.4rem;
+  border-radius: 4px;
+  background: #fff44c;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #000000;
+}
+#match .point-title { font-size: 1.1rem; font-weight: 700; line-height: 1.3; color: #333333; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #5c5c5c;
+  border-left: 3px solid #fae3de;
+}
+#match .point-body { color: #404040; font-weight: 400; }
+#match .point-roles { border-top: 1px solid #efefef; }
+
+#match .card:nth-child(1) { background: #404040; border-color: #404040; border-bottom-color: #fff44c; }
+#match .card:nth-child(1) .point-title,
+#match .card:nth-child(1) .point-body { color: #ffffff; }
+#match .card:nth-child(1) .point-quote { color: rgba(255,255,255,0.85); border-left-color: #ff426f; }
+#match .card:nth-child(1) .point-roles { border-top-color: rgba(255,255,255,0.2); }
+#match .card:nth-child(1) .point-roles-label { color: #ffffff; }
+#match .card:nth-child(1) .point-roles .pill { background: rgba(255,255,255,0.15); color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the learning platform, onboarding and the career programme lead
+   the work grid. In the AI grid Role for Growth and the onboarding
+   platform lead.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+              5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 7; }
+
+#built .built-icon {
+  width: 46px;
+  height: 46px;
+  background: #fff44c;
+  border: none;
+  border-radius: 4px;
+}
+#built .built-icon svg { stroke: #000000; }
+.built-link { color: #d1144a; border-bottom: 2px solid #fae3de; font-weight: 600; }
+.built-link:hover { color: #000000; border-bottom-color: #ff426f; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a dark timeline. Each role carries a tag with where the weight
+   of the work lay, and the three roles with leadership or education get
+   the yellow dot.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #404040, #404040 60%, #cfcfcf 88%, transparent); }
+.job::before { background: #ffffff; border-color: #404040; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #fff44c; border-color: #000000; }
+.job-company { color: #333333; font-weight: 700; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.65rem 0.12rem;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.08);
+  color: #404040;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after { background: #fae3de; color: #333333; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Advising managers · Process improvement'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Course development · Subject matter experts'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Onboarding · Parallel processes'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Management team · Consultant group of 15+'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Programmes · Result targets'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Rådgivning till chefer · Processförbättring'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Kursutveckling · Ämnesexperter'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Onboarding · Parallella processer'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Ledningsgrupp · Konsultgrupp på 15+'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildningsprogram · Resultatmål'; }
+
+#experience .roles-card { background: #fafafa; border-color: #efefef; }
+.roles-group .pill { background: #ffffff; border-color: #ececec; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: leadership, pedagogy and competence supply lead the pills in
+   yellow, and the callout is a dark tile with the yellow bar.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #333333; font-weight: 700; }
+#education .callout { background: #404040; border: none; border-bottom: 6px solid #fff44c; border-radius: 8px; }
+#education .callout-label,
+#education .callout-title,
+#education .callout-text { color: #ffffff; }
+#education .callout-title { text-transform: uppercase; letter-spacing: 0.01em; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) {
+  background: #fff44c;
+  border-color: #fff44c;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on the grey band, with the facts as one of their course cards.
+   The footer is black as theirs, with the wordmark-white text.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #333333;
+  --ink-mid:   #333333;
+  --ink-light: #404040;
+  --ink-dim:   #5c5c5c;
+}
+#contact::after { background: #fff44c; }
+#contact .sec-title { color: #404040; }
+#contact .sec-lead { color: #404040; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 0.4rem 1.5rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-bottom: 6px solid #fff44c;
+  border-radius: 8px;
+  box-shadow: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts::before {
+  content: 'About me';
+  flex-basis: 100%;
+  padding: 0.9rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #efefef;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #404040;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Fakta om mig'; }
+#contact .contact-facts span {
+  padding: 0.5rem 1.5rem 0 0;
+  border: none;
+  color: #404040;
+  font-weight: 500;
+}
+
+.site-footer {
+  background: #000000;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #f7f7f7;
+}
+.site-footer a { color: #ffffff; font-weight: 600; border-bottom: 2px solid #fff44c; }
+.site-footer a:hover { color: #fff44c; }
