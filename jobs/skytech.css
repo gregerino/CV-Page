@@ -1,0 +1,350 @@
+/* SignsOnDemand, SkyTech Group — Team Lead, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /skytech and by cv.html?job=skytech, from the head script.
+
+   Read off the computed styles on jobs.skytech.se:
+     #000000  the page
+     #0f1112  the panels ("About the role", the quick facts)
+     #fafafa  all copy
+     #a5a5a5  quiet labels
+     #f45125  Skytech orange: filled buttons, the second heading line, marks
+
+   Type is Arial Nova, 700 for headings, 400 for copy, falling back to Arial
+   where the font isn't installed. Buttons have 10px corners. The signature
+   details are the orange second line under the job title with a short orange
+   rule, and the orange icons in dark round badges.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg:            #000000;
+  --bg2:           #08090a;
+  --bg3:           #17191b;
+  --white:         #0f1112;
+
+  --border:        #25282b;
+  --border-light:  #1b1e20;
+  --border-strong: #3a3e42;
+
+  --ink:           #fafafa;
+  --ink-mid:       #e8e8e8;
+  --ink-light:     #bdbdbd;
+  --ink-dim:       #a5a5a5;
+
+  --amber:         #f45125;
+  --amber-light:   #ff6d45;
+
+  --accent-rgb:    244,81,37;
+  --white-rgb:     15,17,18;
+  --bg-rgb:        0,0,0;
+
+  --shadow:        none;
+  --shadow-sm:     none;
+  --shadow-lg:     0 18px 44px rgba(0,0,0,0.6);
+
+  --radius:        10px;
+  --radius-lg:     10px;
+  --radius-pill:   999px;
+
+  --photo-veil: linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.88) 50%, rgba(0,0,0,0.72) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f45125' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Arial Nova', Arial, Helvetica, sans-serif;
+  --sans:  'Arial Nova', Arial, Helvetica, sans-serif;
+  --mono:  'Arial Nova', Arial, Helvetica, sans-serif;
+}
+
+body { background: #000000; color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #f45125; color: #ffffff; }
+strong, b { font-weight: 700; }
+
+/* Type: Arial Nova 700, no italics. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #fafafa;
+}
+.hero-role,
+.about-quote,
+.job-about,
+.point-quote { font-style: normal; }
+
+/* The short orange rule under the job title, under every section heading. */
+.sec-title { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.12; }
+.sec-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 0.9rem;
+  background: #f45125;
+}
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: #a5a5a5;
+}
+
+/* Nav: their translucent black bar, Contact as the orange button. */
+.nav {
+  background: rgba(0,0,0,0.77);
+  border-bottom: 1px solid #1b1e20;
+  box-shadow: none;
+}
+.nav-links a { font-family: var(--sans); color: #fafafa; font-weight: 400; border-radius: 10px; }
+.nav-links a:hover { color: #fafafa; background: #17191b; }
+.nav-links a.active { color: #f45125; background: transparent; box-shadow: none; }
+.nav-contact-link a { color: #ffffff; background: #f45125; border-radius: 10px; font-weight: 700; }
+.nav-contact-link a:hover { color: #ffffff; background: #d9431b; }
+.brand { font-family: var(--sans); font-weight: 700; color: #fafafa; }
+.brand em { font-style: normal; color: #fafafa; }
+.brand-dot { background: #f45125; }
+.lang-toggle { background: transparent; border: 1px solid #f45125; border-radius: 999px; color: #fafafa; font-weight: 700; }
+.lang-toggle:hover { background: #f45125; border-color: #f45125; color: #ffffff; }
+.nav-hamburger span { background: #fafafa; }
+.nav-mobile { background: #000000; }
+.nav-mobile a { font-family: var(--sans); color: #fafafa; border-color: #1b1e20; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #f45125; background: #0f1112; }
+
+/* Buttons: orange filled "Apply now", outlined "Read more". */
+.btn { font-family: var(--sans); font-weight: 700; border-radius: 10px; }
+.btn-primary { background: #f45125; border: 1px solid #f45125; color: #ffffff; box-shadow: none; }
+.btn-primary:hover { background: #d9431b; border-color: #d9431b; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost { background: #000000; border: 1px solid #3a3e42; color: #fafafa; backdrop-filter: none; }
+.btn-ghost:hover { background: #0f1112; border-color: #f45125; color: #fafafa; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #000000, 0 0 0 4px #f45125; }
+
+/* Panels. */
+.card {
+  background: #0f1112;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #1b1e20;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.card:hover { border-color: #f45125; box-shadow: none; }
+#experience .card { background: #0f1112; }
+#experience .timeline .job { background: transparent; border-bottom: none; }
+.pill { background: #17191b; border-color: #25282b; color: #e8e8e8; border-radius: 999px; font-weight: 400; }
+.pill--accent { background: #f45125; border-color: #f45125; color: #ffffff; font-weight: 700; }
+.pick { background: #0f1112; border-color: #1b1e20; border-radius: 10px; }
+.pick b { color: #fafafa; }
+
+/* Hero: black, the role as their orange second line with the rule. */
+#top { --ink: #fafafa; --ink-mid: #e8e8e8; --ink-light: #bdbdbd; --ink-dim: #a5a5a5; color: var(--ink-mid); }
+#top .eyebrow { color: #bdbdbd; }
+#top .hero-name { color: #fafafa; font-size: clamp(2.8rem, 7vw, 4.6rem); line-height: 1.03; }
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  letter-spacing: -0.01em;
+  color: #f45125;
+}
+#top .hero-role::before { background: #f45125; }
+#top .hero-lead { color: #fafafa; font-weight: 400; }
+#top .meta-row, #top .meta-row span { color: #bdbdbd; }
+#top .meta-row .sep { color: #f45125; }
+#top .meta-row svg { stroke: #f45125; }
+#top .hero-photo { border: 1px solid #1b1e20; border-radius: 10px; box-shadow: none; overflow: hidden; }
+
+/* The stats as their quick-facts panel, with thin dividers. */
+#top .stat-strip { background: #0f1112; backdrop-filter: none; border: 1px solid #1b1e20; border-radius: 10px; box-shadow: none; }
+#top .stat { border-color: #3a3e42; }
+#top .stat-num { font-family: var(--sans); font-weight: 700; letter-spacing: -0.02em; color: #f45125; }
+#top .stat-label { font-family: var(--sans); font-weight: 400; letter-spacing: 0; text-transform: none; color: #fafafa; }
+
+/* Ask bar. */
+.ask { background: #0f1112; border-color: #1b1e20; border-radius: 10px; }
+.ask-title { color: #fafafa; }
+.ask-input { background: #000000; border: 1px solid #3a3e42; border-radius: 10px; box-shadow: none; color: #fafafa; }
+.ask-input:focus { border-color: #f45125; box-shadow: 0 0 0 3px rgba(244,81,37,0.3); }
+.ask-btn { background: #f45125; border-radius: 10px; }
+.ask-btn:hover { background: #d9431b; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #000000; border: 1px solid #3a3e42; color: #fafafa; border-radius: 999px; }
+.ask-chip:hover { background: #f45125; border-color: #f45125; color: #ffffff; }
+.ask-out { background: #000000; border-color: #1b1e20; border-radius: 10px; }
+.ask-dot { background: #f45125; }
+
+/* About. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  line-height: 1.35;
+  color: #fafafa;
+  padding-left: 1rem;
+  border-left: 3px solid #f45125;
+}
+#about .brings { background: #0f1112; border: 1px solid #1b1e20; border-radius: 10px; box-shadow: none; }
+#about .brings-list li { color: #fafafa; }
+
+/* How I match: panels with the number in their dark round badge. */
+#match { background: #000000; border-top: none; }
+#match .card { background: #0f1112; }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #17191b;
+  border: 1px solid #f45125;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #f45125;
+}
+#match .point-title { font-size: 1.15rem; line-height: 1.3; color: #fafafa; }
+#match .point-quote { font-family: var(--sans); font-size: 0.95rem; color: #bdbdbd; border-left: 2px solid #f45125; }
+#match .point-body { color: #e8e8e8; }
+#match .point-roles { border-top: 1px solid #25282b; }
+
+/* The two requirements the role turns on get the orange top edge. */
+#match .card:nth-child(-n+2) { border-top: 3px solid #f45125; }
+
+/* Built: the work that concerns people first, and Role for Growth first
+   among the things built alone.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 7; }
+
+#built .built-icon { width: 46px; height: 46px; background: #17191b; border: 1px solid #f45125; border-radius: 50%; }
+#built .built-icon svg { stroke: #f45125; }
+.built-link { color: #ff6d45; border-bottom: 1px solid #f45125; font-weight: 700; }
+.built-link:hover { color: #fafafa; border-bottom-color: #fafafa; }
+
+/* Experience: orange dots on the positions with people or customer weight.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #f45125, #3a3e42 60%, #25282b 88%, transparent); }
+.job::before { background: #000000; border-color: #f45125; }
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #f45125; border-color: #f45125; }
+.job-company { color: #fafafa; font-weight: 700; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.65rem 0.12rem;
+  border-radius: 999px;
+  background: #17191b;
+  border: 1px solid #25282b;
+  color: #e8e8e8;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(4) .job-company > span::after { background: #f45125; border-color: #f45125; color: #ffffff; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Clients · Candidate contact'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Selling services · Conferences'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Selling services · HR support'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'HR responsibility · Management team'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Set targets · External partners'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Kunder · Kandidatkontakt'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Försäljning av tjänster · Konferenser'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Försäljning av tjänster · HR-stöd'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'HR-ansvar · Ledningsgrupp'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Resultatmål · Externa samarbeten'; }
+
+#experience .roles-card { background: #0f1112; border-color: #1b1e20; }
+.roles-group .pill { background: #000000; border-color: #25282b; }
+
+/* Education. */
+#education .edu-school { color: #fafafa; font-weight: 700; }
+#education .callout { background: #0f1112; border: 1px solid #1b1e20; border-left: 3px solid #f45125; border-radius: 10px; }
+#education .callout-label { color: #f45125; }
+#education .callout-title, #education .callout-text { color: #fafafa; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) { background: #f45125; border-color: #f45125; color: #ffffff; font-weight: 700; }
+
+/* Contact: facts as their quick-facts panel. */
+#contact { --ink: #fafafa; --ink-mid: #e8e8e8; --ink-light: #bdbdbd; --ink-dim: #a5a5a5; }
+#contact::after { background: #f45125; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 1.1rem 1.5rem;
+  background: #0f1112;
+  border: 1px solid #1b1e20;
+  border-radius: 10px;
+  box-shadow: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts span { padding: 0.2rem 1.5rem; border: none; border-left: 1px solid #3a3e42; color: #fafafa; }
+#contact .contact-facts span:first-child { padding-left: 0; border-left: none; }
+
+.site-footer { background: #000000; border-top: 1px solid #1b1e20; padding: 2.2rem 0 2rem; }
+.site-footer p { font-family: var(--sans); font-size: 0.9rem; color: #a5a5a5; }
+.site-footer a { color: #fafafa; font-weight: 700; border-bottom: 1px solid #f45125; }
+.site-footer a:hover { color: #f45125; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The PDF is printed on white paper, so the dark palette is turned over:
+   black copy, pale grey side cards, orange kept for the small marks.
+   ───────────────────────────────────────────────────────────────────────── */
+@media print {
+  :root {
+    --bg: #f4f4f4; --bg2: #f4f4f4; --bg3: #ececec; --white: #ffffff;
+    --border: #dddddd; --border-light: #e8e8e8; --border-strong: #c4c4c4;
+    --ink: #000000; --ink-mid: #1c1c1c; --ink-light: #444444; --ink-dim: #666666;
+    --amber: #c93b14;
+    --white-rgb: 255,255,255; --bg-rgb: 255,255,255;
+  }
+  body { color: #1c1c1c; }
+  .cv-name, .sec-title, .job-title, .edu-degree, .job-company, .edu-school { color: #000000; }
+  .eyebrow, .tool-label { color: #666666; }
+  .hero-role { color: #c93b14; }
+  .card { background: #ffffff; border-color: #dddddd; }
+  .cv-card .pill, .pill { background: #ffffff; border-color: #c4c4c4; color: #1c1c1c; }
+  .job::before { background: #ffffff; border-color: #c93b14; }
+  .timeline::before { background: #c93b14; }
+}
