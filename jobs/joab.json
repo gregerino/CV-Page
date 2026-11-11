@@ -10,8 +10,8 @@
     "sv": "Ett stöd för chefer i vardagen"
   },
   "lead": {
-    "en": "Since 2020 I have worked with HR and recruitment, mainly at consulting companies in IT and tech. At an IT consultancy I was part of the management team and had HR-related responsibility for a consultant group of more than 15 people. In several of my roles I have built up processes where none existed before and introduced new systems and workflows. I like it when the administration runs smoothly for managers and employees, and I build my own tools with AI when a task takes longer than it should.",
-    "sv": "Sedan 2020 har jag arbetat med HR och rekrytering, främst i konsultbolag inom IT och teknik. I ett IT-konsultbolag ingick jag i ledningsgruppen och hade HR-relaterat ansvar för en konsultgrupp på fler än 15 personer. I flera av mina roller har jag byggt upp processer där det tidigare saknades och infört nya system och arbetsflöden. Jag tycker om när administrationen fungerar smidigt för chefer och medarbetare, och bygger egna verktyg med AI när ett moment tar längre tid än det borde."
+    "en": "Since 2020 I have worked with HR and recruitment, mainly at consulting companies in IT and tech. At an IT consultancy I was part of the management team and had HR-related responsibility for a consultant group of more than 15 people. In several of my roles I have built up processes where none existed before and introduced new systems and workflows. I build my own tools with AI when a task takes longer than it should.",
+    "sv": "Sedan 2020 har jag arbetat med HR och rekrytering, främst i konsultbolag inom IT och teknik. I ett IT-konsultbolag ingick jag i ledningsgruppen och hade HR-relaterat ansvar för en konsultgrupp på fler än 15 personer. I flera av mina roller har jag byggt upp processer där det tidigare saknades och infört nya system och arbetsflöden. Jag bygger egna verktyg med AI när ett moment tar längre tid än det borde."
   },
   "cta": {
     "en": "See how I match the role",
@@ -134,8 +134,8 @@
         "sv": "God systemvana och ett intresse för digitala arbetssätt. Det är meriterande om du har erfarenhet av att digitalisera HR-processer."
       },
       "body": {
-        "en": "At an IT consultancy I was involved from the start in shaping an internal learning platform, including which needs it would meet and how the content would be structured. The platform worked well enough that it was later sold as a product to other companies. At a vocational college I developed the structure of the learning platform and improved the internal communication flows. I use AI every day and build my own tools with Claude Code, among them this site.",
-        "sv": "I ett IT-konsultbolag var jag med från start och utformade en intern lärplattform, bland annat vilka behov den skulle möta och hur innehållet skulle struktureras. Plattformen fungerade så väl att den senare såldes som produkt till andra företag. På en yrkeshögskola utvecklade jag strukturen i lärplattformen och förbättrade de interna kommunikationsflödena. Jag använder AI varje dag och bygger egna verktyg med Claude Code, bland annat den här sidan."
+        "en": "At an IT consultancy I was involved from the start in shaping an internal learning platform, including which needs it would meet and how the content would be structured. The platform worked well enough that it was later sold as a product to other companies. At a vocational college I developed the structure of the learning platform and improved the internal communication flows. I use AI every day and build my own tools with Claude Code, among them this site and several other tools you can find under Projects.",
+        "sv": "I ett IT-konsultbolag var jag med från start och utformade en intern lärplattform, bland annat vilka behov den skulle möta och hur innehållet skulle struktureras. Plattformen fungerade så väl att den senare såldes som produkt till andra företag. På en yrkeshögskola utvecklade jag strukturen i lärplattformen och förbättrade de interna kommunikationsflödena. Jag använder AI varje dag och bygger egna verktyg med Claude Code, bland annat den här sidan och flera andra verktyg som finns under Projekt."
       },
       "roles": [
         {
@@ -202,17 +202,18 @@
         "sv": "Är strukturerad, noggrann och självgående."
       },
       "body": {
-        "en": "I have often had many processes running in parallel and have planned and prioritised my own time based on the needs of the business. As education manager I was responsible for the admission of students and drove the programmes towards set targets. In recruitment I assessed the candidates in a structured way against the requirement profile we had agreed with the manager.",
-        "sv": "Jag har ofta haft många processer igång parallellt och har planerat och prioriterat min egen tid utifrån verksamhetens behov. Som utbildningsledare höll jag i antagningen av studerande och drev utbildningarna mot uppsatta resultatmål. I rekryteringen bedömde jag kandidaterna strukturerat mot den kravprofil vi hade tagit fram tillsammans med chefen."
+        "en": "Since I started working with recruitment, I have run my own recruitment processes. I am used to working independently and structuring my own work. I put a lot of care into delivering thorough results.",
+        "sv": "Sedan jag började arbeta med rekrytering har jag drivit mina egna rekryteringsprocesser. Jag är van att arbeta självgående och att strukturera mitt eget arbete. Jag lägger stor vikt vid att leverera noggranna resultat."
       },
       "roles": [
         {
-          "en": "Education Manager / ICT Manager",
-          "sv": "Utbildningsledare / ICT-ansvarig"
-        },
-        {
           "en": "Recruitment Consultant",
           "sv": "Rekryteringskonsult"
+        },
+        "Business Manager",
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
         }
       ]
     }
