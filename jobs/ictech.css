@@ -176,8 +176,33 @@ strong, b { font-weight: 700; }
 
 #top .stat-strip { background: rgba(255,255,255,0.08); backdrop-filter: none; border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; box-shadow: none; }
 #top .stat { border-color: rgba(255,255,255,0.2); }
+/* The base page sets the stats flush left for a borderless strip; inside the
+   rounded panel they need room on every side. */
+.bento > #top > .wrap .stat,
+.bento > #top > .wrap .stat:first-child { padding: 0.85rem 1.2rem 0.9rem; }
 #top .stat-num { font-family: var(--sans); font-weight: 700; letter-spacing: -0.03em; color: #ff4672; }
 #top .stat-label { font-family: var(--sans); font-weight: 400; letter-spacing: 0; text-transform: none; color: #f2eeff; }
+
+/* On a phone the three stats stack as rows, number to the left, so the
+   labels are not squeezed into narrow columns. */
+@media (max-width: 600px) {
+  .bento > #top > .wrap .stat-strip { grid-template-columns: 1fr; }
+  .bento > #top > .wrap .stat,
+  .bento > #top > .wrap .stat:first-child {
+    display: grid;
+    grid-template-columns: 3.6rem 1fr;
+    align-items: baseline;
+    column-gap: 0.8rem;
+    padding: 0.75rem 1.1rem;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.18);
+  }
+  .bento > #top > .wrap .stat:first-child { border-top: none; }
+  .nav-links {
+    -webkit-mask-image: linear-gradient(90deg, #000 75%, transparent);
+            mask-image: linear-gradient(90deg, #000 75%, transparent);
+  }
+}
 
 /* Ask bar. */
 .ask { background: #f5f2fe; border-color: #eee9fc; border-radius: 24px; }
@@ -231,8 +256,6 @@ strong, b { font-weight: 700; }
 #match .point-roles { border-top: 1px solid #eee9fc; }
 #match .point-roles .pill { background: #f5f2fe; }
 
-/* The two requirements the role turns on get the deep purple top edge. */
-#match .card:nth-child(-n+2) { border-top: 4px solid #270067; }
 
 /* Built: recruiting and welcoming consultants first.
      At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content

@@ -214,8 +214,8 @@
     ],
     "#top .stat-label": [
       {
-        "en": "Consultants in the group I had HR-related responsibility for",
-        "sv": "Konsulter i gruppen jag hade HR-relaterat ansvar för"
+        "en": "Consultants in the group I had HR responsibility for",
+        "sv": "Konsulter i gruppen jag hade HR-ansvar för"
       },
       {
         "en": "Years recruiting, mostly for technical roles",
