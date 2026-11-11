@@ -316,24 +316,16 @@
     ],
     "#about .brings-list li": [
       {
-        "en": "Matching the right consultant with the right assignment",
-        "sv": "Att matcha rätt konsult med rätt uppdrag"
+        "en": "Helping people grow",
+        "sv": "Att få människor att växa"
       },
       {
-        "en": "Building long-term relationships with customers",
-        "sv": "Att bygga långsiktiga relationer med kunder"
+        "en": "Getting to work with competence development",
+        "sv": "Att få arbeta med kompetensutveckling"
       },
       {
-        "en": "Supporting consultants in their development",
-        "sv": "Att stötta konsulter i deras utveckling"
-      },
-      {
-        "en": "Driving recruitments forward",
-        "sv": "Att driva rekryteringar framåt"
-      },
-      {
-        "en": "Working close to the tech industry",
-        "sv": "Att arbeta nära techbranschen"
+        "en": "Making sure the right person ends up in the right place",
+        "sv": "Att se till att rätt person hamnar på rätt plats"
       }
     ],
     "#built .sec-lead": {
