@@ -505,6 +505,10 @@
       "li[data-sv^=\"Skapade interna workshops\"]": {
         "en": "Ran competence development initiatives internally and externally for clients, including workshops and gamification methodology training",
         "sv": "Höll i kompetenshöjande insatser internt och externt mot kund, bland annat workshops och utbildning i gamification-metodik"
+      },
+      ".cv-card .tool-label[data-sv=\"Expertisområden\"]": {
+        "en": "Skills",
+        "sv": "Kompetenser"
       }
     }
   }
