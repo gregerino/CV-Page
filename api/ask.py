@@ -60,6 +60,7 @@ WORK EXPERIENCE:
    - Created internal workshops and learning sessions, including gamification methodology training
    - Helped build a career development programme aimed at supporting junior talent in entering the IT industry
    - Contributed to internal organisational development by helping shape and run an internal Learning Management System (LMS), which the company later sold B2B
+   - Developed and built the framework for the company's systematic work environment management (SAM, systematiskt arbetsmiljöarbete)
    - Worked actively with selling the company's services
 
 5. Education Manager / ICT Manager — IT-Högskolan, Gothenburg (June 2019 – Oct 2020)
