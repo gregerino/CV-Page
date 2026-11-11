@@ -77,3 +77,10 @@
 /* The gap between the two groups belongs to whichever label now comes second. */
 #built .wrap > p:last-of-type { margin-top: 0; }
 #built .wrap > p:first-of-type { margin-top: 2.8rem; }
+
+/* The Swedish CV runs a few lines longer than the English one: tighten the
+   timeline a touch in print so it holds to two pages. */
+@media print {
+  :root:lang(sv) .cv-main .job { padding-bottom: 3.6mm; }
+  :root:lang(sv) .job-bullets li { line-height: 1.34; }
+}

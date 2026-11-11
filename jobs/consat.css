@@ -114,3 +114,10 @@
 }
 #match .point { border-left: 3px solid #94fff7; }
 #match .point-num { color: #016984; }
+
+/* The Swedish CV runs a few lines longer than the English one: tighten the
+   timeline a touch in print so it holds to two pages. */
+@media print {
+  :root:lang(sv) .cv-main .job { padding-bottom: 3.6mm; }
+  :root:lang(sv) .job-bullets li { line-height: 1.34; }
+}

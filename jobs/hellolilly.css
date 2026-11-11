@@ -564,3 +564,10 @@ strong, b { font-weight: 700; }
 }
 .site-footer a { color: #ffffff; font-weight: 600; border-bottom: 2px solid #ffccee; }
 .site-footer a:hover { border-bottom-color: #ffffff; }
+
+/* The Swedish CV runs a few lines longer than the English one: tighten the
+   timeline a touch in print so it holds to two pages. */
+@media print {
+  :root:lang(sv) .cv-main .job { padding-bottom: 3.6mm; }
+  :root:lang(sv) .job-bullets li { line-height: 1.34; }
+}
