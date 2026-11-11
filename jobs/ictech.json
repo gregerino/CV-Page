@@ -45,7 +45,10 @@
       },
       "roles": [
         "Business Manager",
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -62,9 +65,15 @@
         "sv": "Jag har arbetat med rekrytering i ca fem år, de senaste två som rekryteringskonsult inom teknik och ingenjörsyrken. Jag drev hela processer, från behovsanalys till slutligt urval, ofta flera parallellt. Bland rollerna jag har rekryterat till finns C/C++-utvecklare och ADAS-utvecklare inom automotive. Jag sökte aktivt upp kandidater och höll en pipeline av kandidater igång."
       },
       "roles": [
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
         "Business Manager",
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
       ]
     },
     {
@@ -77,12 +86,18 @@
         "sv": "...där du stöttar och coachar dina medarbetare i deras utveckling."
       },
       "body": {
-        "en": "At an IT consultancy I had HR-related responsibility for a consultant group of more than 15 people for about a year and a half, and worked with the group's personnel development. For the consultants I ran internal workshops and learning sessions. I helped build a career programme for junior developers, with a clear structure for what they would learn and who would support them. At a vocational college I coached and guided 100 students through the transition to working life.",
-        "sv": "I ett IT-konsultbolag hade jag under ungefär ett och ett halvt år HR-relaterat ansvar för en konsultgrupp på fler än 15 personer och arbetade med gruppens personalutveckling. För konsulterna höll jag interna workshops och lärtillfällen. Jag var med och byggde ett karriärprogram för juniora utvecklare, med en tydlig struktur för vad de skulle lära sig och vem som stöttade dem. På en yrkeshögskola coachade och vägledde jag 100 studerande inför övergången till arbetslivet."
+        "en": "At an IT consultancy I had HR-related responsibility for a consultant group of more than 15 people for about a year and a half, and worked with the group's personnel development. In the same role I delivered competence development initiatives, both internally for the consultants and externally for clients. I helped build a career programme for junior developers, with a clear structure for what they would learn and who would support them. At a vocational college I coached and guided 100 students through the transition to working life.",
+        "sv": "I ett IT-konsultbolag hade jag under ungefär ett och ett halvt år HR-relaterat ansvar för en konsultgrupp på fler än 15 personer och arbetade med gruppens personalutveckling. I samma roll genomförde jag kompetenshöjande insatser, både internt för konsulterna och externt mot kund. Jag var med och byggde ett karriärprogram för juniora utvecklare, med en tydlig struktur för vad de skulle lära sig och vem som stöttade dem. På en yrkeshögskola coachade och vägledde jag 100 studerande inför övergången till arbetslivet."
       },
       "roles": [
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
-        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
       ]
     },
     {
@@ -100,8 +115,14 @@
       },
       "roles": [
         "Business Manager",
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
-        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
       ]
     },
     {
@@ -118,10 +139,19 @@
         "sv": "Tre av mina fyra senaste arbetsgivare har varit konsult- och rekryteringsbolag inom IT och teknik. I det första av dem, ett IT-konsultbolag, var min titel Talent Acquisition Lead / Consultant Manager. Jag har sålt tjänster i fyra av mina roller, sammanlagt under ca fem år. Inför varje rekryteringsuppdrag gick jag igenom kundens behov med den rekryterande chefen, med kompetenskrav och tidsplan."
       },
       "roles": [
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
         "Business Manager",
-        { "en": "Course Developer", "sv": "Kursutvecklare" },
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" }
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
       ]
     },
     {
@@ -138,9 +168,18 @@
         "sv": "I ett IT-konsultbolag ingick jag i ledningsgruppen och ansvarade för strategin inom talent acquisition. Som utbildningsledare drev jag utbildningarnas ledningsgruppsarbete och arbetet mot uppsatta resultatmål. Som rekryteringskonsult rådgav jag rekryterande chefer i tidsplan och bedömning av kandidater."
       },
       "roles": [
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
-        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" },
-        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" }
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        }
       ]
     },
     {
@@ -157,7 +196,10 @@
         "sv": "Som utbildningsledare ledde och utvecklade jag utbildningarna i nära samarbete med arbetsmarknaden och medverkade vid rekrytering av lärare. Jag är certifierad utbildningsledare genom Myndigheten för yrkeshögskolan. På egen hand har jag utvecklat Role for Growth, en metod för teamutveckling genom rollspel där varje deltagare väljer en förmåga att utveckla och följs upp under sex veckor. Nu vill jag ta nästa steg som ledare, med en egen konsultgrupp."
       },
       "roles": [
-        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
       ]
     },
     {
@@ -174,7 +216,10 @@
         "sv": "Jag byggde upp en strukturerad onboarding i två konsultbolag där det tidigare saknades. I det ena ledde jag införandet av ett ATS och utformade arbetsflödena för hur en roll öppnades och hur kandidaterna gick vidare i processen. När ett moment i mitt arbete tar längre tid än det borde utvecklar jag ett eget verktyg med AI. Ett exempel är Recruitment OS, som gör om en kravprofil till ett strukturerat intervjupaket."
       },
       "roles": [
-        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
         "Business Manager"
       ]
     },
@@ -209,7 +254,10 @@
     },
     "#top .stat-num": [
       "15+",
-      { "en": "c. 5", "sv": "ca 5" },
+      {
+        "en": "c. 5",
+        "sv": "ca 5"
+      },
       "4"
     ],
     "#top .stat-label": [
@@ -267,11 +315,26 @@
       }
     ],
     "#about .brings-list li": [
-      { "en": "Matching the right consultant with the right assignment", "sv": "Att matcha rätt konsult med rätt uppdrag" },
-      { "en": "Building long-term relationships with customers", "sv": "Att bygga långsiktiga relationer med kunder" },
-      { "en": "Supporting consultants in their development", "sv": "Att stötta konsulter i deras utveckling" },
-      { "en": "Driving recruitments forward", "sv": "Att driva rekryteringar framåt" },
-      { "en": "Working close to the tech industry", "sv": "Att arbeta nära techbranschen" }
+      {
+        "en": "Matching the right consultant with the right assignment",
+        "sv": "Att matcha rätt konsult med rätt uppdrag"
+      },
+      {
+        "en": "Building long-term relationships with customers",
+        "sv": "Att bygga långsiktiga relationer med kunder"
+      },
+      {
+        "en": "Supporting consultants in their development",
+        "sv": "Att stötta konsulter i deras utveckling"
+      },
+      {
+        "en": "Driving recruitments forward",
+        "sv": "Att driva rekryteringar framåt"
+      },
+      {
+        "en": "Working close to the tech industry",
+        "sv": "Att arbeta nära techbranschen"
+      }
     ],
     "#built .sec-lead": {
       "en": "At the top is what I built with colleagues at work, mainly for recruiting and welcoming consultants. Further down are methods and tools I have developed on my own, most of them with AI.",
@@ -280,6 +343,10 @@
     "#experience .sec-lead": {
       "en": "The tags show what in each position is most relevant to this role.",
       "sv": "Etiketterna visar vad i varje anställning som är mest relevant för den här rollen."
+    },
+    "#experience li[data-sv^=\"Skapade interna workshops\"]": {
+      "en": "Ran competence development initiatives internally and externally for clients, including workshops and gamification methodology training",
+      "sv": "Höll i kompetenshöjande insatser internt och externt mot kund, bland annat workshops och utbildning i gamification-metodik"
     },
     "#education .sec-title": {
       "en": "My education",
@@ -308,28 +375,70 @@
       "sv": "Den gav mig en grund i hur människor och grupper fungerar i organisationer. Jag använder den när jag bedömer kandidater och när jag stöttar konsulter i deras utveckling."
     },
     "#education .tool-group:nth-of-type(1) .pill": [
-      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
-      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
-      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
-      { "en": "Communication", "sv": "Kommunikation" },
-      { "en": "Project Management", "sv": "Projektledning" },
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
       "Employer Branding",
       "People & Culture",
       "HR",
       "Learning & Development",
-      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
-      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
-      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      },
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
       "Learning Management Systems (LMS)",
       "Gamification"
     ],
     "#education .tool-group:nth-of-type(3) .pill": [
-      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
-      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
-      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
-      { "en": "Builds from zero", "sv": "Bygger från noll" },
-      { "en": "AI-native day to day", "sv": "AI-native i vardagen" },
-      { "en": "Pedagogical, teaches what I build", "sv": "Pedagogisk, lär ut det jag bygger" }
+      {
+        "en": "Comfortable with many parallel processes",
+        "sv": "Trygg med många parallella processer"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and process-driven",
+        "sv": "Strukturerad och processdriven"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      }
     ],
     "#personal .sec-title": {
       "en": "The person behind the application",
@@ -340,30 +449,67 @@
       "sv": "Lite om vem jag är utanför jobbet."
     },
     "#contact .contact-facts span": [
-      { "en": "Location: Gothenburg", "sv": "Ort: Göteborg" },
-      { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
-      { "en": "Driving licence: B", "sv": "Körkort: B" }
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English",
+        "sv": "Språk: svenska & engelska"
+      },
+      {
+        "en": "Driving licence: B",
+        "sv": "Körkort: B"
+      }
     ]
   },
   "cv": {
     "linkPage": true,
     "text": {
       ".cv-card:has(.tool-label[data-sv=\"Expertisområden\"]) .pill": [
-        { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
-        { "en": "Competence supply", "sv": "Kompetensförsörjning" },
-        { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
-        { "en": "Communication", "sv": "Kommunikation" },
-        { "en": "Project Management", "sv": "Projektledning" },
+        {
+          "en": "Recruitment & selection",
+          "sv": "Rekrytering & urval"
+        },
+        {
+          "en": "Competence supply",
+          "sv": "Kompetensförsörjning"
+        },
+        {
+          "en": "Leadership & coaching",
+          "sv": "Ledarskap & coachning"
+        },
+        {
+          "en": "Communication",
+          "sv": "Kommunikation"
+        },
+        {
+          "en": "Project Management",
+          "sv": "Projektledning"
+        },
         "Employer Branding",
         "People & Culture",
         "HR",
         "Learning & Development",
-        { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
-        { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
-        { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+        {
+          "en": "Swedish labour law",
+          "sv": "Svensk arbetsrätt"
+        },
+        {
+          "en": "Pedagogy & didactics",
+          "sv": "Pedagogik & didaktik"
+        },
+        {
+          "en": "Instructional design & Course Development",
+          "sv": "Instruktionsdesign & kursutveckling"
+        },
         "Learning Management Systems (LMS)",
         "Gamification"
-      ]
+      ],
+      "li[data-sv^=\"Skapade interna workshops\"]": {
+        "en": "Ran competence development initiatives internally and externally for clients, including workshops and gamification methodology training",
+        "sv": "Höll i kompetenshöjande insatser internt och externt mot kund, bland annat workshops och utbildning i gamification-metodik"
+      }
     }
   }
 }
