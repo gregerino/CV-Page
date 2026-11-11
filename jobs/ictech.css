@@ -149,6 +149,10 @@ strong, b { font-weight: 700; }
 .card:hover { border-color: #c9bcf3; box-shadow: 0 10px 30px rgba(39,0,103,0.08); }
 .pill { background: #ffffff; border-color: #e2dafa; color: #270067; border-radius: 999px; font-weight: 500; }
 .pill--accent { background: #270067; border-color: #270067; color: #ffffff; font-weight: 700; }
+/* On the CV page the education entries sit inside a sidebar card; keep them
+   flat instead of a card within the card. */
+.cv-card .edu-card { background: none; border: none; box-shadow: none; padding: 0; }
+.cv-card .edu-card:hover { border: none; box-shadow: none; }
 .pick { background: #f5f2fe; border-color: #eee9fc; border-radius: 16px; }
 .pick b { color: #270067; }
 
@@ -370,8 +374,24 @@ strong, b { font-weight: 700; }
   :root { --amber: #5d12ff; }
   .cv-name, .sec-title, .job-title, .edu-degree, .job-company, .edu-school { color: #270067; }
   .hero-role { color: #d81e4f; }
-  .card { background: #ffffff; border-color: #e2dafa; }
-  .cv-card .pill, .pill { background: #ffffff; border-color: #c9bcf3; color: #270067; }
+  /* The theme's screen cards carry a border and big corners, which would
+     override the base print rules: give the sidebar flat lavender panels and
+     let the timeline run free, so nothing is boxed across a page break. */
+  .cv-card { background: #f5f2fe !important; border: none; border-radius: 3mm; box-shadow: none; }
+  .cv-main { background: none !important; border: none; border-radius: 0; box-shadow: none; padding: 0; }
+  .cv-card .pill, .pill { background: #ffffff; border-color: #d8cdf7; color: #270067; border-radius: 2.5mm; }
+  .cv-card .pill--accent { background: #ece6fd; border-color: #ece6fd; color: #270067; font-weight: 700; }
+  .cv-card .pill { padding: 0.5mm 2.2mm; line-height: 1.35; }
+
+  /* Space Grotesk runs wider than the base face; trim the type a touch so the
+     CV holds to two pages. */
+  body { letter-spacing: 0; }
+  .cv-profile { font-size: 8.8pt; line-height: 1.42; }
+  .job-desc { font-size: 8.5pt; line-height: 1.4; }
+  .job-bullets li { font-size: 8.1pt; line-height: 1.36; }
+  .job-about { font-size: 7.8pt; }
+  .cv-main .job { padding-bottom: 4mm; }
+  .cv-card .edu-desc { font-size: 7.4pt; }
   .job::before { background: #ffffff; border-color: #d81e4f; }
   .timeline::before { background: #d81e4f; }
 }
