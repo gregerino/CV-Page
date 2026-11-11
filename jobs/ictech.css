@@ -1,0 +1,351 @@
+/* Ictech — Konsultchef, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /ictech and by cv.html?job=ictech, from the head script.
+
+   Read off the Elementor kit on ictech.se and the Teamtailor career site:
+     #270067  Ictech purple: the dark bands, headings
+     #0e0036  the deepest purple, footer and hero shade
+     #5d12ff  their button violet on white (readable at body size)
+     #8045ff  the lighter violet of the career-site buttons
+     #f5f2fe  the pale lavender panels
+     #ff4672  Ictech pink: the small marks only (rules, dots, numbers on dark)
+
+   Type is Space Grotesk throughout, 700 for headings with tight tracking,
+   400 for copy. Buttons are full pills (40px+ corners). The signature details
+   are the pink accent on deep purple and the lavender cards on white.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f5f2fe;
+  --bg3:           #ece6fd;
+  --white:         #ffffff;
+
+  --border:        #e2dafa;
+  --border-light:  #eee9fc;
+  --border-strong: #c9bcf3;
+
+  --ink:           #0e0036;
+  --ink-mid:       #252525;
+  --ink-light:     #4d4d4d;
+  --ink-dim:       #6b6680;
+
+  --amber:         #5d12ff;
+  --amber-light:   #8045ff;
+
+  --accent-rgb:    93,18,255;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 1px 2px rgba(39,0,103,0.06);
+  --shadow-sm:     0 1px 2px rgba(39,0,103,0.05);
+  --shadow-lg:     0 18px 44px rgba(39,0,103,0.16);
+
+  --radius:        16px;
+  --radius-lg:     24px;
+  --radius-pill:   999px;
+
+  --photo-veil: linear-gradient(90deg, rgba(39,0,103,0.96) 0%, rgba(39,0,103,0.88) 50%, rgba(14,0,54,0.7) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff4672' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Space Grotesk', system-ui, sans-serif;
+  --sans:  'Space Grotesk', system-ui, sans-serif;
+  --mono:  'Space Grotesk', system-ui, sans-serif;
+}
+
+body { background: #ffffff; color: var(--ink-mid); font-family: var(--sans); letter-spacing: -0.01em; }
+::selection { background: #ff4672; color: #ffffff; }
+strong, b { font-weight: 700; }
+
+/* Type: Space Grotesk 700, tight, no italics. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.03em;
+  color: #270067;
+}
+.hero-role,
+.about-quote,
+.job-about,
+.point-quote { font-style: normal; }
+
+.sec-title { font-size: clamp(1.9rem, 3.8vw, 2.8rem); line-height: 1.08; }
+.sec-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 0.9rem;
+  border-radius: 999px;
+  background: #ff4672;
+}
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: #5d12ff;
+}
+
+/* Nav: white bar, purple links, Contact as the violet pill. */
+.nav {
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid #eee9fc;
+  box-shadow: none;
+}
+.nav-links a { font-family: var(--sans); color: #270067; font-weight: 500; border-radius: 999px; }
+.nav-links a:hover { color: #270067; background: #f5f2fe; }
+.nav-links a.active { color: #5d12ff; background: #f5f2fe; box-shadow: none; }
+.nav-contact-link a { color: #ffffff; background: #5d12ff; border-radius: 999px; font-weight: 700; }
+.nav-contact-link a:hover { color: #ffffff; background: #270067; }
+.brand { font-family: var(--sans); font-weight: 700; color: #270067; letter-spacing: -0.03em; }
+.brand em { font-style: normal; color: #270067; }
+.brand-dot { background: #ff4672; }
+.lang-toggle { background: transparent; border: 1px solid #c9bcf3; border-radius: 999px; color: #270067; font-weight: 700; }
+.lang-toggle:hover { background: #270067; border-color: #270067; color: #ffffff; }
+.nav-hamburger span { background: #270067; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { font-family: var(--sans); color: #270067; border-color: #eee9fc; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #5d12ff; background: #f5f2fe; }
+
+/* Buttons: full pills. */
+.btn { font-family: var(--sans); font-weight: 700; border-radius: 999px; letter-spacing: -0.01em; }
+.btn-primary { background: #5d12ff; border: 1px solid #5d12ff; color: #ffffff; box-shadow: none; }
+.btn-primary:hover { background: #8045ff; border-color: #8045ff; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost { background: transparent; border: 1px solid #c9bcf3; color: #270067; backdrop-filter: none; }
+.btn-ghost:hover { background: #f5f2fe; border-color: #5d12ff; color: #270067; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ff4672; }
+
+/* Cards: lavender panels with soft corners. */
+.card {
+  background: #f5f2fe;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #eee9fc;
+  border-radius: 16px;
+  box-shadow: none;
+}
+.card:hover { border-color: #c9bcf3; box-shadow: 0 10px 30px rgba(39,0,103,0.08); }
+.pill { background: #ffffff; border-color: #e2dafa; color: #270067; border-radius: 999px; font-weight: 500; }
+.pill--accent { background: #270067; border-color: #270067; color: #ffffff; font-weight: 700; }
+.pick { background: #f5f2fe; border-color: #eee9fc; border-radius: 16px; }
+.pick b { color: #270067; }
+
+/* Hero: the deep purple band from their start page, the role in pink. */
+#top { --ink: #ffffff; --ink-mid: #f2eeff; --ink-light: #d6ccf7; --ink-dim: #b9abee; color: var(--ink-mid); }
+#top .eyebrow { color: #d6ccf7; }
+#top .hero-name { color: #ffffff; font-size: clamp(2.8rem, 7vw, 4.8rem); line-height: 1.02; letter-spacing: -0.04em; }
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+  letter-spacing: -0.03em;
+  color: #ff4672;
+}
+#top .hero-role::before { background: #ff4672; }
+#top .hero-lead { color: #f2eeff; font-weight: 400; }
+#top .meta-row, #top .meta-row span { color: #d6ccf7; }
+#top .meta-row .sep { color: #ff4672; }
+#top .meta-row svg { stroke: #ff4672; }
+#top .hero-photo { border: none; border-radius: 24px; box-shadow: 0 18px 44px rgba(14,0,54,0.45); overflow: hidden; }
+#top .btn-primary { background: #ff4672; border-color: #ff4672; color: #ffffff; }
+#top .btn-primary:hover { background: #ffffff; border-color: #ffffff; color: #270067; }
+#top .btn-ghost { border-color: rgba(255,255,255,0.45); color: #ffffff; }
+#top .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: #ffffff; color: #ffffff; }
+
+#top .stat-strip { background: rgba(255,255,255,0.08); backdrop-filter: none; border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; box-shadow: none; }
+#top .stat { border-color: rgba(255,255,255,0.2); }
+#top .stat-num { font-family: var(--sans); font-weight: 700; letter-spacing: -0.03em; color: #ff4672; }
+#top .stat-label { font-family: var(--sans); font-weight: 400; letter-spacing: 0; text-transform: none; color: #f2eeff; }
+
+/* Ask bar. */
+.ask { background: #f5f2fe; border-color: #eee9fc; border-radius: 24px; }
+.ask-title { color: #270067; }
+.ask-input { background: #ffffff; border: 1px solid #e2dafa; border-radius: 999px; box-shadow: none; color: #0e0036; }
+.ask-input:focus { border-color: #5d12ff; box-shadow: 0 0 0 3px rgba(93,18,255,0.18); }
+.ask-btn { background: #5d12ff; border-radius: 999px; }
+.ask-btn:hover { background: #270067; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #ffffff; border: 1px solid #e2dafa; color: #270067; border-radius: 999px; }
+.ask-chip:hover { background: #270067; border-color: #270067; color: #ffffff; }
+.ask-out { background: #ffffff; border-color: #eee9fc; border-radius: 16px; }
+.ask-dot { background: #ff4672; }
+
+/* About. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.3vw, 1.65rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #270067;
+  padding-left: 1rem;
+  border-left: 4px solid #ff4672;
+}
+#about .brings { background: #270067; border: none; border-radius: 24px; box-shadow: none; }
+#about .brings-label { color: #ff4672; }
+#about .brings-list li { color: #ffffff; }
+
+/* How I match: white cards on lavender, the number in a pink round badge. */
+#match { background: #f5f2fe; border-top: none; }
+#match .card { background: #ffffff; border-color: #eee9fc; }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #270067;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ff4672;
+}
+#match .point-title { font-size: 1.18rem; line-height: 1.25; color: #270067; }
+#match .point-quote { font-family: var(--sans); font-size: 0.95rem; color: #4d4d4d; border-left: 3px solid #ff4672; }
+#match .point-body { color: #252525; }
+#match .point-roles { border-top: 1px solid #eee9fc; }
+#match .point-roles .pill { background: #f5f2fe; }
+
+/* The two requirements the role turns on get the deep purple top edge. */
+#match .card:nth-child(-n+2) { border-top: 4px solid #270067; }
+
+/* Built: recruiting and welcoming consultants first.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 7; }
+
+#built .built-icon { width: 46px; height: 46px; background: #270067; border: none; border-radius: 50%; }
+#built .built-icon svg { stroke: #ff4672; }
+.built-link { color: #5d12ff; border-bottom: 1px solid #5d12ff; font-weight: 700; }
+.built-link:hover { color: #270067; border-bottom-color: #ff4672; }
+
+/* Experience: pink dots on the consulting roles, tags for this role.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #ff4672, #c9bcf3 60%, #e2dafa 88%, transparent); }
+.job::before { background: #ffffff; border-color: #ff4672; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #ff4672; border-color: #ff4672; }
+.job-company { color: #270067; font-weight: 700; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.65rem 0.12rem;
+  border-radius: 999px;
+  background: #f5f2fe;
+  border: 1px solid #e2dafa;
+  color: #270067;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after { background: #270067; border-color: #270067; color: #ffffff; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Technical recruitment · Candidate contact'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Selling services · Course development'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Consultant matching · HR support'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Consultant group · Management team'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Coaching · Company partnerships'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Teknisk rekrytering · Kandidatkontakt'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Försäljning av tjänster · Kursutveckling'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Konsultmatchning · HR-stöd'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Konsultgrupp · Ledningsgrupp'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Coachning · Företagssamarbeten'; }
+
+/* Roles I've recruited for: Automotive & Embedded first. */
+#experience .roles-group:nth-of-type(2) { order: -1; }
+#experience .roles-card { background: #f5f2fe; border-color: #eee9fc; }
+.roles-group .pill { background: #ffffff; border-color: #e2dafa; }
+#experience .roles-group:nth-of-type(2) .pill { background: #270067; border-color: #270067; color: #ffffff; }
+
+/* Education. */
+#education .edu-school { color: #270067; font-weight: 700; }
+#education .callout { background: #270067; border: none; border-radius: 24px; }
+#education .callout-label { color: #ff4672; }
+#education .callout-title, #education .callout-text { color: #ffffff; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) { background: #270067; border-color: #270067; color: #ffffff; font-weight: 700; }
+
+/* Contact: the deep purple tile, facts as a pill row. */
+#contact { --ink: #ffffff; --ink-mid: #f2eeff; --ink-light: #d6ccf7; --ink-dim: #b9abee; }
+#contact::after { background: linear-gradient(135deg, #270067 0%, #0e0036 100%); }
+#contact .sec-title, #contact .sec-lead { color: #ffffff; }
+#contact .eyebrow { color: #ff4672; }
+#contact .btn-ghost { background: transparent; border-color: rgba(255,255,255,0.4); color: #ffffff; }
+#contact .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: #ffffff; color: #ffffff; }
+#contact .btn-primary { background: #ff4672; border-color: #ff4672; color: #ffffff; }
+#contact .btn-primary:hover { background: #ffffff; border-color: #ffffff; color: #270067; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts span { padding: 0.45rem 1.1rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; background: rgba(255,255,255,0.08); color: #ffffff; }
+
+.site-footer { background: #0e0036; border-top: none; padding: 2.2rem 0 2rem; }
+.site-footer p { font-family: var(--sans); font-size: 0.9rem; color: #b9abee; }
+.site-footer a { color: #ffffff; font-weight: 700; border-bottom: 1px solid #ff4672; }
+.site-footer a:hover { color: #ff4672; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The PDF is printed on white: purple headings, darker pink for the marks so
+   they hold up on paper.
+   ───────────────────────────────────────────────────────────────────────── */
+@media print {
+  :root { --amber: #5d12ff; }
+  .cv-name, .sec-title, .job-title, .edu-degree, .job-company, .edu-school { color: #270067; }
+  .hero-role { color: #d81e4f; }
+  .card { background: #ffffff; border-color: #e2dafa; }
+  .cv-card .pill, .pill { background: #ffffff; border-color: #c9bcf3; color: #270067; }
+  .job::before { background: #ffffff; border-color: #d81e4f; }
+  .timeline::before { background: #d81e4f; }
+}
