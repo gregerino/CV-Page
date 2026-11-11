@@ -412,28 +412,32 @@
     ],
     "#education .tool-group:nth-of-type(3) .pill": [
       {
-        "en": "Comfortable with many parallel processes",
-        "sv": "Trygg med många parallella processer"
+        "en": "Builds long-term relationships",
+        "sv": "Bygger långsiktiga relationer"
       },
       {
-        "en": "Advisory to managers and stakeholders",
-        "sv": "Rådgivande mot chefer och intressenter"
+        "en": "Coaching",
+        "sv": "Coachande"
       },
       {
-        "en": "Structured and process-driven",
-        "sv": "Strukturerad och processdriven"
+        "en": "Self-driven, takes initiative",
+        "sv": "Självgående, tar initiativ"
       },
       {
-        "en": "Builds from zero",
-        "sv": "Bygger från noll"
+        "en": "Business-minded, customer-focused",
+        "sv": "Affärsmässig och kundnära"
       },
       {
-        "en": "AI-native day to day",
-        "sv": "AI-native i vardagen"
+        "en": "Results-oriented",
+        "sv": "Resultatinriktad"
       },
       {
-        "en": "Pedagogical, teaches what I build",
-        "sv": "Pedagogisk, lär ut det jag bygger"
+        "en": "Communicative, builds collaboration",
+        "sv": "Kommunikativ, skapar samarbeten"
+      },
+      {
+        "en": "Used to parallel processes",
+        "sv": "Van vid parallella processer"
       }
     ],
     "#personal .sec-title": {
@@ -506,6 +510,36 @@
         "en": "Ran competence development initiatives internally and externally for clients, including workshops and gamification methodology training",
         "sv": "Höll i kompetenshöjande insatser internt och externt mot kund, bland annat workshops och utbildning i gamification-metodik"
       },
+      ".cv-card:has(.tool-label[data-sv=\"Så arbetar jag\"]) .pill": [
+        {
+          "en": "Builds long-term relationships",
+          "sv": "Bygger långsiktiga relationer"
+        },
+        {
+          "en": "Coaching",
+          "sv": "Coachande"
+        },
+        {
+          "en": "Self-driven, takes initiative",
+          "sv": "Självgående, tar initiativ"
+        },
+        {
+          "en": "Business-minded, customer-focused",
+          "sv": "Affärsmässig och kundnära"
+        },
+        {
+          "en": "Results-oriented",
+          "sv": "Resultatinriktad"
+        },
+        {
+          "en": "Communicative, builds collaboration",
+          "sv": "Kommunikativ, skapar samarbeten"
+        },
+        {
+          "en": "Used to parallel processes",
+          "sv": "Van vid parallella processer"
+        }
+      ],
       ".cv-card .tool-label[data-sv=\"Expertisområden\"]": {
         "en": "Skills",
         "sv": "Kompetenser"
