@@ -2,8 +2,8 @@
   "company": "Artigan",
   "roleName": "Customer & Product Specialist",
   "eyebrow": {
-    "en": "Application · Customer & Product Specialist · Artigan",
-    "sv": "Ansökan · Customer & Product Specialist · Artigan"
+    "en": "Application · Customer & Product Specialist · Artigan · Available immediately",
+    "sv": "Ansökan · Customer & Product Specialist · Artigan · Tillgänglig direkt"
   },
   "role": {
     "en": "Close to customers, with AI in my daily work",
@@ -259,7 +259,7 @@
       "sv": "Kundnära roller sedan 2019"
     },
     "#top .stat-num": [
-      "5+",
+      "10+",
       "2",
       "Claude"
     ],
