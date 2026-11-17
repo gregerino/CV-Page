@@ -166,14 +166,14 @@
       "sv": "Rekrytering och HR sedan 2020"
     },
     "#top .stat-num": [
-      "15+",
+      "5 / 4",
       "2",
       "10+"
     ],
     "#top .stat-label": [
       {
-        "en": "Consultants I had HR-related responsibility for",
-        "sv": "Konsulter som jag hade HR-relaterat ansvar för"
+        "en": "Years with recruitment / years with Learning & Development",
+        "sv": "År med rekrytering / år med Learning & Development"
       },
       {
         "en": "Companies where I built up onboarding from scratch",
