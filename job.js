@@ -143,7 +143,12 @@
       document.title = 'Marcus Hultberg — ' + (job.roleName ? job.roleName + ', ' : '') + job.company;
     }
 
-    // An application page is for one reader, not for search engines.
+    // An application page is for one reader, not for search engines. The server
+    // also sends X-Robots-Tag: noindex for every subpage; this covers the page
+    // if it is ever served without that header. It shares index.html, so drop
+    // the start page's canonical link too.
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.remove();
     var robots = document.createElement('meta');
     robots.name = 'robots';
     robots.content = 'noindex, nofollow';

@@ -1,0 +1,6 @@
+# Only the start page is meant for search. Subpages stay crawlable so search
+# engines can read their noindex header; blocking them here would hide it.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.marcushultberg.dev/sitemap.xml

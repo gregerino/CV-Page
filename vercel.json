@@ -82,6 +82,30 @@
           "value": "Content-Type"
         }
       ]
+    },
+    {
+      "source": "/((?!.*\\.(?:jpe?g|png|webp|gif|svg|ico)$).+)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
     }
   ],
   "functions": {
