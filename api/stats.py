@@ -103,18 +103,22 @@ def gather():
          ["GET", "stats:ai:total"], ["KEYS", "stats:ref:*"], ["KEYS", "stats:click:*"],
          ["LRANGE", "stats:ai:questions", "0", "29"],
          ["GET", "stats:device:mobile"], ["GET", "stats:device:desktop"], ["GET", "stats:bots"],
-         ["ZREVRANGE", "stats:visits", "0", str(VISITS_RECENT - 1)]]
+         ["ZREVRANGE", "stats:visits", "0", str(VISITS_RECENT - 1)], ["HGETALL", "stats:os"]]
         + [["HGETALL", f"stats:pref:{s}"] for s in slugs]
         + [["HGETALL", f"stats:pdev:{s}"] for s in slugs]
         + [["GET", f"stats:uniq:{s}"] for s in slugs]
         + [["ZREVRANGE", f"stats:visits:{s}", "0", str(VISITS_PER_PAGE - 1)] for s in slugs]
+        + [["HGETALL", f"stats:pos:{s}"] for s in slugs]
+        + [["HGETALL", f"stats:osd:{d}"] for d in dates]
     )
-    last, v2since, total, ai_total, ref_keys, click_keys, raw_q, mob, desk, bots, recent = detail[:11]
-    n, o = len(slugs), 11
+    last, v2since, total, ai_total, ref_keys, click_keys, raw_q, mob, desk, bots, recent, os_all = detail[:12]
+    n, o = len(slugs), 12
     prefs = detail[o:o + n]
     pdevs = detail[o + n:o + 2 * n]
     uniqs = detail[o + 2 * n:o + 3 * n]
     vids = detail[o + 3 * n:o + 4 * n]
+    poss = detail[o + 4 * n:o + 5 * n]
+    os_daily = [{k: int(v) for k, v in hash_to_dict(h).items()} for h in detail[o + 5 * n:o + 5 * n + DAYS]]
     last = hash_to_dict(last)
 
     # Visit records: the latest per page, plus the latest across the site.
@@ -152,6 +156,7 @@ def gather():
             "last": last.get(s),
             "refs": {k: int(v) for k, v in hash_to_dict(prefs[i]).items()},
             "devices": {k: int(v) for k, v in hash_to_dict(pdevs[i]).items()},
+            "os": {k: int(v) for k, v in hash_to_dict(poss[i]).items()},
             "pack": packs.get(s),
             "visits": [visit_by_id[v] for v in (vids[i] or []) if v in visit_by_id],
         })
@@ -173,6 +178,8 @@ def gather():
         "questions": questions,
         "bots": int(bots) if bots else 0,
         "botsDaily": bots_daily,
+        "os": {k: int(v) for k, v in hash_to_dict(os_all).items()},
+        "osDaily": os_daily,
         "recent": [visit_by_id[v] for v in recent_ids if v in visit_by_id],
     }
 

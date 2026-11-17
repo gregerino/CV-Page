@@ -23,6 +23,24 @@ BOT_RE = re.compile(
     re.I,
 )
 
+def os_for(ua):
+    """Operating system from the User-Agent header. Mobile is checked first:
+    Android UAs also say Linux, and iPhone UAs also say Mac OS X."""
+    if re.search(r"iPhone|iPad|iPod", ua):
+        return "iOS"
+    if "Android" in ua:
+        return "Android"
+    if "Windows" in ua:
+        return "Windows"
+    if "CrOS" in ua:
+        return "ChromeOS"
+    if re.search(r"Macintosh|Mac OS X", ua):
+        return "macOS"
+    if re.search(r"Linux|X11|Ubuntu|Fedora", ua):
+        return "Linux"
+    return "Annat"
+
+
 VISIT_ID_RE = re.compile(r"^[a-z0-9]{8,24}$")
 MAX_DURATION = 4 * 3600      # a tab left open all day isn't a 9-hour read
 VISIT_TTL = 180 * 86400      # visit records expire after ~6 months
@@ -125,8 +143,10 @@ class handler(BaseHTTPRequestHandler):
             self._json(200, {"ok": True})
             return
 
+        system = os_for(ua)
+
         if event == "visit":
-            self._visit(page, body)
+            self._visit(page, body, system)
             return
 
         device = body.get("device", "")
@@ -138,6 +158,9 @@ class handler(BaseHTTPRequestHandler):
             ["INCR", f"stats:page:{page}"],
             ["INCR", f"stats:daily:{today}"],
             ["INCR", f"stats:daily:{today}:{page}"],
+            ["HINCRBY", "stats:os", system, 1],
+            ["HINCRBY", f"stats:pos:{page}", system, 1],
+            ["HINCRBY", f"stats:osd:{today}", system, 1],
             ["HSET", "stats:last", page, datetime.now(timezone.utc).isoformat(timespec="seconds")],
         ]
         if device in ("mobile", "desktop"):
@@ -160,7 +183,7 @@ class handler(BaseHTTPRequestHandler):
         pipeline(cmds)
         self._json(200, {"ok": True})
 
-    def _visit(self, page, body):
+    def _visit(self, page, body, system):
         """Store one visit: entry link, time on screen and clicks.
 
         The browser sends the same visit id each time the tab is hidden, so the
@@ -193,6 +216,7 @@ class handler(BaseHTTPRequestHandler):
             "page": page,
             "t": start,
             "dur": dur,
+            "os": system,
             "dev": body.get("device") if body.get("device") in ("mobile", "desktop") else "",
             "from": entry_link(str(body.get("referrer", ""))),
             "clicks": clicks,

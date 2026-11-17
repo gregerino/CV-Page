@@ -44,6 +44,13 @@ h1{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin
 .seg button{border:0;background:none;padding:6px 14px;border-radius:999px;cursor:pointer;font-size:.85rem;font-weight:500;color:var(--ink2)}
 .seg button[aria-pressed=true]{background:var(--accent);color:#fff}
 @media (prefers-color-scheme:dark){.seg button[aria-pressed=true]{color:#0d0718}}
+.os-sel{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 12px;font-size:.85rem;color:var(--ink2);cursor:pointer}
+.os-sel.on{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);font-weight:600}
+.osbar{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--accent-soft);color:var(--ink);border-radius:10px;padding:10px 14px;margin-bottom:16px;font-size:.88rem}
+.osbar button{border:0;background:none;color:var(--accent);font-weight:600;cursor:pointer;text-decoration:underline}
+#oss .hbars li{cursor:pointer;border-radius:6px}
+#oss .hbars li:hover .n{color:var(--accent)}
+#oss .hbars li.sel .n{color:var(--accent);font-weight:600}
 .icon-btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 12px;cursor:pointer;font-size:.85rem;color:var(--ink2)}
 .icon-btn:hover{border-color:var(--line2)}
 
@@ -202,11 +209,17 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
       <div class="seg" role="group" aria-label="Period" id="range">
         <button data-r="7">7 dagar</button><button data-r="30">30 dagar</button><button data-r="90">90 dagar</button>
       </div>
+      <select id="os" class="os-sel" aria-label="Operativsystem">
+        <option value="">Alla system</option>
+        <option>Windows</option><option>macOS</option><option>Linux</option>
+        <option>iOS</option><option>Android</option><option>ChromeOS</option><option>Annat</option>
+      </select>
       <button class="icon-btn" onclick="location.reload()" title="Hämta ny data">↻ Uppdatera</button>
     </div>
   </header>
 
   <div id="warn"></div>
+  <div id="osbar"></div>
   <section class="kpis" id="kpis"></section>
 
   <section class="card">
@@ -236,6 +249,7 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
 
     <aside class="side">
       <section class="card"><div class="card-h"><h2>Trafikkällor</h2><span class="hint">sedan start</span></div><div class="card-b" id="refs"></div></section>
+      <section class="card"><div class="card-h"><h2>Operativsystem</h2><span class="hint">klicka för att filtrera</span></div><div class="card-b" id="oss"></div></section>
       <section class="card"><div class="card-h"><h2>Enheter</h2><span class="hint">sedan start</span></div><div class="card-b" id="devs"></div></section>
       <section class="card"><div class="card-h"><h2>AI-frågor</h2><span class="hint" id="ai-hint"></span></div><div class="card-b" id="qs"></div></section>
       <section class="card"><div class="card-h"><h2>Bortfiltrerade botar</h2><span class="hint" id="bot-hint"></span></div><div class="card-b" id="bots"></div></section>
@@ -272,6 +286,8 @@ if (![7, 30, 90].includes(R)) R = 30;
 let TAB = store(s => s.getItem('stats-tab')) || 'pack';
 let SORT = store(s => s.getItem('stats-sort')) || 'last';
 let RISING = store(s => s.getItem('stats-rising')) === '1';
+let OS = store(s => s.getItem('stats-os')) || '';
+const osViews = p => OS ? (p.os || {})[OS] || 0 : p.total;
 
 // Opening the dashboard proves it's you: stop counting your own visits here.
 store(s => s.setItem('cv-notrack', '1'));
@@ -348,7 +364,7 @@ function trendBadge(p) {
 const OWN = ['cv-page-mocha.vercel.app', 'marcushultberg.dev', 'localhost'];
 const SHORT = 5;  // seconds; shorter visits are mostly bounces and bots
 let HIDE_SHORT = store(s => s.getItem('stats-hideshort')) !== '0';
-const keepVisit = v => !HIDE_SHORT || v.dur >= SHORT;
+const keepVisit = v => (!HIDE_SHORT || v.dur >= SHORT) && (!OS || v.os === OS);
 
 function fmtDur(s, short) {
   if (s == null) return '–';
@@ -385,13 +401,13 @@ function visitList(list, withPage) {
   const shown = list.filter(keepVisit);
   if (!shown.length) {
     const hidden = list.length - shown.length;
-    return `<p class="muted">${hidden ? hidden + ' korta besök dolda.' : 'Inga besök registrerade ännu. Besökstid, länkar och klick samlas in från och med nu.'}</p>`;
+    return `<p class="muted">${hidden ? hidden + ' besök dolda av filtren.' : 'Inga besök registrerade ännu. Besökstid, länkar och klick samlas in från och med nu.'}</p>`;
   }
   return '<ul class="visits">' + shown.map(v => {
     const p = withPage ? PAGES.find(x => x.slug === v.page) : null;
     return `<li${p ? ` data-slug="${esc(p.slug)}"` : ''}>
       <div class="vh"><span class="vt">${visitTime(v)}</span>${p ? `<b class="vp">${esc(p.name)}</b>` : ''}
-        <span class="vd num">${fmtDur(v.dur)}</span><span class="muted">${v.dev === 'mobile' ? 'Mobil' : v.dev === 'desktop' ? 'Dator' : ''}</span></div>
+        <span class="vd num">${fmtDur(v.dur)}</span><span class="muted">${[v.os, v.dev === 'mobile' ? 'Mobil' : v.dev === 'desktop' ? 'Dator' : ''].filter(Boolean).join(' · ')}</span></div>
       <div class="vr"><span class="k">Kom från</span>${fromLink(v)}</div>
       <div class="vr"><span class="k">Klickade</span><span class="cls">${clickChips(v)}</span></div>
     </li>`;
@@ -477,16 +493,19 @@ function barChart(el, values, dates, opts = {}) {
     svg.querySelectorAll('.bar').forEach(b => b.classList.remove('dim'));
   });
 }
+const osSeries = () => (D.osDaily || []).map(h => (h || {})[OS] || 0);
 function renderChart() {
   const off = N - R;
-  barChart($('#chart'), D.daily.slice(-R), D.dates.slice(-R), {
+  const series = OS ? osSeries() : D.daily;
+  barChart($('#chart'), series.slice(-R), D.dates.slice(-R), {
+    title: OS ? 'Visningar från ' + OS : undefined,
     extra: k => {
       const i = off + k;
-      return v2idx >= 0 && i >= v2idx ? `<br>${fmt(D.visitors[i])} besökare` : '';
+      return !OS && v2idx >= 0 && i >= v2idx ? `<br>${fmt(D.visitors[i])} besökare` : '';
     }
   });
-  const max = Math.max(...D.daily.slice(-R));
-  const best = D.daily.slice(-R).indexOf(max);
+  const max = Math.max(...series.slice(-R));
+  const best = series.slice(-R).indexOf(max);
   $('#chart-hint').textContent = max ? `Bästa dag: ${dayLabel(D.dates[off + best])} (${fmt(max)})` : '';
 }
 
@@ -513,7 +532,7 @@ function sortPages(list) {
   const by = {
     last: (a, b) => ((lastSeen(b) || {t: 0}).t - (lastSeen(a) || {t: 0}).t) || b.total - a.total,
     range: (a, b) => rangeViews(b) - rangeViews(a) || b.total - a.total,
-    total: (a, b) => b.total - a.total,
+    total: (a, b) => osViews(b) - osViews(a),
     name: (a, b) => a.name.localeCompare(b.name, 'sv'),
     rising: (a, b) => trendOf(b).diff - trendOf(a).diff || rangeViews(b) - rangeViews(a),
     time: (a, b) => (typicalDur(b) ?? -1) - (typicalDur(a) ?? -1),
@@ -524,10 +543,11 @@ function renderRows() {
   const q = $('#q').value.trim().toLowerCase();
   let list = PAGES.filter(p => TAB === 'all' || p.group === TAB);
   if (RISING) list = list.filter(isRising);
+  if (OS) list = list.filter(p => osViews(p) > 0);
   if (q) list = list.filter(p => (p.name + ' ' + p.slug + ' ' + (p.pack ? p.pack.role : '')).toLowerCase().includes(q));
   list = sortPages(list);
-  const head = `<li class="row head" aria-hidden="true"><span>Sida</span><span>Senaste ${R} d</span><span class="r">${R} d</span><span class="r" title="Typisk besökstid (median)">Tid</span><span class="r">Totalt</span><span class="r">Senast</span></li>`;
-  if (!list.length) { $('#rows').innerHTML = head + `<li class="empty">${RISING ? `Ingen sida har fler visningar än de ${R} dagarna innan.` : 'Inga sidor matchar.'}</li>`; return; }
+  const head = `<li class="row head" aria-hidden="true"><span>Sida</span><span>Senaste ${R} d</span><span class="r">${R} d</span><span class="r" title="Typisk besökstid (median)">Tid</span><span class="r">${OS ? esc(OS) : 'Totalt'}</span><span class="r">Senast</span></li>`;
+  if (!list.length) { $('#rows').innerHTML = head + `<li class="empty">${OS ? `Inga visningar från ${esc(OS)} ännu${RISING ? ' bland ökande sidor' : ''}.` : RISING ? `Ingen sida har fler visningar än de ${R} dagarna innan.` : 'Inga sidor matchar.'}</li>`; return; }
   $('#rows').innerHTML = head + list.map(p => {
     const role = p.pack ? p.pack.role : '';
     const fresh = isFresh(p);
@@ -538,7 +558,7 @@ function renderRows() {
       <div class="sp">${spark(p.daily.slice(-R))}</div>
       <div class="r rv"><span class="big num">${fmt(rangeViews(p))}</span>${trendBadge(p)}</div>
       <div class="r dur num muted">${fmtDur(typicalDur(p), true)}</div>
-      <div class="r tot num muted">${fmt(p.total)}</div>
+      <div class="r tot num muted">${fmt(osViews(p))}</div>
       <div class="when ${p.total ? '' : 'never'}">${ago(p)}</div>
     </li>`;
   }).join('');
@@ -559,6 +579,24 @@ function devices(d, empty) {
   return `<div class="split" role="img" aria-label="Mobil ${pm}%, dator ${100 - pm}%"><div style="width:${pm}%"></div><div style="width:${100 - pm}%"></div></div>
     <div class="legend"><span><i style="background:var(--accent)"></i>Mobil <b class="num">${pm}%</b> <span class="muted">(${fmt(m)})</span></span>
     <span><i style="background:var(--accent2)"></i>Dator <b class="num">${100 - pm}%</b> <span class="muted">(${fmt(k)})</span></span></div>`;
+}
+function renderOs() {
+  $('#os').value = OS;
+  $('#os').classList.toggle('on', !!OS);
+  $('#oss').innerHTML = hbars(D.os || {}, 'Samlas in från och med nu.');
+  $('#oss').querySelectorAll('.hbars li').forEach(li => {
+    const name = li.querySelector('.n').textContent;
+    li.classList.toggle('sel', name === OS);
+    li.title = name === OS ? 'Visa alla system' : 'Visa bara ' + name;
+    li.onclick = () => setOs(name === OS ? '' : name);
+  });
+  $('#osbar').innerHTML = OS
+    ? `<div class="osbar"><span>Filtrerat på <b>${esc(OS)}</b>: diagrammet, besöken och vilka sidor som visas. Kolumnen ${esc(OS)} visar sidans visningar därifrån; nyckeltalen och kurvorna gäller alla system. Registreras sedan 17 nov.</span><button onclick="setOs('')">Visa alla</button></div>`
+    : '';
+}
+function setOs(v) {
+  OS = v; store(s => s.setItem('stats-os', OS));
+  renderOs(); renderChart(); renderRows(); renderRecent();
 }
 function renderRecent() {
   $('#recent').innerHTML = visitList(D.recent || [], true);
@@ -601,6 +639,7 @@ function openPage(slug) {
     </div>
     <div><h4>Visningar per dag</h4><div class="chart" id="dw-chart"></div></div>
     <div><h4>Källor</h4>${hbars(p.refs, 'Ingen data för sidan ännu. ' + since)}</div>
+    <div><h4>Operativsystem</h4>${hbars(p.os || {}, 'Ingen data för sidan ännu. ' + since)}</div>
     <div><h4>Enheter</h4>${devices(p.devices, 'Ingen data för sidan ännu. ' + since)}</div>
     <div><h4>Besök</h4>${visitList(p.visits || [], false)}</div>
     ${p.last ? `<p class="muted">Senaste besök: ${new Date(p.last).toLocaleString('sv-SE', {timeZone: 'Europe/Stockholm', dateStyle: 'medium', timeStyle: 'short'})}</p>` : ''}`;
@@ -659,7 +698,8 @@ $('#recent').addEventListener('click', e => {
   if (e.target.closest('a')) return;
   const li = e.target.closest('li[data-slug]'); if (li) openPage(li.dataset.slug);
 });
-renderOwn(); renderSide(); renderRecent(); renderAll();
+$('#os').addEventListener('change', e => setOs(e.target.value));
+renderOwn(); renderSide(); renderOs(); renderRecent(); renderAll();
 </script>
 </body>
 </html>
