@@ -1,0 +1,585 @@
+/* Arcus — Karriärkonsult, Rusta och matcha, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /arcus and by cv.html?job=arcus, from the head script, so the
+   page is drawn in these colours from the first frame.
+
+   The palette is read off the computed styles on Arcus' career site
+   (arcus-career.onecruiter.com):
+     #ffffff  the white paper behind every page
+     #000000  the bold black headings ("Lediga tjänster")
+     #333333  body copy
+     #339d33  the green filled pill buttons ("Läs mer", "Visa alla jobb")
+     #49b747  the brighter green of their logo and outline buttons
+     #dbdbdb  table rules and card lines
+     #f7f7f7  the pale grey panels
+
+   Their type is League Spartan everywhere, bold for headings, semibold on
+   buttons. Buttons are pills with a 35px radius: green with a white label.
+   The site closes on a green band over a photo ("Spontanansökan"), which
+   is where "How I match" and the footer take their colour from.
+
+   #339d33 is too light for small green text on white, so labels use a
+   darker shade of the same green (#24762a).
+
+   Tokens first, then the rules that carry the look through each section.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f4f9f3;
+  --bg3:           #eaf5e9;
+  --white:         #ffffff;
+
+  --border:        #e2e2e2;
+  --border-light:  #efefef;
+  --border-strong: #c9c9c9;
+
+  --ink:           #000000;
+  --ink-mid:       #333333;
+  --ink-light:     #4a4a4a;
+  --ink-dim:       #666666;
+
+  --amber:         #24762a;
+  --amber-light:   #339d33;
+
+  --accent-rgb:    51,157,51;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 8px 24px rgba(0,0,0,0.07);
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.06);
+  --shadow-lg:     0 18px 44px rgba(0,0,0,0.12);
+
+  --radius:        14px;
+  --radius-lg:     22px;
+  --radius-pill:   35px;
+
+  --a-green:  #339d33;
+  --a-bright: #49b747;
+  --a-dark:   #24762a;
+  --a-deep:   #1d5f22;
+  --a-tint:   #eaf5e9;
+  --a-mist:   #f4f9f3;
+
+  /* Their pages sit on flat white, so the Gothenburg photo is washed white
+     from the left. */
+  --photo-veil: linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,0.8) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23339d33' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'League Spartan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --sans:  'League Spartan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono:  'League Spartan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink-mid);
+  font-family: var(--sans);
+  font-weight: 400;
+}
+::selection { background: #49b747; color: #ffffff; }
+strong, b { font-weight: 700; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Type: bold black headings as "Lediga tjänster", tight and upright.
+   ───────────────────────────────────────────────────────────────────────── */
+.hero-name,
+.cv-name,
+.sec-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.015em;
+  color: #000000;
+}
+.sec-title {
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.005em;
+  color: #000000;
+}
+
+.hero-role,
+.about-quote,
+.job-about { font-style: normal; }
+
+/* Small labels: semibold in dark green, upper case as their table heads
+   ("JOBBTITEL", "PLATS"). */
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #24762a;
+}
+
+/* A short green rule under each section heading, as the bar under their
+   headings on arcus.se. */
+.sec-head .sec-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 0.9rem;
+  border-radius: 4px;
+  background: #49b747;
+}
+#match .sec-head .sec-title::after { background: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Nav: a white bar with the name in black and the contact link as their
+   green "Läs mer" pill.
+   ───────────────────────────────────────────────────────────────────────── */
+.nav {
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid #e2e2e2;
+  box-shadow: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: #000000;
+  border-radius: 35px;
+}
+.nav-links a:hover { color: #000000; background: #eaf5e9; }
+.nav-links a.active { color: #000000; background: #eaf5e9; box-shadow: none; }
+.nav-contact-link a { color: #ffffff; background: #339d33; font-weight: 600; }
+.nav-contact-link a:hover { color: #ffffff; background: #24762a; }
+.brand {
+  font-family: var(--serif);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.brand em { font-style: normal; color: #339d33; }
+.brand-dot { background: #49b747; }
+.lang-toggle { background: #ffffff; border: 2px solid #339d33; border-radius: 35px; color: #24762a; font-weight: 600; }
+.lang-toggle:hover { background: #eaf5e9; border-color: #339d33; color: #24762a; }
+.nav-hamburger span { background: #000000; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { font-family: var(--sans); color: #000000; font-weight: 600; border-color: #efefef; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #000000; background: #eaf5e9; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Buttons: their pills. Green filled with a white label, and the outline
+   variant as "Tillbaka till lediga jobb".
+   ───────────────────────────────────────────────────────────────────────── */
+.btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: 0;
+  text-transform: none;
+  border-radius: 35px;
+  border-width: 2px;
+  padding: 0.8rem 1.5rem 0.72rem;
+}
+.btn-primary {
+  background: #339d33;
+  border: 2px solid #339d33;
+  color: #ffffff;
+  box-shadow: none;
+}
+.btn-primary:hover { background: #24762a; border-color: #24762a; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #339d33;
+  color: #24762a;
+  font-weight: 600;
+  backdrop-filter: none;
+}
+.btn-ghost:hover { background: #eaf5e9; border-color: #339d33; color: #1d5f22; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #339d33; }
+
+/* Cards: white with a light grey line, as their job table. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #e2e2e2;
+  border-radius: 22px;
+  box-shadow: none;
+}
+.card:hover { border-color: #49b747; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+#experience .card { background: #ffffff; }
+#experience .timeline .job { background: transparent; }
+.pill { background: #ffffff; border-color: #dbdbdb; color: #000000; border-radius: 35px; font-weight: 500; }
+.pill--accent { background: #339d33; border-color: #339d33; color: #ffffff; }
+.pick { background: #ffffff; border-color: #e2e2e2; border-radius: 14px; }
+.pick b { color: #000000; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Hero: white, the eyebrow as a pale green pill and the name in black.
+   The photo gets a rounded frame with a green offset.
+   ───────────────────────────────────────────────────────────────────────── */
+#top {
+  --ink:       #000000;
+  --ink-mid:   #333333;
+  --ink-light: #4a4a4a;
+  --ink-dim:   #666666;
+  color: var(--ink-mid);
+}
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.45rem 0.9rem 0.32rem;
+  background: #eaf5e9;
+  border-radius: 35px;
+  color: #1d5f22;
+  font-size: 0.76rem;
+}
+#top .hero-name {
+  color: #000000;
+  font-size: clamp(3rem, 7.4vw, 5.2rem);
+  line-height: 1;
+}
+#top .hero-role {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.2rem, 2.3vw, 1.5rem);
+  letter-spacing: -0.005em;
+  color: #24762a;
+}
+#top .hero-role::before { display: none; }
+#top .hero-lead { color: #333333; font-weight: 400; }
+#top .meta-row,
+#top .meta-row span { color: #4a4a4a; font-weight: 500; }
+#top .meta-row .sep { color: #339d33; }
+#top .meta-row svg { stroke: #339d33; }
+#top .hero-photo {
+  border: none;
+  border-radius: 22px;
+  box-shadow: 12px 12px 0 #49b747;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+#top .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 22px; }
+
+/* The stats on pale green, with big green numerals. */
+#top .stat-strip {
+  background: #f4f9f3;
+  backdrop-filter: none;
+  border: 1px solid #eaf5e9;
+  border-radius: 22px;
+  box-shadow: none;
+  padding: 1rem 1.3rem;
+}
+#top .stat { border-color: rgba(51,157,51,0.2); }
+#top .stat-num {
+  font-family: var(--serif);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.6rem, 5.2vw, 3.6rem);
+  line-height: 1;
+  color: #339d33;
+}
+#top .stat-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+  color: #333333;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The ask bar on pale green, with a white pill input in a green frame.
+   ───────────────────────────────────────────────────────────────────────── */
+.ask { background: #f4f9f3; border-color: #eaf5e9; border-radius: 22px; }
+.ask-title { font-family: var(--serif); font-size: 1.45rem; font-weight: 700; letter-spacing: -0.01em; color: #000000; }
+.ask-input {
+  background: #fff;
+  border: 2px solid #339d33;
+  border-radius: 35px;
+  box-shadow: none;
+  color: #000000;
+  font-weight: 400;
+}
+.ask-input:focus { border-color: #24762a; box-shadow: 0 0 0 3px rgba(51,157,51,0.2); }
+.ask-btn { background: #339d33; border-radius: 35px; }
+.ask-btn:hover { background: #24762a; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #fff; border: 1px solid #b9dcb8; color: #000000; border-radius: 35px; font-weight: 500; }
+.ask-chip:hover { background: #339d33; border-color: #339d33; color: #ffffff; }
+.ask-out { background: #fff; border-color: #e2e2e2; border-radius: 14px; }
+.ask-dot { background: #339d33; }
+
+/* About: the quote in black display type, and the list on pale green. */
+#about .about-quote {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #000000;
+  padding-left: 1rem;
+  border-left: 4px solid #49b747;
+}
+#about .brings {
+  background: #f4f9f3;
+  border: none;
+  border-radius: 22px;
+  box-shadow: none;
+}
+#about .brings-label { color: #24762a; }
+#about .brings-list li { color: #333333; font-weight: 500; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   "How I match" on their closing green band, with white tiles numbered in
+   green pills. Company contacts, the part the ad calls central, sits on
+   the pale green tile.
+   ───────────────────────────────────────────────────────────────────────── */
+#match {
+  background: linear-gradient(135deg, #339d33 0%, #2b8a2e 100%);
+  border-top: none;
+  --ink:       #ffffff;
+  --ink-mid:   #ffffff;
+  --ink-light: rgba(255,255,255,0.9);
+  --ink-dim:   rgba(255,255,255,0.8);
+}
+#match .sec-title { color: #ffffff; }
+#match .eyebrow { color: #ffffff; opacity: 0.9; }
+#match .sec-lead { color: rgba(255,255,255,0.92); }
+#match .card {
+  --ink:       #000000;
+  --ink-mid:   #333333;
+  --ink-light: #4a4a4a;
+  --ink-dim:   #666666;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 22px;
+}
+#match .card:hover { border-color: #ffffff; box-shadow: 0 12px 30px rgba(0,0,0,0.14); }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.8rem;
+  height: 2.8rem;
+  padding: 0.2rem 0.4rem 0;
+  border-radius: 35px;
+  background: #339d33;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+#match .point-title { font-size: 1.28rem; font-weight: 700; line-height: 1.2; color: #000000; }
+#match .point-quote {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #4a4a4a;
+  border-left: 4px solid #49b747;
+}
+#match .point-body { color: #333333; font-weight: 400; }
+#match .point-roles { border-top: 1px solid #efefef; }
+#match .point-roles .pill { background: #f4f9f3; border-color: #eaf5e9; color: #000000; font-weight: 500; }
+
+#match .card:nth-child(4) { background: #eaf5e9; border-color: #eaf5e9; }
+#match .card:nth-child(4) .point-num { background: #000000; color: #ffffff; }
+#match .card:nth-child(4) .point-quote { color: #333333; border-left-color: #24762a; }
+#match .card:nth-child(4) .point-roles { border-top-color: rgba(51,157,51,0.25); }
+#match .card:nth-child(4) .point-roles .pill { background: #ffffff; border-color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Built: the career programme and onboarding lead the work grid.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS,
+              5 course content
+   In the AI grid Role for Growth (group work) and Recruitment OS (the
+   interview tool in point 3) lead.
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth
+   ───────────────────────────────────────────────────────────────────────── */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 7; }
+
+#built .built-icon {
+  width: 48px;
+  height: 48px;
+  background: #eaf5e9;
+  border: none;
+  border-radius: 50%;
+}
+#built .built-icon svg { stroke: #24762a; }
+.built-link { color: #24762a; border-bottom: 2px solid #49b747; font-weight: 600; }
+.built-link:hover { color: #1d5f22; border-bottom-color: #24762a; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Experience: a green timeline. Each role carries a tag with the parts of
+   the ad where the weight of the work lay, and the four roles with
+   guidance or matching get the green dot.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager
+   ───────────────────────────────────────────────────────────────────────── */
+.timeline::before { width: 3px; background: linear-gradient(to bottom, #339d33, #339d33 55%, #b9dcb8 85%, transparent); }
+.job::before { background: #ffffff; border-color: #b9dcb8; }
+#experience .job:nth-of-type(1)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #339d33; border-color: #339d33; }
+.job-company { color: #000000; font-weight: 600; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.2rem 0.65rem 0.08rem;
+  border-radius: 35px;
+  background: #f1f1f1;
+  color: #000000;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after,
+#experience .job:nth-of-type(3) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after { background: #eaf5e9; color: #1d5f22; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Matching · Interviews'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Course development · Conferences'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Matching · Client contact'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Development conversations · Workshops'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Student guidance · Internships'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Matchning · Intervjuer'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Kursutveckling · Konferenser'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Matchning · Kundkontakt'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Utvecklingssamtal · Workshops'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Vägledning · Praktikplatser'; }
+
+#experience .roles-card { background: #f4f9f3; border-color: #eaf5e9; border-radius: 22px; }
+.roles-group .pill { background: #fff; border-color: #fff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Education: coaching, communication and competence supply lead the pills
+   in green, and the callout is their green band.
+   ───────────────────────────────────────────────────────────────────────── */
+#education .edu-school { color: #000000; font-weight: 600; }
+#education .callout { background: #339d33; border: none; border-radius: 22px; }
+#education .callout-label,
+#education .callout-title,
+#education .callout-text { color: #ffffff; }
+#education .callout-title { font-family: var(--serif); font-weight: 700; letter-spacing: -0.01em; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3) {
+  background: #339d33;
+  border-color: #339d33;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Contact on pale green, with the facts as one white tile. The footer is
+   their green band with white type.
+   ───────────────────────────────────────────────────────────────────────── */
+#contact {
+  --ink:       #000000;
+  --ink-mid:   #000000;
+  --ink-light: #333333;
+  --ink-dim:   #4a4a4a;
+}
+#contact::after { background: #49b747; }
+#contact .eyebrow { color: #24762a; }
+#contact .sec-title { color: #000000; }
+#contact .sec-lead { color: #333333; }
+#contact .btn-ghost { background: #ffffff; border-color: #339d33; color: #24762a; }
+#contact .btn-ghost:hover { background: #eaf5e9; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 2.2rem;
+  padding: 0.4rem 1.5rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 22px;
+  box-shadow: none;
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts::before {
+  content: 'About me';
+  flex-basis: 100%;
+  padding: 0.9rem 0 0.6rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #efefef;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+}
+:root:lang(sv) #contact .contact-facts::before { content: 'Fakta om mig'; }
+#contact .contact-facts span {
+  padding: 0.5rem 1.5rem 0 0;
+  border: none;
+  color: #333333;
+  font-weight: 500;
+}
+
+.site-footer {
+  background: #339d33;
+  border-top: none;
+  padding: 2.4rem 0 2.2rem;
+}
+.site-footer p {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.92rem;
+  color: #ffffff;
+}
+.site-footer a { color: #ffffff; font-weight: 600; border-bottom: 2px solid rgba(255,255,255,0.6); }
+.site-footer a:hover { border-bottom-color: #ffffff; }
+
+/* The Swedish CV runs a few lines longer than the English one: tighten the
+   timeline a touch in print so it holds to two pages. */
+@media print {
+  :root:lang(sv) .cv-main .job { padding-bottom: 3.6mm; }
+  :root:lang(sv) .job-bullets li { line-height: 1.34; }
+}
