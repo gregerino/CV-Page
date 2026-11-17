@@ -516,28 +516,28 @@
     ],
     "#education .tool-group:nth-of-type(3) .pill": [
       {
+        "en": "Team player, towards shared goals",
+        "sv": "Lagspelare, mot gemensamma mål"
+      },
+      {
+        "en": "Builds relationships with clients and employers",
+        "sv": "Bygger relationer med kunder och arbetsgivare"
+      },
+      {
+        "en": "Pedagogical in conversations and workshops",
+        "sv": "Pedagogisk i samtal och workshops"
+      },
+      {
         "en": "Structured and process-driven",
         "sv": "Strukturerad och processdriven"
       },
       {
-        "en": "Comfortable with many parallel processes",
-        "sv": "Trygg med många parallella processer"
+        "en": "Organised, comfortable with many parallel processes",
+        "sv": "Organiserad, trygg med många parallella processer"
       },
       {
-        "en": "Pedagogical, teaches what I build",
-        "sv": "Pedagogisk, lär ut det jag bygger"
-      },
-      {
-        "en": "Advisory to managers and stakeholders",
-        "sv": "Rådgivande mot chefer och intressenter"
-      },
-      {
-        "en": "Builds from zero",
-        "sv": "Bygger från noll"
-      },
-      {
-        "en": "AI-native day to day",
-        "sv": "AI-native i vardagen"
+        "en": "Follows up against set targets",
+        "sv": "Följer upp mot uppsatta mål"
       }
     ],
     "#personal .sec-title": {
@@ -782,28 +782,28 @@
       ],
       ".cv-card:has(.tool-label[data-sv=\"Så arbetar jag\"]) .pill": [
         {
+          "en": "Team player, towards shared goals",
+          "sv": "Lagspelare, mot gemensamma mål"
+        },
+        {
+          "en": "Builds relationships with clients and employers",
+          "sv": "Bygger relationer med kunder och arbetsgivare"
+        },
+        {
+          "en": "Pedagogical in conversations and workshops",
+          "sv": "Pedagogisk i samtal och workshops"
+        },
+        {
           "en": "Structured and process-driven",
           "sv": "Strukturerad och processdriven"
         },
         {
-          "en": "Comfortable with many parallel processes",
-          "sv": "Trygg med många parallella processer"
+          "en": "Organised, comfortable with many parallel processes",
+          "sv": "Organiserad, trygg med många parallella processer"
         },
         {
-          "en": "Pedagogical, teaches what I build",
-          "sv": "Pedagogisk, lär ut det jag bygger"
-        },
-        {
-          "en": "Advisory to managers and stakeholders",
-          "sv": "Rådgivande mot chefer och intressenter"
-        },
-        {
-          "en": "Builds from zero",
-          "sv": "Bygger från noll"
-        },
-        {
-          "en": "AI-native day to day",
-          "sv": "AI-native i vardagen"
+          "en": "Follows up against set targets",
+          "sv": "Följer upp mot uppsatta mål"
         }
       ],
       ".cv-card:has(.tool-label[data-sv=\"Språk\"]) .pill": [
