@@ -92,10 +92,10 @@ h1{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin
 .tabs .c{font-size:.75rem;opacity:.8;margin-left:3px}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
 .filters input,.filters select{border:1px solid var(--line);background:var(--surface2);border-radius:8px;padding:6px 10px;font-size:.85rem}
-.filters input{width:180px}
+.filters input[type=search]{width:180px}
 .filters input:focus,.filters select:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
 .rows{list-style:none}
-.row{display:grid;grid-template-columns:minmax(0,1fr) 128px 74px 64px 128px;gap:14px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .1s}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 128px 74px 70px 60px 120px;gap:14px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line);cursor:pointer;transition:background .1s}
 .row:last-child{border-bottom:0}
 .row:hover,.row:focus-visible{background:var(--surface2);outline:none}
 .row.head{cursor:default;padding-top:10px;padding-bottom:8px;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -116,14 +116,36 @@ h1{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin
 .spark path.a{fill:var(--accent-soft)}
 .spark circle{fill:var(--accent)}
 .spark .zero{stroke:var(--line2);stroke-width:2;stroke-dasharray:2 4}
+.trend{display:block;font-size:.72rem;font-weight:600;margin-top:2px}
+.trend.up{color:var(--good)}
+.trend.down{color:var(--bad)}
+.tog{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--ink2);border:1px solid var(--line);background:var(--surface2);border-radius:8px;padding:5px 10px;cursor:pointer;user-select:none}
+.tog input{accent-color:var(--accent)}
+.visits{list-style:none;display:grid}
+.visits li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;gap:5px;font-size:.85rem}
+.visits li:last-child{border-bottom:0}
+.visits li[data-slug]{cursor:pointer}
+.visits li[data-slug]:hover .vp{color:var(--accent)}
+.vh{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.vt{color:var(--muted);font-size:.8rem;min-width:92px}
+.vp{font-weight:600}
+.vd{font-weight:600;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:0 8px;font-size:.78rem}
+.vr{display:flex;gap:10px;align-items:baseline;min-width:0}
+.vr .k{color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;min-width:72px;flex:none}
+.vr a{color:var(--accent);word-break:break-all}
+.cls{display:flex;flex-wrap:wrap;gap:4px}
+.cl{font-size:.76rem;background:var(--surface2);border:1px solid var(--line);border-radius:6px;padding:1px 7px}
+.wide{margin-top:16px}
+.wide .visits{max-height:560px;overflow:auto;padding-right:6px}
+.dur{white-space:nowrap}
 .empty{padding:32px 20px;text-align:center;color:var(--muted);font-size:.9rem}
 @media (max-width:720px){
   .row{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
   .row.head{display:none}
-  .row .sp,.row .tot{display:none}
+  .row .sp,.row .tot,.row .dur{display:none}
   .row .rv{grid-column:2;grid-row:1}
   .row .when{grid-column:1/-1;text-align:left;font-size:.78rem}
-  .filters input{width:100%}
+  .filters input[type=search]{width:100%}
   .filters{width:100%}
 }
 
@@ -154,7 +176,7 @@ dialog[open]{animation:slide .18s ease-out}
 .dw-h h3{font-size:1.35rem;font-weight:700;letter-spacing:-.01em;line-height:1.2}
 .dw-h .s{color:var(--muted);font-size:.85rem;margin-top:4px}
 .close{border:1px solid var(--line);background:var(--surface2);border-radius:999px;width:34px;height:34px;cursor:pointer;flex:none;font-size:1.1rem}
-.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(92px,1fr));gap:8px}
 .mini div{background:var(--surface2);border-radius:10px;padding:10px 12px}
 .mini .l{font-size:.68rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .mini .v{font-size:1.25rem;font-weight:700;margin-top:2px}
@@ -200,10 +222,13 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
           <input type="search" id="q" placeholder="Sök företag eller sida…" aria-label="Sök">
           <select id="sort" aria-label="Sortera">
             <option value="last">Senast besökt</option>
+            <option value="rising">Ökar mest</option>
             <option value="range">Flest visningar i perioden</option>
+            <option value="time">Längst besökstid</option>
             <option value="total">Flest visningar totalt</option>
             <option value="name">Namn A–Ö</option>
           </select>
+          <label class="tog"><input type="checkbox" id="rising"> Bara ökande</label>
         </div>
       </div>
       <ul class="rows" id="rows"></ul>
@@ -213,9 +238,16 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
       <section class="card"><div class="card-h"><h2>Trafikkällor</h2><span class="hint">sedan start</span></div><div class="card-b" id="refs"></div></section>
       <section class="card"><div class="card-h"><h2>Enheter</h2><span class="hint">sedan start</span></div><div class="card-b" id="devs"></div></section>
       <section class="card"><div class="card-h"><h2>AI-frågor</h2><span class="hint" id="ai-hint"></span></div><div class="card-b" id="qs"></div></section>
+      <section class="card"><div class="card-h"><h2>Bortfiltrerade botar</h2><span class="hint" id="bot-hint"></span></div><div class="card-b" id="bots"></div></section>
       <section class="card"><div class="card-h"><h2>Klick i menyn</h2><span class="hint">sedan start</span></div><div class="card-b" id="clicks"></div></section>
     </aside>
   </div>
+
+  <section class="card wide">
+    <div class="card-h"><h2>Senaste besöken</h2>
+      <label class="tog"><input type="checkbox" id="hideshort"> Dölj besök under 5 s</label></div>
+    <div class="card-b" id="recent"></div>
+  </section>
 
   <footer><span id="own"></span><span id="gen"></span></footer>
 </div>
@@ -239,6 +271,7 @@ let R = +(store(s => s.getItem('stats-range')) || 30);
 if (![7, 30, 90].includes(R)) R = 30;
 let TAB = store(s => s.getItem('stats-tab')) || 'pack';
 let SORT = store(s => s.getItem('stats-sort')) || 'last';
+let RISING = store(s => s.getItem('stats-rising')) === '1';
 
 // Opening the dashboard proves it's you: stop counting your own visits here.
 store(s => s.setItem('cv-notrack', '1'));
@@ -298,6 +331,73 @@ function isFresh(p) {
 }
 const rangeViews = p => sum(p.daily.slice(-R));
 
+// Views this period against the period just before it.
+function trendOf(p) {
+  const cur = rangeViews(p), prev = sum(p.daily.slice(-2 * R, -R));
+  return {cur, prev, diff: cur - prev};
+}
+// "Rising" = more views now than in the period before.
+const isRising = p => trendOf(p).diff > 0;
+function trendBadge(p) {
+  const {diff} = trendOf(p);
+  if (!diff) return '';
+  return `<span class="trend ${diff > 0 ? 'up' : 'down'}" title="Jämfört med ${R} dagar innan">${diff > 0 ? '▲' : '▼'} ${fmt(Math.abs(diff))}</span>`;
+}
+
+/* ---------- visits ---------- */
+const OWN = ['cv-page-mocha.vercel.app', 'marcushultberg.dev', 'localhost'];
+const SHORT = 5;  // seconds; shorter visits are mostly bounces and bots
+let HIDE_SHORT = store(s => s.getItem('stats-hideshort')) !== '0';
+const keepVisit = v => !HIDE_SHORT || v.dur >= SHORT;
+
+function fmtDur(s, short) {
+  if (s == null) return '–';
+  if (s < 60) return s + ' s';
+  const m = Math.floor(s / 60);
+  if (m < 60) return m + ' min' + (!short && s % 60 ? ' ' + (s % 60) + ' s' : '');
+  return Math.floor(m / 60) + ' h ' + (m % 60) + ' min';
+}
+function median(a) {
+  if (!a.length) return null;
+  const s = [...a].sort((x, y) => x - y), m = s.length >> 1;
+  return s.length % 2 ? s[m] : Math.round((s[m - 1] + s[m]) / 2);
+}
+// Typical time on the page: the median, so one tab left open doesn't skew it.
+const typicalDur = p => median((p.visits || []).filter(keepVisit).map(v => v.dur));
+
+function fromLink(v) {
+  if (!v.from) return '<span class="muted">Direkt</span> <span class="muted" title="Ingen avsändare: mejl, PDF, app eller inskriven adress">ⓘ</span>';
+  const host = v.from.split('/')[0];
+  if (OWN.includes(host)) return 'Din sida <span class="mono">' + esc(v.from.slice(host.length) || '/') + '</span>';
+  return `<a href="https://${esc(v.from)}" target="_blank" rel="noopener noreferrer">${esc(v.from)}</a>`;
+}
+function clickChips(v) {
+  if (!v.clicks || !v.clicks.length) return '<span class="muted">Inga klick</span>';
+  return v.clicks.map(c => {
+    const to = c.h === 'mailto' ? 'E-post' : c.h === 'tel' ? 'Telefon' : c.h;
+    return `<span class="cl" title="${esc(to ? '→ ' + to : '')} · efter ${fmtDur(c.s)}">${esc(c.l || to || 'Klick')}</span>`;
+  }).join('');
+}
+function visitTime(v) {
+  return new Date(v.t * 1000).toLocaleString('sv-SE', {timeZone: 'Europe/Stockholm', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'});
+}
+function visitList(list, withPage) {
+  const shown = list.filter(keepVisit);
+  if (!shown.length) {
+    const hidden = list.length - shown.length;
+    return `<p class="muted">${hidden ? hidden + ' korta besök dolda.' : 'Inga besök registrerade ännu. Besökstid, länkar och klick samlas in från och med nu.'}</p>`;
+  }
+  return '<ul class="visits">' + shown.map(v => {
+    const p = withPage ? PAGES.find(x => x.slug === v.page) : null;
+    return `<li${p ? ` data-slug="${esc(p.slug)}"` : ''}>
+      <div class="vh"><span class="vt">${visitTime(v)}</span>${p ? `<b class="vp">${esc(p.name)}</b>` : ''}
+        <span class="vd num">${fmtDur(v.dur)}</span><span class="muted">${v.dev === 'mobile' ? 'Mobil' : v.dev === 'desktop' ? 'Dator' : ''}</span></div>
+      <div class="vr"><span class="k">Kom från</span>${fromLink(v)}</div>
+      <div class="vr"><span class="k">Klickade</span><span class="cls">${clickChips(v)}</span></div>
+    </li>`;
+  }).join('') + '</ul>';
+}
+
 /* ---------- KPIs ---------- */
 function delta(cur, prev) {
   if (!prev && !cur) return '<span class="delta flat">±0</span>';
@@ -327,7 +427,7 @@ function renderKpis() {
 
 /* ---------- bar chart ---------- */
 function niceMax(v) {
-  if (v <= 4) return 4;
+  if (v <= 20) return Math.max(4, Math.ceil(v / 4) * 4);  // whole-number gridlines
   const p = Math.pow(10, Math.floor(Math.log10(v))), n = v / p;
   return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * p;
 }
@@ -415,16 +515,19 @@ function sortPages(list) {
     range: (a, b) => rangeViews(b) - rangeViews(a) || b.total - a.total,
     total: (a, b) => b.total - a.total,
     name: (a, b) => a.name.localeCompare(b.name, 'sv'),
+    rising: (a, b) => trendOf(b).diff - trendOf(a).diff || rangeViews(b) - rangeViews(a),
+    time: (a, b) => (typicalDur(b) ?? -1) - (typicalDur(a) ?? -1),
   };
   return list.sort(by[SORT] || by.last);
 }
 function renderRows() {
   const q = $('#q').value.trim().toLowerCase();
   let list = PAGES.filter(p => TAB === 'all' || p.group === TAB);
+  if (RISING) list = list.filter(isRising);
   if (q) list = list.filter(p => (p.name + ' ' + p.slug + ' ' + (p.pack ? p.pack.role : '')).toLowerCase().includes(q));
   list = sortPages(list);
-  const head = `<li class="row head" aria-hidden="true"><span>Sida</span><span>Senaste ${R} d</span><span class="r">${R} d</span><span class="r">Totalt</span><span class="r">Senast</span></li>`;
-  if (!list.length) { $('#rows').innerHTML = head + '<li class="empty">Inga sidor matchar.</li>'; return; }
+  const head = `<li class="row head" aria-hidden="true"><span>Sida</span><span>Senaste ${R} d</span><span class="r">${R} d</span><span class="r" title="Typisk besökstid (median)">Tid</span><span class="r">Totalt</span><span class="r">Senast</span></li>`;
+  if (!list.length) { $('#rows').innerHTML = head + `<li class="empty">${RISING ? `Ingen sida har fler visningar än de ${R} dagarna innan.` : 'Inga sidor matchar.'}</li>`; return; }
   $('#rows').innerHTML = head + list.map(p => {
     const role = p.pack ? p.pack.role : '';
     const fresh = isFresh(p);
@@ -433,7 +536,8 @@ function renderRows() {
       <div class="name"><div class="t"><span style="overflow:hidden;text-overflow:ellipsis">${esc(p.name)}</span>${badge}</div>
         <div class="s">${role ? esc(role) + ' · ' : ''}<span class="mono">${esc(urlOf(p))}</span></div></div>
       <div class="sp">${spark(p.daily.slice(-R))}</div>
-      <div class="r rv"><span class="big num">${fmt(rangeViews(p))}</span></div>
+      <div class="r rv"><span class="big num">${fmt(rangeViews(p))}</span>${trendBadge(p)}</div>
+      <div class="r dur num muted">${fmtDur(typicalDur(p), true)}</div>
       <div class="r tot num muted">${fmt(p.total)}</div>
       <div class="when ${p.total ? '' : 'never'}">${ago(p)}</div>
     </li>`;
@@ -455,6 +559,15 @@ function devices(d, empty) {
   return `<div class="split" role="img" aria-label="Mobil ${pm}%, dator ${100 - pm}%"><div style="width:${pm}%"></div><div style="width:${100 - pm}%"></div></div>
     <div class="legend"><span><i style="background:var(--accent)"></i>Mobil <b class="num">${pm}%</b> <span class="muted">(${fmt(m)})</span></span>
     <span><i style="background:var(--accent2)"></i>Dator <b class="num">${100 - pm}%</b> <span class="muted">(${fmt(k)})</span></span></div>`;
+}
+function renderRecent() {
+  $('#recent').innerHTML = visitList(D.recent || [], true);
+}
+function renderBots() {
+  const cur = sum((D.botsDaily || []).slice(-R));
+  $('#bot-hint').textContent = `${fmt(D.bots)} totalt`;
+  $('#bots').innerHTML = `<p><b class="num" style="font-size:1.4rem">${fmt(cur)}</b> <span class="muted">senaste ${R} dagarna</span></p>
+    <p class="muted" style="margin-top:6px">Sökmotorer, länkförhandsvisningar och automatiserade webbläsare räknas här och ingen annanstans. Siffror från före 17 nov kan innehålla botar.</p>`;
 }
 function renderSide() {
   $('#refs').innerHTML = hbars(D.referrers, 'Ingen data ännu.');
@@ -483,11 +596,13 @@ function openPage(slug) {
       <div><p class="l">${R} dagar</p><p class="v num">${fmt(rangeViews(p))}</p></div>
       <div><p class="l">Totalt</p><p class="v num">${fmt(p.total)}</p></div>
       <div><p class="l">Unika</p><p class="v num">${D.v2since ? fmt(p.uniq) : '–'}</p></div>
+      <div><p class="l">Typisk tid</p><p class="v num">${fmtDur(typicalDur(p))}</p></div>
       <div><p class="l">Senast</p><p class="v" style="font-size:.95rem;padding-top:4px">${ago(p)}</p></div>
     </div>
     <div><h4>Visningar per dag</h4><div class="chart" id="dw-chart"></div></div>
     <div><h4>Källor</h4>${hbars(p.refs, 'Ingen data för sidan ännu. ' + since)}</div>
     <div><h4>Enheter</h4>${devices(p.devices, 'Ingen data för sidan ännu. ' + since)}</div>
+    <div><h4>Besök</h4>${visitList(p.visits || [], false)}</div>
     ${p.last ? `<p class="muted">Senaste besök: ${new Date(p.last).toLocaleString('sv-SE', {timeZone: 'Europe/Stockholm', dateStyle: 'medium', timeStyle: 'short'})}</p>` : ''}`;
   dw.showModal();
   barChart($('#dw-chart'), p.daily.slice(-R), D.dates.slice(-R), {height: 180, title: p.name});
@@ -497,7 +612,7 @@ dw.addEventListener('click', e => { if (e.target === dw) dw.close(); });
 /* ---------- wiring ---------- */
 function renderAll() {
   document.querySelectorAll('#range button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.r === R));
-  renderKpis(); renderChart(); renderTabs(); renderRows();
+  renderKpis(); renderChart(); renderTabs(); renderRows(); renderBots();
 }
 $('#range').addEventListener('click', e => {
   const r = +e.target.dataset.r; if (!r) return;
@@ -508,6 +623,8 @@ $('#tabs').addEventListener('click', e => {
   TAB = b.dataset.t; store(s => s.setItem('stats-tab', TAB)); renderTabs(); renderRows();
 });
 $('#q').addEventListener('input', renderRows);
+$('#rising').checked = RISING;
+$('#rising').addEventListener('change', e => { RISING = e.target.checked; store(s => s.setItem('stats-rising', RISING ? '1' : '0')); renderRows(); });
 $('#sort').value = SORT;
 $('#sort').addEventListener('change', e => { SORT = e.target.value; store(s => s.setItem('stats-sort', SORT)); renderRows(); });
 $('#rows').addEventListener('click', e => { const r = e.target.closest('.row[data-slug]'); if (r) openPage(r.dataset.slug); });
@@ -533,7 +650,16 @@ function renderOwn() {
     : `Dina besök räknas. <button id="own-btn">Sluta räkna mina besök</button>`;
   $('#own-btn').onclick = () => { store(s => off ? s.removeItem('cv-notrack') : s.setItem('cv-notrack', '1')); renderOwn(); };
 }
-renderOwn(); renderSide(); renderAll();
+$('#hideshort').checked = HIDE_SHORT;
+$('#hideshort').addEventListener('change', e => {
+  HIDE_SHORT = e.target.checked; store(s => s.setItem('stats-hideshort', HIDE_SHORT ? '1' : '0'));
+  renderRecent(); renderRows();
+});
+$('#recent').addEventListener('click', e => {
+  if (e.target.closest('a')) return;
+  const li = e.target.closest('li[data-slug]'); if (li) openPage(li.dataset.slug);
+});
+renderOwn(); renderSide(); renderRecent(); renderAll();
 </script>
 </body>
 </html>

@@ -13,6 +13,36 @@ UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
 # Anything that doesn't look like one of our pages is counted as "other".
 PAGE_RE = re.compile(r"^[a-z0-9][a-z0-9.-]{0,59}$")
 
+# Crawlers, link previewers, monitors and headless browsers. Matched against the
+# User-Agent header; a request with no User-Agent at all is treated as a bot too.
+BOT_RE = re.compile(
+    r"bot\b|bot/|crawl|spider|slurp|preview|scrap|fetch|headless|phantom|puppeteer|playwright|"
+    r"selenium|lighthouse|pagespeed|gtmetrix|pingdom|uptime|monitor|curl|wget|python-|"
+    r"go-http|java/|okhttp|axios|node-fetch|httpclient|facebookexternalhit|embedly|"
+    r"whatsapp|telegram|discord|skype|vercel|bingpreview|google-inspectiontool|chrome-lighthouse",
+    re.I,
+)
+
+VISIT_ID_RE = re.compile(r"^[a-z0-9]{8,24}$")
+MAX_DURATION = 4 * 3600      # a tab left open all day isn't a 9-hour read
+VISIT_TTL = 180 * 86400      # visit records expire after ~6 months
+VISITS_PER_PAGE = 200
+VISITS_TOTAL = 500
+
+
+def entry_link(referrer):
+    """The link the visitor followed: host + path, no query string
+    (those carry tracking ids, not anything worth reading)."""
+    try:
+        u = urlparse(referrer.strip())
+    except Exception:
+        return ""
+    host = (u.hostname or "").lower()
+    if not host:
+        return ""
+    host = host[4:] if host.startswith("www.") else host
+    return (host + (u.path if u.path not in ("", "/") else ""))[:160]
+
 
 def pipeline(cmds):
     """Run all commands in one round trip to Upstash."""
@@ -77,6 +107,15 @@ class handler(BaseHTTPRequestHandler):
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         cmds = []
 
+        # Bots: counted, so the dashboard can say how many, but kept out of every
+        # other number. The browser flags automation it can see (webdriver).
+        ua = self.headers.get("User-Agent", "")
+        if not ua or BOT_RE.search(ua) or body.get("bot"):
+            if event == "pageview":
+                pipeline([["INCR", "stats:bots"], ["INCR", f"stats:bots:{today}"]])
+            self._json(200, {"ok": True})
+            return
+
         if event == "click":
             # Nav clicks are not page views; they only feed the click counter.
             target = str(body.get("target", ""))[:40]
@@ -84,6 +123,10 @@ class handler(BaseHTTPRequestHandler):
                 cmds.append(["INCR", f"stats:click:{target}"])
             pipeline(cmds)
             self._json(200, {"ok": True})
+            return
+
+        if event == "visit":
+            self._visit(page, body)
             return
 
         device = body.get("device", "")
@@ -115,6 +158,53 @@ class handler(BaseHTTPRequestHandler):
             cmds.append(["INCR", f"stats:uniq:{page}"])
 
         pipeline(cmds)
+        self._json(200, {"ok": True})
+
+    def _visit(self, page, body):
+        """Store one visit: entry link, time on screen and clicks.
+
+        The browser sends the same visit id each time the tab is hidden, so the
+        record is overwritten, never duplicated."""
+        vid = str(body.get("id", ""))
+        if not VISIT_ID_RE.match(vid):
+            self._json(400, {"ok": False})
+            return
+        try:
+            start = int(body.get("start", 0)) // 1000
+            dur = max(0, min(int(body.get("dur", 0)), MAX_DURATION))
+        except (TypeError, ValueError):
+            self._json(400, {"ok": False})
+            return
+        now = int(datetime.now(timezone.utc).timestamp())
+        if not (now - 86400 < start <= now + 60):
+            start = now
+
+        clicks = []
+        for c in (body.get("clicks") or [])[:30]:
+            if isinstance(c, dict):
+                try:
+                    s = int(c.get("s", 0))
+                except (TypeError, ValueError):
+                    s = 0
+                clicks.append({"l": str(c.get("l", ""))[:60], "h": str(c.get("h", ""))[:120], "s": s})
+
+        record = {
+            "id": vid,
+            "page": page,
+            "t": start,
+            "dur": dur,
+            "dev": body.get("device") if body.get("device") in ("mobile", "desktop") else "",
+            "from": entry_link(str(body.get("referrer", ""))),
+            "clicks": clicks,
+        }
+        pipeline([
+            ["SET", f"stats:visit:{vid}", json.dumps(record, ensure_ascii=False), "EX", VISIT_TTL],
+            ["ZADD", f"stats:visits:{page}", start, vid],
+            ["ZADD", "stats:visits", start, f"{page}|{vid}"],
+            # Keep the latest visits only.
+            ["ZREMRANGEBYRANK", f"stats:visits:{page}", 0, -(VISITS_PER_PAGE + 1)],
+            ["ZREMRANGEBYRANK", "stats:visits", 0, -(VISITS_TOTAL + 1)],
+        ])
         self._json(200, {"ok": True})
 
     def _json(self, code, data):

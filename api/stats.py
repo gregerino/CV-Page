@@ -9,7 +9,9 @@ UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
 UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
 STATS_SECRET = os.environ.get("STATS_SECRET", "")
 
-DAYS = 90  # history sent to the dashboard; it slices 7/30/90 itself
+DAYS = 180  # history sent to the dashboard: 90 days shown, plus the 90 before to compare with
+VISITS_PER_PAGE = 50
+VISITS_RECENT = 40
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -89,6 +91,7 @@ def gather():
     daily = mget([f"stats:daily:{d}" for d in dates])
     visitors = mget([f"stats:visitors:{d}" for d in dates])
     ai_daily = mget([f"stats:ai:daily:{d}" for d in dates])
+    bots_daily = mget([f"stats:bots:{d}" for d in dates])
 
     # Per-page daily series, one flat MGET
     flat = mget([f"stats:daily:{d}:{s}" for s in slugs for d in dates])
@@ -99,17 +102,33 @@ def gather():
         [["HGETALL", "stats:last"], ["GET", "stats:v2since"], ["GET", "stats:total"],
          ["GET", "stats:ai:total"], ["KEYS", "stats:ref:*"], ["KEYS", "stats:click:*"],
          ["LRANGE", "stats:ai:questions", "0", "29"],
-         ["GET", "stats:device:mobile"], ["GET", "stats:device:desktop"]]
+         ["GET", "stats:device:mobile"], ["GET", "stats:device:desktop"], ["GET", "stats:bots"],
+         ["ZREVRANGE", "stats:visits", "0", str(VISITS_RECENT - 1)]]
         + [["HGETALL", f"stats:pref:{s}"] for s in slugs]
         + [["HGETALL", f"stats:pdev:{s}"] for s in slugs]
         + [["GET", f"stats:uniq:{s}"] for s in slugs]
+        + [["ZREVRANGE", f"stats:visits:{s}", "0", str(VISITS_PER_PAGE - 1)] for s in slugs]
     )
-    last, v2since, total, ai_total, ref_keys, click_keys, raw_q, mob, desk = detail[:9]
-    n = len(slugs)
-    prefs = detail[9:9 + n]
-    pdevs = detail[9 + n:9 + 2 * n]
-    uniqs = detail[9 + 2 * n:9 + 3 * n]
+    last, v2since, total, ai_total, ref_keys, click_keys, raw_q, mob, desk, bots, recent = detail[:11]
+    n, o = len(slugs), 11
+    prefs = detail[o:o + n]
+    pdevs = detail[o + n:o + 2 * n]
+    uniqs = detail[o + 2 * n:o + 3 * n]
+    vids = detail[o + 3 * n:o + 4 * n]
     last = hash_to_dict(last)
+
+    # Visit records: the latest per page, plus the latest across the site.
+    recent_ids = [m.split("|", 1)[1] for m in (recent or []) if "|" in m]
+    all_ids = sorted({i for ids in vids for i in (ids or [])} | set(recent_ids))
+    raw = pipe([["MGET", *all_ids[i:i + 500]] for i in range(0, len(all_ids), 500)]) if all_ids else []
+    visit_by_id = {}
+    for chunk in raw:
+        for item in chunk or []:
+            try:
+                v = json.loads(item)
+                visit_by_id[v["id"]] = v
+            except Exception:
+                pass
 
     ref_keys = ref_keys or []
     click_keys = click_keys or []
@@ -134,6 +153,7 @@ def gather():
             "refs": {k: int(v) for k, v in hash_to_dict(prefs[i]).items()},
             "devices": {k: int(v) for k, v in hash_to_dict(pdevs[i]).items()},
             "pack": packs.get(s),
+            "visits": [visit_by_id[v] for v in (vids[i] or []) if v in visit_by_id],
         })
 
     return {
@@ -151,6 +171,9 @@ def gather():
         "clicks": clicks,
         "devices": {"mobile": int(mob) if mob else 0, "desktop": int(desk) if desk else 0},
         "questions": questions,
+        "bots": int(bots) if bots else 0,
+        "botsDaily": bots_daily,
+        "recent": [visit_by_id[v] for v in recent_ids if v in visit_by_id],
     }
 
 
