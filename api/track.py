@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler
-import json, os, urllib.request, urllib.parse
+import json, os, re, urllib.request
 from datetime import datetime, timezone
+from urllib.parse import urlparse
 
 # Traffic from these is our own, not a referral. "www." is stripped before the check.
 OWN_HOSTS = ("cv-page-mocha.vercel.app", "marcushultberg.dev", "localhost")
@@ -8,20 +9,49 @@ OWN_HOSTS = ("cv-page-mocha.vercel.app", "marcushultberg.dev", "localhost")
 UPSTASH_URL = os.environ.get("UPSTASH_REDIS_REST_URL", "")
 UPSTASH_TOKEN = os.environ.get("UPSTASH_REDIS_REST_TOKEN", "")
 
+# The catch-all rewrite serves index.html for any slug, so junk paths reach us.
+# Anything that doesn't look like one of our pages is counted as "other".
+PAGE_RE = re.compile(r"^[a-z0-9][a-z0-9.-]{0,59}$")
 
-def redis_cmd(*args):
-    """Execute a Redis command via Upstash REST API."""
-    if not UPSTASH_URL or not UPSTASH_TOKEN:
+
+def pipeline(cmds):
+    """Run all commands in one round trip to Upstash."""
+    if not UPSTASH_URL or not UPSTASH_TOKEN or not cmds:
         return None
-    url = UPSTASH_URL
-    for arg in args:
-        url += "/" + urllib.parse.quote(str(arg), safe="")
-    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {UPSTASH_TOKEN}"})
+    req = urllib.request.Request(
+        UPSTASH_URL.rstrip("/") + "/pipeline",
+        data=json.dumps(cmds).encode(),
+        headers={"Authorization": f"Bearer {UPSTASH_TOKEN}", "Content-Type": "application/json"},
+    )
     try:
         with urllib.request.urlopen(req, timeout=5) as resp:
             return json.loads(resp.read())
     except Exception:
         return None
+
+
+def source_for(referrer):
+    if not referrer:
+        return "Direct"
+    try:
+        host = (urlparse(referrer).hostname or "").lower().replace("www.", "")
+    except Exception:
+        return ""
+    if "linkedin" in host or host == "lnkd.in":
+        return "LinkedIn"
+    if "google" in host:
+        return "Google"
+    if "facebook" in host or "fb.com" in host:
+        return "Facebook"
+    if "instagram" in host:
+        return "Instagram"
+    if "twitter" in host or "x.com" in host or host == "t.co":
+        return "X / Twitter"
+    if "github" in host:
+        return "GitHub"
+    if host and host not in OWN_HOSTS:
+        return host
+    return ""  # internal navigation
 
 
 class handler(BaseHTTPRequestHandler):
@@ -33,70 +63,58 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_POST(self):
-        length = int(self.headers.get("Content-Length", 0))
-        body = json.loads(self.rfile.read(length))
+        try:
+            length = int(self.headers.get("Content-Length", 0))
+            body = json.loads(self.rfile.read(length) or b"{}")
+        except Exception:
+            self._json(400, {"ok": False})
+            return
 
-        page = body.get("page", "unknown").strip("/") or "home"
-        event = body.get("event", "pageview")  # pageview or click
-        target = body.get("target", "")  # nav link clicked
-        device = body.get("device", "unknown")  # mobile or desktop
-        referrer = body.get("referrer", "").strip()
-
+        page = str(body.get("page", "")).strip("/").lower() or "home"
+        if not PAGE_RE.match(page):
+            page = "other"
+        event = body.get("event", "pageview")
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        cmds = []
 
-        # Total page views
-        redis_cmd("INCR", "stats:total")
+        if event == "click":
+            # Nav clicks are not page views; they only feed the click counter.
+            target = str(body.get("target", ""))[:40]
+            if target:
+                cmds.append(["INCR", f"stats:click:{target}"])
+            pipeline(cmds)
+            self._json(200, {"ok": True})
+            return
 
-        # Page views per page
-        redis_cmd("INCR", f"stats:page:{page}")
+        device = body.get("device", "")
+        source = source_for(str(body.get("referrer", "")).strip())
 
-        # Daily page views
-        redis_cmd("INCR", f"stats:daily:{today}")
-
-        # Daily per page
-        redis_cmd("INCR", f"stats:daily:{today}:{page}")
-
-        # Nav click tracking
-        if event == "click" and target:
-            redis_cmd("INCR", f"stats:click:{target}")
-
-        # Device tracking
+        cmds += [
+            ["SETNX", "stats:v2since", today],
+            ["INCR", "stats:total"],
+            ["INCR", f"stats:page:{page}"],
+            ["INCR", f"stats:daily:{today}"],
+            ["INCR", f"stats:daily:{today}:{page}"],
+            ["HSET", "stats:last", page, datetime.now(timezone.utc).isoformat(timespec="seconds")],
+        ]
         if device in ("mobile", "desktop"):
-            redis_cmd("INCR", f"stats:device:{device}")
-            redis_cmd("INCR", f"stats:device:{device}:{today}")
+            cmds += [
+                ["INCR", f"stats:device:{device}"],
+                ["INCR", f"stats:device:{device}:{today}"],
+                ["HINCRBY", f"stats:pdev:{page}", device, 1],
+            ]
+        if source:
+            cmds += [
+                ["INCR", f"stats:ref:{source}"],
+                ["HINCRBY", f"stats:pref:{page}", source, 1],
+            ]
+        # The browser remembers what it has seen, so these count people, not loads.
+        if body.get("newDay"):
+            cmds.append(["INCR", f"stats:visitors:{today}"])
+        if body.get("newPage"):
+            cmds.append(["INCR", f"stats:uniq:{page}"])
 
-        # Referrer tracking
-        if referrer:
-            try:
-                from urllib.parse import urlparse
-                host = urlparse(referrer).hostname or ""
-                host = host.lower().replace("www.", "")
-                if "linkedin" in host:
-                    source = "LinkedIn"
-                elif "google" in host:
-                    source = "Google"
-                elif "facebook" in host or "fb.com" in host:
-                    source = "Facebook"
-                elif "instagram" in host:
-                    source = "Instagram"
-                elif "twitter" in host or "x.com" in host or "t.co" in host:
-                    source = "X / Twitter"
-                elif "github" in host:
-                    source = "GitHub"
-                elif host and host not in OWN_HOSTS:
-                    source = host
-                else:
-                    source = ""
-                if source:
-                    redis_cmd("INCR", f"stats:ref:{source}")
-            except Exception:
-                pass
-        else:
-            redis_cmd("INCR", "stats:ref:Direct")
-
-        # Unique visitors (approximate, by day)
-        redis_cmd("INCR", f"stats:visitors:{today}")
-
+        pipeline(cmds)
         self._json(200, {"ok": True})
 
     def _json(self, code, data):

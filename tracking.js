@@ -4,28 +4,43 @@
   var endpoint = '/api/track';
   var page = location.pathname.replace(/^\//, '') || 'home';
 
-  // Detect device type
-  var device = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
+  function store(fn) { try { return fn(window.localStorage); } catch (e) { return null; } }
 
-  // Get referrer source
+  // Your own visits: open any page with ?notrack=1 once per browser and domain
+  // (?notrack=0 undoes it). Opening the stats dashboard does the same.
+  var flag = new URLSearchParams(location.search).get('notrack');
+  if (flag === '1') store(function(s) { s.setItem('cv-notrack', '1'); });
+  if (flag === '0') store(function(s) { s.removeItem('cv-notrack'); });
+  if (store(function(s) { return s.getItem('cv-notrack'); }) === '1') return;
+
+  var device = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'mobile' : 'desktop';
   var ref = document.referrer || '';
 
-  // Track page view
-  fetch(endpoint, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ page: page, event: 'pageview', device: device, referrer: ref })
-  }).catch(function(){});
+  // First visit to this page, and first visit to the site today, in this browser.
+  var today = new Date().toISOString().slice(0, 10);
+  var newPage = store(function(s) {
+    if (s.getItem('cv-seen:' + page)) return false;
+    s.setItem('cv-seen:' + page, '1'); return true;
+  });
+  var newDay = store(function(s) {
+    if (s.getItem('cv-day') === today) return false;
+    s.setItem('cv-day', today); return true;
+  });
 
-  // Track nav clicks
+  function send(data) {
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+      keepalive: true
+    }).catch(function(){});
+  }
+
+  send({ page: page, event: 'pageview', device: device, referrer: ref,
+         newPage: newPage !== false, newDay: newDay !== false });
+
   document.addEventListener('click', function(e) {
     var link = e.target.closest('.nav-links a, .nav-mobile a');
-    if (link) {
-      fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ page: page, event: 'click', target: link.textContent.trim() })
-      }).catch(function(){});
-    }
+    if (link) send({ page: page, event: 'click', target: link.textContent.trim() });
   });
 })();

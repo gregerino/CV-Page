@@ -83,5 +83,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/stats.py": {
+      "includeFiles": "jobs/*.json"
+    }
+  }
 }
