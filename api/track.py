@@ -137,16 +137,30 @@ class handler(BaseHTTPRequestHandler):
         if event == "click":
             # Nav clicks are not page views; they only feed the click counter.
             target = str(body.get("target", ""))[:40]
-            if target:
+            if target and not body.get("own"):
                 cmds.append(["INCR", f"stats:click:{target}"])
             pipeline(cmds)
             self._json(200, {"ok": True})
             return
 
         system = os_for(ua)
+        own = bool(body.get("own"))
 
         if event == "visit":
-            self._visit(page, body, system)
+            self._visit(page, body, system, own)
+            return
+
+        if own:
+            # Marcus's own visits: kept in their own keys, never in visitor numbers.
+            if event == "pageview":
+                pipeline([
+                    ["INCR", "stats:own:total"],
+                    ["HINCRBY", "stats:own:pages", page, 1],
+                    ["INCR", f"stats:own:daily:{today}"],
+                    ["INCR", f"stats:own:daily:{today}:{page}"],
+                    ["HSET", "stats:own:last", page, datetime.now(timezone.utc).isoformat(timespec="seconds")],
+                ])
+            self._json(200, {"ok": True})
             return
 
         device = body.get("device", "")
@@ -183,7 +197,7 @@ class handler(BaseHTTPRequestHandler):
         pipeline(cmds)
         self._json(200, {"ok": True})
 
-    def _visit(self, page, body, system):
+    def _visit(self, page, body, system, own=False):
         """Store one visit: entry link, time on screen and clicks.
 
         The browser sends the same visit id each time the tab is hidden, so the
@@ -221,6 +235,15 @@ class handler(BaseHTTPRequestHandler):
             "from": entry_link(str(body.get("referrer", ""))),
             "clicks": clicks,
         }
+        if own:
+            record["own"] = True
+            pipeline([
+                ["SET", f"stats:visit:{vid}", json.dumps(record, ensure_ascii=False), "EX", VISIT_TTL],
+                ["ZADD", "stats:ownvisits", start, f"{page}|{vid}"],
+                ["ZREMRANGEBYRANK", "stats:ownvisits", 0, -(VISITS_TOTAL + 1)],
+            ])
+            self._json(200, {"ok": True})
+            return
         pipeline([
             ["SET", f"stats:visit:{vid}", json.dumps(record, ensure_ascii=False), "EX", VISIT_TTL],
             ["ZADD", f"stats:visits:{page}", start, vid],

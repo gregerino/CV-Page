@@ -83,7 +83,9 @@ def gather():
     packs = load_packs()
     page_keys = pipe([["KEYS", "stats:page:*"]])[0] or []
     tracked = [k[len("stats:page:"):] for k in page_keys]
-    slugs = sorted(set(tracked) | set(packs))
+    # Pages only Marcus has opened still need a row in "Mina besök".
+    own_seen = hash_to_dict(pipe([["HGETALL", "stats:own:pages"]])[0])
+    slugs = sorted(set(tracked) | set(packs) | set(own_seen))
 
     totals = dict(zip(tracked, mget(page_keys)))
 
@@ -97,13 +99,20 @@ def gather():
     flat = mget([f"stats:daily:{d}:{s}" for s in slugs for d in dates])
     per_page = {s: flat[i * DAYS:(i + 1) * DAYS] for i, s in enumerate(slugs)}
 
+    # Marcus's own visits, kept apart from visitor numbers
+    own_daily = mget([f"stats:own:daily:{d}" for d in dates])
+    own_flat = mget([f"stats:own:daily:{d}:{s}" for s in slugs for d in dates])
+    own_per_page = {s: own_flat[i * DAYS:(i + 1) * DAYS] for i, s in enumerate(slugs)}
+
     # Per-page detail (only collected since the tracking upgrade)
     detail = pipe(
         [["HGETALL", "stats:last"], ["GET", "stats:v2since"], ["GET", "stats:total"],
          ["GET", "stats:ai:total"], ["KEYS", "stats:ref:*"], ["KEYS", "stats:click:*"],
          ["LRANGE", "stats:ai:questions", "0", "29"],
          ["GET", "stats:device:mobile"], ["GET", "stats:device:desktop"], ["GET", "stats:bots"],
-         ["ZREVRANGE", "stats:visits", "0", str(VISITS_RECENT - 1)], ["HGETALL", "stats:os"]]
+         ["ZREVRANGE", "stats:visits", "0", str(VISITS_RECENT - 1)], ["HGETALL", "stats:os"],
+         ["GET", "stats:own:total"], ["HGETALL", "stats:own:pages"], ["HGETALL", "stats:own:last"],
+         ["ZREVRANGE", "stats:ownvisits", "0", "199"]]
         + [["HGETALL", f"stats:pref:{s}"] for s in slugs]
         + [["HGETALL", f"stats:pdev:{s}"] for s in slugs]
         + [["GET", f"stats:uniq:{s}"] for s in slugs]
@@ -111,8 +120,11 @@ def gather():
         + [["HGETALL", f"stats:pos:{s}"] for s in slugs]
         + [["HGETALL", f"stats:osd:{d}"] for d in dates]
     )
-    last, v2since, total, ai_total, ref_keys, click_keys, raw_q, mob, desk, bots, recent, os_all = detail[:12]
-    n, o = len(slugs), 12
+    (last, v2since, total, ai_total, ref_keys, click_keys, raw_q, mob, desk, bots, recent, os_all,
+     own_total, own_pages, own_last, own_recent) = detail[:16]
+    n, o = len(slugs), 16
+    own_pages = {k: int(v) for k, v in hash_to_dict(own_pages).items()}
+    own_last = hash_to_dict(own_last)
     prefs = detail[o:o + n]
     pdevs = detail[o + n:o + 2 * n]
     uniqs = detail[o + 2 * n:o + 3 * n]
@@ -123,7 +135,8 @@ def gather():
 
     # Visit records: the latest per page, plus the latest across the site.
     recent_ids = [m.split("|", 1)[1] for m in (recent or []) if "|" in m]
-    all_ids = sorted({i for ids in vids for i in (ids or [])} | set(recent_ids))
+    own_ids = [m.split("|", 1)[1] for m in (own_recent or []) if "|" in m]
+    all_ids = sorted({i for ids in vids for i in (ids or [])} | set(recent_ids) | set(own_ids))
     raw = pipe([["MGET", *all_ids[i:i + 500]] for i in range(0, len(all_ids), 500)]) if all_ids else []
     visit_by_id = {}
     for chunk in raw:
@@ -157,6 +170,9 @@ def gather():
             "refs": {k: int(v) for k, v in hash_to_dict(prefs[i]).items()},
             "devices": {k: int(v) for k, v in hash_to_dict(pdevs[i]).items()},
             "os": {k: int(v) for k, v in hash_to_dict(poss[i]).items()},
+            "ownTotal": own_pages.get(s, 0),
+            "ownDaily": own_per_page[s],
+            "ownLast": own_last.get(s),
             "pack": packs.get(s),
             "visits": [visit_by_id[v] for v in (vids[i] or []) if v in visit_by_id],
         })
@@ -180,6 +196,9 @@ def gather():
         "botsDaily": bots_daily,
         "os": {k: int(v) for k, v in hash_to_dict(os_all).items()},
         "osDaily": os_daily,
+        "ownTotal": int(own_total) if own_total else 0,
+        "ownDaily": own_daily,
+        "ownVisits": [visit_by_id[v] for v in own_ids if v in visit_by_id],
         "recent": [visit_by_id[v] for v in recent_ids if v in visit_by_id],
     }
 

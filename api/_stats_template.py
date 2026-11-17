@@ -206,6 +206,9 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
       <p class="sub" id="sub"></p>
     </div>
     <div class="controls">
+      <div class="seg" role="group" aria-label="Vems besök" id="who">
+        <button data-w="visitors">Besökare</button><button data-w="me">Mina besök</button>
+      </div>
       <div class="seg" role="group" aria-label="Period" id="range">
         <button data-r="7">7 dagar</button><button data-r="30">30 dagar</button><button data-r="90">90 dagar</button>
       </div>
@@ -219,11 +222,12 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
   </header>
 
   <div id="warn"></div>
+  <div id="mebar"></div>
   <div id="osbar"></div>
   <section class="kpis" id="kpis"></section>
 
   <section class="card">
-    <div class="card-h"><h2>Visningar per dag</h2><span class="hint" id="chart-hint"></span></div>
+    <div class="card-h"><h2 id="chart-title">Visningar per dag</h2><span class="hint" id="chart-hint"></span></div>
     <div class="card-b"><div class="chart" id="chart"></div></div>
   </section>
 
@@ -258,7 +262,7 @@ footer button{background:none;border:0;color:var(--accent);cursor:pointer;font-s
   </div>
 
   <section class="card wide">
-    <div class="card-h"><h2>Senaste besöken</h2>
+    <div class="card-h"><h2 id="recent-title">Senaste besöken</h2>
       <label class="tog"><input type="checkbox" id="hideshort"> Dölj besök under 5 s</label></div>
     <div class="card-b" id="recent"></div>
   </section>
@@ -287,9 +291,20 @@ let TAB = store(s => s.getItem('stats-tab')) || 'pack';
 let SORT = store(s => s.getItem('stats-sort')) || 'last';
 let RISING = store(s => s.getItem('stats-rising')) === '1';
 let OS = store(s => s.getItem('stats-os')) || '';
-const osViews = p => OS ? (p.os || {})[OS] || 0 : p.total;
+let ME = store(s => s.getItem('stats-who')) === 'me';
 
-// Opening the dashboard proves it's you: stop counting your own visits here.
+// Everything below reads a page through these, so one switch flips the whole
+// dashboard between visitors and Marcus's own visits.
+const dl = p => ME ? (p.ownDaily || []) : p.daily;
+const tot = p => ME ? (p.ownTotal || 0) : p.total;
+const lastISO = p => ME ? p.ownLast : p.last;
+const lastIdxOf = p => ME ? p.ownLastIdx : p.lastIdx;
+const visitsOf = p => ME ? (D.ownVisits || []).filter(v => v.page === p.slug) : (p.visits || []);
+const siteDaily = () => ME ? (D.ownDaily || []) : D.daily;
+const osViews = p => OS && !ME ? (p.os || {})[OS] || 0 : tot(p);
+
+// Opening the dashboard proves it's you: from now on this browser's visits on
+// this domain are recorded as yours, under "Mina besök", not as visitors.
 store(s => s.setItem('cv-notrack', '1'));
 
 /* ---------- derived page data ---------- */
@@ -309,17 +324,17 @@ function urlOf(p) {
   return p.slug === 'home' ? '/' : '/' + p.slug;
 }
 const PAGES = D.pages.map(p => {
-  let lastIdx = -1;
-  for (let i = N - 1; i >= 0; i--) if (p.daily[i] > 0) { lastIdx = i; break; }
-  return {...p, group: groupOf(p), name: nameOf(p), lastIdx};
+  const lastOf = a => { for (let i = (a || []).length - 1; i >= 0; i--) if (a[i] > 0) return i; return -1; };
+  return {...p, group: groupOf(p), name: nameOf(p), lastIdx: lastOf(p.daily), ownLastIdx: lastOf(p.ownDaily)};
 });
 
 // When a page was last opened: exact time if we have it, otherwise the day.
 function lastSeen(p) {
-  if (p.last) return {t: new Date(p.last).getTime(), exact: true};
+  if (lastISO(p)) return {t: new Date(lastISO(p)).getTime(), exact: true};
   // Start of the day, so an exact time from today still sorts above a day-only one.
-  if (p.lastIdx >= 0) return {t: new Date(D.dates[p.lastIdx] + 'T00:00:00Z').getTime(), exact: false, idx: p.lastIdx};
-  if (p.total > 0) return {t: 1, exact: false, old: true};
+  const li = lastIdxOf(p);
+  if (li >= 0) return {t: new Date(D.dates[li] + 'T00:00:00Z').getTime(), exact: false, idx: li};
+  if (tot(p) > 0) return {t: 1, exact: false, old: true};
   return null;
 }
 function ago(p) {
@@ -345,11 +360,11 @@ function isFresh(p) {
   if (!s || s.old) return false;
   return s.exact ? Date.now() - s.t < 864e5 : s.idx === N - 1;
 }
-const rangeViews = p => sum(p.daily.slice(-R));
+const rangeViews = p => sum(dl(p).slice(-R));
 
 // Views this period against the period just before it.
 function trendOf(p) {
-  const cur = rangeViews(p), prev = sum(p.daily.slice(-2 * R, -R));
+  const cur = rangeViews(p), prev = sum(dl(p).slice(-2 * R, -R));
   return {cur, prev, diff: cur - prev};
 }
 // "Rising" = more views now than in the period before.
@@ -379,7 +394,7 @@ function median(a) {
   return s.length % 2 ? s[m] : Math.round((s[m - 1] + s[m]) / 2);
 }
 // Typical time on the page: the median, so one tab left open doesn't skew it.
-const typicalDur = p => median((p.visits || []).filter(keepVisit).map(v => v.dur));
+const typicalDur = p => median(visitsOf(p).filter(keepVisit).map(v => v.dur));
 
 function fromLink(v) {
   if (!v.from) return '<span class="muted">Direkt</span> <span class="muted" title="Ingen avsändare: mejl, PDF, app eller inskriven adress">ⓘ</span>';
@@ -423,6 +438,7 @@ function delta(cur, prev) {
   return `<span class="delta ${cls}">${pct > 0 ? '+' : ''}${pct}%</span>`;
 }
 function renderKpis() {
+  if (ME) return renderOwnKpis();
   const cur = sum(D.daily.slice(-R)), prev = sum(D.daily.slice(-2 * R, -R));
   const packs = PAGES.filter(p => p.group === 'pack');
   const activePacks = packs.filter(p => rangeViews(p) > 0).length;
@@ -439,6 +455,22 @@ function renderKpis() {
   ];
   $('#kpis').innerHTML = tiles.map(([l, v, d]) =>
     `<div class="card kpi"><p class="l">${l}</p><p class="v num">${v}</p><p class="d">${d}</p></div>`).join('');
+}
+
+function renderOwnKpis() {
+  const d = D.ownDaily || [];
+  const cur = sum(d.slice(-R)), prev = sum(d.slice(-2 * R, -R));
+  const opened = PAGES.filter(p => rangeViews(p) > 0).length;
+  const vis = (D.ownVisits || []).filter(v => v.t * 1000 > Date.now() - R * 864e5);
+  const tiles = [
+    ['Mina visningar', fmt(cur), delta(cur, prev) + ` senaste ${R} dagarna`],
+    ['Idag', fmt(d[N - 1] || 0), `igår ${fmt(d[N - 2] || 0)}`],
+    ['Sidor jag öppnat', fmt(opened), `senaste ${R} dagarna`],
+    ['Typisk tid', fmtDur(median(vis.map(v => v.dur))), `${fmt(vis.length)} besök med tid`],
+    ['Totalt sedan start', fmt(D.ownTotal || 0), 'mina visningar'],
+  ];
+  $('#kpis').innerHTML = tiles.map(([l, v, x]) =>
+    `<div class="card kpi"><p class="l">${l}</p><p class="v num">${v}</p><p class="d">${x}</p></div>`).join('');
 }
 
 /* ---------- bar chart ---------- */
@@ -496,12 +528,13 @@ function barChart(el, values, dates, opts = {}) {
 const osSeries = () => (D.osDaily || []).map(h => (h || {})[OS] || 0);
 function renderChart() {
   const off = N - R;
-  const series = OS ? osSeries() : D.daily;
+  const series = ME ? siteDaily() : OS ? osSeries() : D.daily;
+  $('#chart-title').textContent = ME ? 'Mina visningar per dag' : OS ? 'Visningar per dag från ' + OS : 'Visningar per dag';
   barChart($('#chart'), series.slice(-R), D.dates.slice(-R), {
-    title: OS ? 'Visningar från ' + OS : undefined,
+    title: ME ? 'Mina visningar' : OS ? 'Visningar från ' + OS : undefined,
     extra: k => {
       const i = off + k;
-      return !OS && v2idx >= 0 && i >= v2idx ? `<br>${fmt(D.visitors[i])} besökare` : '';
+      return !OS && !ME && v2idx >= 0 && i >= v2idx ? `<br>${fmt(D.visitors[i])} besökare` : '';
     }
   });
   const max = Math.max(...series.slice(-R));
@@ -543,23 +576,24 @@ function renderRows() {
   const q = $('#q').value.trim().toLowerCase();
   let list = PAGES.filter(p => TAB === 'all' || p.group === TAB);
   if (RISING) list = list.filter(isRising);
-  if (OS) list = list.filter(p => osViews(p) > 0);
+  if (OS && !ME) list = list.filter(p => osViews(p) > 0);
+  if (ME) list = list.filter(p => tot(p) > 0);
   if (q) list = list.filter(p => (p.name + ' ' + p.slug + ' ' + (p.pack ? p.pack.role : '')).toLowerCase().includes(q));
   list = sortPages(list);
-  const head = `<li class="row head" aria-hidden="true"><span>Sida</span><span>Senaste ${R} d</span><span class="r">${R} d</span><span class="r" title="Typisk besökstid (median)">Tid</span><span class="r">${OS ? esc(OS) : 'Totalt'}</span><span class="r">Senast</span></li>`;
-  if (!list.length) { $('#rows').innerHTML = head + `<li class="empty">${OS ? `Inga visningar från ${esc(OS)} ännu${RISING ? ' bland ökande sidor' : ''}.` : RISING ? `Ingen sida har fler visningar än de ${R} dagarna innan.` : 'Inga sidor matchar.'}</li>`; return; }
+  const head = `<li class="row head" aria-hidden="true"><span>Sida</span><span>Senaste ${R} d</span><span class="r">${R} d</span><span class="r" title="Typisk besökstid (median)">Tid</span><span class="r">${ME ? 'Mina' : OS ? esc(OS) : 'Totalt'}</span><span class="r">Senast</span></li>`;
+  if (!list.length) { $('#rows').innerHTML = head + `<li class="empty">${ME ? 'Du har inte öppnat några sidor här ännu sedan dina egna besök började registreras.' : OS ? `Inga visningar från ${esc(OS)} ännu${RISING ? ' bland ökande sidor' : ''}.` : RISING ? `Ingen sida har fler visningar än de ${R} dagarna innan.` : 'Inga sidor matchar.'}</li>`; return; }
   $('#rows').innerHTML = head + list.map(p => {
     const role = p.pack ? p.pack.role : '';
     const fresh = isFresh(p);
-    const badge = fresh ? '<span class="live" title="Öppnad senaste dygnet"></span>' : p.total === 0 ? '<span class="chip">Ej öppnad</span>' : '';
+    const badge = fresh ? '<span class="live" title="Öppnad senaste dygnet"></span>' : tot(p) === 0 && !ME ? '<span class="chip">Ej öppnad</span>' : '';
     return `<li class="row" tabindex="0" data-slug="${esc(p.slug)}">
       <div class="name"><div class="t"><span style="overflow:hidden;text-overflow:ellipsis">${esc(p.name)}</span>${badge}</div>
         <div class="s">${role ? esc(role) + ' · ' : ''}<span class="mono">${esc(urlOf(p))}</span></div></div>
-      <div class="sp">${spark(p.daily.slice(-R))}</div>
+      <div class="sp">${spark(dl(p).slice(-R))}</div>
       <div class="r rv"><span class="big num">${fmt(rangeViews(p))}</span>${trendBadge(p)}</div>
       <div class="r dur num muted">${fmtDur(typicalDur(p), true)}</div>
       <div class="r tot num muted">${fmt(osViews(p))}</div>
-      <div class="when ${p.total ? '' : 'never'}">${ago(p)}</div>
+      <div class="when ${tot(p) ? '' : 'never'}">${ago(p)}</div>
     </li>`;
   }).join('');
 }
@@ -599,7 +633,8 @@ function setOs(v) {
   renderOs(); renderChart(); renderRows(); renderRecent();
 }
 function renderRecent() {
-  $('#recent').innerHTML = visitList(D.recent || [], true);
+  $('#recent-title').textContent = ME ? 'Mina senaste besök' : 'Senaste besöken';
+  $('#recent').innerHTML = visitList(ME ? (D.ownVisits || []) : (D.recent || []), true);
 }
 function renderBots() {
   const cur = sum((D.botsDaily || []).slice(-R));
@@ -632,7 +667,7 @@ function openPage(slug) {
     <a class="open-link" href="${esc(urlOf(p))}" target="_blank" rel="noopener">Öppna sidan ↗</a>
     <div class="mini">
       <div><p class="l">${R} dagar</p><p class="v num">${fmt(rangeViews(p))}</p></div>
-      <div><p class="l">Totalt</p><p class="v num">${fmt(p.total)}</p></div>
+      <div><p class="l">${ME ? 'Mina totalt' : 'Totalt'}</p><p class="v num">${fmt(tot(p))}</p></div>
       <div><p class="l">Unika</p><p class="v num">${D.v2since ? fmt(p.uniq) : '–'}</p></div>
       <div><p class="l">Typisk tid</p><p class="v num">${fmtDur(typicalDur(p))}</p></div>
       <div><p class="l">Senast</p><p class="v" style="font-size:.95rem;padding-top:4px">${ago(p)}</p></div>
@@ -641,16 +676,20 @@ function openPage(slug) {
     <div><h4>Källor</h4>${hbars(p.refs, 'Ingen data för sidan ännu. ' + since)}</div>
     <div><h4>Operativsystem</h4>${hbars(p.os || {}, 'Ingen data för sidan ännu. ' + since)}</div>
     <div><h4>Enheter</h4>${devices(p.devices, 'Ingen data för sidan ännu. ' + since)}</div>
-    <div><h4>Besök</h4>${visitList(p.visits || [], false)}</div>
-    ${p.last ? `<p class="muted">Senaste besök: ${new Date(p.last).toLocaleString('sv-SE', {timeZone: 'Europe/Stockholm', dateStyle: 'medium', timeStyle: 'short'})}</p>` : ''}`;
+    <div><h4>${ME ? 'Mina besök' : 'Besök'}</h4>${visitList(visitsOf(p), false)}</div>
+    ${lastISO(p) ? `<p class="muted">${ME ? 'Mitt senaste besök' : 'Senaste besök'}: ${new Date(lastISO(p)).toLocaleString('sv-SE', {timeZone: 'Europe/Stockholm', dateStyle: 'medium', timeStyle: 'short'})}</p>` : ''}`;
   dw.showModal();
-  barChart($('#dw-chart'), p.daily.slice(-R), D.dates.slice(-R), {height: 180, title: p.name});
+  barChart($('#dw-chart'), dl(p).slice(-R), D.dates.slice(-R), {height: 180, title: p.name});
 }
 dw.addEventListener('click', e => { if (e.target === dw) dw.close(); });
 
 /* ---------- wiring ---------- */
 function renderAll() {
   document.querySelectorAll('#range button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.r === R));
+  document.querySelectorAll('#who button').forEach(b => b.setAttribute('aria-pressed', (b.dataset.w === 'me') === ME));
+  $('#mebar').innerHTML = ME
+    ? `<div class="osbar"><span>Du tittar på <b>dina egna besök</b>: de som gjorts i webbläsare där du öppnat den här sidan eller använt <span class="mono">?notrack=1</span>. De räknas aldrig in bland besökarna. Registreras sedan 17 nov.</span><button onclick="setWho(false)">Visa besökare</button></div>`
+    : '';
   renderKpis(); renderChart(); renderTabs(); renderRows(); renderBots();
 }
 $('#range').addEventListener('click', e => {
@@ -685,8 +724,8 @@ $('#gen').textContent = 'Hämtad ' + new Date(D.generated).toLocaleString('sv-SE
 function renderOwn() {
   const off = store(s => s.getItem('cv-notrack')) === '1';
   $('#own').innerHTML = off
-    ? `Dina egna besök på ${esc(location.host)} räknas inte i den här webbläsaren. På andra enheter eller domäner: öppna sidan med <span class="mono">?notrack=1</span>. <button id="own-btn">Räkna mina besök igen</button>`
-    : `Dina besök räknas. <button id="own-btn">Sluta räkna mina besök</button>`;
+    ? `Dina besök på ${esc(location.host)} i den här webbläsaren hamnar under "Mina besök", inte bland besökarna. På andra enheter eller domäner: öppna sidan med <span class="mono">?notrack=1</span>. <button id="own-btn">Räkna mig som besökare</button>`
+    : `Dina besök räknas just nu som vanliga besökare. <button id="own-btn">Flytta mina besök till "Mina besök"</button>`;
   $('#own-btn').onclick = () => { store(s => off ? s.removeItem('cv-notrack') : s.setItem('cv-notrack', '1')); renderOwn(); };
 }
 $('#hideshort').checked = HIDE_SHORT;
@@ -699,6 +738,11 @@ $('#recent').addEventListener('click', e => {
   const li = e.target.closest('li[data-slug]'); if (li) openPage(li.dataset.slug);
 });
 $('#os').addEventListener('change', e => setOs(e.target.value));
+function setWho(me) {
+  ME = me; store(s => s.setItem('stats-who', ME ? 'me' : 'visitors'));
+  renderAll(); renderRecent();
+}
+$('#who').addEventListener('click', e => { const w = e.target.dataset.w; if (w) setWho(w === 'me'); });
 renderOwn(); renderSide(); renderOs(); renderRecent(); renderAll();
 </script>
 </body>

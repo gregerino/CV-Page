@@ -7,11 +7,12 @@
   function store(fn) { try { return fn(window.localStorage); } catch (e) { return null; } }
 
   // Your own visits: open any page with ?notrack=1 once per browser and domain
-  // (?notrack=0 undoes it). Opening the stats dashboard does the same.
+  // (?notrack=0 undoes it). Opening the stats dashboard does the same. They are
+  // still recorded, but as your own, apart from every visitor number.
   var flag = new URLSearchParams(location.search).get('notrack');
   if (flag === '1') store(function(s) { s.setItem('cv-notrack', '1'); });
   if (flag === '0') store(function(s) { s.removeItem('cv-notrack'); });
-  if (store(function(s) { return s.getItem('cv-notrack'); }) === '1') return;
+  var own = store(function(s) { return s.getItem('cv-notrack'); }) === '1';
 
   // Automated browsers announce themselves through webdriver or their UA.
   // The server checks the UA as well; this flag catches the ones that hide it.
@@ -24,11 +25,11 @@
 
   // First visit to this page, and first visit to the site today, in this browser.
   var today = new Date().toISOString().slice(0, 10);
-  var newPage = bot ? false : store(function(s) {
+  var newPage = bot || own ? false : store(function(s) {
     if (s.getItem('cv-seen:' + page)) return false;
     s.setItem('cv-seen:' + page, '1'); return true;
   });
-  var newDay = bot ? false : store(function(s) {
+  var newDay = bot || own ? false : store(function(s) {
     if (s.getItem('cv-day') === today) return false;
     s.setItem('cv-day', today); return true;
   });
@@ -47,7 +48,7 @@
     }).catch(function(){});
   }
 
-  send({ page: page, event: 'pageview', device: device, referrer: ref, bot: bot,
+  send({ page: page, event: 'pageview', device: device, referrer: ref, bot: bot, own: own,
          newPage: newPage !== false, newDay: newDay !== false });
   if (bot) return;  // counted as a bot above; nothing else to record
 
@@ -80,7 +81,7 @@
   // so a visitor who comes back to the tab just extends the same visit.
   function report() {
     send({ page: page, event: 'visit', id: visit.id, start: visit.start,
-           dur: seconds(), device: device, referrer: ref, clicks: visit.clicks }, true);
+           dur: seconds(), device: device, referrer: ref, clicks: visit.clicks, own: own }, true);
   }
 
   document.addEventListener('visibilitychange', function() {
@@ -101,7 +102,7 @@
     if (!el) return;
 
     // Nav links keep feeding the site-wide menu counter.
-    if (el.matches('.nav-links a, .nav-mobile a')) {
+    if (!own && el.matches('.nav-links a, .nav-mobile a')) {
       send({ page: page, event: 'click', target: el.textContent.trim() });
     }
 
