@@ -1,0 +1,380 @@
+/* Huma — open application, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /huma and by cv.html?job=huma, from the head script.
+
+   Read off humahr.com (HubSpot theme, template_style.min.css):
+     #632340  aubergine: their purple buttons, dark bands, headings in accents
+     #ffb64b  yellow: the main button (with aubergine text), small marks
+     #ffc97a  the lighter yellow it hovers towards
+     #161513  near-black ink for body copy and headings
+     #fafaf9  the off-white page
+     #fbf1db  cream panels      #fcd9ea / #eebfd9  pink panels
+     #e3e2e1 / #cccbca  warm grey borders     #595958 / #848382  muted text
+
+   Type: Recoleta Bold for headings, Apercu Pro for everything else. Both are
+   licensed fonts, so Fraunces (soft axis turned up) and DM Sans stand in.
+   Buttons are 12px rounded with a 2px border; cards 16px.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght,SOFT@9..144,600;9..144,700,100&display=swap');
+
+:root {
+  --bg:            #fafaf9;
+  --bg2:           #f5f4f3;
+  --bg3:           #fbf1db;
+  --white:         #ffffff;
+
+  --border:        #e3e2e1;
+  --border-light:  #efeeed;
+  --border-strong: #cccbca;
+
+  --ink:           #161513;
+  --ink-mid:       #3a3937;
+  --ink-light:     #595958;
+  --ink-dim:       #848382;
+
+  --amber:         #632340;
+  --amber-light:   #7d2d52;
+
+  --accent-rgb:    99,35,64;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        250,250,249;
+
+  --shadow:        0 1px 2px rgba(22,21,19,0.05);
+  --shadow-sm:     0 1px 2px rgba(22,21,19,0.04);
+  --shadow-lg:     0 10px 24px rgba(0,0,0,0.1);
+
+  --radius:        12px;
+  --radius-lg:     16px;
+  --radius-pill:   999px;
+
+  --photo-veil: linear-gradient(90deg, rgba(99,35,64,0.97) 0%, rgba(99,35,64,0.92) 50%, rgba(74,26,48,0.78) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23632340' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'DM Sans', system-ui, sans-serif;
+  --mono:  'DM Sans', system-ui, sans-serif;
+}
+
+body { background: #fafaf9; color: var(--ink-mid); font-family: var(--sans); }
+::selection { background: #ffb64b; color: #632340; }
+strong, b { font-weight: 700; }
+
+/* Type: the soft serif, bold and upright, for every heading. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--serif);
+  font-variation-settings: 'SOFT' 100;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #161513;
+}
+.hero-role,
+.about-quote,
+.job-about,
+.point-quote { font-style: normal; }
+
+.sec-title { font-size: clamp(1.9rem, 3.8vw, 2.8rem); line-height: 1.15; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: #632340;
+}
+
+/* Nav: off-white bar, Contact as the yellow button. */
+.nav {
+  background: rgba(250,250,249,0.92);
+  border-bottom: 1px solid #e3e2e1;
+  box-shadow: none;
+}
+.nav-links a { font-family: var(--sans); color: #161513; font-weight: 500; border-radius: 12px; }
+.nav-links a:hover { color: #632340; background: #fbf1db; }
+.nav-links a.active { color: #632340; background: #fbf1db; box-shadow: none; }
+.nav-contact-link a { color: #632340; background: #ffb64b; border: 2px solid #ffb64b; border-radius: 12px; font-weight: 500; }
+.nav-contact-link a:hover { color: #632340; background: #ffb64b; box-shadow: 0 10px 24px rgba(0,0,0,0.1); }
+.brand { font-family: var(--serif); font-variation-settings: 'SOFT' 100; font-weight: 700; color: #632340; letter-spacing: -0.01em; }
+.brand em { font-style: normal; color: #632340; }
+.brand-dot { background: #ffb64b; }
+.lang-toggle { background: transparent; border: 2px solid #632340; border-radius: 12px; color: #632340; font-weight: 500; }
+.lang-toggle:hover { background: #632340; border-color: #632340; color: #ffb64b; }
+.nav-hamburger span { background: #632340; }
+.nav-mobile { background: #fafaf9; }
+.nav-mobile a { font-family: var(--sans); color: #161513; border-color: #efeeed; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #632340; background: #fbf1db; }
+
+/* Buttons: Huma's yellow and aubergine pair, 12px, 2px border, lift on hover. */
+.btn { font-family: var(--sans); font-weight: 500; border-radius: 12px; border-width: 2px; border-style: solid; transition: box-shadow .25s ease-in-out, background-color .25s ease-in-out, color .25s ease-in-out; }
+.btn-primary { background: #ffb64b; border-color: #ffb64b; color: #632340; box-shadow: none; }
+.btn-primary:hover { background: #ffb64b; border-color: #ffb64b; color: #632340; box-shadow: 0 10px 24px rgba(0,0,0,0.1); }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost { background: transparent; border-color: #632340; color: #632340; backdrop-filter: none; }
+.btn-ghost:hover { background: #632340; border-color: #632340; color: #ffb64b; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #fafaf9, 0 0 0 4px #632340; }
+
+/* Cards: white, warm hairline, 16px corners. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #e3e2e1;
+  border-radius: 16px;
+  box-shadow: none;
+}
+.card:hover { border-color: #eebfd9; box-shadow: 0 10px 24px rgba(0,0,0,0.075); }
+.pill { background: #ffffff; border-color: #e3e2e1; color: #3a3937; border-radius: 999px; font-weight: 500; }
+.pill--accent { background: #632340; border-color: #632340; color: #ffb64b; font-weight: 500; }
+.cv-card .edu-card { background: none; border: none; box-shadow: none; padding: 0; }
+.cv-card .edu-card:hover { border: none; box-shadow: none; }
+.pick { background: #fbf1db; border-color: #fbf1db; border-radius: 16px; }
+.pick b { color: #632340; }
+
+/* Hero: the aubergine band, the role line in yellow. */
+#top { --ink: #ffffff; --ink-mid: #fbf1db; --ink-light: #eebfd9; --ink-dim: #d9a9c1; color: var(--ink-mid); }
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.32rem 0.8rem;
+  border: none;
+  border-radius: 999px;
+  background: #ffb64b;
+  color: #632340;
+}
+#top .hero-name { color: #ffffff; font-size: clamp(2.8rem, 7vw, 4.8rem); line-height: 1.05; letter-spacing: -0.015em; }
+#top .hero-role {
+  font-family: var(--serif);
+  font-variation-settings: 'SOFT' 100;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+  letter-spacing: -0.01em;
+  color: #ffb64b;
+}
+#top .hero-role::before { background: #ffb64b; }
+#top .hero-lead { color: #fbf1db; font-weight: 400; }
+#top .meta-row, #top .meta-row span { color: #eebfd9; }
+#top .meta-row .sep { color: #ffb64b; }
+#top .meta-row svg { stroke: #ffb64b; }
+#top .hero-photo { border: none; border-radius: 16px; box-shadow: 0 18px 44px rgba(0,0,0,0.35); overflow: hidden; }
+#top .btn-primary { background: #ffb64b; border-color: #ffb64b; color: #632340; }
+#top .btn-primary:hover { background: #ffc97a; border-color: #ffc97a; color: #632340; }
+#top .btn-ghost { background: transparent; border-color: #fbf1db; color: #fbf1db; }
+#top .btn-ghost:hover { background: #fbf1db; border-color: #fbf1db; color: #632340; }
+
+#top .stat-strip { background: rgba(255,255,255,0.06); backdrop-filter: none; border: 1px solid rgba(251,241,219,0.2); border-radius: 16px; box-shadow: none; }
+#top .stat { border-color: rgba(251,241,219,0.2); }
+.bento > #top > .wrap .stat,
+.bento > #top > .wrap .stat:first-child { padding: 0.85rem 1.2rem 0.9rem; }
+#top .stat-num { font-family: var(--serif); font-variation-settings: 'SOFT' 100; font-weight: 700; letter-spacing: -0.01em; color: #ffb64b; }
+#top .stat-label { font-family: var(--sans); font-weight: 400; letter-spacing: 0; text-transform: none; color: #fbf1db; }
+
+@media (max-width: 600px) {
+  .bento > #top > .wrap .stat-strip { grid-template-columns: 1fr; }
+  .bento > #top > .wrap .stat,
+  .bento > #top > .wrap .stat:first-child {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: baseline;
+    column-gap: 0.8rem;
+    padding: 0.75rem 1.1rem;
+    border-right: none;
+    border-top: 1px solid rgba(251,241,219,0.2);
+  }
+  .bento > #top > .wrap .stat:first-child { border-top: none; }
+  #top .eyebrow { border-radius: 12px; line-height: 1.5; }
+  #experience .job .job-company > span::after { border-radius: 12px; padding: 0.3rem 0.6rem; line-height: 1.45; }
+  .nav-links {
+    -webkit-mask-image: linear-gradient(90deg, #000 75%, transparent);
+            mask-image: linear-gradient(90deg, #000 75%, transparent);
+  }
+}
+
+/* Ask bar. */
+.ask { background: #ffffff; border-color: #e3e2e1; border-radius: 16px; }
+.ask-title { color: #161513; }
+.ask-input { background: #fafaf9; border: 1px solid #e3e2e1; border-radius: 12px; box-shadow: none; color: #161513; }
+.ask-input:focus { border-color: #632340; box-shadow: 0 0 0 3px rgba(99,35,64,0.14); }
+.ask-btn { background: #ffb64b; border-radius: 12px; }
+.ask-btn:hover { background: #ffc97a; }
+.ask-btn svg { stroke: #632340; }
+.ask-chip { background: #ffffff; border: 1px solid #e3e2e1; color: #3a3937; border-radius: 999px; }
+.ask-chip:hover { background: #fcd9ea; border-color: #eebfd9; color: #632340; }
+.ask-out { background: #fafaf9; border-color: #e3e2e1; border-radius: 12px; }
+.ask-dot { background: #632340; }
+
+/* About: the quote in the serif, the list on a pink panel. */
+#about .about-quote {
+  font-family: var(--serif);
+  font-variation-settings: 'SOFT' 100;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.3vw, 1.65rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #632340;
+  padding-left: 1rem;
+  border-left: 4px solid #ffb64b;
+}
+#about .brings { background: #fcd9ea; border: none; border-radius: 16px; box-shadow: none; }
+#about .brings-label { color: #632340; font-weight: 700; }
+#about .brings-list li { color: #161513; }
+
+/* What I bring: white cards on the cream band, the number in a yellow badge. */
+#match { background: #fbf1db; border-top: none; }
+#match .card { background: #ffffff; border-color: #f1e3c4; }
+#match .card:hover { border-color: #ffb64b; }
+#match .point-rule { display: none; }
+#match .point-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 12px;
+  background: #ffb64b;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #632340;
+}
+#match .point-title { font-size: 1.2rem; line-height: 1.25; color: #161513; }
+#match .point-quote { font-family: var(--sans); font-size: 0.95rem; color: #595958; border-left: 3px solid #eebfd9; }
+#match .point-body { color: #3a3937; }
+#match .point-roles { border-top: 1px solid #f5f4f3; }
+#match .point-roles .pill { background: #fbf1db; border-color: #fbf1db; color: #632340; }
+
+/* Projects: HR and onboarding first.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 7; }
+
+#built .built-icon { width: 44px; height: 44px; background: #fcd9ea; border: none; border-radius: 12px; }
+#built .built-icon svg { stroke: #632340; }
+.built-link { color: #2853ad; border-bottom: 1px solid #2853ad; font-weight: 500; }
+.built-link:hover { color: #234385; border-bottom-color: #234385; }
+
+/* Experience: a tag per role, filled dots on the HR-heavy ones.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #632340, #eebfd9 60%, #e3e2e1 88%, transparent); }
+.job::before { background: #fafaf9; border-color: #632340; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(3)::before,
+#experience .job:nth-of-type(4)::before { background: #ffb64b; border-color: #632340; }
+.job-company { color: #161513; font-weight: 700; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.65rem 0.12rem;
+  border-radius: 999px;
+  background: #fbf1db;
+  border: 1px solid #f1e3c4;
+  color: #632340;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'ATS · Advising managers'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'HR tech · HR courses'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'HR support · Onboarding'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'HR responsibility · SAM · ATS'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'LMS · Coaching'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'ATS · Rådgivning till chefer'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'HR-tech · HR-kurser'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'HR-stöd · Onboarding'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'HR-ansvar · SAM · ATS'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'LMS · Coachning'; }
+
+/* Roles I've recruited for. */
+#experience .roles-card { background: #f5f4f3; border-color: #e3e2e1; }
+.roles-group .pill { background: #ffffff; border-color: #e3e2e1; }
+
+/* Education. */
+#education .edu-school { color: #161513; font-weight: 700; }
+#education .callout { background: #632340; border: none; border-radius: 16px; }
+#education .callout-label { color: #ffb64b; }
+#education .callout-title { color: #ffffff; }
+#education .callout-text { color: #fbf1db; }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+3),
+#education .tool-group:nth-of-type(2) .pill:nth-child(-n+3) { background: #fbf1db; border-color: #f1e3c4; color: #632340; font-weight: 700; }
+
+/* Contact: the aubergine tile, facts as yellow-edged pills. */
+#contact { --ink: #ffffff; --ink-mid: #fbf1db; --ink-light: #eebfd9; --ink-dim: #d9a9c1; }
+#contact::after { background: radial-gradient(120% 140% at 100% 0%, #7d2d52 0%, #632340 55%); }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead { color: #fbf1db; }
+#contact .eyebrow { color: #ffb64b; }
+#contact .btn-ghost { background: transparent; border-color: #fbf1db; color: #fbf1db; }
+#contact .btn-ghost:hover { background: #fbf1db; border-color: #fbf1db; color: #632340; }
+#contact .btn-primary { background: #ffb64b; border-color: #ffb64b; color: #632340; }
+#contact .btn-primary:hover { background: #ffc97a; border-color: #ffc97a; color: #632340; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts span { padding: 0.45rem 1.1rem; border: 1px solid rgba(255,182,75,0.55); border-radius: 999px; background: rgba(255,255,255,0.06); color: #ffffff; }
+
+.site-footer { background: #161513; border-top: none; padding: 2.2rem 0 2rem; }
+.site-footer p { font-family: var(--sans); font-size: 0.9rem; color: #cccbca; }
+.site-footer a { color: #ffffff; font-weight: 500; border-bottom: 1px solid #ffb64b; }
+.site-footer a:hover { color: #ffb64b; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The PDF is printed on white: near-black headings, aubergine for marks,
+   yellow kept to the small accents.
+   ───────────────────────────────────────────────────────────────────────── */
+@media print {
+  :root { --amber: #632340; }
+  .cv-name, .sec-title, .job-title, .edu-degree, .job-company, .edu-school { color: #161513; }
+  .hero-role { color: #632340; }
+  .cv-card { background: #fbf1db !important; border: none; border-radius: 0; box-shadow: none; }
+  .cv-main { background: none !important; border: none; border-radius: 0; box-shadow: none; padding: 0; }
+  .cv-card .pill, .pill { background: #ffffff; border-color: #f1e3c4; color: #3a3937; }
+  .cv-card .pill--accent { background: #632340; border-color: #632340; color: #ffb64b; }
+  .cv-card .pill { padding: 0.5mm 2.2mm; line-height: 1.35; }
+  .eyebrow, .tool-label { color: #632340; }
+  .job::before { background: #ffb64b; border-color: #632340; }
+  .timeline::before { background: #632340; }
+}
