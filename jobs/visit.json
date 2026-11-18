@@ -1,0 +1,871 @@
+{
+  "company": "VISIT",
+  "roleName": "Group Learning & Development Lead",
+  "eyebrow": {
+    "en": "Application · Group Learning & Development Lead · VISIT",
+    "sv": "Ansökan · Group Learning & Development Lead · VISIT"
+  },
+  "role": {
+    "en": "Learning and development in organisations",
+    "sv": "Lärande och utveckling i organisationer"
+  },
+  "lead": {
+    "en": "My first job after graduating was as an education manager at a vocational college in IT, where I led and developed the programmes in close collaboration with working life. Since then I have worked with learning and HR at consulting companies and at a Nordic HR tech company. I have developed courses and workshops, helped shape an internal LMS and built structured onboarding in two companies. I am AI-native and build my own tools with AI as part of my daily work. I now want to use my experience to develop the competence of employees and managers to help the organisation reach its goals, and to make use of what AI can bring to learning.",
+    "sv": "Mitt första jobb efter examen var som utbildningsledare på en yrkeshögskola inom IT, där jag ledde och utvecklade utbildningarna i nära samarbete med arbetslivet. Sedan dess har jag arbetat med lärande och HR i konsultbolag och på ett nordiskt HR-techbolag. Jag har utvecklat kurser och workshops, varit med och utformat ett internt LMS och byggt upp strukturerad onboarding i två bolag. Jag är AI-native och bygger egna verktyg med AI i mitt dagliga arbete. Nu vill jag använda min erfarenhet till att utveckla kompetens hos medarbetare och chefer för att hjälpa organisationen att nå sina mål, och ta vara på det AI kan tillföra lärandet."
+  },
+  "cta": {
+    "en": "See how I match the role",
+    "sv": "Se hur jag matchar rollen"
+  },
+  "matchEyebrow": {
+    "en": "How I match",
+    "sv": "Hur jag matchar"
+  },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Below are the responsibilities and qualifications described in the ad, together with my experience in each area.",
+    "sv": "Nedan följer annonsens arbetsuppgifter och kvalifikationer, tillsammans med min erfarenhet inom respektive område."
+  },
+  "points": [
+    {
+      "title": {
+        "en": "A plan for learning, followed up on results",
+        "sv": "En plan för lärandet, med uppföljning av resultat"
+      },
+      "quote": {
+        "en": "Own and shape the group's L&D strategy, roadmap and annual plan together with the CHRO and leadership teams, and follow up on impact rather than activity.",
+        "sv": "Äga och forma koncernens strategi, färdplan och årsplan för L&D tillsammans med CHRO och ledningsgrupperna, och följa upp effekt snarare än aktivitet."
+      },
+      "body": {
+        "en": "At a vocational college in IT I was responsible for leading and developing the programmes, and I drove them towards set targets. I ran the programmes' steering group work, where representatives from the industry took part in shaping the content. I matched the content of the programmes against the competences the labour market asked for. At an IT consultancy I was part of the management team and responsible for the company's talent acquisition strategy.",
+        "sv": "På en yrkeshögskola inom IT ansvarade jag för att leda och utveckla utbildningarna och drev dem mot uppsatta resultatmål. Jag höll i utbildningarnas ledningsgruppsarbete, där företrädare för branschen var med och påverkade innehållet. Jag matchade utbildningarnas innehåll mot de kompetenser som arbetsmarknaden efterfrågade. I ett IT-konsultbolag satt jag i ledningsgruppen och ansvarade för bolagets strategi för talent acquisition."
+      },
+      "roles": [
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Courses, training and workshops",
+        "sv": "Kurser, utbildningar och workshops"
+      },
+      "quote": {
+        "en": "Design and deliver engaging digital training and virtual workshops for colleagues in every country.",
+        "sv": "Utforma och genomföra engagerande digitala utbildningar och virtuella workshops för medarbetare i alla länder."
+      },
+      "body": {
+        "en": "At a Nordic HR tech company I developed and improved courses within HR and Learning & Development, with a focus on the pedagogical structure. I worked closely with subject matter experts and worked market insights and research into the content. At a consultancy focused on education I delivered training internally and externally, and created internal workshops, among them training in gamification methodology. At the HR tech company I planned and ran conferences and training sessions with a focus on what the participants took away from them.",
+        "sv": "På ett nordiskt HR-techbolag utvecklade och förbättrade jag kurser inom HR och Learning & Development, med fokus på den pedagogiska strukturen. Jag arbetade nära ämnesexperter och arbetade in marknadsinsikter och forskning i innehållet. I ett konsultbolag med fokus på utbildning höll jag utbildningar internt och externt och tog fram interna workshops, bland annat i gamification-metodik. På HR-techbolaget planerade och genomförde jag konferenser och utbildningstillfällen med fokus på deltagarvärde."
+      },
+      "roles": [
+        {
+          "en": "Course Developer",
+          "sv": "Kursutvecklare"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Team development and onboarding",
+        "sv": "Teamutveckling och onboarding"
+      },
+      "quote": {
+        "en": "Build leadership development, with a leadership framework, leadership training and onboarding for new and promoted managers.",
+        "sv": "Bygga ledarutveckling, med ett ledarskapsramverk, ledarskapsutbildning och onboarding för nya och befordrade chefer."
+      },
+      "body": {
+        "en": "I have developed Role for Growth, a method for team development where a team plays a scenario based on a real challenge and then goes through it in a structured debrief. Each participant chooses one skill to develop, and the follow-up runs over six weeks. At two consulting companies I built structured onboarding processes for new hires where none existed before, with documentation and help material. With AI I have since built my own onboarding platform, where the content is adapted to role and department.",
+        "sv": "Jag har utvecklat Role for Growth, en metod för teamutveckling där teamet spelar ett scenario utifrån en verklig utmaning och därefter går igenom det i en strukturerad debrief. Varje deltagare väljer en förmåga att utveckla, och uppföljningen pågår i sex veckor. I två konsultbolag byggde jag upp strukturerade onboardingprocesser för nyanställda där det tidigare saknades, med dokumentation och hjälpmaterial. Med AI har jag sedan byggt en egen onboardingplattform, där innehållet anpassas efter roll och avdelning."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Competence development and career paths",
+        "sv": "Kompetensutveckling och karriärvägar"
+      },
+      "quote": {
+        "en": "Run talent reviews and succession planning for key positions together with the CHRO and senior leadership.",
+        "sv": "Driva talent reviews och successionsplanering för nyckelpositioner tillsammans med CHRO och högsta ledningen."
+      },
+      "body": {
+        "en": "At an IT consultancy I held HR-related responsibility for a consultant group of 15+ people. I held development talks with the consultants and carried out competence development activities in the group. At the same company I helped build a career programme for junior developers, where we set out what the participants would learn and what support they would have along the way. At the vocational college I coached and guided 100 students ahead of their move into working life.",
+        "sv": "I ett IT-konsultbolag hade jag HR-relaterat ansvar för en konsultgrupp på 15+ personer. Jag höll utvecklingssamtal med konsulterna och genomförde kompetensutvecklingsinsatser i gruppen. I samma bolag var jag med och byggde ett karriärprogram för juniora utvecklare, där vi lade upp vad deltagarna skulle lära sig och vilket stöd de skulle ha längs vägen. På yrkeshögskolan coachade och vägledde jag 100 studerande inför övergången till arbetslivet."
+      },
+      "roles": [
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Education Manager / ICT Manager",
+          "sv": "Utbildningsledare / ICT-ansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "AI in my own work and in learning",
+        "sv": "AI i det egna arbetet och i lärandet"
+      },
+      "quote": {
+        "en": "Practical experience of using AI in your own work, and drive AI upskilling together with the Head of AI.",
+        "sv": "Praktisk erfarenhet av att använda AI i det egna arbetet, och driva kompetenshöjningen inom AI tillsammans med Head of AI."
+      },
+      "body": {
+        "en": "I am AI-native and build my own tools with AI, without a background in programming. I use Claude every day, together with Claude Code. When something in my work can be solved more efficiently I build a tool for it, among other things a recruitment operating system and an onboarding platform where new hires follow a plan for their first two weeks. I teach what I build to the people who are going to use it.",
+        "sv": "Jag är AI-native och bygger egna verktyg med AI, utan bakgrund inom programmering. Jag använder Claude varje dag, tillsammans med Claude Code. När något i arbetet kan lösas mer effektivt bygger jag ett verktyg för det, bland annat ett operativsystem för rekrytering och en onboardingplattform där den nyanställda följer en plan för de två första veckorna. Det jag bygger lär jag ut till dem som ska använda det."
+      }
+    },
+    {
+      "title": {
+        "en": "Advising managers and following up on engagement",
+        "sv": "Rådgivning till chefer och uppföljning av engagemang"
+      },
+      "quote": {
+        "en": "Strengthen performance, engagement and a culture of coaching and feedback, and help managers act on the insights.",
+        "sv": "Stärka prestation, engagemang och en kultur av coachning och feedback, och hjälpa chefer att agera på insikterna."
+      },
+      "body": {
+        "en": "As a recruiter I advised hiring managers on processes, timelines and the evaluation of candidates. At an IT consultancy I was part of the management team and worked closely with the other managers. At a consultant broker in IT I designed an onboarding process with the aim of strengthening engagement and retention, and I kept in regular contact with the consultants during their assignments. In my daily work I have used Winningtemp, a tool for following up on employee engagement.",
+        "sv": "Som rekryterare rådgav jag rekryterande chefer kring processer, tidplaner och bedömning av kandidater. I ett IT-konsultbolag satt jag i ledningsgruppen och arbetade nära de andra cheferna. På en konsultförmedlare inom IT utformade jag en onboardingprocess med syftet att stärka engagemanget och få konsulterna att stanna längre, och jag höll regelbunden kontakt med konsulterna under uppdragen. I vardagen har jag använt Winningtemp, ett verktyg för att följa upp medarbetarnas engagemang."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "HR operations and recruitment",
+        "sv": "HR-drift och rekrytering"
+      },
+      "quote": {
+        "en": "As HR Operations & Recruitment partner for one country: recruitment, onboarding, contracts, HR system data and payroll input.",
+        "sv": "Som HR Operations & Recruitment partner för ett land: rekrytering, onboarding, avtal, data i HR-systemet och underlag till lönen."
+      },
+      "body": {
+        "en": "I have worked with recruitment as my main task for about five years, at a recruitment and consulting company and at two IT companies, and run the processes from needs analysis to final selection. At an IT consultancy I worked with employment contracts and terminations under Swedish employment protection law for the consultant group. At the same company I led the implementation of an ATS and set up the workflows in it. In my daily work I have used Teamtailor and Workbuster, and I get into new HR systems quickly.",
+        "sv": "Jag har haft rekrytering som huvuduppgift i ca fem år, i ett rekryterings- och konsultföretag och i två IT-bolag, och drivit processerna från behovsanalys till slutligt urval. I ett IT-konsultbolag arbetade jag med anställningsavtal och uppsägningar enligt LAS för konsultgruppen. I samma bolag ledde jag införandet av ett ATS och byggde upp arbetsflödena i det. I vardagen har jag arbetat i Teamtailor och Workbuster, och jag kommer snabbt in i nya HR-system."
+      },
+      "roles": [
+        {
+          "en": "Recruitment Consultant",
+          "sv": "Rekryteringskonsult"
+        },
+        {
+          "en": "Talent Acquisition Lead / Consultant Manager",
+          "sv": "Talent Acquisition Lead / Konsultansvarig"
+        },
+        {
+          "en": "Business Manager",
+          "sv": "Affärsansvarig"
+        }
+      ]
+    }
+  ],
+  "roles": {
+    "title": {
+      "en": "Work I have done in learning and HR",
+      "sv": "Insatser jag har arbetat med inom lärande och HR"
+    },
+    "lead": {
+      "en": "A selection, from vocational higher education and working life.",
+      "sv": "Ett urval, från yrkeshögskolan och arbetslivet."
+    },
+    "groups": [
+      {
+        "label": {
+          "en": "Vocational higher education",
+          "sv": "Yrkeshögskola"
+        },
+        "items": [
+          {
+            "en": "IT programmes",
+            "sv": "YH-utbildningar inom IT"
+          },
+          {
+            "en": "Steering group work",
+            "sv": "Ledningsgruppsarbete"
+          },
+          {
+            "en": "LMS structure",
+            "sv": "LMS-struktur"
+          },
+          {
+            "en": "Student admissions",
+            "sv": "Antagning av studerande"
+          },
+          {
+            "en": "Career coaching for students",
+            "sv": "Karriärcoachning av studerande"
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "Courses and training",
+          "sv": "Kurser och utbildningar"
+        },
+        "items": [
+          {
+            "en": "Courses in HR",
+            "sv": "Kurser inom HR"
+          },
+          {
+            "en": "Internal and external training",
+            "sv": "Interna och externa utbildningar"
+          },
+          {
+            "en": "Training deliveries at different levels",
+            "sv": "Utbildningsleveranser på olika nivåer"
+          },
+          {
+            "en": "Conferences",
+            "sv": "Konferenser"
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "Learning at work",
+          "sv": "Lärande på arbetsplatsen"
+        },
+        "items": [
+          {
+            "en": "Internal learning platform",
+            "sv": "Intern lärplattform"
+          },
+          {
+            "en": "Career programme for junior developers",
+            "sv": "Karriärprogram för juniora utvecklare"
+          },
+          {
+            "en": "Onboarding for new hires",
+            "sv": "Onboarding för nyanställda"
+          },
+          {
+            "en": "Internal workshops",
+            "sv": "Interna workshops"
+          },
+          {
+            "en": "Gamification methodology",
+            "sv": "Gamification-metodik"
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "HR and recruitment",
+          "sv": "HR och rekrytering"
+        },
+        "items": [
+          {
+            "en": "Recruitment of developers and engineers",
+            "sv": "Rekrytering av utvecklare och ingenjörer"
+          },
+          {
+            "en": "ATS implementation",
+            "sv": "Införande av ATS"
+          },
+          {
+            "en": "HR support for consultants",
+            "sv": "HR-stöd till konsulter"
+          },
+          {
+            "en": "Systematic work environment management (SAM)",
+            "sv": "Systematiskt arbetsmiljöarbete (SAM)"
+          }
+        ]
+      },
+      {
+        "label": {
+          "en": "My own methods and tools",
+          "sv": "Egna metoder och verktyg"
+        },
+        "items": [
+          "Role for Growth",
+          {
+            "en": "Onboarding platform",
+            "sv": "Onboardingplattform"
+          },
+          {
+            "en": "Recruitment operating system",
+            "sv": "Operativsystem för rekrytering"
+          }
+        ]
+      }
+    ]
+  },
+  "text": {
+    ".nav-links li:nth-child(2) a": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    ".nav-mobile a:nth-child(2)": {
+      "en": "How I match",
+      "sv": "Hur jag matchar"
+    },
+    "#top .meta-row > span:last-child": {
+      "en": "Certified Education Manager",
+      "sv": "Certifierad utbildningsledare"
+    },
+    "#top .stat-num": [
+      "4",
+      "15+",
+      "AI"
+    ],
+    "#top .stat-label": [
+      {
+        "en": "Years working with education and learning",
+        "sv": "År med utbildning och lärande"
+      },
+      {
+        "en": "Consultants I held HR-related responsibility for",
+        "sv": "Konsulter som jag hade HR-relaterat ansvar för"
+      },
+      {
+        "en": "Experience and skills in developing my own tools with AI",
+        "sv": "Erfarenhet och kompetens av att utveckla egna verktyg med AI"
+      }
+    ],
+    ".ask-title": {
+      "en": "Ask about my background in learning and HR",
+      "sv": "Fråga om min bakgrund inom lärande och HR"
+    },
+    "#ask-chips .ask-chip": [
+      {
+        "en": "What did he do as an education manager?",
+        "sv": "Vad gjorde han som utbildningsledare?"
+      },
+      {
+        "en": "How does he use AI in his work?",
+        "sv": "Hur använder han AI i sitt arbete?"
+      },
+      {
+        "en": "What HR operations experience does he have?",
+        "sv": "Vilken erfarenhet har han av HR-drift?"
+      }
+    ],
+    "#about .sec-title": {
+      "en": "People and learning",
+      "sv": "Människor och lärande"
+    },
+    "#about .about-quote": {
+      "en": "Learning should be possible to use in the daily work.",
+      "sv": "Lärande ska gå att använda i det dagliga arbetet."
+    },
+    "#about .about-body": [
+      {
+        "en": "My interest in learning has always been there, long before I started working with education. I am curious, like to get into new subjects and pick up new systems quickly. I want to understand what people need in order to develop in their work.",
+        "sv": "Mitt intresse för lärande har alltid funnits där, långt innan jag började arbeta med utbildning. Jag är nyfiken, sätter mig gärna in i nya områden och kommer snabbt in i nya system. Jag vill förstå vad människor behöver för att utvecklas i sitt arbete."
+      },
+      {
+        "en": "I work in a structured way and want to see a piece of work go from idea to finished solution. When something in my work can be solved more efficiently, I build my own tools with AI. In my spare time I read a lot about AI.",
+        "sv": "Jag arbetar strukturerat och vill se ett arbete gå från idé till färdig lösning. När något i arbetet kan lösas mer effektivt bygger jag egna verktyg med AI. På fritiden läser jag mycket om AI."
+      }
+    ],
+    "#about .brings-list li": [
+      {
+        "en": "A clear plan for learning, followed up on results",
+        "sv": "En tydlig plan för lärandet, med uppföljning av resultat"
+      },
+      {
+        "en": "Courses and workshops",
+        "sv": "Kurser och workshops"
+      },
+      {
+        "en": "Team development and onboarding",
+        "sv": "Teamutveckling och onboarding"
+      },
+      {
+        "en": "AI as a natural part of learning",
+        "sv": "AI som en naturlig del av lärandet"
+      },
+      {
+        "en": "Experience from HR and recruitment",
+        "sv": "Erfarenhet av HR och rekrytering"
+      }
+    ],
+    "#built .sec-lead": {
+      "en": "The first section shows what I built with colleagues at work, among other things an internal LMS and a career programme for junior developers. The second shows methods and tools I have developed myself, most of them with AI.",
+      "sv": "Den första delen visar det jag byggde med kollegor på jobbet, bland annat ett internt LMS och ett karriärprogram för juniora utvecklare. Den andra visar metoder och verktyg som jag själv har utvecklat, de flesta med AI."
+    },
+    "#experience .sec-lead": {
+      "en": "All my positions have been in Gothenburg. The roles with a focus on learning and development are marked in the timeline.",
+      "sv": "Samtliga tjänster har varit i Göteborg. Rollerna med fokus på lärande och utveckling är markerade i tidslinjen."
+    },
+    "#experience .job:nth-of-type(2) .job-bullets li": [
+      {
+        "en": "Developed and improved courses within HR and Learning & Development",
+        "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development"
+      },
+      {
+        "en": "Improved course materials and their pedagogical structure",
+        "sv": "Förbättrade kursmaterial och den pedagogiska strukturen"
+      },
+      {
+        "en": "Ensured content was up to date and aligned with current HR trends and needs",
+        "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov"
+      },
+      {
+        "en": "Collaborated with subject matter experts to create relevant and high-quality training",
+        "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet"
+      },
+      {
+        "en": "Integrated market insights and research into training content",
+        "sv": "Integrerade marknadsinsikter och forskning i utbildningsinnehållet"
+      },
+      {
+        "en": "Planned and executed conferences focused on participant value",
+        "sv": "Planerade och genomförde konferenser med fokus på deltagarvärde"
+      }
+    ],
+    "#experience .job:nth-of-type(4) .job-desc": {
+      "en": "Part of the management team at a consultancy focused on education, responsible for talent acquisition and with HR-related responsibility for a consultant group of 15+ people.",
+      "sv": "Del av ledningsgruppen i ett konsultbolag med fokus på utbildning, med ansvar för talent acquisition och HR-relaterat ansvar för en konsultgrupp på 15+ personer."
+    },
+    "#experience .job:nth-of-type(4) .job-bullets li": [
+      {
+        "en": "Helped shape an internal Learning Management System (LMS) from the start and helped run it; it was later sold as a product to other companies",
+        "sv": "Var med från start och utformade ett internt Learning Management System (LMS) och var med och förvaltade det; det såldes senare som produkt till andra bolag"
+      },
+      {
+        "en": "Delivered training internally and externally, based on need",
+        "sv": "Höll utbildningar internt och externt, utifrån behov"
+      },
+      {
+        "en": "Created internal workshops and learning sessions, including gamification methodology training",
+        "sv": "Skapade interna workshops och lärandetillfällen, inklusive utbildning i gamification-metodik"
+      },
+      {
+        "en": "Helped build a career development programme aimed at supporting junior talent into the IT industry",
+        "sv": "Var med och byggde ett karriärutvecklingsprogram för att stötta juniora talanger in i IT-branschen"
+      },
+      {
+        "en": "Designed and executed a structured onboarding framework for new hires",
+        "sv": "Utformade och genomförde ett strukturerat onboardingramverk för nyanställda"
+      },
+      {
+        "en": "Produced documentation and help material, among other things for onboarding",
+        "sv": "Tog fram dokumentation och hjälpmaterial, bland annat för onboardingen"
+      },
+      {
+        "en": "Held HR-related responsibility for a consultant group of 15+ people and conducted competence development activities",
+        "sv": "Hade HR-relaterat ansvar för en konsultgrupp på 15+ personer och genomförde kompetensutvecklingsinsatser"
+      },
+      {
+        "en": "Led the company's talent acquisition strategy, including employer branding, process optimisation and ATS implementation",
+        "sv": "Ledde bolagets talent acquisition-strategi, inklusive employer branding, processoptimering och implementering av ATS"
+      },
+      {
+        "en": "Developed and built the framework for the company's systematic work environment management (SAM)",
+        "sv": "Tog fram och byggde ramverket för bolagets systematiska arbetsmiljöarbete (SAM)"
+      }
+    ],
+    "#experience .job:nth-of-type(5) .job-bullets li": [
+      {
+        "en": "Led and developed education programmes in close collaboration with the labour market",
+        "sv": "Ledde och utvecklade utbildningsprogram i nära samarbete med arbetsmarknaden"
+      },
+      {
+        "en": "Worked with competence supply by matching education to market needs",
+        "sv": "Arbetade med kompetensförsörjning genom att matcha utbildning mot marknadens behov"
+      },
+      {
+        "en": "Developed the LMS structure for the programmes and improved internal communication flows",
+        "sv": "Utvecklade LMS-strukturen för utbildningarna och förbättrade interna kommunikationsflöden"
+      },
+      {
+        "en": "Ran the programmes' steering group work",
+        "sv": "Drev utbildningarnas ledningsgruppsarbete"
+      },
+      {
+        "en": "Drove the programmes towards set targets",
+        "sv": "Drev utbildningarna mot uppsatta resultatmål"
+      },
+      {
+        "en": "Coached and guided 100 students in their career journey into the IT industry",
+        "sv": "Coachade och vägledde 100 studerande i deras karriärresa in i IT-branschen"
+      },
+      {
+        "en": "Handled the admission of students",
+        "sv": "Höll i antagningen av studerande"
+      },
+      {
+        "en": "Built and maintained partnerships with companies and external stakeholders",
+        "sv": "Byggde och underhöll partnerskap med företag och externa intressenter"
+      },
+      {
+        "en": "Secured internship placements and supported students in transitioning to working life",
+        "sv": "Säkrade praktikplatser och stöttade studenter i övergången till arbetslivet"
+      }
+    ],
+    "#education .sec-title": {
+      "en": "Education and skills",
+      "sv": "Utbildning och kompetens"
+    },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on people in digital and technical organisations.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot människor i digitala och tekniska organisationer."
+      },
+      {
+        "en": "Education management in vocational higher education, with a focus on pedagogical planning and course design.",
+        "sv": "Utbildningsledning inom yrkeshögskolan, med fokus på pedagogisk planering och kursdesign."
+      }
+    ],
+    "#education .callout-label": {
+      "en": "Behavioural science",
+      "sv": "Beteendevetenskap"
+    },
+    "#education .callout-title": {
+      "en": "What the degree gave me",
+      "sv": "Vad utbildningen gav mig"
+    },
+    "#education .callout-text": {
+      "en": "A grounding in how people and groups function in organisations. I draw on it when I plan training and team development.",
+      "sv": "En grund i hur människor och grupper fungerar i organisationer. Jag använder den när jag planerar utbildningsinsatser och teamutveckling."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      "Learning & Development",
+      {
+        "en": "Leadership & coaching",
+        "sv": "Ledarskap & coachning"
+      },
+      {
+        "en": "Instructional design & Course Development",
+        "sv": "Instruktionsdesign & kursutveckling"
+      },
+      "Learning Management Systems (LMS)",
+      {
+        "en": "Pedagogy & didactics",
+        "sv": "Pedagogik & didaktik"
+      },
+      "People & Culture",
+      "HR",
+      {
+        "en": "Recruitment & selection",
+        "sv": "Rekrytering & urval"
+      },
+      {
+        "en": "Competence supply",
+        "sv": "Kompetensförsörjning"
+      },
+      {
+        "en": "Project Management",
+        "sv": "Projektledning"
+      },
+      {
+        "en": "Communication",
+        "sv": "Kommunikation"
+      },
+      "Gamification",
+      "Employer Branding",
+      {
+        "en": "Swedish labour law",
+        "sv": "Svensk arbetsrätt"
+      }
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Claude Code",
+      "Office 365",
+      "Teamtailor",
+      "Workbuster",
+      "Winningtemp",
+      "Slack",
+      "Monday.com",
+      "Canva"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      {
+        "en": "Pedagogical, teaches what I build",
+        "sv": "Pedagogisk, lär ut det jag bygger"
+      },
+      {
+        "en": "Strategic and hands-on",
+        "sv": "Strategisk och handfast"
+      },
+      {
+        "en": "Advisory to managers and stakeholders",
+        "sv": "Rådgivande mot chefer och intressenter"
+      },
+      {
+        "en": "Structured and reliable",
+        "sv": "Strukturerad och pålitlig"
+      },
+      {
+        "en": "AI-native day to day",
+        "sv": "AI-native i vardagen"
+      },
+      {
+        "en": "Builds from zero",
+        "sv": "Bygger från noll"
+      }
+    ],
+    "#personal .sec-title": {
+      "en": "The person behind the application",
+      "sv": "Personen bakom ansökan"
+    },
+    "#personal .sec-lead": {
+      "en": "A little about who I am outside work.",
+      "sv": "Lite om vem jag är utanför jobbet."
+    },
+    "#contact .contact-facts span": [
+      {
+        "en": "Location: Gothenburg",
+        "sv": "Ort: Göteborg"
+      },
+      {
+        "en": "Languages: Swedish & English (fluent)",
+        "sv": "Språk: svenska & engelska (flytande)"
+      },
+      {
+        "en": "Education: BSc. Behavioural Science",
+        "sv": "Utbildning: kand. beteendevetenskap"
+      }
+    ]
+  },
+  "cv": {
+    "linkPage": true,
+    "text": {
+      ".job:nth-of-type(1) .job-bullets li": [
+        {
+          "en": "Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, from developers to engineers",
+          "sv": "Drev fullständiga rekryteringsprocesser, från behovsanalys till slutligt urval, över flera olika roller, från utvecklare till ingenjörer"
+        },
+        {
+          "en": "Advised hiring managers on recruitment processes, timelines, and candidate evaluation",
+          "sv": "Rådgav rekryterande chefer kring rekryteringsprocesser, tidplaner och kandidatutvärdering"
+        },
+        {
+          "en": "Coordinated and structured interview processes, including scheduling, preparation, and stakeholder communication",
+          "sv": "Koordinerade och strukturerade intervjuprocesser, inklusive schemaläggning, förberedelser och kommunikation med intressenter"
+        },
+        {
+          "en": "Worked continuously in ATS systems to manage candidate data and ensure accuracy throughout the process",
+          "sv": "Arbetade löpande i ATS-system för att hantera kandidatdata och säkerställa korrekthet genom hela processen"
+        },
+        {
+          "en": "Contributed to improving recruitment workflows and ensuring structured processes",
+          "sv": "Bidrog till att förbättra rekryteringsflöden och säkerställa strukturerade processer"
+        }
+      ],
+      ".cv-card:has(.tool-label[data-sv=\"Expertisområden\"]) .pill": [
+        "Learning & Development",
+        {
+          "en": "Leadership & coaching",
+          "sv": "Ledarskap & coachning"
+        },
+        {
+          "en": "Instructional design & Course Development",
+          "sv": "Instruktionsdesign & kursutveckling"
+        },
+        "Learning Management Systems (LMS)",
+        {
+          "en": "Pedagogy & didactics",
+          "sv": "Pedagogik & didaktik"
+        },
+        "People & Culture",
+        "HR",
+        {
+          "en": "Recruitment & selection",
+          "sv": "Rekrytering & urval"
+        },
+        {
+          "en": "Competence supply",
+          "sv": "Kompetensförsörjning"
+        },
+        {
+          "en": "Project Management",
+          "sv": "Projektledning"
+        },
+        {
+          "en": "Communication",
+          "sv": "Kommunikation"
+        },
+        "Gamification",
+        "Employer Branding",
+        {
+          "en": "Swedish labour law",
+          "sv": "Svensk arbetsrätt"
+        }
+      ],
+      ".cv-card:has(.tool-label[data-sv=\"System & verktyg\"]) .pill": [
+        "Claude Code",
+        "Office 365",
+        "Teamtailor",
+        "Workbuster",
+        "Winningtemp",
+        "Slack",
+        "Monday.com",
+        "Canva"
+      ],
+      ".cv-card:has(.tool-label[data-sv=\"Så arbetar jag\"]) .pill": [
+        {
+          "en": "Pedagogical, teaches what I build",
+          "sv": "Pedagogisk, lär ut det jag bygger"
+        },
+        {
+          "en": "Strategic and hands-on",
+          "sv": "Strategisk och handfast"
+        },
+        {
+          "en": "Advisory to managers and stakeholders",
+          "sv": "Rådgivande mot chefer och intressenter"
+        },
+        {
+          "en": "Structured and reliable",
+          "sv": "Strukturerad och pålitlig"
+        },
+        {
+          "en": "AI-native day to day",
+          "sv": "AI-native i vardagen"
+        },
+        {
+          "en": "Builds from zero",
+          "sv": "Bygger från noll"
+        }
+      ],
+      ".job:nth-of-type(2) .job-bullets li": [
+        {
+          "en": "Developed and improved courses within HR and Learning & Development",
+          "sv": "Utvecklade och förbättrade kurser inom HR och Learning & Development"
+        },
+        {
+          "en": "Improved course materials and their pedagogical structure",
+          "sv": "Förbättrade kursmaterial och den pedagogiska strukturen"
+        },
+        {
+          "en": "Ensured content was up to date and aligned with current HR trends and needs",
+          "sv": "Säkerställde att innehållet var aktuellt och i linje med nuvarande HR-trender och behov"
+        },
+        {
+          "en": "Collaborated with subject matter experts to create relevant and high-quality training",
+          "sv": "Samarbetade med ämnesexperter för att skapa relevant utbildning av hög kvalitet"
+        },
+        {
+          "en": "Integrated market insights and research into training content",
+          "sv": "Integrerade marknadsinsikter och forskning i utbildningsinnehållet"
+        },
+        {
+          "en": "Planned and executed conferences focused on participant value",
+          "sv": "Planerade och genomförde konferenser med fokus på deltagarvärde"
+        }
+      ],
+      ".job:nth-of-type(4) .job-desc": {
+        "en": "Part of the management team at a consultancy focused on education, responsible for talent acquisition and with HR-related responsibility for a consultant group of 15+ people.",
+        "sv": "Del av ledningsgruppen i ett konsultbolag med fokus på utbildning, med ansvar för talent acquisition och HR-relaterat ansvar för en konsultgrupp på 15+ personer."
+      },
+      ".job:nth-of-type(4) .job-bullets li": [
+        {
+          "en": "Helped shape an internal Learning Management System (LMS) from the start and helped run it; it was later sold as a product to other companies",
+          "sv": "Var med från start och utformade ett internt Learning Management System (LMS) och var med och förvaltade det; det såldes senare som produkt till andra bolag"
+        },
+        {
+          "en": "Delivered training internally and externally, based on need",
+          "sv": "Höll utbildningar internt och externt, utifrån behov"
+        },
+        {
+          "en": "Created internal workshops and learning sessions, including gamification methodology training",
+          "sv": "Skapade interna workshops och lärandetillfällen, inklusive utbildning i gamification-metodik"
+        },
+        {
+          "en": "Helped build a career development programme aimed at supporting junior talent into the IT industry",
+          "sv": "Var med och byggde ett karriärutvecklingsprogram för att stötta juniora talanger in i IT-branschen"
+        },
+        {
+          "en": "Designed and executed a structured onboarding framework for new hires",
+          "sv": "Utformade och genomförde ett strukturerat onboardingramverk för nyanställda"
+        },
+        {
+          "en": "Produced documentation and help material, among other things for onboarding",
+          "sv": "Tog fram dokumentation och hjälpmaterial, bland annat för onboardingen"
+        },
+        {
+          "en": "Held HR-related responsibility for a consultant group of 15+ people and conducted competence development activities",
+          "sv": "Hade HR-relaterat ansvar för en konsultgrupp på 15+ personer och genomförde kompetensutvecklingsinsatser"
+        },
+        {
+          "en": "Led the company's talent acquisition strategy, including employer branding, process optimisation and ATS implementation",
+          "sv": "Ledde bolagets talent acquisition-strategi, inklusive employer branding, processoptimering och implementering av ATS"
+        },
+        {
+          "en": "Developed and built the framework for the company's systematic work environment management (SAM)",
+          "sv": "Tog fram och byggde ramverket för bolagets systematiska arbetsmiljöarbete (SAM)"
+        }
+      ],
+      ".job:nth-of-type(5) .job-bullets li": [
+        {
+          "en": "Led and developed education programmes in close collaboration with the labour market",
+          "sv": "Ledde och utvecklade utbildningsprogram i nära samarbete med arbetsmarknaden"
+        },
+        {
+          "en": "Worked with competence supply by matching education to market needs",
+          "sv": "Arbetade med kompetensförsörjning genom att matcha utbildning mot marknadens behov"
+        },
+        {
+          "en": "Developed the LMS structure for the programmes and improved internal communication flows",
+          "sv": "Utvecklade LMS-strukturen för utbildningarna och förbättrade interna kommunikationsflöden"
+        },
+        {
+          "en": "Ran the programmes' steering group work",
+          "sv": "Drev utbildningarnas ledningsgruppsarbete"
+        },
+        {
+          "en": "Drove the programmes towards set targets",
+          "sv": "Drev utbildningarna mot uppsatta resultatmål"
+        },
+        {
+          "en": "Coached and guided 100 students in their career journey into the IT industry",
+          "sv": "Coachade och vägledde 100 studerande i deras karriärresa in i IT-branschen"
+        },
+        {
+          "en": "Handled the admission of students",
+          "sv": "Höll i antagningen av studerande"
+        },
+        {
+          "en": "Built and maintained partnerships with companies and external stakeholders",
+          "sv": "Byggde och underhöll partnerskap med företag och externa intressenter"
+        },
+        {
+          "en": "Secured internship placements and supported students in transitioning to working life",
+          "sv": "Säkrade praktikplatser och stöttade studenter i övergången till arbetslivet"
+        }
+      ]
+    }
+  }
+}
