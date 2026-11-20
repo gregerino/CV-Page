@@ -21,6 +21,10 @@
   ],
   "redirects": [
     {
+      "source": "/tranprenad",
+      "destination": "/tranpenad"
+    },
+    {
       "source": "/about.html",
       "destination": "/#about"
     },
