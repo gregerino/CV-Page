@@ -668,28 +668,28 @@
     ],
     "#education .tool-group:nth-of-type(3) .pill": [
       {
-        "en": "Structured and process-driven",
-        "sv": "Strukturerad och processdriven"
+        "en": "Structured and solution-oriented",
+        "sv": "Strukturerad och lösningsorienterad"
       },
       {
-        "en": "Comfortable with many parallel processes",
-        "sv": "Trygg med många parallella processer"
+        "en": "Prioritises between tasks and deadlines",
+        "sv": "Prioriterar mellan uppgifter och deadlines"
       },
       {
-        "en": "Pedagogical, teaches what I build",
-        "sv": "Pedagogisk, lär ut det jag bygger"
+        "en": "Independent, takes initiative",
+        "sv": "Självständig och tar egna initiativ"
       },
       {
-        "en": "Builds from zero",
-        "sv": "Bygger från noll"
+        "en": "Builds relationships with students and companies",
+        "sv": "Relationsskapande mot studerande och företag"
       },
       {
-        "en": "Advisory to managers and stakeholders",
-        "sv": "Rådgivande mot chefer och intressenter"
+        "en": "Used to administration in digital systems",
+        "sv": "Van vid administration i digitala system"
       },
       {
-        "en": "AI-native day to day",
-        "sv": "AI-native i vardagen"
+        "en": "Works in teams with many points of contact",
+        "sv": "Samarbetar i team med många kontaktytor"
       }
     ],
     "#personal .sec-title": {
@@ -782,28 +782,28 @@
       ],
       ".cv-card:has(.tool-label[data-sv=\"Så arbetar jag\"]) .pill": [
         {
-          "en": "Structured and process-driven",
-          "sv": "Strukturerad och processdriven"
+          "en": "Structured and solution-oriented",
+          "sv": "Strukturerad och lösningsorienterad"
         },
         {
-          "en": "Comfortable with many parallel processes",
-          "sv": "Trygg med många parallella processer"
+          "en": "Prioritises between tasks and deadlines",
+          "sv": "Prioriterar mellan uppgifter och deadlines"
         },
         {
-          "en": "Pedagogical, teaches what I build",
-          "sv": "Pedagogisk, lär ut det jag bygger"
+          "en": "Independent, takes initiative",
+          "sv": "Självständig och tar egna initiativ"
         },
         {
-          "en": "Builds from zero",
-          "sv": "Bygger från noll"
+          "en": "Builds relationships with students and companies",
+          "sv": "Relationsskapande mot studerande och företag"
         },
         {
-          "en": "Advisory to managers and stakeholders",
-          "sv": "Rådgivande mot chefer och intressenter"
+          "en": "Used to administration in digital systems",
+          "sv": "Van vid administration i digitala system"
         },
         {
-          "en": "AI-native day to day",
-          "sv": "AI-native i vardagen"
+          "en": "Works in teams with many points of contact",
+          "sv": "Samarbetar i team med många kontaktytor"
         }
       ],
       ".job:nth-of-type(2) .job-bullets li": [
