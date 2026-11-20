@@ -204,10 +204,10 @@
       "en": "Recruitment since 2020",
       "sv": "Rekrytering sedan 2020"
     },
-    "#top .stat-num": ["~5", "3", "20+"],
+    "#top .stat-num": ["~5", "AI", "20+"],
     "#top .stat-label": [
       { "en": "Years working with recruitment", "sv": "År med rekrytering" },
-      { "en": "Roles where recruitment was my main task", "sv": "Roller där rekrytering var huvuduppgiften" },
+      { "en": "AI-native, with experience of developing my own tools with AI", "sv": "AI-native, med erfarenhet av att utveckla egna verktyg med AI" },
       { "en": "Different job titles I have recruited for", "sv": "Olika befattningar jag har rekryterat till" }
     ],
 
