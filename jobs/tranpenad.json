@@ -338,12 +338,13 @@
       "Claude Code"
     ],
     "#education .tool-group:nth-of-type(3) .pill": [
+      { "en": "Service-minded towards candidates and clients", "sv": "Serviceinriktad mot kandidater och kunder" },
+      { "en": "Systematic and structured", "sv": "Systematisk och strukturerad" },
       { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
-      { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
-      { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
-      { "en": "Client-facing in every role", "sv": "Kundnära i alla mina roller" },
-      { "en": "AI-native day to day", "sv": "AI-native i vardagen" },
-      { "en": "Builds from zero", "sv": "Bygger från noll" }
+      { "en": "Takes responsibility for the whole process", "sv": "Tar eget ansvar för hela processen" },
+      { "en": "Proactive in finding candidates", "sv": "Proaktiv i sökandet efter kandidater" },
+      { "en": "Works closely with hiring managers", "sv": "Arbetar nära rekryterande chefer" },
+      { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
     ],
 
     "#personal .sec-title": { "en": "The person behind the application", "sv": "Personen bakom ansökan" },
@@ -387,12 +388,13 @@
         "Claude Code"
       ],
       ".cv-card:has(.tool-label[data-sv=\"Så arbetar jag\"]) .pill": [
+        { "en": "Service-minded towards candidates and clients", "sv": "Serviceinriktad mot kandidater och kunder" },
+        { "en": "Systematic and structured", "sv": "Systematisk och strukturerad" },
         { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
-        { "en": "Structured and process-driven", "sv": "Strukturerad och processdriven" },
-        { "en": "Advisory to managers and stakeholders", "sv": "Rådgivande mot chefer och intressenter" },
-        { "en": "Client-facing in every role", "sv": "Kundnära i alla mina roller" },
-        { "en": "AI-native day to day", "sv": "AI-native i vardagen" },
-        { "en": "Builds from zero", "sv": "Bygger från noll" }
+        { "en": "Takes responsibility for the whole process", "sv": "Tar eget ansvar för hela processen" },
+        { "en": "Proactive in finding candidates", "sv": "Proaktiv i sökandet efter kandidater" },
+        { "en": "Works closely with hiring managers", "sv": "Arbetar nära rekryterande chefer" },
+        { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
       ],
       ".job:nth-of-type(1) .job-bullets li": [
         { "en": "Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, varying from developers to engineers", "sv": "Drev fullständiga rekryteringsprocesser, från behovsanalys till slutligt urval, över flera olika roller, från utvecklare till ingenjörer" },
