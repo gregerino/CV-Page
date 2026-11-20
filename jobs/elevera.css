@@ -1,0 +1,437 @@
+/* Elevera — Utbildningsledare/Projektledare, Göteborg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /elevera and by cv.html?job=elevera, from the head script.
+
+   Read off elevera.org (theme elevera2019):
+     #000000  black: all text, headings, nav
+     #009fe3  Elevera blue: the 5px rule under headings, link underlines
+     #0067e4  the darker blue, used here wherever blue carries text
+     #f6f6f6  light grey: the school tiles
+     #dddddd  grey: the offset block behind each tile, and borders
+     #ffffff  page, header and footer
+
+   Type: HK Grotesk everywhere. It is self-hosted on their site, so Hanken
+   Grotesk (the same family, open-licensed) stands in. Headings bold with
+   slightly tight tracking, body with their 0.8px tracking, buttons and nav
+   in small spaced uppercase. Square corners throughout, as on their site.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f6f6f6;
+  --bg3:           #eeeeee;
+  --white:         #ffffff;
+
+  --border:        #dddddd;
+  --border-light:  #eeeeee;
+  --border-strong: #cbcbcb;
+
+  --ink:           #000000;
+  --ink-mid:       #222222;
+  --ink-light:     #555555;
+  --ink-dim:       #6b6b6b;
+
+  --amber:         #000000;
+  --amber-light:   #333333;
+
+  --accent-rgb:    0,159,227;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        none;
+  --shadow-sm:     none;
+  --shadow-lg:     0 10px 30px rgba(0,0,0,0.10);
+
+  --radius:        0;
+  --radius-lg:     0;
+  --radius-pill:   0;
+
+  --photo-veil: linear-gradient(90deg, rgba(0,0,0,0.86) 0%, rgba(0,0,0,0.74) 55%, rgba(0,0,0,0.55) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23009fe3' stroke-width='3' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Hanken Grotesk', 'HK Grotesk', Arial, Helvetica, sans-serif;
+  --sans:  'Hanken Grotesk', 'HK Grotesk', Arial, Helvetica, sans-serif;
+  --mono:  'Hanken Grotesk', 'HK Grotesk', Arial, Helvetica, sans-serif;
+}
+
+body { background: #ffffff; color: #222222; font-family: var(--sans); letter-spacing: 0.02em; }
+::selection { background: #009fe3; color: #ffffff; }
+strong, b { font-weight: 700; }
+
+/* Type: bold black headings, no italics. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+.hero-role,
+.about-quote,
+.job-about,
+.point-quote { font-style: normal; }
+
+.sec-title { font-size: clamp(1.9rem, 3.6vw, 2.75rem); line-height: 1.15; }
+
+/* Elevera's signature: the 5px blue rule under a heading, hugging the text. */
+.sec-title {
+  display: inline-block;
+  padding-bottom: 0.18em;
+  border-bottom: 5px solid #009fe3;
+}
+
+/* Kickers: small spaced uppercase, like their nav and buttons. */
+.eyebrow,
+.built-sub,
+.tool-label,
+.callout-label,
+.brings-label,
+.point-roles-label {
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Nav: white bar with their soft drop shadow, small uppercase links. */
+.nav {
+  background: rgba(255,255,255,0.98);
+  border-bottom: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.nav-links a {
+  font-family: var(--sans);
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+}
+.nav-links a:hover { color: #000000; background: transparent; box-shadow: inset 0 -2px 0 #009fe3; }
+.nav-links a.active { color: #000000; background: transparent; box-shadow: inset 0 -3px 0 #009fe3; }
+.nav-contact-link a { color: #ffffff; background: #000000; border: 2px solid #000000; border-radius: 0; font-weight: 700; }
+.nav-contact-link a:hover { color: #ffffff; background: #333333; border-color: #333333; box-shadow: none; }
+.brand { font-family: var(--sans); font-weight: 700; color: #000000; letter-spacing: -0.01em; text-transform: uppercase; }
+.brand em { font-style: normal; color: #000000; }
+.brand-dot { background: #009fe3; border-radius: 0; }
+.lang-toggle { background: transparent; border: 1px solid #000000; border-radius: 0; color: #000000; font-weight: 700; letter-spacing: 0.08em; }
+.lang-toggle:hover { background: #000000; border-color: #000000; color: #ffffff; }
+.nav-hamburger span { background: #000000; border-radius: 0; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { font-family: var(--sans); color: #000000; border-color: #eeeeee; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #000000; background: #f6f6f6; box-shadow: inset 3px 0 0 #009fe3; }
+
+/* Buttons: square, black, bold uppercase with wide tracking. */
+.btn {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  border-width: 2px;
+  border-style: solid;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn-primary { background: #000000; border-color: #000000; color: #ffffff; box-shadow: none; }
+.btn-primary:hover { background: #333333; border-color: #333333; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost { background: transparent; border-color: #000000; color: #000000; backdrop-filter: none; }
+.btn-ghost:hover { background: #000000; border-color: #000000; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #009fe3; }
+
+/* Cards: their grey tiles, square, with the offset grey block behind. */
+.card {
+  background: #f6f6f6;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #f6f6f6;
+  border-radius: 0;
+  box-shadow: 10px 10px 0 #dddddd;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.card:hover { border-color: #f6f6f6; box-shadow: 14px 14px 0 #cbcbcb; }
+.pill { background: #ffffff; border-color: #dddddd; color: #222222; border-radius: 0; font-weight: 500; }
+.pill--accent { background: #000000; border-color: #000000; color: #ffffff; font-weight: 500; }
+.cv-card .edu-card { background: none; border: none; box-shadow: none; padding: 0; }
+.cv-card .edu-card:hover { border: none; box-shadow: none; }
+.pick { background: #f6f6f6; border-color: #f6f6f6; border-radius: 0; }
+.pick b { color: #000000; }
+
+/* Hero: the photo darkened like their header image, white bold name
+   with the blue rule under it. */
+#top { --ink: #ffffff; --ink-mid: rgba(255,255,255,0.9); --ink-light: rgba(255,255,255,0.78); --ink-dim: rgba(255,255,255,0.62); color: var(--ink-mid); border-radius: 0; box-shadow: none; }
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.38rem 0.85rem;
+  border: none;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+}
+#top .hero-name {
+  display: block;
+  width: fit-content;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  padding-bottom: 0.12em;
+  border-bottom: 5px solid #009fe3;
+}
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+#top .hero-role::before { background: #009fe3; }
+#top .hero-lead { color: rgba(255,255,255,0.92); font-weight: 400; }
+#top .meta-row, #top .meta-row span { color: rgba(255,255,255,0.82); }
+#top .meta-row .sep { color: #009fe3; }
+#top .meta-row svg { stroke: #ffffff; }
+#top .hero-photo { border: none; border-radius: 0; box-shadow: 12px 12px 0 rgba(255,255,255,0.18); overflow: hidden; }
+#top .btn-primary { background: #ffffff; border-color: #ffffff; color: #000000; }
+#top .btn-primary:hover { background: #f6f6f6; border-color: #f6f6f6; color: #000000; }
+#top .btn-ghost { background: transparent; border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; border-color: #ffffff; color: #000000; }
+
+#top .stat-strip { background: rgba(255,255,255,0.06); backdrop-filter: none; border: 1px solid rgba(255,255,255,0.25); border-radius: 0; box-shadow: none; }
+#top .stat { border-color: rgba(255,255,255,0.25); }
+.bento > #top > .wrap .stat,
+.bento > #top > .wrap .stat:first-child { padding: 0.85rem 1.2rem 0.9rem; }
+#top .stat-num { font-family: var(--sans); font-weight: 700; letter-spacing: -0.02em; color: #ffffff; }
+#top .stat-num::after { content: ''; display: block; width: 1.8rem; height: 4px; margin-top: 0.3rem; background: #009fe3; }
+#top .stat-label { font-family: var(--sans); font-weight: 500; letter-spacing: 0.01em; text-transform: none; color: rgba(255,255,255,0.86); }
+
+@media (max-width: 600px) {
+  .bento > #top > .wrap .stat-strip { grid-template-columns: 1fr; }
+  .bento > #top > .wrap .stat,
+  .bento > #top > .wrap .stat:first-child {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: baseline;
+    column-gap: 0.8rem;
+    padding: 0.75rem 1.1rem;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.25);
+  }
+  .bento > #top > .wrap .stat:first-child { border-top: none; }
+  #top .eyebrow { line-height: 1.5; letter-spacing: 0.04em; overflow-wrap: break-word; max-width: 100%; }
+  #experience .job .job-company > span::after { padding: 0.3rem 0.6rem; line-height: 1.45; }
+  .card { box-shadow: 6px 6px 0 #dddddd; }
+  .nav-links {
+    -webkit-mask-image: linear-gradient(90deg, #000 75%, transparent);
+            mask-image: linear-gradient(90deg, #000 75%, transparent);
+  }
+}
+
+/* Ask bar. */
+.ask { background: #ffffff; border-color: #dddddd; border-radius: 0; }
+.ask-title { color: #000000; }
+.ask-input { background: #f6f6f6; border: 1px solid #dddddd; border-radius: 0; box-shadow: none; color: #000000; }
+.ask-input:focus { border-color: #009fe3; box-shadow: 0 0 0 3px rgba(0,159,227,0.18); }
+.ask-btn { background: #000000; border-radius: 0; }
+.ask-btn:hover { background: #333333; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #ffffff; border: 1px solid #dddddd; color: #000000; border-radius: 0; }
+.ask-chip:hover { background: #f6f6f6; border-color: #009fe3; color: #000000; }
+.ask-out { background: #f6f6f6; border-color: #dddddd; border-radius: 0; }
+.ask-dot { background: #009fe3; }
+.ask-fab { border-radius: 0; box-shadow: 0 0 0 2px #ffffff, 0 10px 24px rgba(0,0,0,0.22); }
+
+/* About: the quote set like their intro line, the list on a grey tile. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #000000;
+  padding-left: 1rem;
+  border-left: 5px solid #009fe3;
+}
+#about .brings { background: #f6f6f6; border: none; border-radius: 0; box-shadow: 10px 10px 0 #dddddd; }
+#about .brings-label { color: #000000; }
+#about .brings-list li { color: #222222; }
+
+/* How I match: white band, grey tiles with the offset block, blue rule. */
+#match { background: #ffffff; border-top: none; }
+#match .card { background: #f6f6f6; border-color: #f6f6f6; }
+#match .point-rule { background: #009fe3; height: 5px; width: 2.4rem; }
+#match .point-num { font-family: var(--sans); font-weight: 700; color: #000000; letter-spacing: 0.06em; }
+#match .point-title { font-size: 1.22rem; line-height: 1.3; color: #000000; }
+#match .point-quote { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: #555555; border-left: 3px solid #009fe3; }
+#match .point-body { color: #222222; }
+#match .point-roles { border-top: 1px solid #dddddd; }
+#match .point-roles .pill { background: #ffffff; border-color: #dddddd; color: #000000; }
+
+/* Projects: learning first, then AI.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 7; }
+
+#built .built-icon { width: 44px; height: 44px; background: #ffffff; border: none; border-radius: 0; }
+#built .built-icon svg { stroke: #000000; }
+/* Their "Besök oss →" link: blue text, no underline, an arrow after. */
+.built-link { color: #0067e4; border-bottom: none; font-weight: 600; }
+.built-link:hover { color: #000000; border-bottom: none; }
+
+/* Experience: a tag per role, blue squares on the roles with education.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #000000, #9fd7f2 60%, #dddddd 88%, transparent); }
+.job::before { background: #ffffff; border-color: #000000; border-radius: 0; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #009fe3; border-color: #009fe3; }
+.job-company { color: #000000; font-weight: 700; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.65rem 0.12rem;
+  border-radius: 0;
+  background: #f6f6f6;
+  border: 1px solid #dddddd;
+  color: #000000;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after { background: #000000; border-color: #000000; color: #ffffff; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Recruitment · Candidate contact'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Course development · SMEs'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Onboarding · HR support'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'Training · LMS · Projects'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Vocational college · LIA · Admissions'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Rekrytering · Kandidatkontakt'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Kursutveckling · Ämnesexperter'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Onboarding · HR-stöd'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'Utbildningar · LMS · Projekt'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Yrkeshögskola · LIA · Antagning'; }
+
+/* The education card. */
+#experience .roles-card { background: #f6f6f6; border-color: #f6f6f6; }
+.roles-group .pill { background: #ffffff; border-color: #dddddd; }
+
+/* Education. */
+#education .edu-school { color: #000000; font-weight: 700; }
+#education .callout { background: #000000; border: none; border-radius: 0; box-shadow: 10px 10px 0 #009fe3; }
+#education .callout-label { color: #ffffff; }
+#education .callout-title { color: #ffffff; }
+#education .callout-text { color: rgba(255,255,255,0.9); }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+4) { background: #000000; border-color: #000000; color: #ffffff; }
+
+/* Contact: a black tile with the blue rule, facts as square outlined tags. */
+#contact { --ink: #ffffff; --ink-mid: rgba(255,255,255,0.9); --ink-light: rgba(255,255,255,0.78); --ink-dim: rgba(255,255,255,0.62); }
+#contact::after { background: #000000; }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead { color: rgba(255,255,255,0.9); }
+#contact .eyebrow { color: #ffffff; }
+#contact .btn-ghost { background: transparent; border-color: #ffffff; color: #ffffff; }
+#contact .btn-ghost:hover { background: #ffffff; border-color: #ffffff; color: #000000; }
+#contact .btn-primary { background: #ffffff; border-color: #ffffff; color: #000000; }
+#contact .btn-primary:hover { background: #f6f6f6; border-color: #f6f6f6; color: #000000; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+#contact .contact-facts span { padding: 0.45rem 1.1rem; border: 1px solid rgba(255,255,255,0.45); border-radius: 0; background: transparent; color: #ffffff; }
+
+/* Footer: white like theirs, a thin rule above, blue-underlined links. */
+.site-footer { background: #ffffff; border-top: 1px solid #dddddd; border-radius: 0; }
+.site-footer p { font-family: var(--sans); font-size: 0.9rem; color: #222222; }
+.site-footer a { color: #000000; font-weight: 500; border-bottom: 1px solid #009fe3; }
+.site-footer a:hover { color: #0067e4; border-bottom-color: #0067e4; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The one-screen tile layout. Tiles are square with a hairline, the rows
+   inside them are flat; the offset block stays on the full cards in the
+   popups. Hover marks a row with a blue bar, like the rule on their site.
+   ───────────────────────────────────────────────────────────────────────── */
+.bento > .tile { border-color: #dddddd; border-radius: 0; }
+.bento > .tile:target { outline-color: #009fe3; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap :is(.point, .job, .built-card, .edu-card) {
+  border-radius: 0;
+  box-shadow: none;
+}
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point { background: #f6f6f6; border-color: #f6f6f6; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-card { background: #f6f6f6; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .built-icon { border-radius: 0; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .edu-card { background: #f6f6f6; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap :is(.point, .built-card, .edu-card):hover,
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .job:hover { background: #eeeeee; box-shadow: inset 4px 0 0 #009fe3; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .point-num { border-radius: 0; background: #000000; color: #ffffff; }
+.bento > :is(#top, #match, #experience, #built, #education, #contact) > .wrap .sec-title { border-bottom-width: 3px; }
+.tile-hint, .tile-more { border-radius: 0; }
+
+dialog.detail, dialog.sheet { border-radius: 0; }
+dialog.detail::backdrop,
+dialog.sheet::backdrop { background: rgba(0,0,0,0.6); }
+.dialog-close { border-radius: 0; border-color: #000000; }
+.dialog-close:hover { background: #000000; color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The PDF is printed on white: black headings, blue for the small marks,
+   no offset blocks.
+   ───────────────────────────────────────────────────────────────────────── */
+@media print {
+  :root { --amber: #000000; }
+  .cv-name, .sec-title, .job-title, .edu-degree, .job-company, .edu-school { color: #000000; }
+  .hero-role { color: #000000; }
+  .card, .cv-card { box-shadow: none !important; }
+  .cv-card { background: #f6f6f6 !important; border: none; border-radius: 0; }
+  .cv-main { background: none !important; border: none; border-radius: 0; box-shadow: none; padding: 0; }
+  .cv-card .pill, .pill { background: #ffffff; border-color: #dddddd; color: #222222; }
+  .cv-card .pill--accent { background: #000000; border-color: #000000; color: #ffffff; }
+  .cv-card .pill { padding: 0.5mm 2.2mm; line-height: 1.35; }
+  .eyebrow, .tool-label { color: #000000; }
+  .job::before { background: #009fe3; border-color: #009fe3; }
+  .timeline::before { background: #000000; }
+}
