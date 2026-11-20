@@ -462,24 +462,24 @@
     ],
     "#about .brings-list li": [
       {
-        "en": "Experience from vocational higher education",
-        "sv": "Erfarenhet från yrkeshögskolan"
+        "en": "Programmes that lead on to work",
+        "sv": "Utbildningar som leder vidare till arbete"
       },
       {
-        "en": "Planning and follow-up of programmes",
-        "sv": "Planering och uppföljning av utbildningar"
+        "en": "Seeing students develop and reach their goals",
+        "sv": "Att se studerande utvecklas och nå sina mål"
       },
       {
-        "en": "Partnerships with companies and LIA",
-        "sv": "Företagssamarbeten och LIA"
+        "en": "Close collaboration between education and working life",
+        "sv": "Nära samarbete mellan utbildning och arbetsliv"
       },
       {
-        "en": "Recruiting and quality-assuring educators",
-        "sv": "Rekrytering och kvalitetssäkring av utbildare"
+        "en": "Pedagogy and course development",
+        "sv": "Pedagogik och kursutveckling"
       },
       {
-        "en": "Independent project management",
-        "sv": "Självständig projektledning"
+        "en": "Building structures that make programmes better",
+        "sv": "Att bygga strukturer som gör utbildningar bättre"
       }
     ],
     "#built .sec-lead": {
