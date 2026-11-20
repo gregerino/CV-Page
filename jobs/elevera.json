@@ -915,6 +915,16 @@
           "en": "Developed the LMS structure for the programmes and improved internal communication flows",
           "sv": "Utvecklade LMS-strukturen för utbildningarna och förbättrade interna kommunikationsflöden"
         }
+      ],
+      ".cv-card .edu-card .edu-desc": [
+        {
+          "en": "Bachelor's degree focused on human behaviour in digital and technical organisations: a solid foundation for People & Culture work in the tech industry.",
+          "sv": "Kandidatexamen med fokus på mänskligt beteende i digitala och tekniska organisationer: en solid grund för People & Culture-arbete i techbranschen."
+        },
+        {
+          "en": "Certification in education management for vocational higher education, with a focus on pedagogical planning and course design. I took it during my time as an education manager at IT-Högskolan.",
+          "sv": "Certifiering inom utbildningsledning för yrkeshögskolan, med fokus på pedagogisk planering och kursdesign. Jag tog den under min tid som utbildningsledare på IT-Högskolan."
+        }
       ]
     }
   }
