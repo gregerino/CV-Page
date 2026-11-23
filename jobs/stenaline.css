@@ -1,0 +1,402 @@
+/* Stena Line — Learning and Talent Development Specialist, Gothenburg
+   ═══════════════════════════════════════════════════════════════════════════
+   Loaded by /stenaline and by cv.html?job=stenaline, from the head script.
+
+   Read off stenaline.se (clientlib-site.css):
+     #004a93  Stena blue: buttons, links, active states, the footer band
+     #123d66  deep navy: the hero veil, contact tile and footer panel
+     #ea143d  Stena red: small marks only (rules, dots)
+     #cae2fb  light blue: quiet fills and highlighted bands
+     #f4f4f4  light grey: the band between white sections
+     #333333 / #6b6b6b  body and muted text
+
+   Type: Stena Line Sans is licensed, so Figtree stands in (a similar
+   rounded grotesk). Cards use their 16px corners, buttons are fully rounded
+   like their primary buttons, headings stay in sentence case.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg:            #ffffff;
+  --bg2:           #f4f4f4;
+  --bg3:           #e6e6e6;
+  --white:         #ffffff;
+
+  --border:        #e6e6e6;
+  --border-light:  #ebebeb;
+  --border-strong: #c9c9c9;
+
+  --ink:           #1a1a1a;
+  --ink-mid:       #333333;
+  --ink-light:     #5c6171;
+  --ink-dim:       #6b6b6b;
+
+  --amber:         #004a93;
+  --amber-light:   #1178df;
+
+  --accent-rgb:    0,74,147;
+  --white-rgb:     255,255,255;
+  --bg-rgb:        255,255,255;
+
+  --shadow:        0 2px 8px rgba(0,0,0,0.06);
+  --shadow-sm:     0 1px 4px rgba(0,0,0,0.05);
+  --shadow-lg:     0 12px 28px rgba(0,0,0,0.12);
+
+  --radius:        16px;
+  --radius-lg:     16px;
+  --radius-pill:   999px;
+
+  --photo-veil: linear-gradient(90deg, rgba(18,61,102,0.96) 0%, rgba(18,61,102,0.9) 50%, rgba(0,74,147,0.74) 100%);
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ea143d' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+
+  --serif: 'Figtree', Arial, Helvetica, sans-serif;
+  --sans:  'Figtree', Arial, Helvetica, sans-serif;
+  --mono:  'Figtree', Arial, Helvetica, sans-serif;
+}
+
+body { background: #ffffff; color: #333333; font-family: var(--sans); }
+::selection { background: #004a93; color: #ffffff; }
+strong, b { font-weight: 600; }
+
+/* Type: dark headings; the big ones go uppercase below, as on stenaline.se. */
+.hero-name,
+.cv-name,
+.sec-title,
+.point-title,
+.ask-title,
+.callout-title,
+.personal-title,
+.job-title,
+.edu-degree,
+.built-title,
+.roles-title {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.3px;
+  color: #123d66;
+}
+.point-title, .job-title, .edu-degree, .built-title, .roles-title, .personal-title { font-weight: 600; letter-spacing: -0.2px; }
+.hero-role,
+.about-quote,
+.job-about,
+.point-quote { font-style: normal; }
+
+.sec-title { font-size: clamp(1.9rem, 3.6vw, 2.6rem); line-height: 1.25; }
+
+.eyebrow,
+.brings-label,
+.callout-label,
+.tool-label,
+.built-sub,
+.point-roles-label {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #004a93;
+}
+
+/* Kickers: small spaced uppercase in Stena blue, led by a short red rule. */
+.eyebrow,
+.built-sub,
+.tool-label,
+.callout-label,
+.brings-label,
+.point-roles-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  font-weight: 500;
+}
+.eyebrow::before,
+.built-sub::before,
+.tool-label::before,
+.callout-label::before {
+  content: '';
+  display: inline-block;
+  width: 1.1em;
+  height: 2px;
+  margin: 0 0.6em 0.2em 0;
+  background: #ea143d;
+  vertical-align: middle;
+}
+
+/* The big headings in sentence case, medium weight, as on stenaline.se. */
+.hero-name,
+.cv-name,
+.sec-title {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Nav: white bar, black text, Contact as the black button. */
+.nav {
+  background: rgba(255,255,255,0.96);
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: none;
+}
+.nav-links a { font-family: var(--sans); color: #1a1a1a; font-weight: 400; border-radius: 999px; }
+.nav-links a:hover { color: #004a93; background: #f4f4f4; }
+.nav-links a.active { color: #004a93; background: #f4f4f4; box-shadow: inset 0 -2px 0 #ea143d; }
+.nav-contact-link a { color: #ffffff; background: #004a93; border: 2px solid #004a93; border-radius: 999px; font-weight: 600; }
+.nav-contact-link a:hover { color: #ffffff; background: #123d66; border-color: #123d66; }
+.brand { font-family: var(--sans); font-weight: 700; color: #123d66; letter-spacing: -0.3px; }
+.brand em { font-style: normal; color: #123d66; }
+.brand-dot { background: #ea143d; }
+.lang-toggle { background: transparent; border: 1px solid #004a93; border-radius: 999px; color: #004a93; font-weight: 600; }
+.lang-toggle:hover { background: #004a93; border-color: #004a93; color: #ffffff; }
+.nav-hamburger span { background: #004a93; }
+.nav-mobile { background: #ffffff; }
+.nav-mobile a { font-family: var(--sans); color: #004a93; border-color: #ebebeb; }
+.nav-mobile a:hover, .nav-mobile a.active { color: #004a93; background: #f4f4f4; }
+
+/* Buttons: Stena blue, fully rounded, semibold. */
+.btn { font-family: var(--sans); font-weight: 600; border-radius: 999px; border-width: 2px; border-style: solid; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+.btn-primary { background: #004a93; border-color: #004a93; color: #ffffff; box-shadow: none; }
+.btn-primary:hover { background: #123d66; border-color: #123d66; color: #ffffff; box-shadow: none; }
+.btn-primary svg { fill: currentColor; }
+.btn-ghost { background: transparent; border-color: #004a93; color: #004a93; backdrop-filter: none; }
+.btn-ghost:hover { background: #004a93; border-color: #004a93; color: #ffffff; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #ea143d; }
+
+/* Cards: white, soft shadow, 16px corners like their image tiles. */
+.card {
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid #ebebeb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.card:hover { border-color: #e6e6e6; box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+.pill { background: #ffffff; border-color: #e6e6e6; color: #333333; border-radius: 999px; font-weight: 400; }
+.pill--accent { background: #004a93; border-color: #004a93; color: #ffffff; font-weight: 400; }
+.cv-card .edu-card { background: none; border: none; box-shadow: none; padding: 0; }
+.cv-card .edu-card:hover { border: none; box-shadow: none; }
+.pick { background: #f4f4f4; border-color: #f4f4f4; border-radius: 16px; }
+.pick b { color: #004a93; }
+
+/* Hero: a black veil over the photo, a rounded tile like their hero. */
+#top { --ink: #ffffff; --ink-mid: rgba(255,255,255,0.88); --ink-light: rgba(255,255,255,0.75); --ink-dim: rgba(255,255,255,0.6); color: var(--ink-mid); border-radius: 16px; }
+#top .eyebrow {
+  display: inline-block;
+  padding: 0.32rem 0.85rem;
+  border: none;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #004a93;
+}
+#top .hero-name { color: #ffffff; font-weight: 500; font-size: clamp(2.6rem, 6.5vw, 4.3rem); line-height: 1.04; letter-spacing: -0.01em; }
+#top .hero-role {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  letter-spacing: -0.4px;
+  color: #ffffff;
+}
+#top .hero-role::before { background: #ea143d; }
+#top .hero-lead { color: rgba(255,255,255,0.9); font-weight: 400; }
+#top .meta-row, #top .meta-row span { color: rgba(255,255,255,0.8); }
+#top .meta-row .sep { color: #ea143d; }
+#top .meta-row svg { stroke: #ffffff; }
+#top .hero-photo { border: none; border-radius: 16px; box-shadow: 0 18px 44px rgba(0,0,0,0.4); overflow: hidden; }
+#top .btn-primary { background: #ffffff; border-color: #ffffff; color: #004a93; }
+#top .btn-primary:hover { background: #f4f4f4; border-color: #f4f4f4; color: #004a93; }
+#top .btn-ghost { background: transparent; border-color: #ffffff; color: #ffffff; }
+#top .btn-ghost:hover { background: #ffffff; border-color: #ffffff; color: #004a93; }
+
+#top .stat-strip { background: rgba(255,255,255,0.07); backdrop-filter: none; border: 1px solid rgba(255,255,255,0.22); border-radius: 16px; box-shadow: none; }
+#top .stat { border-color: rgba(255,255,255,0.22); }
+.bento > #top > .wrap .stat,
+.bento > #top > .wrap .stat:first-child { padding: 0.85rem 1.2rem 0.9rem; }
+#top .stat-num { font-family: var(--sans); font-weight: 300; letter-spacing: -0.5px; color: #ffffff; }
+#top .stat-num::after { content: ''; display: block; width: 1.6rem; height: 2px; margin-top: 0.3rem; background: #ea143d; }
+#top .stat-label { font-family: var(--sans); font-weight: 400; letter-spacing: 0; text-transform: none; color: rgba(255,255,255,0.85); }
+
+@media (max-width: 600px) {
+  .bento > #top > .wrap .stat-strip { grid-template-columns: 1fr; }
+  .bento > #top > .wrap .stat,
+  .bento > #top > .wrap .stat:first-child {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: baseline;
+    column-gap: 0.8rem;
+    padding: 0.75rem 1.1rem;
+    border-right: none;
+    border-top: 1px solid rgba(255,255,255,0.22);
+  }
+  .bento > #top > .wrap .stat:first-child { border-top: none; }
+  #top .eyebrow { line-height: 1.5; }
+  #experience .job .job-company > span::after { padding: 0.3rem 0.6rem; line-height: 1.45; }
+  .nav-links {
+    -webkit-mask-image: linear-gradient(90deg, #000 75%, transparent);
+            mask-image: linear-gradient(90deg, #000 75%, transparent);
+  }
+}
+
+/* Ask bar. */
+.ask { background: #ffffff; border-color: #ebebeb; border-radius: 16px; }
+.ask-title { color: #123d66; }
+.ask-input { background: #f4f4f4; border: 1px solid #e6e6e6; border-radius: 999px; box-shadow: none; color: #1a1a1a; }
+.ask-input:focus { border-color: #004a93; box-shadow: 0 0 0 3px rgba(0,0,0,0.12); }
+.ask-btn { background: #004a93; border-radius: 999px; }
+.ask-btn:hover { background: #123d66; }
+.ask-btn svg { stroke: #ffffff; }
+.ask-chip { background: #ffffff; border: 1px solid #e6e6e6; color: #004a93; border-radius: 999px; }
+.ask-chip:hover { background: #f4f4f4; border-color: #004a93; color: #004a93; }
+.ask-out { background: #f4f4f4; border-color: #e6e6e6; border-radius: 16px; }
+.ask-dot { background: #ea143d; }
+.ask-fab { box-shadow: 0 0 0 2px #ffffff, 0 10px 24px rgba(0,0,0,0.25); }
+
+/* About: the quote in navy with a red rule, the list on the grey band. */
+#about .about-quote {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(1.3rem, 2.3vw, 1.6rem);
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  color: #123d66;
+  padding-left: 1rem;
+  border-left: 3px solid #ea143d;
+}
+#about .brings { background: #f4f4f4; border: none; border-radius: 16px; box-shadow: none; }
+#about .brings-label { color: #004a93; font-weight: 600; }
+#about .brings-list li { color: #333333; }
+
+/* How I match: white cards on the grey band, a red number. */
+#match { background: #f4f4f4; border-top: none; }
+#match .card { background: #ffffff; border-color: #ffffff; }
+#match .card:hover { border-color: #e6e6e6; }
+#match .point-rule { background: #ea143d; height: 2px; width: 2rem; }
+#match .point-num { font-family: var(--sans); font-weight: 600; color: #ea143d; letter-spacing: 0; }
+#match .point-title { font-size: 1.22rem; line-height: 1.3; color: #123d66; }
+#match .point-quote { font-family: var(--sans); font-size: 0.95rem; color: #666666; border-left: 3px solid #ea143d; }
+#match .point-body { color: #333333; }
+#match .point-roles { border-top: 1px solid #ebebeb; }
+#match .point-roles .pill { background: #f4f4f4; border-color: #f4f4f4; color: #004a93; }
+
+/* Projects: learning and programmes first, then AI.
+     At work: 1 career programme, 2 LMS, 3 onboarding, 4 ATS, 5 course content
+     AI:      1 Recruitment OS, 2 agentic OS, 3 QuestLog, 4 finance tool,
+              5 this site, 6 onboarding platform, 7 more tools,
+              8 Role for Growth */
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(2) { order: 0; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(1) { order: 1; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(3) { order: 2; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(5) { order: 3; }
+#built .built-grid:not(:last-of-type) .built-card:nth-of-type(4) { order: 4; }
+
+#built .built-grid:last-of-type .built-card:nth-of-type(6) { order: 0; }
+#built .built-grid:last-of-type .built-card:nth-of-type(8) { order: 1; }
+#built .built-grid:last-of-type .built-card:nth-of-type(2) { order: 2; }
+#built .built-grid:last-of-type .built-card:nth-of-type(1) { order: 3; }
+#built .built-grid:last-of-type .built-card:nth-of-type(5) { order: 4; }
+#built .built-grid:last-of-type .built-card:nth-of-type(7) { order: 5; }
+#built .built-grid:last-of-type .built-card:nth-of-type(3) { order: 6; }
+#built .built-grid:last-of-type .built-card:nth-of-type(4) { order: 7; }
+
+#built .built-icon { width: 44px; height: 44px; background: #cae2fb; border: none; border-radius: 50%; }
+#built .built-icon svg { stroke: #004a93; }
+.built-link { color: #004a93; border-bottom: 1px solid #ea143d; font-weight: 600; }
+.built-link:hover { color: #ea143d; border-bottom-color: #ea143d; }
+
+/* Experience: a tag per role, red dots on the roles with learning.
+     1 Recruitment Consultant   2 Course Developer
+     3 Business Manager         4 TA Lead / Consultant Manager
+     5 Education Manager */
+.timeline::before { width: 2px; background: linear-gradient(to bottom, #004a93, #b4d4f9 60%, #e6e6e6 88%, transparent); }
+.job::before { background: #ffffff; border-color: #004a93; }
+#experience .job:nth-of-type(2)::before,
+#experience .job:nth-of-type(4)::before,
+#experience .job:nth-of-type(5)::before { background: #ea143d; border-color: #ea143d; }
+.job-company { color: #004a93; font-weight: 600; }
+
+#experience .job .job-company > span::after {
+  display: inline-block;
+  margin-left: 0.7rem;
+  padding: 0.16rem 0.65rem 0.12rem;
+  border-radius: 999px;
+  background: #f4f4f4;
+  border: 1px solid #e6e6e6;
+  color: #004a93;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+#experience .job:nth-of-type(2) .job-company > span::after,
+#experience .job:nth-of-type(4) .job-company > span::after,
+#experience .job:nth-of-type(5) .job-company > span::after { background: #004a93; border-color: #004a93; color: #ffffff; }
+#experience .job:nth-of-type(1) .job-company > span::after { content: 'Candidate contact · Coordination'; }
+#experience .job:nth-of-type(2) .job-company > span::after { content: 'Course development · Conferences'; }
+#experience .job:nth-of-type(3) .job-company > span::after { content: 'Onboarding · HR support'; }
+#experience .job:nth-of-type(4) .job-company > span::after { content: 'LMS · Training · Onboarding'; }
+#experience .job:nth-of-type(5) .job-company > span::after { content: 'Programmes · Admissions · Coaching'; }
+:root:lang(sv) #experience .job:nth-of-type(1) .job-company > span::after { content: 'Kandidatkontakt · Samordning'; }
+:root:lang(sv) #experience .job:nth-of-type(2) .job-company > span::after { content: 'Kursutveckling · Konferenser'; }
+:root:lang(sv) #experience .job:nth-of-type(3) .job-company > span::after { content: 'Onboarding · HR-stöd'; }
+:root:lang(sv) #experience .job:nth-of-type(4) .job-company > span::after { content: 'LMS · Utbildningar · Onboarding'; }
+:root:lang(sv) #experience .job:nth-of-type(5) .job-company > span::after { content: 'Utbildningar · Antagning · Coachning'; }
+
+/* Learning and HR card: light blue, as their highlighted bands. */
+#experience .roles-card { background: #cae2fb; border-color: #cae2fb; box-shadow: none; }
+.roles-group .pill { background: #ffffff; border-color: #e6e6e6; }
+
+/* Education. */
+#education .edu-school { color: #004a93; font-weight: 600; }
+#education .callout { background: #123d66; border: none; border-radius: 16px; }
+#education .callout-label { color: #ffffff; }
+#education .callout-title { color: #ffffff; }
+#education .callout-text { color: rgba(255,255,255,0.88); }
+#education .tool-group:nth-of-type(1) .pill:nth-child(-n+4) { background: #004a93; border-color: #004a93; color: #ffffff; }
+
+/* Contact: the black tile, facts as white-edged pills. */
+#contact { --ink: #ffffff; --ink-mid: rgba(255,255,255,0.88); --ink-light: rgba(255,255,255,0.75); --ink-dim: rgba(255,255,255,0.6); }
+#contact::after { background: radial-gradient(120% 140% at 100% 0%, #004a93 0%, #123d66 60%); }
+#contact .sec-title { color: #ffffff; }
+#contact .sec-lead { color: rgba(255,255,255,0.88); }
+#contact .eyebrow { color: #ffffff; }
+#contact .btn-ghost { background: transparent; border-color: #ffffff; color: #ffffff; }
+#contact .btn-ghost:hover { background: #ffffff; border-color: #ffffff; color: #004a93; }
+#contact .btn-primary { background: #ffffff; border-color: #ffffff; color: #004a93; }
+#contact .btn-primary:hover { background: #f4f4f4; border-color: #f4f4f4; color: #004a93; }
+#contact .contact-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+#contact .contact-facts span { padding: 0.45rem 1.1rem; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; background: rgba(255,255,255,0.06); color: #ffffff; }
+
+/* Footer: a black panel set in from the edge. */
+.site-footer { background: #123d66; border-top: none; border-radius: 16px; margin: 0 16px 16px; padding: 2.2rem 0 2rem; }
+.site-footer p { font-family: var(--sans); font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+.site-footer a { color: #ffffff; font-weight: 600; border-bottom: 1px solid #ea143d; }
+.site-footer a:hover { color: #ffffff; border-bottom-color: #ffffff; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   The PDF is printed on white: black headings, red for the small marks.
+   ───────────────────────────────────────────────────────────────────────── */
+@media print {
+  :root { --amber: #004a93; }
+  .cv-name, .sec-title, .job-title, .edu-degree, .job-company, .edu-school { color: #004a93; }
+  .hero-role { color: #004a93; }
+  .cv-card { background: #f4f4f4 !important; border: none; border-radius: 0; box-shadow: none; }
+  .cv-main { background: none !important; border: none; border-radius: 0; box-shadow: none; padding: 0; }
+  .cv-card .pill, .pill { background: #ffffff; border-color: #e6e6e6; color: #333333; }
+  .cv-card .pill--accent { background: #004a93; border-color: #004a93; color: #ffffff; }
+  .cv-card .pill { padding: 0.5mm 2.2mm; line-height: 1.35; }
+  .eyebrow, .tool-label { color: #004a93; }
+  .job::before { background: #ea143d; border-color: #ea143d; }
+  .timeline::before { background: #004a93; }
+  .site-footer { margin: 0; border-radius: 0; }
+}
