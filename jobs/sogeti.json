@@ -1,0 +1,426 @@
+{
+  "company": "Sogeti",
+  "roleName": "Talent Acquisition Business Partner",
+
+  "eyebrow": {
+    "en": "Application · Talent Acquisition Business Partner · Sogeti Sweden",
+    "sv": "Ansökan · Talent Acquisition Business Partner · Sogeti Sverige"
+  },
+  "role": {
+    "en": "Recruiting IT and specialist profiles",
+    "sv": "Rekrytering av IT- och specialistprofiler"
+  },
+  "lead": {
+    "en": "I recruit IT and specialist profiles, and I have done so for about five years at consulting and recruitment companies in Gothenburg. I have run the whole process myself, from the needs analysis with the manager to search in LinkedIn Recruiter and competency-based selection with Assessio. At an IT consultancy I was part of the management team and responsible for the company's talent acquisition, where I introduced an ATS and designed the workflows. Alongside that I build my own AI tools for recruitment, so that managers assess candidates against the same competencies and the recruiter has more time for the people.",
+    "sv": "Jag rekryterar IT- och specialistprofiler och har gjort det i ca 5 år, i konsult- och rekryteringsbolag i Göteborg. Jag har drivit hela processen själv, från behovsanalysen med chefen till search i LinkedIn Recruiter och kompetensbaserat urval med Assessio. I ett IT-konsultbolag satt jag i ledningsgruppen och ansvarade för bolagets talent acquisition, där jag införde ett ATS och utformade arbetsflödena. Vid sidan av det bygger jag egna AI-verktyg för rekrytering, så att chefer bedömer kandidater mot samma kompetenser och rekryteraren får mer tid för människorna."
+  },
+  "cta": {
+    "en": "See how my experience matches the role",
+    "sv": "Se hur min erfarenhet matchar rollen"
+  },
+
+  "matchEyebrow": { "en": "How I match", "sv": "Hur jag matchar" },
+  "matchTitle": {
+    "en": "What the role asks for",
+    "sv": "Det rollen efterfrågar"
+  },
+  "matchLead": {
+    "en": "Below are the responsibilities and the profile in the ad, together with my experience in each area.",
+    "sv": "Nedan följer annonsens ansvarsområden och profil, tillsammans med min erfarenhet inom respektive område."
+  },
+
+  "points": [
+    {
+      "title": {
+        "en": "IT recruitment from need to hire",
+        "sv": "IT-rekrytering från behov till anställning"
+      },
+      "quote": {
+        "en": "Drive IT recruitments from need and strategy to search, selection, interviews, reference checks, tests and hiring.",
+        "sv": "Driva IT-rekryteringar från behov och strategi till search, urval, intervjuer, referenstagning, tester och anställning."
+      },
+      "body": {
+        "en": "I have run complete recruitment processes for IT and technical roles since 2020. Each recruitment started with a needs analysis together with the hiring manager, where we went through the competence requirements and the timeline. From there I wrote the requirement profile and the ad, sourced candidates and held the interviews. In the selection I have used assessment tools such as Assessio, and I have taken references before the final decision. I advised the manager all the way to the hire. I have often had several recruitments running at the same time.",
+        "sv": "Jag har drivit kompletta rekryteringsprocesser till IT- och teknikroller sedan 2020. Varje rekrytering började med en behovsanalys tillsammans med den rekryterande chefen, där vi gick igenom kompetenskrav och tidplan. Därifrån tog jag fram kravprofil och annons, sökte kandidater och höll i intervjuerna. I urvalet har jag använt assessmentverktyg som Assessio, och jag har tagit referenser inför slutligt beslut. Jag var rådgivare till chefen hela vägen fram till anställning. Ofta har jag haft flera rekryteringar igång samtidigt."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "IT consultants and specialist profiles",
+        "sv": "IT-konsulter och specialistprofiler"
+      },
+      "quote": {
+        "en": "You are an experienced recruiter with solid experience of recruiting in IT, preferably of IT consultants and specialist profiles.",
+        "sv": "Du är en erfaren rekryterare med gedigen erfarenhet av rekrytering inom IT, gärna av IT-konsulter och specialistprofiler."
+      },
+      "body": {
+        "en": "At an IT consultancy I was responsible for recruiting IT consultants and matching them against the competence the clients' assignments required. Among them were trainers who in practice were consultants from the IT industry. As a recruitment consultant I then recruited for clients in technology and engineering. The roles ranged from developers and software engineers to automation engineers, embedded profiles and project managers. I like to understand what a role requires technically before I start searching.",
+        "sv": "I ett IT-konsultbolag ansvarade jag för att rekrytera IT-konsulter och matcha dem mot den kompetens kundernas uppdrag krävde. Bland dem fanns utbildare som i praktiken var konsulter från IT-branschen. Som rekryteringskonsult rekryterade jag därefter åt kunder inom teknik och ingenjörskonst. Rollerna har sträckt sig från utvecklare och mjukvaruingenjörer till automationsingenjörer, inbyggda system och projektledare. Jag sätter mig gärna in i vad en roll kräver tekniskt innan jag börjar leta."
+      },
+      "roles": [
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Active search and candidate networks in IT",
+        "sv": "Aktiv search och kandidatnätverk inom IT"
+      },
+      "quote": {
+        "en": "Work hands-on and proactively with search, above all in LinkedIn Recruiter, and build relevant candidate networks within IT.",
+        "sv": "Arbeta hands-on och proaktivt med search, framför allt i LinkedIn Recruiter, och bygga relevanta kandidatnätverk inom IT."
+      },
+      "body": {
+        "en": "Search has been a large part of my recruitment work, and I have worked hands-on in LinkedIn Recruiter. I have reached out to candidates who were not actively looking for a job, and put a lot of weight on keeping a strong candidate pipeline ahead of upcoming needs. I have also built my own sourcing tool with AI that searches for candidates on GitHub and in technical blogs.",
+        "sv": "Search har varit en stor del av mitt rekryteringsarbete, och jag har arbetat praktiskt i LinkedIn Recruiter. Jag har kontaktat kandidater som inte aktivt sökte jobb och lagt stor vikt vid att hålla en stark kandidatpipeline inför kommande behov. Jag har också byggt ett eget sourcingverktyg med AI som söker kandidater på GitHub och i tekniska bloggar."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Competency-based recruitment and assessment",
+        "sv": "Kompetensbaserad rekrytering och assessment"
+      },
+      "quote": {
+        "en": "You have experience of competency-based recruitment and of assessment tools, such as personality tests and logic/ability tests.",
+        "sv": "Du har erfarenhet av kompetensbaserad rekrytering och av assessmentverktyg, exempelvis personlighetstest och logik-/förmågetest."
+      },
+      "body": {
+        "en": "I have experience of competency-based recruitment and have worked with assessment tools such as Assessio. I assess candidates in a structured way and against the same criteria, based on the competencies the role requires. My bachelor's degree in behavioural science gave me a grounding in how people function in organisations, which I draw on when I structure interviews. I have also built Recruitment OS, an AI tool that turns a requirement profile into a competency analysis, structured interview questions and scorecards.",
+        "sv": "Jag har erfarenhet av kompetensbaserad rekrytering och har arbetat med assessmentverktyg som Assessio. Jag bedömer kandidater strukturerat och mot samma kriterier, utifrån de kompetenser rollen kräver. Min kandidatexamen i beteendevetenskap gav mig en grund i hur människor fungerar i organisationer, och den använder jag när jag strukturerar intervjuer. Jag har också byggt Recruitment OS, ett AI-verktyg som gör om en kravprofil till en kompetensanalys, strukturerade intervjufrågor och scorecards."
+      }
+    },
+    {
+      "title": {
+        "en": "An advisory partner to the managers",
+        "sv": "Rådgivande partner till cheferna"
+      },
+      "quote": {
+        "en": "Act as an advisory partner to our managers and turn competence needs into concrete recruitment and search strategies.",
+        "sv": "Agera rådgivande partner till våra chefer och omsätta kompetensbehov till konkreta rekryterings- och searchstrategier."
+      },
+      "body": {
+        "en": "I have worked closely with hiring managers in all my recruitment roles. Together we went through what the business needed, and I turned that into a requirement profile for the recruitment. During the process I advised the managers on timelines and candidate evaluation, and on which candidates fitted in terms of competence and team. I have had client contact in every role I have had.",
+        "sv": "Jag har arbetat nära rekryterande chefer i alla mina rekryteringsroller. Tillsammans gick vi igenom vad verksamheten behövde, och jag omsatte det i en kravprofil för rekryteringen. Under processen rådgav jag cheferna kring tidplaner och kandidatutvärdering, och kring vilka kandidater som passade utifrån kompetens och team. Jag har haft kundkontakt i alla mina roller."
+      },
+      "roles": [
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" },
+        { "en": "Business Manager", "sv": "Affärsansvarig" },
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Ownership, structure and momentum",
+        "sv": "Ägarskap, struktur och framdrift"
+      },
+      "quote": {
+        "en": "Take ownership of the process, create structure and momentum, and dare to recommend what we should do.",
+        "sv": "Ta ägarskap för processen, skapa struktur och framdrift och våga rekommendera vad vi bör göra."
+      },
+      "body": {
+        "en": "At an IT consultancy I was part of the management team and responsible for the company's talent acquisition strategy, including process optimisation. There I led the introduction of an ATS and designed the workflows, from how a role was opened to how candidates moved through the process. As a recruitment consultant I owned whole processes and contributed to improving the recruitment workflows. I like having a clear process, and I suggest changes when I see that something could be done better.",
+        "sv": "I ett IT-konsultbolag satt jag i ledningsgruppen och ansvarade för bolagets talent acquisition-strategi, med processoptimering som en del. Där ledde jag införandet av ett ATS och utformade arbetsflödena, från hur en roll öppnades till hur kandidaterna rörde sig genom processen. Som rekryteringskonsult ägde jag hela processer och bidrog till att förbättra rekryteringsflödena. Jag vill ha en tydlig process, och jag föreslår förändringar när jag ser att något kan göras bättre."
+      },
+      "roles": [
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Recruitment Consultant", "sv": "Rekryteringskonsult" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Building the TA function and its ways of working",
+        "sv": "Bygga TA-funktionen och arbetssätten"
+      },
+      "quote": {
+        "en": "Help develop how we work with Talent Acquisition and AI in recruitment, as we continue to build our joint TA function.",
+        "sv": "Bidra till att utveckla hur vi arbetar med Talent Acquisition, AI inom rekrytering och utveckla våra arbetssätt när vi nu fortsätter bygga vår gemensamma TA-funktion."
+      },
+      "body": {
+        "en": "I have helped build up ways of working in recruitment and onboarding. At an IT consultancy I led the talent acquisition strategy with employer branding as a central part, and I built a structured onboarding from scratch. I also helped build a career programme for junior talent into the IT industry. At a vocational college in IT I worked with competence supply by matching the programmes against what the companies needed.",
+        "sv": "Jag har varit med och byggt upp arbetssätt inom rekrytering och onboarding. I ett IT-konsultbolag ledde jag strategin för talent acquisition med employer branding som en central del, och jag byggde en strukturerad onboarding från grunden. Jag var också med och byggde ett karriärprogram för juniora talanger in i IT-branschen. På en yrkeshögskola inom IT arbetade jag med kompetensförsörjning genom att matcha utbildningarna mot vad företagen behövde."
+      },
+      "roles": [
+        { "en": "Talent Acquisition Lead / Consultant Manager", "sv": "Talent Acquisition Lead / Konsultansvarig" },
+        { "en": "Education Manager / ICT Manager", "sv": "Utbildningsledare / ICT-ansvarig" }
+      ]
+    },
+    {
+      "title": {
+        "en": "AI in recruitment",
+        "sv": "AI i rekryteringen"
+      },
+      "quote": {
+        "en": "You are curious about AI and new technology and find it exciting to explore how they can make recruitment smarter, more accurate and at the same time more human.",
+        "sv": "Du är nyfiken på AI och ny teknik och tycker det är spännande att utforska hur de kan göra rekrytering smartare, mer träffsäker och samtidigt mer mänsklig."
+      },
+      "body": {
+        "en": "I use AI every day and build my own tools when something in recruitment takes longer than it should. Recruitment OS makes two managers recruiting for the same role assess the same things, with support for reducing bias. I have also built an agentic system where agents do the groundwork, such as a first CV assessment, and then hand the decision to the recruiter. The idea behind both is that AI takes care of the routine work so the recruiter has more time for the people.",
+        "sv": "Jag använder AI varje dag och bygger egna verktyg när något i rekryteringen tar längre tid än det borde. Recruitment OS gör att två chefer som rekryterar till samma roll bedömer samma saker, med stöd för att minska bias. Jag har också byggt ett agentiskt system där agenter gör grovjobbet, till exempel en första CV-bedömning, och sedan lämnar beslutet till rekryteraren. Tanken bakom båda är att AI tar hand om rutinarbetet, så att rekryteraren får mer tid för människorna."
+      }
+    },
+    {
+      "title": {
+        "en": "Swedish and English",
+        "sv": "Svenska och engelska"
+      },
+      "quote": {
+        "en": "You communicate fluently in both Swedish and English.",
+        "sv": "Du kommunicerar obehindrat på både svenska och engelska."
+      },
+      "body": {
+        "en": "Swedish is my native language, and I speak and write English fluently. I have a bachelor's degree in behavioural science, 180 credits, from Umeå University.",
+        "sv": "Svenska är mitt modersmål, och jag talar och skriver engelska flytande. Jag har en kandidatexamen i beteendevetenskap, 180 hp, från Umeå universitet."
+      }
+    }
+  ],
+
+  "rolesStat": 3,
+
+  "text": {
+    ".nav-links li:nth-child(2) a": { "en": "How I match", "sv": "Hur jag matchar" },
+    ".nav-mobile a:nth-child(2)": { "en": "How I match", "sv": "Hur jag matchar" },
+
+    "#top .meta-row > span:last-child": {
+      "en": "IT recruitment since 2020",
+      "sv": "IT-rekrytering sedan 2020"
+    },
+    "#top .stat-num": ["~5", "AI", "20+"],
+    "#top .stat-label": [
+      { "en": "Years recruiting in IT and technology", "sv": "År med rekrytering inom IT och teknik" },
+      { "en": "AI-native, with my own recruitment tools built with AI", "sv": "AI-native, med egna rekryteringsverktyg byggda med AI" },
+      { "en": "Different job titles I have recruited for", "sv": "Olika befattningar jag har rekryterat till" }
+    ],
+
+    ".ask-title": {
+      "en": "Ask about my IT recruitment experience",
+      "sv": "Fråga om min erfarenhet av IT-rekrytering"
+    },
+    "#ask-chips .ask-chip": [
+      { "en": "Which IT roles has he recruited for?", "sv": "Vilka IT-roller har han rekryterat till?" },
+      { "en": "How does he work with competency-based recruitment?", "sv": "Hur arbetar han med kompetensbaserad rekrytering?" },
+      { "en": "How does he use AI in recruitment?", "sv": "Hur använder han AI i rekryteringen?" }
+    ],
+
+    "#about .sec-title": { "en": "Recruitment in IT", "sv": "Rekrytering inom IT" },
+    "#about .about-quote": {
+      "en": "I want to help people and companies find each other.",
+      "sv": "Jag vill hjälpa människor och verksamheter att hitta varandra."
+    },
+    "#about .about-body": [
+      {
+        "en": "I have worked with recruitment since 2020, mainly at consulting and recruitment companies in Gothenburg. I have recruited IT consultants and developers, but also engineers and project managers, and I have often had several processes running at once. Before I start searching I like to understand what a role actually requires.",
+        "sv": "Jag har arbetat med rekrytering sedan 2020, främst i konsult- och rekryteringsbolag i Göteborg. Jag har rekryterat IT-konsulter och utvecklare, men också ingenjörer och projektledare, och har ofta haft flera processer igång samtidigt. Innan jag börjar leta vill jag förstå vad en roll faktiskt kräver."
+      },
+      {
+        "en": "At an IT consultancy I was part of the management team and responsible for the company's talent acquisition. There I led the introduction of an ATS and designed the workflows for how a role was opened and how candidates moved through the process. I also had HR-related responsibility for a consultant group of 15+ people.",
+        "sv": "I ett IT-konsultbolag satt jag i ledningsgruppen och ansvarade för bolagets talent acquisition. Där ledde jag införandet av ett ATS och utformade arbetsflödena för hur en roll öppnades och hur kandidaterna rörde sig genom processen. Jag hade också HR-relaterat ansvar för en konsultgrupp på 15+ personer."
+      },
+      {
+        "en": "I have a bachelor's degree in behavioural science and assess candidates against the competencies a role requires. I am curious by nature and follow developments in AI closely. When something in recruitment takes longer than it should, I build a tool for it.",
+        "sv": "Jag har en kandidatexamen i beteendevetenskap och bedömer kandidater mot de kompetenser en roll kräver. Jag är nyfiken av naturen och följer utvecklingen inom AI noga. När något i rekryteringen tar längre tid än det borde bygger jag ett verktyg för det."
+      }
+    ],
+    "#about .brings-list li": [
+      { "en": "Finding the right IT profiles", "sv": "Att hitta rätt IT-profiler" },
+      { "en": "Being a sounding board for managers in recruitment", "sv": "Att vara ett bollplank för chefer i rekryteringen" },
+      { "en": "Competency-based assessment of candidates", "sv": "Kompetensbaserad bedömning av kandidater" },
+      { "en": "Structure in the recruitment process", "sv": "Struktur i rekryteringsprocessen" },
+      { "en": "AI as support in recruitment", "sv": "AI som stöd i rekryteringen" }
+    ],
+
+    "#built .sec-lead": {
+      "en": "The first section shows what I built with colleagues at work, among them the workflows in an ATS. The second shows tools I have developed myself with AI, several of them for recruitment.",
+      "sv": "Den första delen visar det jag byggde med kollegor på jobbet, bland annat arbetsflödena i ett ATS. Den andra visar verktyg jag själv har utvecklat med AI, flera av dem för rekrytering."
+    },
+
+    "#experience .sec-lead": {
+      "en": "All my positions have been in Gothenburg. Recruitment was a main task in three of the roles, all at consulting and recruitment companies, and mostly for IT and technical roles.",
+      "sv": "Samtliga tjänster har varit i Göteborg. Rekrytering var en huvuduppgift i tre av rollerna, samtliga i konsult- och rekryteringsbolag och främst till IT- och teknikroller."
+    },
+    "#experience .roles-lead": {
+      "en": "A selection, mainly IT and technical roles.",
+      "sv": "Ett urval, främst IT- och teknikroller."
+    },
+    "#experience .job:nth-of-type(1) .job-bullets li": [
+      { "en": "Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, varying from developers to engineers", "sv": "Drev fullständiga rekryteringsprocesser, från behovsanalys till slutligt urval, över flera olika roller, från utvecklare till ingenjörer" },
+      { "en": "Proactively sourced and engaged candidates, maintaining a strong talent pipeline", "sv": "Sökte och engagerade kandidater proaktivt och underhöll en stark kandidatpipeline" },
+      { "en": "Advised hiring managers on recruitment processes, timelines, and candidate evaluation", "sv": "Rådgav rekryterande chefer kring rekryteringsprocesser, tidplaner och kandidatutvärdering" },
+      { "en": "Wrote and published job ads based on client needs, ensuring clarity and relevance", "sv": "Skrev och publicerade jobbannonser utifrån kundens behov, med fokus på tydlighet och relevans" },
+      { "en": "Coordinated and structured interview processes, including scheduling, preparation, and stakeholder communication", "sv": "Koordinerade och strukturerade intervjuprocesser, inklusive schemaläggning, förberedelser och kommunikation med intressenter" },
+      { "en": "Acted as main point of contact for candidates, ensuring a professional, responsive, and engaging candidate experience", "sv": "Var kandidaternas huvudsakliga kontaktperson och säkerställde en professionell, responsiv och engagerande kandidatupplevelse" },
+      { "en": "Worked continuously in ATS systems to manage candidate data and ensure accuracy throughout the process", "sv": "Arbetade löpande i ATS-system för att hantera kandidatdata och säkerställa korrekthet genom hela processen" },
+      { "en": "Contributed to improving recruitment workflows and ensuring structured processes", "sv": "Bidrog till att förbättra rekryteringsflöden och säkerställa strukturerade processer" }
+    ],
+    "#experience .job:nth-of-type(3) .job-bullets li": [
+      { "en": "Managed recruitment processes for IT consultants, ensuring accurate competence matching", "sv": "Drev rekryteringsprocesser för IT-konsulter och säkerställde träffsäker kompetensmatchning" },
+      { "en": "Coordinated communication between clients and candidates throughout the hiring process", "sv": "Koordinerade kommunikationen mellan kunder och kandidater genom hela rekryteringsprocessen" },
+      { "en": "Managed multiple parallel processes in a fast-paced environment", "sv": "Hanterade flera parallella processer i en snabbrörlig miljö" },
+      { "en": "Provided HR-related support and maintained ongoing contact with consultants", "sv": "Gav HR-relaterat stöd och hade löpande kontakt med konsulterna" },
+      { "en": "Designed structured onboarding processes to improve engagement and retention", "sv": "Utformade strukturerade onboardingprocesser för att öka engagemang och retention" }
+    ],
+    "#experience .job:nth-of-type(4) .job-desc": {
+      "en": "Part of the management team at an IT consultancy, responsible for talent acquisition and the introduction of an ATS, with HR-related responsibility for a consultant group of 15+ people.",
+      "sv": "Del av ledningsgruppen i ett IT-konsultbolag, med ansvar för talent acquisition och införandet av ett ATS, samt HR-relaterat ansvar för en konsultgrupp på 15+ personer."
+    },
+    "#experience .job:nth-of-type(4) .job-bullets li": [
+      { "en": "Led the company's talent acquisition strategy, including employer branding and process optimisation", "sv": "Ledde bolagets talent acquisition-strategi, inklusive employer branding och processoptimering" },
+      { "en": "Managed recruitment processes end to end for IT consultants working as trainers, from screening and interviewing to onboarding of new employees", "sv": "Drev rekryteringsprocesser från början till slut för IT-konsulter i utbildaruppdrag, från screening och intervjuer till onboarding av nyanställda" },
+      { "en": "Led the introduction of an ATS and designed the workflows, from how a role was opened to how candidates moved through the process", "sv": "Ledde införandet av ett ATS och utformade arbetsflödena, från hur en roll öppnades till hur kandidaterna rörde sig genom processen" },
+      { "en": "Held HR-related responsibility for a consultant group of 15+ people and conducted competence development activities", "sv": "Hade HR-relaterat ansvar för en konsultgrupp på 15+ personer och genomförde kompetensutvecklingsinsatser" },
+      { "en": "Designed and executed a structured onboarding framework for new hires", "sv": "Utformade och genomförde ett strukturerat onboardingramverk för nyanställda" },
+      { "en": "Helped build a career development programme aimed at supporting junior talent into the IT industry", "sv": "Var med och byggde ett karriärutvecklingsprogram för att stötta juniora talanger in i IT-branschen" },
+      { "en": "Developed and built the framework for the company's systematic work environment management (SAM)", "sv": "Tog fram och byggde ramverket för bolagets systematiska arbetsmiljöarbete (SAM)" },
+      { "en": "Helped shape an internal Learning Management System (LMS) from the start, which was later sold as a product to other companies", "sv": "Var med från start och utformade ett internt Learning Management System (LMS), som senare såldes som produkt till andra bolag" },
+      { "en": "Created internal workshops and learning sessions, including gamification methodology training", "sv": "Skapade interna workshops och lärandetillfällen, inklusive utbildning i gamification-metodik" }
+    ],
+
+    "#education .sec-title": { "en": "Education and skills", "sv": "Utbildning och kompetens" },
+    "#education .edu-card .edu-desc": [
+      {
+        "en": "A bachelor's degree in behavioural science, 180 credits, with a focus on IT environments.",
+        "sv": "Kandidatexamen i beteendevetenskap, 180 hp, med inriktning mot IT-miljöer."
+      },
+      {
+        "en": "Certification in education management for vocational higher education, focused on pedagogical planning and course design.",
+        "sv": "Certifiering i utbildningsledning för yrkeshögskolan, med fokus på pedagogisk planering och kursdesign."
+      }
+    ],
+    "#education .callout-label": { "en": "Behavioural science", "sv": "Beteendevetenskap" },
+    "#education .callout-title": { "en": "A grounding for competency-based selection", "sv": "En grund för kompetensbaserat urval" },
+    "#education .callout-text": {
+      "en": "The degree covered how people and groups function in organisations, in IT environments in particular. I have drawn on that knowledge when I structured interviews and assessed candidates against the competencies of a role.",
+      "sv": "Utbildningen handlade om hur människor och grupper fungerar i organisationer, med inriktning mot IT-miljöer. Jag har använt de kunskaperna när jag har strukturerat intervjuer och bedömt kandidater mot en rolls kompetenser."
+    },
+    "#education .tool-group:nth-of-type(1) .pill": [
+      { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
+      { "en": "Competency-based recruitment", "sv": "Kompetensbaserad rekrytering" },
+      { "en": "Search & sourcing", "sv": "Search & sourcing" },
+      "Employer Branding",
+      { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+      { "en": "Communication", "sv": "Kommunikation" },
+      "People & Culture",
+      "HR",
+      { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
+      { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+      { "en": "Project Management", "sv": "Projektledning" },
+      "Learning & Development",
+      "Learning Management Systems (LMS)",
+      { "en": "Instructional design & Course Development", "sv": "Instruktionsdesign & kursutveckling" },
+      { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" },
+      "Gamification"
+    ],
+    "#education .tool-group:nth-of-type(2) .pill": [
+      "Teamtailor",
+      "Workbuster",
+      "LinkedIn Recruiter",
+      "Assessio",
+      "Claude Code",
+      "Office 365",
+      "Slack",
+      "Monday.com",
+      "Canva",
+      "Winningtemp"
+    ],
+    "#education .tool-group:nth-of-type(3) .pill": [
+      { "en": "Advisory towards hiring managers", "sv": "Rådgivande mot rekryterande chefer" },
+      { "en": "Takes ownership of the whole process", "sv": "Tar ägarskap för hela processen" },
+      { "en": "Proactive in search", "sv": "Proaktiv i search" },
+      { "en": "Competency-based in assessment", "sv": "Kompetensbaserad i bedömningen" },
+      { "en": "Systematic and structured", "sv": "Systematisk och strukturerad" },
+      { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
+      { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
+    ],
+
+    "#personal .sec-title": { "en": "The person behind the application", "sv": "Personen bakom ansökan" },
+    "#personal .sec-lead": { "en": "A little about who I am outside work.", "sv": "Lite om vem jag är utanför jobbet." },
+
+    "#contact .contact-facts span": [
+      { "en": "Location: Gothenburg", "sv": "Ort: Göteborg" },
+      { "en": "Languages: Swedish & English", "sv": "Språk: svenska & engelska" },
+      { "en": "Education: BSc. Behavioural Science", "sv": "Utbildning: kand. beteendevetenskap" }
+    ]
+  },
+
+  "cv": {
+    "linkPage": true,
+    "text": {
+      ".cv-card:has(.tool-label[data-sv=\"Expertisområden\"]) .pill": [
+        { "en": "Recruitment & selection", "sv": "Rekrytering & urval" },
+        { "en": "Competency-based recruitment", "sv": "Kompetensbaserad rekrytering" },
+        { "en": "Search & sourcing", "sv": "Search & sourcing" },
+        "Employer Branding",
+        { "en": "Competence supply", "sv": "Kompetensförsörjning" },
+        { "en": "Communication", "sv": "Kommunikation" },
+        "People & Culture",
+        "HR",
+        { "en": "Swedish labour law", "sv": "Svensk arbetsrätt" },
+        { "en": "Leadership & coaching", "sv": "Ledarskap & coachning" },
+        { "en": "Project Management", "sv": "Projektledning" },
+        "Learning & Development",
+        { "en": "Pedagogy & didactics", "sv": "Pedagogik & didaktik" }
+      ],
+      ".cv-card:has(.tool-label[data-sv=\"System & verktyg\"]) .pill": [
+        "Teamtailor",
+        "Workbuster",
+        "LinkedIn Recruiter",
+        "Assessio",
+        "Claude Code",
+        "Office 365",
+        "Slack",
+        "Monday.com",
+        "Canva",
+        "Winningtemp"
+      ],
+      ".cv-card:has(.tool-label[data-sv=\"Så arbetar jag\"]) .pill": [
+        { "en": "Advisory towards hiring managers", "sv": "Rådgivande mot rekryterande chefer" },
+        { "en": "Takes ownership of the whole process", "sv": "Tar ägarskap för hela processen" },
+        { "en": "Proactive in search", "sv": "Proaktiv i search" },
+        { "en": "Competency-based in assessment", "sv": "Kompetensbaserad i bedömningen" },
+        { "en": "Systematic and structured", "sv": "Systematisk och strukturerad" },
+        { "en": "Comfortable with many parallel processes", "sv": "Trygg med många parallella processer" },
+        { "en": "AI-native day to day", "sv": "AI-native i vardagen" }
+      ],
+      ".job:nth-of-type(1) .job-bullets li": [
+        { "en": "Managed full-cycle recruitment processes, from needs analysis to final selection, across multiple roles, varying from developers to engineers", "sv": "Drev fullständiga rekryteringsprocesser, från behovsanalys till slutligt urval, över flera olika roller, från utvecklare till ingenjörer" },
+        { "en": "Proactively sourced and engaged candidates, maintaining a strong talent pipeline", "sv": "Sökte och engagerade kandidater proaktivt och underhöll en stark kandidatpipeline" },
+        { "en": "Advised hiring managers on recruitment processes, timelines, and candidate evaluation", "sv": "Rådgav rekryterande chefer kring rekryteringsprocesser, tidplaner och kandidatutvärdering" },
+        { "en": "Wrote and published job ads based on client needs, ensuring clarity and relevance", "sv": "Skrev och publicerade jobbannonser utifrån kundens behov, med fokus på tydlighet och relevans" },
+        { "en": "Coordinated and structured interview processes, including scheduling, preparation, and stakeholder communication", "sv": "Koordinerade och strukturerade intervjuprocesser, inklusive schemaläggning, förberedelser och kommunikation med intressenter" },
+        { "en": "Acted as main point of contact for candidates, ensuring a professional, responsive, and engaging candidate experience", "sv": "Var kandidaternas huvudsakliga kontaktperson och säkerställde en professionell, responsiv och engagerande kandidatupplevelse" },
+        { "en": "Worked continuously in ATS systems to manage candidate data and ensure accuracy throughout the process", "sv": "Arbetade löpande i ATS-system för att hantera kandidatdata och säkerställa korrekthet genom hela processen" },
+        { "en": "Contributed to improving recruitment workflows and ensuring structured processes", "sv": "Bidrog till att förbättra rekryteringsflöden och säkerställa strukturerade processer" }
+      ],
+      ".job:nth-of-type(3) .job-bullets li": [
+        { "en": "Managed recruitment processes for IT consultants, ensuring accurate competence matching", "sv": "Drev rekryteringsprocesser för IT-konsulter och säkerställde träffsäker kompetensmatchning" },
+        { "en": "Coordinated communication between clients and candidates throughout the hiring process", "sv": "Koordinerade kommunikationen mellan kunder och kandidater genom hela rekryteringsprocessen" },
+        { "en": "Managed multiple parallel processes in a fast-paced environment", "sv": "Hanterade flera parallella processer i en snabbrörlig miljö" },
+        { "en": "Provided HR-related support and maintained ongoing contact with consultants", "sv": "Gav HR-relaterat stöd och hade löpande kontakt med konsulterna" },
+        { "en": "Designed structured onboarding processes to improve engagement and retention", "sv": "Utformade strukturerade onboardingprocesser för att öka engagemang och retention" }
+      ],
+      ".job:nth-of-type(4) .job-desc": {
+        "en": "Part of the management team at an IT consultancy, responsible for talent acquisition and the introduction of an ATS, with HR-related responsibility for a consultant group of 15+ people.",
+        "sv": "Del av ledningsgruppen i ett IT-konsultbolag, med ansvar för talent acquisition och införandet av ett ATS, samt HR-relaterat ansvar för en konsultgrupp på 15+ personer."
+      },
+      ".job:nth-of-type(4) .job-bullets li": [
+        { "en": "Led the company's talent acquisition strategy, including employer branding and process optimisation", "sv": "Ledde bolagets talent acquisition-strategi, inklusive employer branding och processoptimering" },
+        { "en": "Managed recruitment processes end to end for IT consultants working as trainers, from screening and interviewing to onboarding of new employees", "sv": "Drev rekryteringsprocesser från början till slut för IT-konsulter i utbildaruppdrag, från screening och intervjuer till onboarding av nyanställda" },
+        { "en": "Led the introduction of an ATS and designed the workflows, from how a role was opened to how candidates moved through the process", "sv": "Ledde införandet av ett ATS och utformade arbetsflödena, från hur en roll öppnades till hur kandidaterna rörde sig genom processen" },
+        { "en": "Held HR-related responsibility for a consultant group of 15+ people and conducted competence development activities", "sv": "Hade HR-relaterat ansvar för en konsultgrupp på 15+ personer och genomförde kompetensutvecklingsinsatser" },
+        { "en": "Designed and executed a structured onboarding framework for new hires", "sv": "Utformade och genomförde ett strukturerat onboardingramverk för nyanställda" },
+        { "en": "Helped build a career development programme aimed at supporting junior talent into the IT industry", "sv": "Var med och byggde ett karriärutvecklingsprogram för att stötta juniora talanger in i IT-branschen" },
+        { "en": "Developed and built the framework for the company's systematic work environment management (SAM)", "sv": "Tog fram och byggde ramverket för bolagets systematiska arbetsmiljöarbete (SAM)" }
+      ]
+    }
+  }
+}
