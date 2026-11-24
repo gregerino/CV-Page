@@ -1173,7 +1173,6 @@ html:not(.has-pack) #built .built-grid:not(:last-of-type) { order: 4; }
   .job-bullets { margin-top: 1.5mm; gap: 0.6mm; }
   .job-bullets li { font-size: 8.4pt; line-height: 1.4; break-inside: avoid; }
 }
-}
 
 /* Five links fit on one row down to tablet width; below that the hamburger
    takes over. */
